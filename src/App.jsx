@@ -6,9 +6,9 @@ const VEHICLES = {
     "500 Abarth": {
       years:["2012","2013","2014","2015","2016","2017","2018","2019"],
       trims:{
-        "Base":         { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
-        "Competizione": { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
-        "Turismo":      { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
+        "Base":         { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD" },
+        "Competizione": { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD" },
+        "Turismo":      { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Argento (Silver)",hex:"#C0C0C0"},
@@ -26,9 +26,9 @@ const VEHICLES = {
     "124 Spider": {
       years:["2017","2018","2019","2020"],
       trims:{
-        "Classica": { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
-        "Lusso":    { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
-        "Abarth":   { engine:"1.4L Turbocharged 4-cylinder (164hp)" },
+        "Classica": { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"RWD" },
+        "Lusso":    { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"RWD" },
+        "Abarth":   { engine:"1.4L Turbocharged 4-cylinder (164hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"Rosso / Hypnotique Red (Red)",hex:"#C8102E"},
@@ -45,9 +45,9 @@ const VEHICLES = {
     "500X": {
       years:["2016","2017","2018","2019","2020","2021","2022"],
       trims:{
-        "Pop":      { engine:"1.4L Turbocharged 4-cylinder (160hp)" },
-        "Trekking": { engine:"2.4L 4-cylinder (180hp)" },
-        "Lounge":   { engine:"2.4L 4-cylinder (180hp)" },
+        "Pop":      { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD" },
+        "Trekking": { engine:"2.4L 4-cylinder (180hp)", drivetrain:"AWD" },
+        "Lounge":   { engine:"2.4L 4-cylinder (180hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Bianco (White)",hex:"#F5F5F5"},
@@ -62,18 +62,18 @@ const VEHICLES = {
     "Mazda3": {
       years:["2004","2019","2020","2021","2022","2023"],
       trims:{
-        "i Sedan":            { engine:"2.0L 4-cylinder (148hp)" },
-        "i Hatchback":        { engine:"2.0L 4-cylinder (148hp)" },
-        "s Sedan":            { engine:"2.3L 4-cylinder (160hp)" },
-        "s Hatchback":        { engine:"2.3L 4-cylinder (160hp)" },
-        "Sport Sedan":        { engine:"2.5L 4-cylinder (186hp)" },
-        "Sport Hatchback":    { engine:"2.5L 4-cylinder (186hp)" },
-        "Select Sedan":       { engine:"2.5L 4-cylinder (186hp)" },
-        "Select Hatchback":   { engine:"2.5L 4-cylinder (186hp)" },
-        "Preferred Sedan":    { engine:"2.5L 4-cylinder (186hp)" },
-        "Preferred Hatchback":{ engine:"2.5L 4-cylinder (186hp)" },
-        "Premium Sedan":      { engine:"2.5L Turbo 4-cylinder (227hp)" },
-        "Premium Hatchback":  { engine:"2.5L Turbo 4-cylinder (227hp)" },
+        "i Sedan":            { engine:"2.0L 4-cylinder (148hp)", drivetrain:"FWD" },
+        "i Hatchback":        { engine:"2.0L 4-cylinder (148hp)", drivetrain:"FWD" },
+        "s Sedan":            { engine:"2.3L 4-cylinder (160hp)", drivetrain:"FWD" },
+        "s Hatchback":        { engine:"2.3L 4-cylinder (160hp)", drivetrain:"FWD" },
+        "Sport Sedan":        { engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Sport Hatchback":    { engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Select Sedan":       { engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Select Hatchback":   { engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Preferred Sedan":    { engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Preferred Hatchback":{ engine:"2.5L 4-cylinder (186hp)", drivetrain:"FWD" },
+        "Premium Sedan":      { engine:"2.5L Turbo 4-cylinder (227hp)", drivetrain:"AWD" },
+        "Premium Hatchback":  { engine:"2.5L Turbo 4-cylinder (227hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Black Mica (Black)",hex:"#1A1A1A"},
@@ -100,9 +100,9 @@ const VEHICLES = {
     "MX-5 Miata": {
       years:["2016","2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Sport":         { engine:"2.0L 4-cylinder (181hp)" },
-        "Club":          { engine:"2.0L 4-cylinder (181hp)" },
-        "Grand Touring": { engine:"2.0L 4-cylinder (181hp)" },
+        "Sport":         { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD" },
+        "Club":          { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD" },
+        "Grand Touring": { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
@@ -113,16 +113,38 @@ const VEHICLES = {
         {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
       ],
     },
+    "CX-5": {
+      years:["2021","2022","2023","2024","2025"],
+      trims:{
+        "Sport":               { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD" },
+        "Touring":             { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD" },
+        "Carbon Edition":      { engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD" },
+        "Carbon Edition Turbo":{ engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD" },
+        "Grand Touring":       { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD" },
+        "Grand Touring Reserve":{ engine:"2.5L Turbocharged 4-cylinder (227hp)", drivetrain:"AWD" },
+        "Signature":           { engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD" },
+      },
+      colors:[
+        {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+        {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Polymetal Gray Metallic (Dark Gray)",hex:"#4A4E52"},
+        {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+        {name:"Eternal Blue Mica (Blue)",hex:"#1E4B8E"},
+        {name:"Rhodium White Metallic (White)",hex:"#E8E8E8"},
+      ],
+    },
   },
   "Subaru": {
     "WRX": {
       years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Base":        { engine:"2.0L Turbocharged 4-cylinder (268hp)" },
-        "Premium":     { engine:"2.0L Turbocharged 4-cylinder (268hp)" },
-        "Limited":     { engine:"2.0L Turbocharged 4-cylinder (268hp)" },
-        "STI":         { engine:"2.5L Turbocharged 4-cylinder (310hp)" },
-        "STI Limited": { engine:"2.5L Turbocharged 4-cylinder (310hp)" },
+        "Base":        { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD" },
+        "Premium":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD" },
+        "Limited":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD" },
+        "STI":         { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD" },
+        "STI Limited": { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"WR Blue Pearl (Blue)",hex:"#003893"},
@@ -135,9 +157,9 @@ const VEHICLES = {
     "BRZ": {
       years:["2013","2014","2015","2016","2017","2021","2022","2023"],
       trims:{
-        "Premium": { engine:"2.0L 4-cylinder (200hp)" },
-        "Limited": { engine:"2.0L 4-cylinder (200hp)" },
-        "tS":      { engine:"2.0L 4-cylinder (200hp)" },
+        "Premium": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD" },
+        "Limited": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD" },
+        "tS":      { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"World Rally Blue Pearl (Blue)",hex:"#003893"},
@@ -150,8 +172,8 @@ const VEHICLES = {
     "Forester XT": {
       years:["2014","2015","2016","2017","2018"],
       trims:{
-        "Premium": { engine:"2.0L Turbocharged 4-cylinder (250hp)" },
-        "Touring": { engine:"2.0L Turbocharged 4-cylinder (250hp)" },
+        "Premium": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD" },
+        "Touring": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
@@ -160,15 +182,35 @@ const VEHICLES = {
         {name:"Wilderness Green Metallic (Green)",hex:"#3B5A3A"},
       ],
     },
+    "Ascent": {
+      years:["2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "Base":          { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Premium":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Limited":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Touring":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Onyx Edition":  { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+      },
+      colors:[
+        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+        {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Abyss Blue Pearl (Blue)",hex:"#1B2A4A"},
+        {name:"Autumn Green Metallic (Green)",hex:"#3B5A3A"},
+        {name:"Brilliant Bronze Metallic (Bronze)",hex:"#B87333"},
+      ],
+    },
   },
   "Volkswagen": {
     "Golf GTI": {
       years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "S":        { engine:"2.0L Turbocharged 4-cylinder (220hp)" },
-        "SE":       { engine:"2.0L Turbocharged 4-cylinder (220hp)" },
-        "Autobahn": { engine:"2.0L Turbocharged 4-cylinder (220hp)" },
-        "Rabbit":   { engine:"2.0L Turbocharged 4-cylinder (228hp)" },
+        "S":        { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD" },
+        "SE":       { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD" },
+        "Autobahn": { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD" },
+        "Rabbit":   { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
@@ -181,8 +223,8 @@ const VEHICLES = {
     "Golf R": {
       years:["2015","2016","2017","2018","2019","2022","2023"],
       trims:{
-        "Base":      { engine:"2.0L Turbocharged 4-cylinder (292hp)" },
-        "DCC & Nav": { engine:"2.0L Turbocharged 4-cylinder (292hp)" },
+        "Base":      { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD" },
+        "DCC & Nav": { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
@@ -195,9 +237,9 @@ const VEHICLES = {
     "Jetta GLI": {
       years:["2019","2020","2021","2022","2023"],
       trims:{
-        "S":                { engine:"2.0L Turbocharged 4-cylinder (228hp)" },
-        "Autobahn":         { engine:"2.0L Turbocharged 4-cylinder (228hp)" },
-        "35th Anniversary": { engine:"2.0L Turbocharged 4-cylinder (228hp)" },
+        "S":                { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD" },
+        "Autobahn":         { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD" },
+        "35th Anniversary": { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
@@ -211,7 +253,7 @@ const VEHICLES = {
     "Fiesta ST": {
       years:["2014","2015","2016","2017","2018","2019"],
       trims:{
-        "Base": { engine:"1.6L EcoBoost Turbocharged 4-cylinder (197hp)" },
+        "Base": { engine:"1.6L EcoBoost Turbocharged 4-cylinder (197hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Molten Orange (Orange)",hex:"#E8601C"},
@@ -224,12 +266,12 @@ const VEHICLES = {
     "Mustang GT": {
       years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Fastback":           { engine:"5.0L V8 (450hp)" },
-        "Convertible":        { engine:"5.0L V8 (450hp)" },
-        "Premium Fastback":   { engine:"5.0L V8 (450hp)" },
-        "Premium Convertible":{ engine:"5.0L V8 (450hp)" },
-        "California Special": { engine:"5.0L V8 (450hp)" },
-        "Bullitt":            { engine:"5.0L V8 (480hp)" },
+        "Fastback":           { engine:"5.0L V8 (450hp)", drivetrain:"RWD" },
+        "Convertible":        { engine:"5.0L V8 (450hp)", drivetrain:"RWD" },
+        "Premium Fastback":   { engine:"5.0L V8 (450hp)", drivetrain:"RWD" },
+        "Premium Convertible":{ engine:"5.0L V8 (450hp)", drivetrain:"RWD" },
+        "California Special": { engine:"5.0L V8 (450hp)", drivetrain:"RWD" },
+        "Bullitt":            { engine:"5.0L V8 (480hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"Race Red (Red)",hex:"#C8102E"},
@@ -245,8 +287,8 @@ const VEHICLES = {
     "Civic Si": {
       years:["2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Sedan": { engine:"1.5L Turbocharged 4-cylinder (205hp)" },
-        "Coupe": { engine:"1.5L Turbocharged 4-cylinder (205hp)" },
+        "Sedan": { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD" },
+        "Coupe": { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Rallye Red (Red)",hex:"#C8102E"},
@@ -259,8 +301,8 @@ const VEHICLES = {
     "Civic Type R": {
       years:["2017","2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Base":    { engine:"2.0L Turbocharged 4-cylinder (306hp)" },
-        "Limited": { engine:"2.0L Turbocharged 4-cylinder (306hp)" },
+        "Base":    { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD" },
+        "Limited": { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Championship White (White)",hex:"#F5F5F5"},
@@ -273,9 +315,9 @@ const VEHICLES = {
     "Accord Sport": {
       years:["2018","2019","2020","2021","2022","2023"],
       trims:{
-        "Sport":                { engine:"1.5L Turbocharged 4-cylinder (192hp)" },
-        "Sport Special Edition":{ engine:"1.5L Turbocharged 4-cylinder (192hp)" },
-        "Sport 2.0T":           { engine:"2.0L Turbocharged 4-cylinder (252hp)" },
+        "Sport":                { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD" },
+        "Sport Special Edition":{ engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD" },
+        "Sport 2.0T":           { engine:"2.0L Turbocharged 4-cylinder (252hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
@@ -284,14 +326,36 @@ const VEHICLES = {
         {name:"Radiant Red Metallic (Red)",hex:"#C8102E"},
       ],
     },
+    "Accord": {
+      years:["2016"],
+      trims:{
+        "LX":      { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD" },
+        "Sport":   { engine:"2.4L 4-cylinder (189hp)", drivetrain:"FWD" },
+        "EX":      { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD" },
+        "EX-L":    { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD" },
+        "EX-L V6": { engine:"3.5L V6 (278hp)", drivetrain:"FWD" },
+        "Touring": { engine:"3.5L V6 (278hp)", drivetrain:"FWD" },
+      },
+      colors:[
+        {name:"Basque Red Pearl II (Red)",hex:"#9B1B1B"},
+        {name:"Champagne Frost Pearl (Champagne)",hex:"#D8C9A8"},
+        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Kona Coffee Metallic (Brown)",hex:"#4A3728"},
+        {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Obsidian Blue Pearl (Blue)",hex:"#1B2A4A"},
+        {name:"White Orchid Pearl (White)",hex:"#F5F5F0"},
+        {name:"San Marino Red (Red)",hex:"#C8102E"},
+      ],
+    },
   },
   "BMW": {
     "M3": {
       years:["2015","2016","2017","2018","2019","2021","2022","2023"],
       trims:{
-        "Sedan":       { engine:"3.0L Twin-Turbo 6-cylinder (473hp)" },
-        "Competition": { engine:"3.0L Twin-Turbo 6-cylinder (503hp)" },
-        "CS":          { engine:"3.0L Twin-Turbo 6-cylinder (543hp)" },
+        "Sedan":       { engine:"3.0L Twin-Turbo 6-cylinder (473hp)", drivetrain:"RWD" },
+        "Competition": { engine:"3.0L Twin-Turbo 6-cylinder (503hp)", drivetrain:"RWD" },
+        "CS":          { engine:"3.0L Twin-Turbo 6-cylinder (543hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"Alpine White (White)",hex:"#F5F5F5"},
@@ -304,9 +368,9 @@ const VEHICLES = {
     "M235i / M240i": {
       years:["2014","2015","2016","2017","2018","2019","2021","2022"],
       trims:{
-        "Coupe":       { engine:"3.0L Turbocharged 6-cylinder (320hp)" },
-        "Convertible": { engine:"3.0L Turbocharged 6-cylinder (320hp)" },
-        "xDrive":      { engine:"3.0L Turbocharged 6-cylinder (320hp)" },
+        "Coupe":       { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"RWD" },
+        "Convertible": { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"RWD" },
+        "xDrive":      { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Alpine White (White)",hex:"#F5F5F5"},
@@ -319,10 +383,10 @@ const VEHICLES = {
     "328i / 330i": {
       years:["2012","2013","2014","2015","2016","2017","2018","2019"],
       trims:{
-        "Sedan":        { engine:"2.0L Turbocharged 4-cylinder (248hp)" },
-        "xDrive":       { engine:"2.0L Turbocharged 4-cylinder (248hp)" },
-        "Gran Turismo": { engine:"2.0L Turbocharged 4-cylinder (248hp)" },
-        "Touring":      { engine:"2.0L Turbocharged 4-cylinder (248hp)" },
+        "Sedan":        { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"RWD" },
+        "xDrive":       { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"AWD" },
+        "Gran Turismo": { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"RWD" },
+        "Touring":      { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"RWD" },
       },
       colors:[
         {name:"Alpine White (White)",hex:"#F5F5F5"},
@@ -337,10 +401,10 @@ const VEHICLES = {
     "Caliber": {
       years:["2007","2008","2009","2010","2011","2012"],
       trims:{
-        "SE":   { engine:"1.8L 4-cylinder (148hp)" },
-        "SXT":  { engine:"2.0L 4-cylinder (158hp)" },
-        "R/T":  { engine:"2.4L 4-cylinder (172hp)" },
-        "SRT4": { engine:"2.4L Turbocharged 4-cylinder (285hp)" },
+        "SE":   { engine:"1.8L 4-cylinder (148hp)", drivetrain:"FWD" },
+        "SXT":  { engine:"2.0L 4-cylinder (158hp)", drivetrain:"FWD" },
+        "R/T":  { engine:"2.4L 4-cylinder (172hp)", drivetrain:"AWD" },
+        "SRT4": { engine:"2.4L Turbocharged 4-cylinder (285hp)", drivetrain:"FWD" },
       },
       colors:[
         {name:"Black Clearcoat (Black)",hex:"#111111"},
@@ -358,10 +422,11 @@ const VEHICLES = {
     "Ram 2500": {
       years:["2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013"],
       trims:{
-        "ST":      { engine:"5.7L HEMI V8 / 5.9L Cummins Diesel / 8.0L V10 available" },
-        "SLT":     { engine:"5.7L HEMI V8 / 5.9L Cummins Diesel / 8.0L V10 available" },
-        "Laramie": { engine:"5.7L HEMI V8 / 5.9L Cummins Diesel available" },
+        "ST":      { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (325hp)","8.0L V10 (305hp)"] },
+        "SLT":     { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (325hp)","8.0L V10 (305hp)"] },
+        "Laramie": { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (325hp)"] },
       },
+      drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
       colors:[
         {name:"Brilliant Black Crystal Pearl (Black)",hex:"#111111"},
         {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
@@ -383,10 +448,11 @@ const VEHICLES = {
     "4Runner": {
       years:["1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"],
       trims:{
-        "SR5":           { engine:"3.4L V6 (183hp)" },
+        "SR5":           { engines:["3.4L V6 (183hp)","2.7L 4-cylinder (150hp)"] },
         "Limited":       { engine:"3.4L V6 (183hp)" },
         "Sport Edition": { engine:"3.4L V6 (183hp)" },
       },
+      drivetrainOptions:["2WD","4WD"],
       colors:[
         {name:"Millennium Silver Metallic (Silver)",hex:"#C0C0C0"},
         {name:"Autumn Blaze Metallic (Orange-Brown)",hex:"#B87333"},
@@ -512,7 +578,7 @@ function CarCard({car,onSelect,onDelete,hasAlerts}){
       {!maintenanceSetup&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#FF3B3B",fontSize:"18px"}}>❗</div>}
       {maintenanceSetup&&hasAlerts&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#F5C800",fontSize:"16px"}}>⚠️</div>}
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:textColor,marginBottom:"2px",textShadow:"0 1px 3px rgba(0,0,0,0.3)"}}>{car.year} {car.make} {car.model}</div>
-      <div style={{color:textColor,fontSize:"12px",opacity:0.85,marginBottom:"2px"}}>{[car.trim,car.engine].filter(Boolean).join(" · ")}</div>
+      <div style={{color:textColor,fontSize:"12px",opacity:0.85,marginBottom:"2px"}}>{[car.trim,car.engine,car.drivetrain].filter(Boolean).join(" · ")}</div>
       <div style={{color:textColor,fontSize:"12px",opacity:0.7,marginBottom:"12px"}}>{car.colorName||"Color not set"} · {(car.mileage||0).toLocaleString()} mi</div>
       {car.build&&car.build.length>0&&(
         <div style={{display:"flex",flexWrap:"wrap",gap:"4px",marginBottom:"8px"}}>
@@ -566,6 +632,8 @@ function AddCarForm({onSave,onCancel}){
   const [fModel,setFModel]=useState("");
   const [fYear,setFYear]=useState("");
   const [fTrim,setFTrim]=useState("");
+  const [fEngine,setFEngine]=useState("");
+  const [fDrivetrain,setFDrivetrain]=useState("");
   const [fColor,setFColor]=useState(null);
 
   const makes=Object.keys(VEHICLES);
@@ -574,8 +642,13 @@ function AddCarForm({onSave,onCancel}){
   const years=vData?vData.years:[];
   const trims=vData?Object.keys(vData.trims):[];
   const autoEngine=fTrim&&vData?vData.trims[fTrim]?.engine:"";
+  const engineOptions=fTrim&&vData?vData.trims[fTrim]?.engines||[]:[];
+  const needsEnginePicker=engineOptions.length>0;
+  const autoDrivetrain=fTrim&&vData?vData.trims[fTrim]?.drivetrain:"";
+  const drivetrainOptions=vData?.drivetrainOptions||[];
+  const needsDrivetrainPicker=drivetrainOptions.length>0;
   const colors=vData?vData.colors:[];
-  const canSave=fMake&&fModel&&fYear&&fTrim&&fColor;
+  const canSave=fMake&&fModel&&fYear&&fTrim&&(needsEnginePicker?fEngine:true)&&(needsDrivetrainPicker?fDrivetrain:true)&&fColor;
 
   const SW=({label,val,set,opts,placeholder,disabled})=>(
     <div><span style={LS}>{label}</span>
@@ -589,22 +662,32 @@ function AddCarForm({onSave,onCancel}){
     </div>
   );
 
+
+  const InfoBox=({label,value})=>(
+    <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(255,107,43,0.08)",borderRadius:"4px",borderLeft:"3px solid #FF6B2B",animation:"fadeSlide 0.3s ease forwards"}}>
+      <span style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>{label}</span>
+      <div style={{color:"#E8E4DC",fontSize:"14px",marginTop:"4px"}}>{value}</div>
+    </div>
+  );
+
   return(
     <div style={{paddingTop:"48px",paddingBottom:"80px"}}>
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,52px)",color:"#E8E4DC",marginBottom:"8px"}}>ADD A CAR</div>
       <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Pick your car, trim, and color.</p>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"16px",marginBottom:"24px"}}>
-        <SW label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");setFYear("");setFTrim("");setFColor(null);}} opts={makes} placeholder="Select make" disabled={false}/>
-        <SW label="MODEL" val={fModel} set={v=>{setFModel(v);setFYear("");setFTrim("");setFColor(null);}} opts={models} placeholder="Select model" disabled={!fMake}/>
-        <SW label="YEAR" val={fYear} set={v=>{setFYear(v);setFTrim("");}} opts={years} placeholder="Select year" disabled={!fModel}/>
+        <SW label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFColor(null);}} opts={makes} placeholder="Select make" disabled={false}/>
+        <SW label="MODEL" val={fModel} set={v=>{setFModel(v);setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFColor(null);}} opts={models} placeholder="Select model" disabled={!fMake}/>
+        <SW label="YEAR" val={fYear} set={v=>{setFYear(v);setFTrim("");setFEngine("");setFDrivetrain("");}} opts={years} placeholder="Select year" disabled={!fModel}/>
       </div>
-      {fYear&&<div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}><SW label="TRIM" val={fTrim} set={v=>setFTrim(v)} opts={trims} placeholder="Select trim" disabled={false}/></div>}
+      {fYear&&<div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}><SW label="TRIM" val={fTrim} set={v=>{setFTrim(v);setFEngine("");setFDrivetrain("");}} opts={trims} placeholder="Select trim" disabled={false}/></div>}
       {fTrim&&autoEngine&&(
-        <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(255,107,43,0.08)",borderRadius:"4px",borderLeft:"3px solid #FF6B2B",animation:"fadeSlide 0.3s ease forwards"}}>
-          <span style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>ENGINE</span>
-          <div style={{color:"#E8E4DC",fontSize:"14px",marginTop:"4px"}}>{autoEngine}</div>
-        </div>
+        <InfoBox label="ENGINE" value={autoEngine}/>
       )}
+      {fTrim&&needsEnginePicker&&<div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}><SW label="ENGINE" val={fEngine} set={setFEngine} opts={engineOptions} placeholder="Select engine" disabled={false}/></div>}
+      {fTrim&&autoDrivetrain&&(
+        <InfoBox label="DRIVETRAIN" value={autoDrivetrain}/>
+      )}
+      {fTrim&&needsDrivetrainPicker&&<div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}><SW label="DRIVETRAIN" val={fDrivetrain} set={setFDrivetrain} opts={drivetrainOptions} placeholder="Select drivetrain" disabled={false}/></div>}
       {fTrim&&colors.length>0&&(
         <div style={{marginBottom:"32px",animation:"fadeSlide 0.3s ease forwards"}}>
           <span style={LS}>SELECT YOUR COLOR</span>
@@ -624,12 +707,12 @@ function AddCarForm({onSave,onCancel}){
             <div style={{width:"32px",height:"32px",borderRadius:"50%",background:fColor.hex,border:"2px solid rgba(255,255,255,0.3)"}}/>
             <div>
               <div style={{color:"#E8E4DC",fontSize:"14px"}}>{fYear} {fMake} {fModel} {fTrim}</div>
-              <div style={{color:"#888",fontSize:"12px"}}>{fColor.name}{autoEngine?` · ${autoEngine}`:""}</div>
+              <div style={{color:"#888",fontSize:"12px"}}>{fColor.name}{(autoEngine||fEngine)?` · ${autoEngine||fEngine}`:""}{(autoDrivetrain||fDrivetrain)?` · ${autoDrivetrain||fDrivetrain}`:""}</div>
             </div>
           </div>
         </div>
       )}
-      <button onClick={()=>onSave({make:fMake,model:fModel,year:fYear,trim:fTrim,engine:autoEngine,colorName:fColor?.name,colorHex:fColor?.hex,mileage:0,build:[],maintenance:[]})} disabled={!canSave} style={BP(canSave)}>SAVE TO GARAGE</button>
+      <button onClick={()=>onSave({make:fMake,model:fModel,year:fYear,trim:fTrim,engine:autoEngine||fEngine,drivetrain:autoDrivetrain||fDrivetrain,colorName:fColor?.name,colorHex:fColor?.hex,mileage:0,build:[],maintenance:[]})} disabled={!canSave} style={BP(canSave)}>SAVE TO GARAGE</button>
       <button onClick={onCancel} style={{background:"transparent",color:"#555",border:"none",padding:"14px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",width:"100%",marginTop:"8px"}}>CANCEL</button>
     </div>
   );
@@ -680,7 +763,7 @@ export default function ModGuide(){
   const setupMaintenance=async()=>{
     setMaintenanceLoading(true);
     try{
-      const prompt=`You are an automotive expert. Generate a maintenance schedule for a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}. Return ONLY a JSON array, no markdown: [{"name":"Engine Oil & Filter","mileInterval":5000,"monthInterval":6,"notes":"Use 5W-40 full synthetic"}]. Include all relevant items specific to this exact vehicle. Return ONLY the JSON array.`;
+      const prompt=`You are an automotive expert. Generate a maintenance schedule for a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}${activeCar.drivetrain?` (${activeCar.drivetrain})`:""}. Return ONLY a JSON array, no markdown: [{"name":"Engine Oil & Filter","mileInterval":5000,"monthInterval":6,"notes":"Use 5W-40 full synthetic"}]. Include all relevant items specific to this exact vehicle and drivetrain. Return ONLY the JSON array.`;
       const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:prompt}]})});
       const data=await res.json();
       const raw=data.content.map(b=>b.text||"").join("");
@@ -706,7 +789,7 @@ export default function ModGuide(){
     if(!activeCar||!selectedMod)return;
     setLoading(true);setSections(null);setGenError("");
     const buildContext=activeCar.build&&activeCar.build.length>0?`Car already has: ${activeCar.build.map(b=>`${b.brand} ${b.part}`).join(", ")}. Factor these in.`:"";
-    const prompt=`You are a real-world automotive mod expert. User has a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}. Guide for: ${selectedMod}. ${buildContext} Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary.","tools":"Exact tools, one per line with a dash.","location":"Where on this specific car.","install":"Numbered steps with real details.","gotchas":"What nobody tells you — most important section.","diagnostic":"What to check if something seems off after install.","verdict":"Honest take. Worth it?"}`;
+    const prompt=`You are a real-world automotive mod expert. User has a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}${activeCar.drivetrain?` (${activeCar.drivetrain})`:""}. Guide for: ${selectedMod}. ${buildContext} Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary.","tools":"Exact tools, one per line with a dash.","location":"Where on this specific car.","install":"Numbered steps with real details.","gotchas":"What nobody tells you — most important section.","diagnostic":"What to check if something seems off after install.","verdict":"Honest take. Worth it?"}`;
     try{
       const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:prompt}]})});
       const data=await res.json();
@@ -779,7 +862,7 @@ export default function ModGuide(){
           <div style={{paddingTop:"32px",paddingBottom:"80px"}}>
             <div style={{background:`linear-gradient(135deg, ${carColor}44, ${carColor}11)`,borderRadius:"8px",padding:"20px 24px",marginBottom:"24px",border:`1px solid ${carColor}33`}}>
               <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,36px)",color:"#E8E4DC",lineHeight:"1.1",marginBottom:"4px"}}>{activeCar.year} {activeCar.make} {activeCar.model}</div>
-              <div style={{color:"#888",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.trim,activeCar.engine].filter(Boolean).join(" · ")}</div>
+              <div style={{color:"#888",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.trim,activeCar.engine,activeCar.drivetrain].filter(Boolean).join(" · ")}</div>
               <div style={{color:"#888",fontSize:"13px",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap"}}>
                 <div style={{width:"12px",height:"12px",borderRadius:"50%",background:carColor,border:"1px solid rgba(255,255,255,0.2)"}}/>
                 {activeCar.colorName}
