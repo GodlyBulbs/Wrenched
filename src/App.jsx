@@ -185,11 +185,11 @@ const VEHICLES = {
     "Ascent": {
       years:["2019","2020","2021","2022","2023","2024","2025"],
       trims:{
-        "Base":          { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
-        "Premium":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
-        "Limited":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
-        "Touring":       { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
-        "Onyx Edition":  { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Base":         { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Premium":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Limited":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Touring":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
+        "Onyx Edition": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD" },
       },
       colors:[
         {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
@@ -519,33 +519,6 @@ const CATALOG = {
   },
 };
 
-// Hand-verified guides — used instead of AI generation when available, since these are
-// confirmed accurate by an actual owner. AI only fills in gaps we haven't verified yet.
-const STATIC_GUIDES = {
-  "Fiat": {
-    "500 Abarth": {
-      "Spark Plugs": {
-        overview:"Quick job on the Abarth with the stock airbox on — about 10-15 minutes, not a big teardown. No intake piping needs to come off for this, just the airbox itself.",
-        tools:"- 10mm socket (for coil bolts)\n- 5/8\" spark plug socket\n- Extension for the spark plug socket\n- Dielectric grease (optional, on the coil boots)\n- Torque wrench (optional, if you want to hit exact spec)",
-        location:"The 4 ignition coils sit right on top of the engine, each one directly over its spark plug. The stock airbox sits on top and needs to come off first to get access.",
-        install:"Step 1: Disconnect the stock airbox from both sides (the intake hose connections) and lift it up and out of the way. No tools needed, it just pulls off.\nStep 2: Remove the 10mm bolt holding each of the 4 ignition coils in place.\nStep 3: Pull the coils straight up and set them aside — you can do all 4 at once or one cylinder at a time.\nStep 4: Use the 5/8\" spark plug socket with an extension to reach down and remove each spark plug.\nStep 5: Install the new spark plugs (or reinstall the good ones if you were just diagnosing a specific cylinder). Tighten by hand until snug, then a bit more with the socket — don't overtighten.\nStep 6: Reinstall the coils — the closest coil goes to the closest plug hole. Secure each with its 10mm bolt.\nStep 7: Reinstall the stock airbox and reconnect both hose ends.\nStep 8: Done. With the stock airbox, this whole job is realistically 10-15 minutes.",
-        gotchas:"If you've got an aftermarket intake instead of the stock airbox (EC V4.1, Neuspeed P-Flo, etc.), your access path looks a bit different — pull that intake per its own removal steps, but you still don't need to touch any intercooler piping or intake tubing to reach the plugs, that's not in the way. Don't force the coil boot connectors, they get brittle over time. Don't overtighten the new plugs — you can crack the ceramic or strip the threads in the head.",
-        diagnostic:"If one cylinder was misfiring, that's the plug (and possibly coil) to swap first. Double check the gap spec on new plugs before installing if they're not pre-gapped for your setup.",
-        verdict:"Simple maintenance job. Don't let anyone convince you it needs a bigger teardown than this — with the stock airbox it's a 10-15 minute job.",
-      },
-      "Fuel Injectors":{
-        overview:"Injector swap on the Abarth means pulling the fuel rail out of the engine bay — moderate job, not for a first-timer, and it's not something to do on its own. Bigger injectors flow more fuel than stock, and the ECU needs a matching tune or the car won't run right.",
-        tools:"- 7mm or 8mm socket (verify with a flashlight — for the small bracket bolts)\n- 10mm socket (bolt at the tip of the triangle bracket)\n- T20 torx bit likely (verify with a flashlight — for the 2 black fuel rail bolts)\n- Pliers (for a stubborn harness connector and for the injector retaining clips)\n- Small shop towels or rags (fuel will drip when you disconnect the line)\n- 2 small self-tapping screws + driver (new injectors are shorter than OEM, need to secure the rail differently)\n- Flashlight",
-        location:"The fuel rail sits under the middle air filter housing, behind a triangle-shaped metal bracket that holds part of the wire harness.",
-        install:"Step 1: Disconnect the car battery first, and only work on a cold engine — this area gets very hot after driving.\nStep 2: Remove the middle air filter housing to expose the wire harness area.\nStep 3: Find the triangle-shaped metal bracket holding the harness. Remove its two smaller bolts (7mm or 8mm, check with a flashlight) and the bolt at the tip (10mm). Set the bracket aside.\nStep 4: Disconnect the two harness plugs attached to that bracket — the top one just squeezes and pulls off. The bottom one is trickier: its tab pushes out, use pliers to grip it and pull firmly to release.\nStep 5: Disconnect the separate green tab connector nearby too — this frees up room to move the fuel rail later.\nStep 6: Remove the two black bolts holding the fuel rail in place (check with a flashlight, likely T20).\nStep 7: Disconnect each of the 4 red injector plugs — pull up on the red tab, then pull the plug straight out.\nStep 8: Wrap a towel around the fuel supply T-harness fitting, then disconnect it from the rail — this will drip fuel, so have the towel ready.\nStep 9: Cover the disconnected port with a small towel, then carefully work the fuel rail out, maneuvering it around the surrounding components.\nStep 10: Once it's out, dump the remaining fuel from the rail rather than trying to keep it contained — it's messier to try to save it.\nStep 11: Use pliers to remove the retaining clips holding each injector in the rail, then pull each stock injector out.\nStep 12: Install the new injectors, snap the retaining clips back on, and push the rail assembly back into position.\nStep 13: The upgraded injectors sit shorter than OEM, so the stock mounting won't fully secure the rail. Use 2 small self-tapping screws through the back into the plastic to hold it — skipping this can let the rail work loose while driving.\nStep 14: Reconnect the fuel T-harness, plug all 4 red injector connectors back in, reconnect the green tab and the two harness plugs on the triangle bracket, then reinstall the bracket with its bolts.\nStep 15: Reinstall the air filter housing. Done.",
-        gotchas:"This mod basically requires an accompanying tune to run correctly — bigger injectors change fuel delivery enough that the stock ECU map can't handle it, expect rough idle or codes without a tune dialed in for the new injectors. The bottom harness plug is genuinely stubborn — pliers help get a grip on the tab. Always disconnect the battery first. Don't skip the 2 small screws — because the injectors are physically shorter than OEM, the factory retention alone doesn't fully secure the rail, and it can work loose from vibration over time if you skip this.",
-        diagnostic:"Rough idle, misfires, or fuel trim codes right after the swap are expected until a proper tune is applied — this isn't a bolt-on-and-drive mod by itself.",
-        verdict:"Worth doing if a tune is already part of your plan — bigger injectors support more fuel for a bigger power tune. Don't do this in isolation without a tune to match it, and it's a moderately involved job mainly due to fuel line handling and tight engine bay access, not beginner-friendly.",
-      },
-    },
-  },
-};
-
 const BRAND_COLORS = {
   "EuroCompulsion":"#E8401C","Forge Motorsports":"#4A8FE8","Ragazzon":"#2E8B57",
   "Magnaflow":"#9B59B6","Neuspeed":"#E8B01C","Bosch":"#E81C4A",
@@ -554,36 +527,12 @@ const BRAND_COLORS = {
 };
 
 const roundToTen=(n)=>Math.round(n/10)*10;
-const parseSteps=(text)=>{
-  if(!text) return [];
-  const parts=text.split(/(?:^|\n)\s*Step\s*\d+\s*:?\s*/i).map(s=>s.trim()).filter(Boolean);
-  if(parts.length>1) return parts;
-  const numbered=text.split(/(?:^|\n)\s*\d+[\.\)]\s*/).map(s=>s.trim()).filter(Boolean);
-  return numbered.length>1?numbered:[text];
-};
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
 
 const LS={color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px",display:"block"};
 const SS={background:"#1C1C1C",border:"1px solid #333",color:"#E8E4DC",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",cursor:"pointer",appearance:"none",WebkitAppearance:"none"};
 const IS={background:"#1C1C1C",border:"1px solid #333",color:"#E8E4DC",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",boxSizing:"border-box"};
 const BP=(on)=>({background:on?"#FF6B2B":"#1C1C1C",color:on?"#0D0D0D":"#444",border:"none",padding:"16px 40px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",cursor:on?"pointer":"not-allowed",borderRadius:"4px",width:"100%",transition:"all 0.2s"});
-
-function Section({title,content,delay}){
-  return(
-    <div style={{animation:"fadeSlide 0.4s ease forwards",animationDelay:`${delay}s`,opacity:0,borderLeft:"3px solid #FF6B2B",paddingLeft:"20px",marginBottom:"32px"}}>
-      <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"3px",marginBottom:"8px"}}>{title}</div>
-      <div style={{color:"#C8C4BC",lineHeight:"1.8",fontSize:"15px",whiteSpace:"pre-wrap"}}>{content}</div>
-    </div>
-  );
-}
-
-function ModChip({label,selected,onClick}){
-  return(
-    <div onClick={onClick} style={{padding:"8px 14px",borderRadius:"4px",border:selected?"1px solid #FF6B2B":"1px solid #2A2A2A",background:selected?"rgba(255,107,43,0.12)":"#1C1C1C",color:selected?"#FF6B2B":"#666",fontSize:"13px",cursor:"pointer",userSelect:"none",transition:"all 0.15s",display:"flex",alignItems:"center",gap:"6px"}}>
-      {selected&&<span style={{fontSize:"10px"}}>✓</span>}{label}
-    </div>
-  );
-}
 
 function BrandDot({brand,size=8}){
   return <span style={{display:"inline-block",width:`${size}px`,height:`${size}px`,borderRadius:"50%",background:BRAND_COLORS[brand]||"#666",marginRight:"6px",flexShrink:0}}/>;
@@ -639,14 +588,37 @@ const MAINTENANCE_ITEMS=[
     notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
   },
   {
-    key:"brakes",
-    name:"Brake Pads & System Check",
-    mileInterval:12000,
+    key:"brakepads",
+    name:"Brake Pads",
+    mileInterval:25000,
     monthInterval:12,
-    notes:()=>"Interval varies with driving style — inspect pad thickness and rotor condition.",
+    notes:()=>"Wear varies a lot with driving style — this is a rough interval, not a hard rule. Check pad thickness through the wheel spokes if you can, or have it checked at a tire rotation.",
+  },
+  {
+    key:"brakerotors",
+    name:"Brake Rotors",
+    mileInterval:50000,
+    monthInterval:24,
+    notes:()=>"Usually inspected (and resurfaced or replaced if scored/warped) whenever the pads are done. Don't need to be swapped on their own schedule most of the time.",
+  },
+  {
+    key:"coolant",
+    name:"Coolant / Antifreeze",
+    mileInterval:30000,
+    monthInterval:24,
+    notes:()=>"Interval depends heavily on coolant type — conventional green coolant is usually ~30k mi, long-life (pink/orange, Dex-Cool style) can run 100k+. Check your owner's manual before assuming.",
+  },
+  {
+    key:"transfluid",
+    name:"Transmission Fluid",
+    mileInterval:30000,
+    monthInterval:24,
+    notes:(car)=>{
+      const manual=car.trim&&/manual/i.test(car.trim);
+      return manual?"Manual transmissions typically want fluid changed every 30-60k mi.":"Many automatics list \"lifetime\" fluid, but plenty of mechanics still recommend a change around 60k mi for longevity. Check your owner's manual for the official word.";
+    },
   },
 ];
-
 
 function CarCard({car,onSelect,onDelete,hasAlerts}){
   const colorHex=car.colorHex||"#1C1C1C";
@@ -746,7 +718,6 @@ function AddCarForm({onSave,onCancel}){
     </div>
   );
 
-
   const InfoBox=({label,value})=>(
     <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(255,107,43,0.08)",borderRadius:"4px",borderLeft:"3px solid #FF6B2B",animation:"fadeSlide 0.3s ease forwards"}}>
       <span style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>{label}</span>
@@ -810,15 +781,14 @@ export default function ModGuide(){
   const [activeCar,setActiveCar]=useState(null);
   const [activeTab,setActiveTab]=useState("maintenance");
   const [activeBrand,setActiveBrand]=useState(null);
-  const [selectedMod,setSelectedMod]=useState("");
-  const [loading,setLoading]=useState(false);
-  const [sections,setSections]=useState(null);
-  const [genError,setGenError]=useState("");
   const [showBell,setShowBell]=useState(false);
   const [editMileage,setEditMileage]=useState(false);
   const [tempMileage,setTempMileage]=useState("");
   const [doneItem,setDoneItem]=useState(null);
   const [doneMileageInput,setDoneMileageInput]=useState("");
+  const [wizardStep,setWizardStep]=useState(-1);
+  const [wizardMileage,setWizardMileage]=useState("");
+  const [wizardAnswers,setWizardAnswers]=useState({});
 
   useEffect(()=>{
     supabase.auth.getSession().then(({data:{session}})=>{setSession(session);setAuthLoading(false);});
@@ -839,13 +809,9 @@ export default function ModGuide(){
   const updateGarageItem=async(car)=>await supabase.from("garages").update({car_data:car}).eq("id",car.id);
   const deleteGarageItem=async(id)=>{await supabase.from("garages").delete().eq("id",id);setGarage(prev=>prev.filter(c=>c.id!==id));};
   const addCar=async(carData)=>{const id=await saveGarageItem(carData);if(id){setGarage(prev=>[...prev,{...carData,id}]);setView("garage");}};
-  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setSections(null);setSelectedMod("");setActiveTab("maintenance");setWizardStep(-1);setView("car-detail");};
+  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setView("car-detail");};
   const syncCar=async(updated)=>{setGarage(prev=>prev.map(c=>c.id===updated.id?updated:c));setActiveCar(updated);await updateGarageItem(updated);};
   const toggleBuildItem=(item)=>{const exists=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);syncCar({...activeCar,build:exists?activeCar.build.filter(b=>!(b.brand===item.brand&&b.part===item.part)):[...(activeCar.build||[]),item]});};
-
-  const [wizardStep,setWizardStep]=useState(-1);
-  const [wizardMileage,setWizardMileage]=useState("");
-  const [wizardAnswers,setWizardAnswers]=useState({});
 
   const startWizard=()=>{setWizardStep(0);setWizardMileage("");setWizardAnswers({});};
 
@@ -888,44 +854,7 @@ export default function ModGuide(){
   const getCatalog=(car)=>CATALOG[car.make]?.[car.model]||[];
   const getBrands=(car)=>[...new Set(getCatalog(car).map(i=>i.brand))];
   const getCategoriesForBrand=()=>{if(!activeCar||!activeBrand)return{};const cats={};getCatalog(activeCar).filter(i=>i.brand===activeBrand).forEach(i=>{if(!cats[i.category])cats[i.category]=[];cats[i.category].push(i);});return cats;};
-  const guideCategories=activeCar?[...new Set(getCatalog(activeCar).map(i=>i.category))]:[];
 
-  const generate=async()=>{
-    if(!activeCar||!selectedMod)return;
-    setLoading(true);setSections(null);setGenError("");
-
-    const staticGuide=STATIC_GUIDES[activeCar.make]?.[activeCar.model]?.[selectedMod];
-    if(staticGuide){
-      setSections(staticGuide);
-      setView("guide");
-      setLoading(false);
-      return;
-    }
-
-    const buildContext=activeCar.build&&activeCar.build.length>0?`Car already has these parts installed: ${activeCar.build.map(b=>`${b.brand} ${b.part}`).join(", ")}. In the install steps, explicitly call out when a step can be skipped or is easier because one of these parts is already in place.`:"";
-    const prompt=`You are a real-world mechanic who has personally done this exact job on this exact car — not a generic repair manual. User has a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}${activeCar.drivetrain?` (${activeCar.drivetrain})`:""}. Guide for: ${selectedMod}. ${buildContext}
-
-Match the complexity of your answer to the actual job. A spark plug swap on a stock 4-cylinder engine bay with easy access is a 20-30 minute job for most owners — don't invent extra disassembly, extra parts, or extra caution that isn't really needed. Only add real complexity (removing intake piping, coilpack brackets, etc.) if it's genuinely required to reach the part on this specific engine layout.
-
-For tools: only list what's actually needed for this specific job on this specific car — correct socket size (state it, e.g. 5/8" spark plug socket), an extension if the plugs are recessed, a torque wrench if torque matters, dielectric grease if relevant. Do not list unrelated shop tools just to seem thorough.
-
-Be honest about uncertainty instead of inventing specifics. If you're not fully certain of an exact bolt size, torque spec, or a fine detail of this engine bay's layout, say so plainly — e.g. "likely a 10mm, verify with a flashlight before you start" — the same way an experienced owner talks when they're going from memory. Do not state a specific number with confidence unless you're actually sure of it. It is better to flag "verify this" than to give a wrong exact figure.
-
-Flag real dependencies between mods. If this mod typically needs a supporting mod to run or perform correctly (for example: bigger injectors need a matching tune, a bigger turbo needs supporting fueling, coilovers need an alignment after), say so clearly in the gotchas or verdict — don't let the guide imply this is a simple bolt-on if it isn't.
-
-Stay grounded to what's actually being asked. Don't describe removing components that aren't realistically in the way for this specific job on this specific car — if you're not sure something is in the way, say "you may need to move X depending on your exact routing" rather than stating it as a certainty.
-
-Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of what this job actually involves and how hard it really is.","tools":"Exact tools needed for this specific job, one per line with a dash. No filler.","location":"Where on this specific car, and what (if anything) needs to move to reach it.","install":"Numbered steps with real details, each starting with 'Step N:'. Keep steps as simple as the job actually is.","gotchas":"What nobody tells you — most important section.","diagnostic":"What to check if something seems off after install.","verdict":"Honest take. Worth it?"}`;
-    try{
-      const res=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt})});
-      const data=await res.json();
-      if(!res.ok||data.error) throw new Error(data.error||"Request failed");
-      setSections(JSON.parse(data.text.replace(/```json|```/g,"").trim()));
-      setView("guide");
-    }catch{setGenError("Something went wrong. Try again.");}finally{setLoading(false);}
-  };
-
-  const SECTION_MAP=[{key:"overview",title:"OVERVIEW"},{key:"tools",title:"TOOLS & PARTS"},{key:"location",title:"WHERE TO FIND IT ON YOUR CAR"},{key:"install",title:"INSTALL WALKTHROUGH"},{key:"gotchas",title:"WHAT NOBODY TELLS YOU"},{key:"diagnostic",title:"POST-INSTALL DIAGNOSTIC"},{key:"verdict",title:"VERDICT"}];
   const Tab=({id,label})=>(<button onClick={()=>setActiveTab(id)} style={{background:"none",border:"none",borderBottom:activeTab===id?"2px solid #FF6B2B":"2px solid transparent",color:activeTab===id?"#FF6B2B":"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"10px 14px",cursor:"pointer",transition:"all 0.15s",whiteSpace:"nowrap"}}>{label}</button>);
 
   if(authLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
@@ -956,7 +885,7 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
               </div>
             )}
           </div>
-          {view!=="garage"&&view!=="add-car"&&<button onClick={()=>{view==="guide"?setView("car-detail"):setView("garage");}} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px"}}>{view==="guide"?"← Back":"← Garage"}</button>}
+          {view!=="garage"&&view!=="add-car"&&<button onClick={()=>setView("garage")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px"}}>← Garage</button>}
           <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
       </div>
@@ -965,7 +894,7 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
         {view==="garage"&&(
           <div style={{paddingTop:"48px"}}>
             <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,60px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>MY GARAGE</div>
-            <p style={{color:"#555",fontSize:"15px",marginBottom:"36px"}}>Your cars. Your build. Your guide.</p>
+            <p style={{color:"#555",fontSize:"15px",marginBottom:"36px"}}>Your cars. Your build. Your maintenance.</p>
             {garage.length===0?(
               <div style={{border:"1px dashed #2A2A2A",borderRadius:"6px",padding:"48px",textAlign:"center"}}>
                 <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>GARAGE IS EMPTY</div>
@@ -1010,7 +939,6 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
 
             <div style={{borderBottom:"1px solid #1C1C1C",marginBottom:"32px",display:"flex",overflowX:"auto"}}>
               <Tab id="maintenance" label="MAINTENANCE"/>
-              <Tab id="guides" label="GUIDES"/>
               <Tab id="mods" label="MODS"/>
               <Tab id="build" label="MY BUILD"/>
             </div>
@@ -1040,7 +968,7 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
                     <div style={{textAlign:"center",padding:"48px 24px"}}>
                       <div style={{fontSize:"48px",marginBottom:"16px"}}>❗</div>
                       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"8px"}}>SET UP MAINTENANCE TRACKER</div>
-                      <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — oil, tires, air filter, brakes.</div>
+                      <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — oil, tires, filters, brakes, coolant, and transmission fluid.</div>
                       <button onClick={startWizard} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>START SETUP</button>
                     </div>
                   )
@@ -1072,31 +1000,6 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
                       );
                     })}
                     <button onClick={()=>{syncCar({...activeCar,maintenance:[]});setWizardStep(-1);}} style={{background:"transparent",border:"1px solid #2A2A2A",color:"#444",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",width:"100%",marginTop:"16px"}}>RESET & REDO SETUP</button>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {activeTab==="guides"&&(
-              <div>
-                {activeCar.build&&activeCar.build.length>0&&(
-                  <div style={{marginBottom:"24px",padding:"14px 18px",background:"#1C1C1C",borderRadius:"4px",borderLeft:"3px solid #FF6B2B"}}>
-                    <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px"}}>YOUR BUILD WILL BE FACTORED IN</div>
-                    <div style={{display:"flex",flexWrap:"wrap",gap:"6px"}}>{activeCar.build.map((item,i)=><span key={i} style={{background:"rgba(255,107,43,0.08)",border:"1px solid rgba(255,107,43,0.2)",color:"#C8C4BC",fontSize:"11px",padding:"3px 8px",borderRadius:"3px",display:"flex",alignItems:"center"}}><BrandDot brand={item.brand} size={6}/>{item.brand} {item.part}</span>)}</div>
-                  </div>
-                )}
-                {guideCategories.length===0?(
-                  <div style={{textAlign:"center",padding:"48px 0"}}>
-                    <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO GUIDES YET FOR THIS CAR</div>
-                    <div style={{color:"#444",fontSize:"14px"}}>We're adding more cars and guides all the time.</div>
-                  </div>
-                ):(
-                  <div>
-                    <span style={LS}>WHAT DO YOU WANT A GUIDE FOR?</span>
-                    <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginBottom:"28px"}}>{guideCategories.map(cat=><ModChip key={cat} label={cat} selected={selectedMod===cat} onClick={()=>setSelectedMod(selectedMod===cat?"":cat)}/>)}</div>
-                    {genError&&<div style={{color:"#FF6B2B",marginBottom:"12px",fontSize:"14px"}}>{genError}</div>}
-                    {loading&&<div style={{marginBottom:"24px"}}><div style={{height:"2px",background:"#1C1C1C",borderRadius:"2px",overflow:"hidden"}}><div style={{height:"100%",background:"#FF6B2B",animation:"loadBar 2s ease infinite",width:"40%"}}/></div><div style={{color:"#444",fontSize:"13px",marginTop:"10px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px"}}>PULLING FROM THE COLLECTIVE KNOWLEDGE...</div></div>}
-                    <button onClick={generate} disabled={!selectedMod||loading} style={BP(selectedMod&&!loading)}>{loading?"GENERATING...":"GENERATE GUIDE"}</button>
                   </div>
                 )}
               </div>
@@ -1174,65 +1077,6 @@ Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary of 
             )}
           </div>
         )}
-
-        {view==="guide"&&sections&&activeCar&&(()=>{
-          const steps=parseSteps(sections.install);
-          return(
-            <div style={{position:"fixed",inset:0,zIndex:400,display:"flex",alignItems:"flex-end",justifyContent:"center"}}>
-              <div onClick={()=>setView("car-detail")} style={{position:"absolute",inset:0,background:"rgba(0,0,0,0.7)"}}/>
-              <div style={{position:"relative",width:"100%",maxWidth:"760px",height:"92vh",background:"#0D0D0D",borderRadius:"16px 16px 0 0",border:"1px solid #2A2A2A",borderBottom:"none",display:"flex",flexDirection:"column",animation:"fadeSlide 0.3s ease forwards",boxShadow:"0 -8px 40px rgba(0,0,0,0.6)"}}>
-
-                {/* Header */}
-                <div style={{padding:"16px 24px",borderBottom:"1px solid #1C1C1C",display:"flex",alignItems:"center",justifyContent:"space-between",flexShrink:0}}>
-                  <div>
-                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",color:"#444"}}>GUIDE FOR</div>
-                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",color:"#E8E4DC"}}>
-                      {activeCar.year} {activeCar.make} {activeCar.model} <span style={{color:"#FF6B2B"}}>— {selectedMod}</span>
-                    </div>
-                  </div>
-                  <button onClick={()=>setView("car-detail")} style={{background:"#1C1C1C",border:"1px solid #2A2A2A",color:"#888",width:"32px",height:"32px",borderRadius:"50%",cursor:"pointer",fontSize:"16px",flexShrink:0}}>×</button>
-                </div>
-
-                {/* Tools — pinned */}
-                {sections.tools&&(
-                  <div style={{padding:"16px 24px",borderBottom:"1px solid #1C1C1C",background:"#111",flexShrink:0}}>
-                    <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px"}}>TOOLS YOU'LL NEED</div>
-                    <div style={{color:"#C8C4BC",fontSize:"13px",lineHeight:"1.7",whiteSpace:"pre-wrap"}}>{sections.tools}</div>
-                  </div>
-                )}
-
-                {/* Scrollable content */}
-                <div style={{flex:1,overflowY:"auto",padding:"24px"}}>
-                  {sections.overview&&<Section title="OVERVIEW" content={sections.overview} delay={0}/>}
-                  {sections.location&&<Section title="WHERE TO FIND IT ON YOUR CAR" content={sections.location} delay={0.1}/>}
-
-                  {steps.length>0&&(
-                    <div style={{marginBottom:"8px"}}>
-                      <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"3px",marginBottom:"16px"}}>INSTALL WALKTHROUGH</div>
-                      {steps.map((step,i)=>(
-                        <div key={i} style={{display:"flex",gap:"14px",marginBottom:"20px"}}>
-                          <div style={{flexShrink:0,width:"28px",height:"28px",borderRadius:"50%",background:"rgba(255,107,43,0.15)",border:"1px solid #FF6B2B",color:"#FF6B2B",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px"}}>{i+1}</div>
-                          <div style={{color:"#C8C4BC",lineHeight:"1.7",fontSize:"15px",paddingTop:"2px"}}>{step}</div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {sections.gotchas&&<Section title="WHAT NOBODY TELLS YOU" content={sections.gotchas} delay={0.2}/>}
-                  {sections.diagnostic&&<Section title="POST-INSTALL DIAGNOSTIC" content={sections.diagnostic} delay={0.3}/>}
-                  {sections.verdict&&<Section title="VERDICT" content={sections.verdict} delay={0.4}/>}
-
-                  <div style={{padding:"16px",background:"#1C1C1C",borderRadius:"4px",fontSize:"12px",color:"#555",lineHeight:"1.6",marginTop:"24px"}}>AI-generated from community knowledge. Always verify torque specs with your factory service manual. Mod at your own risk — you already knew that.</div>
-                </div>
-
-                {/* Footer */}
-                <div style={{padding:"16px 24px",borderTop:"1px solid #1C1C1C",flexShrink:0}}>
-                  <button onClick={()=>setView("car-detail")} style={{background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px",width:"100%"}}>← BACK</button>
-                </div>
-              </div>
-            </div>
-          );
-        })()}
       </div>
 
       {doneItem&&(
