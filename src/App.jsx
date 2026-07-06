@@ -527,6 +527,13 @@ const BRAND_COLORS = {
 };
 
 const roundToTen=(n)=>Math.round(n/10)*10;
+const parseSteps=(text)=>{
+  if(!text) return [];
+  const parts=text.split(/(?:^|\n)\s*Step\s*\d+\s*:?\s*/i).map(s=>s.trim()).filter(Boolean);
+  if(parts.length>1) return parts;
+  const numbered=text.split(/(?:^|\n)\s*\d+[\.\)]\s*/).map(s=>s.trim()).filter(Boolean);
+  return numbered.length>1?numbered:[text];
+};
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
 
 const LS={color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px",display:"block"};
@@ -859,12 +866,13 @@ export default function ModGuide(){
   const generate=async()=>{
     if(!activeCar||!selectedMod)return;
     setLoading(true);setSections(null);setGenError("");
-    const buildContext=activeCar.build&&activeCar.build.length>0?`Car already has: ${activeCar.build.map(b=>`${b.brand} ${b.part}`).join(", ")}. Factor these in.`:"";
-    const prompt=`You are a real-world automotive mod expert. User has a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}${activeCar.drivetrain?` (${activeCar.drivetrain})`:""}. Guide for: ${selectedMod}. ${buildContext} Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary.","tools":"Exact tools, one per line with a dash.","location":"Where on this specific car.","install":"Numbered steps with real details.","gotchas":"What nobody tells you — most important section.","diagnostic":"What to check if something seems off after install.","verdict":"Honest take. Worth it?"}`;
+    const buildContext=activeCar.build&&activeCar.build.length>0?`Car already has these parts installed: ${activeCar.build.map(b=>`${b.brand} ${b.part}`).join(", ")}. In the install steps, explicitly call out when a step can be skipped or is easier because one of these parts is already in place.`:"";
+    const prompt=`You are a real-world automotive mod expert. User has a ${activeCar.year} ${activeCar.make} ${activeCar.model}${activeCar.trim?` ${activeCar.trim}`:""}${activeCar.engine?` with ${activeCar.engine}`:""}${activeCar.drivetrain?` (${activeCar.drivetrain})`:""}. Guide for: ${selectedMod}. ${buildContext} Return ONLY this JSON, no markdown: {"overview":"2-3 sentence honest summary.","tools":"Exact tools, one per line with a dash.","location":"Where on this specific car.","install":"Numbered steps with real details, each starting with 'Step N:'.","gotchas":"What nobody tells you — most important section.","diagnostic":"What to check if something seems off after install.","verdict":"Honest take. Worth it?"}`;
     try{
-      const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:prompt}]})});
+      const res=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt})});
       const data=await res.json();
-      setSections(JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim()));
+      if(!res.ok||data.error) throw new Error(data.error||"Request failed");
+      setSections(JSON.parse(data.text.replace(/```json|```/g,"").trim()));
       setView("guide");
     }catch{setGenError("Something went wrong. Try again.");}finally{setLoading(false);}
   };
@@ -1119,18 +1127,64 @@ export default function ModGuide(){
           </div>
         )}
 
-        {view==="guide"&&sections&&activeCar&&(
-          <div style={{paddingTop:"48px",paddingBottom:"80px"}}>
-            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"3px",color:"#444",marginBottom:"6px"}}>GUIDE FOR</div>
-            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(24px,5vw,40px)",color:"#E8E4DC",lineHeight:"1.1",marginBottom:"40px"}}>
-              {activeCar.year} {activeCar.make} {activeCar.model}{activeCar.trim?` ${activeCar.trim}`:""}<br/>
-              <span style={{color:"#FF6B2B"}}>— {selectedMod}</span>
+        {view==="guide"&&sections&&activeCar&&(()=>{
+          const steps=parseSteps(sections.install);
+          return(
+            <div style={{position:"fixed",inset:0,zIndex:400,display:"flex",alignItems:"flex-end",justifyContent:"center"}}>
+              <div onClick={()=>setView("car-detail")} style={{position:"absolute",inset:0,background:"rgba(0,0,0,0.7)"}}/>
+              <div style={{position:"relative",width:"100%",maxWidth:"760px",height:"92vh",background:"#0D0D0D",borderRadius:"16px 16px 0 0",border:"1px solid #2A2A2A",borderBottom:"none",display:"flex",flexDirection:"column",animation:"fadeSlide 0.3s ease forwards",boxShadow:"0 -8px 40px rgba(0,0,0,0.6)"}}>
+
+                {/* Header */}
+                <div style={{padding:"16px 24px",borderBottom:"1px solid #1C1C1C",display:"flex",alignItems:"center",justifyContent:"space-between",flexShrink:0}}>
+                  <div>
+                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",color:"#444"}}>GUIDE FOR</div>
+                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",color:"#E8E4DC"}}>
+                      {activeCar.year} {activeCar.make} {activeCar.model} <span style={{color:"#FF6B2B"}}>— {selectedMod}</span>
+                    </div>
+                  </div>
+                  <button onClick={()=>setView("car-detail")} style={{background:"#1C1C1C",border:"1px solid #2A2A2A",color:"#888",width:"32px",height:"32px",borderRadius:"50%",cursor:"pointer",fontSize:"16px",flexShrink:0}}>×</button>
+                </div>
+
+                {/* Tools — pinned */}
+                {sections.tools&&(
+                  <div style={{padding:"16px 24px",borderBottom:"1px solid #1C1C1C",background:"#111",flexShrink:0}}>
+                    <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px"}}>TOOLS YOU'LL NEED</div>
+                    <div style={{color:"#C8C4BC",fontSize:"13px",lineHeight:"1.7",whiteSpace:"pre-wrap"}}>{sections.tools}</div>
+                  </div>
+                )}
+
+                {/* Scrollable content */}
+                <div style={{flex:1,overflowY:"auto",padding:"24px"}}>
+                  {sections.overview&&<Section title="OVERVIEW" content={sections.overview} delay={0}/>}
+                  {sections.location&&<Section title="WHERE TO FIND IT ON YOUR CAR" content={sections.location} delay={0.1}/>}
+
+                  {steps.length>0&&(
+                    <div style={{marginBottom:"8px"}}>
+                      <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"3px",marginBottom:"16px"}}>INSTALL WALKTHROUGH</div>
+                      {steps.map((step,i)=>(
+                        <div key={i} style={{display:"flex",gap:"14px",marginBottom:"20px"}}>
+                          <div style={{flexShrink:0,width:"28px",height:"28px",borderRadius:"50%",background:"rgba(255,107,43,0.15)",border:"1px solid #FF6B2B",color:"#FF6B2B",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px"}}>{i+1}</div>
+                          <div style={{color:"#C8C4BC",lineHeight:"1.7",fontSize:"15px",paddingTop:"2px"}}>{step}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {sections.gotchas&&<Section title="WHAT NOBODY TELLS YOU" content={sections.gotchas} delay={0.2}/>}
+                  {sections.diagnostic&&<Section title="POST-INSTALL DIAGNOSTIC" content={sections.diagnostic} delay={0.3}/>}
+                  {sections.verdict&&<Section title="VERDICT" content={sections.verdict} delay={0.4}/>}
+
+                  <div style={{padding:"16px",background:"#1C1C1C",borderRadius:"4px",fontSize:"12px",color:"#555",lineHeight:"1.6",marginTop:"24px"}}>AI-generated from community knowledge. Always verify torque specs with your factory service manual. Mod at your own risk — you already knew that.</div>
+                </div>
+
+                {/* Footer */}
+                <div style={{padding:"16px 24px",borderTop:"1px solid #1C1C1C",flexShrink:0}}>
+                  <button onClick={()=>setView("car-detail")} style={{background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px",width:"100%"}}>← BACK</button>
+                </div>
+              </div>
             </div>
-            {SECTION_MAP.map(({key,title},i)=>sections[key]&&<Section key={key} title={title} content={sections[key]} delay={i*0.15}/>)}
-            <div style={{marginTop:"48px",padding:"20px",background:"#1C1C1C",borderRadius:"4px",fontSize:"13px",color:"#555",lineHeight:"1.6"}}>AI-generated from community knowledge. Always verify torque specs with your factory service manual. Mod at your own risk — you already knew that.</div>
-            <button onClick={()=>setView("car-detail")} style={{marginTop:"24px",background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px",width:"100%"}}>← BACK TO {activeCar.year} {activeCar.make} {activeCar.model}</button>
-          </div>
-        )}
+          );
+        })()}
       </div>
 
       {doneItem&&(
