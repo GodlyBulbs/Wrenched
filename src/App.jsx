@@ -333,20 +333,128 @@ const VEHICLES = {
       ],
     },
     "MX-5 Miata": {
-      years:["2016","2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Sport":         { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Club":          { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Grand Touring": { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+      generations:{
+        "NA6 (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base":    { engine:"1.6L 4-cylinder (115hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Montego Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Silver Stone Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "NA8 (1994-1997)":{
+          years:["1994","1995","1996","1997"],
+          trims:{
+            "Base":      { engine:"1.8L 4-cylinder (130hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "R Package": { engine:"1.8L 4-cylinder (133hp)", drivetrain:"RWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Montego Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Marina Green Mica (Green)",hex:"#2E5A3A"},
+            {name:"Merlot Mica (Dark Red)",hex:"#5A1B2E"},
+          ],
+        },
+        "NB1 (1999-2000)":{
+          years:["1999","2000"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (140hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "LS":   { engine:"1.8L 4-cylinder (140hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Emerald Mica (Green)",hex:"#2E5A3A"},
+            {name:"Montego Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Sunburst Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "NB2 (2001-2005)":{
+          years:["2001","2002","2003","2004","2005"],
+          trims:{
+            "Base":       { engine:"1.8L 4-cylinder (142hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "LS":         { engine:"1.8L 4-cylinder (142hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Mazdaspeed": { engine:"1.8L Turbocharged 4-cylinder (178hp)", drivetrain:"RWD", transmission:"Manual", note:"2004 only — one of only two factory turbo Miatas ever made." },
+          },
+          colors:[
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Titanium Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Velocity Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Winning Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "NC1 (2006-2008)":{
+          years:["2006","2007","2008"],
+          trims:{
+            "Sport":         { engine:"2.0L 4-cylinder (170hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Touring":       { engine:"2.0L 4-cylinder (170hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Grand Touring": { engine:"2.0L 4-cylinder (170hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"True Red (Red)",hex:"#C8102E"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Gray Mica (Gray)",hex:"#6B6E6F"},
+            {name:"Velocity Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Galaxy Gray Mica (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "NC2 (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Sport":         { engine:"2.0L 4-cylinder (167hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Club":          { engine:"2.0L 4-cylinder (167hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Touring":       { engine:"2.0L 4-cylinder (167hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Grand Touring": { engine:"2.0L 4-cylinder (167hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"True Red (Red)",hex:"#C8102E"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal White Pearl (White)",hex:"#F0F0F0"},
+            {name:"Dolphin Gray Mica (Gray)",hex:"#8A8D8F"},
+            {name:"Liquid Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "ND1 (2016-2018)":{
+          years:["2016","2017","2018"],
+          trims:{
+            "Sport":         { engine:"2.0L 4-cylinder (155hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Club":          { engine:"2.0L 4-cylinder (155hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Grand Touring": { engine:"2.0L 4-cylinder (155hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+            {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
+          ],
+        },
+        "ND2 (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "Sport":         { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Club":          { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Grand Touring": { engine:"2.0L 4-cylinder (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+            {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
+            {name:"Zircon Sand Metallic (Tan)",hex:"#C8B89A"},
+          ],
+        },
       },
-      colors:[
-        {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
-        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
-        {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
-        {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
-        {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
-        {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
-      ],
     },
   },
   "Subaru": {
@@ -654,7 +762,7 @@ function CarCard({car,onSelect,onDelete,hasAlerts}){
       {!maintenanceSetup&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#FF3B3B",fontSize:"18px"}}>❗</div>}
       {maintenanceSetup&&hasAlerts&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#F5C800",fontSize:"16px"}}>⚠️</div>}
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:textColor,marginBottom:"2px",textShadow:"0 1px 3px rgba(0,0,0,0.3)"}}>{car.year} {car.make} {car.model}</div>
-      <div style={{color:textColor,fontSize:"12px",opacity:0.85,marginBottom:"2px"}}>{[car.trim,car.engine,car.transmission,car.drivetrain].filter(Boolean).join(" · ")}</div>
+      <div style={{color:textColor,fontSize:"12px",opacity:0.85,marginBottom:"2px"}}>{[car.generation,car.trim,car.engine,car.transmission,car.drivetrain].filter(Boolean).join(" · ")}</div>
       <div style={{color:textColor,fontSize:"12px",opacity:0.7,marginBottom:"12px"}}>{car.colorName||"Color not set"} · {(car.mileage||0).toLocaleString()} mi</div>
       {car.build&&car.build.length>0&&(
         <div style={{display:"flex",flexWrap:"wrap",gap:"4px",marginBottom:"8px"}}>
@@ -706,6 +814,7 @@ function AuthScreen(){
 function AddCarForm({onSave,onCancel}){
   const [fMake,setFMake]=useState("");
   const [fModel,setFModel]=useState("");
+  const [fGeneration,setFGeneration]=useState("");
   const [fYear,setFYear]=useState("");
   const [fTrim,setFTrim]=useState("");
   const [fEngine,setFEngine]=useState("");
@@ -715,7 +824,11 @@ function AddCarForm({onSave,onCancel}){
 
   const makes=Object.keys(VEHICLES);
   const models=fMake?Object.keys(VEHICLES[fMake]):[];
-  const vData=fMake&&fModel?VEHICLES[fMake][fModel]:null;
+  const rawModelData=fMake&&fModel?VEHICLES[fMake][fModel]:null;
+  const hasGenerations=!!rawModelData?.generations;
+  const generations=hasGenerations?Object.keys(rawModelData.generations):[];
+  const vData=hasGenerations?(fGeneration?rawModelData.generations[fGeneration]:null):rawModelData;
+
   const years=vData?vData.years:[];
   const trims=vData?Object.keys(vData.trims):[];
   const autoEngine=fTrim&&vData?vData.trims[fTrim]?.engine:"";
@@ -730,7 +843,9 @@ function AddCarForm({onSave,onCancel}){
   const transmissionOptions=fTrim&&vData?vData.trims[fTrim]?.transmissions||[]:[];
   const needsTransmissionPicker=transmissionOptions.length>0;
   const colors=vData?vData.colors:[];
-  const canSave=fMake&&fModel&&fYear&&fTrim&&(needsEnginePicker?fEngine:true)&&(needsDrivetrainPicker?fDrivetrain:true)&&(needsTransmissionPicker?fTransmission:true)&&fColor;
+  const canSave=fMake&&fModel&&(hasGenerations?fGeneration:true)&&fYear&&fTrim&&(needsEnginePicker?fEngine:true)&&(needsDrivetrainPicker?fDrivetrain:true)&&(needsTransmissionPicker?fTransmission:true)&&fColor;
+
+  const resetDownstream=()=>{setFGeneration("");setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");setFColor(null);};
 
   const SW=({label,val,set,opts,placeholder,disabled})=>(
     <div><span style={LS}>{label}</span>
@@ -756,10 +871,19 @@ function AddCarForm({onSave,onCancel}){
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,52px)",color:"#E8E4DC",marginBottom:"8px"}}>ADD A CAR</div>
       <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Pick your car, trim, and color.</p>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"16px",marginBottom:"24px"}}>
-        <SW label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");setFColor(null);}} opts={makes} placeholder="Select make" disabled={false}/>
-        <SW label="MODEL" val={fModel} set={v=>{setFModel(v);setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");setFColor(null);}} opts={models} placeholder="Select model" disabled={!fMake}/>
-        <SW label="YEAR" val={fYear} set={v=>{setFYear(v);setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={years} placeholder="Select year" disabled={!fModel}/>
+        <SW label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");resetDownstream();}} opts={makes} placeholder="Select make" disabled={false}/>
+        <SW label="MODEL" val={fModel} set={v=>{setFModel(v);resetDownstream();}} opts={models} placeholder="Select model" disabled={!fMake}/>
+        {hasGenerations?(
+          <SW label="GENERATION" val={fGeneration} set={v=>{setFGeneration(v);setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={generations} placeholder="Select generation" disabled={!fModel}/>
+        ):(
+          <SW label="YEAR" val={fYear} set={v=>{setFYear(v);setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={years} placeholder="Select year" disabled={!fModel}/>
+        )}
       </div>
+      {hasGenerations&&fGeneration&&(
+        <div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}>
+          <SW label="YEAR" val={fYear} set={v=>{setFYear(v);setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={years} placeholder="Select year" disabled={false}/>
+        </div>
+      )}
       {fYear&&<div style={{marginBottom:"24px",animation:"fadeSlide 0.3s ease forwards"}}><SW label="TRIM" val={fTrim} set={v=>{setFTrim(v);setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={trims} placeholder="Select trim" disabled={false}/></div>}
       {fTrim&&autoEngine&&(
         <InfoBox label="ENGINE" value={autoEngine}/>
@@ -791,13 +915,13 @@ function AddCarForm({onSave,onCancel}){
           <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
             <div style={{width:"32px",height:"32px",borderRadius:"50%",background:fColor.hex,border:"2px solid rgba(255,255,255,0.3)"}}/>
             <div>
-              <div style={{color:"#E8E4DC",fontSize:"14px"}}>{fYear} {fMake} {fModel} {fTrim}</div>
+              <div style={{color:"#E8E4DC",fontSize:"14px"}}>{fYear} {fMake} {fModel} {fGeneration?`(${fGeneration}) `:""}{fTrim}</div>
               <div style={{color:"#888",fontSize:"12px"}}>{fColor.name}{(autoEngine||fEngine)?` · ${autoEngine||fEngine}`:""}{(autoTransmission||fTransmission)?` · ${autoTransmission||fTransmission}`:""}{(autoDrivetrain||fDrivetrain)?` · ${autoDrivetrain||fDrivetrain}`:""}</div>
             </div>
           </div>
         </div>
       )}
-      <button onClick={()=>onSave({make:fMake,model:fModel,year:fYear,trim:fTrim,engine:autoEngine||fEngine,transmission:autoTransmission||fTransmission,drivetrain:autoDrivetrain||fDrivetrain,colorName:fColor?.name,colorHex:fColor?.hex,mileage:0,build:[],maintenance:[]})} disabled={!canSave} style={BP(canSave)}>SAVE TO GARAGE</button>
+      <button onClick={()=>onSave({make:fMake,model:fModel,generation:fGeneration,year:fYear,trim:fTrim,engine:autoEngine||fEngine,transmission:autoTransmission||fTransmission,drivetrain:autoDrivetrain||fDrivetrain,colorName:fColor?.name,colorHex:fColor?.hex,mileage:0,build:[],maintenance:[]})} disabled={!canSave} style={BP(canSave)}>SAVE TO GARAGE</button>
       <button onClick={onCancel} style={{background:"transparent",color:"#555",border:"none",padding:"14px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",width:"100%",marginTop:"8px"}}>CANCEL</button>
     </div>
   );
@@ -948,7 +1072,7 @@ export default function ModGuide(){
           <div style={{paddingTop:"32px",paddingBottom:"80px"}}>
             <div style={{background:`linear-gradient(135deg, ${carColor}44, ${carColor}11)`,borderRadius:"8px",padding:"20px 24px",marginBottom:"24px",border:`1px solid ${carColor}33`}}>
               <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,36px)",color:"#E8E4DC",lineHeight:"1.1",marginBottom:"4px"}}>{activeCar.year} {activeCar.make} {activeCar.model}</div>
-              <div style={{color:"#888",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.trim,activeCar.engine,activeCar.transmission,activeCar.drivetrain].filter(Boolean).join(" · ")}</div>
+              <div style={{color:"#888",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.generation,activeCar.trim,activeCar.engine,activeCar.transmission,activeCar.drivetrain].filter(Boolean).join(" · ")}</div>
               <div style={{color:"#888",fontSize:"13px",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap"}}>
                 <div style={{width:"12px",height:"12px",borderRadius:"50%",background:carColor,border:"1px solid rgba(255,255,255,0.2)"}}/>
                 {activeCar.colorName}
