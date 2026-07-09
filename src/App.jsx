@@ -531,21 +531,99 @@ const VEHICLES = {
       ],
     },
     "WRX": {
-      years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Base":        { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
-        "Premium":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
-        "Limited":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
-        "STI":         { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD", transmission:"Manual" },
-        "STI Limited": { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD", transmission:"Manual" },
+      generations:{
+        "Bugeye (2002-2003)":{
+          years:["2002","2003"],
+          trims:{
+            "WRX": { engine:"2.0L Turbocharged 4-cylinder (227hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Steel Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Blobeye (2004-2005)":{
+          years:["2004","2005"],
+          trims:{
+            "WRX": { engine:"2.0L Turbocharged 4-cylinder (227hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "STI": { engine:"2.5L Turbocharged 4-cylinder (300hp)", drivetrain:"AWD", transmission:"Manual", note:"First WRX STI officially sold in the US market." },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Titanium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Hawkeye (2006-2007)":{
+          years:["2006","2007"],
+          trims:{
+            "WRX": { engine:"2.5L Turbocharged 4-cylinder (230hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "STI": { engine:"2.5L Turbocharged 4-cylinder (293hp)", drivetrain:"AWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Spark Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "GE/GH/GR (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "WRX Sedan":     { engine:"2.5L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "WRX Hatchback": { engine:"2.5L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "STI":           { engine:"2.5L Turbocharged 4-cylinder (305hp)", drivetrain:"AWD", transmission:"Manual", note:"Hatchback-only until the 2011 facelift added a widebody STI sedan." },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Lightning Red (Red)",hex:"#C8102E"},
+            {name:"Dark Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "VA (2015-2021)":{
+          years:["2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "Base":        { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Premium":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Limited":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "STI":         { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD", transmission:"Manual" },
+            "STI Limited": { engine:"2.5L Turbocharged 4-cylinder (310hp)", drivetrain:"AWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "VB (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":       { engine:"2.4L Turbocharged 4-cylinder (271hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Premium":    { engine:"2.4L Turbocharged 4-cylinder (271hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Limited":    { engine:"2.4L Turbocharged 4-cylinder (271hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"] },
+            "GT":         { engine:"2.4L Turbocharged 4-cylinder (271hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "tS":         { engine:"2.4L Turbocharged 4-cylinder (271hp)", drivetrain:"AWD", transmission:"Manual", note:"Performance-focused trim with Brembo brakes and adaptive suspension — the closest thing to an STI successor since Subaru discontinued the STI nameplate in the US after the 2021 model year." },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+            {name:"Solar Orange Pearl (Orange)",hex:"#E8601C"},
+          ],
+        },
       },
-      colors:[
-        {name:"WR Blue Pearl (Blue)",hex:"#003893"},
-        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
-        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
-      ],
     },
   },
   "Toyota": {
