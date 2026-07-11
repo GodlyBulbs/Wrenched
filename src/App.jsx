@@ -267,23 +267,130 @@ const VEHICLES = {
       ],
     },
     "Mustang GT": {
-      years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Fastback":           { engine:"5.0L V8 (450hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Convertible":        { engine:"5.0L V8 (450hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Premium Fastback":   { engine:"5.0L V8 (450hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Premium Convertible":{ engine:"5.0L V8 (450hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "California Special": { engine:"5.0L V8 (450hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Bullitt":            { engine:"5.0L V8 (480hp)", drivetrain:"RWD", transmission:"Manual" },
+      generations:{
+        "Fox Body (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Coupe":      { engine:"5.0L V8 (225hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Hatchback":  { engine:"5.0L V8 (225hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Convertible":{ engine:"5.0L V8 (225hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Vibrant Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Titanium Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Deep Emerald Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "SN95 (1994-1998)":{
+          years:["1994","1995","1996","1997","1998"],
+          trims:{
+            "Coupe":      { engine:"5.0L/4.6L V8 (215hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1994-95 used the old pushrod 5.0L V8. 1996-98 switched to the new 4.6L SOHC modular V8 — output stayed about the same, but it's a completely different engine architecture." },
+            "Convertible":{ engine:"5.0L/4.6L V8 (215hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Rio Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Pacific Green Metallic (Green)",hex:"#2E5A3A"},
+            {name:"Laser Red Metallic (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "New Edge (1999-2004)":{
+          years:["1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Coupe":      { engine:"4.6L SOHC V8 (260hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Convertible":{ engine:"4.6L SOHC V8 (260hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Bullitt":    { engine:"4.6L SOHC V8 (265hp)", drivetrain:"RWD", transmission:"Manual", note:"2001 only — special edition inspired by the 1968 movie car." },
+            "Mach 1":     { engine:"4.6L DOHC V8 (305hp)", drivetrain:"RWD", transmission:"Manual", note:"2003-2004 only." },
+          },
+          colors:[
+            {name:"Performance Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Zinc Yellow (Yellow)",hex:"#F5C800"},
+            {name:"True Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "S197 (2005-2010)":{
+          years:["2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "Coupe":      { engine:"4.6L 3-valve V8 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Convertible":{ engine:"4.6L 3-valve V8 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Performance White (White)",hex:"#F5F5F5"},
+            {name:"Vista Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Grabber Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "S197 Facelift / Coyote (2011-2014)":{
+          years:["2011","2012","2013","2014"],
+          trims:{
+            "Coupe":      { engine:"5.0L Coyote V8 (412hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"First year of the 5.0 Coyote V8 — a huge jump from the outgoing 4.6L's 315hp." },
+            "Convertible":{ engine:"5.0L Coyote V8 (412hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "California Special":{ engine:"5.0L Coyote V8 (412hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Performance White (White)",hex:"#F5F5F5"},
+            {name:"Grabber Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Yellow Blaze Metallic (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "S550 (2015-2017)":{
+          years:["2015","2016","2017"],
+          trims:{
+            "Fastback":           { engine:"5.0L Coyote V8 (435hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"First S550-generation GT — independent rear suspension standard for the first time in Mustang history." },
+            "Convertible":        { engine:"5.0L Coyote V8 (435hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Competition Orange (Orange)",hex:"#E8601C"},
+            {name:"Grabber Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "S550 Facelift (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Fastback":           { engine:"5.0L Coyote V8 (460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Convertible":        { engine:"5.0L Coyote V8 (460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Premium Fastback":   { engine:"5.0L Coyote V8 (460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Premium Convertible":{ engine:"5.0L Coyote V8 (460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "California Special": { engine:"5.0L Coyote V8 (460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Bullitt":            { engine:"5.0L Coyote V8 (480hp)", drivetrain:"RWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Grabber Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Iconic Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Grabber Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "S650 (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Fastback":    { engine:"5.0L Coyote V8 (480hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Up to 486hp with the optional active exhaust package." },
+            "Convertible": { engine:"5.0L Coyote V8 (480hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Dark Horse":  { engine:"5.0L Coyote V8 (500hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Track-focused trim sitting above the standard GT — unique suspension tuning and aero." },
+          },
+          colors:[
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Grabber Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Vapor Blue Metallic (Light Blue)",hex:"#4A7B9D"},
+          ],
+        },
       },
-      colors:[
-        {name:"Race Red (Red)",hex:"#C8102E"},
-        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
-        {name:"Oxford White (White)",hex:"#F5F5F5"},
-        {name:"Grabber Blue (Blue)",hex:"#1E4B8E"},
-        {name:"Iconic Silver (Silver)",hex:"#C0C0C0"},
-        {name:"Grabber Yellow (Yellow)",hex:"#F5C800"},
-      ],
     },
   },
   "Honda": {
