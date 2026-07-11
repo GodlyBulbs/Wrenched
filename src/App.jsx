@@ -2,6 +2,59 @@ import { useState, useEffect } from "react";
 import { supabase } from "./supabase";
 
 const VEHICLES = {
+  "Acura": {
+    "TLX": {
+      generations:{
+        "First Generation (2015-2017)":{
+          years:["2015","2016","2017"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (206hp)", drivetrain:"FWD", transmission:"Automatic (DCT)" },
+            "V6":   { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Bellanova White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Slate Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+          ],
+        },
+        "First Generation Facelift (2018-2020)":{
+          years:["2018","2019","2020"],
+          trims:{
+            "Base":   { engine:"2.4L 4-cylinder (206hp)", drivetrain:"FWD", transmission:"Automatic (DCT)" },
+            "V6":     { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "A-Spec": { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Sport appearance trim added for 2018 — new bumpers, wheels, and interior trim, no power increase over the standard V6." },
+          },
+          colors:[
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Second Generation (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":       { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Technology": { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "A-Spec":     { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Advance":    { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Type S":     { engine:"3.0L Turbocharged V6 (355hp)", drivetrain:"AWD", transmission:"Automatic", note:"First Type S badge on any Acura in over a decade. SH-AWD is standard, not optional, on this trim." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+            {name:"Fathom Blue Pearl (Blue)",hex:"#1B2A4A"},
+            {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+  },
   "BMW": {
     "328i / 330i": {
       years:["2012","2013","2014","2015","2016","2017","2018","2019"],
@@ -658,6 +711,52 @@ const VEHICLES = {
             {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
             {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
             {name:"Zircon Sand Metallic (Tan)",hex:"#C8B89A"},
+          ],
+        },
+      },
+    },
+  },
+  "Scion": {
+    "tC": {
+      generations:{
+        "First Generation (2005-2010)":{
+          years:["2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (161hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Spec": { engine:"2.4L 4-cylinder (161hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"2007-2008 only — stripped-down trim aimed at the tuner market, steel wheels instead of alloys, fewer standard features." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Flint Mica (Gray)",hex:"#5A5F63"},
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Sizzling Crimson Mica (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "Second Generation (2011-2013)":{
+          years:["2011","2012","2013"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (180hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Nautical Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Magnetic Gray Mica (Gray)",hex:"#6B6E6F"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#C8102E"},
+          ],
+        },
+        "Facelift (2014-2016)":{
+          years:["2014","2015","2016"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (179hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Revised front end with a more aggressive grille, LED accent lighting, and an available 6-speed sequential sport-shift automatic borrowed from the Scion FR-S. Final generation before Scion was folded into Toyota after 2016." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Blizzard Pearl (White)",hex:"#F0F0F0"},
+            {name:"Cosmic Gray Mica (Gray)",hex:"#5A5F63"},
+            {name:"Hot Lava (Orange)",hex:"#E8601C"},
           ],
         },
       },
