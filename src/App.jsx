@@ -307,17 +307,21 @@ const VEHICLES = {
   },
   "Ford": {
     "Fiesta ST": {
-      years:["2014","2015","2016","2017","2018","2019"],
-      trims:{
-        "Base": { engine:"1.6L EcoBoost Turbocharged 4-cylinder (197hp)", drivetrain:"FWD", transmission:"Manual" },
+      generations:{
+        "Mk7 (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Base": { engine:"1.6L EcoBoost Turbocharged 4-cylinder (197hp)", drivetrain:"FWD", transmission:"Manual", note:"The only generation of Fiesta ST ever sold in the US — Ford never brought an earlier or later ST here." },
+          },
+          colors:[
+            {name:"Molten Orange (Orange)",hex:"#E8601C"},
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Performance Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+          ],
+        },
       },
-      colors:[
-        {name:"Molten Orange (Orange)",hex:"#E8601C"},
-        {name:"Oxford White (White)",hex:"#F5F5F5"},
-        {name:"Performance Blue (Blue)",hex:"#1E4B8E"},
-        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
-        {name:"Race Red (Red)",hex:"#C8102E"},
-      ],
     },
     "Mustang GT": {
       generations:{
@@ -448,68 +452,230 @@ const VEHICLES = {
   },
   "Honda": {
     "Accord": {
-      years:["2016"],
-      trims:{
-        "LX":      { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
-        "Sport":   { engine:"2.4L 4-cylinder (189hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
-        "EX":      { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
-        "EX-L":    { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
-        "EX-L V6": { engine:"3.5L V6 (278hp)", drivetrain:"FWD", transmission:"Automatic" },
-        "Touring": { engine:"3.5L V6 (278hp)", drivetrain:"FWD", transmission:"Automatic" },
+      generations:{
+        "4th Generation (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "LX": { engine:"2.2L 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX": { engine:"2.2L 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Bordeaux Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sage Green Metallic (Green)",hex:"#5A7A5A"},
+          ],
+        },
+        "5th Generation (1994-1997)":{
+          years:["1994","1995","1996","1997"],
+          trims:{
+            "LX": { engine:"2.2L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX": { engine:"2.2L 4-cylinder (145hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "V6": { engine:"2.7L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"First V6 ever offered in an Accord — added for the 1995 model year." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Heather Mist Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "6th Generation (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "LX": { engine:"2.3L 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX": { engine:"2.3L 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "V6": { engine:"3.0L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Naples Gold Metallic (Gold)",hex:"#B8A050"},
+          ],
+        },
+        "7th Generation (2003-2007)":{
+          years:["2003","2004","2005","2006","2007"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX": { engine:"2.4L 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX V6": { engine:"3.0L V6 (240hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"First Accord ever offered with a 6-speed manual transmission." },
+          },
+          colors:[
+            {name:"Satin Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Redrock Pearl (Red)",hex:"#6B1A1A"},
+          ],
+        },
+        "8th Generation (2008-2012)":{
+          years:["2008","2009","2010","2011","2012"],
+          trims:{
+            "LX":      { engine:"2.4L 4-cylinder (177hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX":      { engine:"2.4L 4-cylinder (190hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "EX-L V6": { engine:"3.5L V6 (271hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+          ],
+        },
+        "9th Generation (2013-2017)":{
+          years:["2013","2014","2015","2016","2017"],
+          trims:{
+            "LX":      { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Sport":   { engine:"2.4L 4-cylinder (189hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+            "EX-L":    { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "EX-L V6": { engine:"3.5L V6 (278hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Touring": { engine:"3.5L V6 (278hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Basque Red Pearl II (Red)",hex:"#9B1B1B"},
+            {name:"Champagne Frost Pearl (Champagne)",hex:"#D8C9A8"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Kona Coffee Metallic (Brown)",hex:"#4A3728"},
+            {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Obsidian Blue Pearl (Blue)",hex:"#1B2A4A"},
+            {name:"White Orchid Pearl (White)",hex:"#F5F5F0"},
+          ],
+        },
+        "10th Generation (2018-2022)":{
+          years:["2018","2019","2020","2021","2022"],
+          trims:{
+            "LX":                    { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Sport":                 { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Sport Special Edition": { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "EX-L":                  { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Sport 2.0T":            { engine:"2.0L Turbocharged 4-cylinder (252hp)", drivetrain:"FWD", transmission:"Automatic", note:"Shares much of its engine design with the 2017 Civic Type R." },
+            "Touring":               { engine:"2.0L Turbocharged 4-cylinder (252hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
+            {name:"Radiant Red Metallic (Red)",hex:"#C8102E"},
+          ],
+        },
+        "11th Generation (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "LX":      { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "EX-L":    { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Sport-L": { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Touring": { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Hybrid":  { engine:"2.0L Hybrid 4-cylinder (204hp)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"No more 2.0T high-output option this generation — Hybrid is now the top-performance choice." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
+            {name:"Radiant Red Metallic (Red)",hex:"#C8102E"},
+            {name:"Canyon River Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
       },
-      colors:[
-        {name:"Basque Red Pearl II (Red)",hex:"#9B1B1B"},
-        {name:"Champagne Frost Pearl (Champagne)",hex:"#D8C9A8"},
-        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Kona Coffee Metallic (Brown)",hex:"#4A3728"},
-        {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
-        {name:"Obsidian Blue Pearl (Blue)",hex:"#1B2A4A"},
-        {name:"White Orchid Pearl (White)",hex:"#F5F5F0"},
-        {name:"San Marino Red (Red)",hex:"#C8102E"},
-      ],
     },
-    "Accord Sport": {
-      years:["2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Sport":                { engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
-        "Sport Special Edition":{ engine:"1.5L Turbocharged 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
-        "Sport 2.0T":           { engine:"2.0L Turbocharged 4-cylinder (252hp)", drivetrain:"FWD", transmission:"Automatic" },
+    "Civic": {
+      generations:{
+        "5th Gen EG — Si Hatchback (1992-1995)":{
+          years:["1992","1993","1994","1995"],
+          trims:{
+            "Si": { engine:"1.6L SOHC VTEC 4-cylinder (125hp)", drivetrain:"FWD", transmission:"Manual", note:"Hatchback only — this is the classic 90s EG hatch." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cyber Green Pearl (Green)",hex:"#3B8A5A"},
+          ],
+        },
+        "6th Gen EK/EM1 — Si Coupe (1999-2000)":{
+          years:["1999","2000"],
+          trims:{
+            "Si": { engine:"1.6L DOHC VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual", note:"The US didn't get a Si for the 1996-98 model years — it returned for '99-'00 only, as a 2-door coupe (EM1), not a hatchback." },
+          },
+          colors:[
+            {name:"Electron Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Championship White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+          ],
+        },
+        "7th Gen EP3 — Si Hatchback (2002-2005)":{
+          years:["2002","2003","2004","2005"],
+          trims:{
+            "Si": { engine:"2.0L 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual", note:"Hatchback returns. This shares its EP3 platform with the Euro/JDM Civic Type R of the same generation, though the US never got that Type R." },
+          },
+          colors:[
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Satin Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Vivid Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "8th Gen FG/FA — Si Coupe/Sedan (2006-2011)":{
+          years:["2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "Si Coupe": { engine:"2.0L 4-cylinder (197hp)", drivetrain:"FWD", transmission:"Manual" },
+            "Si Sedan": { engine:"2.0L 4-cylinder (197hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Vivid Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "9th Gen FB/FG — Si Coupe/Sedan (2012-2015)":{
+          years:["2012","2013","2014","2015"],
+          trims:{
+            "Si Coupe": { engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Manual" },
+            "Si Sedan": { engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Dyno Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "10th Gen FC/FK — Si & Type R (2017-2021)":{
+          years:["2017","2018","2019","2020","2021"],
+          trims:{
+            "Si Sedan":       { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual" },
+            "Si Coupe":       { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual" },
+            "Type R":         { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD", transmission:"Manual", note:"The first Civic Type R ever officially sold in the US — every prior Type R generation was JDM or Euro-only." },
+            "Type R Limited": { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
+            {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Championship White (White)",hex:"#F0F0F0"},
+            {name:"Boost Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "11th Gen FE/FL — Si & Type R (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Si":     { engine:"1.5L Turbocharged 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Manual", note:"Sedan only this generation — the Si coupe was discontinued." },
+            "Type R": { engine:"2.0L Turbocharged 4-cylinder (315hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
+            {name:"Boost Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Championship White (White)",hex:"#F0F0F0"},
+          ],
+        },
       },
-      colors:[
-        {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
-        {name:"Radiant Red Metallic (Red)",hex:"#C8102E"},
-      ],
-    },
-    "Civic Si": {
-      years:["2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Sedan": { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual" },
-        "Coupe": { engine:"1.5L Turbocharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual" },
-      },
-      colors:[
-        {name:"Rallye Red (Red)",hex:"#C8102E"},
-        {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
-        {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
-        {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
-      ],
-    },
-    "Civic Type R": {
-      years:["2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "Base":    { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD", transmission:"Manual" },
-        "Limited": { engine:"2.0L Turbocharged 4-cylinder (306hp)", drivetrain:"FWD", transmission:"Manual" },
-      },
-      colors:[
-        {name:"Championship White (White)",hex:"#F5F5F5"},
-        {name:"Rallye Red (Red)",hex:"#C8102E"},
-        {name:"Sonic Gray Pearl (Gray)",hex:"#8A8D8F"},
-        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Boost Blue Pearl (Blue)",hex:"#1E4B8E"},
-      ],
     },
   },
   "Mazda": {
