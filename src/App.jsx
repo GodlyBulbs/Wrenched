@@ -1511,6 +1511,7 @@ const BRAND_COLORS = {
   "Wilwood":"#1CE84A","Cravenspeed":"#E81CB0","Mishimoto":"#1C9AE8",
 };
 
+const OWNER_EMAIL="mattjustice1999@gmail.com";
 const roundToTen=(n)=>Math.round(n/10)*10;
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
 
@@ -1898,6 +1899,9 @@ export default function ModGuide(){
             )}
           </div>
           {view!=="garage"&&view!=="add-car"&&<button onClick={()=>setView("garage")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px"}}>← Garage</button>}
+          {session?.user?.email?.toLowerCase()===OWNER_EMAIL&&(
+            <span style={{background:"rgba(255,107,43,0.12)",border:"1px solid #FF6B2B",color:"#FF6B2B",padding:"5px 12px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"10px",letterSpacing:"2px"}}>OWNER</span>
+          )}
           <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
       </div>
