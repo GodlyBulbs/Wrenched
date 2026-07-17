@@ -1092,6 +1092,113 @@ const VEHICLES = {
         },
       },
     },
+    "Mazda6": {
+      generations:{
+        "GD 626 (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "DX": { engine:"2.2L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Called the 626, not Mazda6 — that nameplate didn't exist yet." },
+            "LX": { engine:"2.2L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GT": { engine:"2.2L Turbocharged 4-cylinder (145hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely rare factory turbo trim from this era." },
+          },
+          colors:[
+            {name:"Classic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red (Red)",hex:"#C8102E"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "GE 626 (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "DX": { engine:"2.0L 4-cylinder (118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "LX": { engine:"2.0L 4-cylinder (118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "ES": { engine:"2.5L V6 (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Classic White (White)",hex:"#F5F5F5"},
+            {name:"Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Aroma Red Mica (Red)",hex:"#C8102E"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "GF/GW 626 (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "LX": { engine:"2.0L 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "ES": { engine:"2.5L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Last 626 generation — replaced by the Mazda6 starting the following year." },
+          },
+          colors:[
+            {name:"Sunlight Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Aroma Red Mica (Red)",hex:"#C8102E"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Gen 1 Mazda6 (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "i":            { engine:"2.3L 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"First car actually badged Mazda6 — replaced both the 626 and the Millenia." },
+            "s":            { engine:"3.0L V6 (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Mazdaspeed6":  { engine:"2.3L Turbocharged 4-cylinder (274hp)", drivetrain:"AWD", transmission:"Manual", note:"2006-2007 only — genuine sleeper performance sedan, factory AWD turbo. Highly sought after today." },
+          },
+          colors:[
+            {name:"Titanium Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Winning Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Galaxy Gray Mica (Gray)",hex:"#5A5F63"},
+            {name:"True Red (Red)",hex:"#C8102E"},
+            {name:"Black Mica (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "Gen 2 Mazda6 (2009-2013)":{
+          years:["2009","2010","2011","2012","2013"],
+          trims:{
+            "i":  { engine:"2.5L 4-cylinder (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "s":  { engine:"3.7L V6 (272hp)", drivetrain:"FWD", transmission:"Automatic", note:"This V6 was borrowed from Ford — the flagship engine of this generation." },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Zoom-Zoom Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Sangria Red Mica (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "Gen 3 Mazda6 Pre-Turbo (2014-2017)":{
+          years:["2014","2015","2016","2017"],
+          trims:{
+            "Sport":        { engine:"2.5L 4-cylinder (184hp)", drivetrain:"FWD", transmission:"Automatic", note:"The V6 was dropped this generation — Skyactiv 2.5L four-cylinder only, no manual offered in the US." },
+            "Touring":      { engine:"2.5L 4-cylinder (184hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Grand Touring":{ engine:"2.5L 4-cylinder (184hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Soul Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+            {name:"Titanium Flash Mica (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+        "Gen 3 Mazda6 Turbo (2018-2021)":{
+          years:["2018","2019","2020","2021"],
+          trims:{
+            "Sport":                { engine:"2.5L 4-cylinder (187hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Touring":              { engine:"2.5L 4-cylinder (187hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Grand Touring":        { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"FWD", transmission:"Automatic", note:"First turbocharged Mazda6 in the US since the Mazdaspeed6 ended in 2007. 250hp on premium fuel, 227hp on regular." },
+            "Grand Touring Reserve":{ engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Signature":            { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Top trim — Nappa leather, Bose 12-speaker audio, Auburn or Deep Crystal Blue exclusive interior colors." },
+          },
+          colors:[
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Polymetal Gray Metallic (Dark Gray)",hex:"#4A4E52"},
+            {name:"Titanium Flash Mica (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
     "MX-5 Miata": {
       generations:{
         "NA6 (1990-1993)":{
@@ -1615,6 +1722,29 @@ const TORQUE_SPECS = {
         notes:"A few owners report using 23-25 ft-lbs without issue, so there's some real-world flexibility here, but 29 is the documented factory figure. Use a new crush washer every time — reusing the old one is the most common cause of a leaking drain plug.",
       },
     ],
+    "Mazda6": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Commonly 21mm on Mazdas, but verify against your actual lug nuts before buying a socket",
+        spec:"103",
+        unit:"ft-lbs",
+        notes:"Same figure and range as the Mazda3 — Mazda keeps this consistent across the Skyactiv-era lineup. Star/crisscross pattern, not a circle.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"8mm Allen/hex key, 3/8\" drive",
+        spec:"25",
+        unit:"ft-lbs",
+        notes:"Owners commonly use 23-30 ft-lbs without issue on the 2.5L. Get a properly-fitting Allen bit — the 8mm hex is small enough that a sloppy fit will round it out. New crush washer every time.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"We haven't found a solid confirmed number for the 2.5L Turbo specifically yet — several owners of your buddy's exact engine have asked the same question without a clear answer. NGK's general guidance is hand-tight plus a half turn rather than a hard torque number. If you find the real factory spec, send it over and we'll lock it in.",
+      },
+    ],
   },
 };
 
@@ -1695,6 +1825,14 @@ const CATALOG = {
       {brand:"CorkSport",category:"Sway Bars",part:"Performance Sway Bar"},
       {brand:"CorkSport",category:"Suspension",part:"Camber Plates"},
       {brand:"CorkSport",category:"Turbo Performance",part:"Intercooler Upgrade",note:"Turbo models only."},
+    ],
+    "Mazda6": [
+      {brand:"CorkSport",category:"Air Intake",part:"Short Ram Intake (2018+ Turbo)",note:"Specifically designed for the 2018+ 2.5L Turbo — also fits CX-5/CX-9 turbo since they share the engine."},
+      {brand:"CorkSport",category:"Air Intake",part:"Turbo Inlet Pipe",note:"Pairs with the Short Ram Intake — increases the OEM 2.5\" turbo inlet to 3\", best paired together rather than alone."},
+      {brand:"CorkSport",category:"Exhaust",part:"Axle Back Exhaust (2018+)",note:"Fits both the 2.5L NA and 2.5L Turbo. Milder tone increase — pairs well with the SRI."},
+      {brand:"CorkSport",category:"Exhaust",part:"Cat Back Exhaust (2018+ Turbo)",note:"Turbo-specific — roughly 5-6whp gain in CorkSport's own dyno testing when paired with their intake, no tuning changes needed."},
+      {brand:"CorkSport",category:"Mazdaspeed6 Intake",part:"Cold Air Intake (2006-2007 only)",note:"For the older Gen 1 Mazdaspeed6 turbo — not compatible with the current Gen 3 Turbo."},
+      {brand:"CorkSport",category:"Mazdaspeed6 Exhaust",part:"Turbo-Back Exhaust (2006-2007 only)"},
     ],
   },
 };
