@@ -938,26 +938,58 @@ const VEHICLES = {
   },
   "Mazda": {
     "CX-5": {
-      years:["2021","2022","2023","2024","2025"],
-      trims:{
-        "Sport":               { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Touring":             { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Carbon Edition":      { engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Carbon Edition Turbo":{ engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Grand Touring":       { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Grand Touring Reserve":{ engine:"2.5L Turbocharged 4-cylinder (227hp)", drivetrain:"AWD", transmission:"Automatic" },
-        "Signature":           { engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic" },
+      generations:{
+        "KE (2013-2016)":{
+          years:["2013","2014","2015","2016"],
+          trims:{
+            "Sport":        { engine:"2.0L 4-cylinder (155hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"2013 only for the 2.0L — replaced by the 2.5L starting the 2014 model year across the lineup." },
+            "Touring":      { engine:"2.5L 4-cylinder (184hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Grand Touring":{ engine:"2.5L 4-cylinder (184hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"2016 got a mid-cycle refresh — new grille, taillights, retuned suspension, and updated infotainment, still the same KE generation underneath." },
+          },
+          colors:[
+            {name:"Soul Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Meteor Gray Mica (Gray)",hex:"#6B6E6F"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+          ],
+        },
+        "KF (2017-2024)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Sport":                { engine:"2.5L 4-cylinder (187hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"AWD wasn't standard across the board until the 2022 model year — earlier years could be had in FWD." },
+            "Touring":              { engine:"2.5L 4-cylinder (187hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Carbon Edition":       { engine:"2.5L 4-cylinder (187hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Grand Touring":        { engine:"2.5L 4-cylinder (187hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Grand Touring Reserve":{ engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"AWD", transmission:"Automatic", note:"Turbo engine (borrowed from the CX-9) arrived for the 2019 model year, 250hp on premium fuel / 227hp on regular. Your friend's 2020 falls right in this window." },
+            "Signature":            { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Polymetal Gray Metallic (Dark Gray)",hex:"#4A4E52"},
+            {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+            {name:"Eternal Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Generation (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Sport":        { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new platform for the first time since 2013. Carries over the same naturally-aspirated 2.5L for now." },
+            "Preferred":    { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Premium":      { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Rhodium White Metallic (White)",hex:"#E8E8E8"},
+          ],
+        },
       },
-      colors:[
-        {name:"Soul Red Crystal Metallic (Red)",hex:"#9B1B30"},
-        {name:"Snowflake White Pearl Mica (White)",hex:"#F0F0F0"},
-        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
-        {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
-        {name:"Polymetal Gray Metallic (Dark Gray)",hex:"#4A4E52"},
-        {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
-        {name:"Eternal Blue Mica (Blue)",hex:"#1E4B8E"},
-        {name:"Rhodium White Metallic (White)",hex:"#E8E8E8"},
-      ],
     },
     "Mazda3": {
       generations:{
@@ -1761,6 +1793,29 @@ const TORQUE_SPECS = {
         notes:"We haven't found a solid confirmed number for the 2.5L Turbo specifically yet — several owners of your buddy's exact engine have asked the same question without a clear answer. NGK's general guidance is hand-tight plus a half turn rather than a hard torque number. If you find the real factory spec, send it over and we'll lock it in.",
       },
     ],
+    "CX-5": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Commonly 21mm on Mazdas, but verify against your actual lug nuts before buying a socket",
+        spec:"103",
+        unit:"ft-lbs",
+        notes:"Same shared Skyactiv-era figure as the Mazda3 and Mazda6. Star/crisscross pattern, not a circle.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"17mm socket",
+        spec:"25-30",
+        unit:"ft-lbs",
+        notes:"Confirmed range for the 2.5L, matches the Mazda6 and Mazda3 since they share the same drivetrain family. New crush washer every oil change — Mazda pans are aluminum and easy to strip if you overdo it.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Same gap here as the Mazda6 Turbo — couldn't pin down a confirmed factory number for either the NA or turbo 2.5L. If you find it, send it over.",
+      },
+    ],
   },
   "Toyota": {
     "4Runner": [
@@ -1794,21 +1849,21 @@ const TORQUE_SPECS = {
         size:"Commonly 21mm on Hondas, but verify against your actual lug nuts before buying a socket",
         spec:"80",
         unit:"ft-lbs",
-        notes:"This figure is well corroborated but comes from older Accord generations (V6/K-series era) — worth a quick cross-check against your specific 11th gen owner's manual before trusting it blindly.",
+        notes:"Well corroborated for the 9th gen (2013-2017) — matches your friend's 2016. If you're on the current 11th gen 1.5T instead, worth a quick cross-check against that owner's manual since it wasn't the primary source for this figure.",
       },
       {
         partName:"Oil Drain Plug",
         size:"17mm socket",
         spec:"25-30",
         unit:"ft-lbs",
-        notes:"Real variance across sources here — some say 25, some say 30. Honda's drain plug threads are notably soft, so err toward the lower end and don't force it. New crush washer every oil change, always.",
+        notes:"Confirmed range specifically for the 2013-2016 9th gen Accord (2.4L I4 / 3.5L V6 era). Real variance across sources — some say 25, some say 30. Honda's drain plug threads are notably soft, so err toward the lower end and don't force it. New crush washer every oil change, always.",
       },
       {
         partName:"Spark Plugs",
         size:"5/8\" (16mm) spark plug socket",
-        spec:"Not confirmed",
-        unit:"",
-        notes:"The 13 ft-lbs figure floating around online is from an older V6 engine, not the current 1.5T — don't assume it carries over. If you find the real L15-specific spec, send it over.",
+        spec:"13",
+        unit:"ft-lbs",
+        notes:"156 in-lbs (13 ft-lbs) is confirmed for the J-series V6. If your friend's 2016 has the 2.4L four-cylinder instead of the 3.5L V6, this may not carry over exactly — worth confirming which engine his has before trusting this number.",
       },
     ],
   },
@@ -1900,6 +1955,12 @@ const CATALOG = {
       {brand:"CorkSport",category:"Mazdaspeed6 Intake",part:"Cold Air Intake (2006-2007 only)",note:"For the older Gen 1 Mazdaspeed6 turbo — not compatible with the current Gen 3 Turbo."},
       {brand:"CorkSport",category:"Mazdaspeed6 Exhaust",part:"Turbo-Back Exhaust (2006-2007 only)"},
     ],
+    "CX-5": [
+      {brand:"CorkSport",category:"Air Intake",part:"Turbo Inlet Pipe",note:"Confirmed fitment for 2019+ CX-5 Turbo — same part shared across the Mazda6, CX-9, and CX-5 turbo lineup since they all use the same 2.5T engine."},
+      {brand:"CorkSport",category:"Exhaust",part:"Cat Back Exhaust (Turbo)",note:"Turbo-specific, matches your friend's 2020 if it's the Grand Touring Reserve or Signature trim."},
+      {brand:"CorkSport",category:"Suspension",part:"Sway Bars"},
+      {brand:"CorkSport",category:"Suspension",part:"Rear Lower Control Arms"},
+    ],
   },
   "Toyota": {
     "4Runner": [
@@ -1916,8 +1977,10 @@ const CATALOG = {
   },
   "Honda": {
     "Accord": [
-      {brand:"Borla",category:"Exhaust",part:"Cat-Back Exhaust System",note:"Dedicated system built specifically for the 11th gen 1.5T — dual 2.25\" pipes matching the factory dual-tip look, tuned to avoid cabin drone."},
-      {brand:"PRL Motorsports",category:"Air Intake",part:"Stage 1 Intake System",note:"Shares the same L15 engine as the Civic 1.5T, so this intake covers both — replaces the factory corrugated inlet hose that restricts airflow."},
+      {brand:"Borla",category:"Exhaust",part:"Cat-Back Exhaust System (11th Gen 1.5T)",note:"Dedicated system built specifically for the 2023+ 1.5T — dual 2.25\" pipes matching the factory dual-tip look, tuned to avoid cabin drone."},
+      {brand:"PRL Motorsports",category:"Air Intake",part:"Stage 1 Intake System (11th Gen 1.5T)",note:"Shares the same L15 engine as the Civic 1.5T, so this intake covers both — replaces the factory corrugated inlet hose that restricts airflow. Only fits the current turbo generation, not older Accords."},
+      {brand:"Borla",category:"Exhaust",part:"S-Type Axle-Back Exhaust (2013-2017)",note:"A completely different part number than the 11th gen system above — confirmed fitment for both the 2.4L 4-cylinder and 3.5L V6, sedan and coupe. This is the one that matches your friend's 2016."},
+      {brand:"K&N",category:"Air Intake",part:"Cold Air Intake System (2013-2017 2.4L)",note:"Confirmed fitment for the 2.4L across EX, EX-L, LX, LX-S, Sport, and Sport Special Edition trims — this is the one for your friend's engine."},
     ],
   },
 };
@@ -1933,7 +1996,7 @@ const BRAND_COLORS = {
   "FASS Fuel Systems":"#1CE84A","Carli Suspension":"#E81CB0","South Bend Clutch":"#1C9AE8",
   "CorkSport":"#E8401C",
   "ARB":"#4A8FE8","Old Man Emu":"#B87333","Bilstein":"#E81C1C","TRD":"#E8401C","ICON Vehicle Dynamics":"#1CE8D4",
-  "Borla":"#9B1B30","PRL Motorsports":"#1C6BE8",
+  "Borla":"#9B1B30","PRL Motorsports":"#1C6BE8","K&N":"#E8401C",
 };
 
 const BRAND_LINKS = {
@@ -1969,6 +2032,7 @@ const BRAND_LINKS = {
   "ICON Vehicle Dynamics":"https://www.iconvehicledynamics.com",
   "Borla":"https://www.borla.com",
   "PRL Motorsports":"https://prlmotorsports.com",
+  "K&N":"https://www.knfilters.com",
 };
 
 // Generic mod categories every car can quick-mark, even without a full parts catalog.
