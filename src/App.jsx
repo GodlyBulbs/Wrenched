@@ -1787,6 +1787,31 @@ const TORQUE_SPECS = {
       },
     ],
   },
+  "Honda": {
+    "Accord": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Commonly 21mm on Hondas, but verify against your actual lug nuts before buying a socket",
+        spec:"80",
+        unit:"ft-lbs",
+        notes:"This figure is well corroborated but comes from older Accord generations (V6/K-series era) — worth a quick cross-check against your specific 11th gen owner's manual before trusting it blindly.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"17mm socket",
+        spec:"25-30",
+        unit:"ft-lbs",
+        notes:"Real variance across sources here — some say 25, some say 30. Honda's drain plug threads are notably soft, so err toward the lower end and don't force it. New crush washer every oil change, always.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"The 13 ft-lbs figure floating around online is from an older V6 engine, not the current 1.5T — don't assume it carries over. If you find the real L15-specific spec, send it over.",
+      },
+    ],
+  },
 };
 
 const CATALOG = {
@@ -1889,6 +1914,12 @@ const CATALOG = {
       {brand:"ICON Vehicle Dynamics",category:"Suspension",part:"Stage Lift Kit",note:"More aggressive and more expensive than OME/Bilstein — aimed at serious off-road builds, not just a mild lift for looks."},
     ],
   },
+  "Honda": {
+    "Accord": [
+      {brand:"Borla",category:"Exhaust",part:"Cat-Back Exhaust System",note:"Dedicated system built specifically for the 11th gen 1.5T — dual 2.25\" pipes matching the factory dual-tip look, tuned to avoid cabin drone."},
+      {brand:"PRL Motorsports",category:"Air Intake",part:"Stage 1 Intake System",note:"Shares the same L15 engine as the Civic 1.5T, so this intake covers both — replaces the factory corrugated inlet hose that restricts airflow."},
+    ],
+  },
 };
 
 const BRAND_COLORS = {
@@ -1902,6 +1933,7 @@ const BRAND_COLORS = {
   "FASS Fuel Systems":"#1CE84A","Carli Suspension":"#E81CB0","South Bend Clutch":"#1C9AE8",
   "CorkSport":"#E8401C",
   "ARB":"#4A8FE8","Old Man Emu":"#B87333","Bilstein":"#E81C1C","TRD":"#E8401C","ICON Vehicle Dynamics":"#1CE8D4",
+  "Borla":"#9B1B30","PRL Motorsports":"#1C6BE8",
 };
 
 const BRAND_LINKS = {
@@ -1935,6 +1967,8 @@ const BRAND_LINKS = {
   "Bilstein":"https://www.bilsteinus.com",
   "TRD":"https://www.trdparts.com",
   "ICON Vehicle Dynamics":"https://www.iconvehicledynamics.com",
+  "Borla":"https://www.borla.com",
+  "PRL Motorsports":"https://prlmotorsports.com",
 };
 
 // Generic mod categories every car can quick-mark, even without a full parts catalog.
