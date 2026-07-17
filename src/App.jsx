@@ -1956,8 +1956,8 @@ const CATALOG = {
       {brand:"CorkSport",category:"Mazdaspeed6 Exhaust",part:"Turbo-Back Exhaust (2006-2007 only)"},
     ],
     "CX-5": [
-      {brand:"CorkSport",category:"Air Intake",part:"Turbo Inlet Pipe",note:"Confirmed fitment for 2019+ CX-5 Turbo — same part shared across the Mazda6, CX-9, and CX-5 turbo lineup since they all use the same 2.5T engine."},
-      {brand:"CorkSport",category:"Exhaust",part:"Cat Back Exhaust (Turbo)",note:"Turbo-specific, matches your friend's 2020 if it's the Grand Touring Reserve or Signature trim."},
+      {brand:"CorkSport",category:"Air Intake",part:"Short Ram Intake (2.5L Non-Turbo)",note:"Confirmed fitment 2013-2025 for the naturally-aspirated 2.5L — this is the one that matches your friend's car. About 5-6whp gain, no tune needed."},
+      {brand:"CorkSport",category:"Exhaust",part:"Cat-Back Exhaust (Non-Turbo)",note:"Non-turbo specific system, pairs well with the Short Ram Intake."},
       {brand:"CorkSport",category:"Suspension",part:"Sway Bars"},
       {brand:"CorkSport",category:"Suspension",part:"Rear Lower Control Arms"},
     ],
@@ -1977,9 +1977,7 @@ const CATALOG = {
   },
   "Honda": {
     "Accord": [
-      {brand:"Borla",category:"Exhaust",part:"Cat-Back Exhaust System (11th Gen 1.5T)",note:"Dedicated system built specifically for the 2023+ 1.5T — dual 2.25\" pipes matching the factory dual-tip look, tuned to avoid cabin drone."},
-      {brand:"PRL Motorsports",category:"Air Intake",part:"Stage 1 Intake System (11th Gen 1.5T)",note:"Shares the same L15 engine as the Civic 1.5T, so this intake covers both — replaces the factory corrugated inlet hose that restricts airflow. Only fits the current turbo generation, not older Accords."},
-      {brand:"Borla",category:"Exhaust",part:"S-Type Axle-Back Exhaust (2013-2017)",note:"A completely different part number than the 11th gen system above — confirmed fitment for both the 2.4L 4-cylinder and 3.5L V6, sedan and coupe. This is the one that matches your friend's 2016."},
+      {brand:"Borla",category:"Exhaust",part:"S-Type Axle-Back Exhaust (2013-2017)",note:"Confirmed fitment for both the 2.4L 4-cylinder and 3.5L V6, sedan and coupe. This is the one that matches your friend's 2016."},
       {brand:"K&N",category:"Air Intake",part:"Cold Air Intake System (2013-2017 2.4L)",note:"Confirmed fitment for the 2.4L across EX, EX-L, LX, LX-S, Sport, and Sport Special Edition trims — this is the one for your friend's engine."},
     ],
   },
