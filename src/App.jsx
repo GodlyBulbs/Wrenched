@@ -1822,7 +1822,7 @@ export default function ModGuide(){
   const updateGarageItem=async(car)=>await supabase.from("garages").update({car_data:car}).eq("id",car.id);
   const deleteGarageItem=async(id)=>{await supabase.from("garages").delete().eq("id",id);setGarage(prev=>prev.filter(c=>c.id!==id));};
   const addCar=async(carData)=>{const id=await saveGarageItem(carData);if(id){setGarage(prev=>[...prev,{...carData,id}]);setView("garage");}};
-  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setView("car-detail");};
+  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setView("car-detail");};
   const syncCar=async(updated)=>{setGarage(prev=>prev.map(c=>c.id===updated.id?updated:c));setActiveCar(updated);await updateGarageItem(updated);};
   const toggleBuildItem=(item)=>{const exists=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);syncCar({...activeCar,build:exists?activeCar.build.filter(b=>!(b.brand===item.brand&&b.part===item.part)):[...(activeCar.build||[]),item]});};
 
@@ -1848,6 +1848,7 @@ export default function ModGuide(){
       notes:item.notes(activeCar),
       lastMiles:answers[item.key]||null,
       lastDate:answers[item.key]?new Date().toISOString():null,
+      history:answers[item.key]?[{miles:answers[item.key],date:new Date().toISOString()}]:[],
     }));
     const enteredMiles=Object.values(answers).filter(v=>v!==null&&v!==undefined);
     const highestEntered=enteredMiles.length>0?Math.max(...enteredMiles):0;
@@ -1859,9 +1860,11 @@ export default function ModGuide(){
   const markDone=(item)=>{setDoneItem(item);setDoneMileageInput(String(activeCar.mileage||0));};
   const confirmDone=()=>{
     const miles=roundToTen(parseInt(doneMileageInput)||0);
-    syncCar({...activeCar,maintenance:activeCar.maintenance.map(i=>i.name===doneItem.name?{...i,lastMiles:miles,lastDate:new Date().toISOString()}:i),mileage:miles});
+    const entry={miles,date:new Date().toISOString()};
+    syncCar({...activeCar,maintenance:activeCar.maintenance.map(i=>i.name===doneItem.name?{...i,lastMiles:miles,lastDate:entry.date,history:[entry,...(i.history||[])]}:i),mileage:miles});
     setDoneItem(null);
   };
+  const [expandedHistory,setExpandedHistory]=useState(null);
   const updateMileage=()=>{syncCar({...activeCar,mileage:roundToTen(parseInt(tempMileage)||0)});setEditMileage(false);};
 
   const getCatalog=(car)=>CATALOG[car.make]?.[car.model]||[];
@@ -2001,17 +2004,36 @@ export default function ModGuide(){
                     {activeCar.maintenance.map((item,i)=>{
                       const sc=statusColor(item,activeCar.mileage||0);
                       const milesDue=(item.lastMiles||0)+item.mileInterval;
+                      const history=item.history||[];
+                      const isExpanded=expandedHistory===item.name;
                       return(
-                        <div key={i} style={{background:"#1C1C1C",border:`1px solid ${sc==="unset"?"#2A2A2A":STATUS_COLORS[sc]+"44"}`,borderRadius:"6px",padding:"16px",marginBottom:"10px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"12px"}}>
-                          <div style={{flex:1}}>
-                            <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"4px"}}>
-                              <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
-                              <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
+                        <div key={i} style={{background:"#1C1C1C",border:`1px solid ${sc==="unset"?"#2A2A2A":STATUS_COLORS[sc]+"44"}`,borderRadius:"6px",marginBottom:"10px",overflow:"hidden"}}>
+                          <div style={{padding:"16px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"12px"}}>
+                            <div style={{flex:1}}>
+                              <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"4px"}}>
+                                <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
+                                <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
+                              </div>
+                              <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>Every {item.mileInterval.toLocaleString()} mi{item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}</div>
+                              {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
+                              {history.length>0&&(
+                                <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"#FF6B2B",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
+                                  {isExpanded?"▲ HIDE HISTORY":`▼ VIEW HISTORY (${history.length})`}
+                                </div>
+                              )}
                             </div>
-                            <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>Every {item.mileInterval.toLocaleString()} mi{item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}</div>
-                            {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
+                            <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"#1CE84A",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
                           </div>
-                          <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"#1CE84A",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
+                          {isExpanded&&history.length>0&&(
+                            <div style={{padding:"0 16px 16px",borderTop:"1px solid #2A2A2A",marginTop:"4px",paddingTop:"12px"}}>
+                              {history.map((h,hi)=>(
+                                <div key={hi} style={{display:"flex",justifyContent:"space-between",padding:"6px 0 6px 16px",fontSize:"12px",color:"#888",borderBottom:hi<history.length-1?"1px solid #222":"none"}}>
+                                  <span>{h.miles.toLocaleString()} mi</span>
+                                  <span style={{color:"#555"}}>{new Date(h.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       );
                     })}
