@@ -1518,6 +1518,22 @@ const VEHICLES = {
   "Toyota": {
     "4Runner": {
       generations:{
+        "2nd Gen (1990-1995)":{
+          years:["1990","1991","1992","1993","1994","1995"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (116hp)", transmission:"Manual" },
+            "SR5":  { engines:["2.4L 4-cylinder (116hp)","3.0L V6 (150hp)"], transmissions:["Manual","Automatic"], note:"The V6 could be paired with either transmission — the 4-cylinder was manual only." },
+            "Limited": { engine:"3.0L V6 (150hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added partway through this generation as the range-topping trim." },
+          },
+          drivetrainOptions:["2WD","4WD"],
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Cardinal Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Teal Mica (Teal)",hex:"#1B6B6B"},
+            {name:"Sandalwood Metallic (Tan)",hex:"#C8B89A"},
+          ],
+        },
         "3rd Gen (1996-2002)":{
           years:["1996","1997","1998","1999","2000","2001","2002"],
           trims:{
@@ -1746,6 +1762,31 @@ const TORQUE_SPECS = {
       },
     ],
   },
+  "Toyota": {
+    "4Runner": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Commonly 21mm on 3rd gen 4Runners, but verify against your actual lug nuts before buying a socket",
+        spec:"83",
+        unit:"ft-lbs",
+        notes:"Torque figure is confirmed for the 3rd gen (1996-2002) — matches your friend's 1999. Always tighten in a star pattern.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"29",
+        unit:"ft-lbs",
+        notes:"Torque figure confirmed for the 3.4L V6 (5VZ-FE). This is a known tight plug from the factory, some owners report real fights getting it loose the first time. Don't panic if it takes real effort, just don't round it out. New crush washer every oil change.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Haven't nailed down a solid factory number for the 3.4L V6 yet. If you or your friend check the manual, send it over.",
+      },
+    ],
+  },
 };
 
 const CATALOG = {
@@ -1835,6 +1876,19 @@ const CATALOG = {
       {brand:"CorkSport",category:"Mazdaspeed6 Exhaust",part:"Turbo-Back Exhaust (2006-2007 only)"},
     ],
   },
+  "Toyota": {
+    "4Runner": [
+      {brand:"ARB",category:"Front Bumper",part:"ARB Deluxe Bar Bumper",note:"Winch-compatible, one of the most trusted names in off-road armor."},
+      {brand:"ARB",category:"Recovery / Air",part:"On-Board Twin Air Compressor",note:"Common pairing with ARB Air Lockers for airing up after off-road runs."},
+      {brand:"ARB",category:"Differential",part:"Air Locker",note:"Electronically-actuated locking differential — serious off-road upgrade, not a mild mod."},
+      {brand:"Old Man Emu",category:"Suspension",part:"OME Lift Kit / Shocks",note:"Owned by ARB — extremely common pairing with ARB armor for a cohesive off-road build."},
+      {brand:"Bilstein",category:"Suspension",part:"5100 Series Shocks",note:"A more budget-friendly, still well-respected alternative to OME for a mild lift."},
+      {brand:"TRD",category:"Performance",part:"TRD Cold Air Intake"},
+      {brand:"TRD",category:"Exhaust",part:"TRD Performance Exhaust"},
+      {brand:"TRD",category:"Suspension",part:"TRD Sway Bars"},
+      {brand:"ICON Vehicle Dynamics",category:"Suspension",part:"Stage Lift Kit",note:"More aggressive and more expensive than OME/Bilstein — aimed at serious off-road builds, not just a mild lift for looks."},
+    ],
+  },
 };
 
 const BRAND_COLORS = {
@@ -1847,6 +1901,7 @@ const BRAND_COLORS = {
   "MBRP":"#1CE8D4","Diamond Eye":"#E86B1C","S&B Filters":"#E8E040",
   "FASS Fuel Systems":"#1CE84A","Carli Suspension":"#E81CB0","South Bend Clutch":"#1C9AE8",
   "CorkSport":"#E8401C",
+  "ARB":"#4A8FE8","Old Man Emu":"#B87333","Bilstein":"#E81C1C","TRD":"#E8401C","ICON Vehicle Dynamics":"#1CE8D4",
 };
 
 const BRAND_LINKS = {
@@ -1875,6 +1930,11 @@ const BRAND_LINKS = {
   "Carli Suspension":"https://www.carlisuspension.com",
   "South Bend Clutch":"https://www.southbendclutch.com",
   "CorkSport":"https://corksport.com",
+  "ARB":"https://www.arbusa.com",
+  "Old Man Emu":"https://www.arbusa.com/oldmanemu",
+  "Bilstein":"https://www.bilsteinus.com",
+  "TRD":"https://www.trdparts.com",
+  "ICON Vehicle Dynamics":"https://www.iconvehicledynamics.com",
 };
 
 // Generic mod categories every car can quick-mark, even without a full parts catalog.
