@@ -237,6 +237,145 @@ const VEHICLES = {
       },
     },
   },
+  "Chevrolet": {
+    "Camaro": {
+      generations:{
+        "3rd Gen Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "RS":     { engine:"3.1L V6 (140hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Z28":    { engines:["5.0L V8 (170hp)","5.7L V8 (245hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The 5.7L (IROC-Z/Z28 TPI) was the performance engine of this era." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (1993-2002)":{
+          years:["1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engine:"3.4L V6 (160hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"3.4L V6 for 1993-1994 only, replaced by the 3.8L (200-205hp) starting 1995." },
+            "Z28":  { engines:["5.7L LT1 V8 (275hp)","5.7L LS1 V8 (305-325hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"LT1 through 1997, then the all-aluminum LS1 arrived for 1998 — a genuinely significant engine upgrade mid-generation." },
+            "SS":   { engine:"5.7L LS1 V8 (320-325hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"SS trim added starting 1996 (SLP-built), became a factory Chevrolet option by 1999." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Rally Red (Red)",hex:"#C8102E"},
+            {name:"Sebring Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (2010-2015)":{
+          years:["2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "LS":  { engine:"3.6L V6 (300-323hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"After an 8-year hiatus, the Camaro returned for 2010 — first year built on GM's Zeta platform." },
+            "SS":  { engine:"6.2L V8 (400-426hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "ZL1": { engine:"6.2L Supercharged V8 (580hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Added for 2012." },
+            "Z/28":{ engine:"7.0L V8 (505hp)", drivetrain:"RWD", transmission:"Manual", note:"2014-2015 only — track-focused, no A/C or radio standard to save weight." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Rally Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "6th Gen (2016-2024)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "LS/1LS": { engine:"2.0L Turbocharged 4-cylinder (275hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Moved to GM's lighter Alpha platform (shared with Cadillac ATS/CTS). The turbo four was discontinued after 2018." },
+            "LT/1LT": { engine:"3.6L V6 (335hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "SS/1SS":{ engine:"6.2L V8 (455hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "ZL1":    { engine:"6.2L Supercharged V8 (650hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Final generation — Camaro production ended in December 2023 (2024 Collector's Edition being the send-off)." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Hot (Red)",hex:"#C8102E"},
+            {name:"Riverside Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Shock (Yellow-Green)",hex:"#B8D848"},
+          ],
+        },
+      },
+    },
+    "Silverado": {
+      generations:{
+        "C/K 4th Gen (1990-1998)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "Base":       { engine:"4.3L V6 (160-200hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"], note:"Called the C/K, not Silverado — that name didn't become its own model until 1999. 'Silverado' was just a trim level during this era." },
+            "Silverado":  { engines:["5.0L V8 (170hp)","5.7L V8 (200-255hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "454 SS":     { engine:"7.4L V8 (230-255hp)", drivetrain:"2WD", transmission:"Automatic", note:"1990-1993 only — legendary factory hot rod truck, only about 17,000 ever made. Genuinely rare and collectible today." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "1st Gen (1999-2006)":{
+          years:["1999","2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Work Truck": { engine:"4.3L V6 (200hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"First year the Silverado became its own model, no longer just a C/K trim." },
+            "LS":         { engines:["4.8L V8 (255-270hp)","5.3L V8 (285-295hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "LT":         { engines:["5.3L V8 (285-295hp)","6.0L V8 (300-325hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "SS":         { engine:"6.0L V8 (345hp)", drivetrain:"4WD", transmission:"Automatic", note:"2003-2006 only, extended cab — a genuine factory performance truck, only ~17,000 built." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "2nd Gen (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Work Truck": { engine:"4.3L V6 (195hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"Named 2007 North American Truck of the Year." },
+            "LS":         { engines:["4.8L V8 (295hp)","5.3L V8 (315-326hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "LTZ":        { engines:["5.3L V8 (315-326hp)","6.2L V8 (403hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Silver Birch Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2014-2018)":{
+          years:["2014","2015","2016","2017","2018"],
+          trims:{
+            "Work Truck": { engine:"4.3L V6 (285hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"All-new K2XX platform, first year of the EcoTec3 engine family replacing the old Vortec lineup." },
+            "LT":         { engines:["4.3L V6 (285hp)","5.3L V8 (355hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "High Country":{ engine:"6.2L V8 (420hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"Top trim, introduced this generation." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Slate Grey Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Work Truck": { engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"First-ever turbo four-cylinder base engine on a Silverado. 3.0L Duramax inline-6 diesel also became available this generation." },
+            "LT":         { engines:["2.7L Turbocharged 4-cylinder (310hp)","5.3L V8 (355hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "High Country":{ engine:"6.2L V8 (420hp)", drivetrains:["2WD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cherry Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+  },
   "Dodge": {
     "Caliber": {
       years:["2007","2008","2009","2010","2011","2012"],
@@ -680,6 +819,84 @@ const VEHICLES = {
             {name:"Shadow Black (Black)",hex:"#1A1A1A"},
             {name:"Code Orange (Orange)",hex:"#E8601C"},
             {name:"Carbonized Gray (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+  },
+  "GMC": {
+    "Sierra": {
+      generations:{
+        "C/K 1st Gen (1990-1998)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "Base":  { engine:"4.3L V6 (160-200hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"], note:"Called the GMC C/K during this era — 'Sierra' was a trim level, not yet its own model name." },
+            "SLE":   { engines:["5.0L V8 (170hp)","5.7L V8 (200-255hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "SLT":   { engine:"5.7L V8 (200-255hp)", drivetrains:["2WD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1999-2006)":{
+          years:["1999","2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "SL":  { engine:"4.3L V6 (200hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"First year Sierra became its own model, twinned with the new Chevy Silverado, no longer just a C/K trim." },
+            "SLE": { engines:["4.8L V8 (255-270hp)","5.3L V8 (285-295hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "SLT": { engines:["5.3L V8 (285-295hp)","6.0L V8 (300-325hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Denali":{ engine:"6.0L V8 (325hp)", drivetrain:"4WD", transmission:"Automatic", note:"Denali sub-brand launched on the Sierra — GMC's answer to a luxury trim level, standard AWD." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "3rd Gen (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "SL":    { engine:"4.3L V6 (195hp)", drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "SLE":   { engines:["4.8L V8 (295hp)","5.3L V8 (315-326hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Denali":{ engine:"6.2L V8 (403hp)", drivetrain:"AWD", transmission:"Automatic", note:"2007 Denali was initially the only half-ton GM truck with the 6.2L V8, paired to a 6-speed automatic." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Fire Red (Red)",hex:"#C8102E"},
+            {name:"Silver Birch Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "4th Gen (2014-2018)":{
+          years:["2014","2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"4.3L V6 (285hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"New EcoTec3 engine family and 8-speed automatic (added MY2015 on the 6.2L). Refreshed for 2016." },
+            "SLE":  { engines:["4.3L V6 (285hp)","5.3L V8 (355hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Denali":{ engine:"6.2L V8 (420hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"All-new generation — first turbo four-cylinder base engine, plus a new 3.0L Duramax inline-6 diesel option." },
+            "SLE":  { engines:["2.7L Turbocharged 4-cylinder (310hp)","5.3L V8 (355hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "AT4":  { engine:"5.3L V8 (355hp)", drivetrain:"4WD", transmission:"Automatic", note:"Off-road focused trim introduced this generation, GMC's answer to Silverado's Trail Boss." },
+            "Denali":{ engine:"6.2L V8 (420hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
