@@ -3,6 +3,19 @@ import { supabase } from "./supabase";
 
 const VEHICLES = {
   "Abarth": {
+    "124 Spider Abarth": {
+      years:["2017","2018","2019","2020"],
+      trims:{
+        "Abarth": { engine:"1.4L Turbocharged 4-cylinder (164hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+      },
+      colors:[
+        {name:"Rosso / Hypnotique Red (Red)",hex:"#C8102E"},
+        {name:"Nero Cinema / Forte Black Metallic (Black)",hex:"#111111"},
+        {name:"Bianco Gelato / Brillante White (White)",hex:"#F5F5F5"},
+        {name:"Grigio Argento / Chiaro Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Blu Scuro / Mare Blue Metallic (Dark Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "500 Abarth": {
       generations:{
         "Pre-Facelift (2012-2015)":{
@@ -46,19 +59,6 @@ const VEHICLES = {
           ],
         },
       },
-    },
-    "124 Spider Abarth": {
-      years:["2017","2018","2019","2020"],
-      trims:{
-        "Abarth": { engine:"1.4L Turbocharged 4-cylinder (164hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-      },
-      colors:[
-        {name:"Rosso / Hypnotique Red (Red)",hex:"#C8102E"},
-        {name:"Nero Cinema / Forte Black Metallic (Black)",hex:"#111111"},
-        {name:"Bianco Gelato / Brillante White (White)",hex:"#F5F5F5"},
-        {name:"Grigio Argento / Chiaro Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Blu Scuro / Mare Blue Metallic (Dark Blue)",hex:"#1E3A6B"},
-      ],
     },
   },
   "Acura": {
@@ -1135,51 +1135,6 @@ const VEHICLES = {
     },
   },
   "Honda": {
-    "S2000": {
-      generations:{
-        "AP1 (1999-2003)":{
-          years:["1999","2000","2001","2002","2003"],
-          trims:{
-            "Base": { engine:"2.0L VTEC 4-cylinder (240hp)", drivetrain:"RWD", transmission:"Manual", note:"F20C engine — all-aluminum, revs to a screaming 9,000rpm, one of the highest specific-output naturally-aspirated engines ever put in a production car. Manual only, no automatic ever offered." },
-          },
-          colors:[
-            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
-            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
-            {name:"Formula Red (Red)",hex:"#C8102E"},
-            {name:"Silverstone Metallic (Silver)",hex:"#C0C0C0"},
-            {name:"Sebring Silver Metallic (Silver)",hex:"#C8C8C8"},
-          ],
-        },
-        "AP2 (2004-2009)":{
-          years:["2004","2005","2006","2007","2008","2009"],
-          trims:{
-            "Base": { engine:"2.2L VTEC 4-cylinder (237hp)", drivetrain:"RWD", transmission:"Manual", note:"F22C engine — larger displacement than the AP1's F20C but a lower 8,000-8,200rpm redline, traded a little peak power for a broader, more usable torque curve. Traction control added starting 2006." },
-          },
-          colors:[
-            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
-            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
-            {name:"New Formula Red (Red)",hex:"#C8102E"},
-            {name:"Rio Yellow (Yellow)",hex:"#F5C800"},
-            {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
-          ],
-        },
-      },
-    },
-    "Del Sol": {
-      years:["1993","1994","1995","1996","1997"],
-      trims:{
-        "S":    { engine:"1.5L SOHC 4-cylinder (102hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Marketed as the Civic del Sol — targa-top successor to the CR-X. One single generation for its whole run, 1993-1997." },
-        "Si":   { engine:"1.6L SOHC VTEC 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
-        "VTEC": { engine:"1.6L DOHC VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual", note:"1994-1995 only — the B16A engine, the one enthusiasts actually chase today. Stiffer suspension, bigger brakes, 14-inch wheels." },
-      },
-      colors:[
-        {name:"Frost White (White)",hex:"#F5F5F5"},
-        {name:"Milano Red (Red)",hex:"#C8102E"},
-        {name:"Black (Black)",hex:"#1A1A1A"},
-        {name:"Cyber Green Pearl (Green)",hex:"#3B8A5A"},
-        {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
-      ],
-    },
     "Accord": {
       generations:{
         "4th Generation (1990-1993)":{
@@ -1425,6 +1380,51 @@ const VEHICLES = {
             {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Championship White (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
+    "Del Sol": {
+      years:["1993","1994","1995","1996","1997"],
+      trims:{
+        "S":    { engine:"1.5L SOHC 4-cylinder (102hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Marketed as the Civic del Sol — targa-top successor to the CR-X. One single generation for its whole run, 1993-1997." },
+        "Si":   { engine:"1.6L SOHC VTEC 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "VTEC": { engine:"1.6L DOHC VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual", note:"1994-1995 only — the B16A engine, the one enthusiasts actually chase today. Stiffer suspension, bigger brakes, 14-inch wheels." },
+      },
+      colors:[
+        {name:"Frost White (White)",hex:"#F5F5F5"},
+        {name:"Milano Red (Red)",hex:"#C8102E"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cyber Green Pearl (Green)",hex:"#3B8A5A"},
+        {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "S2000": {
+      generations:{
+        "AP1 (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "Base": { engine:"2.0L VTEC 4-cylinder (240hp)", drivetrain:"RWD", transmission:"Manual", note:"F20C engine — all-aluminum, revs to a screaming 9,000rpm, one of the highest specific-output naturally-aspirated engines ever put in a production car. Manual only, no automatic ever offered." },
+          },
+          colors:[
+            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
+            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
+            {name:"Formula Red (Red)",hex:"#C8102E"},
+            {name:"Silverstone Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Sebring Silver Metallic (Silver)",hex:"#C8C8C8"},
+          ],
+        },
+        "AP2 (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"2.2L VTEC 4-cylinder (237hp)", drivetrain:"RWD", transmission:"Manual", note:"F22C engine — larger displacement than the AP1's F20C but a lower 8,000-8,200rpm redline, traded a little peak power for a broader, more usable torque curve. Traction control added starting 2006." },
+          },
+          colors:[
+            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
+            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
+            {name:"New Formula Red (Red)",hex:"#C8102E"},
+            {name:"Rio Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
@@ -2222,65 +2222,6 @@ const VEHICLES = {
     },
   },
   "Nissan": {
-    "Z": {
-      generations:{
-        "Z32 300ZX (1990-1996)":{
-          years:["1990","1991","1992","1993","1994","1995","1996"],
-          trims:{
-            "Base":       { engine:"3.0L VG30DE V6 (222hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1990 Motor Trend Import Car of the Year, and made Car and Driver's Ten Best list every single year it was sold in the US." },
-            "Twin Turbo": { engine:"3.0L VG30DETT Twin-Turbo V6 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Pulled from the US market after 1996 as prices crept toward $50k and sales collapsed — the Z name then disappeared from America entirely for 7 years." },
-          },
-          colors:[
-            {name:"Pearl White (White)",hex:"#F5F5F5"},
-            {name:"Super Black (Black)",hex:"#1A1A1A"},
-            {name:"Cherry Red Pearl (Red)",hex:"#9B1B30"},
-            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
-          ],
-        },
-        "Z33 350Z (2003-2008)":{
-          years:["2003","2004","2005","2006","2007","2008"],
-          trims:{
-            "Base":     { engine:"3.5L VQ35DE V6 (287hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The Z's US comeback after a 7-year absence — sold over 36,000 units in its first year alone. Shares its FM platform with the Infiniti G35." },
-            "Touring":  { engines:["3.5L VQ35DE V6 (287hp)","3.5L VQ35HR V6 (306hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"VQ35HR (306hp) arrived for the 2007 model year, replacing the original VQ35DE." },
-            "Nismo":    { engine:"3.5L VQ35HR V6 (306hp)", drivetrain:"RWD", transmission:"Manual", note:"2007-2008 only — tuned suspension, hand-welded structural seams, unique bodywork. The most valuable 350Z trim today." },
-          },
-          colors:[
-            {name:"Silverstone Metallic (Silver)",hex:"#C0C0C0"},
-            {name:"Super Black (Black)",hex:"#1A1A1A"},
-            {name:"Le Mans Sunset Metallic (Orange)",hex:"#E8601C"},
-            {name:"Chicane Yellow (Yellow)",hex:"#F5C800"},
-          ],
-        },
-        "Z34 370Z (2009-2020)":{
-          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
-          trims:{
-            "Base":  { engine:"3.7L VQ37VHR V6 (332hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-            "Sport": { engine:"3.7L VQ37VHR V6 (332hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-            "Nismo": { engine:"3.7L VQ37VHR V6 (350hp)", drivetrain:"RWD", transmission:"Manual", note:"Own tuned suspension, aero, and exhaust — genuinely the enthusiast's pick of this generation." },
-          },
-          colors:[
-            {name:"Pearl White (White)",hex:"#F5F5F5"},
-            {name:"Magnetic Black (Black)",hex:"#1A1A1A"},
-            {name:"Solid Red (Red)",hex:"#C8102E"},
-            {name:"Chicane Yellow (Yellow)",hex:"#F5C800"},
-          ],
-        },
-        "Z RZ34 (2023-2026)":{
-          years:["2023","2024","2025","2026"],
-          trims:{
-            "Sport":  { engine:"3.0L VR30DDTT Twin-Turbo V6 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"All-new turbocharged Z, first Z ever with a factory twin-turbo V6 since the 300ZX. Simply badged 'Z' — no number in the name for the first time." },
-            "Performance":{ engine:"3.0L VR30DDTT Twin-Turbo V6 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-            "Nismo": { engine:"3.0L VR30DDTT Twin-Turbo V6 (420hp)", drivetrain:"RWD", transmission:"Automatic", note:"2024 debut." },
-          },
-          colors:[
-            {name:"Everest White Pearl (White)",hex:"#F0F0F0"},
-            {name:"Boulder Gray (Gray)",hex:"#6B6E6F"},
-            {name:"Ikazuchi Yellow (Yellow)",hex:"#F5C800"},
-            {name:"Seiran Blue (Blue)",hex:"#1E4B8E"},
-          ],
-        },
-      },
-    },
     "Altima": {
       generations:{
         "1st Gen (1993-1997)":{
@@ -2369,6 +2310,65 @@ const VEHICLES = {
         },
       },
     },
+    "Z": {
+      generations:{
+        "Z32 300ZX (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Base":       { engine:"3.0L VG30DE V6 (222hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1990 Motor Trend Import Car of the Year, and made Car and Driver's Ten Best list every single year it was sold in the US." },
+            "Twin Turbo": { engine:"3.0L VG30DETT Twin-Turbo V6 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Pulled from the US market after 1996 as prices crept toward $50k and sales collapsed — the Z name then disappeared from America entirely for 7 years." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cherry Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Z33 350Z (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "Base":     { engine:"3.5L VQ35DE V6 (287hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The Z's US comeback after a 7-year absence — sold over 36,000 units in its first year alone. Shares its FM platform with the Infiniti G35." },
+            "Touring":  { engines:["3.5L VQ35DE V6 (287hp)","3.5L VQ35HR V6 (306hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"VQ35HR (306hp) arrived for the 2007 model year, replacing the original VQ35DE." },
+            "Nismo":    { engine:"3.5L VQ35HR V6 (306hp)", drivetrain:"RWD", transmission:"Manual", note:"2007-2008 only — tuned suspension, hand-welded structural seams, unique bodywork. The most valuable 350Z trim today." },
+          },
+          colors:[
+            {name:"Silverstone Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Le Mans Sunset Metallic (Orange)",hex:"#E8601C"},
+            {name:"Chicane Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "Z34 370Z (2009-2020)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base":  { engine:"3.7L VQ37VHR V6 (332hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Sport": { engine:"3.7L VQ37VHR V6 (332hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Nismo": { engine:"3.7L VQ37VHR V6 (350hp)", drivetrain:"RWD", transmission:"Manual", note:"Own tuned suspension, aero, and exhaust — genuinely the enthusiast's pick of this generation." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Magnetic Black (Black)",hex:"#1A1A1A"},
+            {name:"Solid Red (Red)",hex:"#C8102E"},
+            {name:"Chicane Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "Z RZ34 (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Sport":  { engine:"3.0L VR30DDTT Twin-Turbo V6 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"All-new turbocharged Z, first Z ever with a factory twin-turbo V6 since the 300ZX. Simply badged 'Z' — no number in the name for the first time." },
+            "Performance":{ engine:"3.0L VR30DDTT Twin-Turbo V6 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Nismo": { engine:"3.0L VR30DDTT Twin-Turbo V6 (420hp)", drivetrain:"RWD", transmission:"Automatic", note:"2024 debut." },
+          },
+          colors:[
+            {name:"Everest White Pearl (White)",hex:"#F0F0F0"},
+            {name:"Boulder Gray (Gray)",hex:"#6B6E6F"},
+            {name:"Ikazuchi Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Seiran Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
   },
   "Scion": {
     "tC": {
@@ -2432,6 +2432,54 @@ const VEHICLES = {
     },
   },
   "Subaru": {
+    "Ascent": {
+      years:["2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "Base":         { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "Premium":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "Limited":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "Touring":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "Onyx Edition": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+      },
+      colors:[
+        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+        {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Abyss Blue Pearl (Blue)",hex:"#1B2A4A"},
+        {name:"Autumn Green Metallic (Green)",hex:"#3B5A3A"},
+        {name:"Brilliant Bronze Metallic (Bronze)",hex:"#B87333"},
+      ],
+    },
+    "BRZ": {
+      years:["2013","2014","2015","2016","2017","2021","2022","2023"],
+      trims:{
+        "Premium": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+        "Limited": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+        "tS":      { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmission:"Manual" },
+      },
+      colors:[
+        {name:"World Rally Blue Pearl (Blue)",hex:"#003893"},
+        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+      ],
+    },
+    "Forester XT": {
+      years:["2014","2015","2016","2017","2018"],
+      trims:{
+        "Premium": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "Touring": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+      },
+      colors:[
+        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Wilderness Green Metallic (Green)",hex:"#3B5A3A"},
+      ],
+    },
     "Impreza": {
       generations:{
         "1st Gen (1993-2001)":{
@@ -2517,54 +2565,6 @@ const VEHICLES = {
           ],
         },
       },
-    },
-    "Ascent": {
-      years:["2019","2020","2021","2022","2023","2024","2025"],
-      trims:{
-        "Base":         { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-        "Premium":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-        "Limited":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-        "Touring":      { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-        "Onyx Edition": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-      },
-      colors:[
-        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
-        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
-        {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
-        {name:"Abyss Blue Pearl (Blue)",hex:"#1B2A4A"},
-        {name:"Autumn Green Metallic (Green)",hex:"#3B5A3A"},
-        {name:"Brilliant Bronze Metallic (Bronze)",hex:"#B87333"},
-      ],
-    },
-    "BRZ": {
-      years:["2013","2014","2015","2016","2017","2021","2022","2023"],
-      trims:{
-        "Premium": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Limited": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "tS":      { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmission:"Manual" },
-      },
-      colors:[
-        {name:"World Rally Blue Pearl (Blue)",hex:"#003893"},
-        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
-        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
-      ],
-    },
-    "Forester XT": {
-      years:["2014","2015","2016","2017","2018"],
-      trims:{
-        "Premium": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-        "Touring": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
-      },
-      colors:[
-        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
-        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Wilderness Green Metallic (Green)",hex:"#3B5A3A"},
-      ],
     },
     "WRX": {
       generations:{
@@ -2663,82 +2663,6 @@ const VEHICLES = {
     },
   },
   "Toyota": {
-    "Avalon": {
-      generations:{
-        "1st Gen (1995-1999)":{
-          years:["1995","1996","1997","1998","1999"],
-          trims:{
-            "XL":  { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic", note:"Built in Georgetown, Kentucky from day one — replaced the rear-wheel-drive Cressida. DOHC engine through 1996, switched to SOHC for 1997+ (same displacement, similar output)." },
-            "XLS": { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "Gold Edition": { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic", note:"Special luxury package — gold badging, upgraded leather and wood trim, distinct from the standard XLS." },
-          },
-          colors:[
-            {name:"Super White (White)",hex:"#F5F5F5"},
-            {name:"Black (Black)",hex:"#1A1A1A"},
-            {name:"Cashmere Beige Metallic (Beige)",hex:"#C8B89A"},
-            {name:"Dark Green Pearl (Green)",hex:"#2E5A3A"},
-            {name:"Sunfire Red Pearl (Red)",hex:"#9B1B30"},
-          ],
-        },
-        "2nd Gen (2000-2004)":{
-          years:["2000","2001","2002","2003","2004"],
-          trims:{
-            "XL":  { engine:"3.0L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "XLS": { engine:"3.0L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic" },
-          },
-          colors:[
-            {name:"Super White (White)",hex:"#F5F5F5"},
-            {name:"Black (Black)",hex:"#1A1A1A"},
-            {name:"Antique Sage Metallic (Green)",hex:"#7A8A6A"},
-            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
-          ],
-        },
-        "3rd Gen (2005-2012)":{
-          years:["2005","2006","2007","2008","2009","2010","2011","2012"],
-          trims:{
-            "XL":      { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "XLS":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "Limited": { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-          },
-          colors:[
-            {name:"Super White (White)",hex:"#F5F5F5"},
-            {name:"Black (Black)",hex:"#1A1A1A"},
-            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
-            {name:"Cassis Red Mica (Red)",hex:"#9B1B30"},
-          ],
-        },
-        "4th Gen (2013-2018)":{
-          years:["2013","2014","2015","2016","2017","2018"],
-          trims:{
-            "XLE":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "XLE Premium":{ engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "Limited": { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
-            "Hybrid":  { engine:"2.5L Hybrid 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Hybrid powertrain added this generation." },
-          },
-          colors:[
-            {name:"Super White (White)",hex:"#F5F5F5"},
-            {name:"Attitude Black (Black)",hex:"#1A1A1A"},
-            {name:"Cypress Metallic (Green)",hex:"#5A7A5A"},
-            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
-          ],
-        },
-        "5th Gen (2019-2022)":{
-          years:["2019","2020","2021","2022"],
-          trims:{
-            "XLE":     { engine:"3.5L V6 (301hp)", drivetrain:"FWD", transmission:"Automatic", note:"Final generation — discontinued after 2022 as Toyota shifted its US flagship sedan role to the new Crown." },
-            "Limited": { engine:"3.5L V6 (301hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"AWD became available for the first time in Avalon history, starting 2020." },
-            "TRD":     { engine:"3.5L V6 (301hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely odd but real product — a sport-tuned, lowered, performance-exhaust Avalon." },
-            "Hybrid":  { engine:"2.5L Hybrid 4-cylinder (215hp)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
-          },
-          colors:[
-            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
-            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
-            {name:"Ruby Flare Pearl (Red)",hex:"#9B1B30"},
-            {name:"Celestial Silver Metallic (Silver)",hex:"#C0C0C0"},
-          ],
-        },
-      },
-    },
     "4Runner": {
       generations:{
         "2nd Gen (1990-1995)":{
@@ -2823,6 +2747,82 @@ const VEHICLES = {
             {name:"Solar Octane (Orange)",hex:"#E8601C"},
             {name:"Midnight Black Metallic (Black)",hex:"#111111"},
             {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
+    "Avalon": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "XL":  { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic", note:"Built in Georgetown, Kentucky from day one — replaced the rear-wheel-drive Cressida. DOHC engine through 1996, switched to SOHC for 1997+ (same displacement, similar output)." },
+            "XLS": { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Gold Edition": { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic", note:"Special luxury package — gold badging, upgraded leather and wood trim, distinct from the standard XLS." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cashmere Beige Metallic (Beige)",hex:"#C8B89A"},
+            {name:"Dark Green Pearl (Green)",hex:"#2E5A3A"},
+            {name:"Sunfire Red Pearl (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "2nd Gen (2000-2004)":{
+          years:["2000","2001","2002","2003","2004"],
+          trims:{
+            "XL":  { engine:"3.0L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLS": { engine:"3.0L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Antique Sage Metallic (Green)",hex:"#7A8A6A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "3rd Gen (2005-2012)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "XL":      { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLS":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited": { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Cassis Red Mica (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "4th Gen (2013-2018)":{
+          years:["2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "XLE":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLE Premium":{ engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited": { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Hybrid":  { engine:"2.5L Hybrid 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Hybrid powertrain added this generation." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Attitude Black (Black)",hex:"#1A1A1A"},
+            {name:"Cypress Metallic (Green)",hex:"#5A7A5A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "5th Gen (2019-2022)":{
+          years:["2019","2020","2021","2022"],
+          trims:{
+            "XLE":     { engine:"3.5L V6 (301hp)", drivetrain:"FWD", transmission:"Automatic", note:"Final generation — discontinued after 2022 as Toyota shifted its US flagship sedan role to the new Crown." },
+            "Limited": { engine:"3.5L V6 (301hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"AWD became available for the first time in Avalon history, starting 2020." },
+            "TRD":     { engine:"3.5L V6 (301hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely odd but real product — a sport-tuned, lowered, performance-exhaust Avalon." },
+            "Hybrid":  { engine:"2.5L Hybrid 4-cylinder (215hp)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Flare Pearl (Red)",hex:"#9B1B30"},
+            {name:"Celestial Silver Metallic (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
