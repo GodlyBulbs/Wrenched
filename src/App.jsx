@@ -4313,10 +4313,16 @@ function AuthScreen(){
               {mode==="login"&&<div style={{textAlign:"right",marginBottom:"24px"}}><span onClick={()=>{setMode("forgot");setError("");}} style={{color:"#666",cursor:"pointer",fontSize:"12px"}}>Forgot password?</span></div>}
               {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
               <button onClick={handle} disabled={!email||!password||loading} style={BP(email&&password&&!loading)}>{loading?"...":mode==="login"?"LOG IN":"SIGN UP"}</button>
+              {mode==="signup"&&<p style={{color:"#444",fontSize:"11px",textAlign:"center",marginTop:"14px",lineHeight:"1.5"}}>By signing up, you agree to our <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"#666"}}>Terms of Service</a> and <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"#666"}}>Privacy Policy</a>.</p>}
               <div style={{textAlign:"center",marginTop:"20px"}}>
                 <span style={{color:"#444",fontSize:"13px"}}>{mode==="login"?"Don't have an account? ":"Already have an account? "}
                   <span onClick={()=>{setMode(mode==="login"?"signup":"login");setError("");}} style={{color:"#FF6B2B",cursor:"pointer"}}>{mode==="login"?"Sign up":"Log in"}</span>
                 </span>
+              </div>
+              <div style={{textAlign:"center",marginTop:"28px"}}>
+                <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Terms</a>
+                <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
+                <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
               </div>
             </>
           )}
