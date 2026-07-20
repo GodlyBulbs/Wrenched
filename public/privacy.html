@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ModGuide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0D0D0D;
+    color: #E8E4DC;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    border-bottom: 1px solid #1C1C1C;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .dot { width: 8px; height: 8px; background: #FF6B2B; border-radius: 50%; }
+  .brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #E8E4DC;
+    text-decoration: none;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 6vw, 48px);
+    letter-spacing: 2px;
+    color: #E8E4DC;
+    margin-bottom: 4px;
+  }
+  .updated { color: #666; font-size: 13px; margin-bottom: 40px; }
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #FF6B2B;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  p, li { color: #B8B4AC; font-size: 15px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: #FF6B2B; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #1C1C1C;
+    color: #B8B4AC;
+  }
+  th {
+    color: #E8E4DC;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="dot"></div>
+    <a href="/" class="brand">MODGUIDE</a>
+  </header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: July 20, 2026</div>
+
+    <p>This Privacy Policy explains what information ModGuide collects, why, and how it's handled. ModGuide does not sell your data, and does not run ads.</p>
+
+    <h2>1. Information We Collect</h2>
+    <table>
+      <tr><th>What</th><th>Why</th></tr>
+      <tr><td>Email address, password</td><td>Account creation and login (handled securely via Supabase Auth — we never see or store your raw password)</td></tr>
+      <tr><td>Vehicles you add to your garage (make, model, year, trim, mileage, mods, service history)</td><td>To power your maintenance tracker and build recommendations — this is the core function of the App</td></tr>
+      <tr><td>Name, email, vehicle, location, and job details submitted through On-Site</td><td>To evaluate and respond to service requests. This is emailed directly to the operator and is not stored in a separate marketing database.</td></tr>
+    </table>
+
+    <h2>2. Third-Party Services We Use</h2>
+    <p>ModGuide relies on a small number of infrastructure providers to operate:</p>
+    <ul>
+      <li><strong>Supabase</strong> — handles account authentication and stores your garage data</li>
+      <li><strong>Resend</strong> — delivers On-Site booking notification emails</li>
+      <li><strong>Vercel</strong> — hosts the App</li>
+    </ul>
+    <p>Each of these providers has its own privacy practices governing infrastructure-level data (like IP addresses in server logs). We only share what's necessary for the App to function — we don't sell or rent your data to anyone.</p>
+
+    <h2>3. What We Don't Do</h2>
+    <ul>
+      <li>We don't display ads or sell your data to advertisers</li>
+      <li>We don't share your garage data with other users unless you explicitly choose to (e.g. a future shareable build page)</li>
+      <li>We don't use your On-Site request details for anything beyond fulfilling that request</li>
+    </ul>
+
+    <h2>4. Your Choices</h2>
+    <p>You can update or delete the vehicles in your garage at any time from within the App. To request full account deletion or a copy of your stored data, email us — we'll handle it directly.</p>
+
+    <h2>5. Data Retention</h2>
+    <p>Your account and garage data are retained as long as your account is active. If you delete your account, associated garage data is removed from our active database. On-Site request emails may persist in the operator's inbox as a normal record of business communication.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>ModGuide is not directed at children. You must be at least 18 years old to create an account.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>If this Policy changes in a meaningful way, we'll update the date above. Significant changes affecting how your data is used will be communicated directly where possible.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions about your data or this Policy? Reach out at <a href="mailto:mattjustice1999@gmail.com">mattjustice1999@gmail.com</a>.</p>
+  </main>
+</body>
+</html>
