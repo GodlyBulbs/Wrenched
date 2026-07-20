@@ -114,6 +114,26 @@ const VEHICLES = {
       },
     },
   },
+  "Alfa Romeo": {
+    "Giulia": {
+      generations:{
+        "952 (2017-2024)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Giulia":     { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"First Alfa Romeo sold in the US in years — built on an all-new rear-wheel-drive-oriented platform, a real departure from the FWD cars the brand had been making. AWD badged 'Q4'." },
+            "Ti":         { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "Quadrifoglio":{ engine:"2.9L Twin-Turbo V6 (505hp)", drivetrain:"RWD", transmission:"Automatic", note:"This engine has genuine Ferrari lineage — partially developed in Maranello and shares design DNA with the F136 V8 out of the 458 Italia. Aluminum block, no balance shaft, a real 500-hp sedan for around the price of a loaded Camry." },
+          },
+          colors:[
+            {name:"Alfa Red (Red)",hex:"#C8102E"},
+            {name:"Vulcano Black (Black)",hex:"#1A1A1A"},
+            {name:"Trofeo White (White)",hex:"#F5F5F5"},
+            {name:"Montecarlo Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+  },
   "Audi": {
     "A4": {
       generations:{
@@ -635,6 +655,40 @@ const VEHICLES = {
             {name:"Billet Silver Metallic (Silver)",hex:"#C0C0C0"},
             {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
             {name:"Hydro Blue Pearl (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+  },
+  "Ferrari": {
+    "458 / 488": {
+      generations:{
+        "458 Italia (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "458 Italia": { engine:"4.5L Naturally-Aspirated V8 (562-570hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the F430. Won Car of the Year and Supercar of the Year when it launched. The last of Ferrari's naturally-aspirated V8 mid-engine cars before the turbo era began." },
+            "458 Spider": { engine:"4.5L Naturally-Aspirated V8 (562-570hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Convertible variant, added 2011." },
+            "458 Speciale":{ engine:"4.5L Naturally-Aspirated V8 (597-605hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"2013-2015 only, track-focused variant — the very last naturally-aspirated V8 Ferrari made before switching to turbos for good with the 488." },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Nero Daytona (Black)",hex:"#1A1A1A"},
+            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+            {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "488 GTB (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "488 GTB":   { engine:"3.9L Twin-Turbo V8 (661-670hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"A genuine philosophy shift for Ferrari — the naturally-aspirated V8 is gone, replaced by a downsized turbo unit. More power, more efficient, but not everyone agreed it had the same character as the outgoing 458." },
+            "488 Spider":{ engine:"3.9L Twin-Turbo V8 (661-670hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)" },
+            "488 Pista": { engine:"3.9L Twin-Turbo V8 (710hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"2018-2019 only — track-focused flagship of this generation, borrowed heavily from Ferrari's 488 Challenge and GTE race programs." },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Nero Daytona (Black)",hex:"#1A1A1A"},
+            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+            {name:"Blu Corsa (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
@@ -1694,6 +1748,39 @@ const VEHICLES = {
       },
     },
   },
+  "Lamborghini": {
+    "Huracan": {
+      generations:{
+        "LP 610-4 / LP 580-2 (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "LP 610-4":{ engine:"5.2L Naturally-Aspirated V10 (602hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the Gallardo. AWD standard on the base car — a big part of why it feels so planted and easy to drive fast compared to its rivals." },
+            "LP 580-2":{ engine:"5.2L Naturally-Aspirated V10 (572hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2016 — rear-wheel-drive only, lighter, and developed a real cult following among drivers who wanted a purer, less electronically-mediated experience than the AWD car." },
+            "Performante":{ engine:"5.2L Naturally-Aspirated V10 (631hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"2017-2019 — genuinely track-focused with ALA active aerodynamics, a real step up in chassis sharpness over the standard car." },
+          },
+          colors:[
+            {name:"Giallo Orion (Yellow)",hex:"#F5C800"},
+            {name:"Nero Noctis (Black)",hex:"#1A1A1A"},
+            {name:"Bianco Icarus (White)",hex:"#F5F5F5"},
+            {name:"Verde Mantis (Green)",hex:"#3B8A5A"},
+          ],
+        },
+        "EVO / STO (2019-2024)":{
+          years:["2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "EVO":    { engine:"5.2L Naturally-Aspirated V10 (631hp)", drivetrains:["AWD","RWD"], transmission:"Automatic (Dual-Clutch)", note:"Added Lamborghini's LDVI vehicle dynamics system, updated styling and cabin tech over the original Huracán. Both AWD and RWD-only versions were offered." },
+            "STO":    { engine:"5.2L Naturally-Aspirated V10 (630hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"'Super Trofeo Omologata' — extreme track-focused final special, RWD only, directly race-bred. This was the send-off before Huracán production ended in 2024, replaced by the Temerario." },
+          },
+          colors:[
+            {name:"Giallo Orion (Yellow)",hex:"#F5C800"},
+            {name:"Nero Noctis (Black)",hex:"#1A1A1A"},
+            {name:"Arancio Xanto (Orange)",hex:"#E8601C"},
+            {name:"Blu Aegir (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+  },
   "Land Rover": {
     "Range Rover": {
       generations:{
@@ -1807,6 +1894,40 @@ const VEHICLES = {
             {name:"Ceramic Pearl (White)",hex:"#F0F0F0"},
             {name:"Rhapsody Blue (Blue)",hex:"#1B2A4A"},
             {name:"Iced Mocha Metallic (Brown)",hex:"#4A3728"},
+          ],
+        },
+      },
+    },
+  },
+  "Maserati": {
+    "GranTurismo": {
+      generations:{
+        "1st Gen (2008-2019)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Base": { engine:"4.2L V8 (405hp)", drivetrain:"RWD", transmission:"Automatic", note:"Set a record at the time for fastest development of a car — design to production in just nine months. Successor to the Maserati Coupé and Spyder." },
+            "S":    { engine:"4.7L V8 (433-454hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "MC Stradale":{ engine:"4.7L V8 (450-460hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Track-focused variant, lighter and sharper than the standard car." },
+          },
+          colors:[
+            {name:"Bianco Eldorado (White)",hex:"#F5F5F5"},
+            {name:"Nero Carbonio (Black)",hex:"#1A1A1A"},
+            {name:"Rosso Trionfale (Red)",hex:"#C8102E"},
+            {name:"Grigio Maratea (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Modena": { engine:"3.0L Twin-Turbo Nettuno V6 (483hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new generation, all-new Nettuno engine (also used in the MC20 supercar). Built on the Giorgio Sport platform." },
+            "Trofeo": { engine:"3.0L Twin-Turbo Nettuno V6 (550hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Folgore":{ engine:"Tri-Motor Electric (750hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Fully electric variant, offered alongside the gas versions — a genuinely unusual move for a brand this focused on engine sound and character." },
+          },
+          colors:[
+            {name:"Bianco Audace (White)",hex:"#F5F5F5"},
+            {name:"Nero Enigma (Black)",hex:"#1A1A1A"},
+            {name:"Rosso Vincente (Red)",hex:"#C8102E"},
+            {name:"Blu Nobile (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
