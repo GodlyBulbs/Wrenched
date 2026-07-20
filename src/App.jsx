@@ -3359,6 +3359,23 @@ const VEHICLES = {
       ],
     },
   },
+  "Volvo": {
+    "240": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engine:"2.3L 4-cylinder (114hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"By 1990 the 240 was already an old design (it dated back to the mid-70s), but Volvo kept it going almost entirely unchanged mechanically through its final four years. Every 1990-1993 240 shares this same 2.3L B230F engine, regardless of trim." },
+        "DL":   { engine:"2.3L 4-cylinder (114hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+        "SE":   { engine:"2.3L 4-cylinder (114hp)", drivetrain:"RWD", transmission:"Automatic", note:"1991 only — essentially a GLT trim under a different name, alloy wheels and blacked-out trim." },
+        "Classic":{ engine:"2.3L 4-cylinder (114hp)", drivetrain:"RWD", transmission:"Automatic", note:"1993 only, roughly 1,600 built — Volvo's official send-off for the 240 nameplate, each one carrying a unique serial number. This was the final model year before the Volvo 940 took over as the entry-level car." },
+      },
+      colors:[
+        {name:"Classic Red (Red)",hex:"#C8102E"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+  },
 };
 
 
