@@ -2938,19 +2938,38 @@ const VEHICLES = {
       ],
     },
     "BRZ": {
-      years:["2013","2014","2015","2016","2017","2021","2022","2023"],
-      trims:{
-        "Premium": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Limited": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "tS":      { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmission:"Manual" },
+      generations:{
+        "1st Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Premium": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Co-developed with Toyota — badged Toyota 86/GT86 and originally Scion FR-S. 2017 mid-cycle refresh bumped manual-transmission cars to 205hp; automatics stayed at 200hp." },
+            "Limited": { engine:"2.0L 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "tS":      { engine:"2.0L 4-cylinder (205hp)", drivetrain:"RWD", transmission:"Manual", note:"STI-tuned special edition, added in the later years of this generation." },
+          },
+          colors:[
+            {name:"World Rally Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "2nd Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Premium": { engine:"2.4L 4-cylinder (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Subaru skipped the 2021 model year entirely between generations. Real engine growth here — 2.0L to 2.4L, a genuine jump in usable low-end torque that the first gen was criticized for lacking." },
+            "Limited": { engine:"2.4L 4-cylinder (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "tS":      { engine:"2.4L 4-cylinder (228hp)", drivetrain:"RWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"WR Blue Pearl (Blue)",hex:"#003893"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Solar Orange Pearl (Orange)",hex:"#E8601C"},
+          ],
+        },
       },
-      colors:[
-        {name:"World Rally Blue Pearl (Blue)",hex:"#003893"},
-        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
-        {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
-        {name:"Magnetite Gray Metallic (Gray)",hex:"#5A5F63"},
-      ],
     },
     "Forester XT": {
       years:["2014","2015","2016","2017","2018"],
@@ -3315,48 +3334,246 @@ const VEHICLES = {
   },
   "Volkswagen": {
     "Golf GTI": {
-      years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
-      trims:{
-        "S":        { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
-        "SE":       { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
-        "Autobahn": { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
-        "Rabbit":   { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+      generations:{
+        "Mk2 Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"US-market GTIs of this era were badged simply 'GTI' — the 'Golf' name wasn't used in the US until later generations." },
+            "16V":  { engine:"1.8L 16-Valve 4-cylinder (134hp)", drivetrain:"FWD", transmission:"Manual", note:"US got the 16-valve version starting around 1987 — genuinely popular in the enthusiast scene, still is." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Flash Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Mk3 (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "8V":  { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Widely considered a step backward from the beloved Mk2 — softer, heavier, less sharp to drive." },
+            "16V": { engine:"2.0L 16-Valve 4-cylinder (134hp)", drivetrain:"FWD", transmission:"Manual" },
+            "VR6": { engine:"2.8L VR6 (172hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1995 — VW's unique narrow-angle V6, first time a proper six-cylinder made it into a GTI-badged car." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Jazz Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk4 (1999-2004)":{
+          years:["1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "GLS":  { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Generally regarded as less sporty than earlier generations — focus shifted toward comfort and refinement over outright fun." },
+            "1.8T": { engine:"1.8L Turbocharged 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GLX":  { engine:"2.8L VR6 24V (174hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Reflex Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Indigo Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk5 (2006-2009)":{
+          years:["2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"], note:"The base Golf was badged 'Rabbit' in the US this generation — only the GTI kept a distinct sporty identity. Widely considered the generation that restored the GTI's fun-to-drive reputation after the disappointing Mk4." },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"United Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Mk6 (2010-2014)":{
+          years:["2010","2011","2012","2013","2014"],
+          trims:{
+            "Base":  { engine:"2.0L Turbocharged 4-cylinder (200-208hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"], note:"Mostly a heavily-facelifted Mk5 underneath — new front fenders, lights, and rocker sills rather than a true ground-up redesign. A GTI Cabriolet was offered for the first time this generation." },
+            "Autobahn":{ engine:"2.0L Turbocharged 4-cylinder (200-208hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Rising Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk7 (2015-2021)":{
+          years:["2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "S":        { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+            "SE":       { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+            "Autobahn": { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+            "Rabbit":   { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"], note:"Often cited as the best-driving generation — didn't mess with the winning formula from Mk5/Mk6." },
+          },
+          colors:[
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Reflex Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Lapiz Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk8 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (241hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"], note:"Five-door only now — the three-door body style was dropped. 2025+ model years dropped the manual transmission entirely in the US, so double check what you're looking at if a stick shift matters to you." },
+          },
+          colors:[
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+          ],
+        },
       },
-      colors:[
-        {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Pure White (White)",hex:"#F5F5F5"},
-        {name:"Tornado Red (Red)",hex:"#C8102E"},
-        {name:"Reflex Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Lapiz Blue Metallic (Blue)",hex:"#1E4B8E"},
-      ],
     },
     "Golf R": {
-      years:["2015","2016","2017","2018","2019","2022","2023"],
-      trims:{
-        "Base":      { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"] },
-        "DCC & Nav": { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"] },
+      generations:{
+        "R32 Mk4 (2004)":{
+          years:["2004"],
+          trims:{
+            "Base": { engine:"3.2L VR6 (240hp)", drivetrain:"AWD", transmission:"Manual", note:"First-ever R-badged Golf. Limited to just 5,000 units for the US, manual only — no DSG was offered here even though Europe got one. Genuinely rare and increasingly valuable today." },
+          },
+          colors:[
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Reflex Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Black Magic Pearl (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "R32 Mk5 (2008)":{
+          years:["2008"],
+          trims:{
+            "Base": { engine:"3.2L VR6 (250hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"], note:"Returned after a gap (not sold 2005-2007). Again limited to 5,000 US units. This is the last Golf R with the narrow-angle VR6 — every generation since has used a turbo four instead." },
+          },
+          colors:[
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Reflex Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Black Magic Pearl (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "Mk6 (2012)":{
+          years:["2012"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Manual", note:"The VR6 is gone for good — VW switched to a turbo four to keep pace with rivals while cutting weight and cost. One US model year only for this generation." },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Rising Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk7 (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "Base":      { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"] },
+            "DCC & Nav": { engine:"2.0L Turbocharged 4-cylinder (292hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"] },
+          },
+          colors:[
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Lapiz Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Reflex Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Ravenna Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "Mk8 (2022-2024)":{
+          years:["2022","2023","2024"],
+          trims:{
+            "Base":{ engine:"2.0L Turbocharged 4-cylinder (315hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (DSG)"], note:"2024 is the final model year a manual was offered in the US on the Golf R — VW dropped the stick shift starting 2025 on both the R and GTI." },
+          },
+          colors:[
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Lapiz Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+          ],
+        },
       },
-      colors:[
-        {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Pure White (White)",hex:"#F5F5F5"},
-        {name:"Lapiz Blue Metallic (Blue)",hex:"#1E4B8E"},
-        {name:"Reflex Silver Metallic (Silver)",hex:"#C0C0C0"},
-        {name:"Ravenna Green Metallic (Green)",hex:"#2E5A3A"},
-      ],
     },
     "Jetta GLI": {
-      years:["2019","2020","2021","2022","2023"],
-      trims:{
-        "S":                { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
-        "Autobahn":         { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
-        "35th Anniversary": { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+      generations:{
+        "Mk2 (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "GLI": { engine:"2.0L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The GLI badge is essentially the Jetta's version of the GTI — same performance intent, sedan body." },
+            "GLI 16V":{ engine:"2.0L 16-Valve 4-cylinder (134hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Flash Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Mk3 GLX (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "GLX": { engine:"2.8L VR6 (172hp)", drivetrain:"FWD", transmission:"Manual", note:"VW dropped the 'GLI' name for this generation's top trim in favor of 'GLX' — same idea, VR6 power, different badge. GLI came back on the next generation." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Jazz Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk4 (1999-2005)":{
+          years:["1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GLI":     { engine:"1.8L Turbocharged 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"GLI badge returns. 2003+ switched to the VR6 24V for more power." },
+            "GLI VR6": { engine:"2.8L VR6 24V (200hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Reflex Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Indigo Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk5 (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "GLI": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"United Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Mk6 (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "GLI": { engine:"2.0L Turbocharged 4-cylinder (200-210hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Rising Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Mk7 (2019-2024)":{
+          years:["2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S":                { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+            "Autobahn":         { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+            "35th Anniversary": { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (DSG)"] },
+          },
+          colors:[
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Platinum Gray Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
       },
-      colors:[
-        {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
-        {name:"Pure White (White)",hex:"#F5F5F5"},
-        {name:"Tornado Red (Red)",hex:"#C8102E"},
-        {name:"Platinum Gray Metallic (Gray)",hex:"#8A8D8F"},
-      ],
     },
   },
   "Volvo": {
