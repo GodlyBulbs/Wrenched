@@ -4281,7 +4281,7 @@ function AuthScreen(){
     <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
         <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
-        <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>MODGUIDE</span>
+        <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>WRENCHED</span>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"400px"}}>
@@ -4306,7 +4306,7 @@ function AuthScreen(){
             )
           ):(
             <>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>{mode==="login"?"WELCOME BACK":"JOIN MODGUIDE"}</div>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>{mode==="login"?"WELCOME BACK":"JOIN WRENCHED"}</div>
               <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>{mode==="login"?"Log in to access your garage.":"Create an account to save your garage."}</p>
               <div style={{marginBottom:"16px"}}><span style={LS}>EMAIL</span><input style={IS} type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com"/></div>
               <div style={{marginBottom:mode==="login"?"8px":"24px"}}><span style={LS}>PASSWORD</span><input style={IS} type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="••••••••" onKeyDown={e=>e.key==="Enter"&&handle()}/></div>
@@ -4354,7 +4354,7 @@ function ResetPasswordScreen({onDone}){
     <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
         <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
-        <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>MODGUIDE</span>
+        <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>WRENCHED</span>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"400px"}}>
@@ -4496,7 +4496,7 @@ function AddCarForm({onSave,onCancel}){
   );
 }
 
-export default function ModGuide(){
+export default function Wrenched(){
   const [session,setSession]=useState(null);
   const [authLoading,setAuthLoading]=useState(true);
   const [view,setView]=useState("garage");
@@ -4602,7 +4602,7 @@ export default function ModGuide(){
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,background:"#0D0D0D",zIndex:100}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}} onClick={()=>setView("garage")}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
-          <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>MODGUIDE</span>
+          <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"4px"}}>WRENCHED</span>
         </div>
         <div style={{display:"flex",gap:"12px",alignItems:"center"}}>
           <div style={{position:"relative",cursor:"pointer"}} onClick={()=>setShowBell(!showBell)}>
