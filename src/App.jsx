@@ -4258,10 +4258,7 @@ function CarCard({car,onSelect,onDelete,hasAlerts}){
 
 function Wordmark({size=20}){
   return(
-    <>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@900&display=swap');`}</style>
-      <span style={{fontFamily:"'Big Shoulders Stencil', sans-serif",fontWeight:900,fontSize:size,letterSpacing:"1px",color:"#E8E4DC"}}>WRENCH<span style={{color:"#FF6B2B"}}>ED</span></span>
-    </>
+    <span style={{fontFamily:"'Big Shoulders Stencil', sans-serif",fontWeight:900,fontSize:size,letterSpacing:"1px",color:"#E8E4DC"}}>WRENCH<span style={{color:"#FF6B2B"}}>ED</span></span>
   );
 }
 
