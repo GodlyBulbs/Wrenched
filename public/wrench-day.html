@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ModGuide — On-Site</title>
+<title>Wrenched — On-Site</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
@@ -37,19 +37,6 @@
   ::selection { background: var(--orange); color: #0D0D0D; }
 
   a { color: inherit; text-decoration: none; }
-
-  /* ===== Diagonal hazard stripe texture, used sparingly ===== */
-  .hazard-edge {
-    height: 6px;
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--yellow),
-      var(--yellow) 10px,
-      #1A1A1A 10px,
-      #1A1A1A 20px
-    );
-    opacity: 0.9;
-  }
 
   /* ===== Nav ===== */
   .nav {
@@ -277,6 +264,41 @@
     max-width: 480px;
   }
 
+  /* ===== Distance pricing tiers ===== */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .tier-card {
+    background: var(--panel-raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .tier-name {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+  .tier-range {
+    font-family: var(--display);
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .tier-desc {
+    font-size: 12px;
+    color: var(--text-dimmer);
+  }
+  @media (max-width: 640px) {
+    .tier-grid { grid-template-columns: 1fr; }
+  }
+
   /* ===== Invoice-style pricing breakdown ===== */
   .invoice {
     background: var(--panel-raised);
@@ -469,12 +491,10 @@
 </head>
 <body>
 
-  <div class="hazard-edge"></div>
-
   <nav class="nav">
     <div class="nav-brand">
       <div class="nav-dot"></div>
-      <span class="nav-name">MODGUIDE</span>
+      <span class="nav-name">WRENCHED</span>
       <span class="nav-sub">ON-SITE</span>
     </div>
     <a href="#book" class="nav-cta">REQUEST A DATE</a>
@@ -483,14 +503,13 @@
   <div class="hero">
     <div class="ticket">
       <div class="ticket-top">
-        <div class="ticket-num">SERVICE TICKET <span>#0001</span> — NOT YET ISSUED</div>
-        <div class="ticket-stamp">CONCEPT</div>
+        <div class="ticket-num">SERVICE TICKET</div>
       </div>
       <div class="perforation"></div>
       <div class="ticket-body">
         <div class="eyebrow">ON-SITE SERVICE — BY APPOINTMENT ONLY</div>
         <h1 class="headline">I'll come to <span class="accent">your garage</span><br>and fix it myself.</h1>
-        <p class="sub">Not a shop. Not a stranger. The same hands behind the verified guides in ModGuide — flown out to work on your car, on your driveway, for jobs a general shop won't get right.</p>
+        <p class="sub">Not a shop. Not a stranger. The same hands behind the verified guides in Wrenched — flown out to work on your car, on your driveway, for jobs a general shop won't get right.</p>
         <div class="hero-actions">
           <a href="#book" class="btn-primary">REQUEST A DATE</a>
           <a href="#how" class="btn-ghost">HOW IT WORKS</a>
@@ -540,14 +559,32 @@
 
   <div class="section">
     <div class="section-label">WHAT IT COSTS</div>
-    <h2 class="section-title">One flat rate, no surprises</h2>
-    <p class="section-desc">Covers the flight and up to a full day of hands-on work. The only separate cost is parts, billed at exactly what they cost.</p>
+    <h2 class="section-title">Priced by distance, no surprises</h2>
+    <p class="section-desc">Covers travel and up to a full day of hands-on work. The only separate cost is parts, billed at exactly what they cost — no markup, ever.</p>
 
-    <div class="invoice">
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-name">REGIONAL</div>
+        <div class="tier-range">$500 – $1,000</div>
+        <div class="tier-desc">Drivable, same-day range.</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">EXTENDED</div>
+        <div class="tier-range">$1,000 – $2,000</div>
+        <div class="tier-desc">Farther drivable range.</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">CROSS-COUNTRY</div>
+        <div class="tier-range">$2,000 – $2,500</div>
+        <div class="tier-desc">Flight required to reach you.</div>
+      </div>
+    </div>
+
+    <div class="invoice" style="margin-top: 18px;">
       <div class="invoice-row">
         <div>
           <div class="invoice-label">Travel</div>
-          <div class="invoice-note">Flight to you, wherever that is</div>
+          <div class="invoice-note">Scales with distance — see tiers above</div>
         </div>
         <div class="invoice-amount">included</div>
       </div>
@@ -565,11 +602,7 @@
         </div>
         <div class="invoice-amount">at cost</div>
       </div>
-      <div class="invoice-total">
-        <div class="invoice-total-label">FLAT RATE</div>
-        <div class="invoice-total-amount">$1,000</div>
-      </div>
-      <div class="invoice-footnote">Final number depends on where you are — this is the starting point for most jobs within a day's travel.</div>
+      <div class="invoice-footnote">Exact number depends on your location and the job — tell me where you are in the form below and I'll confirm the real price before anything's booked.</div>
     </div>
   </div>
 
@@ -579,7 +612,7 @@
 
     <div class="proof-card">
       <div class="proof-label">VERIFIED, NOT GUESSED</div>
-      <div class="proof-text">Every guide in ModGuide marked <strong>hand-verified</strong> was written from a job I actually did myself, bolt sizes and all — not generated. If I'm coming to your car, it's held to that same bar.</div>
+      <div class="proof-text">Every guide in Wrenched marked <strong>hand-verified</strong> was written from a job I actually did myself, bolt sizes and all — not generated. If I'm coming to your car, it's held to that same bar.</div>
     </div>
     <div class="proof-card">
       <div class="proof-label">I'LL TELL YOU NO</div>
@@ -589,8 +622,8 @@
     <div class="radius-box" style="margin-top: 28px;">
       <div class="radius-ring"></div>
       <div>
-        <div class="radius-text-title">Where I'll fly to</div>
-        <div class="radius-text-desc">Most of the US, for the right job. Farther out just means we talk timing.</div>
+        <div class="radius-text-title">How far I'll travel</div>
+        <div class="radius-text-desc">Anywhere in the US — price scales with distance, from a short regional drive up to a cross-country flight.</div>
       </div>
     </div>
   </div>
@@ -614,7 +647,7 @@
       <div class="form-row">
         <div class="form-field">
           <label>CAR — YEAR / MAKE / MODEL</label>
-          <input type="text" placeholder="e.g. 2014 Fiat 500 Abarth">
+          <input type="text" placeholder="e.g. 2000 Honda Civic">
         </div>
         <div class="form-field">
           <label>YOUR LOCATION</label>
@@ -687,8 +720,7 @@
     });
   </script>
 
-  <div class="hazard-edge"></div>
-  <footer>MODGUIDE ON-SITE — CONCEPT PREVIEW, NOT YET LIVE</footer>
+  <footer>WRENCHED ON-SITE</footer>
 
 </body>
 </html>
