@@ -40,14 +40,6 @@ export async function POST(request) {
   const rawBody = await request.text();
   const signature = request.headers.get("stripe-signature");
 
-  // TEMPORARY DIAGNOSTIC — remove once the signature issue is confirmed fixed.
-  // Shows just enough of the secret to compare against Stripe's dashboard
-  // without ever exposing the full value in logs.
-  const secretInUse = process.env.STRIPE_WEBHOOK_SECRET;
-  console.log("DIAGNOSTIC — webhook secret seen by this function:", 
-    secretInUse ? `${secretInUse.slice(0,12)}... (length ${secretInUse.length})` : "MISSING / UNDEFINED"
-  );
-
   let event;
   try {
     event = stripe.webhooks.constructEvent(rawBody, signature, process.env.STRIPE_WEBHOOK_SECRET);
