@@ -4149,6 +4149,15 @@ function BrandDot({brand,size=8}){
 
 function statusColor(item,mileage){
   if(!item.lastMiles&&!item.lastDate) return "unset";
+  if(item.mileInterval==null){
+    if(!item.lastDate) return "unset";
+    const dueDate=new Date(item.lastDate);
+    dueDate.setMonth(dueDate.getMonth()+item.monthInterval);
+    const daysLeft=(dueDate-new Date())/(1000*60*60*24);
+    if(daysLeft<=0) return "red";
+    if(daysLeft<=14) return "yellow";
+    return "green";
+  }
   const diff=((item.lastMiles||0)+item.mileInterval)-mileage;
   if(diff<=0) return "red";
   if(diff<=500) return "yellow";
@@ -4227,6 +4236,70 @@ const MAINTENANCE_ITEMS=[
       if(car.transmission&&/cvt/i.test(car.transmission)) return "CVT — these are pickier about fluid than a traditional automatic. Use the exact CVT fluid your manufacturer specifies, not generic ATF. Many manufacturers say \"lifetime\" but a change around 60k mi is cheap insurance.";
       return "Many automatics list \"lifetime\" fluid, but plenty of mechanics still recommend a change around 60k mi for longevity. Check your owner's manual for the official word.";
     },
+  },
+  {
+    key:"sparkplugs",
+    name:"Spark Plugs",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:(car)=>{
+      const turbo=car.engine&&/turbo/i.test(car.engine);
+      return turbo?"Turbocharged engines run hotter and harder on plugs — some manufacturers want these done closer to 30-40k rather than the standard 60-100k. Check your owner's manual, don't assume the longer interval applies.":"Modern iridium/platinum plugs are usually good for 60-100k miles — a genuine 'lifetime' part until the interval's up, not something to guess at by feel. Confirm your exact interval in the owner's manual since it varies a lot by engine.";
+    },
+  },
+  {
+    key:"battery",
+    name:"Battery",
+    mileInterval:null,
+    monthInterval:36,
+    notes:()=>"This one's about age, not mileage — most batteries last 3-5 years regardless of how much you drive. Cold weather kills batteries faster than heat does, so if you're somewhere with real winters, lean toward the shorter end. Have it load-tested at any auto parts store for free before assuming it's dead.",
+  },
+  {
+    key:"brakefluid",
+    name:"Brake Fluid",
+    mileInterval:30000,
+    monthInterval:24,
+    notes:()=>"Brake fluid absorbs moisture from the air over time, which lowers its boiling point — this is a real safety item, not just a nice-to-have. Most manufacturers call for a change every 2-3 years regardless of mileage. A cloudy or dark color is a sign it's overdue.",
+  },
+  {
+    key:"serpentinebelt",
+    name:"Serpentine / Drive Belt",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:()=>"Drives your alternator, power steering, and A/C compressor off the crankshaft. Look for visible cracking or fraying on the ribbed side — a snapped belt on the road takes out your power steering, charging, and cooling all at once.",
+  },
+  {
+    key:"wipers",
+    name:"Wiper Blades",
+    mileInterval:null,
+    monthInterval:12,
+    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
+  },
+  {
+    key:"alignment",
+    name:"Wheel Alignment",
+    mileInterval:12000,
+    monthInterval:12,
+    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. Uneven tire wear is the biggest tell something's off.",
+  },
+  {
+    key:"difffluid",
+    name:"Differential Fluid",
+    mileInterval:30000,
+    monthInterval:24,
+    notes:(car)=>{
+      const dt=car.drivetrain;
+      if(dt&&/awd|4wd/i.test(dt))return"AWD/4WD systems typically have both a front and rear differential (or a transfer case too) — each with its own fluid and interval. Check your owner's manual for whether they're serviced together or separately.";
+      if(dt&&/rwd/i.test(dt))return"RWD cars have a single rear differential. Often overlooked since it's out of sight — a burnt smell or whining noise from underneath is a sign it's overdue.";
+      return"Not applicable to most FWD cars without a separate rear differential — check your owner's manual if you're not sure what drivetrain-specific components your car has.";
+    },
+  },
+  {
+    key:"powersteering",
+    name:"Power Steering Fluid",
+    mileInterval:50000,
+    monthInterval:36,
+    notes:()=>"Only applies if your car has traditional hydraulic power steering — many newer cars use electric power steering instead, which has no fluid to change at all. Check your owner's manual if you're not sure which your car has.",
   },
 ];
 
@@ -4872,7 +4945,7 @@ function AppShell(){
                       </div>
                       <div style={{color:"#555",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {MAINTENANCE_ITEMS.length}</div>
                       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",marginBottom:"8px"}}>{MAINTENANCE_ITEMS[wizardStep].name}</div>
-                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>Recommended every {MAINTENANCE_ITEMS[wizardStep].mileInterval.toLocaleString()} miles</div>
+                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>Recommended every {MAINTENANCE_ITEMS[wizardStep].mileInterval?`${MAINTENANCE_ITEMS[wizardStep].mileInterval.toLocaleString()} miles`:`${MAINTENANCE_ITEMS[wizardStep].monthInterval} months`}</div>
                       <div style={{color:"#666",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{MAINTENANCE_ITEMS[wizardStep].notes(activeCar)}</div>
                       <span style={LS}>WHEN WAS THIS LAST DONE?</span>
                       <input style={{...IS,marginBottom:"12px"}} type="number" value={wizardMileage} onChange={e=>setWizardMileage(e.target.value)} placeholder="Enter mileage" autoFocus/>
@@ -4912,7 +4985,13 @@ function AppShell(){
                                 <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
                                 <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
                               </div>
-                              <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>Every {item.mileInterval.toLocaleString()} mi{item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}</div>
+                              <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>
+                                {item.mileInterval?
+                                  `Every ${item.mileInterval.toLocaleString()} mi${item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}`
+                                  :
+                                  `Every ${item.monthInterval} months${item.lastDate?` · Last: ${new Date(item.lastDate).toLocaleDateString()} · Due: ${new Date(new Date(item.lastDate).setMonth(new Date(item.lastDate).getMonth()+item.monthInterval)).toLocaleDateString()}`:" · Not logged yet"}`
+                                }
+                              </div>
                               {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
                               {history.length>0&&(
                                 <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"#FF6B2B",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
