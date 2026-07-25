@@ -869,6 +869,95 @@ const VEHICLES = {
     },
   },
   "Ford": {
+    "F-150": {
+      generations:{
+        "9th Gen (1992-1996)":{
+          years:["1992","1993","1994","1995","1996"],
+          trims:{
+            "XL":  { engine:"4.9L Inline-6 (145hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"], note:"Part of the classic 'square body' era Ford truck fans still love for its simplicity." },
+            "XLT": { engines:["5.0L V8 (185hp)","5.8L V8 (210hp)"], drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"] },
+            "Lightning": { engine:"5.8L V8 (240hp)", drivetrain:"2WD", transmission:"Automatic", note:"First-gen SVT Lightning (1993-1995) — a genuine factory hot-rod half-ton truck, tuned suspension and a hotter cam over the standard 5.8L." },
+          },
+          colors:[
+            {name:"Colonial White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Currant Red (Red)",hex:"#9B1B30"},
+            {name:"Wimbledon White (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "10th Gen (1997-2003)":{
+          years:["1997","1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "XL":  { engine:"4.2L V6 (202hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"], note:"All-new platform, first year of the overhead-cam Triton V8 family — a real leap in refinement over the old pushrod engines." },
+            "XLT": { engines:["4.6L Triton V8 (220hp)","5.4L Triton V8 (235-260hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Lightning": { engine:"5.4L Supercharged Triton V8 (360-380hp)", drivetrain:"2WD", transmission:"Automatic", note:"2nd-gen SVT Lightning (1999-2004) — genuinely one of the quickest trucks of its era, supercharged and built on the F-150's heavy-duty chassis to handle the power." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "11th Gen (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "XL":  { engine:"4.2L V6 (202hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"Fully boxed frame for the first time — a real structural upgrade over the outgoing generation." },
+            "XLT": { engines:["4.6L Triton V8 (231hp)","5.4L Triton V8 (300hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Lariat":{ engine:"5.4L Triton V8 (300hp)", drivetrains:["2WD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Shadow Grey (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "12th Gen (2009-2014)":{
+          years:["2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "XL":  { engines:["4.6L Triton V8 (248hp)","5.4L Triton V8 (320hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic", note:"No base V6 initially — pure V8 lineup until the EcoBoost V6 and Coyote V8 arrived in 2011, a genuinely major powertrain shift mid-generation." },
+            "XLT": { engines:["3.5L EcoBoost Twin-Turbo V6 (365hp)","5.0L Coyote V8 (360hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic", note:"2011+ engines — first EcoBoost turbo V6 in F-150 history." },
+            "SVT Raptor":{ engine:"6.2L V8 (411hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2010 — factory desert-racing truck, Fox Racing shocks, widened track." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Tuxedo Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Sterling Grey Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "13th Gen (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "XL":  { engines:["3.3L V6 (290hp)","2.7L EcoBoost Twin-Turbo V6 (325hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic", note:"Switched to an aluminum body this generation, cutting up to 700lbs — a genuinely big deal for payload, towing, and efficiency." },
+            "XLT": { engines:["3.5L EcoBoost Twin-Turbo V6 (375hp)","5.0L Coyote V8 (395hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "Raptor":{ engine:"3.5L EcoBoost Twin-Turbo V6 (450hp)", drivetrain:"4WD", transmission:"Automatic", note:"2017+ — switched from the old 6.2L V8 to a twin-turbo V6, more power despite the smaller displacement." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Agate Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Lead Foot Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "14th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "XL":  { engines:["3.3L V6 (290hp)","2.7L EcoBoost Twin-Turbo V6 (325hp)"], drivetrains:["2WD","4WD"], transmission:"Automatic", note:"First F-150 with an available onboard generator (Pro Power Onboard) and the first hybrid F-150 ever." },
+            "XLT": { engine:"3.5L EcoBoost Twin-Turbo V6 (400hp)", drivetrains:["2WD","4WD"], transmission:"Automatic" },
+            "PowerBoost Hybrid":{ engine:"3.5L Twin-Turbo Hybrid V6 (430hp)", drivetrains:["2WD","4WD"], transmission:"Automatic", note:"F-150's first-ever hybrid powertrain — a twin-turbo V6 paired with an electric motor, doubling as a genuine mobile generator through the truck bed outlets." },
+            "Raptor R":{ engine:"5.2L Supercharged V8 (720hp)", drivetrain:"4WD", transmission:"Automatic", note:"2023+ — the most powerful factory F-150 ever built, genuinely competitive with exotic supercar power figures." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Agate Black (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red (Red)",hex:"#C8102E"},
+            {name:"Iconic Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Fiesta ST": {
       generations:{
         "Mk7 (2014-2019)":{
@@ -1531,6 +1620,89 @@ const VEHICLES = {
         },
       },
     },
+    "CR-V": {
+      generations:{
+        "1st Gen (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "LX": { engines:["2.0L 4-cylinder (126hp)","2.0L 4-cylinder (146hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"126hp for 1997-1998, bumped to 146hp for 1999+. 4WD only for the first model year — a cheaper 2WD version was added starting 1998. A genuinely clever feature: a fold-out picnic table hidden under the rear cargo floor." },
+            "EX": { engine:"2.0L 4-cylinder (146hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Sunlight Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "LX": { engine:"2.4L K-Series 4-cylinder (160hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"All-new K-series engine family, a real step up in refinement over the old B-series." },
+            "EX": { engine:"2.4L K-Series 4-cylinder (160hp)", drivetrains:["FWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#9B1B30"},
+            {name:"Titanium Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2007-2011)":{
+          years:["2007","2008","2009","2010","2011"],
+          trims:{
+            "LX": { engines:["2.4L 4-cylinder (166hp)","2.4L 4-cylinder (180hp)"], drivetrains:["FWD","4WD"], transmission:"Automatic", note:"180hp arrived for the 2010 model year. First generation to drop the manual entirely — automatic only from here on. Moved the spare tire under the floor and switched to a conventional top-hinged liftgate, a real departure from the old side-opening rear door." },
+            "EX-L":{ engine:"2.4L 4-cylinder (166-180hp)", drivetrains:["FWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "4th Gen (2012-2016)":{
+          years:["2012","2013","2014","2015","2016"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (185hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"2015 facelift added a CVT, replacing the old 5-speed automatic — the first CR-V generation to offer one." },
+            "EX-L":{ engine:"2.4L 4-cylinder (185hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#9B1B30"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2017-2022)":{
+          years:["2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "LX":  { engine:"2.4L 4-cylinder (184hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "EX": { engine:"1.5L Turbocharged 4-cylinder (190hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"First-ever turbocharged CR-V — a real shift from decades of naturally-aspirated engines. Hybrid model joined the lineup for 2020." },
+            "Hybrid":{ engine:"2.0L Hybrid 4-cylinder (212hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Molten Lava Pearl (Red)",hex:"#9B1B30"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "6th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "LX":     { engine:"1.5L Turbocharged 4-cylinder (190hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Lineup leans hard into hybrid now — the Hybrid is genuinely a volume trim, not a niche add-on." },
+            "Hybrid": { engine:"2.0L Hybrid 4-cylinder (204hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Diffused Sky Blue (Blue)",hex:"#4A7B9D"},
+            {name:"Canyon River Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Del Sol": {
       years:["1993","1994","1995","1996","1997"],
       trims:{
@@ -1545,6 +1717,49 @@ const VEHICLES = {
         {name:"Cyber Green Pearl (Green)",hex:"#3B8A5A"},
         {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
+    },
+    "Fit": {
+      generations:{
+        "1st Gen (2007-2008)":{
+          years:["2007","2008"],
+          trims:{
+            "Base": { engine:"1.5L 4-cylinder (109hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Arrived in the US years after it launched in Japan and other markets, only settling in as a 2007 model amid rising fuel prices. Genuinely clever 'Magic Seat' rear seating that folds flat or flips up for tall cargo." },
+            "Sport": { engine:"1.5L 4-cylinder (109hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Vivid Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2009-2013)":{
+          years:["2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"1.5L 4-cylinder (117hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Bigger body than the first gen, more power, and a CVT option for the first time." },
+            "Sport": { engine:"1.5L 4-cylinder (117hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Sport trim added steering wheel paddle shifters when paired with the automatic." },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Blue Raspberry Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "LX": { engine:"1.5L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"This was the last Fit ever sold in the US — Honda discontinued it here after 2020, though it's continued being sold overseas since. No direct replacement was ever offered stateside." },
+            "Sport": { engine:"1.5L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+          },
+          colors:[
+            {name:"White Orchid Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
     },
     "S2000": {
       generations:{
@@ -1711,6 +1926,79 @@ const VEHICLES = {
     },
   },
   "Jeep": {
+    "Grand Cherokee": {
+      generations:{
+        "ZJ (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "Laredo": { engine:"4.0L Inline-6 (190hp)", drivetrains:["2WD","4WD"], transmissions:["Manual","Automatic"], note:"First-ever Grand Cherokee — originally meant to slot between the Wagoneer and the smaller XJ Cherokee, but ended up becoming its own standalone nameplate entirely." },
+            "Limited": { engines:["5.2L V8 (220hp)","5.9L V8 (245hp)"], drivetrain:"4WD", transmission:"Automatic", note:"5.9L Limited (1998 only) is a genuine cult favorite today — a factory hot-rod Grand Cherokee before the SRT8 nameplate existed." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Forest Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "WJ (1999-2004)":{
+          years:["1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Laredo": { engine:"4.0L Inline-6 (195hp)", drivetrain:"4WD", transmission:"Automatic", note:"Completely redesigned, rounder styling — shared surprisingly few parts with the outgoing ZJ, mostly just fasteners. Quadra-Drive 4WD system introduced this generation." },
+            "Limited": { engine:"4.7L V8 (235hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red (Red)",hex:"#C8102E"},
+            {name:"Shale Green Metallic (Green)",hex:"#5A7A5A"},
+          ],
+        },
+        "WK (2005-2010)":{
+          years:["2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "Laredo":  { engine:"3.7L V6 (210-215hp)", drivetrain:"4WD", transmission:"Automatic", note:"First independent front suspension in Grand Cherokee history. The HEMI V8 arrived on this generation for the first time." },
+            "Limited": { engines:["4.7L V8 (235hp)","5.7L HEMI V8 (330hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "SRT8":    { engine:"6.1L HEMI V8 (420hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2006 — a genuinely quick SUV for its era, sub-5-second 0-60." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+            {name:"Mineral Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "WK2 (2011-2021)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "Laredo":   { engine:"3.6L Pentastar V6 (290-295hp)", drivetrain:"4WD", transmission:"Automatic", note:"Longest-running Grand Cherokee generation ever — over a decade on sale. Shared a lot of underlying engineering with the Mercedes-Benz ML-Class from the DaimlerChrysler era. EcoDiesel V6 option added 2014." },
+            "Overland": { engines:["5.7L HEMI V8 (360hp)","3.0L EcoDiesel V6 (240-260hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "SRT":      { engine:"6.4L HEMI V8 (470-475hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Trackhawk":{ engine:"6.2L Supercharged Hellcat V8 (707hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2018 — genuinely absurd for an SUV, sub-3.5-second 0-60, quicker than most sports cars." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Diamond Black Crystal Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Redline Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "WL (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Laredo":   { engine:"3.6L Pentastar V6 (293hp)", drivetrain:"4WD", transmission:"Automatic", note:"Introduced the 3-row long-wheelbase Grand Cherokee L for the first time in nameplate history. The HEMI V8 was offered only briefly on this generation before being dropped for good." },
+            "Overland": { engine:"3.6L Pentastar V6 (293hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "4xe":      { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (375hp combined)", drivetrain:"4WD", transmission:"Automatic", note:"First-ever plug-in hybrid Grand Cherokee." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Diamond Black Crystal Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Velvet Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Baltic Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Wrangler": {
       generations:{
         "YJ Tail (1990-1995)":{
@@ -3506,6 +3794,301 @@ const VEHICLES = {
             {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
             {name:"Ruby Flare Pearl (Red)",hex:"#9B1B30"},
             {name:"Celestial Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Camry": {
+      generations:{
+        "V20 Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "DX": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Narrow-body generation, the last before Camry grew into the wide-body platform that's carried the nameplate ever since." },
+            "LE": { engine:"2.5L V6 (153hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "XV10 (1992-1996)":{
+          years:["1992","1993","1994","1995","1996"],
+          trims:{
+            "DX/CE": { engine:"2.2L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"First wide-body Camry — a genuinely bigger jump than any single redesign since. Built in Georgetown, Kentucky, same plant that builds Camry today." },
+            "LE V6": { engine:"3.0L V6 (188-194hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunfire Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Antique Sage Metallic (Green)",hex:"#7A8A6A"},
+          ],
+        },
+        "XV20 (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "CE":  { engine:"2.2L 4-cylinder (136hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"First generation to offer V6 power on every trim level, not just the top one. Coupe and wagon body styles were both dropped, sedan only from here on." },
+            "LE":  { engine:"3.0L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLE": { engine:"3.0L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunfire Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Antique Sage Pearl (Green)",hex:"#7A8A6A"},
+          ],
+        },
+        "XV30 (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "LE":  { engine:"2.4L 4-cylinder (157hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"New platform, styling borrowed a lot from Toyota's own Lexus ES of the era. A larger 3.3L V6 arrived for the SE trim starting 2004, alongside the carryover 3.0L." },
+            "SE":  { engines:["3.0L V6 (192hp)","3.3L V6 (210hp)"], drivetrain:"FWD", transmission:"Automatic" },
+            "XLE": { engine:"3.0L V6 (192hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Antique Sage Metallic (Green)",hex:"#7A8A6A"},
+          ],
+        },
+        "XV40 (2007-2011)":{
+          years:["2007","2008","2009","2010","2011"],
+          trims:{
+            "LE":     { engine:"2.4L 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Automatic", note:"First-ever Camry Hybrid arrived this generation — a real shift in strategy. Genuinely sportier styling than any prior Camry, Toyota even offered an SE sport package." },
+            "SE":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.4L Hybrid 4-cylinder (187hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Magnetic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "XV50 (2012-2017)":{
+          years:["2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "LE":     { engine:"2.5L 4-cylinder (178hp)", drivetrain:"FWD", transmission:"Automatic", note:"No more manual transmission offered at all, on any trim — automatic (or CVT-like automatic) only from here forward." },
+            "SE":     { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (200hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Creme Brulee Mica (Beige)",hex:"#C8B89A"},
+          ],
+        },
+        "XV70 (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "LE":     { engine:"2.5L 4-cylinder (203hp)", drivetrain:"FWD", transmission:"Automatic", note:"All-new TNGA platform — genuinely sportier handling and styling than any Camry before it. AWD became available for the first time in Camry history starting 2020." },
+            "XSE":    { engines:["2.5L 4-cylinder (203hp)","3.5L V6 (301hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (208hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Celestial Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "XV80 (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "LE":  { engine:"2.5L Hybrid 4-cylinder (225hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuinely major shift — the 2025 Camry dropped the standalone gas engine entirely. Every single Camry is now a hybrid, no exceptions." },
+            "XSE": { engine:"2.5L Hybrid 4-cylinder (232hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Heavy Metal (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Corolla": {
+      generations:{
+        "E90 Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "DX": { engine:"1.6L 4-cylinder (102-105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"All-Trac AWD trim existed for part of this generation — genuinely rare and sought after by enthusiasts today." },
+            "GT-S":{ engine:"1.6L DOHC 4-cylinder (4A-GE, 115-130hp)", drivetrain:"FWD", transmission:"Manual", note:"High-revving twin-cam engine shared with the AE86 lineage — a real enthusiast favorite." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E100 (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "DX": { engine:"1.6L 4-cylinder (105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Also badged as the Geo Prizm — a genuinely identical car built alongside the Corolla at the NUMMI plant in California, a joint venture between Toyota and GM." },
+            "LE": { engine:"1.8L 4-cylinder (105hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunfire Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E110 (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "CE": { engine:"1.8L 4-cylinder (120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "LE": { engine:"1.8L 4-cylinder (120hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cordova Red (Red)",hex:"#9B1B30"},
+            {name:"Antique Sage Metallic (Green)",hex:"#7A8A6A"},
+          ],
+        },
+        "E120/E130 (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "CE":  { engine:"1.8L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "LE":  { engine:"1.8L 4-cylinder (130hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XRS": { engine:"1.8L 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2005 — a genuinely high-revving engine (2ZZ-GE) shared with the Celica GT-S and even the Lotus Elise, paired to a 6-speed manual." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Silver Streak Mica (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "E140/E150 (2009-2013)":{
+          years:["2009","2010","2011","2012","2013"],
+          trims:{
+            "LE":  { engine:"1.8L 4-cylinder (132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "S":   { engine:"1.8L 4-cylinder (132hp)", drivetrain:"FWD", transmission:"Manual" },
+            "XRS": { engine:"2.4L 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Manual", note:"2009-2010 only — bigger, more torque-focused engine than the old high-revving XRS, dropped after just two model years." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "E170/E180 (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "L":  { engine:"1.8L 4-cylinder (132-140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+            "S":  { engine:"1.8L 4-cylinder (132-140hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "E210 (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "LE":  { engine:"1.8L 4-cylinder (139hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"First Corolla built on the TNGA platform, shared underpinnings with the Prius and C-HR. Hybrid added this generation too." },
+            "SE":  { engine:"2.0L 4-cylinder (169hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic (CVT)"], note:"AWD became available for the first time in Corolla history." },
+            "Hybrid": { engine:"1.8L Hybrid 4-cylinder (121hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "GR Corolla": { engine:"1.6L Turbocharged 3-cylinder (300hp)", drivetrain:"AWD", transmission:"Manual", note:"2023+ — a genuinely wild factory hot hatch, developed alongside Toyota's rally program. Nothing else in the Corolla lineup shares anything with this engine or drivetrain." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Blueprint (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "RAV4": {
+      generations:{
+        "XA10 (1996-2000)":{
+          years:["1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The car that genuinely invented the modern compact crossover segment — unibody construction instead of a truck-based ladder frame, borrowing suspension and drivetrain pieces from the Corolla and Celica. A 2-door convertible existed 1998-1999, and Toyota even built small numbers of a RAV4 EV to meet California zero-emission rules." },
+            "4WD": { engine:"2.0L 4-cylinder (120hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunfire Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "XA20 (2001-2005)":{
+          years:["2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engines:["2.0L 4-cylinder (148hp)","2.4L 4-cylinder (161hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"2.4L arrived in 2004, addressing complaints that the original engine was underpowered. Two-door body style was dropped — five-door only from here on." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Impulse Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Silver Streak Mica (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "XA30 (2006-2012)":{
+          years:["2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (166-179hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Grew significantly — 14 inches longer, over 3 inches wider than the outgoing generation." },
+            "Limited":{ engine:"3.5L V6 (269hp)", drivetrain:"AWD", transmission:"Automatic", note:"The only RAV4 generation ever offered with a V6 — genuinely strong power for a compact SUV of this era. Manual transmission was dropped entirely." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "XA40 (2013-2018)":{
+          years:["2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "LE":     { engine:"2.5L 4-cylinder (176hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"V6 option and the iconic rear-mounted spare tire were both dropped this generation — conventional liftgate from here forward. RAV4 Hybrid debuted for 2016." },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (194hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Magnetic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "XA50 (2019-2025)":{
+          years:["2019","2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "LE":       { engine:"2.5L 4-cylinder (203hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"All-new TNGA-K platform. RAV4 Prime plug-in hybrid joined for 2021 — genuinely quick, 302hp combined." },
+            "TRD Off-Road":{ engine:"2.5L 4-cylinder (203hp)", drivetrain:"AWD", transmission:"Automatic", note:"Off-road focused trim introduced this generation." },
+            "Hybrid":   { engine:"2.5L Hybrid 4-cylinder (219hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+            "Prime":    { engine:"2.5L Plug-In Hybrid 4-cylinder (302hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Genuinely one of the quickest RAV4s ever built, and it's the plug-in hybrid." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Lunar Rock (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "6th Gen (2026-2026)":{
+          years:["2026"],
+          trims:{
+            "LE":    { engine:"2.5L Hybrid 4-cylinder (226hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"A real turning point — no pure gas engine offered at all anymore. Hybrid and plug-in hybrid only, across the entire lineup." },
+            "Prime": { engine:"2.5L Plug-In Hybrid 4-cylinder (320hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Terra (Brown)",hex:"#8A6B4A"},
           ],
         },
       },
