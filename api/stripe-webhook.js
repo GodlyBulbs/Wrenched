@@ -11,21 +11,6 @@ const supabaseAdmin = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-// Stripe needs the raw request body to verify the webhook signature —
-// Vercel's default JSON body parsing would break that verification.
-export const config = {
-  api: { bodyParser: false },
-};
-
-function readRawBody(req) {
-  return new Promise((resolve, reject) => {
-    let data = "";
-    req.on("data", (chunk) => (data += chunk));
-    req.on("end", () => resolve(data));
-    req.on("error", reject);
-  });
-}
-
 async function upsertSubscription({ userId, customerId, subscriptionId, status, plan, currentPeriodEnd }) {
   await supabaseAdmin.from("subscriptions").upsert(
     {
@@ -41,20 +26,20 @@ async function upsertSubscription({ userId, customerId, subscriptionId, status, 
   );
 }
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  const rawBody = await readRawBody(req);
-  const signature = req.headers["stripe-signature"];
+// Vercel's Web API-style handler — request.text() gives the true raw body,
+// which is what Stripe's signature check requires. This avoids the
+// Next.js-only "config.api.bodyParser" convention, which Vercel's native
+// runtime doesn't actually recognize.
+export async function POST(request) {
+  const rawBody = await request.text();
+  const signature = request.headers.get("stripe-signature");
 
   let event;
   try {
     event = stripe.webhooks.constructEvent(rawBody, signature, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
     console.error("Webhook signature verification failed:", err.message);
-    return res.status(400).json({ error: "Invalid signature" });
+    return new Response(JSON.stringify({ error: "Invalid signature" }), { status: 400 });
   }
 
   try {
@@ -133,9 +118,9 @@ export default async function handler(req, res) {
         break;
     }
 
-    return res.status(200).json({ received: true });
+    return new Response(JSON.stringify({ received: true }), { status: 200 });
   } catch (err) {
     console.error("Webhook handler error:", err.message);
-    return res.status(500).json({ error: "Webhook handler failed" });
+    return new Response(JSON.stringify({ error: "Webhook handler failed" }), { status: 500 });
   }
 }
