@@ -12,7 +12,7 @@ const supabaseAdmin = createClient(
 );
 
 async function upsertSubscription({ userId, customerId, subscriptionId, status, plan, currentPeriodEnd }) {
-  await supabaseAdmin.from("subscriptions").upsert(
+  const { data, error } = await supabaseAdmin.from("subscriptions").upsert(
     {
       user_id: userId,
       stripe_customer_id: customerId,
@@ -24,6 +24,12 @@ async function upsertSubscription({ userId, customerId, subscriptionId, status, 
     },
     { onConflict: "user_id" }
   );
+  if (error) {
+    console.error("SUPABASE WRITE FAILED:", JSON.stringify(error));
+    throw new Error("Supabase write failed: " + error.message);
+  }
+  console.log("Subscription upserted successfully for user:", userId);
+  return data;
 }
 
 // Vercel's Web API-style handler — request.text() gives the true raw body,
@@ -48,6 +54,7 @@ export async function POST(request) {
         const session = event.data.object;
         const userId = session.metadata?.userId;
         const plan = session.metadata?.plan;
+        console.log("checkout.session.completed received. userId:", userId, "plan:", plan, "session.metadata:", JSON.stringify(session.metadata));
         if (userId) {
           const subscription = await stripe.subscriptions.retrieve(session.subscription);
           await upsertSubscription({
@@ -58,6 +65,8 @@ export async function POST(request) {
             plan,
             currentPeriodEnd: subscription.current_period_end,
           });
+        } else {
+          console.error("NO userId found in session metadata — skipping write. Full session metadata was:", JSON.stringify(session.metadata));
         }
         break;
       }
