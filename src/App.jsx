@@ -4742,7 +4742,8 @@ function AppShell(){
   const GRACE_PERIOD_MS=5*24*60*60*1000;
   const inGracePeriod=subStatus==="past_due"&&subUpdatedAt&&(Date.now()-new Date(subUpdatedAt).getTime())<GRACE_PERIOD_MS;
   const graceDaysLeft=inGracePeriod?Math.ceil((GRACE_PERIOD_MS-(Date.now()-new Date(subUpdatedAt).getTime()))/(24*60*60*1000)):0;
-  if(subStatus!=="active"&&!inGracePeriod)return<SubscribeScreen session={session}/>;
+  const isOwner=session?.user?.email?.toLowerCase()===OWNER_EMAIL;
+  if(!isOwner&&subStatus!=="active"&&!inGracePeriod)return<SubscribeScreen session={session}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
