@@ -4640,6 +4640,7 @@ function AppShell(){
   const [subStatus,setSubStatus]=useState(null);
   const [subLoading,setSubLoading]=useState(true);
   const [subCustomerId,setSubCustomerId]=useState(null);
+  const [subUpdatedAt,setSubUpdatedAt]=useState(null);
 
   useEffect(()=>{
     supabase.auth.getSession().then(({data:{session}})=>{setSession(session);setAuthLoading(false);});
@@ -4656,6 +4657,7 @@ function AppShell(){
     supabase.from("subscriptions").select("*").eq("user_id",session.user.id).maybeSingle().then(({data})=>{
       setSubStatus(data?.status||"inactive");
       setSubCustomerId(data?.stripe_customer_id||null);
+      setSubUpdatedAt(data?.updated_at||null);
       setSubLoading(false);
     });
   },[session]);
@@ -4737,12 +4739,26 @@ function AppShell(){
     </Routes>
   );
   if(subLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
-  if(subStatus!=="active")return<SubscribeScreen session={session}/>;
+  const GRACE_PERIOD_MS=5*24*60*60*1000;
+  const inGracePeriod=subStatus==="past_due"&&subUpdatedAt&&(Date.now()-new Date(subUpdatedAt).getTime())<GRACE_PERIOD_MS;
+  const graceDaysLeft=inGracePeriod?Math.ceil((GRACE_PERIOD_MS-(Date.now()-new Date(subUpdatedAt).getTime()))/(24*60*60*1000)):0;
+  if(subStatus!=="active"&&!inGracePeriod)return<SubscribeScreen session={session}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
     <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
+
+      {inGracePeriod&&(
+        <div style={{background:"#2A1810",borderBottom:"1px solid #FF6B2B",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
+          <span style={{color:"#FF6B2B",fontSize:"13px"}}>Your last payment failed — you have <b>{graceDaysLeft} day{graceDaysLeft!==1?"s":""}</b> to update your card before losing access.</span>
+          <button onClick={async()=>{
+            const res=await fetch("/api/create-portal-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
+            const data=await res.json();
+            if(data.url)window.location.href=data.url;
+          }} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px"}}>UPDATE CARD</button>
+        </div>
+      )}
 
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,background:"#0D0D0D",zIndex:100}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}} onClick={()=>setView("garage")}>
