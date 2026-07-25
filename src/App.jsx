@@ -4564,6 +4564,61 @@ function AddCarForm({onSave,onCancel}){
   );
 }
 
+function SubscribeScreen({session}){
+  const [loading,setLoading]=useState(null);
+  const [error,setError]=useState("");
+
+  const handleSubscribe=async(plan)=>{
+    setLoading(plan);setError("");
+    try{
+      const res=await fetch("/api/create-checkout-session",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({plan,userId:session.user.id,userEmail:session.user.email}),
+      });
+      const data=await res.json();
+      if(data.url)window.location.href=data.url;
+      else{setError(data.error||"Something went wrong.");setLoading(null);}
+    }catch{setError("Something went wrong.");setLoading(null);}
+  };
+
+  return(
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <Wordmark/>
+        </div>
+        <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+      </div>
+      <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
+        <div style={{width:"100%",maxWidth:"440px",textAlign:"center"}}>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>ONE MORE STEP</div>
+          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched runs on a subscription — no free tier, no ads. Pick a plan to unlock your garage.</p>
+
+          <div style={{display:"flex",flexDirection:"column",gap:"14px",marginBottom:"16px"}}>
+            <button onClick={()=>handleSubscribe("monthly")} disabled={loading} style={{background:"#131313",border:"1px solid #262626",borderRadius:"8px",padding:"20px",cursor:"pointer",textAlign:"left"}}>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"1px"}}>MONTHLY</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:"#FF6B2B"}}>{loading==="monthly"?"...":"$5/mo"}</span>
+              </div>
+            </button>
+            <button onClick={()=>handleSubscribe("yearly")} disabled={loading} style={{background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"20px",cursor:"pointer",textAlign:"left",position:"relative"}}>
+              <div style={{position:"absolute",top:"-10px",right:"16px",background:"#FF6B2B",color:"#0D0D0D",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",padding:"3px 10px",borderRadius:"3px"}}>SAVE ~17%</div>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"1px"}}>YEARLY</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:"#FF6B2B"}}>{loading==="yearly"?"...":"$50/yr"}</span>
+              </div>
+            </button>
+          </div>
+          {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
+          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Cancel anytime from inside the app. No hidden fees.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AppShell(){
   const [session,setSession]=useState(null);
   const [authLoading,setAuthLoading]=useState(true);
@@ -4582,6 +4637,9 @@ function AppShell(){
   const [wizardAnswers,setWizardAnswers]=useState({});
 
   const [isRecovery,setIsRecovery]=useState(false);
+  const [subStatus,setSubStatus]=useState(null);
+  const [subLoading,setSubLoading]=useState(true);
+  const [subCustomerId,setSubCustomerId]=useState(null);
 
   useEffect(()=>{
     supabase.auth.getSession().then(({data:{session}})=>{setSession(session);setAuthLoading(false);});
@@ -4591,6 +4649,16 @@ function AppShell(){
     });
     return()=>subscription.unsubscribe();
   },[]);
+
+  useEffect(()=>{
+    if(!session){setSubLoading(false);return;}
+    setSubLoading(true);
+    supabase.from("subscriptions").select("*").eq("user_id",session.user.id).maybeSingle().then(({data})=>{
+      setSubStatus(data?.status||"inactive");
+      setSubCustomerId(data?.stripe_customer_id||null);
+      setSubLoading(false);
+    });
+  },[session]);
 
   useEffect(()=>{
     if(!session)return;
@@ -4668,6 +4736,8 @@ function AppShell(){
       <Route path="*" element={<Navigate to="/" replace/>} />
     </Routes>
   );
+  if(subLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
+  if(subStatus!=="active")return<SubscribeScreen session={session}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
@@ -4697,6 +4767,13 @@ function AppShell(){
           {view!=="garage"&&view!=="add-car"&&<button onClick={()=>setView("garage")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px"}}>← Garage</button>}
           {session?.user?.email?.toLowerCase()===OWNER_EMAIL&&(
             <span style={{background:"rgba(255,107,43,0.12)",border:"1px solid #FF6B2B",color:"#FF6B2B",padding:"5px 12px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"10px",letterSpacing:"2px"}}>OWNER</span>
+          )}
+          {subCustomerId&&(
+            <button onClick={async()=>{
+              const res=await fetch("/api/create-portal-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
+              const data=await res.json();
+              if(data.url)window.location.href=data.url;
+            }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Manage subscription</button>
           )}
           <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
