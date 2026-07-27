@@ -93,6 +93,21 @@ const VEHICLES = {
         },
       },
     },
+    "ILX": {
+      years:["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+      trims:{
+        "2.0":    { engine:"2.0L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"2013-2015 only. Directly replaced the Canada-only CSX as Acura's entry-level sedan. The ILX Hybrid (2013-2014 only, 111hp combined) was Acura's first-ever hybrid, but sold poorly — only around 2,660 units total — and was dropped after just two model years." },
+        "2.4":    { engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Manual", note:"2013-2015 only — this engine was borrowed straight from the Honda Civic Si, manual transmission only." },
+        "Premium":{ engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Automatic (Dual-Clutch)", note:"2016+ facelift simplified the whole lineup down to just this one engine, now paired with an 8-speed dual-clutch automatic — the manual was dropped entirely. A second facelift for 2019 brought Acura's Diamond Pentagon grille styling. Discontinued after 2022, replaced by the revived Integra liftback." },
+        "A-Spec": { engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Automatic (Dual-Clutch)" },
+      },
+      colors:[
+        {name:"Bellanova White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"San Marino Red (Red)",hex:"#C8102E"},
+        {name:"Lunar Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "Integra": {
       generations:{
         "1st Gen (1986-1989)":{
@@ -312,6 +327,66 @@ const VEHICLES = {
             {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
             {name:"Carbon Bronze Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "RLX": {
+      generations:{
+        "1st Gen (2014-2017)":{
+          years:["2014","2015","2016","2017"],
+          trims:{
+            "Base":        { engine:"3.5L V6 (310hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the RL as Acura's flagship sedan — the old RL had become the brand's worst-selling model by 2013, so the RLX arrived with a lot riding on it. Longer wheelbase than the RL gave noticeably more interior room." },
+            "Sport Hybrid":{ engine:"3.5L V6 Hybrid (377hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely complex system — one gas engine plus three separate electric motors, two of them dedicated to independently vectoring torque at the rear wheels for real SH-AWD-style handling, not just a simple hybrid assist." },
+          },
+          colors:[
+            {name:"Bellanova White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Graphite Luster Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Facelift (2018-2020)":{
+          years:["2018","2019","2020"],
+          trims:{
+            "Base":        { engine:"3.5L V6 (310hp)", drivetrain:"FWD", transmission:"Automatic", note:"Styling refresh borrowed several cues directly from the NSX supercar. This was the final Acura flagship sedan ever — after the RLX was discontinued, no true replacement followed; the TLX became the brand's top sedan by default." },
+            "Sport Hybrid":{ engine:"3.5L V6 Hybrid (377hp combined)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "RSX": {
+      generations:{
+        "1st Gen (2002-2004)":{
+          years:["2002","2003","2004"],
+          trims:{
+            "Base":   { engine:"2.0L VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Direct successor to the Integra, though the RSX name dropped that badge entirely — internally it's the same DC5/Honda Integra platform globally, just renamed for North America. Switched from the old Integra's double-wishbone front suspension to simpler MacPherson struts, a change some enthusiasts felt was a step backward for handling." },
+            "Type S": { engine:"2.0L VTEC 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Manual", note:"6-speed manual only, with a limited-slip differential — no automatic was ever offered on the Type S." },
+          },
+          colors:[
+            {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Arctic Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Facelift (2005-2006)":{
+          years:["2005","2006"],
+          trims:{
+            "Base":   { engine:"2.0L VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Final two model years before Acura discontinued the RSX entirely, deciding a sporty compact coupe no longer fit the brand's direction. No true successor existed until the ILX arrived years later, and even that was a much less sport-focused car." },
+            "Type S": { engine:"2.0L VTEC 4-cylinder (210hp)", drivetrain:"FWD", transmission:"Manual", note:"New K20Z1 engine, 10hp over the outgoing Type S, plus a standard limited-slip differential and a lowered, stiffened suspension." },
+          },
+          colors:[
+            {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Nordic White Pearl (White)",hex:"#F5F5F5"},
           ],
         },
       },
