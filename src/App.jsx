@@ -1823,6 +1823,79 @@ const VEHICLES = {
         },
       },
     },
+    "X1": {
+      generations:{
+        "E84 (2013-2015)":{
+          years:["2013","2014","2015"],
+          trims:{
+            "sDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"RWD", transmission:"Automatic", note:"BMW's smallest SUV, though genuinely late to the US specifically — Europe got the X1 back in 2009, but Americans had to wait for a facelifted version, meaning only 3 model years total ever reached US shores for this generation. Built on BMW's traditional rear-wheel-drive-based platform, unlike every X1 generation since." },
+            "xDrive35i":{ engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Valencia Orange Metallic (Orange)",hex:"#E8601C"},
+            {name:"Deep Sea Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F48 (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "sDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (228-231hp)", drivetrain:"FWD", transmission:"Automatic", note:"Switched to a front-wheel-drive-based platform shared with the Mini Countryman — the first-ever FWD-based X1, genuinely more interior space as a direct result of the layout change." },
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (228-231hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+            {name:"Storm Bay Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "U11 (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (241hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "M35i":     { engine:"2.0L Turbocharged 4-cylinder (312hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2024 — the first time BMW has offered a sporty M-badged version of the X1 itself in the US; that role previously belonged only to the coupe-styled X2." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Utah Orange (Orange)",hex:"#E8601C"},
+            {name:"Skyscraper Grey (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+    "X2": {
+      generations:{
+        "F39 (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (228-241hp)", drivetrain:"AWD", transmission:"Automatic", note:"A coupe-roofline version of the X1, riding on the same UKL platform. Discontinued in the US after 2023 — BMW went quiet enough on a replacement that it genuinely wasn't clear the nameplate would return." },
+            "M35i":     { engine:"2.0L Turbocharged 4-cylinder (302-312hp)", drivetrain:"AWD", transmission:"Automatic", note:"BMW's first-ever four-cylinder M Performance model sold in the US." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Galvanic Gold Metallic (Gold)",hex:"#B8A050"},
+            {name:"Misano Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "U10 (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (241hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Returned to the US for a new generation after the gap — sharing its platform and much of its powertrain lineup with the current X1." },
+            "M35i":     { engine:"2.0L Turbocharged 4-cylinder (312hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Utah Orange (Orange)",hex:"#E8601C"},
+            {name:"Skyscraper Grey (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
     "X3": {
       generations:{
         "E83 (2004-2010)":{
@@ -1877,6 +1950,37 @@ const VEHICLES = {
             {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
             {name:"Frozen Pure Gray (Gray)",hex:"#8A8D8F"},
             {name:"Skyscraper Grey (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+    "X4": {
+      generations:{
+        "F26 (2015-2018)":{
+          years:["2015","2016","2017","2018"],
+          trims:{
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"AWD", transmission:"Automatic", note:"Essentially the X6 formula scaled down to compact size — a coupe-roofline version of the X3, sitting 1.5 inches lower than its more practical sibling. Based on the F25-generation X3's platform." },
+            "xDrive35i":{ engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Long Beach Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Dolomite Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "G02 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "xDrive30i":{ engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"AWD", transmission:"Automatic", note:"Now based on the newer G01 X3's CLAR platform, roughly 100lbs lighter than the outgoing car thanks to more aluminum and high-strength steel. 2022 facelift added a 48-volt mild-hybrid system to the six-cylinder engine." },
+            "M40i":     { engine:"3.0L Turbocharged Inline-6 (355-382hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X4 M":     { engine:"3.0L Twin-Turbo Inline-6 (473-503hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Phytonic Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
           ],
         },
       },
@@ -1987,6 +2091,20 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "X7": {
+      years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "xDrive40i": { engine:"3.0L Turbocharged Inline-6 (335-375hp)", drivetrain:"AWD", transmission:"Automatic", note:"BMW's first-ever genuine full-size 3-row SUV — a real new segment entry for the brand, standard 7-seat (or optional 6-seat captain's chairs) configuration from day one, unlike the X5's optional third row." },
+        "xDrive50i / M50i":{ engine:"4.4L Twin-Turbo V8 (456-523hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Alpina XB7":{ engine:"4.4L Twin-Turbo V8 (630hp)", drivetrain:"AWD", transmission:"Automatic", note:"Alpina's own tuned flagship version — genuinely one of the most powerful 3-row SUVs sold anywhere." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+        {name:"Arctic Grey (Gray)",hex:"#8A8D8F"},
+      ],
     },
     "Z3": {
       years:["1996","1997","1998","1999","2000","2001","2002"],
