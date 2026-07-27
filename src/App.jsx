@@ -793,6 +793,50 @@ const VEHICLES = {
     },
   },
   "Audi": {
+    "100": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "Base": { engine:"2.3L Inline-5 (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely long-running US nameplate before it was renamed A6 for the 1995 model year — the direct predecessor to today's A6 lineage. Positioned as Audi's mid-size executive sedan, one rung below the flagship V8/A8." },
+        "Quattro": { engines:["2.3L Inline-5 (130hp)","2.8L V6 (172hp)"], drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"V6 option added in the early 90s alongside the carryover 5-cylinder." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+        {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Firenze Red Metallic (Red)",hex:"#9B1B30"},
+      ],
+    },
+    "90": {
+      generations:{
+        "B3 Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "Base":    { engine:"2.0L/2.3L Inline-5 (130hp)", drivetrain:"FWD", transmission:"Manual", note:"Positioned by Audi as a 'Grand Tourismo' style luxury-sport sedan. The North American market got the related Coupe Quattro starting this same 1990 model year, sharing much of this car's underlying drivetrain." },
+            "Quattro": { engine:"2.3L 20V Inline-5 (164hp)", drivetrain:"AWD", transmission:"Manual", note:"A detuned version of the high-revving 20-valve five-cylinder shared with the Coupe Quattro and the Sport Quattro lineage." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Titian Red Pearl (Red)",hex:"#6B1A2A"},
+          ],
+        },
+        "B4 (1993-1995)":{
+          years:["1993","1994","1995"],
+          trims:{
+            "S":               { engine:"2.8L V6 (172hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"All-new B4 platform replaced the old 5-cylinder entirely with a 2.8L V6 borrowed from the bigger 100. Positioned to compete directly with the BMW 3-Series, Lexus ES 300, and Infiniti J30. Stretched wheelbase for 1994 added more rear legroom. Replaced by the all-new A4 in September 1995." },
+            "CS":              { engine:"2.8L V6 (172hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "CS Quattro Sport":{ engine:"2.8L V6 (172hp)", drivetrain:"AWD", transmission:"Manual", note:"Permanently-engaged Quattro AWD, manual transmission mandatory on this trim — no automatic was ever offered with Quattro on the 90." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Amazon Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+      },
+    },
     "A4": {
       generations:{
         "B5 (1996-2001)":{
@@ -867,6 +911,44 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Cabriolet": {
+      years:["1993","1994","1995","1996","1997","1998","1999","2000"],
+      trims:{
+        "Base":    { engine:"2.8L V6 (172hp)", drivetrain:"FWD", transmission:"Automatic", note:"Convertible sibling to the 80/90 sedan family — genuinely outlived every other car it was related to, still on sale for years after the A4 had already replaced the sedan it was based on. Automatic transmission was standard here even though it was optional on the regular 90." },
+        "Quattro": { engine:"2.8L V6 (172hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+        {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Titian Red Pearl (Red)",hex:"#6B1A2A"},
+      ],
+    },
+    "Coupe Quattro": {
+      years:["1990","1991"],
+      trims:{
+        "Base": { engine:"2.3L 20V Inline-5 (164hp)", drivetrain:"AWD", transmission:"Manual", note:"A liftback coupe version of the 80/90 platform, brought to North America specifically for these two model years. Shared its high-revving 20-valve five-cylinder engine and permanent Quattro AWD system with the 90 Quattro of the same era — genuinely low-volume even when new." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+        {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Pearl Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "V8": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "Base": { engine:"3.6L V8 (240hp)", drivetrain:"AWD", transmission:"Automatic", note:"Audi's genuine flagship before the A8 existed — direct predecessor to that whole lineage. Quattro AWD standard, a real rival to the contemporary Mercedes S-Class and BMW 7 Series, though it never matched their sales." },
+        "4.2":  { engine:"4.2L V8 (276hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"Bigger 4.2L engine arrived for 1990-1992, addressing complaints that the original 3.6L felt underpowered for the segment. Replaced by the all-new A8 for 1994." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+        {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Malachite Green Pearl (Green)",hex:"#2E5A3A"},
+      ],
     },
   },
   "BMW": {
