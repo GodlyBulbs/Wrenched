@@ -1419,6 +1419,21 @@ const VEHICLES = {
   "BMW": {
     "328i / 330i": {
       generations:{
+        "E30 (1984-1993)":{
+          years:["1984","1985","1986","1987","1988","1989","1990","1991","1992","1993"],
+          trims:{
+            "318i": { engines:["1.8L M10 4-cylinder (101hp)","1.8L M42 4-cylinder (134hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The M42 16-valve engine arrived for 1991 only on coupes/sedans, though the convertible kept it through 1993. Coupe-only at first in 1984, sedan added 1985, convertible 1987, wagon ('Touring') 1988 — Europe only, never sold in the US." },
+            "325i": { engine:"2.5L M20 Inline-6 (168hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The E30 that most enthusiasts picture when they think 'classic 3 Series' — genuinely well-regarded handling balance, and the direct platform basis for the legendary E30 M3." },
+            "325iX": { engine:"2.5L M20 Inline-6 (168hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"BMW's first-ever all-wheel-drive production car, sold 1988-1991." },
+            "325e":  { engine:"2.7L M20 Inline-6 (121hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1985-1987 only — an economy-tuned ('eta') version prioritizing low-end torque and fuel efficiency over outright power, despite the larger displacement than the 325i." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamantschwarz Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Zinnoberrot (Red)",hex:"#C8102E"},
+          ],
+        },
         "E36 (1992-1998)":{
           years:["1992","1993","1994","1995","1996","1997","1998"],
           trims:{
@@ -1488,6 +1503,99 @@ const VEHICLES = {
             {name:"Jet Black (Black)",hex:"#1A1A1A"},
             {name:"Portimao Blue Metallic (Blue)",hex:"#1E4B8E"},
             {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
+    "5 Series": {
+      generations:{
+        "E28 (1982-1988)":{
+          years:["1982","1983","1984","1985","1986","1987","1988"],
+          trims:{
+            "528e": { engine:"2.7L 'Eta' Inline-6 (121hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The 'eta' economy tune prioritized low-end torque and fuel efficiency over outright power — a real departure from BMW's usual high-revving character. BMW's first car available with ABS and the first with a turbodiesel option in Europe." },
+            "533i": { engine:"3.2L Inline-6 (181hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"US-only, 1983-1984, limited quantities — added specifically because customers complained the 528e felt slower than the 528i it replaced." },
+            "535i": { engine:"3.4L Inline-6 (182-208hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "M5":   { engine:"3.5L S38 Inline-6 (256hp US-spec)", drivetrain:"RWD", transmission:"Manual", note:"The very first M5 ever built — at its European launch it was the fastest production sedan in the world." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamantschwarz Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Cinnabar Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "E34 (1988-1996)":{
+          years:["1988","1989","1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "525i":  { engine:"2.5L Inline-6 (168hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "525iX": { engine:"2.5L Inline-6 (168hp)", drivetrain:"AWD", transmission:"Automatic", note:"First-ever all-wheel-drive 5 Series." },
+            "535i":  { engine:"3.4L Inline-6 (208hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "M5":    { engines:["3.6L S38 Inline-6 (311hp)","3.8L S38 Inline-6 (335hp)"], drivetrain:"RWD", transmission:"Manual", note:"3.8L arrived in the final year, along with a 6-speed manual that would carry over to the next-generation E39." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Calypso Red (Red)",hex:"#9B1B30"},
+            {name:"Montreal Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E39 (1997-2003)":{
+          years:["1997","1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "528i": { engine:"2.8L Inline-6 (193hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Widely regarded as one of the best-driving 5 Series generations ever built — genuinely excellent chassis balance, still highly respected by enthusiasts today." },
+            "540i": { engine:"4.4L V8 (282hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "M5":   { engine:"4.9L S62 V8 (394hp)", drivetrain:"RWD", transmission:"Manual", note:"First-ever M5 with a V8 — every M5 since has followed that formula." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Orient Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E60/E61 (2004-2010)":{
+          years:["2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "525i": { engine:"2.5L Inline-6 (218hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "530i": { engine:"3.0L Inline-6 (255hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"First 5 Series with iDrive infotainment, a head-up display, and adaptive headlights — genuinely a big tech leap for the segment." },
+            "550i": { engine:"4.8L V8 (360hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "M5":   { engine:"5.0L S85 V10 (500hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (SMG)"], note:"The only M5 ever built with a V10 — a genuinely wild engine choice for a 4-door sedan, revving to 8,250rpm." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Monaco Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F07/F10/F11 (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "528i": { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"First turbocharged four-cylinder ever offered in a US-market 5 Series — a real shift from the naturally-aspirated six-cylinder tradition." },
+            "535i": { engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "550i": { engine:"4.4L Twin-Turbo V8 (400-445hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "M5":   { engine:"4.4L Twin-Turbo V8 (560-600hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"600hp available with the Competition Package — the M5 went turbo for the first time this generation, trading some of the old V10's character for real everyday drivability." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Imperial Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "G30/G31 (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "530i":  { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"All-new CLAR platform, shared with the 7 Series. 530e plug-in hybrid also joined the lineup, later gaining a power bump from 248hp to 288hp for 2021." },
+            "540i":  { engine:"3.0L Turbocharged Inline-6 (335hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"48-volt mild-hybrid tech added for 2021." },
+            "M550i": { engine:"4.4L Twin-Turbo V8 (456-523hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M5":    { engine:"4.4L Twin-Turbo V8 (600-617hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"AWD standard on the M5 for the first time — a real departure from the RWD-only tradition, though it can still be driven in a pure RWD mode." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+            {name:"Phytonic Blue Metallic (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
