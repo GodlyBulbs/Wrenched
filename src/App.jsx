@@ -1140,6 +1140,19 @@ const VEHICLES = {
         {name:"Pearl Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "e-tron GT": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Premium":   { engine:"Dual Electric Motors (469-522hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)", note:"Genuinely shares its underlying platform with the Porsche Taycan — same bones, different skin and tuning. A rare case of an EV using a real 2-speed transmission on the rear motor instead of the usual single-speed setup." },
+        "RS":        { engine:"Dual Electric Motors (590-637hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)", note:"Overboost mode with launch control briefly unlocks the higher end of that power range for hard acceleration." },
+      },
+      colors:[
+        {name:"Suzuka Gray (Gray)",hex:"#6B6E6F"},
+        {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Tactical Green (Green)",hex:"#3B5A3A"},
+        {name:"Kemora Gray Metallic (Gray)",hex:"#5A5F63"},
+      ],
+    },
     "Q3": {
       generations:{
         "1st Gen (2015-2018)":{
@@ -1168,6 +1181,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Q4 e-tron": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"Single Electric Motor (201hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Audi's compact electric SUV, built on the same MEB platform as the Volkswagen ID.4 — genuinely shared bones under a more premium skin. A Sportback coupe-roofline body style is also offered." },
+        "50 Quattro": { engine:"Dual Electric Motors (295hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Tango Red (Red)",hex:"#C8102E"},
+        {name:"Ultra Blue (Blue)",hex:"#1E4B8E"},
+      ],
     },
     "Q5": {
       generations:{
@@ -1212,6 +1238,19 @@ const VEHICLES = {
         },
       },
     },
+    "Q6 e-tron": {
+      years:["2025","2026"],
+      trims:{
+        "Base": { engine:"Dual Electric Motors (355hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"All-new PPE (Premium Platform Electric) architecture, co-developed with Porsche and shared with the Macan Electric — a genuine step up in sophistication from the older MEB-based Q4 e-tron." },
+        "SQ6 e-tron": { engine:"Tri-Motor Electric (509hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Tango Red (Red)",hex:"#C8102E"},
+        {name:"Sakhir Gold (Gold)",hex:"#B8A050"},
+      ],
+    },
     "Q7": {
       generations:{
         "1st Gen (2007-2015)":{
@@ -1255,6 +1294,113 @@ const VEHICLES = {
         {name:"Tango Red (Red)",hex:"#C8102E"},
         {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
       ],
+    },
+    "Q8 e-tron": {
+      generations:{
+        "e-tron (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "50 Quattro": { engine:"Dual Electric Motors (308hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Audi's first-ever mass-production EV — badged simply 'e-tron' at launch, based on a concept first shown in 2015. A Sportback coupe-roofline variant joined for 2020." },
+            "55 Quattro": { engine:"Dual Electric Motors (402-402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "S":          { engine:"Triple Electric Motors (496hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuinely unusual setup — three separate motors, two dedicated purely to the rear axle for real torque-vectoring." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Catalunya Red (Red)",hex:"#9B1B30"},
+            {name:"Antigua Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "Q8 e-tron (2024-2025)":{
+          years:["2024","2025"],
+          trims:{
+            "50":  { engine:"Dual Electric Motors (245hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Renamed from plain 'e-tron' to 'Q8 e-tron' alongside a facelift and range/charging improvements, as Audi expanded its broader e-tron sub-lineup. This turned out to be the final chapter for this specific model — Audi ended Q8 e-tron production entirely in February 2025, with no direct one-to-one replacement (the Q6 e-tron and Q8 gas/hybrid models split its role going forward)." },
+            "55":  { engine:"Dual Electric Motors (295hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "SQ8 e-tron": { engine:"Triple Electric Motors (496hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Catalunya Red (Red)",hex:"#9B1B30"},
+            {name:"Ultra Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "R8": {
+      generations:{
+        "1st Gen (2008-2015)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "4.2":  { engine:"4.2L V8 (420hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (R-Tronic)"], note:"Audi's first true mid-engine supercar, genuinely road-usable every day unlike most of its rivals at the time — a big part of the R8's original appeal." },
+            "5.2 V10": { engine:"5.2L V10 (525-550hp)", drivetrains:["AWD","RWD"], transmissions:["Manual","Automatic (S-Tronic)"], note:"A rear-wheel-drive-only special edition (RWS) arrived late in this generation for real purists." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Misano Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Daytona Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2016-2024)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "V10":      { engine:"5.2L V10 (540-562hp)", drivetrains:["AWD","RWD"], transmission:"Automatic (Dual-Clutch)", note:"Genuinely shares its platform and engine with the Lamborghini Huracán — same bones under different bodywork and tuning. This was the final R8 generation; production ended in 2024 with no confirmed successor." },
+            "V10 Plus": { engine:"5.2L V10 (602hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "RWS":      { engine:"5.2L V10 (533hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Rear-wheel-drive-only special edition, genuinely different character than the standard AWD car." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Kemora Gray Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+    "TT": {
+      generations:{
+        "8N (1999-2006)":{
+          years:["1999","2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"1.8L Turbocharged 4-cylinder (180-225hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"Audi's first genuinely style-forward halo car — the rounded, minimalist Bauhaus-inspired design was a real design-world moment when it launched. A 3.2L V6 (250hp) joined for later years." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Misano Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Denim Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "8J (2008-2015)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Base": { engines:["2.0L Turbocharged 4-cylinder (200-211hp)","3.2L V6 (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Audi skipped the 2007 model year entirely between generations — no TT was sold in the US that year at all. New platform fixed a real aerodynamic lift issue the first generation had at high speed." },
+            "TTS":  { engine:"2.0L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "TT RS":{ engine:"2.5L Turbocharged 5-cylinder (360hp)", drivetrain:"AWD", transmission:"Manual", note:"Added 2012 — genuinely characterful five-cylinder engine, a real halo product for the whole TT lineup." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Misano Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sepang Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "8S (2016-2023)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (220-228hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"AWD became standard across the whole lineup this generation — no more FWD option. This was the final TT generation ever built; Audi discontinued the nameplate after 2023 with no replacement." },
+            "TTS":  { engine:"2.0L Turbocharged 4-cylinder (288-292hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "TT RS":{ engine:"2.5L Turbocharged 5-cylinder (394-400hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Manual transmission was dropped entirely on this final generation of TT RS — dual-clutch automatic only." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Turbo Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
     },
     "V8": {
       years:["1990","1991","1992","1993","1994"],
