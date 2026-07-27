@@ -258,6 +258,48 @@ const VEHICLES = {
         },
       },
     },
+    "NSX": {
+      generations:{
+        "1st Gen (1991-2005)":{
+          years:["1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base":  { engine:"3.0L VTEC V6 (270hp manual / 252hp automatic)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Honda's first all-aluminum production body, developed with real input from Formula 1 champion Ayrton Senna, who personally tested it at Suzuka. Widely credited as the car that proved a mid-engine supercar could also be genuinely reliable and easy to drive every day — Gordon Murray has cited it as a direct inspiration for the McLaren F1." },
+            "3.2L":  { engine:"3.2L VTEC V6 (290hp)", drivetrain:"RWD", transmission:"Manual", note:"Arrived 1997 for manual cars specifically — automatics kept the smaller 3.0L. A targa-top version joined the lineup in 1995." },
+          },
+          colors:[
+            {name:"New Formula Red (Red)",hex:"#C8102E"},
+            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
+            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
+            {name:"Sebring Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Facelift (2002-2005)":{
+          years:["2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"3.2L VTEC V6 (290hp)", drivetrain:"RWD", transmission:"Manual", note:"Dropped the famous pop-up headlights for fixed HID units, extended and lowered the front bumper for more downforce. Final years before the nameplate went dormant for over a decade." },
+          },
+          colors:[
+            {name:"New Formula Red (Red)",hex:"#C8102E"},
+            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
+            {name:"Nordic White (White)",hex:"#F5F5F5"},
+            {name:"Monte Carlo Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2017-2022)":{
+          years:["2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "Base": { engine:"3.5L Twin-Turbo Hybrid V6 (573hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Returned after more than a decade away, now genuinely hybrid — a twin-turbo V6 paired with three electric motors (two dedicated to independently vectoring torque at the front wheels). Built at Acura's own Performance Manufacturing Center in Marysville, Ohio — a real point of pride, an American-built Acura supercar." },
+            "Type S": { engine:"3.5L Twin-Turbo Hybrid V6 (610hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"2022 only — the final send-off special edition before this generation ended production." },
+          },
+          colors:[
+            {name:"Curva Red (Red)",hex:"#C8102E"},
+            {name:"Berlina Black (Black)",hex:"#1A1A1A"},
+            {name:"Long Beach Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Nouvelle Blue Pearl (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+      },
+    },
     "RDX": {
       generations:{
         "1st Gen (2007-2012)":{
@@ -390,6 +432,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "SLX": {
+      years:["1996","1997","1998","1999"],
+      trims:{
+        "Base": { engine:"3.2L V6 (190hp)", drivetrain:"4WD", transmission:"Automatic", note:"A rebadged Isuzu Trooper, built as part of a wider GM/Honda/Isuzu partnership — Acura contributed engines to Isuzu products elsewhere in the deal. Body-on-frame construction with real low-range 4WD gearing, genuinely different from every other Acura of the era. 1996 only for this engine." },
+        "3.5L": { engine:"3.5L V6 (215hp)", drivetrain:"4WD", transmission:"Automatic", note:"Replaced the 3.2L for 1997+. Poor sales and disappointing rollover safety test results led Acura to drop the SLX entirely after 1999 — it was directly replaced by the unibody MDX, a completely different kind of vehicle underneath." },
+      },
+      colors:[
+        {name:"Frost White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bordeaux Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Sherwood Green Pearl (Green)",hex:"#2E5A3A"},
+      ],
     },
     "TL": {
       generations:{
@@ -538,6 +593,36 @@ const VEHICLES = {
         {name:"Milano Red (Red)",hex:"#C8102E"},
         {name:"Woodrose Pearl (Burgundy)",hex:"#5A1E2A"},
       ],
+    },
+    "ZDX": {
+      generations:{
+        "1st Gen (2010-2013)":{
+          years:["2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"3.7L V6 (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely odd, ahead-of-its-time product — an MDX underneath, but styled like a low, swoopy 4-door coupe with a cramped rear seat and tiny rear window. First Acura ever designed entirely at the brand's Southern California design studio. Only 7,191 were ever sold across its whole run — the rarest US-built Acura nameplate by a wide margin. Discontinued after 2013 due to weak sales." },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Graphite Luster Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2024)":{
+          years:["2024"],
+          trims:{
+            "A-Spec RWD": { engine:"Single Electric Motor (358hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Acura's first-ever EV, revived after a decade dormant. Co-developed with GM on the Ultium platform, sharing real bones with the Cadillac Lyriq and Chevrolet Blazer EV, built in Tennessee. History repeated itself almost exactly — this generation was also discontinued after roughly a year and a half, in September 2025, as federal EV tax incentives wound down. A genuinely unusual nameplate: it's now failed commercially twice, both times as an interesting, slightly ahead-of-its-time product nobody quite bought." },
+            "A-Spec AWD": { engine:"Dual Electric Motors (490hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Type S":     { engine:"Dual Electric Motors (500hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+            {name:"Urban Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
     },
   },
   "Alfa Romeo": {
