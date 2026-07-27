@@ -1140,6 +1140,122 @@ const VEHICLES = {
         {name:"Pearl Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "Q3": {
+      generations:{
+        "1st Gen (2015-2018)":{
+          years:["2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Launched in Europe back in 2011, but didn't actually reach US showrooms until the 2015 model year — Audi's smallest, most affordable SUV at the time." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Misano Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Monsoon Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (184-228hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new platform, grew noticeably in size versus the outgoing generation." },
+            "SQ3":  { engine:"2.5L Turbocharged 5-cylinder (306hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely characterful five-cylinder engine, a rarer configuration these days — same basic engine family used in the RS3." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Q5": {
+      generations:{
+        "8R (2009-2017)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engines:["3.2L V6 (270hp)","2.0L Turbocharged 4-cylinder (211-220hp)"], drivetrain:"AWD", transmission:"Automatic", note:"Launched with just a single 3.2L V6 option; the now-familiar 2.0T four-cylinder became the base engine starting 2011, offering more torque lower in the rev range." },
+            "SQ5":  { engine:"3.0L Supercharged V6 (354hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added partway through this generation — the first-ever SQ5." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Deep Sea Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "FY (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new MLB Evo platform, shared underpinnings with the Q7." },
+            "SQ5":  { engine:"3.0L Turbocharged V6 (349-362hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely unusual overlap — Audi sold this new generation alongside the outgoing FY-generation Q5 simultaneously during the 2025 model year transition." },
+            "SQ5":  { engine:"3.0L Turbocharged V6 (349hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Ascari Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Q7": {
+      generations:{
+        "1st Gen (2007-2015)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "3.6":  { engine:"3.6L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"Audi's first-ever 3-row SUV, sharing its platform with the Volkswagen Touareg and Porsche Cayenne of the same era." },
+            "4.2":  { engine:"4.2L V8 (350hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Sea Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Quartz Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"3.0L Turbocharged V6 (248-329hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new, lighter platform, refreshed for 2020 and again for 2024. Turbo four also offered on some model years." },
+            "SQ7":  { engine:"4.0L Twin-Turbo V8 (500hp)", drivetrain:"AWD", transmission:"Automatic", note:"The US gets the gas version of this engine — Europe's SQ7 uses a genuinely wild twin-turbo-plus-electric-supercharger diesel V8 instead, never offered here." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Samurai Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Q8": {
+      years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base":  { engine:"3.0L Turbocharged V6 (335hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuine coupe-styled sibling to the Q7, sharing its platform but with a more sloped roofline and sportier intent." },
+        "SQ8":   { engine:"4.0L Twin-Turbo V8 (500hp)", drivetrain:"AWD", transmission:"Automatic", note:"Shares significant underlying engineering with the Lamborghini Urus." },
+        "RS Q8": { engine:"4.0L Twin-Turbo V8 (591-631hp)", drivetrain:"AWD", transmission:"Automatic", note:"The most powerful SUV Audi has ever built — same core engine as the RS7 Performance, in a genuinely quick 3-row-adjacent package." },
+      },
+      colors:[
+        {name:"Ibis White (White)",hex:"#F5F5F5"},
+        {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Tango Red (Red)",hex:"#C8102E"},
+        {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "V8": {
       years:["1990","1991","1992","1993","1994"],
       trims:{
