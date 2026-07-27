@@ -912,6 +912,209 @@ const VEHICLES = {
         },
       },
     },
+    "A5": {
+      generations:{
+        "1st Gen (2008-2017)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engines:["3.2L V6 (265hp)","2.0L Turbocharged 4-cylinder (211hp)"], drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"Marked Audi's return to the compact coupe market after a decade-plus gap, following the old 80/90-based Coupe that ended production in 1996. The turbo four arrived for 2010; the V6 was dropped entirely for 2011, leaving just the four-cylinder for the rest of this generation. A5 Cabriolet joined for 2009, replacing the old A4 Cabriolet." },
+            "S5":   { engines:["4.2L V8 (354hp)","3.0L Supercharged V6 (333hp)"], drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"Launched with the V8, switched to the supercharged V6 partway through this generation for better efficiency without giving up much power." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Misano Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Monsoon Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2018-2026)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"AWD", transmission:"Automatic", note:"Four-cylinder only on the regular A5 — no six-cylinder option this generation at all. 2020 facelift refreshed styling." },
+            "S5":   { engine:"3.0L Turbocharged V6 (349hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "RS5":  { engine:"2.9L Twin-Turbo V6 (444hp)", drivetrain:"AWD", transmission:"Automatic", note:"Same basic engine family as the RS4 and Porsche Panamera — genuinely quick, sub-4-second 0-60." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "A6": {
+      generations:{
+        "C4 (1994-1997)":{
+          years:["1994","1995","1996","1997"],
+          trims:{
+            "Base": { engine:"2.8L V6 (172hp)", drivetrain:"FWD", transmission:"Automatic", note:"The very first Audi to wear the 'A6' badge — part of the same mid-90s renaming wave that turned the V8 into the A8 and the 90 into what would become the A4. This car's exterior styling actually traces back to the Audi 100 introduced in 1990." },
+            "Quattro": { engine:"2.8L V6 (172hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Tornado Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Amazon Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "C5 (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engine:"2.8L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"New 30-valve V6 technology and a choice between a 5-speed Tiptronic automatic or a Multitronic CVT. 2001 facelift refreshed styling. The wagon-based allroad quattro variant, with adjustable air suspension, also launched on this platform." },
+            "3.0":  { engine:"3.0L V6 (220hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "S6":   { engine:"4.2L V8 (340hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Denim Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Light Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "C6 (2005-2011)":{
+          years:["2005","2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "Base": { engine:"3.2L V6 (255hp)", drivetrain:"AWD", transmission:"Automatic", note:"Grew noticeably larger than the outgoing C5 — one of Audi's most successful generations of this car ever built." },
+            "S6":   { engine:"5.2L V10 (435hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely unusual engine choice — a V10 shared with the Lamborghini Gallardo, in a mid-size luxury sedan." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Deep Sea Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Meteor Gray Pearl (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "C7 (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (211-252hp)", drivetrain:"AWD", transmission:"Automatic", note:"First-ever A6 with a four-cylinder base engine option — a real shift for a mid-size luxury flagship of this era. 2016 facelift bumped power across the board; a diesel V6 was offered through 2017 before being discontinued in the US." },
+            "3.0T": { engine:"3.0L Supercharged V6 (310-340hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "S6":   { engine:"4.0L Twin-Turbo V8 (420hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "C8 (2019-2025)":{
+          years:["2019","2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (248-261hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Dual-Clutch)", note:"Added a 48-volt mild-hybrid system across the whole lineup. Facelifted for 2024-2025 model years." },
+            "S6":   { engine:"3.0L Turbocharged V6 Mild-Hybrid (335hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "C9 (2026-2026)":{
+          years:["2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder Mild-Hybrid (261hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new body and Audi's latest design language — this generation just launched, so full US trim and pricing details are still filling in." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Ascari Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "A7": {
+      generations:{
+        "1st Gen (2011-2018)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"3.0L Supercharged V6 (300-340hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely distinctive 4-door 'Sportback' liftback body style, built on the same platform as the A6. Shared its base engine with the contemporary A8." },
+            "S7":   { engine:"4.0L Twin-Turbo V8 (420-450hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "RS7":  { engine:"4.0L Twin-Turbo V8 (560-605hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"605hp available with the RS7 Performance package — genuinely one of the quickest 4-doors on sale at the time." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"3.0L Turbocharged V6 Mild-Hybrid (335hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Shares its platform and much of its tech with the C8 A6, just with the distinctive Sportback liftback body." },
+            "S7":   { engine:"3.0L Twin-Turbo V6 (443hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "RS7":  { engine:"4.0L Twin-Turbo V8 (591-621hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "A8": {
+      generations:{
+        "D2 (1994-2002)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "3.7":  { engine:"3.7L V8 (230hp)", drivetrain:"AWD", transmission:"Automatic", note:"Replaced the old Audi V8 model as the brand's true flagship, part of the same mid-90s renaming wave as the A4 and A6. First Audi with a full aluminum spaceframe body, a genuinely significant engineering flex for the era." },
+            "4.2":  { engine:"4.2L V8 (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"S8 performance version also based on this 4.2L V8, tuned higher." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Silverfrost Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Amazon Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "D3 (2003-2010)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "4.2":  { engine:"4.2L V8 (330hp)", drivetrain:"AWD", transmission:"Automatic", note:"Long-wheelbase A8 L added, offering genuine limousine-level rear legroom." },
+            "S8":   { engine:"5.2L V10 (450hp)", drivetrain:"AWD", transmission:"Automatic", note:"Shared its V10 with the Lamborghini Gallardo, same engine family as the contemporary S6." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Sea Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Light Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "D4 (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "3.0T": { engine:"3.0L Supercharged V6 (333hp)", drivetrain:"AWD", transmission:"Automatic", note:"First non-V8 base engine ever offered on the A8, though V8 and W12 options remained available too." },
+            "4.0T": { engine:"4.0L Twin-Turbo V8 (435hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "S8":   { engine:"4.0L Twin-Turbo V8 (520hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Oolong Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "D5 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"3.0L Turbocharged V6 Mild-Hybrid (335hp)", drivetrain:"AWD", transmission:"Automatic", note:"Every trim gets a 48-volt mild-hybrid system standard. Long-wheelbase A8 L remains available for genuine chauffeur-driven rear-seat comfort." },
+            "S8":   { engine:"4.0L Twin-Turbo V8 (563hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Manhattan Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Cabriolet": {
       years:["1993","1994","1995","1996","1997","1998","1999","2000"],
       trims:{
