@@ -1823,6 +1823,77 @@ const VEHICLES = {
         },
       },
     },
+    "Z3": {
+      years:["1996","1997","1998","1999","2000","2001","2002"],
+      trims:{
+        "1.9":  { engine:"1.9L 4-cylinder (138hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"BMW's first-ever mass-market roadster, and the first-ever BMW model assembled in the United States, at the Spartanburg, South Carolina plant. Launched right alongside its cameo in the 1995 James Bond film 'GoldenEye,' which drove huge early demand." },
+        "2.8":  { engine:"2.8L Inline-6 (189-190hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+        "3.0i": { engine:"3.0L Inline-6 (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"2001-2002 facelift years only." },
+        "M Roadster / M Coupe": { engines:["3.2L S52 Inline-6 (240hp)","3.2L S54 Inline-6 (315-321hp)"], drivetrain:"RWD", transmission:"Manual", note:"US-spec M models actually used a different, less powerful engine than the European versions (S52 vs S50) through 2000, before both converged on the S54 for the final two years. The M Coupe's chassis-stiffening hatch shape earned it the enthusiast nickname 'clown shoe.'" },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Boston Green Metallic (Green)",hex:"#2E5A3A"},
+        {name:"Cosmos Black Metallic (Black)",hex:"#1A1A1A"},
+      ],
+    },
+    "Z4": {
+      generations:{
+        "E85/E86 (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "2.5i": { engine:"2.5L Inline-6 (184-189hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Replaced the Z3, still built at the same Spartanburg, South Carolina plant. A stiffer chassis and more modern multi-link rear suspension addressed real criticisms of the outgoing Z3. Coupe body style (E86) joined the roadster (E85) for 2006." },
+            "3.0i": { engine:"3.0L Inline-6 (215-255hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Z4 M": { engine:"3.2L S54 Inline-6 (330-343hp)", drivetrain:"RWD", transmission:"Manual", note:"The last Spartanburg-built Z4 rolled off the line in August 2008 — production of every generation after this one moved to Germany." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Interlagos Blue Metallic (Blue)",hex:"#1E3A6B"},
+            {name:"Imola Red (Red)",hex:"#C8102E"},
+          ],
+        },
+        "E89 (2009-2016)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "sDrive30i":{ engine:"3.0L Inline-6 (255hp)", drivetrain:"RWD", transmission:"Automatic", note:"First Z4 with a retractable hardtop, meaning no more separate coupe and roadster body styles — one car did both jobs. No M version was offered this generation at all. Also the first BMW ever designed entirely by two female designers." },
+            "sDrive35i":{ engine:"3.0L Twin-Turbo Inline-6 (300-335hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (Dual-Clutch)"] },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Sakhir Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "G29 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "sDrive30i":{ engine:"2.0L Turbocharged 4-cylinder (255hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuinely co-developed with Toyota, sharing its platform and engines directly with the Toyota Supra of the same era. Returned to a soft-top roof, dropping the retractable hardtop. Production ended in early 2026 with no confirmed successor — a real 23-year run for the Z4 nameplate came to a close." },
+            "M40i":     { engine:"3.0L Turbocharged Inline-6 (382hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"No true 'M' version this generation — M40i is the performance flagship trim instead, sharing its engine with the Supra's top trim." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"San Francisco Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Frozen Portimao Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Z8": {
+      years:["2000","2001","2002","2003"],
+      trims:{
+        "Base": { engine:"4.9L S62 V8 (394hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuine retro-styled halo car, echoing the classic 1950s 507, with an aluminum spaceframe body designed by a team led by Chris Bangle. Featured in the James Bond film 'The World Is Not Enough.' Only 5,703 total units were ever built. When BMW ended production in 2003, Alpina acquired the rights and continued building a related but distinct car of their own, the 'Alpina Roadster V8' — not badged as a Z8, despite looking nearly identical." },
+      },
+      colors:[
+        {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Le Mans Blue Metallic (Blue)",hex:"#1E3A6B"},
+        {name:"Stratus Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
   },
   "Cadillac": {
     "CTS-V": {
