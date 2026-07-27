@@ -1823,6 +1823,171 @@ const VEHICLES = {
         },
       },
     },
+    "X3": {
+      generations:{
+        "E83 (2004-2010)":{
+          years:["2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "2.5i": { engine:"2.5L Inline-6 (184hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"BMW's very first compact luxury SUV, and genuinely one of the first in that whole segment. Developed with and entirely built by Magna Steyr in Austria under contract — not at a BMW-owned plant. Also the first BMW model to officially carry the 'xDrive' name." },
+            "3.0i": { engine:"3.0L Inline-6 (225hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+            "3.0si":{ engine:"3.0L Inline-6 (260hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Montego Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F25 (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "xDrive28i":{ engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"AWD", transmission:"Automatic", note:"First X3 with a turbocharged four-cylinder base engine, and the first built at BMW's own Spartanburg, South Carolina plant instead of outsourced to Magna Steyr." },
+            "xDrive35i":{ engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Deep Sea Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "G01 (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "xDrive30i":{ engine:"2.0L Turbocharged 4-cylinder (248-255hp)", drivetrain:"AWD", transmission:"Automatic", note:"Production split between Spartanburg, South Carolina and Rosslyn, South Africa. 2022 facelift refreshed styling and tech." },
+            "M40i":     { engine:"3.0L Turbocharged Inline-6 (355-382hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X3 M":     { engine:"3.0L Twin-Turbo Inline-6 (473-503hp)", drivetrain:"AWD", transmission:"Automatic", note:"503hp available with the Competition Package — the first true M version the X3 ever had." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Phytonic Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "G45 (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "xDrive30":{ engine:"2.0L Turbocharged Mild-Hybrid 4-cylinder (255hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new generation, still filling in full US trim details as it's just launched." },
+            "M50":     { engine:"3.0L Turbocharged Mild-Hybrid Inline-6 (393hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Frozen Pure Gray (Gray)",hex:"#8A8D8F"},
+            {name:"Skyscraper Grey (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+    "X5": {
+      generations:{
+        "E53 (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "3.0i": { engine:"3.0L Inline-6 (225hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"BMW's first-ever SUV, and the car that coined BMW's 'Sports Activity Vehicle' term specifically to distinguish it from a traditional truck-based SUV. Built at the Spartanburg, South Carolina plant. Genuinely shares real components with the contemporary Range Rover — hill-descent control and off-road engine management — since BMW owned Land Rover at the time." },
+            "4.4i": { engine:"4.4L V8 (282hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "4.6is/4.8is":{ engine:"4.6L/4.8L V8 (325-355hp)", drivetrain:"AWD", transmission:"Automatic", note:"Performance-flagship trims for this generation — no true X5 M existed yet." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Orient Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E70 (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "3.0si": { engine:"3.0L Inline-6 (260hp)", drivetrain:"AWD", transmission:"Automatic", note:"Gained BMW's torque-vectoring xDrive system as standard, plus an optional third-row seat for the first time in X5 history." },
+            "4.8i":  { engine:"4.8L V8 (350hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X5 M":  { engine:"4.4L Twin-Turbo V8 (555hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added for 2010 — the first-ever X5 M." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Monaco Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F15 (2014-2018)":{
+          years:["2014","2015","2016","2017","2018"],
+          trims:{
+            "xDrive35i":{ engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"Retained much of the outgoing E70's underlying platform and design hard points — an evolution rather than a clean-sheet redesign." },
+            "xDrive50i":{ engine:"4.4L Twin-Turbo V8 (445hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X5 M":     { engine:"4.4L Twin-Turbo V8 (567-575hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Tanzanite Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "G05 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "xDrive40i":{ engine:"3.0L Turbocharged Inline-6 (335-375hp)", drivetrain:"AWD", transmission:"Automatic", note:"First X5 generation ever rated to tow over 6,000lbs — up to 7,200lbs with the available Off-Road package. Diesel was dropped entirely partway through this generation, ending decades of oil-burner X5 options in the US. 2024 facelift dropped the third-row seat option." },
+            "xDrive45e":{ engine:"3.0L Plug-In Hybrid Inline-6 (389hp combined)", drivetrain:"AWD", transmission:"Automatic" },
+            "M50i":    { engine:"4.4L Twin-Turbo V8 (456-523hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X5 M":    { engine:"4.4L Twin-Turbo V8 (600-617hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+            {name:"Phytonic Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "X6": {
+      generations:{
+        "E71 (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "xDrive35i":{ engine:"3.0L Twin-Turbo Inline-6 (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely new kind of vehicle when it launched — the first-ever 'coupe-SUV,' pairing a sloped, low roofline with SUV proportions. This exact formula later got copied by nearly every other luxury automaker (Mercedes GLE Coupe, Audi Q8, and more). Four-seat only at first; a proper three-seat rear bench was added in 2011. Built alongside the X5 at Spartanburg, South Carolina." },
+            "xDrive50i":{ engine:"4.4L Twin-Turbo V8 (400hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X6 M":    { engine:"4.4L Twin-Turbo V8 (555-567hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Deep Sea Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F16 (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "sDrive35i":{ engine:"3.0L Turbocharged Inline-6 (300hp)", drivetrain:"RWD", transmission:"Automatic", note:"First X6 ever offered with a rear-wheel-drive-only configuration at the bottom of the lineup. Grew larger and became a genuine 5-seater from launch, no more 4-seat-only version." },
+            "xDrive50i":{ engine:"4.4L Twin-Turbo V8 (445hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X6 M":    { engine:"4.4L Twin-Turbo V8 (567-575hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Long Beach Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "G06 (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "xDrive40i":{ engine:"3.0L Turbocharged Inline-6 (335hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M50i":    { engine:"4.4L Twin-Turbo V8 (523hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "X6 M":    { engine:"4.4L Twin-Turbo V8 (600-617hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+            {name:"Tanzanite Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Z3": {
       years:["1996","1997","1998","1999","2000","2001","2002"],
       trims:{
