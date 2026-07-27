@@ -63,6 +63,20 @@ const VEHICLES = {
     },
   },
   "Acura": {
+    "ADX": {
+      years:["2025","2026"],
+      trims:{
+        "Base":       { engine:"1.5L Turbocharged 4-cylinder (190hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Acura's newest and smallest SUV, sitting below the RDX. Shares its underlying platform with the Integra and the Honda HR-V/ZR-V. Genuinely notable for a different reason too — it's the first-ever Acura assembled outside the US, Japan, or Canada, built at Honda's plant in Celaya, Mexico." },
+        "A-Spec":     { engine:"1.5L Turbocharged 4-cylinder (190hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+        "Advance":    { engine:"1.5L Turbocharged 4-cylinder (190hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+      },
+      colors:[
+        {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+        {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "CL": {
       generations:{
         "1st Gen (1997-1999)":{
@@ -89,6 +103,65 @@ const VEHICLES = {
             {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Firepepper Red Pearl (Red)",hex:"#9B1B30"},
             {name:"Anthracite Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "CSX": {
+      generations:{
+        "Pre-Facelift (2006-2008)":{
+          years:["2006","2007","2008"],
+          trims:{
+            "Touring": { engine:"2.0L DOHC i-VTEC 4-cylinder (155hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Canada-exclusive — never officially sold in the US. Essentially a badge-engineered version of the European-market Honda Civic sedan, not the North American Civic. Honda actually used the CSX's styling as the template for Civics sold in Japan and internationally, rather than the other way around." },
+            "Premium": { engine:"2.0L DOHC i-VTEC 4-cylinder (155hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Type-S":  { engine:"2.0L K20Z2 4-cylinder (197hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2007 — identical drivetrain to the US/Canada Honda Civic Si of the same era, 6-speed manual with a helical limited-slip differential." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Facelift (2009-2011)":{
+          years:["2009","2010","2011"],
+          trims:{
+            "Premium": { engine:"2.0L DOHC i-VTEC 4-cylinder (155hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Power Plenum grille styling update to match the rest of the Acura lineup. Replaced by the ILX for 2013, which finally brought Acura's entry-level compact to both the US and Canada together instead of splitting the two markets." },
+            "Type-S":  { engine:"2.0L K-Series 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely interesting swap — this facelift's Type-S actually got the engine from the European-market Civic Type-R, a combination Europeans themselves never got to buy." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Bali Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "EL": {
+      generations:{
+        "1.6EL (1997-2000)":{
+          years:["1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"1.6L VTEC 4-cylinder (127hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Canada-exclusive — never sold in the US. Acura's very first vehicle ever built in Canada, at the same Alliston, Ontario plant that builds the Civic. Replaced the 4-door Integra sedan specifically in the Canadian market, since its sales there were too weak to justify keeping it (the US kept the Integra sedan through 2001)." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Satin Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "1.7EL (2001-2005)":{
+          years:["2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"1.7L VTEC 4-cylinder (127hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Grew from a subcompact to a compact car this generation. Was Acura's best-selling model in Canada every year from 1997 through 2003 — genuinely significant for the brand there, despite never being sold south of the border. Replaced by the CSX for 2006." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Eternal Blue Pearl (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
@@ -626,6 +699,32 @@ const VEHICLES = {
     },
   },
   "Alfa Romeo": {
+    "4C": {
+      years:["2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "Coupe":  { engine:"1.75L Turbocharged 4-cylinder (237hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Genuinely significant for the brand — the first mainstream Alfa Romeo sold in America since Alfa withdrew from the US market in the mid-1990s. Carbon fiber monocoque chassis, mid-engine, all-aluminum engine. Inspired by the classic 33 Stradale." },
+        "Spider": { engine:"1.75L Turbocharged 4-cylinder (237hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Convertible version, joined the lineup mid-2015. A rare 15-unit 'Spider Italia' special edition closed out the 2020 model year." },
+      },
+      colors:[
+        {name:"Alfa Red (Red)",hex:"#C8102E"},
+        {name:"Carrara White (White)",hex:"#F5F5F5"},
+        {name:"Vesuvio Gray (Gray)",hex:"#6B6E6F"},
+        {name:"Misano Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "8C Competizione": {
+      years:["2008","2009","2010"],
+      trims:{
+        "Coupe":  { engine:"4.7L Ferrari/Maserati V8 (444hp)", drivetrain:"RWD", transmission:"Automatic (Automated Manual)", note:"This is the car that marked Alfa Romeo's actual return to the US market in 2008, well ahead of the brand's full relaunch. Built by Maserati in Modena on a shortened Maserati GranTurismo platform, using a Ferrari-built V8. Only 500 coupes were ever built worldwide, at roughly $265,000 each." },
+        "Spider": { engine:"4.7L Ferrari/Maserati V8 (444hp)", drivetrain:"RWD", transmission:"Automatic (Automated Manual)", note:"Only 329 Spiders were built (originally planned for 500, cut short by the 2008 financial crisis) — and of those, exactly 35 were confirmed shipped to US customers. Genuinely one of the rarest cars in this entire app, at roughly $299,000 each." },
+      },
+      colors:[
+        {name:"Alfa Red (Red)",hex:"#C8102E"},
+        {name:"Competizione Red (Red)",hex:"#9B1B30"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Yellow (Yellow)",hex:"#F5C800"},
+      ],
+    },
     "Giulia": {
       generations:{
         "952 (2017-2024)":{
@@ -634,6 +733,8 @@ const VEHICLES = {
             "Giulia":     { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"First Alfa Romeo sold in the US in years — built on an all-new rear-wheel-drive-oriented platform, a real departure from the FWD cars the brand had been making. AWD badged 'Q4'." },
             "Ti":         { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
             "Quadrifoglio":{ engine:"2.9L Twin-Turbo V6 (505hp)", drivetrain:"RWD", transmission:"Automatic", note:"This engine has genuine Ferrari lineage — partially developed in Maranello and shares design DNA with the F136 V8 out of the 458 Italia. Aluminum block, no balance shaft, a real 500-hp sedan for around the price of a loaded Camry." },
+            "GTA":        { engine:"2.9L Twin-Turbo V6 (540hp)", drivetrain:"RWD", transmission:"Automatic", note:"2020 only — an extreme, 500-unit-worldwide special edition celebrating Alfa Romeo's 110th anniversary, reviving a legendary 1960s nameplate. 220lbs lighter than the standard Quadrifoglio through extensive carbon fiber use, plus a titanium Akrapovič exhaust. Genuinely the most powerful road car Alfa Romeo has ever built. Global availability was confirmed; exact US allocation numbers are harder to pin down than the 8C's, so don't assume every unit made it stateside." },
+            "GTAm":       { engine:"2.9L Twin-Turbo V6 (540hp)", drivetrain:"RWD", transmission:"Automatic", note:"The even more extreme 2-seat version of the GTA — rear seats deleted for a roll cage and racing harnesses, aerodynamics developed with input from Alfa's Sauber F1 partnership. Also 2020 only, part of the same 500-unit worldwide total shared with the GTA." },
           },
           colors:[
             {name:"Alfa Red (Red)",hex:"#C8102E"},
@@ -643,6 +744,52 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Stelvio": {
+      generations:{
+        "952 (2018-2021)":{
+          years:["2018","2019","2020","2021"],
+          trims:{
+            "Base":        { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Alfa Romeo's first-ever crossover in over a century as a brand — built on the same platform as the Giulia sedan, just with more ground clearance and AWD. A diesel engine was offered in other markets but never in the US." },
+            "Ti":          { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Quadrifoglio":{ engine:"2.9L Twin-Turbo V6 (505hp)", drivetrain:"AWD", transmission:"Automatic", note:"Same Ferrari-derived V6 as the Giulia Quadrifoglio. Set a Nürburgring lap record for a production SUV when it debuted, genuinely startling for something with this much ground clearance." },
+          },
+          colors:[
+            {name:"Alfa Red (Red)",hex:"#C8102E"},
+            {name:"Vulcano Black (Black)",hex:"#1A1A1A"},
+            {name:"Trofeo White (White)",hex:"#F5F5F5"},
+            {name:"Montecarlo Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Facelift (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Sprint":      { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"Updated Trilobo grille and front fascia. Estrema special edition added 2023 — 21-inch wheels, active suspension, carbon fiber exterior accents." },
+            "Ti":          { engine:"2.0L Turbocharged 4-cylinder (280hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Quadrifoglio":{ engine:"2.9L Twin-Turbo V6 (505hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alfa Red (Red)",hex:"#C8102E"},
+            {name:"Vesuvio Gray (Gray)",hex:"#6B6E6F"},
+            {name:"Trofeo White (White)",hex:"#F5F5F5"},
+            {name:"Misano Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Tonale": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Sprint": { engine:"2.0L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic", note:"Alfa Romeo's first-ever subcompact SUV, slotting below the Stelvio — roughly Audi Q3 sized. Shares underpinnings with other Stellantis-group compact crossovers." },
+        "Ti":     { engine:"2.0L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Veloce": { engine:"1.3L Turbocharged Plug-In Hybrid 4-cylinder (272hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"Plug-in hybrid option offers up to 30 miles of all-electric range on its own before the gas engine even needs to kick in." },
+      },
+      colors:[
+        {name:"Alfa Red (Red)",hex:"#C8102E"},
+        {name:"Vulcano Black (Black)",hex:"#1A1A1A"},
+        {name:"Trofeo White (White)",hex:"#F5F5F5"},
+        {name:"Misano Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
     },
   },
   "Audi": {
