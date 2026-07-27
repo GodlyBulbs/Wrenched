@@ -1600,6 +1600,124 @@ const VEHICLES = {
         },
       },
     },
+    "7 Series": {
+      generations:{
+        "E32 (1987-1994)":{
+          years:["1987","1988","1989","1990","1991","1992","1993","1994"],
+          trims:{
+            "735i": { engine:"3.5L Inline-6 (208hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "740i": { engine:"4.0L V8 (282hp)", drivetrain:"RWD", transmission:"Automatic", note:"V8 option added 1992, alongside the existing six and twelve-cylinder engines." },
+            "750iL":{ engine:"5.0L V12 (296hp)", drivetrain:"RWD", transmission:"Automatic", note:"BMW's first-ever V12 engine, in BMW's first-ever V12 car — a genuine technological flagship moment for the brand. Also debuted double-glazed windows and electronic damping control." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Diamantschwarz Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Royalblau Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E38 (1995-2001)":{
+          years:["1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "740i": { engine:"4.4L V8 (282hp)", drivetrain:"RWD", transmission:"Automatic", note:"Widely considered one of the most elegant, well-balanced 7 Series generations ever built — genuinely well-regarded even decades later. First car ever available with curtain airbags, and the last 7 Series ever offered with a manual transmission." },
+            "750iL":{ engine:"5.4L V12 (322hp)", drivetrain:"RWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Orient Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E65/E66 (2002-2008)":{
+          years:["2002","2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "745i": { engine:"4.4L V8 (325hp)", drivetrain:"RWD", transmission:"Automatic", note:"First BMW ever with the iDrive infotainment system, plus a genuinely controversial Chris Bangle-designed exterior that split opinion hard at launch — 2006 facelift toned it down." },
+            "750i": { engine:"4.8L V8 (360hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "760i": { engine:"6.0L V12 (438hp)", drivetrain:"RWD", transmission:"Automatic", note:"Used the world's first production V12 with direct injection." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Monaco Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "F01/F02 (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "740i": { engine:"3.0L Turbocharged Inline-6 (315hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Extensive aluminum and high-strength steel construction to cut weight. ActiveHybrid 7 also joined this generation, pairing a turbo engine with an electric motor." },
+            "750i": { engine:"4.4L Twin-Turbo V8 (400-445hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "760i": { engine:"6.0L Twin-Turbo V12 (535-544hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Imperial Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "G11/G12 (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "740i": { engine:"3.0L Turbocharged Inline-6 (320-335hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"2019 facelift brought a genuinely massive new grille design that became a real talking point for the brand going forward." },
+            "750i": { engine:"4.4L Twin-Turbo V8 (445-523hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M760i":{ engine:"6.6L Twin-Turbo V12 (601hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+            {name:"Tanzanite Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "G70 (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "740i": { engine:"3.0L Turbocharged Mild-Hybrid Inline-6 (375hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new generation — the electric i7 (built on the same platform) is sold as its own separate model rather than just a trim of the gas 7 Series." },
+            "760i": { engine:"4.4L Twin-Turbo V8 (536hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Frozen Pure Gray (Gray)",hex:"#8A8D8F"},
+            {name:"Tanzanite Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "8 Series": {
+      generations:{
+        "E31 (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "850i":  { engine:"5.0L V12 (296hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine technological showcase for BMW — electronically adjustable damping, passive rear-wheel steering, and styling that echoed the legendary M1. A planned M8 version was actually cancelled in 1991 due to the early-90s recession, the Gulf War, and energy price spikes." },
+            "840i":  { engine:"4.0L V8 (282hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"V8 option arrived partway through this generation as a more attainable alternative to the V12." },
+            "850CSi":{ engine:"5.6L V12 (375hp)", drivetrain:"RWD", transmission:"Manual", note:"The closest thing to the cancelled M8 that ever reached production — genuinely the performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Calypso Red (Red)",hex:"#9B1B30"},
+            {name:"Techno Violet Metallic (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "G14/G15/G16 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "840i":  { engines:["3.0L Turbocharged Inline-6 (335hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Returned to BMW's lineup after a genuine 21-year absence from the US market — the E31 was actually pulled from the US in 1997, two years before Europe stopped getting it. Offered as a coupe (G15), convertible (G14), and 4-door 'Gran Coupe' liftback sedan (G16)." },
+            "M850i": { engine:"4.4L Twin-Turbo V8 (523-530hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M8":    { engine:"4.4L Twin-Turbo V8 (600-617hp)", drivetrain:"AWD", transmission:"Automatic", note:"617hp available with the Competition Package — genuinely one of the fastest 4-seat cars BMW has ever built." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Frozen Bluestone Metallic (Blue)",hex:"#4A6B8E"},
+            {name:"San Remo Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+      },
+    },
     "M235i / M240i": {
       years:["2014","2015","2016","2017","2018","2019","2021","2022"],
       trims:{
