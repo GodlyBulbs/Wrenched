@@ -63,6 +63,36 @@ const VEHICLES = {
     },
   },
   "Acura": {
+    "CL": {
+      generations:{
+        "1st Gen (1997-1999)":{
+          years:["1997","1998","1999"],
+          trims:{
+            "2.2CL": { engine:"2.2L VTEC 4-cylinder (145hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The first-ever Acura built entirely in the United States, at Honda's plant in East Liberty, Ohio. Replaced the Legend Coupe, though it wasn't really a direct successor — genuinely different car underneath, based on the Honda Accord platform." },
+            "3.0CL": { engine:"3.0L VTEC V6 (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Naples Gold Metallic (Gold)",hex:"#B8A050"},
+          ],
+        },
+        "2nd Gen (2001-2003)":{
+          years:["2001","2002","2003"],
+          trims:{
+            "3.2CL": { engine:"3.2L SOHC VTEC V6 (225hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Skipped the 2000 model year entirely between generations. Built on the Acura TL platform this time, nearly identical mechanically to the TL despite the different body." },
+            "Type S": { engine:"3.2L SOHC VTEC V6 (260hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The very first Acura ever badged 'Type S' — this nameplate later carried over to the TL and beyond. 17-inch wheels, firmer suspension and seats. 2002+ models offered an optional close-ratio 6-speed manual with a helical limited-slip differential." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Firepepper Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Anthracite Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Integra": {
       generations:{
         "1st Gen (1986-1989)":{
@@ -119,6 +149,36 @@ const VEHICLES = {
             {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
             {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
             {name:"Tiger Eye Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "Legend": {
+      generations:{
+        "1st Gen (1986-1990)":{
+          years:["1986","1987","1988","1989","1990"],
+          trims:{
+            "Sedan": { engine:"2.5L V6 (151hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Along with the Integra, one of the two launch models for the entire Acura brand in 1986. The first Honda vehicle ever to offer a V6, worldwide. Sedan launched first; the coupe joined a year later for 1987 with a larger 2.7L V6." },
+            "Coupe": { engine:"2.7L V6 (161hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"1987+ only. The 1987 Legend LS Coupe was the first Japanese car ever sold with a driver's-side airbag." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Woodrose Pearl (Burgundy)",hex:"#5A1E2A"},
+          ],
+        },
+        "2nd Gen (1991-1995)":{
+          years:["1991","1992","1993","1994","1995"],
+          trims:{
+            "L Sedan":  { engine:"3.2L V6 (200hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely advanced engineering for a FWD car — the V6 was mounted longitudinally rather than the usual transverse layout, giving a tighter turning radius and near-even 56/44 weight distribution. GS sedan replaced the base sedan for 1994. Discontinued after 1995, replaced by the RL (sedan) and CL (coupe) as separate nameplates." },
+            "LS Coupe": { engine:"3.2L V6 (200-230hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"All coupes bumped to 230hp starting 1992." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Cashmere Silver Metallic (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
@@ -228,6 +288,90 @@ const VEHICLES = {
         },
       },
     },
+    "RL": {
+      generations:{
+        "1st Gen 3.5RL (1996-2004)":{
+          years:["1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "3.5RL": { engine:"3.5L V6 (210-225hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Legend sedan as Acura's flagship — same longitudinal-engine FWD layout the Legend pioneered. 1999 facelift added xenon HID headlights. Sales never quite matched the old Legend's, mainly because no V8 or RWD option was ever offered, unlike its German rivals." },
+          },
+          colors:[
+            {name:"Naples Gold Metallic (Gold)",hex:"#B8A050"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Anthracite Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2005-2012)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engine:"3.5L V6 (300-310hp)", drivetrain:"AWD", transmission:"Automatic", note:"Debuted Acura's SH-AWD (Super Handling All-Wheel Drive) system — genuinely significant tech at the time, able to actively vector torque side-to-side, not just front-to-rear. Final Acura flagship sedan before the nameplate was replaced by the RLX." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Carbon Bronze Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "TL": {
+      generations:{
+        "1st Gen (1996-1998)":{
+          years:["1996","1997","1998"],
+          trims:{
+            "2.5TL": { engine:"2.5L Inline-5 (176hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Vigor — an unusual inline-5 carried over from that car for the first year, before the TL settled into V6-only power for the rest of its life." },
+            "3.2TL": { engine:"3.2L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Cashmere Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "3.2TL": { engine:"3.2L V6 (225-260hp)", drivetrain:"FWD", transmission:"Automatic", note:"Type S added for 2002, borrowing the drivetrain from the CL Type S — 260hp, firmer suspension, 17-inch wheels." },
+            "Type S": { engine:"3.2L V6 (260hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Firepepper Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Anthracite Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "Base":   { engine:"3.2L V6 (270hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Type S": { engine:"3.5L V6 (286hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Added 2005 — borrowed the RL's 3.5L V6, tuned higher. The manual came with a limited-slip differential and F1-style paddle shifters were offered on the automatic." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Moroccan Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Carbon Bronze Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+        "4th Gen (2009-2014)":{
+          years:["2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base":  { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic", note:"Polarizing new styling at launch — a much larger, more aggressive-looking car than any TL before it. 2012 facelift replaced the aging 5-speed automatic with a 6-speed. This was the final TL — the nameplate was retired after 2014, merged together with the TSX to create the TLX for 2015." },
+            "SH-AWD":{ engine:"3.7L V6 (305hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bellanova White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Graphite Luster Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "TLX": {
       generations:{
         "First Generation (2015-2017)":{
@@ -278,6 +422,47 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "TSX": {
+      generations:{
+        "1st Gen (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "Base": { engine:"2.4L K-Series 4-cylinder (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuinely related to the European-market 7th-gen Honda Accord (badged Accord CL9 overseas) rather than the US Accord of the same era — which is why it felt like a distinctly different, more European-flavored car than its American Honda sibling." },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Carbon Bronze Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+        "2nd Gen (2009-2014)":{
+          years:["2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (201hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Switched from hydraulic to electric power steering this generation — not universally loved, some felt it lost feel compared to the outgoing car. TSX Sport Wagon joined for 2011, the only wagon body style Acura has ever sold in the US." },
+            "V6":   { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic", note:"V6 offered on both the sedan and the wagon — a genuinely rare combination, a proper sport wagon with real power." },
+          },
+          colors:[
+            {name:"Bellanova White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Graphite Luster Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Vigor": {
+      years:["1992","1993","1994"],
+      trims:{
+        "Base": { engine:"2.5L SOHC 20-valve Inline-5 (176hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely unusual engine choice — an inline-5, not a 4 or a V6, sitting between the Integra and Legend in Acura's lineup. Short-lived: replaced by the TL after just three model years, though the TL's first-year 2.5TL actually carried this same inline-5 over for one more season." },
+      },
+      colors:[
+        {name:"Frost White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Milano Red (Red)",hex:"#C8102E"},
+        {name:"Woodrose Pearl (Burgundy)",hex:"#5A1E2A"},
+      ],
     },
   },
   "Alfa Romeo": {
