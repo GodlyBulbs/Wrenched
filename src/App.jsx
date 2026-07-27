@@ -63,6 +63,171 @@ const VEHICLES = {
     },
   },
   "Acura": {
+    "Integra": {
+      generations:{
+        "1st Gen (1986-1989)":{
+          years:["1986","1987","1988","1989"],
+          trims:{
+            "RS": { engine:"1.6L DOHC 4-cylinder (113-118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"One of the two launch models for the entire Acura brand on March 27, 1986, alongside the Legend. Pop-up headlights, 3-door and 5-door hatchback body styles." },
+            "LS": { engine:"1.6L DOHC 4-cylinder (113-118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Bimini Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "RS": { engine:"1.8L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"All-new chassis with fully independent double-wishbone suspension at all four corners — genuinely advanced for the segment at the time." },
+            "GS": { engine:"1.8L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GS-R": { engine:"1.7L VTEC 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1992 — the first VTEC engine ever offered on an Acura." },
+          },
+          colors:[
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (1994-2001)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "RS": { engine:"1.8L 4-cylinder (142hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"All-new chassis and interior. This is the generation featured in the original 2001 'The Fast and the Furious' film — genuinely one of the most recognizable tuner cars of its era." },
+            "GS-R": { engine:"1.8L VTEC 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Manual" },
+            "Type R": { engine:"1.8L VTEC 4-cylinder (195hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1997 — hand-built B18C engine, helical limited-slip differential, upgraded brakes, and a 93lb weight cut versus the GS-R. Widely considered one of the best front-wheel-drive cars ever built. Won six consecutive SCCA World Challenge Touring Car Championships, 1997-2002." },
+          },
+          colors:[
+            {name:"Championship White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Base":   { engine:"1.5L Turbocharged 4-cylinder (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Revived after a genuine 22-year absence — the Integra name disappeared from Acura's lineup after 2001, replaced first by the RSX, then the ILX. This revival is a Civic-based liftback (5-door), sharing its platform with the 11th-gen Honda Civic. Won the 2023 North American Car of the Year award." },
+            "A-Spec": { engine:"1.5L Turbocharged 4-cylinder (200hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+            "Type S": { engine:"2.0L Turbocharged VTEC 4-cylinder (320hp)", drivetrain:"FWD", transmission:"Manual", note:"Debuted for 2024 — the most powerful Integra ever built, using the same K20C1 engine as the Civic Type R. 6-speed manual only, with a limited-slip differential and standard rev-matching." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+            {name:"Tiger Eye Pearl (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "MDX": {
+      generations:{
+        "YD1 (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"3.5L V6 (240-265hp)", drivetrain:"AWD", transmission:"Automatic", note:"First-ever Acura MDX, replacing the old body-on-frame SLX (itself a rebadged Isuzu Trooper) with a modern unibody design shared with the Honda Accord and Odyssey. Only a single engine was ever offered this whole generation — genuinely simple compared to today's multi-engine lineups. Navigation became available starting the 2003 model year." },
+            "Touring": { engine:"3.5L V6 (265hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Premium White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#9B1B30"},
+            {name:"Silver Pearl (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "YD2 (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base":     { engine:"3.7L V6 (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"2010 facelift added Acura's new signature grille styling and a 6-speed automatic with paddle shifters." },
+            "Technology":{ engine:"3.7L V6 (300hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Advance":  { engine:"3.7L V6 (300hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Polished Metal Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "YD3 (2014-2020)":{
+          years:["2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base":     { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"FWD became available for the first time in MDX history — previously AWD was standard, no exceptions. Sport Hybrid variant also joined the lineup this generation. 2017 facelift refreshed styling." },
+            "Technology":{ engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Sport Hybrid":{ engine:"3.0L Hybrid V6 (321hp combined)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Basque Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "YD9 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":        { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Acura skipped the 2021 model year entirely between generations. All-new chassis and suspension, longer wheelbase and wider track than any MDX before it. The hybrid variant was dropped this generation." },
+            "A-Spec":      { engine:"3.5L V6 (290hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Advance":     { engine:"3.5L V6 (290hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Type S":      { engine:"3.0L Turbocharged V6 (355hp)", drivetrain:"AWD", transmission:"Automatic", note:"First-ever MDX Type S — Brembo front brakes, adaptive air suspension, and standard AWD, using the same 3.0L turbo V6 shared with the TLX Type S." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+            {name:"Urban Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "RDX": {
+      generations:{
+        "1st Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engine:"2.3L Turbocharged 4-cylinder (240hp)", drivetrain:"AWD", transmission:"Automatic", note:"Acura's first-ever compact SUV, sharing its platform with the Honda CR-V. This turbo four was one of Honda's very first turbocharged production engines — genuinely uncommon for the brand at the time. SH-AWD standard initially; a cheaper FWD version and an A-Spec trim were both added with the 2010 facelift." },
+            "Technology":{ engine:"2.3L Turbocharged 4-cylinder (240hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Grigio Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2013-2018)":{
+          years:["2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Base":     { engines:["3.5L V6 (273hp)","3.5L V6 (279hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"The turbo four was dropped entirely — replaced by a naturally-aspirated V6, a real shift in character for the RDX. 279hp arrived with the 2016 facelift, along with LED lighting." },
+            "Technology":{ engine:"3.5L V6 (273-279hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#9B1B30"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":     { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrain:"AWD", transmission:"Automatic", note:"Back to a turbo four again — this time sharing its architecture with the Accord and Civic Type R, paired with a new 10-speed automatic. All-new dedicated platform, no longer CR-V-based." },
+            "A-Spec":   { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Advance":  { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Type S":   { engine:"3.0L Turbocharged V6 (355hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added for 2021 — Brembo brakes and adaptive dampers, sharing its turbo V6 with the TLX and MDX Type S models." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Majestic Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Performance Red Pearl (Red)",hex:"#C8102E"},
+            {name:"Apex Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "TLX": {
       generations:{
         "First Generation (2015-2017)":{
