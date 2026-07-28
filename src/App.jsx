@@ -1417,6 +1417,65 @@ const VEHICLES = {
     },
   },
   "BMW": {
+    "1 Series": {
+      years:["2008","2009","2010","2011","2012","2013"],
+      trims:{
+        "128i": { engine:"3.0L Naturally-Aspirated Inline-6 (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The US only ever received the coupe (E82) and convertible (E88) body styles of the 1 Series — the 3-door and 5-door hatchbacks sold across the rest of the world were never brought to America. While other markets got four-cylinder options, the US got six-cylinder power exclusively." },
+        "135i": { engine:"3.0L Twin-Turbo Inline-6 (300-302hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Shares its N54 engine with the contemporary E9x 335i — a genuinely tunable, well-regarded powerplant among enthusiasts despite some real reliability quirks." },
+        "1M":   { engine:"3.0L Twin-Turbo Inline-6 (335-340hp)", drivetrain:"RWD", transmission:"Manual", note:"2011 only, genuinely legendary among BMW enthusiasts — wider fenders and suspension, brakes, and differential borrowed from other M cars, crammed into the smallest body BMW made at the time. Production ended in August 2013 as the all-new 2 Series Coupe took over the 1 Series' role entirely." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Valencia Orange Metallic (Orange)",hex:"#E8601C"},
+        {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "2 Series": {
+      generations:{
+        "F22/F23 (2014-2021)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "228i / 230i":{ engine:"2.0L Turbocharged 4-cylinder (240-248hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"Directly replaced the 1 Series Coupe/Convertible as BMW's entry-level 2-door. 230i naming arrived with the 2017 facelift." },
+            "M235i / M240i":{ engine:"3.0L Turbocharged Inline-6 (320-335hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"M240i naming arrived alongside the 230i for 2017." },
+            "M2":         { engines:["3.0L Turbocharged Inline-6 (365hp)","3.0L Twin-Turbo Inline-6 (405hp)","3.0L Twin-Turbo Inline-6 (444hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic (Dual-Clutch)"], note:"M2 Competition (405hp) arrived 2018 with the M3/M4's engine; a limited M2 CS (444hp) closed out 2020 as the send-off special edition." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Long Beach Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "F44 Gran Coupe (2020-2024)":{
+          years:["2020","2021","2022","2023","2024"],
+          trims:{
+            "228i xDrive Gran Coupe":{ engine:"2.0L Turbocharged 4-cylinder (228-241hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"A genuinely different animal from the coupe/convertible 2 Series — this is a 4-door liftback built on the front-wheel-drive-based UKL platform shared with the 1 Series and X1/X2, not the traditional rear-wheel-drive 2 Series chassis." },
+            "M235i xDrive Gran Coupe":{ engine:"2.0L Turbocharged 4-cylinder (301hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Thundernight Metallic (Purple)",hex:"#4A2E5A"},
+            {name:"Melbourne Red Metallic (Red)",hex:"#C8102E"},
+          ],
+        },
+        "G42/G87 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "230i":  { engine:"2.0L Turbocharged 4-cylinder (255hp)", drivetrain:"RWD", transmission:"Automatic", note:"Back to a true rear-wheel-drive-based platform for the coupe and convertible, shared with the current 4 Series." },
+            "M240i": { engine:"3.0L Turbocharged Inline-6 (382hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M2":    { engine:"3.0L Twin-Turbo Inline-6 (453hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (Dual-Clutch)"] },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Zandvoort Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Toronto Red Metallic (Red)",hex:"#C8102E"},
+          ],
+        },
+      },
+    },
     "328i / 330i": {
       generations:{
         "E30 (1984-1993)":{
@@ -1503,6 +1562,38 @@ const VEHICLES = {
             {name:"Jet Black (Black)",hex:"#1A1A1A"},
             {name:"Portimao Blue Metallic (Blue)",hex:"#1E4B8E"},
             {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
+    "4 Series": {
+      generations:{
+        "F32/F33/F36 (2014-2020)":{
+          years:["2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "428i / 430i": { engine:"2.0L Turbocharged 4-cylinder (240-248hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Split off from the 3 Series to become its own standalone nameplate for coupe, convertible, and 4-door Gran Coupe liftback body styles — all 3 Series coupes/convertibles were badged '4 Series' from this point on. 430i naming arrived with the 2017 facelift." },
+            "435i / 440i": { engine:"3.0L Turbocharged Inline-6 (300-320hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "M4":          { engine:"3.0L Twin-Turbo Inline-6 (425-444hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (Dual-Clutch)"], note:"The coupe/convertible equivalent of the F80 M3, sharing the same S55 engine." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Estoril Blue Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Sunset Orange Metallic (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "G22/G23/G26 (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "430i": { engine:"2.0L Turbocharged 4-cylinder (255hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "M440i":{ engine:"3.0L Turbocharged Mild-Hybrid Inline-6 (382hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "M4":   { engine:"3.0L Twin-Turbo Inline-6 (473-503hp)", drivetrain:"AWD", transmission:"Automatic", note:"503hp available with the Competition Package. Also the platform basis for BMW's electric i4, which shares the same body but a completely different powertrain." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Isle of Man Green Metallic (Green)",hex:"#2E5A3A"},
+            {name:"Toronto Red Metallic (Red)",hex:"#C8102E"},
           ],
         },
       },
@@ -1596,6 +1687,50 @@ const VEHICLES = {
             {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
             {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
             {name:"Phytonic Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "6 Series": {
+      generations:{
+        "E63/E64 (2004-2010)":{
+          years:["2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "645Ci": { engine:"4.4L V8 (325hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Revived the 6 Series nameplate after a genuine 15+ year absence, built on a shortened version of the contemporary E60 5 Series chassis. Renamed from 645Ci to 650i partway through this generation." },
+            "650i":  { engine:"4.8L V8 (360hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "M6":    { engine:"5.0L S85 V10 (500hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (SMG)"], note:"Added 2005 — shares its screaming V10 with the E60 M5 of the same era." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Titanium Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Indianapolis Red Metallic (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "F06/F12/F13 (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "640i": { engine:"3.0L Turbocharged Inline-6 (315-320hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Added a 4-door 'Gran Coupe' liftback body style (F06) alongside the traditional coupe (F13) and convertible (F12) — a genuine expansion of what the 6 Series nameplate covered." },
+            "650i": { engine:"4.4L Twin-Turbo V8 (445-450hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "M6":   { engine:"4.4L Twin-Turbo V8 (560-600hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"600hp available with the Competition Package." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Space Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Imperial Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "G32 Gran Turismo (2018-2020)":{
+          years:["2018","2019","2020"],
+          trims:{
+            "640i xDrive Gran Turismo": { engine:"3.0L Turbocharged Inline-6 (335hp)", drivetrain:"AWD", transmission:"Automatic", note:"The final chapter of the 6 Series in the US — the traditional coupe and convertible body styles were both dropped entirely, leaving only this liftback Gran Turismo wagon-adjacent shape. Discontinued after 2020 with no successor since; the 8 Series Gran Coupe effectively took over the nameplate's market position going forward." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+            {name:"Snapper Rocks Blue Metallic (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
@@ -1717,21 +1852,6 @@ const VEHICLES = {
           ],
         },
       },
-    },
-    "M235i / M240i": {
-      years:["2014","2015","2016","2017","2018","2019","2021","2022"],
-      trims:{
-        "Coupe":       { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-        "Convertible": { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"RWD", transmission:"Automatic" },
-        "xDrive":      { engine:"3.0L Turbocharged 6-cylinder (320hp)", drivetrain:"AWD", transmission:"Automatic" },
-      },
-      colors:[
-        {name:"Alpine White (White)",hex:"#F5F5F5"},
-        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
-        {name:"Estoril Blue Metallic (Blue)",hex:"#1E4B8E"},
-        {name:"Melbourne Red Metallic (Red)",hex:"#C8102E"},
-        {name:"Mineral Grey Metallic (Gray)",hex:"#8A8D8F"},
-      ],
     },
     "M3": {
       generations:{
