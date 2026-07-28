@@ -2953,6 +2953,19 @@ const VEHICLES = {
     },
   },
   "Chevrolet": {
+    "Astro": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+      trims:{
+        "Base":  { engine:"4.3L V6 (150-165hp)", drivetrain:"RWD", transmission:"Automatic", note:"GM's first-ever minivan, though it took a genuinely different approach than Chrysler's revolutionary front-drive minivans that started the whole segment — the Astro used a more truck-like rear-wheel-drive layout, closely sized to a short-wheelbase full-size van. Sold identically as the GMC Safari. Built at Baltimore Assembly, the very last model line that plant ever produced before closing." },
+        "AWD":   { engine:"4.3L V6 (190hp)", drivetrain:"AWD", transmission:"Automatic", note:"AWD became available starting exactly 1990 — a genuinely unusual option for a van of this era, and part of what gave the Astro its more rugged, utility-focused character versus its front-drive minivan rivals." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "Avalanche": {
       generations:{
         "1st Gen (2002-2006)":{
@@ -3928,6 +3941,30 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Uplander": {
+      years:["2005","2006","2007","2008"],
+      trims:{
+        "Base": { engines:["3.5L V6 (200hp)","3.9L V6 (240hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Essentially a facelifted continuation of the Venture platform underneath, with a longer nose and more SUV-inspired styling touches — mainly to improve crash performance and give it a less minivan-like appearance. Offered in short and long wheelbase configurations, both with foldable and removable second and third row seating." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Sport Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Venture": {
+      years:["1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+      trims:{
+        "Base": { engine:"3.4L V6 (180-185hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the space-age-styled Lumina APV with a more conventional minivan shape, offered in regular (112in wheelbase) and extended (120in wheelbase) lengths. Dual sliding doors became standard after 2000; a fold-flat third-row seat arrived 2001. A genuinely memorable Warner Bros. Edition special trim included Bugs Bunny badging and a rear-seat entertainment system. 2005 was the final year, sold only in long-wheelbase form with a reduced trim lineup, before being replaced by the Uplander." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
     },
   },
   "Chrysler": {
