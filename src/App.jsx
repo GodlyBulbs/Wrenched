@@ -4043,6 +4043,49 @@ const VEHICLES = {
         },
       },
     },
+    "Cirrus": {
+      years:["1995","1996","1997","1998","1999","2000"],
+      trims:{
+        "LX":  { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of a genuine 'triplet' set of mid-size sedans launched together — nearly identical mechanically to the Dodge Stratus and Plymouth Breeze, all three built on the same JA platform at the same Sterling Heights, Michigan plant, just with different styling and badges for each of Chrysler's brands." },
+        "LXi": { engine:"2.5L Mitsubishi V6 (168hp)", drivetrain:"FWD", transmission:"Automatic", note:"Top trim added alloy wheels, keyless entry, and genuine wood-grain interior trim over the base LX." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+      ],
+    },
+    "Concorde": {
+      generations:{
+        "1st Gen (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "Base":{ engine:"3.3L V6 (153hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Chrysler's original three LH-platform 'cab-forward' sedans, alongside the Dodge Intrepid and Eagle Vision. The design genuinely traces back to a 1987 Lamborghini concept car called the Portofino — Chrysler owned Lamborghini at the time, and used the concept's dramatic proportions as the direct inspiration for this production sedan. Landed on Car and Driver's Ten Best list for both 1993 and 1994." },
+            "LXi": { engine:"3.5L 24-Valve V6 (214hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "LX":     { engines:["2.7L V6 (200hp)","3.2L V6 (225hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Distinctive 'kidney' quad-beam headlights set this generation apart visually. A 3.5L V6 borrowed from the bigger LHS eventually joined the lineup too." },
+            "Limited":{ engine:"3.5L V6 (250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2002, sitting 4 inches longer than the standard Concorde — genuinely replaced the nearly-identical LHS in the lineup. This was the final Concorde generation; the nameplate was retired after 2004 and replaced by the all-new Chrysler 300 for 2005." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
     "Fifth Avenue": {
       years:["1990","1991","1992","1993"],
       trims:{
@@ -4068,6 +4111,34 @@ const VEHICLES = {
         {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
         {name:"Charcoal Pearl (Gray)",hex:"#4A4E52"},
       ],
+    },
+    "LHS": {
+      generations:{
+        "1st Gen (1994-1997)":{
+          years:["1994","1995","1996","1997"],
+          trims:{
+            "Base": { engine:"3.5L V6 (214hp)", drivetrain:"FWD", transmission:"Automatic", note:"Directly replaced both the Imperial and Fifth Avenue as Chrysler's genuine flagship sedan, built on the same LH cab-forward platform as the Concorde and Intrepid, just longer and more upscale — the very first Chrysler product developed almost entirely using computer-aided design." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+            {name:"Emerald Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (1999-2001)":{
+          years:["1999","2000","2001"],
+          trims:{
+            "Base": { engine:"3.5L V6 (253hp)", drivetrain:"FWD", transmission:"Automatic", note:"Chrysler actually skipped the 1998 model year entirely between generations — a genuine one-year hiatus for the nameplate. This redesigned version wore the brand's new winged-emblem badge and competed against traditional large luxury sedans, while the shorter, sportier 300M (sharing much of its underlying engineering) chased a different, more performance-focused kind of buyer. Replaced by the Concorde Limited once this generation ended." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
     },
     "Shadow": {
       years:["1990","1991","1992","1993","1994"],
