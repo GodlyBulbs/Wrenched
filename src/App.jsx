@@ -3088,6 +3088,18 @@ const VEHICLES = {
         },
       },
     },
+    "K5 Blazer": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "Base": { engines:["5.7L V8 (170-190hp)","6.2L Diesel V8 (145hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"The full-size 2-door SUV, built on the same platform as the C/K pickup — 'K' denotes 4WD, matching the naming convention of the C/K trucks themselves. 1992+ models shared the newer GMT400 platform with the contemporary Silverado. Renamed to Tahoe for the 1995 model year, ending the K5 Blazer name for good — the 2-door body style itself was dropped a few years after the rename." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "Silverado": {
       generations:{
         "C/K 4th Gen (1990-1998)":{
@@ -3159,6 +3171,142 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Cherry Red Tintcoat (Red)",hex:"#9B1B30"},
             {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Suburban": {
+      generations:{
+        "8th Gen (1992-1999)":{
+          years:["1992","1993","1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "1500": { engine:"5.7L V8 (200-255hp)", drivetrain:"4WD", transmission:"Automatic", note:"Built on the GMT400 platform, shared with the contemporary Silverado and K5 Blazer. First-ever Suburban generation to offer a diesel engine option." },
+            "2500": { engines:["6.5L Diesel V8 (155-190hp)","7.4L V8 (230hp)"], drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "9th Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "1500": { engines:["5.3L V8 (285hp)","6.0L V8 (320hp)"], drivetrain:"4WD", transmission:"Automatic", note:"First Suburban generation with disc brakes on all four wheels. The heavy-duty 2500 could be ordered with an 8.1L 'big-block' V8 for genuinely serious towing capability." },
+            "2500": { engine:"8.1L V8 (340hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sport Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Light Pewter Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "10th Gen (2007-2014)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "1500": { engines:["5.3L V8 (320hp)","6.0L V8 (352hp)"], drivetrain:"4WD", transmission:"Automatic", note:"A genuinely more aerodynamic redesign, arriving right as gas prices were climbing toward record highs. A limited-production 75th Anniversary Diamond Edition marked the model's history in 2010." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "11th Gen (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engines:["5.3L V8 (355hp)","6.2L V8 (420hp)"], drivetrain:"4WD", transmission:"Automatic", note:"New for this generation, the 6.2L V8 became the true performance-flagship engine option." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "12th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":  { engine:"5.3L V8 (355hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"First-ever Suburban with a coil-sprung rear suspension instead of the traditional leaf springs — genuinely improved ride quality and lowered cargo floor, plus 4 more inches of wheelbase for real extra room." },
+            "Duramax":{ engine:"3.0L Turbo-Diesel Inline-6 (277hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "High Country":{ engine:"6.2L V8 (420hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"The luxury-flagship trim, expanded into this generation's lineup." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Sterling Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Tahoe": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"5.7L V8 (255hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Directly took over the full-size SUV role from the K5 Blazer, which was renamed Tahoe for this model year — genuinely the same basic concept, just rebranded. A 4-door model joined the original 2-door for 1995, slotting in size between the 2-door and the longer Suburban. 1995 was the only model year a manual transmission was ever offered." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engines:["4.8L V8 (275hp)","5.3L V8 (285-295hp)"], drivetrain:"4WD", transmission:"Automatic", note:"The 2-door body style was dropped entirely this generation — 4-door only from here forward. 2004 brought the most powerful engine tune yet at 295hp." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sport Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Light Pewter Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2007-2014)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base":   { engines:["5.3L V8 (320hp)","6.0L V8 (352hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "Hybrid": { engine:"6.0L Hybrid V8 (332hp combined)", drivetrain:"4WD", transmission:"Automatic (e-CVT)", note:"Added 2008 — the first-ever hybrid Tahoe." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"5.3L V8 (355hp)", drivetrain:"4WD", transmission:"Automatic", note:"6.2L V8 option arrived 2018." },
+            "RST":  { engine:"6.2L V8 (420hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":  { engine:"5.3L V8 (355hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Coil-sprung rear suspension for the first time, genuinely growing cargo space — from 94.7 to 122.9 cubic feet compared to the outgoing generation." },
+            "Duramax":{ engine:"3.0L Turbo-Diesel Inline-6 (277hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "High Country":{ engine:"6.2L V8 (420hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Sterling Gray Metallic (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
