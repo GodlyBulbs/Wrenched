@@ -4043,6 +4043,72 @@ const VEHICLES = {
         },
       },
     },
+    "Fifth Avenue": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engine:"3.3L V6 (147hp)", drivetrain:"FWD", transmission:"Automatic", note:"By this point, a genuine long-wheelbase version of the New Yorker rather than a standalone design — 'Fifth Avenue' had started life back in 1979 as just an upmarket trim package before eventually becoming its own model line. Shared its body with the Chrysler Imperial of the same era, just 4.4 inches shorter overall. Discontinued after 1993, replaced by the LH-platform New Yorker and LHS." },
+        "3.8": { engine:"3.8L V6 (147-150hp)", drivetrain:"FWD", transmission:"Automatic", note:"Became standard equipment for 1991, previously optional." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Slate Blue Pearl (Blue)",hex:"#4A6B8E"},
+      ],
+    },
+    "Imperial": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engine:"3.3L V6 (147hp)", drivetrain:"FWD", transmission:"Automatic", note:"The Imperial name hadn't appeared since 1983 — Chrysler revived it one more time as a stretched, super-deluxe version of the New Yorker, genuinely near-identical to the Fifth Avenue underneath aside from a longer nose and deck, a unique interior, and items that were optional on the Fifth Avenue coming standard here. Top-tier buyers got Chrysler's 'Crystal Key' ownership program with extended warranty coverage. Sales never reached even 10,000 units a year; when Chrysler moved to the newer LH platform for 1994, the Imperial name simply didn't come along, and the LHS took over as the brand's flagship instead." },
+        "3.8": { engine:"3.8L V6 (147hp)", drivetrain:"FWD", transmission:"Automatic", note:"Became standard equipment for 1991." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Charcoal Pearl (Gray)",hex:"#4A4E52"},
+      ],
+    },
+    "Shadow": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "Base":  { engine:"2.2L 4-cylinder (93-96hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A compact hatchback/sedan sibling to the Dodge Shadow and Plymouth Sundance, all sharing the same P-body platform." },
+        "ES":    { engine:"2.5L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "Turbo": { engine:"2.2L Turbocharged 4-cylinder (146-174hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuinely quick pocket rocket for the era in its higher states of tune, though the Chrysler-badged version stayed a bit more subdued than some of its Dodge siblings." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Spirit": {
+      years:["1990","1991","1992","1993","1994","1995"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (100hp)", drivetrain:"FWD", transmission:"Automatic", note:"A mid-size sedan sibling to the Dodge Spirit and Plymouth Acclaim, all sharing the AA platform — another branch of Chrysler's remarkably long-lived K-car architecture." },
+        "LE":   { engine:"3.0L V6 (141hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Slate Blue Pearl (Blue)",hex:"#4A6B8E"},
+      ],
+    },
+    "TC by Maserati": {
+      years:["1989","1990","1991"],
+      trims:{
+        "Turbo": { engine:"2.2L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely unusual collaboration born from a personal friendship — Chrysler chairman Lee Iacocca and Maserati owner Alejandro de Tomaso had worked together years earlier at Ford. Built on a modified K-car platform but hand-assembled in Milan, Italy at Maserati's own facility, styled to resemble a stretched LeBaron convertible. Only 7,300 were ever built, and it was widely criticized for its high price relative to its underpinnings — but it remains a genuine curiosity and a real link to Chrysler's own 300 letter-series heritage of chasing Italian-flavored performance image." },
+        "V6":    { engine:"3.0L Mitsubishi V6 (141hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the turbo four as the standard engine for 1990-1991." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Garnet Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
   },
   "Dodge": {
     "Caliber": {
