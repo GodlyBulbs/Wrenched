@@ -2438,6 +2438,57 @@ const VEHICLES = {
     },
   },
   "Cadillac": {
+    "Allanté": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engine:"4.5L LW2 V8 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely unusual arrangement — the chassis and mechanicals were pure Cadillac, but the bodywork was built by Pininfarina in Italy and literally airfreighted to Detroit for final assembly, on specially outfitted Boeing 747s. A removable hardtop was standard or optional depending on the year." },
+        "1993": { engine:"4.6L Northstar V8 (295hp)", drivetrain:"FWD", transmission:"Automatic", note:"The Allanté's final model year got the brand-new Northstar V8 — the very first application of that legendary engine family, arriving just as the Allanté itself was being discontinued and replaced by the XLR years later." },
+      },
+      colors:[
+        {name:"Cotillion White (White)",hex:"#F5F5F5"},
+        {name:"Sable Black (Black)",hex:"#1A1A1A"},
+        {name:"Carmine Red (Red)",hex:"#9B1B30"},
+        {name:"Regal Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Brougham": {
+      years:["1990","1991","1992"],
+      trims:{
+        "Base": { engine:"5.0L Oldsmobile-Built V8 (140hp)", drivetrain:"RWD", transmission:"Automatic", note:"At 221 inches long, this was the longest car built in the United States at the time — a full inch longer than the contemporary Lincoln Town Car. Genuinely traditional, body-on-frame American luxury: soft ride, formal roofline, thick bench-style seating. Discontinued after 1992, replaced by an all-new Fleetwood for 1993." },
+        "5.7 V8": { engine:"5.7L Chevrolet-Built V8 (175hp)", drivetrain:"RWD", transmission:"Automatic", note:"Fuel-injected option arrived for 1990, available only with the Coachbuilder or Trailer Towing package. Standard anti-lock brakes also arrived this year." },
+      },
+      colors:[
+        {name:"Cotillion White (White)",hex:"#F5F5F5"},
+        {name:"Sable Black (Black)",hex:"#1A1A1A"},
+        {name:"Autumn Maple Firemist (Bronze)",hex:"#8A6B4A"},
+        {name:"Light Sapphire Metallic (Blue)",hex:"#4A6B8E"},
+      ],
+    },
+    "Catera": {
+      years:["1997","1998","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"3.0L V6 (200hp)", drivetrain:"RWD", transmission:"Automatic", note:"A badge-engineered version of the German-built Opel Omega, brought over to give Cadillac a genuine rear-wheel-drive rival to the BMW 5 Series and Mercedes E-Class. Marketed with the memorable, somewhat self-deprecating 'The Caddy That Zigs' ad campaign, which leaned into being different from Cadillac's own traditional lineup — a strategy that ultimately confused more buyers than it won over. Only ever offered with a single V6 engine. Replaced by the CTS." },
+      },
+      colors:[
+        {name:"Pewter Frost (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bordeaux Red (Red)",hex:"#6B1A2A"},
+        {name:"Sherwood Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "Cimarron": {
+      years:["1982","1983","1984","1985","1986","1987","1988"],
+      trims:{
+        "Base": { engines:["1.8L 4-cylinder (88hp)","2.0L 4-cylinder (86hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A badge-engineered Chevrolet Cavalier — Cadillac's first 4-cylinder-capable platform since 1914, positioned as a rival to compact European sports sedans despite obvious economy-car roots underneath. Widely regarded as one of the worst product-planning decisions in GM's history. This one genuinely predates this app's usual 1990-and-later window entirely, but it's included by request given how historically infamous it is." },
+        "V6":   { engine:"2.8L V6 (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Added 1985 in a late attempt to save the car's reputation with more power. Didn't work — Cadillac abandoned the compact segment entirely after 1988, not returning until the Catera arrived nearly a decade later. Only about 6,454 units sold in the final model year." },
+      },
+      colors:[
+        {name:"Cotillion White (White)",hex:"#F5F5F5"},
+        {name:"Sable Black (Black)",hex:"#1A1A1A"},
+        {name:"Carmine Red (Red)",hex:"#9B1B30"},
+        {name:"Light Driftwood Firemist (Beige)",hex:"#C8B89A"},
+      ],
+    },
     "CTS-V": {
       generations:{
         "1st Gen (2004-2007)":{
