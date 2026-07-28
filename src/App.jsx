@@ -2489,12 +2489,13 @@ const VEHICLES = {
         {name:"Light Driftwood Firemist (Beige)",hex:"#C8B89A"},
       ],
     },
-    "CTS-V": {
+    "CTS": {
       generations:{
-        "1st Gen (2004-2007)":{
-          years:["2004","2005","2006","2007"],
+        "1st Gen (2003-2007)":{
+          years:["2003","2004","2005","2006","2007"],
           trims:{
-            "Base": { engine:"5.7L LS6 V8 (400hp)", drivetrain:"RWD", transmission:"Manual", note:"Sedan only, manual-only — the LS6 was carried over from the Chevrolet Corvette C5 Z06." },
+            "Base": { engines:["2.6L V6 (200hp)","3.6L V6 (255hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Launched Cadillac's 'Art and Science' design language and marked a genuine turning point for the brand, aimed squarely at the BMW 3 Series/5 Series rather than traditional American luxury buyers." },
+            "CTS-V":{ engine:"5.7L LS6 V8 (400hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 2004, sedan only, manual-only — the LS6 was carried over from the Chevrolet Corvette C5 Z06." },
           },
           colors:[
             {name:"Black Raven (Black)",hex:"#1A1A1A"},
@@ -2503,12 +2504,13 @@ const VEHICLES = {
             {name:"Light Platinum (Silver)",hex:"#C8C8C8"},
           ],
         },
-        "2nd Gen (2009-2015)":{
-          years:["2009","2010","2011","2012","2013","2014","2015"],
+        "2nd Gen (2008-2015)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015"],
           trims:{
-            "Sedan":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Complete re-engineering, first supercharged CTS-V. Coupe and Sport Wagon body styles added for 2011." },
-            "Coupe":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
-            "Sport Wagon":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genuinely rare — a factory 556hp super-wagon, cult following among enthusiasts." },
+            "Base":       { engine:"3.6L V6 (270-318hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"Coupe and Sport Wagon body styles joined the sedan for 2011 — a genuinely rare wagon body style for an American luxury sedan of this era. Base CTS production ended in 2014, but the CTS-V sedan specifically continued on sale through 2015 as the 3rd-gen CTS phased in." },
+            "CTS-V Sedan":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Complete re-engineering, the first supercharged CTS-V." },
+            "CTS-V Coupe":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "CTS-V Sport Wagon":{ engine:"6.2L Supercharged LSA V8 (556hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genuinely rare — a factory 556hp super-wagon, cult following among enthusiasts." },
           },
           colors:[
             {name:"Black Raven (Black)",hex:"#1A1A1A"},
@@ -2517,16 +2519,84 @@ const VEHICLES = {
             {name:"Stealth Blue (Blue)",hex:"#1E3A6B"},
           ],
         },
-        "3rd Gen (2016-2019)":{
-          years:["2016","2017","2018","2019"],
+        "3rd Gen (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
           trims:{
-            "Base":{ engine:"6.2L Supercharged LT4 V8 (640hp)", drivetrain:"RWD", transmission:"Automatic", note:"Sedan only, automatic only — nicknamed the 'four-door Corvette' since it shares the LT4 with the Corvette Z06. Final generation before the CTS-V was discontinued and replaced by the CT5-V." },
+            "Base": { engines:["2.0L Turbocharged 4-cylinder (272hp)","3.6L V6 (321-335hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Grew larger, positioned to compete more directly with the 5 Series rather than the 3 Series. Sedan-only this generation, no more coupe or wagon body styles." },
+            "CTS-V":{ engine:"6.2L Supercharged LT4 V8 (640hp)", drivetrain:"RWD", transmission:"Automatic", note:"Added 2016 — nicknamed the 'four-door Corvette' since it shares the LT4 with the Corvette Z06. This was the final CTS generation before the nameplate was discontinued and effectively replaced by the CT5." },
           },
           colors:[
             {name:"Black Raven (Black)",hex:"#1A1A1A"},
             {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
             {name:"Velocity Red (Red)",hex:"#C8102E"},
             {name:"Phantom Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Escalade": {
+      generations:{
+        "1st Gen (1999-2000)":{
+          years:["1999","2000"],
+          trims:{
+            "Base": { engine:"5.7L V8 (255hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely hasty response — Cadillac's first-ever SUV, rushed to market in roughly 10 months after the unexpected success of the 1998 Lincoln Navigator caught the whole brand off guard. Underneath, it was essentially a GMC Yukon Denali with a Cadillac badge; the two are hard to tell apart without close inspection of the grille and crest badging." },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Shale (Beige)",hex:"#C8B89A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"5.3L V8 (285hp)", drivetrain:"RWD", transmission:"Automatic", note:"First generation with a genuine identity of its own, rather than a rebadged GMC. Third-row seating and a 250-watt Bose audio system arrived this generation. The EXT (a sport-utility pickup truck version) and the extended-wheelbase ESV both joined the lineup." },
+            "AWD 6.0":{ engine:"6.0L V8 (325-345hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Light Pewter Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "3rd Gen (2007-2014)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base": { engine:"6.2L V8 (403hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Debuted alongside every other GM full-size truck/SUV on the same shared platform for the first time. GM claimed this V8 was the industry's first mass-produced overhead-valve V8 with variable valve timing. Had a star-studded launch party on Rodeo Drive attended by Paris Hilton, among others — a genuine sign of the Escalade's cultural cachet by this point. A hybrid variant also existed briefly; New York Giants QB Eli Manning was famously awarded one as his 2008 Super Bowl MVP prize." },
+          },
+          colors:[
+            {name:"White Diamond Tricoat (White)",hex:"#F5F5F5"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Stealth Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"6.2L V8 (420hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"8-speed automatic arrived at launch, replaced by a 10-speed for 2018+." },
+          },
+          colors:[
+            {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Red Passion Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":   { engine:"6.2L V8 (420hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genuine independent rear suspension for the first time in Escalade history — a real ride-quality improvement over the old solid rear axle. A 3.0L Duramax diesel inline-6 also joined as the first-ever diesel Escalade option." },
+            "Diesel": { engine:"3.0L Duramax Turbo-Diesel Inline-6 (277-300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "Escalade-V":{ engine:"6.2L Supercharged V8 (682hp)", drivetrain:"AWD", transmission:"Automatic", note:"The first-ever performance-flagship V-Series Escalade — genuinely absurd power for a full-size 3-row SUV." },
+          },
+          colors:[
+            {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Dark Moon Blue Metallic (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
