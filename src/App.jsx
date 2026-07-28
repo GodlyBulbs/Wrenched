@@ -3304,6 +3304,61 @@ const VEHICLES = {
         },
       },
     },
+    "Equinox": {
+      generations:{
+        "1st Gen (2005-2009)":{
+          years:["2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"3.4L V6 (185hp)", drivetrain:"FWD", transmission:"Automatic", note:"Chevy's first-ever car-based crossover, sharing parts with the Saturn Vue and replacing the old Suzuki-based Tracker. Genuinely larger than most rivals in its class at the time, closer in size to a Honda CR-V's bigger sibling than a direct competitor." },
+            "AWD":  { engine:"3.6L V6 (264hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2008." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2010-2017)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (182hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"First Equinox generation ever offered with a four-cylinder base engine — a real fuel-economy-focused shift for the segment. 2016 facelift brought updated styling and standard MyLink infotainment." },
+            "V6":   { engine:"3.6L V6 (264hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 4-cylinder (170hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"An all-turbocharged lineup — no more naturally-aspirated engines at all. A 1.6L turbo-diesel was even offered briefly, a genuine rarity for this segment." },
+            "2.0T": { engine:"2.0L Turbocharged 4-cylinder (252hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Pacific Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "LT / ACTIV / RS":{ engine:"1.5L Turbocharged 4-cylinder (175hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"All-new redesigned exterior, launched alongside the completely separate Equinox EV — the two now share a name but not a platform." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Riverside Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Equinox EV": {
       years:["2024","2025","2026"],
       trims:{
@@ -3771,6 +3826,105 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
             {name:"Sterling Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "TrailBlazer": {
+      generations:{
+        "1st Gen (2002-2009)":{
+          years:["2002","2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"4.2L Inline-6 (270-291hp)", drivetrain:"RWD/4WD", transmission:"Automatic", note:"A genuine body-on-frame, truck-based midsize SUV, sharing its GMT360/370 platform with the Buick Rainier, GMC Envoy, and Isuzu Ascender. Superseded the smaller Blazer, which stayed in production alongside it for a few overlapping years before finally being discontinued in 2005. An extended-length EXT version added genuine 7-passenger, 3-row seating." },
+            "SS":   { engine:"5.3L V8 (300hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuine V8-powered performance SUV — a real oddity for this segment, and a cult favorite among enthusiasts today." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "L / LS / LT":{ engine:"1.2L Turbocharged 3-cylinder (137hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Revived after a genuine decade dormant, but a completely different vehicle sharing nothing but the name — a unibody subcompact crossover rather than a body-on-frame truck-based SUV. Genuinely notable detail: this is the first Trailblazer ever badged with a lowercase 'b,' distinguishing it from the original capital-B TrailBlazer. Slotted between the Trax and Equinox at launch." },
+            "ACTIV / RS":{ engine:"1.3L Turbocharged 3-cylinder (155hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Riptide Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Traverse": {
+      generations:{
+        "1st Gen (2009-2017)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engine:"3.6L V6 (281-288hp)", drivetrain:"FWD/AWD", transmission:"Automatic", note:"Replaced the truck-based TrailBlazer as GM's large 3-row crossover, riding on the same unibody Lambda platform as the GMC Acadia and Buick Enclave." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Cyber Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"3.6L V6 (310hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely more angular, upright redesign versus the outgoing rounded generation." },
+            "RS":   { engine:"2.0L Turbocharged 4-cylinder (228hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Riverside Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Genuinely replaced the V6 entirely with a turbo four making real V6-beating power — a real sign of where the whole industry has moved." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Neptune Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Trax": {
+      generations:{
+        "1st Gen (2015-2023)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"1.4L Turbocharged 4-cylinder (138hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Chevy's first genuinely subcompact crossover for the US market." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Hot (Red)",hex:"#C8102E"},
+            {name:"Nightfall Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "LS / RS / ACTIV":{ engine:"1.2L Turbocharged 3-cylinder (137hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely grew larger than its own sibling, the TrailBlazer — a real reversal of their original size relationship. AWD was dropped entirely; front-wheel drive only, positioned as a budget-focused, value-first option rather than a driving-enthusiast pick." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Lakeshore Blue Metallic (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
