@@ -2491,6 +2491,18 @@ const VEHICLES = {
         {name:"Sherwood Green (Green)",hex:"#2E5A3A"},
       ],
     },
+    "Celestiq": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Base": { engine:"Dual Electric Motors (655hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuinely bespoke, hand-built ultra-flagship — each one is essentially made to order, built by a small dedicated team rather than a normal assembly line, starting around $340,000. Roughly 300 miles of range and a 0-60 time around 3.8 seconds. The clearest possible statement of intent for where Cadillac wants the brand to sit going forward." },
+      },
+      colors:[
+        {name:"Crystal White (White)",hex:"#F5F5F5"},
+        {name:"Stellar Black (Black)",hex:"#1A1A1A"},
+        {name:"Infrared (Red)",hex:"#9B1B30"},
+        {name:"Emerald Lake Metallic (Green)",hex:"#2E5A3A"},
+      ],
+    },
     "Cimarron": {
       years:["1982","1983","1984","1985","1986","1987","1988"],
       trims:{
@@ -2685,6 +2697,44 @@ const VEHICLES = {
         },
       },
     },
+    "Escalade IQ": {
+      years:["2025","2026"],
+      trims:{
+        "Standard":     { engine:"Dual Electric Motors (680hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"The electric counterpart to the gas Escalade, built on the same Ultium platform as the GMC Hummer EV, at the same Factory Zero plant in Detroit. Cadillac deliberately kept the 'Escalade' name intact rather than folding it into the usual 'IQ' naming pattern alone — a sign of how much brand equity that name still carries." },
+        "Velocity Max": { engine:"Dual Electric Motors (750hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"An unlockable performance mode rather than a separate trim — same hardware, a software-enabled power boost." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Stellar Black (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Emerald Lake Metallic (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "Lyriq": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "RWD":  { engine:"Single Electric Motor (340hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Cadillac's first-ever mass-production all-electric vehicle — a genuine turning point for the brand, and the design template every subsequent Cadillac EV has followed. Up to 326 miles of range on the rear-drive version." },
+        "AWD":  { engine:"Dual Electric Motors (500hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Stellar Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Opulent Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Optiq": {
+      years:["2025","2026"],
+      trims:{
+        "Base": { engine:"Dual Electric Motors (300hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Cadillac's smallest and most affordable EV, slotting below the Lyriq as a genuine entry point into the brand's electric lineup. 85kWh battery, roughly 300 miles of range, AWD standard even on the base trim." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Stellar Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Argent Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "SRX": {
       generations:{
         "1st Gen (2004-2009)":{
@@ -2726,6 +2776,19 @@ const VEHICLES = {
         {name:"Black Raven (Black)",hex:"#1A1A1A"},
         {name:"Crystal Red (Red)",hex:"#9B1B30"},
         {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Vistiq": {
+      years:["2026"],
+      trims:{
+        "Base":   { engine:"Dual Electric Motors (500hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuine 3-row electric SUV, deliberately sized and positioned between the Lyriq and the larger Escalade IQ — roughly comparable in footprint to the gas-powered XT6. Cadillac's newest model as of this entry." },
+        "Sport":  { engine:"Dual Electric Motors (500hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Stellar Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Opulent Blue Metallic (Blue)",hex:"#1E4B8E"},
       ],
     },
     "XLR": {
