@@ -2982,6 +2982,20 @@ const VEHICLES = {
         },
       },
     },
+    "Beretta": {
+      years:["1990","1991","1992","1993","1994","1995","1996"],
+      trims:{
+        "Base": { engine:"2.2L 4-cylinder (110-120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A sporty 2-door coupe companion to the 4-door Corsica, sharing its L-body platform. Distinguished by vertical door handles mounted on the B-pillar — a genuinely distinctive design touch later carried over to the Lumina coupe." },
+        "GT":   { engine:"3.1L V6 (135-160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "GTZ":  { engine:"2.3L Quad 4 DOHC 4-cylinder (150-180hp)", drivetrain:"FWD", transmission:"Manual", note:"The genuine performance flagship — a high-output twin-cam four making real power for a compact coupe of this era." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "Blazer EV": {
       years:["2024","2025","2026"],
       trims:{
@@ -3057,6 +3071,36 @@ const VEHICLES = {
         },
       },
     },
+    "Caprice": {
+      generations:{
+        "B-Body (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Base":    { engine:"5.0L V8 (170hp)", drivetrain:"RWD", transmission:"Automatic", note:"Wore a genuinely controversial aerodynamic new look for 1991, sitting atop an otherwise traditional body-on-frame rear-drive chassis — quite old-school by this point compared to GM's newer front-drive full-size sedans. The wagon shared much with the Buick Roadmaster and Olds Custom Cruiser of the same era. Not produced for the 1993 model year specifically." },
+            "9C1":     { engine:"5.7L V8 (180hp)", drivetrain:"RWD", transmission:"Automatic", note:"The police-package trim — genuinely became one of the most common patrol car platforms in America during this era, a reputation that still follows the nameplate today." },
+            "LT1":     { engine:"5.7L LT1 V8 (260hp)", drivetrain:"RWD", transmission:"Automatic", note:"Arrived 1994 — an evolution of the Corvette's own LT1, genuinely potent for a full-size family sedan of this era. The Impala SS of the same years used this exact drivetrain in a different body." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Dark Cherry Metallic (Red)",hex:"#6B1A2A"},
+            {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "PPV (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "PPV": { engine:"3.6L V6 (301hp)", drivetrain:"RWD", transmission:"Automatic", note:"Revived the Caprice name after a 15-year absence, but genuinely different underneath — built by Holden in Australia on the rear-drive Zeta platform (shared with the Pontiac G8), and sold exclusively as a Police Patrol Vehicle. Never offered to civilian retail buyers in the US at all." },
+          },
+          colors:[
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"White (White)",hex:"#F5F5F5"},
+            {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Slate Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Colorado": {
       generations:{
         "1st Gen (2004-2012)":{
@@ -3098,6 +3142,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Corsica": {
+      years:["1990","1991","1992","1993","1994","1995","1996"],
+      trims:{
+        "Base": { engine:"2.2L 4-cylinder (110-120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely simple, reliable compact sedan, sharing its L-body platform with the 2-door Beretta. A 5-door hatchback body style existed too, but was dropped after 1991, leaving sedan-only for the rest of the run." },
+        "LTZ":  { engine:"3.1L V6 (135-140hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
     "Corvette": {
       generations:{
@@ -3185,6 +3242,62 @@ const VEHICLES = {
         {name:"Riptide Blue Metallic (Blue)",hex:"#1E4B8E"},
       ],
     },
+    "Impala": {
+      generations:{
+        "SS (1994-1996)":{
+          years:["1994","1995","1996"],
+          trims:{
+            "SS": { engine:"5.7L LT1 V8 (260hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine surprise revival — a rework of the body-on-frame Caprice sedan, the very same car many Americans recognized as their local police department's cruiser, turned into a real muscle sedan. Shares its LT1 V8 with the contemporary Corvette. The Impala name had been dormant since 1985 before this." },
+          },
+          colors:[
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Dark Cherry Metallic (Red)",hex:"#6B1A2A"},
+            {name:"Dark Green-Gray Metallic (Green)",hex:"#3A4A3E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2000-2005":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"3.4L V6 (180hp)", drivetrain:"FWD", transmission:"Automatic", note:"Returned for good this time as a mainstream front-wheel-drive sedan, replacing the Lumina. Styling was memorable mainly for its distinctive quartet of large, round taillights." },
+            "LS":   { engine:"3.8L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SS":   { engine:"3.8L Supercharged V6 (240hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2004 — brought the SS badge back again, this time as a supercharged V6 rather than the old LT1 V8." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sport Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2006-2013":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"3.5L V6 (211hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "LTZ":  { engine:"3.9L V6 (233hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2014-2020":{
+          years:["2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "LS":  { engine:"2.5L 4-cylinder (196hp)", drivetrain:"FWD", transmission:"Automatic", note:"An all-new, genuinely more upscale generation — ranked No. 1 among affordable large cars by U.S. News & World Report shortly after launch. When this generation debuted, the outgoing one was kept alive alongside it as the fleet-only 'Impala Limited' through 2016. This was the final Impala generation ever built — production ended in 2020 as GM shifted away from traditional sedans." },
+            "Premier / LTZ":{ engine:"3.6L V6 (305hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Blue Velvet Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "K5 Blazer": {
       years:["1990","1991","1992","1993","1994"],
       trims:{
@@ -3196,6 +3309,49 @@ const VEHICLES = {
         {name:"Victory Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
       ],
+    },
+    "Lumina": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001"],
+      trims:{
+        "Base": { engines:["2.5L 4-cylinder (110hp)","3.1L V6 (135-160hp)"], drivetrain:"FWD", transmission:"Automatic", note:"The combined successor to both the Chevrolet Celebrity sedan and the old Monte Carlo coupe, sold as both a 4-door sedan and a 2-door coupe. Replaced by the Impala and a revived Monte Carlo once the 2000s arrived." },
+        "Z34":  { engine:"3.4L DOHC V6 (200-210hp)", drivetrain:"FWD", transmission:"Manual", note:"The genuine performance coupe of the lineup — twin-cam V6, distinctive body cladding, and one of the more visually aggressive family cars of its era." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Monte Carlo": {
+      generations:{
+        "1995-1999":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "LS":  { engine:"3.1L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic", note:"Revived the Monte Carlo coupe name, sharing its underlying W-body platform with the Lumina coupe it effectively replaced." },
+            "Z34": { engine:"3.4L DOHC V6 (210hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2000-2007":{
+          years:["2000","2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "LS":  { engine:"3.4L V6 (180hp)", drivetrain:"FWD", transmission:"Automatic", note:"Leaned hard into Monte Carlo's genuine NASCAR racing heritage with styling and special editions tied to the sport. This was the final Monte Carlo generation ever built — the nameplate was discontinued after 2007, ending a run dating back to 1970 with no successor." },
+            "SS":  { engines:["3.8L Supercharged V6 (240hp)","3.9L V6 (211-242hp)"], drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Galaxy Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
     },
     "S-10": {
       generations:{
