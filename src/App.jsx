@@ -3101,6 +3101,50 @@ const VEHICLES = {
         },
       },
     },
+    "Cavalier": {
+      generations:{
+        "2nd Gen Tail (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "Base": { engine:"2.2L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"One of the last true survivors of GM's original 1980s 'J-car' platform family, which had also included the Buick Skyhawk, Cadillac Cimarron, Oldsmobile Firenza, and Pontiac Sunbird/Sunfire — by this point, Cavalier and Sunbird were the only two J-cars left standing." },
+            "Z24":  { engine:"3.1L V6 (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (1995-2005)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"2.2L 4-cylinder (120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Sold as sedan, coupe, and — genuinely unusual for this budget segment — a convertible. All Lordstown, Ohio-built, a plant that became synonymous with compact Chevrolets for decades. This was the Cavalier's final generation; it was discontinued after 2005 and replaced by the all-new Cobalt." },
+            "Z24":  { engines:["2.3L Quad 4 4-cylinder (150hp)","2.4L 4-cylinder (150hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Cobalt": {
+      years:["2005","2006","2007","2008","2009","2010"],
+      trims:{
+        "Base": { engines:["2.2L 4-cylinder (145hp)","2.4L 4-cylinder (155hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced both the Cavalier and the Toyota-based Prizm at once, riding on a new, more modern GM Delta platform. Sold as a sedan and a coupe." },
+        "SS Supercharged":{ engine:"2.0L Supercharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual" },
+        "SS Turbo":{ engine:"2.0L Turbocharged 4-cylinder (260hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuine cult favorite among tuners — quick, light, and cheap, with a real enthusiast following that persists today. Replaced by the Cruze for 2011." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Red (Red)",hex:"#C8102E"},
+        {name:"Imperial Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "Colorado": {
       generations:{
         "1st Gen (2004-2012)":{
@@ -3229,6 +3273,37 @@ const VEHICLES = {
         },
       },
     },
+    "Cruze": {
+      generations:{
+        "1st Gen (2011-2015)":{
+          years:["2011","2012","2013","2014","2015"],
+          trims:{
+            "LS":  { engine:"1.8L 4-cylinder (136hp)", drivetrain:"FWD", transmission:"Manual", note:"Replaced the Cobalt with a genuinely more refined, globally-developed platform — the Cruze was sold in other markets before it ever reached the US. Sedan only at launch, no coupe like the Cobalt had offered." },
+            "LT / LTZ":{ engine:"1.4L Turbocharged 4-cylinder (138hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Diesel":{ engine:"2.0L Turbo-Diesel 4-cylinder (151hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2014 — a genuinely rare diesel option in this segment for the US market." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Blue Topaz Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2016-2019)":{
+          years:["2016","2017","2018","2019"],
+          trims:{
+            "LS":  { engine:"1.4L Turbocharged 4-cylinder (153hp)", drivetrain:"FWD", transmission:"Manual", note:"Larger platform, sleeker styling. A 4-door hatchback body style joined the sedan for 2017. The outgoing first-generation car was kept alive alongside this one as the fleet-only 'Cruze Limited' for a transition period. Discontinued after 2019 as American buyers kept shifting toward subcompact and compact SUVs instead of sedans." },
+            "Premier":{ engine:"1.4L Turbocharged 4-cylinder (153hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Kinetic Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Equinox EV": {
       years:["2024","2025","2026"],
       trims:{
@@ -3240,6 +3315,20 @@ const VEHICLES = {
         {name:"Black (Black)",hex:"#1A1A1A"},
         {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
         {name:"Riptide Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "HHR": {
+      years:["2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "LS":  { engine:"2.2L 4-cylinder (155hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely deliberate retro styling, echoing the classic 1949 Chevrolet Suburban — the name itself stands for 'Heritage High Roof.' A panel-van version with no rear side windows was also offered for commercial buyers." },
+        "LT":  { engine:"2.4L 4-cylinder (172hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "SS":  { engine:"2.0L Turbocharged 4-cylinder (260hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuinely quick performance wagon, sharing its turbo engine with the Cobalt SS Turbo of the same era." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Red (Red)",hex:"#C8102E"},
+        {name:"Sport Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Impala": {
@@ -3323,6 +3412,19 @@ const VEHICLES = {
         {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "Metro": {
+      years:["1998","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"1.0L Inline-3 (55hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A badge-engineered Suzuki Swift, genuinely one of the most fuel-efficient gas-powered cars sold in America at the time — the 3-cylinder version could top 40mpg. A real spiritual predecessor to today's ultra-efficient economy cars, decades before hybrids became mainstream." },
+        "LSi":  { engine:"1.3L 4-cylinder (70hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Light Driftwood Metallic (Beige)",hex:"#C8B89A"},
+      ],
+    },
     "Monte Carlo": {
       generations:{
         "1995-1999":{
@@ -3352,6 +3454,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Prizm": {
+      years:["1998","1999","2000","2001","2002"],
+      trims:{
+        "Base": { engine:"1.8L 4-cylinder (120hp)", drivetrain:"FWD", transmission:"Manual", note:"A badge-engineered Toyota Corolla, built alongside genuine Corollas at the NUMMI joint-venture plant in Fremont, California — essentially the same car underneath, just with a bowtie badge instead of a Toyota emblem. Renamed from 'Geo Prizm' to 'Chevrolet Prizm' when GM retired the Geo brand in 1998. Replaced by the Cobalt in 2005, alongside the Cavalier." },
+        "LSi":  { engine:"1.8L 4-cylinder (125hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
     "S-10": {
       generations:{
