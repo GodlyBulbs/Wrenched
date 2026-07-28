@@ -2451,6 +2451,21 @@ const VEHICLES = {
         {name:"Regal Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "ATS": {
+      years:["2013","2014","2015","2016","2017","2018","2019"],
+      trims:{
+        "2.5":  { engine:"2.5L 4-cylinder (202hp)", drivetrain:"RWD", transmission:"Automatic", note:"Cadillac's first-ever entry into the compact luxury sports sedan segment — aimed squarely at the BMW 3 Series, Mercedes C-Class, and Audi A4. Sedan and Coupe body styles both offered." },
+        "2.0T": { engine:"2.0L Turbocharged 4-cylinder (272hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"] },
+        "3.6":  { engine:"3.6L V6 (321hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "ATS-V":{ engine:"3.6L Twin-Turbo V6 (455hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine BMW M3 rival — sharp handling, real power, both sedan and coupe body styles offered." },
+      },
+      colors:[
+        {name:"White Diamond Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Obsession Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Blue Chip Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "Brougham": {
       years:["1990","1991","1992"],
       trims:{
@@ -2545,6 +2560,19 @@ const VEHICLES = {
         {name:"Black Raven (Black)",hex:"#1A1A1A"},
         {name:"Crystal Red (Red)",hex:"#9B1B30"},
         {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "ELR": {
+      years:["2014","2015","2016"],
+      trims:{
+        "Base": { engine:"1.4L 4-cylinder + Electric Motor Plug-In Hybrid (217hp combined)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Built on the same underlying platform as the Chevrolet Volt, dressed up in a genuinely striking luxury coupe body and priced well north of $75,000 — more than double a comparably-equipped Volt. About 37 miles of electric-only range before the small gas engine kicks in as a generator, same basic concept as the Volt." },
+        "2016":  { engine:"1.4L 4-cylinder + Electric Motor Plug-In Hybrid (233hp combined)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Final model year got a real power bump and suspension retune, widely considered the best version of the car — but by then it was already too late. Sales never came close to Cadillac's projections, and the ELR was discontinued after this single improved year." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Obsession Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Silver Coast Metallic (Silver)",hex:"#C0C0C0"},
       ],
     },
     "Escalade": {
@@ -2668,6 +2696,19 @@ const VEHICLES = {
         {name:"Black Raven (Black)",hex:"#1A1A1A"},
         {name:"Crystal Red (Red)",hex:"#9B1B30"},
         {name:"Silver Sand Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "XTS": {
+      years:["2013","2014","2015","2016","2017","2018","2019"],
+      trims:{
+        "Base":  { engine:"3.6L V6 (304hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Replaced the DTS as Cadillac's front-drive flagship sedan, riding on the same platform as the Buick LaCrosse. Also widely used as a livery/limousine vehicle." },
+        "Vsport":{ engine:"3.6L Twin-Turbo V6 (410hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely quick engine for a big front-drive-based flagship sedan, though this never received the full V-Series treatment or badge." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Obsession Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Dark Adriatic Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
   },
