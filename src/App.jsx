@@ -4193,6 +4193,34 @@ const VEHICLES = {
         },
       },
     },
+    "New Yorker": {
+      generations:{
+        "Salon (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engine:"3.3L V6 (147-150hp)", drivetrain:"FWD", transmission:"Automatic", note:"The base, shortest-wheelbase version of the same Y-platform family that the Fifth Avenue and Imperial extended from — genuinely the same core car underneath, with New Yorker sitting as the entry point and Fifth Avenue and Imperial each adding length and deluxe features on top of it. Shared its Belvidere, Illinois assembly line with the closely-related Dodge Dynasty." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Slate Blue Pearl (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "LH-Based (1994-1996)":{
+          years:["1994","1995","1996"],
+          trims:{
+            "Base": { engines:["3.3L V6 (161hp)","3.5L V6 (214hp)"], drivetrain:"FWD", transmission:"Automatic", note:"An entirely new car sharing nothing with the outgoing generation beyond the name — now built on the same LH platform as the Concorde, LHS, Intrepid, and Eagle Vision, stretched 5 inches longer than those siblings for genuinely more rear legroom. Positioned as a traditional 6-passenger bench-seat sedan for older, more conservative buyers, deliberately contrasted against the sportier bucket-seat LHS sitting right alongside it in the same showroom. This was the actual final chapter of a nameplate that had run almost continuously since 1940 — Chrysler retired New Yorker for good after 1996, leaving the LHS as the brand's sole flagship going forward." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+            {name:"Emerald Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+      },
+    },
     "Pacifica": {
       generations:{
         "Crossover (2004-2008)":{
