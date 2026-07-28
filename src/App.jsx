@@ -1853,6 +1853,74 @@ const VEHICLES = {
         },
       },
     },
+    "i3": {
+      years:["2014","2015","2016","2017","2018","2019","2020","2021"],
+      trims:{
+        "BEV": { engine:"Single Electric Motor (170hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuinely radical car for BMW when it launched — a passenger cell made of carbon-fiber-reinforced plastic (a first for any mass-production BMW), rear-hinged 'suicide' back doors, and an unusually narrow, tall stance built around aerodynamic efficiency rather than typical sedan proportions. Battery capacity grew across three distinct updates (60Ah, then 94Ah, then 120Ah), stretching real-world range from around 80 miles at launch to over 150 miles by the end." },
+        "REx": { engine:"Single Electric Motor + 647cc 2-cylinder Range Extender (170hp electric + 34hp generator)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"The small gas engine, borrowed from motorcycle design, never actually drives the wheels — it just spins a generator to recharge the battery on the go, roughly doubling total range for anyone nervous about running out of charge." },
+      },
+      colors:[
+        {name:"Capparis White (White)",hex:"#F5F5F5"},
+        {name:"Fluid Black (Black)",hex:"#1A1A1A"},
+        {name:"Laurite Grey Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Melbourne Red Metallic (Red)",hex:"#C8102E"},
+      ],
+    },
+    "i4": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "eDrive35":{ engine:"Single Electric Motor (281hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Added 2023 as a lower-cost entry point. Shares its body directly with the gas-powered 4 Series Gran Coupe — same shell, completely different powertrain underneath." },
+        "eDrive40":{ engine:"Single Electric Motor (335-340hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)" },
+        "M50":     { engine:"Dual Electric Motors (469-536hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Aventurine Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Sao Paulo Yellow (Yellow)",hex:"#F5C800"},
+      ],
+    },
+    "i7": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "eDrive50": { engine:"Single Electric Motor (449hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Shares its body and platform directly with the gas/hybrid G70 7 Series — same flagship-luxury shell, all-electric underneath." },
+        "xDrive60": { engine:"Dual Electric Motors (536-544hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "M70":      { engine:"Dual Electric Motors (650hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"The most powerful 7 Series BMW has ever built, gas or electric, full stop." },
+      },
+      colors:[
+        {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Frozen Pure Gray (Gray)",hex:"#8A8D8F"},
+        {name:"Aventurin Red Metallic (Red)",hex:"#9B1B30"},
+      ],
+    },
+    "i8": {
+      years:["2014","2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "Coupe":    { engine:"1.5L Turbocharged 3-cylinder + Electric Motor (369hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed + Single-Speed)", note:"A genuinely unusual layout — the gas 3-cylinder engine sits behind the driver and powers the rear wheels, while a separate electric motor drives the front wheels, making the i8 all-wheel-drive through two completely independent powertrains rather than a shared one. Dramatic butterfly doors and a shape that still looks genuinely futuristic years later." },
+        "Roadster": { engine:"1.5L Turbocharged 3-cylinder + Electric Motor (369hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed + Single-Speed)", note:"Added for 2019 — the final two model years before the i8 was discontinued entirely, with no direct successor since." },
+      },
+      colors:[
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Protonic Dark Silver (Silver)",hex:"#6B6E6F"},
+        {name:"Protonic Red (Red)",hex:"#C8102E"},
+        {name:"E-Copper Metallic (Copper)",hex:"#B87333"},
+      ],
+    },
+    "iX": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "xDrive50": { engine:"Dual Electric Motors (516hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"BMW's first EV-native flagship SUV design — built from the ground up as an electric car rather than adapted from an existing gas platform, unlike the i4 and i7." },
+        "xDrive60": { engine:"Dual Electric Motors (610hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "M60":      { engine:"Dual Electric Motors (610hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Storm Bay Metallic (Blue)",hex:"#4A6B8E"},
+        {name:"Sparkling Copper Grey (Copper)",hex:"#8A6B4A"},
+      ],
+    },
     "M3": {
       generations:{
         "E30 (1988-1991)":{
@@ -2224,6 +2292,19 @@ const VEHICLES = {
         {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
         {name:"Mineral White Metallic (White)",hex:"#F0F0F0"},
         {name:"Arctic Grey (Gray)",hex:"#8A8D8F"},
+      ],
+    },
+    "XM": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Base":     { engine:"4.4L Twin-Turbo V8 Plug-In Hybrid (644hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely historic for BMW M — only the second vehicle ever completely designed and engineered by the M division itself from a blank sheet, rather than being a hopped-up version of an existing regular BMW. The first was the legendary 1978-1981 M1. Built at BMW's Spartanburg, South Carolina plant. About 30 miles of pure electric range before the V8 needs to kick in." },
+        "Label Red":{ engine:"4.4L Twin-Turbo V8 Plug-In Hybrid (738hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"The most powerful BMW M road car ever built, of any kind, gas or electric." },
+      },
+      colors:[
+        {name:"Marina Bay Blue Metallic (Blue)",hex:"#1E4B8E"},
+        {name:"Black Sapphire Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Toronto Red Metallic II (Red)",hex:"#9B1B30"},
+        {name:"Paradise Green Metallic (Green)",hex:"#2E5A3A"},
       ],
     },
     "Z3": {
