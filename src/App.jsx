@@ -2504,6 +2504,49 @@ const VEHICLES = {
         {name:"Light Driftwood Firemist (Beige)",hex:"#C8B89A"},
       ],
     },
+    "CT4": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Luxury":  { engine:"2.0L Turbocharged 4-cylinder (237hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"The spiritual and structural successor to the ATS, aimed at keeping a credible compact sports sedan in the lineup even as the broader market shifted hard toward crossovers." },
+        "Sport":   { engine:"2.7L Turbocharged 4-cylinder (310-325hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "V Blackwing":{ engine:"3.6L Twin-Turbo V6 (472hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine BMW M3 rival — 6-speed manual standard, 10-speed automatic optional. Reportedly the final generation of gas-powered Cadillac V-Series cars ever planned; no second-generation CT4 is expected." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Shadow Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "CT5": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Luxury":     { engine:"2.0L Turbocharged 4-cylinder (237hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Replaced the CTS as Cadillac's mid-size sport sedan." },
+        "Premium Luxury / Sport":{ engine:"3.0L Twin-Turbo V6 (335-360hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "V":          { engine:"3.0L Twin-Turbo V6 (360hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genuine Magnetic Ride Control 4.0 suspension and an electronic limited-slip differential — a real step up from the standard car, though well below the Blackwing's power." },
+        "V Blackwing":{ engine:"6.2L Supercharged V8 (668hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The most powerful engine Cadillac has ever put under a hood, full stop — genuinely competing with the BMW M5 and beating most of its rivals on raw output. 6-speed manual standard, 10-speed automatic optional, a real rarity in this segment by the time it launched." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Wave Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "CT6": {
+      years:["2016","2017","2018","2019","2020"],
+      trims:{
+        "Luxury":  { engine:"2.0L Turbocharged 4-cylinder (265hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"A genuine attempt at a full-size flagship sedan to rival the BMW 7 Series and Mercedes S-Class — but it never found real traction against those established names, and Cadillac discontinued it after a short 5-year run." },
+        "Platinum":{ engine:"3.0L Twin-Turbo V6 (404hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "V":       { engine:"4.2L Twin-Turbo Blackwing V8 (550hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2019, just one year before the CT6 itself was discontinued — genuinely a shame given how strong this engine was. This 'Blackwing' V8 name later got reused for the naturally-different supercharged V8 in the CT5-V Blackwing, which can cause some confusion since they're not actually the same engine." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Passion Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Dark Granite Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "CTS": {
       generations:{
         "1st Gen (2003-2007)":{
@@ -2696,6 +2739,43 @@ const VEHICLES = {
         {name:"Black Raven (Black)",hex:"#1A1A1A"},
         {name:"Crystal Red (Red)",hex:"#9B1B30"},
         {name:"Silver Sand Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "XT4": {
+      years:["2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "Base": { engine:"2.0L Turbocharged 4-cylinder (235hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Cadillac's first-ever compact crossover, going up against the BMW X3 and Mercedes GLC. Only ever offered with this single engine across its entire run. 2024 got a genuinely major mid-cycle refresh with a new 33-inch curved display borrowed from the Lyriq's design language. Discontinued after the 2025 model year." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Horizon Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Shadow Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "XT5": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"2.0L Turbocharged 4-cylinder (237hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Replaced the SRX, riding on newer front-drive-based architecture with a genuinely more contemporary crossover shape." },
+        "Sport":{ engine:"3.6L V6 (310hp)", drivetrain:"AWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Dark Moon Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "XT6": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"3.6L V6 (310hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Cadillac's genuine 3-row, 7-seat crossover, slotting above the XT5 — the direct spiritual successor to the original 7-passenger first-generation SRX from over a decade earlier." },
+      },
+      colors:[
+        {name:"Crystal White Tricoat (White)",hex:"#F0F0F0"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Red Horizon Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
       ],
     },
     "XTS": {
