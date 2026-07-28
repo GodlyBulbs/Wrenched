@@ -4109,6 +4109,89 @@ const VEHICLES = {
         {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
     },
+    "Town and Country": {
+      generations:{
+        "1st Gen (1990-1995)":{
+          years:["1990","1991","1992","1993","1994","1995"],
+          trims:{
+            "Base": { engines:["3.3L V6 (150hp)","3.8L V6 (147-162hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Chrysler's own genuine flagship minivan, always slotted above the Dodge Caravan and Plymouth Voyager as the luxury option of the family — distinctive woodgrain exterior trim was a signature styling touch borrowed straight from the classic Town and Country station wagons of decades earlier." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Slate Blue Pearl (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "2nd Gen (1996-2000)":{
+          years:["1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engines:["3.3L V6 (158hp)","3.8L V6 (166hp)"], drivetrain:"FWD", transmission:"Automatic", note:"All-new NS-platform redesign, genuinely more rounded, aerodynamic styling." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cranberry Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base":  { engine:"3.3L V6 (180hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited":{ engine:"3.8L V6 (215hp)", drivetrain:"AWD", transmission:"Automatic", note:"Stow 'n Go seating arrived 2005 — genuinely clever second and third row seats that folded flat directly into the floor, no removal required. A real practicality leap over the competition at the time." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2008-2016)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "Touring": { engine:"3.8L V6 (197hp)", drivetrain:"FWD", transmission:"Automatic", note:"This was the final Town and Country generation — the nameplate was retired after 2016, with the all-new Pacifica taking over as Chrysler's flagship minivan for 2017. Chrysler marked its 12-millionth minivan sold (across all its nameplate variants) right around this generation's end, a genuinely massive cumulative sales figure." },
+            "Limited": { engine:"3.6L V6 (283hp)", drivetrain:"FWD", transmission:"Automatic", note:"3.6L Pentastar V6 arrived with a 2011 mid-cycle refresh, replacing the older 3.8L and 4.0L engines." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cherry Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Voyager / Grand Voyager": {
+      generations:{
+        "2001-2003 (US)":{
+          years:["2001","2002","2003"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely important distinction: the Chrysler-badged Voyager had actually existed in export markets since 1988, but Americans bought the nearly-identical Plymouth Voyager instead the whole time. Once Chrysler retired the Plymouth brand after the 2000 model year, the Voyager nameplate briefly became a real US-market Chrysler for these three years — a lower-cost alternative sitting below the Town and Country — before being discontinued here entirely in favor of just the Town and Country and Dodge Caravan covering that role." },
+            "LX":   { engine:"3.3L V6 (180hp)", drivetrain:"FWD", transmission:"Automatic", note:"Flex-fuel capable, able to run on E85 ethanol blends." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Revival (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "LX":  { engine:"3.6L V6 (287hp)", drivetrain:"FWD", transmission:"Automatic", note:"Revived a second time, now sharing its underlying platform with the Pacifica — genuinely positioned as the value-focused, lower-cost minivan option, taking over the role the Dodge Grand Caravan used to fill before that nameplate was discontinued." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cherry Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Ceramic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
   },
   "Dodge": {
     "Caliber": {
