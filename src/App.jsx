@@ -2982,6 +2982,19 @@ const VEHICLES = {
         },
       },
     },
+    "Blazer EV": {
+      years:["2024","2025","2026"],
+      trims:{
+        "2LT / RS":{ engine:"Single or Dual Electric Motors (210-288hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Single-Speed)", note:"Genuinely shares nothing but a name with the gas-powered Blazer — an entirely separate vehicle, built on GM's Ultium platform. A genuinely unusual level of drivetrain flexibility for one nameplate: buyers can choose front-, rear-, or all-wheel drive depending on trim, something GM specifically marketed as offering 'a Blazer EV for everyone.' Up to 320 miles of range on the RWD RS." },
+        "SS":      { engine:"Dual Electric Motors (557hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Revived the SS performance badge on a genuinely quick EV — 648lb-ft of torque, sub-4-second 0-60. The Blazer nameplate itself has shape-shifted through more forms than almost any other GM badge: full-size truck-based K5, S-10-based compact, TrailBlazer-era mid-size, the 2019 crossover, and now this." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Riptide Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "Camaro": {
       generations:{
         "3rd Gen Tail (1990-1992)":{
@@ -3159,6 +3172,19 @@ const VEHICLES = {
         },
       },
     },
+    "Equinox EV": {
+      years:["2024","2025","2026"],
+      trims:{
+        "LT":  { engine:"Single Electric Motor (210hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Chevy's genuinely affordable EV entry point, deliberately priced to undercut its own Blazer EV sibling by a wide margin. Up to roughly 319 miles of range on the base FWD version." },
+        "RS":  { engine:"Dual Electric Motors (288hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Riptide Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "K5 Blazer": {
       years:["1990","1991","1992","1993","1994"],
       trims:{
@@ -3225,6 +3251,19 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Torch Red (Red)",hex:"#C8102E"},
             {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Blazer (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (193hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely all-new vehicle sharing nothing but a name with any prior Blazer — this is a front-drive-based crossover, not a body-on-frame truck-based SUV, filling the gap in Chevy's lineup between the 5-seat Equinox and 7-seat Traverse." },
+            "V6":   { engine:"3.6L V6 (308hp)", drivetrain:"AWD", transmission:"Automatic", note:"RS and Premier top trims get this V6 along with a genuinely capable AWD system, plus bigger 20-21 inch wheels." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
@@ -3315,6 +3354,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Silverado EV": {
+      years:["2024","2025","2026"],
+      trims:{
+        "WT":  { engine:"Dual Electric Motors (510hp)", drivetrain:"4WD", transmission:"Automatic (Single-Speed)", note:"A genuinely purpose-built EV truck platform rather than an electrified version of the gas Silverado — different underlying architecture entirely, sharing its Ultium-based bones with the GMC Hummer EV. The Max Range configuration pushes toward 450 miles, genuinely class-leading when it launched." },
+        "RST": { engine:"Dual Electric Motors (754hp)", drivetrain:"4WD", transmission:"Automatic (Single-Speed)", note:"The launch-edition performance trim — genuinely absurd output for a full-size pickup, quicker in a straight line than most sports cars." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+        {name:"Iridescent Pearl Tricoat (White)",hex:"#F0F0F0"},
+      ],
     },
     "Suburban": {
       generations:{
