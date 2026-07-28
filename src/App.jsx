@@ -2953,6 +2953,35 @@ const VEHICLES = {
     },
   },
   "Chevrolet": {
+    "Avalanche": {
+      generations:{
+        "1st Gen (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "1500": { engine:"5.3L V8 (285-295hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuinely unique idea — built on the same platform as the Suburban, blending SUV and pickup functionality with the signature 'Midgate,' a fold-down partition between the cabin and bed that let owners convert between a short pickup bed and a much longer one at will, without any tools." },
+            "2500": { engine:"8.1L V8 (320hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Light Pewter Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"5.3L V8 (310-320hp)", drivetrain:"4WD", transmission:"Automatic", note:"Kept the Midgate feature. Discontinued after 2013 with no direct successor — the segment it created never really caught on with other automakers, though it maintains a genuinely loyal enthusiast following today." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Camaro": {
       generations:{
         "3rd Gen Tail (1990-1992)":{
@@ -3011,6 +3040,48 @@ const VEHICLES = {
             {name:"Red Hot (Red)",hex:"#C8102E"},
             {name:"Riverside Blue Metallic (Blue)",hex:"#1E4B8E"},
             {name:"Shock (Yellow-Green)",hex:"#B8D848"},
+          ],
+        },
+      },
+    },
+    "Colorado": {
+      generations:{
+        "1st Gen (2004-2012)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engines:["2.8L 4-cylinder (175hp)","3.5L Inline-5 (220hp)"], drivetrain:"2WD/4WD", transmission:"Automatic", note:"Directly replaced the S-10, co-developed with Isuzu, sized noticeably larger than the compact truck it took over from — a real jump toward the midsize class. Engines grew for 2007 (2.9L I4, 3.7L I5). A 5.3L V8 option arrived 2009, genuinely unusual for this size of truck." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Graystone Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2015-2022)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "Base": { engines:["2.5L 4-cylinder (200hp)","3.6L V6 (308hp)"], drivetrain:"2WD/4WD", transmission:"Automatic", note:"Colorado sat out 2013-2014 entirely between generations. New GMT31XX platform, genuinely bigger than the outgoing truck — the midsize class had grown up around it. 2.8L Duramax Turbo-Diesel arrived 2016." },
+            "ZR2":  { engine:"3.6L V6 (308hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2017 — a genuine off-road specialist trim, widened body, upgraded suspension and shocks." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cajun Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Base":     { engine:"2.7L Turbocharged 4-cylinder (237hp)", drivetrain:"2WD/4WD", transmission:"Automatic (8-Speed)", note:"A genuinely simplified lineup — turbo four-cylinder only across every trim, no more V6, five-cylinder, or diesel options. The first Colorado generation designed specifically for North America rather than shared globally." },
+            "ZR2 / Trail Boss":{ engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Sterling Gray Metallic (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
@@ -3098,6 +3169,76 @@ const VEHICLES = {
         {name:"Onyx Black (Black)",hex:"#1A1A1A"},
         {name:"Victory Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "S-10": {
+      generations:{
+        "1st Gen Tail (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base":     { engines:["2.2L 4-cylinder (100-105hp)","4.3L V6 (160-195hp)"], drivetrain:"2WD/4WD", transmissions:["Manual","Automatic"], note:"The first domestically-built compact pickup from any of the Big Three American automakers." },
+            "Syclone":  { engine:"4.3L Turbocharged V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"1991 only — a genuinely legendary factory sleeper truck, quicker to 60mph than the Ferrari 348 and Corvette ZR-1 of the same era in period road tests. All-wheel drive standard, hand-built in limited numbers." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (1994-2004)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engines:["2.2L 4-cylinder (118hp)","4.3L V6 (180-195hp)"], drivetrain:"2WD/4WD", transmission:"Automatic", note:"Full redesign, more rounded and aerodynamic. Crew Cab (4-door) joined for 2001 — the first-ever 4-door S-10. By 2004, the truck's final year, Crew Cab was the only body style still offered before the midsize Colorado took over entirely." },
+            "SS / ZR2":{ engine:"4.3L V6 (180-195hp)", drivetrain:"2WD/4WD", transmission:"Manual", note:"SS for street performance, ZR2 for a genuine off-road specialist package." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "S-10 Blazer / Blazer": {
+      generations:{
+        "S-10 Blazer (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "Base": { engine:"4.3L V6 (160hp)", drivetrain:"2WD/4WD", transmission:"Automatic", note:"The mid-size SUV counterpart to the S-10 pickup, sharing its underlying platform. Only offered as a 2-door for its first 8 years — a 4-door version finally arrived in March 1990 as a 1991 model, adding real practicality without giving up much of anything compared to the much larger K5 Blazer." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "Blazer (1995-2005)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"4.3L Vortec V6 (190-195hp)", drivetrain:"2WD/4WD", transmission:"Automatic", note:"Dropped the 'S-10' prefix, becoming simply 'Blazer' — right around the same time the full-size Blazer was itself renamed to Tahoe, which is genuinely confusing in hindsight but made sense as GM's naming strategy at the time. US retail sales of 4-door models ended 2004; 2-door retail sales continued into 2005 before the nameplate went dormant, eventually returning as a completely different crossover in 2019." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "S-10 EV": {
+      years:["1997","1998"],
+      trims:{
+        "Base": { engine:"AC Induction Electric Motor (114hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuinely significant, largely forgotten early EV — based on the same technology as GM's own EV1, built at the Shreveport, Louisiana plant. Offered with a lead-acid battery (33mi range) initially, later a nickel-metal hydride pack that stretched real-world range to around 72 miles. Genuinely ahead of its time by well over a decade, but sold in only very limited numbers before being discontinued." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Light Driftwood Metallic (Beige)",hex:"#C8B89A"},
       ],
     },
     "Silverado": {
