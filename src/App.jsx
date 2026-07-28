@@ -2534,6 +2534,19 @@ const VEHICLES = {
         },
       },
     },
+    "DTS": {
+      years:["2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Luxury":     { engine:"4.6L Northstar V8 (275hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the DeVille nameplate entirely, bringing Cadillac's big front-drive flagship sedan into the brand's three-letter naming convention alongside the CTS, STS, and SRX. Genuinely the last conventionally elegant, transverse-Northstar-powered full-size Cadillac aimed at the traditional buyer who valued a quiet, isolated ride over back-road sharpness — that job belonged to the rear-drive STS instead. An extended-wheelbase DTS-L limousine version also existed, built by outside coachbuilder Accubuilt." },
+        "Performance":{ engine:"4.6L Northstar V8 (292hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"White Diamond (White)",hex:"#F5F5F5"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Crystal Red (Red)",hex:"#9B1B30"},
+        {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "Escalade": {
       generations:{
         "1st Gen (1999-2000)":{
@@ -2600,6 +2613,62 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "SRX": {
+      generations:{
+        "1st Gen (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "V6": { engine:"3.6L V6 (255-260hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Cadillac's first-ever unibody crossover, built on the same Sigma platform as the CTS. Optional third-row seating gave it genuine 7-passenger capacity — a feature dropped entirely on the next generation. Won Car and Driver's 'Five Best Trucks' luxury SUV award three years running, 2004-2006." },
+            "V8": { engine:"4.6L Northstar V8 (320hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "2nd Gen (2010-2016)":{
+          years:["2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "Base": { engines:["3.0L V6 (265hp)","3.6L V6 (308hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely major shift — switched from rear-drive to front-drive-based architecture, shrunk in size, dropped the V8 entirely, and lost the third-row seat option. Retired after 2016, replaced by the XT5." },
+          },
+          colors:[
+            {name:"White Diamond Tricoat (White)",hex:"#F0F0F0"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+          ],
+        },
+      },
+    },
+    "STS": {
+      years:["2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "V6": { engine:"3.6L V6 (255-302hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Positioned as the sportier, rear-drive-based alternative to the front-drive DTS — Cadillac's answer to the BMW 5 Series and Mercedes E-Class. Shares its Sigma platform with the CTS and SRX." },
+        "V8": { engine:"4.6L Northstar V8 (320hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Discontinued after 2010 due to slow sales — the V8's real-world fuel economy penalty wasn't matched by a big enough performance gain to justify it for most buyers." },
+        "STS-V":{ engine:"4.4L Supercharged Northstar V8 (469hp)", drivetrain:"RWD", transmission:"Automatic", note:"Shares its supercharged engine family with the XLR-V of the same era — genuinely quick for a big rear-drive sedan of this generation." },
+      },
+      colors:[
+        {name:"White Diamond (White)",hex:"#F5F5F5"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Crystal Red (Red)",hex:"#9B1B30"},
+        {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "XLR": {
+      years:["2004","2005","2006","2007","2008","2009"],
+      trims:{
+        "Base": { engine:"4.6L Northstar V8 (320hp)", drivetrain:"RWD", transmissions:["Automatic (5-Speed)","Automatic (6-Speed)"], note:"Cadillac's flagship 2-seat roadster, sharing its platform with the contemporary Chevrolet Corvette (C5, then C6) — though tuned for grand-touring comfort rather than outright track performance. Genuinely notable firsts for the brand: the first Cadillac with heated and ventilated seats, and the first with radar-based adaptive cruise control. Power-retractable hardtop roof standard." },
+        "XLR-V": { engine:"4.4L Supercharged Northstar V8 (443hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Added 2006 — the very first Cadillac V-Series model ever built, the car that started the whole V-Series performance sub-brand that continues today." },
+      },
+      colors:[
+        {name:"White Diamond (White)",hex:"#F5F5F5"},
+        {name:"Black Raven (Black)",hex:"#1A1A1A"},
+        {name:"Crystal Red (Red)",hex:"#9B1B30"},
+        {name:"Silver Sand Metallic (Silver)",hex:"#C0C0C0"},
+      ],
     },
   },
   "Chevrolet": {
