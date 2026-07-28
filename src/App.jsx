@@ -4010,6 +4010,19 @@ const VEHICLES = {
     },
   },
   "Chrysler": {
+    "200": {
+      years:["2011","2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "Base": { engine:"2.4L 4-cylinder (173-184hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Sebring, using much of the same underlying platform initially just with genuinely improved interior materials and refinement." },
+        "Limited":{ engine:"3.6L Pentastar V6 (283hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A full 2015 redesign brought a genuinely striking new look and one of the industry's first 9-speed automatic transmissions, plus AWD availability for the first time on this nameplate. Discontinued after 2017 as Chrysler stepped away from traditional sedans entirely to focus on minivans and, later, SUVs." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Redline Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "300": {
       generations:{
         "1st Gen (2005-2010)":{
@@ -4042,6 +4055,33 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "300M": {
+      years:["1999","2000","2001","2002","2003","2004"],
+      trims:{
+        "Base":    { engine:"3.5L V6 (253hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely revived the historic '300 letter series' naming after decades away — 'M' picking up where the original run left off at 'L' back in 1965, though this car shared none of the old letter-series cars' V8 power or rear-wheel drive. Deliberately built 10 inches shorter than the mechanically-related Concorde specifically so it could qualify for Europe's more compact 'five-metre' size class for export. Shares its 3.5L V6 with the Plymouth/Chrysler Prowler." },
+        "Special": { engine:"3.5L V6 (255hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2002 — a genuine performance-appearance package with a lowered, stiffened suspension, 18-inch wheels, dual exhaust, and faux-carbon-fiber interior trim. This was the final Chrysler flagship sedan before the nameplate was replaced by the all-new, rear-wheel-drive 2005 Chrysler 300." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Aspen": {
+      years:["2007","2008","2009"],
+      trims:{
+        "Base":   { engine:"4.7L V8 (235hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine Chrysler-badged sibling to the Dodge Durango, sharing that truck-based SUV platform. Arrived right as gas prices were climbing and the broader full-size SUV market was already cooling — the timing was genuinely difficult." },
+        "Limited":{ engine:"5.7L HEMI V8 (335hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+        "Hybrid": { engine:"5.7L HEMI V8 Two-Mode Hybrid (335hp combined)", drivetrain:"4WD", transmission:"Automatic (e-CVT)", note:"Added 2009 — a genuinely early hybrid full-size SUV attempt, using GM's own 'Two-Mode' hybrid transmission technology. Discontinued the same year the Hybrid launched, caught up in Chrysler's 2009 bankruptcy restructuring and broad model-lineup cuts." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+        {name:"Light Sandstone Metallic (Beige)",hex:"#C8B89A"},
+      ],
     },
     "Cirrus": {
       years:["1995","1996","1997","1998","1999","2000"],
@@ -4085,6 +4125,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Crossfire": {
+      years:["2004","2005","2006","2007","2008"],
+      trims:{
+        "Base": { engine:"3.2L V6 (215hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine product of the Daimler-Chrysler merger years — built on the platform of the first-generation Mercedes-Benz SLK, with real Mercedes mechanical bones underneath a distinctly American retro-futuristic body. Offered as both a coupe and a roadster." },
+        "SRT-6":{ engine:"3.2L Supercharged V6 (330hp)", drivetrain:"RWD", transmission:"Automatic", note:"The genuine performance flagship — a supercharged version of the same Mercedes-sourced V6, automatic transmission only." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Blaze Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
     "Fifth Avenue": {
       years:["1990","1991","1992","1993"],
@@ -4140,6 +4193,104 @@ const VEHICLES = {
         },
       },
     },
+    "Pacifica": {
+      generations:{
+        "Crossover (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "Base":{ engine:"3.5L V6 (250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Chrysler's first-ever crossover, genuinely blending characteristics of a minivan, SUV, and station wagon into one vehicle — a real departure at a time when the crossover segment itself was still figuring out what it wanted to be." },
+            "AWD":  { engine:"4.0L V6 (250hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Minivan (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Touring":{ engine:"3.6L Pentastar V6 (287hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine reinvention of the name — this shares nothing with the earlier crossover beyond the badge. All-new minivan that directly replaced the Town and Country as Chrysler's flagship, later joined by Stow 'n Go seating and a genuinely comprehensive suite of family-focused tech." },
+            "Hybrid": { engine:"3.6L Plug-In Hybrid V6 (260hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"The first-ever hybrid minivan sold in the US, with a genuine all-electric-only driving range before the gas engine engages." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cherry Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Ceramic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Prowler": {
+      years:["2001","2002"],
+      trims:{
+        "Base": { engine:"3.5L V6 (253hp)", drivetrain:"RWD", transmission:"Automatic (AutoStick)", note:"Genuinely began life as the Plymouth Prowler in 1997, only becoming badged as a Chrysler for these final two model years once Plymouth was discontinued — matching the same pattern the PT Cruiser and Voyager also went through. Deliberately styled to look like an open-wheel 1930s hot rod, with an aluminum-intensive body and frame. A real point of criticism from enthusiasts: despite the hot-rod styling, no true manual transmission was ever offered — automatic, with a manual-shift AutoStick mode, only." },
+      },
+      colors:[
+        {name:"Prowler Purple (Purple)",hex:"#4A2E5A"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Yellow (Yellow)",hex:"#F5C800"},
+      ],
+    },
+    "PT Cruiser": {
+      years:["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010"],
+      trims:{
+        "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Another nameplate that genuinely began life planned as a Plymouth before that brand's discontinuation shifted it to Chrysler. Deliberately styled to evoke 1930s-40s sedan proportions mixed with 1950s-60s hot-rod flair, and classified by regulators as a light truck rather than a passenger car — a genuine loophole that helped automakers meet fleet fuel-economy rules at the time. A 2-door convertible body style joined for 2005." },
+        "GT":   { engine:"2.4L Turbocharged 4-cylinder (180-230hp)", drivetrain:"FWD", transmission:"Manual", note:"Turbo output grew significantly over the model's run — from 180hp at launch to 230hp by the final years." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Electric Blue Pearl (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Sebring": {
+      generations:{
+        "1st Gen (1995-2000)":{
+          years:["1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "Coupe / Convertible": { engine:"2.0L 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely complex nameplate history — Sebring covered coupe, convertible, and sedan body styles that weren't always on the same underlying platform or even built at the same factory. The coupe was co-engineered with Mitsubishi and actually built at a Mitsubishi-operated plant in Normal, Illinois; the sedan and convertible shared more with the Cirrus." },
+            "V6":                 { engine:"2.5L V6 (163-168hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "LXi":  { engine:"2.7L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"A retractable hardtop convertible option joined the lineup, along with AWD availability on sedan models for the first time." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2007-2010)":{
+          years:["2007","2008","2009","2010"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (173hp)", drivetrain:"FWD", transmission:"Automatic", note:"Final Sebring generation — the nameplate was retired after 2010, with the all-new 200 taking over its role for both sedan and convertible body styles the following year." },
+            "Limited":{ engine:"3.5L V6 (235hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Crimson Crystal Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
     "Shadow": {
       years:["1990","1991","1992","1993","1994"],
       trims:{
@@ -4178,6 +4329,18 @@ const VEHICLES = {
         {name:"Black (Black)",hex:"#1A1A1A"},
         {name:"Garnet Red Pearl (Red)",hex:"#6B1A2A"},
         {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "TEVan": {
+      years:["1993","1994","1995"],
+      trims:{
+        "Base": { engine:"Electric Motor (Lead-Acid Battery Pack)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuinely early, largely forgotten electric vehicle attempt — an electric conversion of Chrysler's own minivan platform, sold in only very limited numbers, primarily leased to utility companies and fleet operators rather than sold to everyday retail customers. A real historical curiosity showing that even 1990s Detroit was experimenting with EVs, decades before it became a mainstream industry focus." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Town and Country": {
