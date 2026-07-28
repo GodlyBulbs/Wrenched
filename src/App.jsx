@@ -1534,7 +1534,7 @@ const VEHICLES = {
         },
       },
     },
-    "328i / 330i": {
+    "3 Series": {
       generations:{
         "E30 (1984-1993)":{
           years:["1984","1985","1986","1987","1988","1989","1990","1991","1992","1993"],
@@ -3707,6 +3707,19 @@ const VEHICLES = {
         {name:"Iridescent Pearl Tricoat (White)",hex:"#F0F0F0"},
       ],
     },
+    "Spark": {
+      years:["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+      trims:{
+        "LS":  { engine:"1.2L 4-cylinder (84hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Genuinely one of the smallest, most affordable new cars sold in the US at the time — a real city car aimed squarely at first-time buyers on a tight budget. A rare, low-volume 'Spark EV' variant was also offered 2014-2016, sold or leased only in select states as a compliance vehicle rather than a nationwide product." },
+        "1LT / 2LT":{ engine:"1.4L 4-cylinder (98hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"] },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Red Hot (Red)",hex:"#C8102E"},
+        {name:"Electric Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "Suburban": {
       generations:{
         "8th Gen (1992-1999)":{
@@ -3839,6 +3852,35 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Radiant Red Tintcoat (Red)",hex:"#9B1B30"},
             {name:"Sterling Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Tracker": {
+      generations:{
+        "1st Gen (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "Base": { engine:"1.6L Suzuki Inline-4 (80-96hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Sold under the now-extinct Geo brand for most of this run, only becoming a true Chevrolet-badged model once GM retired Geo in 1998. A genuine co-development with Suzuki, closely related to the Suzuki Sidekick, built at the GM CAMI plant in Ontario. A 2-door convertible and hardtop were the only body styles at first; a 2WD convertible option arrived 1992, and a proper 4-door hardtop joined for 1996." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Green Metallic (Green)",hex:"#3B8A5A"},
+          ],
+        },
+        "2nd Gen (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engine:"2.0L Inline-4 (127hp)", drivetrain:"4WD", transmission:"Automatic", note:"Now officially a Chevrolet after Geo's retirement. Full-time 4WD system was built with genuine off-road capability in mind, not just an on-road AWD system for foul weather. ZR2 off-road package added 2001, with a wider stance and lifted suspension." },
+            "V6":   { engine:"2.5L V6 (155-165hp)", drivetrain:"4WD", transmission:"Automatic", note:"4-door only. This was the final Tracker generation — discontinued after 2004 and replaced by the Equinox. The Trax nameplate revived the small-SUV role over a decade later." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Dark Forest Green Metallic (Green)",hex:"#2E5A3A"},
           ],
         },
       },
