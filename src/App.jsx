@@ -837,6 +837,50 @@ const VEHICLES = {
         },
       },
     },
+    "A3": {
+      generations:{
+        "8P (2006-2013)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "2.0T":     { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Dual-Clutch)", note:"The first-generation A3 (badged 8L) never actually reached the US at all — it was Europe-only from 1996-2003. This 8P generation is where the US story genuinely begins. A 3.2L V6 Quattro trim (250hp) was offered in the early years before being dropped." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Sea Blue Pearl (Blue)",hex:"#1E3A6B"},
+            {name:"Meteor Gray Pearl (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "8V (2015-2020)":{
+          years:["2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (186-220hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Dual-Clutch)", note:"Sedan body style joined the traditional hatchback/Sportback for the first time. This generation brought both the first-ever US-market S3 and RS3." },
+            "S3":   { engine:"2.0L Turbocharged 4-cylinder (292-306hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "RS3":  { engine:"2.5L Turbocharged 5-cylinder (394-401hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2017 — a genuinely characterful five-cylinder engine, shared with the RS Q3 and TT RS." },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#C8102E"},
+            {name:"Florett Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "8Y (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Dual-Clutch)" },
+            "S3":   { engine:"2.0L Turbocharged 4-cylinder (306-328hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+            "RS3":  { engine:"2.5L Turbocharged 5-cylinder (401hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Ibis White (White)",hex:"#F5F5F5"},
+            {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Kyalami Green (Green)",hex:"#2E5A3A"},
+            {name:"Navarra Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "A4": {
       generations:{
         "B5 (1996-2001)":{
@@ -1025,6 +1069,20 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "A6 e-tron": {
+      years:["2025","2026"],
+      trims:{
+        "Premium":         { engine:"Single Electric Motor (375hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Audi's first all-electric A6, riding on the same Porsche-co-developed Premium Platform Electric (PPE) architecture as the Q6 e-tron. Offered as a 'Sportback' liftback body style. 800-volt electrical architecture allows a 10-80% DC fast charge in as little as 21 minutes." },
+        "Quattro":         { engine:"Dual Electric Motors (422-456hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "S6 e-tron":       { engine:"Dual Electric Motors (496hp, 543hp with launch control)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"There's no RS-badged version of this car — the RS e-tron GT already covers that top-performance role in Audi's EV lineup." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Mythos Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Plasma Blue Metallic (Blue)",hex:"#1E4B8E"},
+        {name:"District Green (Green)",hex:"#2E5A3A"},
+      ],
     },
     "A7": {
       generations:{
