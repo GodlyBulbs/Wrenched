@@ -3015,6 +3015,79 @@ const VEHICLES = {
         },
       },
     },
+    "Corvette": {
+      generations:{
+        "C4 (1984-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Base":{ engine:"5.7L L98 V8 (245hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1984 was actually skipped as a production year — the all-new C4 was delayed by engineering, emissions, and quality control issues, so it launched as an early 1984 model instead. LT1 arrived for 1992 with real revisions to heads, cooling, and fuel injection, bumping output to 300hp." },
+            "LT1": { engine:"5.7L LT1 V8 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"1992-1996." },
+            "ZR-1":{ engine:"5.7L LT5 V8 (375-405hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuinely wild collaboration — the DOHC 32-valve LT5 was designed by Lotus (then GM-owned) and hand-built by Mercury Marine. Nicknamed the 'King of the Hill,' it was the fastest production Corvette of its era and one of the most expensive options GM ever offered." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Polo Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "C5 (1997-2004)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base":{ engine:"5.7L LS1 V8 (345-350hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up reinvention — all-new aluminum LS-family V8, a hydroformed frame, and a rear-mounted transaxle for near-perfect 50/50 weight distribution. The last Corvette generation ever built with pop-up headlights." },
+            "Z06": { engine:"5.7L LS6 V8 (385-405hp)", drivetrain:"RWD", transmission:"Manual", note:"Returned the Z06 name to the lineup after decades away — genuinely track-focused, fixed-roof coupe only." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Navy Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "C6 (2005-2013)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base":{ engine:"6.0L LS2 V8 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"First Corvette with exposed headlights since 1962. LS3 (430hp) replaced the LS2 as the base engine partway through this generation." },
+            "Z06": { engine:"7.0L LS7 V8 (505hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuinely huge naturally-aspirated small-block for a production car, hand-assembled." },
+            "ZR1": { engine:"6.2L Supercharged LS9 V8 (638hp)", drivetrain:"RWD", transmission:"Manual", note:"The most powerful production Corvette built up to that point — genuine supercar-territory performance." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Cyber Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "C7 (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Stingray":{ engine:"6.2L LT1 V8 (455-460hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The 'Stingray' name returned after decades away. This was the last front-engine Corvette ever built — a genuinely historic end to a design layout the car had used since 1953." },
+            "Z06": { engine:"6.2L Supercharged LT4 V8 (650hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "ZR1": { engine:"6.2L Supercharged LT5 V8 (755hp)", drivetrain:"RWD", transmission:"Manual", note:"755hp — the most powerful, quickest Corvette ever built up to that point." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Corvette Racing Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "C8 (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Stingray":{ engine:"6.2L LT2 V8 (490-495hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"The single biggest change in Corvette history — the engine moved behind the driver for the first time ever, ending nearly 70 years of front-engine tradition. Manual transmission was dropped entirely; dual-clutch automatic only." },
+            "Z06": { engine:"5.5L LT6 V8 (670hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"A genuinely wild flat-plane-crank naturally-aspirated V8 — the most powerful naturally-aspirated V8 ever put in any production car, full stop." },
+            "E-Ray": { engine:"6.2L V8 + Electric Front Motor (655hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"The first-ever all-wheel-drive Corvette, and the first-ever hybrid Corvette — the electric motor drives the front wheels independently of the gas V8 powering the rear." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Torch Red (Red)",hex:"#C8102E"},
+            {name:"Elkhart Lake Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Silverado": {
       generations:{
         "C/K 4th Gen (1990-1998)":{
