@@ -2604,6 +2604,48 @@ const VEHICLES = {
         },
       },
     },
+    "DeVille": {
+      generations:{
+        "1990-1993":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engines:["4.5L V8 (180hp)","4.9L V8 (200hp)"], drivetrain:"FWD", transmission:"Automatic", note:"The DeVille name traces back to the 1950s, decades before this window — this era carried the traditional formula forward: front-drive, transverse V8, a genuinely huge back seat. Fleetwood was actually a trim level of the DeVille itself through 1992, before becoming its own standalone model." },
+          },
+          colors:[
+            {name:"Cotillion White (White)",hex:"#F5F5F5"},
+            {name:"Sable Black (Black)",hex:"#1A1A1A"},
+            {name:"Carmine Red (Red)",hex:"#9B1B30"},
+            {name:"Autumn Maple Firemist (Bronze)",hex:"#8A6B4A"},
+          ],
+        },
+        "1994-1999":{
+          years:["1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "Base":     { engine:"4.6L Northstar V8 (270-275hp)", drivetrain:"FWD", transmission:"Automatic", note:"Full redesign onto the K-body platform shared with the Seville, growing the wheelbase and moving production to Hamtramck, Michigan. Concours replaced the short-lived 1993-only Sixty Special as the top trim." },
+            "Concours": { engine:"4.6L Northstar V8 (300hp)", drivetrain:"FWD", transmission:"Automatic", note:"The high-output L37 version of the Northstar, the same tune used in the contemporary Eldorado ETC." },
+          },
+          colors:[
+            {name:"Cotillion White (White)",hex:"#F5F5F5"},
+            {name:"Sable Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2000-2005":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "DHS": { engine:"4.6L Northstar V8 (275hp)", drivetrain:"FWD", transmission:"Automatic", note:"Trim names shifted to DHS ('DeVille High Luxury Sedan') and DTS ('DeVille Touring Sedan') — the same DTS abbreviation that became its own standalone model in 2006, once the DeVille name was retired for good. One of the first cars with a night-vision system, using Raytheon-derived thermal imaging technology projected onto the windshield." },
+            "DTS": { engine:"4.6L Northstar V8 (300hp)", drivetrain:"FWD", transmission:"Automatic", note:"The last DeVille rolled off the line on June 23, 2005 — a genuine end of an era for one of Cadillac's longest-running nameplates." },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+            {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "DTS": {
       years:["2006","2007","2008","2009","2010","2011"],
       trims:{
@@ -2615,6 +2657,19 @@ const VEHICLES = {
         {name:"Black Raven (Black)",hex:"#1A1A1A"},
         {name:"Crystal Red (Red)",hex:"#9B1B30"},
         {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Eldorado": {
+      years:["1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+      trims:{
+        "Base": { engines:["4.9L V8 (200hp)","4.6L Northstar V8 (270hp)"], drivetrain:"FWD", transmission:"Automatic", note:"The final generation of one of Cadillac's most storied nameplates — the Eldorado name dates back to 1953. A period road test summed up the difference between trims memorably: 'the base Eldo is rather ordinary... you ride in a Seville or Eldorado, you drive an STS or Touring Coupe.' The 4.9L V8 was the sole engine for the first two model years before the Northstar arrived." },
+        "ETC":  { engine:"4.6L Northstar V8 (295-300hp)", drivetrain:"FWD", transmission:"Automatic", note:"Eldorado Touring Coupe — the enthusiast's pick, with a genuinely firmer touring suspension and monochrome paint that set it apart from the standard car. This was the last Eldorado ever built; the nameplate ended entirely after 2002 with no successor." },
+      },
+      colors:[
+        {name:"Cotillion White (White)",hex:"#F5F5F5"},
+        {name:"Sable Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+        {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
     },
     "ELR": {
@@ -2710,6 +2765,18 @@ const VEHICLES = {
         {name:"Emerald Lake Metallic (Green)",hex:"#2E5A3A"},
       ],
     },
+    "Fleetwood": {
+      years:["1993","1994","1995","1996"],
+      trims:{
+        "Base": { engine:"5.7L LT1 V8 (260hp)", drivetrain:"RWD", transmission:"Automatic", note:"The direct successor to the Brougham — same traditional body-on-frame, rear-wheel-drive American luxury formula, just with a genuinely potent new engine: the same LT1 V8 found in the contemporary Chevrolet Impala SS and Caprice 9C1 police package. Discontinued after 1996 with no direct RWD successor; Cadillac's full-size sedans went front-drive-only from that point forward." },
+      },
+      colors:[
+        {name:"Cotillion White (White)",hex:"#F5F5F5"},
+        {name:"Sable Black (Black)",hex:"#1A1A1A"},
+        {name:"Autumn Maple Firemist (Bronze)",hex:"#8A6B4A"},
+        {name:"Dark Adriatic Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "Lyriq": {
       years:["2023","2024","2025","2026"],
       trims:{
@@ -2734,6 +2801,36 @@ const VEHICLES = {
         {name:"Infrared Tintcoat (Red)",hex:"#9B1B30"},
         {name:"Argent Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
+    },
+    "Seville": {
+      generations:{
+        "4th Gen (1992-1997)":{
+          years:["1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "SLS": { engines:["4.9L V8 (200hp)","4.6L Northstar V8 (270hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Shared its full restyle with the Eldorado for 1992 but the two cars share no body panels — Cadillac gave the Seville a more European-flavored design direction while the Eldorado leaned traditional. The base SLS was, in the words of one period road test, 'simply creme de la so-so.'" },
+            "STS": { engine:"4.6L Northstar V8 (295hp)", drivetrain:"FWD", transmission:"Automatic", note:"'Seville Touring Sedan' — genuinely the enthusiast's pick of the lineup, with a firmer touring suspension. This STS trim eventually grew into its own fully standalone model in 2005, years after the Seville itself was discontinued." },
+          },
+          colors:[
+            {name:"Cotillion White (White)",hex:"#F5F5F5"},
+            {name:"Sable Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "SLS": { engine:"4.6L Northstar V8 (275hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "STS": { engine:"4.6L Northstar V8 (300hp)", drivetrain:"FWD", transmission:"Automatic", note:"This was the final Seville generation — discontinued after 2004, with the STS trim graduating into its own separate standalone model the very next year." },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Black Raven (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+            {name:"Light Platinum (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
     },
     "SRX": {
       generations:{
