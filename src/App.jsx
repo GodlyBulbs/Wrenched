@@ -5227,6 +5227,19 @@ const VEHICLES = {
         {name:"Blu Mediterraneo (Blue)",hex:"#1E4B8E"},
       ],
     },
+    "California T": {
+      years:["2014","2015","2016","2017"],
+      trims:{
+        "Base":     { engine:"3.9L Twin-Turbo V8 (552-560hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"The 'T' genuinely marks a real turning point — Ferrari's first modern turbocharged V8, a real departure from the naturally-aspirated character the brand had built its reputation on for decades. A full 100hp jump over the original California it replaced under the same body." },
+        "Handling Speciale":{ engine:"3.9L Twin-Turbo V8 (560hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2016 — a genuinely sportier suspension and steering tune. Replaced by the Portofino for 2018." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "Enzo": {
       years:["2002","2003","2004"],
       trims:{
@@ -5302,6 +5315,32 @@ const VEHICLES = {
         {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "GTC4Lusso": {
+      years:["2016","2017","2018","2019","2020"],
+      trims:{
+        "V12":{ engine:"6.3L V12 (681hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the FF as Ferrari's flagship 4-seat shooting-brake grand tourer, with an evolved '4RM-S' all-wheel-drive system genuinely capable in snow — Ferrari marketed it as a real all-season, all-weather car. The name blends 'GTC' (Gran Turismo Coupé) with 'Lusso' (Italian for luxury)." },
+        "T":  { engine:"3.9L Twin-Turbo V8 (602hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2016/2017 — a genuinely different character from the V12 version, dropping both AWD and four cylinders for a lighter, sharper-handling, rear-drive-only alternative aimed at drivers who valued dynamics over ultimate all-weather capability." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "LaFerrari": {
+      years:["2013","2014","2015","2016"],
+      trims:{
+        "Base":  { engine:"6.3L V12 + Electric Motor Hybrid (950hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"Ferrari's first-ever hybrid production car, and the true successor to the Enzo as the brand's halo hypercar. Genuinely part of what enthusiasts call the 'Holy Trinity' of early-2010s hybrid hypercars, launched around the same era as the McLaren P1 and Porsche 918 Spyder — each brand's own answer to combining electrification with genuine flagship performance. Exactly 499 coupes were built." },
+        "Aperta":{ engine:"6.3L V12 + Electric Motor Hybrid (950hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"A genuine open-top version added afterward, limited to 209 units — even rarer than the already-scarce coupe." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Mondial t": {
