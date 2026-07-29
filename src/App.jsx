@@ -5189,6 +5189,19 @@ const VEHICLES = {
         {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "599 GTB Fiorano": {
+      years:["2006","2007","2008","2009","2010","2011","2012"],
+      trims:{
+        "Base": { engine:"6.0L V12 (612hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Replaced the 575M Maranello and was the most powerful series-production Ferrari road car in the world at the time of its introduction. The name itself packs in three references at once: '599' is the V12's total displacement divided by ten, 'GTB' stands for Gran Turismo Berlinetta, and 'Fiorano' honors Ferrari's own private test track. A genuinely all-new engine architecture versus the outgoing 575M, revving to a lofty 8,400rpm." },
+        "GTO":  { engine:"6.0L V12 (661hp)", drivetrain:"RWD", transmission:"Automatic (F1 Paddle-Shift)", note:"A genuine track-focused special edition, reviving the legendary 'GTO' badge — lighter, faster, and more powerful than the standard 599." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+      ],
+    },
     "612 Scaglietti": {
       years:["2004","2005","2006","2007","2008","2009","2010","2011"],
       trims:{
@@ -5201,6 +5214,19 @@ const VEHICLES = {
         {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
+    "California": {
+      years:["2008","2009","2010","2011","2012","2013","2014"],
+      trims:{
+        "Base": { engine:"4.3L V8 (460hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Genuinely significant on two fronts — Ferrari's first-ever front-engine V8 road car, and the brand's first-ever retractable hardtop convertible. Deliberately aimed at a broader, more everyday-usable kind of buyer than Ferrari had traditionally chased." },
+        "30":   { engine:"4.3L V8 (490hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2012 — '30' referring to roughly 30kg of weight savings versus the original car." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Mediterraneo (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "Enzo": {
       years:["2002","2003","2004"],
       trims:{
@@ -5211,6 +5237,19 @@ const VEHICLES = {
         {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "F12 Berlinetta": {
+      years:["2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "Base":{ engine:"6.3L V12 (730hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the 599 GTB Fiorano as the genuine most powerful naturally-aspirated production Ferrari at the time of its launch — a real high-water mark for big, screaming V12s before turbocharging took over much of the lineup." },
+        "tdf": { engine:"6.3L V12 (769hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2015 — 'tdf' honors the Tour de France Automobile road race Ferrari once dominated. A genuinely extreme, lighter, track-focused special edition, built in very limited numbers." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
       ],
     },
     "F355": {
@@ -5251,6 +5290,18 @@ const VEHICLES = {
         {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
         {name:"Rosso Barchetta (Red)",hex:"#9B1B30"},
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "FF": {
+      years:["2011","2012","2013","2014","2015","2016"],
+      trims:{
+        "Base": { engine:"6.3L V12 (651hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"'FF' stands for 'Ferrari Four,' referencing both its genuine 4-seat cabin and Ferrari's first-ever all-wheel-drive system in a road car. Also the brand's first-ever shooting-brake body style — a real practical hatchback shape wrapped around true supercar performance, genuinely unlike anything else Ferrari had built before." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Mondial t": {
