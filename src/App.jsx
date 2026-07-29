@@ -4864,6 +4864,19 @@ const VEHICLES = {
         {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "Monaco": {
+      years:["1990","1991","1992"],
+      trims:{
+        "LE": { engine:"3.0L PRV V6 (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely strange piece of corporate history — essentially a rebadged Eagle Premier, which itself traced back to a joint AMC/Renault project Chrysler inherited when it bought AMC in 1987. As part of that same deal, Chrysler was contractually obligated to purchase a huge quantity of Renault-sourced PRV V6 engines, and the Monaco badge was added largely to help move more of that required engine volume once the Eagle Premier alone wasn't selling fast enough. Revived the Monaco name after a 12-year absence (last used in 1978), and marked Dodge's first-ever full-size front-wheel-drive sedan, succeeding the rear-wheel-drive Diplomat. Built in Brampton, Ontario, alongside the Premier itself. Only one engine and transmission combination was ever offered — no options existed." },
+        "ES": { engine:"3.0L PRV V6 (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added four-wheel disc brakes, a touring suspension, and alloy wheels over the base LE. Genuinely low volume across its entire run — roughly 21,500 total Monacos were built across all three model years combined, a small fraction of the Dodge Dynasty's sales in the very same showrooms." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Claret Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "Neon": {
       generations:{
         "1st Gen (1995-1999)":{
