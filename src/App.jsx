@@ -4477,6 +4477,33 @@ const VEHICLES = {
         {name:"Brilliant Black Pearlcoat (Black)",hex:"#1A1A1A"},
       ],
     },
+    "Daytona": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base":  { engines:["2.2L 4-cylinder (93hp)","2.5L 4-cylinder (100hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A sporty front-wheel-drive hatchback coupe, sharing its underlying K-car platform with the Shadow but with genuinely distinct, more aggressive styling of its own." },
+        "ES Turbo":{ engine:"2.2L Turbocharged 4-cylinder (146-174hp)", drivetrain:"FWD", transmission:"Manual" },
+        "IROC R/T":{ engine:"2.2L Turbo III 4-cylinder (224hp)", drivetrain:"FWD", transmission:"Manual", note:"Added mid-1992 — a genuinely potent DOHC 16-valve turbo four for a front-drive coupe of this era, named for Dodge's sponsorship of the International Race of Champions." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Dynasty": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engines:["2.5L 4-cylinder (100hp)","3.0L Mitsubishi V6 (141hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Positioned between the Spirit and the larger Monaco in Dodge's own sedan lineup — genuinely one of the biggest K-car-derived variants ever built, sharing its body with the contemporary Chrysler New Yorker." },
+        "LE":   { engine:"3.3L V6 (147hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "Ram 2500": {
       generations:{
         "1st Gen (1990-1993)":{
@@ -4561,6 +4588,33 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Shadow": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "Base":   { engines:["2.2L 4-cylinder (93hp)","2.5L 4-cylinder (100hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Shared its underlying P-platform with the Plymouth Sundance and Chrysler-badged Shadow, though a 2-door convertible body style arrived for 1991 as a genuine Dodge exclusive — Plymouth never offered a Sundance convertible." },
+        "ES Turbo":{ engine:"2.2L Turbocharged 4-cylinder (146-174hp)", drivetrain:"FWD", transmission:"Manual" },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Spirit": {
+      years:["1990","1991","1992","1993","1994","1995"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (100hp)", drivetrain:"FWD", transmission:"Automatic", note:"A mid-size sedan sibling to the Chrysler Spirit and Plymouth Acclaim, sharing the AA platform." },
+        "LE":   { engine:"3.0L V6 (141hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "R/T":  { engine:"2.2L Turbo III 4-cylinder (224hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuinely significant performance sedan for its era — a DOHC 16-valve turbo four making real power, widely regarded at launch as one of the quickest 4-door sedans sold in America. A real halo trim unique to Dodge, never offered on the Chrysler or Plymouth versions of this same basic car." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
   },
   "Ferrari": {
