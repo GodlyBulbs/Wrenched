@@ -4623,6 +4623,53 @@ const VEHICLES = {
         {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "Durango": {
+      generations:{
+        "1st Gen (1998-2003)":{
+          years:["1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "Base": { engines:["3.9L V6 (175hp)","5.2L V8 (230hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Built on the same platform as the Dakota pickup, replacing the old Ramcharger and filling a genuine gap in Dodge's lineup between the larger Tahoe/Yukon twins and the smaller Explorer/Blazer. 4WD-only for the first model year; a more affordable 2WD version and the V6 option both arrived for 1999. Optional forward-facing third-row seat gave it real 7-passenger capacity." },
+            "SLT+": { engine:"5.9L V8 (245hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"3.7L V6 (210hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Grew noticeably larger — 3 inches longer wheelbase, 4.3 inches taller than the outgoing generation — while Dodge insisted it was no longer directly based on the Dakota pickup despite still using a separate body-on-frame chassis. 2007 facelift added electronic stability control and a tire pressure monitoring system." },
+            "SLT":  { engine:"4.7L V8 (235hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SXT":  { engine:"5.7L HEMI V8 (335hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "Hybrid":{ engine:"5.7L HEMI V8 Two-Mode Hybrid (335hp combined)", drivetrain:"4WD", transmission:"Automatic (e-CVT)", note:"Added for the final 2009 model year — genuinely one of the earliest full-size hybrid SUVs on the market. Discontinued the same year amid the broader financial crisis; the Newark, Delaware plant that built the Durango closed that October." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2011-2026)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base":  { engine:"3.6L Pentastar V6 (290hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Dodge skipped the 2010 model year entirely between generations. A genuine ground-up reinvention — switched to unibody construction for the first time, dropping the old body-on-frame design, and sharing real underpinnings with the Jeep Grand Cherokee. Three-row seating became a genuine standard feature again." },
+            "R/T":   { engine:"5.7L HEMI V8 (360hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "SRT":   { engine:"6.4L HEMI V8 (475hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2018." },
+            "SRT Hellcat":{ engine:"6.2L Supercharged HEMI V8 (710hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2021 — a genuinely absurd 710hp for a 3-row family SUV. Briefly disappeared from the lineup for the 2022 model year before returning the following year." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redline Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Frostbite (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Dynasty": {
       years:["1990","1991","1992","1993"],
       trims:{
@@ -4667,6 +4714,21 @@ const VEHICLES = {
         },
       },
     },
+    "Magnum": {
+      years:["2005","2006","2007","2008"],
+      trims:{
+        "SE":  { engine:"2.7L V6 (190hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine rear-wheel-drive station wagon, sharing its LX platform with the Charger and Chrysler 300 of the same era — a real rarity in a market that had mostly moved on from wagons entirely." },
+        "SXT": { engine:"3.5L V6 (250hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "R/T": { engine:"5.7L HEMI V8 (340hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "SRT8":{ engine:"6.1L HEMI V8 (425hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuinely one of the fastest factory station wagons ever built — a real sleeper that could embarrass plenty of sports cars off the line. Discontinued after 2008 with no successor; the wagon body style was dropped entirely from this platform going forward." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+        {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "Neon": {
       generations:{
         "1st Gen (1995-1999)":{
@@ -4697,6 +4759,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Nitro": {
+      years:["2007","2008","2009","2010","2011","2012"],
+      trims:{
+        "SXT": { engine:"3.7L V6 (210hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"Shared its underlying platform with the Jeep Liberty, wrapped in genuinely boxy, aggressive styling that stood apart from most other compact SUVs of its era." },
+        "R/T": { engine:"4.0L V6 (260hp)", drivetrain:"4WD", transmission:"Automatic", note:"Discontinued after 2012 alongside the closely related Jeep Liberty, as Dodge stepped away from this segment entirely with no direct successor." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Detonator Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Steel Blue Metallic (Blue)",hex:"#4A6B8E"},
+      ],
     },
     "Shadow": {
       years:["1990","1991","1992","1993","1994"],
