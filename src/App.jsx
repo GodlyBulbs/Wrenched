@@ -5214,6 +5214,19 @@ const VEHICLES = {
         {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
+    "812 Superfast": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Superfast": { engine:"6.5L Naturally-Aspirated V12 (789hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the F12berlinetta as Ferrari's V12 flagship, and was the most powerful, fastest road-going Ferrari at launch — the naturally-aspirated V12 grew from 6.2 to 6.5 liters over the F12's engine. Named for its roughly 800 metric horsepower (812) and the Superfast badge Ferrari first used on 1950s-60s front-engine V12 grand tourers." },
+        "GTS":       { engine:"6.5L Naturally-Aspirated V12 (789hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2019 — the first front-engine V12 series-production convertible Ferrari had built in 50 years (the 550, 575, and 599 convertibles were all limited, special-customer-only editions). Retractable hard top operable at speeds up to 28mph." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "California": {
       years:["2008","2009","2010","2011","2012","2013","2014"],
       trims:{
@@ -5354,6 +5367,49 @@ const VEHICLES = {
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
         {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Portofino": {
+      generations:{
+        "Portofino (2018-2020)":{
+          years:["2018","2019","2020"],
+          trims:{
+            "Base": { engine:"3.9L Twin-Turbo V8 (591hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the California T as Ferrari's entry-level front-engine convertible — retained the retractable hard top concept, now paired with lighter aluminum construction and sharper handling than the car it replaced." },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+            {name:"Nero (Black)",hex:"#1A1A1A"},
+            {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "Portofino M (2021-2023)":{
+          years:["2021","2022","2023"],
+          trims:{
+            "Base": { engine:"3.9L Twin-Turbo V8 (612hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"'M' for Modificata — same 3.9L displacement and torque as the standard Portofino, but a genuine 20hp bump from new cam profiles and a turbo-speed sensor, paired with a new 8-speed dual-clutch (replacing the old 7-speed). First Ferrari GT convertible with a 5-position Manettino. Ferrari's first model ever launched exclusively online, during COVID lockdown. Replaced by the Roma Spider." },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+            {name:"Nero (Black)",hex:"#1A1A1A"},
+            {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "SF90 Stradale": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Stradale":    { engine:"4.0L Twin-Turbo Hybrid V8 (986hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Ferrari's first series-production plug-in hybrid, and its first mid-engine AWD road car — a rear-mounted electric motor plus two more on the front axle for independent torque vectoring, on top of a 769hp twin-turbo V8. Named for Ferrari's 90th anniversary (Scuderia Ferrari, 1929-2019). About 16 miles of pure-electric range." },
+        "Spider":      { engine:"4.0L Twin-Turbo Hybrid V8 (986hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2021 — retractable hard top version, Ferrari's first-ever production plug-in hybrid spider." },
+        "XX Stradale": { engine:"4.0L Twin-Turbo Hybrid V8 (1016hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2024 — the first road-legal cars in Ferrari's XX Programme, previously reserved for track-only specials. Adds an 'Extra Boost' overboost function and revised aero over the standard SF90." },
+        "XX Spider":   { engine:"4.0L Twin-Turbo Hybrid V8 (1016hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2024 alongside the XX Stradale — open-top version with the same XX Programme upgrades." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
       ],
     },
   },
