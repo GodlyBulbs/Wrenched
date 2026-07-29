@@ -5075,6 +5075,20 @@ const VEHICLES = {
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
       ],
     },
+    "360 Modena": {
+      years:["1999","2000","2001","2002","2003","2004","2005"],
+      trims:{
+        "Modena":{ engine:"3.6L V8 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Replaced the F355, and genuinely significant for using Ferrari's first-ever full aluminum spaceframe chassis — a real leap in both rigidity and weight savings over the steel structures that came before it. Named for the city of Modena, Enzo Ferrari's birthplace." },
+        "Spider": { engine:"3.6L V8 (400hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"] },
+        "Challenge Stradale":{ engine:"3.6L V8 (425hp)", drivetrain:"RWD", transmission:"Automatic (F1 Paddle-Shift)", note:"A genuine track-focused special edition — lighter, stiffer, and more powerful than the standard car, F1 paddle-shift only." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "456": {
       generations:{
         "456 GT (1992-1997)":{
@@ -5147,6 +5161,44 @@ const VEHICLES = {
         {name:"Rosso Corsa (Red)",hex:"#C8102E"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "550 Maranello": {
+      years:["1996","1997","1998","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"5.5L V12 (485hp)", drivetrain:"RWD", transmission:"Manual", note:"Marked Ferrari's genuine return to a front-engine, 2-seat V12 sports car format — a real departure after decades where the mid-engine Testarossa/512 lineage had dominated that role. Named after Maranello, the town where Ferrari has been headquartered since 1943. A rare Barchetta open-top special edition also existed, built by Pininfarina in very limited numbers." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+        {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "F355": {
+      years:["1994","1995","1996","1997","1998","1999"],
+      trims:{
+        "Berlinetta":{ engine:"3.5L V8 (375-380hp)", drivetrain:"RWD", transmission:"Manual", note:"Replaced the 348 with a genuine 5-valve-per-cylinder head, a real technical step up. Ferrari's first-ever car with driver-adjustable suspension settings. In 1997, the F1-branded version became the first-ever road car fitted with an electro-hydraulic paddle-shift gearbox directly derived from Formula 1 — a genuine historic first for the entire industry, not just Ferrari." },
+        "GTS":       { engine:"3.5L V8 (375-380hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Targa-top version, launched alongside the Berlinetta." },
+        "Spider":    { engine:"3.5L V8 (375-380hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Added 1995, its bodywork shaped by 1,800 hours of Pininfarina wind-tunnel testing. Genuinely one of Ferrari's more commonly seen classics today — 11,273 total F355s were built across the whole run." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "F50": {
+      years:["1995","1996","1997"],
+      trims:{
+        "Base": { engine:"4.7L V12 (513-520hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuine halo hypercar sitting between the F40 and Enzo, built to celebrate Ferrari's 50th anniversary. The V12 engine traces directly back to Ferrari's actual 1990 Formula 1 car — a real motorsport-to-road connection, not just marketing language. Manual transmission only, no driver aids to speak of, genuinely raw by design. Only 349 were ever built." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Rosso Barchetta (Red)",hex:"#9B1B30"},
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
       ],
     },
