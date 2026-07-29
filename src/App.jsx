@@ -5266,6 +5266,31 @@ const VEHICLES = {
         {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
       ],
     },
+    "849 Testarossa": {
+      years:["2026"],
+      trims:{
+        "849 Testarossa":        { engine:"4.0L Twin-Turbo Hybrid V8 (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the SF90 Stradale as Ferrari's mid-engine flagship — a heavily revised version of the SF90's twin-turbo V8 (now 830 metric horsepower on its own, up 50) paired with the same three-motor PHEV hybrid system for a combined 1,050 cv. Name borrows from the 1950s-60s 250 Testa Rossa racers: '8' for the cylinder count, '49' for each cylinder's displacement in cc. Revealed September 2025, production beginning mid-2026." },
+        "849 Testarossa Spider": { engine:"4.0L Twin-Turbo Hybrid V8 (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Open-top version, revealed alongside the coupe rather than following later." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Amalfi": {
+      years:["2025","2026"],
+      trims:{
+        "Base": { engine:"3.9L Twin-Turbo V8 (631hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the Roma as Ferrari's entry-level front-engine GT — an evolution of the Roma's V8 (up 20hp) in a lighter, updated body, named for the Amalfi Coast. Deliberately kept non-hybrid while much of the rest of the lineup electrifies. Notably brought back physical steering wheel buttons after the Roma and 296 had switched to touch-capacitive controls, a change Ferrari made in direct response to owner feedback." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "California": {
       years:["2008","2009","2010","2011","2012","2013","2014"],
       trims:{
@@ -5369,6 +5394,18 @@ const VEHICLES = {
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
       ],
     },
+    "F80": {
+      years:["2025","2026"],
+      trims:{
+        "Base": { engine:"3.0L Twin-Turbo Hybrid V6 (1184hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the LaFerrari as Ferrari's flagship halo hypercar, and the sixth in the 288 GTO/F40/F50/Enzo/LaFerrari lineage. A genuine departure from that lineage's V12 tradition — a twin-turbo V6 derived from the Le Mans-winning 499P race car, paired with three electric motors (two up front for AWD, one acting as a starter/generator) for a combined 1,184hp. Butterfly doors, active suspension, and an F1-style 'S-Duct' front end. Limited to 799 units, roughly $3.9 million each." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
+      ],
+    },
     "FF": {
       years:["2011","2012","2013","2014","2015","2016"],
       trims:{
@@ -5405,6 +5442,18 @@ const VEHICLES = {
         {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Luce": {
+      years:["2026","2027"],
+      trims:{
+        "Base": { engine:"Quad Electric Motor (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Ferrari's first-ever production electric vehicle, and its first true 4/5-seat model — a liftback sedan with rear coach doors, styled by former Apple design chief Jony Ive and Marc Newson at LoveFrom. Four independently-controlled motors give real torque-vectoring, on an 800-volt architecture with a 122kWh battery good for roughly 330 miles WLTP (280 EPA-estimated). Name means 'light' in Italian. Revealed May 2026, deliveries starting late 2026 at around $640,000." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Mondial t": {
