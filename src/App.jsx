@@ -5061,6 +5061,19 @@ const VEHICLES = {
     },
   },
   "Ferrari": {
+    "12Cilindri": {
+      years:["2024","2025","2026"],
+      trims:{
+        "12Cilindri":        { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the 812 Superfast as Ferrari's naturally-aspirated V12 flagship — styling deliberately echoes the 1968-1973 365 GTB/4 'Daytona.' Deliberately no hybrid assist despite Ferrari having the tech on hand elsewhere in the lineup; several upgrades (titanium con rods, ceramic-coated exhaust) were carried over from the track-focused 812 Competizione." },
+        "12Cilindri Spider": { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Launched alongside the coupe rather than following later — a genuine first for a Ferrari front-engine V12 flagship. Retractable hard top, 14-second operation at speeds up to 27mph." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "296 GTB / GTS": {
       years:["2022","2023","2024","2025","2026"],
       trims:{
@@ -5227,6 +5240,19 @@ const VEHICLES = {
         {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
+    "812 Competizione": {
+      years:["2022","2023","2024"],
+      trims:{
+        "Competizione":   { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"A track-focused special series built on the 812 Superfast's bones — titanium connecting rods, revised valve timing, and a raised 9,500rpm redline pushed output past the Superfast's 789hp. Over 300lbs lighter than the Superfast too, plus independent rear-wheel steering and a new aero package for real added downforce. Direct successor to the F12tdf and 599 GTO lineage of limited-run front-engine V12 specials." },
+        "Competizione A": { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"'A' for Aperta — a targa-top version launched alongside the coupe, a tribute to Ferrari's open-top tradition." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "812 Superfast": {
       years:["2017","2018","2019","2020","2021","2022","2023","2024"],
       trims:{
@@ -5264,6 +5290,18 @@ const VEHICLES = {
         {name:"Bianco Avus (White)",hex:"#F5F5F5"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Daytona SP3": {
+      years:["2022","2023","2024","2025"],
+      trims:{
+        "Base": { engine:"6.5L Naturally-Aspirated V12 (829hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Third entry in Ferrari's limited-run 'Icona' series (after the Monza SP1/SP2), a tribute to Ferrari's 1-2-3 sweep at the 1967 24 Hours of Daytona — styling borrows from the 330 P3/4, P4, and 412 P racers that finished that podium. Butterfly doors, LaFerrari-derived chassis, and the first mid-mounted Ferrari V12 without hybrid assistance since the Enzo. Limited to 599 units, all sold before public unveiling, at roughly $2.25 million each." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
     "Enzo": {
