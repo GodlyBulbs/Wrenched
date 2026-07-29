@@ -4598,91 +4598,6 @@ const VEHICLES = {
         },
       },
     },
-    "Ram 2500": {
-      generations:{
-        "1st Gen (1990-1993)":{
-          years:["1990","1991","1992","1993"],
-          trims:{
-            "Base": { engines:["5.2L V8 (170hp)","5.9L V8 (230hp)","5.9L Cummins 12-Valve Diesel (160-180hp)"], transmissions:["Manual","Automatic"] },
-          },
-          drivetrainOptions:["2WD","4WD"],
-          colors:[
-            {name:"Bright White (White)",hex:"#F5F5F5"},
-            {name:"Flame Red (Red)",hex:"#C8102E"},
-            {name:"Black (Black)",hex:"#111111"},
-            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
-          ],
-        },
-        "2nd Gen (1994-2002)":{
-          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002"],
-          trims:{
-            "Base": { engines:["3.9L V6 (175hp)","5.2L V8 (220hp)","5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (160-245hp)"], transmissions:["Manual","Automatic"], note:"The 'big-rig' redesign — famous for its 12-valve Cummins through 1998, then 24-valve from 1998.5 on." },
-            "SLT":  { engines:["5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (160-245hp)"], transmissions:["Manual","Automatic"] },
-            "Laramie": { engines:["5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (215-245hp)"], transmission:"Automatic" },
-          },
-          drivetrainOptions:["2WD","4WD"],
-          colors:[
-            {name:"Bright White (White)",hex:"#F5F5F5"},
-            {name:"Flame Red (Red)",hex:"#C8102E"},
-            {name:"Black (Black)",hex:"#111111"},
-            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
-            {name:"Forest Green Pearl (Green)",hex:"#2E5A3A"},
-            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
-          ],
-        },
-        "3rd Gen (2003-2009)":{
-          years:["2003","2004","2005","2006","2007","2008","2009"],
-          trims:{
-            "ST":      { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (305-325hp)","6.7L Cummins Diesel (350hp)"], transmissions:["Manual","Automatic"], note:"The new 5.7L HEMI replaces the old Magnum V8s this generation. 6.7L Cummins arrives mid-2007 (2007.5), replacing the 5.9L." },
-            "SLT":     { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (305-325hp)","6.7L Cummins Diesel (350hp)"], transmissions:["Manual","Automatic"] },
-            "Laramie": { engines:["5.7L HEMI V8 (345hp)","6.7L Cummins Diesel (350hp)"], transmission:"Automatic", note:"Mega Cab introduced this generation — the longest cab Ram ever offered." },
-          },
-          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
-          colors:[
-            {name:"Brilliant Black Crystal Pearl (Black)",hex:"#111111"},
-            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
-            {name:"Bright White / White Knuckle (White)",hex:"#F5F5F5"},
-            {name:"Flame Red / Poppy Red (Red)",hex:"#C8102E"},
-            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
-            {name:"Mineral Gray Metallic (Gray)",hex:"#6B6E6F"},
-          ],
-        },
-        "4th Gen (2010-2018)":{
-          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018"],
-          trims:{
-            "Tradesman": { engines:["5.7L HEMI V8 (383hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic", note:"Ram split from Dodge as its own brand starting this generation — no more 'Dodge Ram' badging." },
-            "SLT":       { engines:["5.7L HEMI V8 (383hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic" },
-            "Laramie":   { engines:["5.7L HEMI V8 (383hp)","6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic" },
-          },
-          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
-          colors:[
-            {name:"Brilliant Black Crystal Pearl (Black)",hex:"#111111"},
-            {name:"Bright White (White)",hex:"#F5F5F5"},
-            {name:"Flame Red (Red)",hex:"#C8102E"},
-            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6B6B"},
-            {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
-          ],
-        },
-        "5th Gen (2019-2026)":{
-          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
-          trims:{
-            "Tradesman": { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
-            "Big Horn":  { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
-            "Laramie":   { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
-            "Limited":   { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
-          },
-          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
-          colors:[
-            {name:"Diamond Black Crystal Pearl (Black)",hex:"#111111"},
-            {name:"Bright White (White)",hex:"#F5F5F5"},
-            {name:"Flame Red (Red)",hex:"#C8102E"},
-            {name:"Billet Silver Metallic (Silver)",hex:"#C0C0C0"},
-            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
-            {name:"Hydro Blue Pearl (Blue)",hex:"#4A7B9D"},
-          ],
-        },
-      },
-    },
     "Shadow": {
       years:["1990","1991","1992","1993","1994"],
       trims:{
@@ -4708,6 +4623,20 @@ const VEHICLES = {
         {name:"Black (Black)",hex:"#1A1A1A"},
         {name:"Flame Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Stealth": {
+      years:["1990","1991","1992","1993","1994","1995","1996"],
+      trims:{
+        "Base": { engine:"3.0L SOHC V6 (164hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A badge-engineered Mitsubishi 3000GT/GTO, built at Mitsubishi's own Nagoya, Japan plant. Genuinely tied to the birth of the Viper itself: the Stealth was originally lined up to pace the 1991 Indianapolis 500, but the United Auto Workers union objected to a Japanese-built car taking that role — so at the eleventh hour, Chrysler brought a pre-production Viper prototype instead, giving the whole Viper legend its dramatic public launch." },
+        "ES / R/T": { engine:"3.0L DOHC V6 (222hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "R/T Turbo":{ engine:"3.0L Twin-Turbo DOHC V6 (300hp)", drivetrain:"AWD", transmission:"Manual", note:"Shared its twin-turbo drivetrain with the Mitsubishi 3000GT VR-4 — genuinely advanced tech for the era, including standard AWD and available active aerodynamics." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Flame Red (Red)",hex:"#C8102E"},
+        {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Stratus": {
@@ -4736,6 +4665,73 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
             {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Viper": {
+      generations:{
+        "SR (1992-1995)":{
+          years:["1992","1993","1994","1995"],
+          trims:{
+            "RT/10": { engine:"8.0L V10 (400-415hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuinely developed with real input from Lamborghini, which Chrysler owned at the time. Roadster only, deliberately raw — no exterior door handles, vinyl side curtains instead of real windows at launch. The car's origin traces back to Chrysler president Bob Lutz's own weekend spent with a Shelby Cobra kit car, which inspired the whole concept." },
+          },
+          colors:[
+            {name:"Viper Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Emerald Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "SR II (1996-2002)":{
+          years:["1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "RT/10":{ engine:"8.0L V10 (450hp)", drivetrain:"RWD", transmission:"Manual" },
+            "GTS":  { engine:"8.0L V10 (450hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 1996 — a genuine fixed-roof coupe with a distinctive 'double bubble' roofline, roughly 90% new body panels versus the roadster." },
+            "ACR":  { engine:"8.0L V10 (460hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 1999 — American Club Racer, the genuine track-focused variant with adjustable suspension and lightweight BBS wheels, a designation that's carried through every Viper generation since." },
+          },
+          colors:[
+            {name:"Viper Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "ZB I (2003-2006)":{
+          years:["2003","2004","2005","2006"],
+          trims:{
+            "SRT-10": { engine:"8.3L V10 (500-510hp)", drivetrain:"RWD", transmission:"Manual", note:"Sharper, more cohesive redesign — wheelbase stretched 2.6 inches for improved stability, stiffer chassis. Roadster only at first; the coupe body style returned for 2006." },
+          },
+          colors:[
+            {name:"Viper Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Viper Racing Blue (Blue)",hex:"#1E3A6B"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "ZB II (2008-2010)":{
+          years:["2008","2009","2010"],
+          trims:{
+            "SRT-10":{ engine:"8.4L V10 (600hp)", drivetrain:"RWD", transmission:"Manual", note:"Dodge deliberately skipped the 2007 model year entirely to prepare this refresh. A major mechanical overhaul — bigger 8.4L displacement, better-flowing cylinder heads, and a sturdier Tremec transmission. The ACR variant set a genuinely record-setting Nürburgring lap time of 7:22.1 in 2008, one of the fastest street-legal times around that track at the time." },
+          },
+          colors:[
+            {name:"Viper Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Viper Racing Blue (Blue)",hex:"#1E3A6B"},
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+          ],
+        },
+        "VX I (2013-2017)":{
+          years:["2013","2014","2015","2016","2017"],
+          trims:{
+            "SRT":  { engine:"8.4L V10 (640hp)", drivetrain:"RWD", transmission:"Manual", note:"Returned after a brief hiatus, initially sold under the standalone SRT brand before being folded back under Dodge partway through this generation. Genuine electronic stability and traction control arrived for the first time in Viper history, broadening its usability without diluting the raw character." },
+            "ACR":  { engine:"8.4L V10 (645hp)", drivetrain:"RWD", transmission:"Manual", note:"This was the final Viper generation — production ended for good in 2017, roughly 31,000-32,000 built across 26 total model years, with no direct successor since." },
+          },
+          colors:[
+            {name:"Viper Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Stryker Purple (Purple)",hex:"#4A2E5A"},
+            {name:"Competition Blue (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
@@ -7284,6 +7280,93 @@ const VEHICLES = {
       },
     },
   },
+  "Ram": {
+    "Ram 2500": {
+      generations:{
+        "1st Gen (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engines:["5.2L V8 (170hp)","5.9L V8 (230hp)","5.9L Cummins 12-Valve Diesel (160-180hp)"], transmissions:["Manual","Automatic"] },
+          },
+          drivetrainOptions:["2WD","4WD"],
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (1994-2002)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engines:["3.9L V6 (175hp)","5.2L V8 (220hp)","5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (160-245hp)"], transmissions:["Manual","Automatic"], note:"The 'big-rig' redesign — famous for its 12-valve Cummins through 1998, then 24-valve from 1998.5 on." },
+            "SLT":  { engines:["5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (160-245hp)"], transmissions:["Manual","Automatic"] },
+            "Laramie": { engines:["5.9L V8 (230hp)","8.0L V10 (300hp)","5.9L Cummins Diesel (215-245hp)"], transmission:"Automatic" },
+          },
+          drivetrainOptions:["2WD","4WD"],
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+            {name:"Forest Green Pearl (Green)",hex:"#2E5A3A"},
+            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2003-2009)":{
+          years:["2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "ST":      { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (305-325hp)","6.7L Cummins Diesel (350hp)"], transmissions:["Manual","Automatic"], note:"The new 5.7L HEMI replaces the old Magnum V8s this generation. 6.7L Cummins arrives mid-2007 (2007.5), replacing the 5.9L." },
+            "SLT":     { engines:["5.7L HEMI V8 (345hp)","5.9L Cummins Diesel (305-325hp)","6.7L Cummins Diesel (350hp)"], transmissions:["Manual","Automatic"] },
+            "Laramie": { engines:["5.7L HEMI V8 (345hp)","6.7L Cummins Diesel (350hp)"], transmission:"Automatic", note:"Mega Cab introduced this generation — the longest cab Ram ever offered." },
+          },
+          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
+          colors:[
+            {name:"Brilliant Black Crystal Pearl (Black)",hex:"#111111"},
+            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Bright White / White Knuckle (White)",hex:"#F5F5F5"},
+            {name:"Flame Red / Poppy Red (Red)",hex:"#C8102E"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Mineral Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2010-2018)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Tradesman": { engines:["5.7L HEMI V8 (383hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic", note:"Ram split from Dodge as its own brand starting this generation — no more 'Dodge Ram' badging." },
+            "SLT":       { engines:["5.7L HEMI V8 (383hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic" },
+            "Laramie":   { engines:["5.7L HEMI V8 (383hp)","6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (350-370hp)"], transmission:"Automatic" },
+          },
+          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
+          colors:[
+            {name:"Brilliant Black Crystal Pearl (Black)",hex:"#111111"},
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6B6B"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "5th Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Tradesman": { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
+            "Big Horn":  { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
+            "Laramie":   { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
+            "Limited":   { engines:["6.4L HEMI V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], transmission:"Automatic" },
+          },
+          drivetrainOptions:["2WD","4WD (Part-Time)","4WD (Full-Time)"],
+          colors:[
+            {name:"Diamond Black Crystal Pearl (Black)",hex:"#111111"},
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Billet Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
+            {name:"Hydro Blue Pearl (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+  },
   "Scion": {
     "tC": {
       generations:{
@@ -8356,7 +8439,7 @@ const TORQUE_SPECS = {
       },
     ],
   },
-  "Dodge": {
+  "Ram": {
     "Ram 2500": [
       {
         partName:"Wheel Lug Nuts",
@@ -8602,7 +8685,7 @@ const CATALOG = {
       {brand:"Mishimoto",category:"Oil Catch Can",part:"Oil Catch Can Kit"},
     ],
   },
-  "Dodge": {
+  "Ram": {
     "Ram 2500": [
       {brand:"Smarty (Mads Electronics)",category:"Tuner / Programmer",part:"Smarty CR Tuner",note:"The go-to tuner in the 5.9L Cummins community — adjustable power levels, works well stacked with other fueling mods."},
       {brand:"Smarty (Mads Electronics)",category:"Tuner / Programmer",part:"Smarty Jr.",note:"Milder power gains, aimed at fuel economy over max horsepower."},
