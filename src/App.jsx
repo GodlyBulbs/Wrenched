@@ -5176,6 +5176,43 @@ const VEHICLES = {
         {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
       ],
     },
+    "575M Maranello": {
+      years:["2002","2003","2004","2005","2006"],
+      trims:{
+        "Base":       { engine:"5.7L V12 (508hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"'M' for Modificata — essentially an updated 550 Maranello with a bigger engine and minor Pininfarina styling tweaks, close enough that the two are easy to mix up at a glance. A genuinely redesigned interior moved the tachometer from the center of the gauge cluster to a more conventional position." },
+        "SuperAmerica":{ engine:"5.7L V12 (533hp)", drivetrain:"RWD", transmission:"Automatic (F1 Paddle-Shift)", note:"A genuinely clever retractable hardtop that rotated backward to sit flush over the trunk when open — a real engineering flex for a front-engine V12 GT of this era." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "612 Scaglietti": {
+      years:["2004","2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Base": { engine:"5.7L V12 (532hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Replaced the 456 as Ferrari's genuine 2+2 grand tourer, named as a tribute to Carrozzeria Scaglietti, the Maranello-based coachbuilder that had shaped many of Ferrari's most famous cars since 1951. Faster and lighter than the 456 it replaced, despite growing in overall size." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
+      ],
+    },
+    "Enzo": {
+      years:["2002","2003","2004"],
+      trims:{
+        "Base": { engine:"6.0L V12 (660hp)", drivetrain:"RWD", transmission:"Automatic (F1 Paddle-Shift)", note:"A genuine Formula 1-inspired halo car, named directly after Enzo Ferrari himself — carbon-fiber body construction, active aerodynamics, and F1-derived brake and suspension technology, all in a road-legal package. No traditional manual transmission was ever offered, paddle-shift only. Exactly 399 were built, a number genuinely tied to the year Ferrari and Michael Schumacher were dominating Formula 1 together." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "F355": {
       years:["1994","1995","1996","1997","1998","1999"],
       trims:{
@@ -5188,6 +5225,20 @@ const VEHICLES = {
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
         {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "F430": {
+      years:["2004","2005","2006","2007","2008","2009"],
+      trims:{
+        "Base":     { engine:"4.3L V8 (490hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"], note:"Replaced the 360 Modena, and introduced the now-iconic 'manettino' — a steering-wheel-mounted rotary dial letting the driver switch between different stability control, suspension, and gearbox behavior modes. Every Ferrari built since has carried some version of this same idea." },
+        "Spider":   { engine:"4.3L V8 (490hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (F1 Paddle-Shift)"] },
+        "Scuderia": { engine:"4.3L V8 (510hp)", drivetrain:"RWD", transmission:"Automatic (F1 Paddle-Shift)", note:"Added 2007 — a genuine track-focused special edition, lighter and faster-shifting than the standard car, paddle-shift only." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
       ],
     },
     "F50": {
