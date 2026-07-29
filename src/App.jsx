@@ -4509,6 +4509,106 @@ const VEHICLES = {
         {name:"Brilliant Black Pearlcoat (Black)",hex:"#1A1A1A"},
       ],
     },
+    "Caravan / Grand Caravan": {
+      generations:{
+        "2nd Gen (1991-1995)":{
+          years:["1991","1992","1993","1994","1995"],
+          trims:{
+            "Base":  { engines:["2.5L 4-cylinder (100hp)","3.0L V6 (142hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Chrysler's original minivan platform kicked off the entire segment back in 1984 — genuinely the first modern minivans ever sold, and the Caravan and its Plymouth Voyager twin defined what the whole category would look like for decades after. AWD became available on this generation, a real rarity for minivans at the time." },
+            "Grand":  { engine:"3.3L V6 (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"Extended-wheelbase 'Grand Caravan' version, genuinely more interior room for larger families." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (1996-2000)":{
+          years:["1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"All-new redesign, and the first generation to offer dual sliding doors as an option — a genuine practicality leap that eventually became the industry standard." },
+            "Grand":{ engines:["3.3L V6 (158hp)","3.8L V6 (166-180hp)"], drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cranberry Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Grand":{ engines:["3.3L V6 (180hp)","3.8L V6 (215hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Stow 'n Go seating arrived 2005 — second and third row seats that folded completely flat into the floor, a genuinely clever feature shared with the Chrysler Town and Country of the same era." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen (2008-2020)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"3.3L V6 (175hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Grand":{ engine:"3.6L Pentastar V6 (283hp)", drivetrain:"FWD", transmission:"Automatic", note:"3.6L Pentastar arrived with a 2011 refresh. This was the final Dodge Caravan generation — production ended for good in 2020, with the Chrysler Pacifica taking over as the brand's flagship minivan and the Voyager covering the value-priced role going forward." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cherry Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Dakota": {
+      generations:{
+        "1st Gen (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Base": { engines:["2.5L 4-cylinder (100-120hp)","3.9L V6 (125hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely historic first for the entire truck industry — the Dakota was the first compact/mid-size pickup from any manufacturer ever offered with a V8 engine option, deliberately positioned to bridge the gap between smaller trucks like the Ranger and S-10 and full-size trucks like the Ram itself. Styling was updated for 1994 to more closely resemble the larger Ram." },
+            "V8":   { engine:"5.2L V8 (170hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Aqua Pearl Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (1997-2004)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engine:"3.9L V6 (175hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine styling and engineering overhaul, adding 4-door 'Quad Cab' and 3-door 'Club Cab' body styles alongside the standard 2-door. Named North American Truck of the Year. The 2.5L 4-cylinder base engine was dropped after 2002." },
+            "SLT":  { engine:"5.2L V8 (230hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "R/T":  { engine:"5.9L Magnum V8 (250hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Added 1998 — a genuine V8 performance truck, sport-tuned suspension and real muscle-truck attitude." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "3rd Gen (2005-2011)":{
+          years:["2005","2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "Base": { engine:"3.7L V6 (210hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Despite dropping the old, larger-displacement Magnum V8s from earlier generations, this era's smaller 4.7L V8 actually made more power than any of its predecessors — a genuine sign of how far engine technology had come. The R/T name continued, but shifted from a true V8 performance trim to more of an appearance package, with a non-functional hood scoop and unique gauges rather than any real mechanical upgrade. The final two model years, 2010 and 2011, were actually badged 'Ram Dakota' rather than Dodge — a direct result of Ram splitting off as its own standalone brand in 2010. Discontinued after 2011 with no direct US-market successor." },
+            "V8":   { engine:"4.7L V8 (230-310hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Daytona": {
       years:["1990","1991","1992","1993"],
       trims:{
@@ -7281,7 +7381,7 @@ const VEHICLES = {
     },
   },
   "Ram": {
-    "Ram 2500": {
+    "2500": {
       generations:{
         "1st Gen (1990-1993)":{
           years:["1990","1991","1992","1993"],
@@ -8440,7 +8540,7 @@ const TORQUE_SPECS = {
     ],
   },
   "Ram": {
-    "Ram 2500": [
+    "2500": [
       {
         partName:"Wheel Lug Nuts",
         size:"15/16\" socket, 9/16-18 thread",
@@ -8686,7 +8786,7 @@ const CATALOG = {
     ],
   },
   "Ram": {
-    "Ram 2500": [
+    "2500": [
       {brand:"Smarty (Mads Electronics)",category:"Tuner / Programmer",part:"Smarty CR Tuner",note:"The go-to tuner in the 5.9L Cummins community — adjustable power levels, works well stacked with other fueling mods."},
       {brand:"Smarty (Mads Electronics)",category:"Tuner / Programmer",part:"Smarty Jr.",note:"Milder power gains, aimed at fuel economy over max horsepower."},
       {brand:"Edge Products",category:"Tuner / Programmer",part:"Juice w/ Attitude CS2",note:"2003-2004 has its own specific version — don't grab the 2004.5+ one, the calibration is different."},
