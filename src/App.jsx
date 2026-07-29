@@ -4456,6 +4456,38 @@ const VEHICLES = {
     },
   },
   "Dodge": {
+    "Avenger": {
+      generations:{
+        "Coupe (1995-2000)":{
+          years:["1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuinely affordable, stylish 2-door coupe, co-engineered with Mitsubishi and built at the Diamond-Star Motors plant in Normal, Illinois — the same factory that built the Eagle Talon and Mitsubishi Eclipse of the same era." },
+            "ES":   { engine:"2.5L V6 (163hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "R/T":  { engine:"2.5L V6 (163hp)", drivetrain:"FWD", transmission:"Manual", note:"Sport-tuned suspension and unique styling cues over the base coupe." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "Sedan (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "SE":  { engine:"2.4L 4-cylinder (173hp)", drivetrain:"FWD", transmission:"Automatic", note:"A completely different car reviving the name after a real 7-year gap — this time a genuine mid-size sedan, replacing the Stratus in Dodge's lineup entirely." },
+            "SXT": { engine:"2.7L V6 (189hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "R/T": { engine:"3.5L V6 (235hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redline Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Caliber": {
       years:["2007","2008","2009","2010","2011","2012"],
       trims:{
@@ -4503,6 +4535,68 @@ const VEHICLES = {
         {name:"Flame Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
       ],
+    },
+    "Intrepid": {
+      generations:{
+        "1st Gen (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "Base": { engine:"3.3L V6 (153-161hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Chrysler's original three LH-platform 'cab-forward' sedans, alongside the Chrysler Concorde and Eagle Vision — this is the genuine, unambiguous US-market version (the 'Chrysler Intrepid' badge was actually Canada-only). Landed on Car and Driver's Ten Best list for both 1993 and 1994." },
+            "ES":   { engine:"3.5L V6 (214hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engine:"2.7L DOHC V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"All-new second generation, again well-received by both critics and buyers — made the Ten Best list again for 1998 and 1999. This engine unfortunately developed a reputation for oil sludge-related failures if maintenance intervals weren't followed closely." },
+            "ES":   { engine:"3.2L SOHC V6 (225hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "R/T":  { engine:"3.5L V6 (250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Dropped after 2002, with its performance-look package folded into a new SXT trim instead. This was the final Intrepid generation — the nameplate was retired after 2004, replaced by the all-new rear-wheel-drive Charger." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Neon": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Also sold nearly identically as the Plymouth Neon. Genuinely cheeky ad campaign built around the tagline 'Hi.' painted right on the car's own headlights in early marketing photos — a real personality injection into an otherwise ordinary economy-car segment." },
+            "R/T":  { engine:"2.0L DOHC 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Bright Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "2nd Gen (2000-2005)":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (132-150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, though it kept the same basic mechanical layout underneath." },
+            "R/T":  { engine:"2.0L DOHC 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Manual" },
+            "SRT-4":{ engine:"2.4L Turbocharged 4-cylinder (215-230hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2003 — genuinely legendary among enthusiasts, a real giant-killer that could out-drag cars costing two or three times as much for a fraction of the price. Developed by Dodge's own in-house Performance Vehicle Operations group, later renamed SRT. This was the final Neon generation sold in the US under this name; the nameplate was retired after 2005, replaced by the Caliber." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Electric Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
     },
     "Ram 2500": {
       generations:{
@@ -4615,6 +4709,36 @@ const VEHICLES = {
         {name:"Flame Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
       ],
+    },
+    "Stratus": {
+      generations:{
+        "1st Gen (1995-2000)":{
+          years:["1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (132hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Chrysler's genuine 'Cloud Car' trio, built alongside the Chrysler Cirrus and Plymouth Breeze on the same JA platform — Stratus sat in the middle of the three in trim and price. All three landed on Car and Driver's Ten Best list for both 1996 and 1997." },
+            "ES":   { engine:"2.5L V6 (163-168hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "SE":  { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign, and also offered as a distinct 2-door coupe body style co-built with Mitsubishi, closely related to the Chrysler Sebring Coupe of the same era. A turbocharged R/T version existed, but was Mexico-market only — the US-spec Stratus R/T used the naturally-aspirated V6 instead. Production ended at the Sterling Heights, Michigan plant in early 2006, having built over 1.3 million combined Stratus and Sebring sedans since 2000. Replaced by the all-new Avenger for 2008." },
+            "R/T": { engine:"2.7L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
     },
   },
   "Ferrari": {
