@@ -5061,6 +5061,50 @@ const VEHICLES = {
     },
   },
   "Ferrari": {
+    "348": {
+      years:["1990","1991","1992","1993","1994","1995"],
+      trims:{
+        "TB / TS": { engine:"3.4L V8 (300hp)", drivetrain:"RWD", transmission:"Manual", note:"The final V8 Ferrari personally commissioned under Enzo Ferrari's own direction before his death in 1988 — production continued posthumously. TB (Trasversale Berlinetta) is the closed coupe, TS (Trasversale Spider) is the targa-top version, both named for the transverse-mounted 5-speed gearbox paired with a longitudinal engine, a genuinely unusual layout that helped weight distribution." },
+        "GTB / GTS":{ engine:"3.4L V8 (320hp)", drivetrain:"RWD", transmission:"Manual", note:"1993 facelift renamed the TB/TS to GTB/GTS, widened the rear track for better cornering, and bumped power via improved engine management — a genuine response to early criticism that the original cars felt unbalanced." },
+        "Spider":  { engine:"3.4L V8 (320hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 1993 — the first true open-top 348, distinct from the targa-roofed TS/GTS. Replaced by the F355 in 1995." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "456": {
+      generations:{
+        "456 GT (1992-1997)":{
+          years:["1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "GT":  { engine:"5.5L V12 (442hp)", drivetrain:"RWD", transmission:"Manual", note:"Marked Ferrari's genuine return to a proper front-engine, 2+2 V12 grand tourer after years spent focused on the mid-engine Testarossa/512 lineage — a real shift back toward the brand's classic GT roots." },
+            "GTA": { engine:"5.5L V12 (442hp)", drivetrain:"RWD", transmission:"Automatic", note:"Added an automatic transmission option, a genuine rarity for Ferrari at the time." },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Nero (Black)",hex:"#1A1A1A"},
+            {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+            {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "456M (1998-2003)":{
+          years:["1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "M":    { engine:"5.5L V12 (436hp)", drivetrain:"RWD", transmission:"Manual", note:"'M' for Modificata — a genuine mid-cycle update with revised styling and improved aerodynamics. This was the final front-engine V12 2+2 before the 612 Scaglietti took over the role." },
+            "M GTA":{ engine:"5.5L V12 (436hp)", drivetrain:"RWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+            {name:"Nero (Black)",hex:"#1A1A1A"},
+            {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+            {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "458 / 488": {
       generations:{
         "458 Italia (2009-2015)":{
@@ -5092,6 +5136,32 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "512 TR": {
+      years:["1992","1993","1994"],
+      trims:{
+        "Base": { engine:"4.9L Flat-12 (428hp)", drivetrain:"RWD", transmission:"Manual", note:"An evolution of the Testarossa, keeping its signature flat-12 'boxer' engine layout — genuinely the last chapter of that engine format at Ferrari. Once this generation ended, Ferrari's lineup split cleanly in two directions: the F355 carried the mid-engine V8 sports car forward, while the 456 covered front-engine V12 grand touring, and the flat-12 configuration itself never returned." },
+        "F512M":{ engine:"4.9L Flat-12 (440hp)", drivetrain:"RWD", transmission:"Manual", note:"1994 only — the true final send-off for the flat-12 era, with fixed headlights replacing the old pop-up units." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Mondial t": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Coupe":    { engine:"3.4L V8 (300hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuine 2+2 grand tourer, sharing real drivetrain lineage with the contemporary 348. This was the final Mondial generation — no direct successor followed the same 2+2 mid-engine format; the 456 that came after took the front-engine GT route instead." },
+        "Cabriolet":{ engine:"3.4L V8 (300hp)", drivetrain:"RWD", transmission:"Manual" },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+        {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
+      ],
     },
   },
   "Fiat": {
