@@ -4565,6 +4565,101 @@ const VEHICLES = {
         },
       },
     },
+    "Challenger": {
+      generations:{
+        "1st Modern Gen (2008-2010)":{
+          years:["2008","2009","2010"],
+          trims:{
+            "SE":  { engine:"3.5L V6 (250hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuinely retro styling deliberately echoing the original 1970 Challenger, riding on the same LX platform as the Charger and Chrysler 300." },
+            "R/T": { engine:"5.7L HEMI V8 (372hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "SRT8":{ engine:"6.1L HEMI V8 (425hp)", drivetrain:"RWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"TorRed (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Plum Crazy Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "Update (2011-2014)":{
+          years:["2011","2012","2013","2014"],
+          trims:{
+            "SXT": { engine:"3.6L Pentastar V6 (305hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "R/T": { engine:"5.7L HEMI V8 (375hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "SRT8":{ engine:"6.4L HEMI V8 (470hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Added 2012." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"TorRed (Red)",hex:"#C8102E"},
+            {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+            {name:"Header Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "Final Gen (2015-2023)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "SXT":     { engine:"3.6L Pentastar V6 (305hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "R/T":     { engine:"5.7L HEMI V8 (375hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "SRT Hellcat":{ engine:"6.2L Supercharged HEMI V8 (707hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 2015 — genuinely one of the most powerful production cars in the world at the time it launched. Widebody flared-fender versions arrived 2018, adding real grip to match the power." },
+            "Demon":   { engine:"6.2L Supercharged HEMI V8 (840hp on race fuel)", drivetrain:"RWD", transmission:"Automatic", note:"2018 only, a genuine drag-strip-only special edition — sub-9-second quarter mile capable, so extreme that Dodge stripped the front passenger seat out as standard to save weight (a rear seat delete option existed too)." },
+            "Redeye / Super Stock":{ engine:"6.2L Supercharged HEMI V8 (797-807hp)", drivetrain:"RWD", transmission:"Automatic", note:"The final Challenger generation — production ended after 2023 alongside the Charger, marked by a series of 'Last Call' special editions including the Black Ghost tribute car. No direct Challenger successor exists; the 2-door body style role was folded into the new Charger nameplate going forward." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"TorRed (Red)",hex:"#C8102E"},
+            {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+            {name:"Go Mango (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
+    "Charger": {
+      generations:{
+        "LX (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "SE":       { engine:"2.7L V6 (190hp)", drivetrain:"RWD", transmission:"Automatic", note:"Brought the Charger name back after years away, this time as a genuine full-size rear-drive 4-door sedan, closely related to the Magnum wagon and Chrysler 300 of the same era. Became a genuinely popular police fleet vehicle too. AWD arrived 2007 on SXT and R/T." },
+            "R/T Daytona":{ engine:"5.7L HEMI V8 (350-368hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"'Daytona' here functioned as a special-edition appearance package on the R/T, not a separate model — a naming pattern that continued on and off for years afterward." },
+            "SRT8":     { engine:"6.1L HEMI V8 (425hp)", drivetrain:"RWD", transmission:"Automatic", note:"A Super Bee special edition of the SRT8 arrived 2007 with unique paint and decals." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red Crystal Pearl (Red)",hex:"#9B1B30"},
+            {name:"Marine Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "LD (2011-2023)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "SXT":     { engine:"3.6L Pentastar V6 (292hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genuinely the longest single Charger generation ever — 13 model years on sale. An 8-speed automatic phased in starting 2012, and Apple CarPlay/Android Auto arrived 2017." },
+            "R/T":     { engine:"5.7L HEMI V8 (370hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "SRT Hellcat":{ engine:"6.2L Supercharged HEMI V8 (707hp)", drivetrain:"RWD", transmission:"Automatic", note:"Added 2015 — a genuinely 'crazy-fast' 4-door sedan, sharing its engine with the Challenger Hellcat. Widebody versions arrived 2020. Production ended after 2023 with a run of 'Last Call' special editions, including a 50th Anniversary tribute to the original 1969 Charger Daytona." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+            {name:"TorRed (Red)",hex:"#C8102E"},
+            {name:"F8 Green (Green)",hex:"#3B8A5A"},
+          ],
+        },
+        "Daytona (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Daytona R/T":       { engine:"Dual Electric Motors (496hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuinely major reinvention — Dodge formally adopted 'Daytona' as this generation's real name rather than just a trim, built on the new STLA Large platform with an all-electric powertrain first. Both 2-door and 4-door liftback body styles are offered, with the coupe taking over the role the discontinued Challenger used to fill. There was a genuine production gap through 2024-2025 as this generation ramped up — the old LD Charger ended in 2023, and this new one didn't actually reach customers until December 2024." },
+            "Daytona Scat Pack": { engine:"Dual Electric Motors (670hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Sixpack R/T":       { engine:"3.0L Twin-Turbo Inline-6 (420hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A gas-powered alternative joining the EV lineup, using an all-new twin-turbo inline-6 nicknamed 'Hurricane' — arriving after the initial all-electric launch." },
+            "Sixpack Scat Pack": { engine:"3.0L Twin-Turbo Inline-6 (550hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"White Knuckle (White)",hex:"#F0F0F0"},
+            {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+            {name:"TorRed (Red)",hex:"#C8102E"},
+            {name:"Frostbite (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Dakota": {
       generations:{
         "1st Gen (1990-1996)":{
@@ -4608,6 +4703,20 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Dart": {
+      years:["2013","2014","2015","2016"],
+      trims:{
+        "SE":  { engine:"2.0L 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Built on the same underlying platform as the Alfa Romeo Giulietta — one of the very first tangible products of the Fiat-Chrysler merger, genuinely blending Italian engineering with an American compact sedan." },
+        "Aero": { engine:"1.4L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Manual" },
+        "GT / Limited":{ engine:"2.4L 4-cylinder (184hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Discontinued after 2016 as compact sedan sales declined industry-wide. No direct successor followed for years — the Hornet eventually filled a similar entry-level role, but as a crossover rather than a sedan." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+        {name:"Redline Red (Red)",hex:"#C8102E"},
+        {name:"Bright Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
     },
     "Daytona": {
       years:["1990","1991","1992","1993"],
@@ -4683,6 +4792,19 @@ const VEHICLES = {
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
       ],
     },
+    "Hornet": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "GT":     { engine:"2.0L Turbocharged 4-cylinder (268hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely shares its underlying platform with the Alfa Romeo Tonale — a real sign of how much cross-brand platform-sharing happens within Stellantis these days, between two badges that once would've seemed like unlikely siblings." },
+        "R/T PHEV":{ engine:"1.3L Turbocharged Plug-In Hybrid 4-cylinder (288hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"Dodge's first-ever electrified performance model — a genuine plug-in hybrid with real all-electric-only range before the gas engine engages, while still delivering real muscle-brand-worthy power." },
+      },
+      colors:[
+        {name:"White Knuckle (White)",hex:"#F0F0F0"},
+        {name:"Pitch Black (Black)",hex:"#1A1A1A"},
+        {name:"Green Machine (Green)",hex:"#2E5A3A"},
+        {name:"Sinamon Stick (Bronze)",hex:"#8A6B4A"},
+      ],
+    },
     "Intrepid": {
       generations:{
         "1st Gen (1993-1997)":{
@@ -4713,6 +4835,19 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Journey": {
+      years:["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "SE":  { engine:"2.4L 4-cylinder (173hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely affordable midsize crossover, unusual in its class for offering a real choice between 5-seat and 7-seat configurations on the same vehicle. Sold as one continuous generation for its entire 12-year run — a genuinely long single lifecycle without a full redesign. Drew on Dodge's long minivan experience for family-friendly touches like easy third-row access." },
+        "SXT / Crossroad":{ engine:"3.6L Pentastar V6 (283hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Discontinued after 2020 with no true successor — Dodge stepped back from this segment until the Hornet arrived a few years later as a smaller, different kind of crossover." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Redline Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"True Blue Pearl (Blue)",hex:"#1E4B8E"},
+      ],
     },
     "Magnum": {
       years:["2005","2006","2007","2008"],
