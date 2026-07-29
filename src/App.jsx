@@ -5061,6 +5061,19 @@ const VEHICLES = {
     },
   },
   "Ferrari": {
+    "296 GTB / GTS": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "296 GTB": { engine:"3.0L Twin-Turbo Hybrid V6 (819hp combined)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"The first road-going Ferrari V6 in over 50 years, since the Dino 246 — a 120° twin-turbo V6 paired with a 165hp electric motor mounted between the engine and an 8-speed dual-clutch gearbox. Name combines total displacement (2.992L) and cylinder count with the 'GTB' (Gran Turismo Berlinetta) badge. About 16 miles of pure-electric range." },
+        "296 GTS": { engine:"3.0L Twin-Turbo Hybrid V6 (819hp combined)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2023 — open-top version with the same retractable hard top concept as the SF90 Spider, folding in 14 seconds at speeds up to 28mph." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "348": {
       years:["1990","1991","1992","1993","1994","1995"],
       trims:{
@@ -5396,6 +5409,31 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Purosangue": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"6.5L Naturally-Aspirated V12 (715hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Ferrari's first-ever four-door, four-seat production car — the brand avoids calling it an SUV, preferring 'FUV' (Ferrari Utility Vehicle). Genuinely unusual layout for the segment: a naturally-aspirated V12 mounted mid-front, behind the front axle, rather than the turbo V8s or V6 hybrids most rivals use. Rear-hinged 'suicide' doors open automatically. Name means 'thoroughbred' in Italian." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Roma / Roma Spider": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Roma":        { engine:"3.9L Twin-Turbo V8 (611hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the Portofino's role as Ferrari's 'everyday' front-engine GT, but with sharper, more understated styling inspired by 1950s-60s Rome — Ferrari calls the look 'La Nuova Dolce Vita.' Shares its twin-turbo V8 family (voted International Engine of the Year four years running) with the Portofino." },
+        "Roma Spider": { engine:"3.9L Twin-Turbo V8 (612hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2023, three years after the coupe — the first front-engine Ferrari with a fabric soft top (rather than a retractable hardtop) since the 1969 365 GTS4. Folds in about 13.5 seconds at speeds up to 37mph, only 185lbs heavier than the coupe." },
+      },
+      colors:[
+        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
+        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
+      ],
     },
     "SF90 Stradale": {
       years:["2020","2021","2022","2023","2024","2025","2026"],
