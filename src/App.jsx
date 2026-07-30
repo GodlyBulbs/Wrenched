@@ -5668,6 +5668,70 @@ const VEHICLES = {
         {name:"Dark Canyon Red Metallic (Red)",hex:"#8B2E2E"},
       ],
     },
+    "Escape": {
+      generations:{
+        "1st Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "XLS": { engine:"2.0L 4-cylinder (127hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic"], note:"Ford's first-ever compact SUV, and a genuinely early example of the car-based crossover approach that would eventually take over the whole segment — unibody construction, not body-on-frame like the Explorer. Co-developed with Mazda, sharing its platform with the Mazda Tribute." },
+            "XLT":  { engine:"3.0L Duratec V6 (200hp)", drivetrains:["FWD","4WD"], transmission:"Automatic" },
+            "Limited":{ engine:"3.0L Duratec V6 (200hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.3L Atkinson-Cycle Hybrid 4-cylinder (155hp combined)", drivetrains:["FWD","4WD"], transmission:"Automatic (e-CVT)", note:"Added 2005 — the first-ever hybrid SUV sold in America, beating Toyota's own hybrid SUV to market by a matter of months." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Silver Birch Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2008-2012)":{
+          years:["2008","2009","2010","2011","2012"],
+          trims:{
+            "XLS":  { engine:"2.3L 4-cylinder (153hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"A genuinely light refresh over the first generation — new front and rear fascias, but the same underlying platform and greenhouse carried over." },
+            "XLT":  { engine:"3.0L Duratec V6 (240hp)", drivetrains:["FWD","4WD"], transmission:"Automatic" },
+            "Limited":{ engine:"3.0L Duratec V6 (240hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.5L Atkinson-Cycle Hybrid 4-cylinder (177hp combined)", drivetrains:["FWD","4WD"], transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Steel Blue Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "3rd Gen (2013-2019)":{
+          years:["2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "S":       { engine:"2.5L 4-cylinder (168hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, ending the Mazda Tribute partnership and switching to turbocharged EcoBoost power on most trims — a real shift from the outgoing V6-based lineup." },
+            "SE":      { engines:["1.6L Turbocharged 4-cylinder (178hp)","1.5L Turbocharged 4-cylinder (179hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"1.6L used through the 2016 facelift, replaced by a 1.5L making 1 more horsepower and better efficiency for 2017+." },
+            "Titanium":{ engine:"2.0L Turbocharged 4-cylinder (240-245hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Ingot Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "4th Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Active":  { engine:"1.5L Turbocharged 3-cylinder (180-181hp)", drivetrain:"FWD", transmission:"Automatic", note:"Lower, wider, and more carlike than the outgoing generation. First-ever 3-cylinder engine offered on a US-market Escape, standard across most trims. Plug-in hybrid added 2021, the Escape's first-ever PHEV variant." },
+            "ST-Line": { engines:["1.5L Turbocharged 3-cylinder (180-181hp)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Platinum":{ engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Hybrid":  { engine:"2.5L Atkinson-Cycle Hybrid 4-cylinder (200hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "Plug-In Hybrid": { engine:"2.5L Atkinson-Cycle Plug-In Hybrid 4-cylinder (200-210hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"About 30-37 miles of pure-electric range depending on model year. Facelifted for 2023 with new front/rear styling. Ford has confirmed the Escape's discontinuation, with the 2026 model year expected to be its last — pulled from several state markets already ahead of tightening emissions rules." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "EXP": {
       years:["1982","1983","1984","1985","1986","1987","1988"],
       trims:{
@@ -5680,6 +5744,102 @@ const VEHICLES = {
         {name:"Bright Red (Red)",hex:"#C8102E"},
         {name:"Medium Charcoal Metallic (Gray)",hex:"#4A4E52"},
       ],
+    },
+    "Explorer": {
+      generations:{
+        "1st Gen (1991-1994)":{
+          years:["1991","1992","1993","1994"],
+          trims:{
+            "XL":  { engine:"4.0L Cologne V6 (155-160hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Ford's first-ever 5-door SUV, replacing the smaller Bronco II — the Explorer's genuine game-changer moment for the whole industry, effectively inventing the mid-size 5-door SUV segment alongside the Jeep Grand Cherokee. Shares chassis underpinnings with the contemporary Ranger pickup. Also sold as the Mazda Navajo (3-door only) through 1994." },
+            "XLT":  { engine:"4.0L Cologne V6 (155-160hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"] },
+            "Eddie Bauer": { engine:"4.0L Cologne V6 (155-160hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "Limited":     { engine:"4.0L Cologne V6 (160hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 1993 as the genuine flagship trim, aimed at the Jeep Grand Wagoneer and Oldsmobile Bravada." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wimbledon White (White)",hex:"#F0F0F0"},
+            {name:"Deep Emerald Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (1995-2001)":{
+          years:["1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "XL":       { engine:"4.0L OHV Cologne V6 (160hp)", drivetrains:["RWD","4WD","AWD"], transmissions:["Manual","Automatic"], note:"Real evolutionary redesign — dual airbags for the first time (a genuine first for an American SUV), AWD became available as an option, and a 4.9L (5.0L marketed) V8 was added in 1996 to better compete with the Grand Cherokee's V8. A new SOHC version of the 4.0L V6 arrived 1997, eventually becoming standard on most trims by 2001." },
+            "XLT":      { engines:["4.0L OHV V6 (160hp)","4.0L SOHC V6 (210hp)","5.0L V8 (210-215hp)"], drivetrains:["RWD","4WD","AWD"], transmission:"Automatic" },
+            "Eddie Bauer":{ engines:["4.0L SOHC V6 (210hp)","5.0L V8 (210-215hp)"], drivetrains:["RWD","4WD","AWD"], transmission:"Automatic" },
+            "Limited":  { engines:["4.0L SOHC V6 (210hp)","5.0L V8 (210-215hp)"], drivetrains:["4WD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Pacific Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (2002-2005)":{
+          years:["2002","2003","2004","2005"],
+          trims:{
+            "XLS": { engine:"4.0L SOHC V6 (210hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine ground-up redesign, finally ending chassis commonality with the Ranger pickup — first Explorer with a proper independent rear suspension, a first for an American truck-based SUV. The old 5.0L pushrod V8 was retired, replaced by a 4.6L modular V8 shared with the Crown Victoria." },
+            "XLT": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (239hp)"], drivetrains:["RWD","4WD","AWD"], transmission:"Automatic" },
+            "Eddie Bauer": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (239hp)"], drivetrains:["4WD","AWD"], transmission:"Automatic" },
+            "Limited": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (239hp)"], drivetrains:["4WD","AWD"], transmission:"Automatic", note:"An off-road-oriented NBX trim was also offered 2003-2004, sitting between XLT and Eddie Bauer/Limited." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Estate Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "4th Gen (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "XLS": { engine:"4.0L SOHC V6 (210hp)", drivetrain:"RWD", transmission:"Automatic", note:"Bore a lot of similarity to the outgoing generation — same roofline, glass, and drivetrain — but rode on a genuinely stiffer new frame built by Magna instead of Tower Automotive. Final Explorer generation with body-on-frame construction before the switch to unibody." },
+            "XLT": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (292hp)"], drivetrains:["RWD","4WD","AWD"], transmission:"Automatic", note:"XLS trim was dropped for 2007, leaving XLT as the new base." },
+            "Eddie Bauer": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (292hp)"], drivetrains:["4WD","AWD"], transmission:"Automatic" },
+            "Limited": { engines:["4.0L SOHC V6 (210hp)","4.6L V8 (292hp)"], drivetrains:["4WD","AWD"], transmission:"Automatic", note:"The last Explorer ever built on this platform rolled off the line December 16, 2010." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Vapor Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (2011-2019)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Base": { engines:["2.0L Turbocharged 4-cylinder (240hp)","3.5L V6 (290hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine switch to unibody, car-based construction, sharing its D4 platform with the Ford Flex and Lincoln MKT — no longer built on a Ranger-derived truck frame. The 2.0L turbo four was FWD-only." },
+            "XLT":  { engine:"3.5L V6 (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Limited": { engine:"3.5L V6 (290hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Sport":{ engine:"3.5L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2013 — genuine performance flagship of this generation, sharing its engine with the Taurus SHO and F-150." },
+            "Platinum": { engine:"3.5L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added with the 2016 facelift, which also bumped the base four-cylinder to a 2.3L EcoBoost borrowed from the Mustang." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"White Platinum Metallic (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "6th Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "XLT":     { engine:"2.3L Turbocharged 4-cylinder (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (10-Speed)", note:"Switched to a genuinely new rear-wheel-drive-based CD6 platform, shared with the Lincoln Aviator — a real return to RWD architecture after the previous generation's FWD-based D4 platform." },
+            "Limited": { engine:"3.0L Twin-Turbo EcoBoost V6 (365hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (10-Speed)" },
+            "ST":      { engine:"3.0L Twin-Turbo EcoBoost V6 (400hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"The most powerful Explorer trim ever offered up to this point." },
+            "Platinum":{ engine:"3.0L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)" },
+            "Hybrid":  { engine:"3.3L Hybrid V6 (318hp combined)", drivetrain:"RWD", transmission:"Automatic (10-Speed)", note:"Genuinely discontinued on regular retail Explorers after 2023, though it lives on in the Police Interceptor Utility fleet version. Facelifted for 2025 with new styling and a simplified 4-trim lineup (later expanded back to 6 for 2026 with Tremor and Active 100A added)." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
     },
     "F-150": {
       generations:{
@@ -6018,6 +6178,96 @@ const VEHICLES = {
             {name:"Shadow Black (Black)",hex:"#1A1A1A"},
             {name:"Code Orange (Orange)",hex:"#E8601C"},
             {name:"Carbonized Gray (Gray)",hex:"#5A5F63"},
+          ],
+        },
+      },
+    },
+    "Taurus": {
+      generations:{
+        "1st Gen (1986-1991)":{
+          years:["1986","1987","1988","1989","1990","1991"],
+          trims:{
+            "L":  { engines:["2.5L 4-cylinder (90hp)","3.0L Vulcan V6 (140hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine milestone for both Ford and the whole industry — the Taurus's aerodynamic 'jelly bean' styling was a real departure from the boxy sedans that came before it, and it's widely credited with saving Ford from serious financial trouble in the mid-1980s. First Ford developed using statistical process control quality methods learned from W. Edwards Deming. Sold alongside a near-identical Mercury Sable twin." },
+            "GL": { engines:["2.5L 4-cylinder (90hp)","3.0L Vulcan V6 (140hp)","3.8L Essex V6 (140hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"3.8L V6 added 1988, mainly for extra towing capacity." },
+            "LX": { engine:"3.0L Vulcan V6 (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SHO":{ engine:"3.0L Yamaha DOHC V6 (220hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1989 — 'Super High Output,' co-developed with Yamaha, manual transmission only for this generation. A genuinely potent engine for a mainstream family sedan of the era, one of the first cases of a mass-market automaker partnering with a specialty engine builder like this." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wine Red Metallic (Red)",hex:"#6B1A2A"},
+            {name:"Medium Titanium Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (1992-1995)":{
+          years:["1992","1993","1994","1995"],
+          trims:{
+            "L":  { engines:["3.0L Vulcan V6 (140hp)","3.8L Essex V6 (140hp)"], drivetrain:"FWD", transmission:"Automatic", note:"A genuine styling refresh — oval-themed design cues appeared throughout, foreshadowing the more polarizing 3rd-gen redesign to come. Driver's-side airbag became standard." },
+            "GL": { engines:["3.0L Vulcan V6 (140hp)","3.8L Essex V6 (140hp)"], drivetrain:"FWD", transmission:"Automatic" },
+            "LX": { engine:"3.8L Essex V6 (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SHO":{ engines:["3.0L Yamaha DOHC V6 (220hp)","3.2L Yamaha 24V V6 (220hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"An automatic transmission became available for the first time on the SHO for 1993, paired with a slightly larger 3.2L version of the Yamaha V6 — the manual kept the original 3.0L." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Opal Frost Metallic (White)",hex:"#E8E4DC"},
+          ],
+        },
+        "3rd Gen (1996-1999)":{
+          years:["1996","1997","1998","1999"],
+          trims:{
+            "GL": { engine:"3.0L Vulcan V6 (145hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely controversial, all-oval redesign — oval grille, oval taillights, even an oval-shaped rear window on some trims. Divisive at launch, and generally considered a real factor in the Taurus losing its best-selling-car crown back to the Toyota Camry during this generation." },
+            "LX": { engine:"3.0L Duratec DOHC V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SHO":{ engine:"3.4L Yamaha DOHC V8 (235hp)", drivetrain:"FWD", transmission:"Automatic", note:"The only Taurus SHO ever built with a V8 — a genuinely unusual, low-volume Yamaha-built engine, automatic only. Slower in a straight line than the outgoing V6 SHO despite the extra cylinders, and this was the final SHO generation before the badge went dormant for over a decade." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Rose Mist Metallic (Pink)",hex:"#C89AA8"},
+          ],
+        },
+        "4th Gen (2000-2007)":{
+          years:["2000","2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "LX": { engine:"3.0L Vulcan V6 (155hp)", drivetrain:"FWD", transmission:"Automatic", note:"Toned down the oval styling considerably after the divisive 3rd-gen reception. The SHO nameplate was dropped entirely this generation — no performance Taurus was offered at all. 2007 was sold only to fleet buyers, a genuine sign of the nameplate's declining fortunes as Ford shifted focus to the Five Hundred and Fusion." },
+            "SE": { engines:["3.0L Vulcan V6 (155hp)","3.0L Duratec V6 (155-201hp)"], drivetrain:"FWD", transmission:"Automatic" },
+            "SES":{ engine:"3.0L Duratec V6 (155-201hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Silver Frost Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "5th Gen (2008-2009)":{
+          years:["2008","2009"],
+          trims:{
+            "SEL":    { engine:"3.5L Duratec V6 (263hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely just a renamed, facelifted Ford Five Hundred — Ford brought the Taurus badge back after a one-year gap to capitalize on the name's stronger recognition, rather than launching a truly new car." },
+            "Limited":{ engine:"3.5L Duratec V6 (263hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Vapor Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "6th Gen (2010-2019)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "SE":     { engine:"3.5L V6 (263-288hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine full-size flagship sedan now, sharing its D3 platform with the Lincoln MKS. The SHO badge returned after an 11-year absence, and this generation also served as the basis for the Ford Police Interceptor Sedan, replacing the long-running Crown Victoria Police Interceptor." },
+            "Limited":{ engine:"3.5L V6 (263-288hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "2.0T":   { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2013, dropped again after 2017 — genuinely unusual to see a turbo four in a full-size sedan like this." },
+            "SHO":    { engine:"3.5L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"AWD", transmission:"Automatic", note:"The only Taurus SHO ever built with standard AWD, and the only one with a twin-turbo EcoBoost engine. This was the final Taurus generation — production ended March 2019 with no US successor, as Ford stepped back from traditional sedans almost entirely in favor of SUVs and trucks." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Tuxedo Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Ingot Silver Metallic (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
