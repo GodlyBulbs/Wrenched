@@ -5653,6 +5653,19 @@ const VEHICLES = {
     },
   },
   "Ford": {
+    "Aspire": {
+      years:["1994","1995","1996","1997"],
+      trims:{
+        "Base": { engine:"1.3L Mazda B3 4-cylinder (63hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Direct successor to the Festiva — designed by Mazda in Japan, built by Kia in South Korea (part-owned by Ford at the time), and sold under Ford's badge as its cheapest, most basic entry-level car. Grew somewhat over the outgoing Festiva and added a genuine 5-door hatchback body style. Standard dual airbags were a real point of pride for the segment at the time — few rivals this cheap offered them." },
+        "SE":   { engine:"1.3L Mazda B3 4-cylinder (63hp)", drivetrain:"FWD", transmission:"Manual", note:"Added foglamps, a tachometer, and sportier trim over the base car — manual transmission only. Discontinued after 1997 as Kia launched its own US-market brand with the Sephia, and Ford stepped away from captive-import economy cars; the entry-level slot in Ford's own lineup sat empty until the Focus arrived a few years later." },
+      },
+      colors:[
+        {name:"Vibrant White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Deep Amethyst Metallic (Purple)",hex:"#4A2E5A"},
+      ],
+    },
     "Bronco": {
       years:["2021","2022","2023","2024","2025","2026"],
       trims:{
@@ -6184,6 +6197,19 @@ const VEHICLES = {
         {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
     },
+    "Festiva": {
+      years:["1988","1989","1990","1991","1992","1993"],
+      trims:{
+        "L":  { engines:["1.3L 4-cylinder (58hp)","1.3L Fuel-Injected 4-cylinder (63hp)"], drivetrain:"FWD", transmission:"Manual", note:"Ford's genuinely tiniest, cheapest car of the era — designed by Mazda, built by Kia in South Korea under license (Kia was part-owned by Ford at the time), and based on the Kia Pride. Only 140.5 inches long and about 1,700 pounds, small enough that owners joked it could fit in the bed of an F-150. Fuel injection arrived for 1990, bumping output from 58 to 63hp." },
+        "GL": { engine:"1.3L Fuel-Injected 4-cylinder (63hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Combined the old L Plus and LX trims into one for 1991. A 3-door hatchback only in the US — the L Plus/LX distinctions and a genuine 5-speed manual were early differentiators before the GL consolidation. Discontinued after 1993, replaced by the larger, more modern Aspire for 1994." },
+      },
+      colors:[
+        {name:"Vibrant White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Titanium Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "Fiesta ST": {
       generations:{
         "Mk7 (2014-2019)":{
@@ -6345,6 +6371,34 @@ const VEHICLES = {
         {name:"Bright Red (Red)",hex:"#C8102E"},
         {name:"Midnight Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
+    },
+    "GT": {
+      generations:{
+        "1st Gen (2005-2006)":{
+          years:["2005","2006"],
+          trims:{
+            "Base": { engine:"5.4L Supercharged Modular V8 (550hp)", drivetrain:"RWD", transmission:"Manual", note:"Built to mark Ford's 2003 centennial, deliberately evoking the legendary GT40 that swept the podium at the 1966 24 Hours of Le Mans. Genuinely a modern reinterpretation rather than a retro pastiche — an aluminum spaceframe chassis, a supercharged version of Ford's own 5.4L Modular V8, and a proper 6-speed manual, no automatic ever offered. Only 4,038 were built across both model years." },
+          },
+          colors:[
+            {name:"Ford GT Red (Red)",hex:"#C8102E"},
+            {name:"Ford GT Blue with White Stripes (Blue)",hex:"#1E3A6B"},
+            {name:"Tungsten Grey Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Ford GT Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "2nd Gen (2017-2022)":{
+          years:["2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "Base": { engine:"3.5L Twin-Turbo EcoBoost V6 (647hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"A genuine racing program first, road car second — developed specifically to return Ford to Le Mans, where it won its GTE Pro class outright in 2016, fifty years to the day after the original GT40's famous 1-2-3 finish. Full carbon-fiber tub, active aerodynamics, and a genuinely unusual choice to drop the V8 for a twin-turbo EcoBoost V6 shared in spirit with the 499P Le Mans racer. Production was capped and allocated by application only — Ford wouldn't sell one to just anyone with the money, a genuinely unusual approach for a road car at this price point. A track-only Mk II variant, developed with Multimatic, was also offered starting 2019." },
+          },
+          colors:[
+            {name:"Frozen White (White)",hex:"#F0F0F0"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Liquid Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
     },
     "LTD": {
       years:["1983","1984","1985","1986"],
@@ -6735,6 +6789,49 @@ const VEHICLES = {
             {name:"Tuxedo Black (Black)",hex:"#1A1A1A"},
             {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
             {name:"Ingot Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Transit / Transit Connect": {
+      generations:{
+        "Transit Connect 1st Gen (2010-2013)":{
+          years:["2010","2011","2012","2013"],
+          trims:{
+            "XL":  { engine:"2.0L 4-cylinder (136hp)", drivetrain:"FWD", transmission:"Automatic (4-Speed)", note:"Ford's first small commercial van sold in the US since the Aerostar era, imported directly from Europe where it had already been a popular small business workhorse for years. Genuinely different concept from the full-size Econoline — a lower-cost, more fuel-efficient, car-based alternative for businesses that didn't need a full-size van's cargo capacity. Cargo van only at first; a Passenger Wagon version (5-passenger) joined for 2011." },
+            "XLT": { engine:"2.0L 4-cylinder (136hp)", drivetrain:"FWD", transmission:"Automatic (4-Speed)" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Dark Blue Pearl Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Transit Connect 2nd Gen (2014-2023)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "XL":  { engine:"2.5L 4-cylinder (169hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"A genuine ground-up redesign, growing in size and switching to a US-specific platform shared underneath with the Focus/Escape family — no longer a direct Euro-market import. A 1.6L EcoBoost turbo four (178hp) was also offered early on before being dropped in favor of the larger 2.5L and a 2.0L." },
+            "XLT": { engines:["2.5L 4-cylinder (169hp)","2.0L 4-cylinder (162hp)"], drivetrain:"FWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Blue Jeans Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "Transit Full-Size (2015-2026)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "XL":  { engines:["3.7L V6 (275hp)","3.5L Twin-Turbo EcoBoost V6 (310hp)","3.2L Power Stroke Turbo-Diesel Inline-5 (185hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Replaced the decades-old Econoline as Ford's full-size van, adopting the global Transit nameplate already used overseas — a genuine departure from the Econoline's traditional cab-forward, mid-engine-adjacent layout, this is a conventional front-engine design with a real range of roof heights, wheelbases, and body lengths to suit different commercial needs. The 3.2L Power Stroke diesel inline-5 was a genuinely unusual engine configuration for the US market, dropped after emissions regulations tightened; AWD became available in 2020, a first for a Ford full-size van." },
+            "XLT": { engines:["3.5L V6 (275hp)","3.5L Twin-Turbo EcoBoost V6 (310hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic", note:"2026 model year simplified the lineup to just XL and XLT, with the base V6 now rated at 275hp (PFDI) and the EcoBoost twin-turbo at 310hp." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Blue Jeans Metallic (Blue)",hex:"#4A6B8E"},
           ],
         },
       },
