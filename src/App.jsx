@@ -5702,6 +5702,20 @@ const VEHICLES = {
         {name:"Cyber Orange Metallic (Orange)",hex:"#E8601C"},
       ],
     },
+    "C-Max": {
+      years:["2013","2014","2015","2016","2017","2018"],
+      trims:{
+        "SE":       { engine:"2.0L Atkinson-Cycle Hybrid 4-cylinder (188hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuinely different approach for Ford — a small 5-passenger hybrid-only wagon/hatchback (no gas-only version was ever offered), sized between the Focus and Fusion. SEL was renamed Titanium for 2017. Real-world fuel economy fell short of Ford's initial EPA ratings, leading Ford to lower the official numbers in 2013 after owner complaints and a class-action settlement." },
+        "Titanium": { engine:"2.0L Atkinson-Cycle Hybrid 4-cylinder (188hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Renamed from SEL for 2017." },
+        "Energi":   { engine:"2.0L Atkinson-Cycle Plug-In Hybrid 4-cylinder (188hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"The plug-in hybrid variant, with a genuine all-electric-only range before the gas engine engages. Discontinued after 2018 with no direct successor — Ford folded its remaining hybrid ambitions into the Escape and Fusion instead." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Kona Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "Contour": {
       years:["1995","1996","1997","1998","1999","2000"],
       trims:{
@@ -5841,6 +5855,37 @@ const VEHICLES = {
             {name:"Shadow Black (Black)",hex:"#1A1A1A"},
             {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
             {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Escort": {
+      generations:{
+        "2nd Gen (1991-1996)":{
+          years:["1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "LX":     { engine:"1.9L CVH 4-cylinder (88hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"America's genuine best-selling car through much of the 1980s carried into a redesigned second generation, now sharing its platform with the Mazda 323 rather than Ford of Europe's Escort — a real shift in Ford's 'world car' strategy. Sold as a sedan, 3-door hatchback, and wagon; a Mercury Tracer twin was sold alongside it." },
+            "GT":     { engine:"1.8L DOHC 4-cylinder (127hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely well-regarded sport compact of its era — Mazda-sourced twin-cam engine, 4-wheel disc brakes (a rarity for the class), and sharp handling that made it a real favorite among enthusiasts on a budget." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Deep Wedgewood Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (1997-2003)":{
+          years:["1997","1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "LX":  { engine:"2.0L SPI2000 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely extensive redesign of the outgoing sedan/wagon, though it kept a lot of the same underlying bones. The Focus arrived for the 2000 model year as its real successor — from that point, the 4-door Escort was sold mainly to rental and fleet buyers, with the wagon dropped after 1999 entirely." },
+            "SE":  { engine:"2.0L SPI2000 4-cylinder (110hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "ZX2": { engines:["2.0L Zetec DOHC 4-cylinder (130hp)","2.0L Zetec DOHC 4-cylinder (143hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely distinct 2-door coupe replacing the old Escort GT and, in effect, the discontinued Probe — sharing its chassis with the sedan but wearing unique sheet metal and its own interior. The 'Escort' name was quietly dropped from the badge after 2000, leaving it simply 'ZX2.' The S/R package (1999-2000, 143hp) was a genuine factory hot-rod special edition. Outlived the sedan entirely, remaining in production through 2003 with no direct successor." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Zinc Yellow (Yellow)",hex:"#F5C800"},
           ],
         },
       },
@@ -6490,6 +6535,38 @@ const VEHICLES = {
         {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
         {name:"Grabber Blue Metallic (Blue)",hex:"#1E4B8E"},
       ],
+    },
+    "Probe": {
+      generations:{
+        "1st Gen Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "GL": { engine:"2.2L 4-cylinder (110hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely intended at one point to actually replace the Mustang outright — a real controversy inside Ford at the time, since this was a front-wheel-drive, Mazda-based coupe with none of the traditional Mustang's V8 rear-drive character. Enthusiast backlash convinced Ford to keep the Mustang alive alongside it instead, selling the two side by side. Shares its platform with the Mazda 626/MX-6, built at the Ford-Mazda AutoAlliance joint-venture plant in Flat Rock, Michigan." },
+            "LX": { engine:"3.0L V6 (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GT": { engine:"2.2L Turbocharged 4-cylinder (145hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely quick for the era — adjustable 'Ride Adjust' suspension with driver-selectable Soft/Normal/Sport modes, a real novelty at the time." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Titanium Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuinely thorough redesign, styled with input from Mimi Vandermolen — same basic pop-up-headlight formula, but even more aerodynamic. This was the final Probe generation; discontinued after 1997 with no successor, as the Escort ZX2 coupe and (eventually) the Mustang covered its role in Ford's lineup instead." },
+            "LX": { engine:"2.5L KL-DE V6 (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "GT": { engine:"2.5L KL-DE V6 (164hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Motor Trend named this generation's GT its Car of the Year at launch — a genuinely high-revving DOHC V6 with a distinctive exhaust note, dropped the old turbo-four for good." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Rio Red (Red)",hex:"#C8102E"},
+            {name:"Pacific Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+      },
     },
     "Ranger": {
       generations:{
