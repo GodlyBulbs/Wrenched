@@ -5716,6 +5716,41 @@ const VEHICLES = {
         {name:"Medium Wedgewood Blue Metallic (Blue)",hex:"#4A6B8E"},
       ],
     },
+    "Edge": {
+      generations:{
+        "1st Gen (2007-2014)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "SE":      { engine:"3.5L V6 (265hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Slotted between the Escape and Explorer, aimed at empty-nesters and small families who wanted more car-like handling than a truck-based SUV — genuinely one of the first real 'crossover' entries in Ford's own lineup. 2011 facelift bumped power and refreshed styling; a 2.0L EcoBoost turbo four joined for 2012." },
+            "SEL":     { engine:"3.5L V6 (265-285hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Limited": { engines:["3.5L V6 (265-285hp)","2.0L Turbocharged 4-cylinder (240hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Sport":   { engine:"3.7L V6 (305hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2011 — the performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Ingot Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2015-2024)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "SE":      { engine:"2.0L Turbocharged 4-cylinder (245-250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely more European-flavored redesign, sleeker and lower than the boxier first generation. 2019 facelift brought a new front/rear fascia and standardized the 8-speed automatic across the whole lineup. The Sport trim was replaced by the ST for 2019, a real step up in both power and genuine performance intent, sharing its twin-turbo V6 with the Explorer ST and Lincoln Nautilus." },
+            "SEL":     { engine:"2.0L Turbocharged 4-cylinder (245-250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Titanium":{ engines:["2.0L Turbocharged 4-cylinder (245-250hp)","3.5L V6 (280hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Sport":   { engine:"2.7L Twin-Turbo V6 (315hp)", drivetrain:"AWD", transmission:"Automatic", note:"2015-2018 only, before being replaced by the ST." },
+            "ST":      { engine:"2.7L Twin-Turbo V6 (335hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2019 — the most powerful Edge ever built. This was also the final Edge generation; US production ended after 2024 with no successor, as Ford shifted its assembly resources elsewhere." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Escape": {
       generations:{
         "1st Gen (2001-2007)":{
@@ -6058,6 +6093,22 @@ const VEHICLES = {
         },
       },
     },
+    "F-150 Lightning": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "Pro":     { engine:"Dual Electric Motors (452-462hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Ford's first-ever electric F-150, and genuinely engineered to look and feel like a familiar truck rather than a radical departure — same basic cab and bed proportions, deliberately aimed at reassuring truck buyers wary of going electric. Standard-range 98kWh battery pack (dropped for 2026, leaving the larger pack standard across the board), AWD standard on every trim via dual motors. Genuinely useful frunk (front trunk) doubles as a large lockable storage area where a gas engine would normally sit. Pro is the fleet/commercial-focused base trim." },
+        "STX / XLT":{ engine:"Dual Electric Motors (452-580hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"XLT through 2025, renamed STX for 2026 with a more off-road-styled appearance package. Extended-range 131kWh battery available as an upgrade, standard on Flash/Lariat and up." },
+        "Flash":   { engine:"Dual Electric Motors (580hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2026 as a permanent mid-tier trim, positioned as the 'sweet spot' with the extended-range battery standard." },
+        "Lariat":  { engine:"Dual Electric Motors (580hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Platinum":{ engine:"Dual Electric Motors (580hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Top trim, extended-range battery standard — up to roughly 320 miles of range and the truck's highest-output Pro Power Onboard generator system, capable of powering job sites or a home during an outage." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Agate Black Metallic (Black)",hex:"#1A1A1A"},
+        {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Iconic Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
     "Fiesta ST": {
       generations:{
         "Mk7 (2014-2019)":{
@@ -6276,6 +6327,21 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Mustang Mach-E": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Select":  { engines:["Single Electric Motor (266-272hp)","Dual Electric Motors (325-370hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic (Single-Speed)", note:"A genuinely controversial choice of name — Ford's first mass-production EV borrowed the Mustang badge for a 5-door electric SUV, a real departure from the pony car's traditional 2-door gas-powered identity, and one that drew real pushback from some longtime Mustang enthusiasts at launch. Shares no mechanical parts with the actual Mustang. Standard or extended-range battery options affect both power and range across every trim." },
+        "Premium": { engines:["Single Electric Motor (266-272hp)","Dual Electric Motors (325-370hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic (Single-Speed)" },
+        "GT":      { engine:"Dual Electric Motors (480hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Launched with genuinely startling performance for the segment — Ford directly compared its 0-60 time favorably against the contemporary gas-powered Mustang GT at the time of its reveal. A Performance Edition package added extra power and MagneRide adaptive suspension in the early years." },
+        "Rally":   { engine:"Dual Electric Motors (480hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2024 — a genuine rally-inspired off-pavement trim, raised ride height, all-terrain-capable tires, and unique suspension tuning distinct from the road-focused GT." },
+      },
+      colors:[
+        {name:"Space White (White)",hex:"#F0F0F0"},
+        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+        {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Grabber Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
     },
     "Ranger": {
       generations:{
