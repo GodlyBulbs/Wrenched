@@ -5653,6 +5653,26 @@ const VEHICLES = {
     },
   },
   "Ford": {
+    "Bronco": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base / Big Bend": { engine:"2.3L Turbocharged 4-cylinder (275-300hp)", drivetrain:"4WD", transmissions:["Manual (7-Speed)","Automatic (10-Speed)"], note:"Revived after a genuine 25-year absence, aimed squarely at the Jeep Wrangler — removable doors, roof, and a full-frame body-on-frame chassis, a real departure from every crossover SUV Ford had launched in the years between. Offered in 2-door and 4-door body styles. The 7-speed manual includes an ultra-low first 'crawler' gear purely for off-roading, not meant for regular driving." },
+        "Black Diamond":  { engine:"2.3L Turbocharged 4-cylinder (300hp)", drivetrain:"4WD", transmissions:["Manual (7-Speed)","Automatic (10-Speed)"] },
+        "Outer Banks":    { engines:["2.3L Turbocharged 4-cylinder (300hp)","2.7L Twin-Turbo V6 (330hp)"], drivetrain:"4WD", transmissions:["Manual (7-Speed)","Automatic (10-Speed)"] },
+        "Badlands":       { engines:["2.3L Turbocharged 4-cylinder (300hp)","2.7L Twin-Turbo V6 (330hp)"], drivetrain:"4WD", transmissions:["Manual (7-Speed)","Automatic (10-Speed)"], note:"Genuine off-road specialist trim — available with front and rear locking differentials and Ford's trick disconnecting front sway bar for real wheel articulation on the trail." },
+        "Wildtrak":       { engine:"2.7L Twin-Turbo V6 (330hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+        "Everglades":     { engine:"2.7L Twin-Turbo V6 (330hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Added 2023 — genuinely unusual factory feature, a snorkel intake for deep water fording, plus a Warn winch." },
+        "Heritage Edition / Heritage Limited Edition": { engine:"2.7L Twin-Turbo V6 (330hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Added 2024 — retro two-tone paint and badging paying tribute to the original 1966-1977 Bronco." },
+        "Raptor":         { engine:"3.0L Twin-Turbo V6 (400-418hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Added 2022 — a genuine desert-racing specialist, widebody with 37-inch tires, Fox Live Valve internal-bypass shocks, and its own dedicated engine shared with the Explorer ST and Lincoln Aviator." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+        {name:"Cyber Orange Metallic (Orange)",hex:"#E8601C"},
+        {name:"Cactus Gray (Green-Gray)",hex:"#8A9A7E"},
+      ],
+    },
     "Bronco II": {
       years:["1984","1985","1986","1987","1988","1989","1990"],
       trims:{
@@ -5744,6 +5764,86 @@ const VEHICLES = {
         {name:"Bright Red (Red)",hex:"#C8102E"},
         {name:"Medium Charcoal Metallic (Gray)",hex:"#4A4E52"},
       ],
+    },
+    "Expedition": {
+      generations:{
+        "1st Gen (1997-2002)":{
+          years:["1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "XLT":       { engines:["4.6L Triton V8 (215-230hp)","5.4L Triton V8 (230-260hp)"], drivetrain:"4WD", transmission:"Automatic", note:"Ford's first-ever full-size SUV, filling the gap left when the 2-door Bronco was discontinued — built on the F-150 platform, genuinely the vehicle that let Ford chase the Chevy Tahoe/GMC Yukon head-on in the segment. 1999 facelift bumped both V8s' output and added standard side airbags." },
+            "Eddie Bauer": { engine:"5.4L Triton V8 (230-260hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Vibrant White Clearcoat (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "2nd Gen (2003-2006)":{
+          years:["2003","2004","2005","2006"],
+          trims:{
+            "XLT":       { engine:"4.6L Triton V8 (232hp)", drivetrain:"4WD", transmission:"Automatic", note:"Real chassis upgrade — independent rear suspension replaced the old solid rear axle, and Ford's AdvanceTrac stability control arrived as standard." },
+            "Eddie Bauer": { engine:"5.4L Triton V8 (260hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "King Ranch":{ engine:"5.4L Triton V8 (260-300hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2005 alongside the Limited — the King Ranch and Limited trims both effectively borrowed their names and cues from the closely-related Lincoln Navigator." },
+            "Limited":   { engine:"5.4L Triton V8 (260-300hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Stone Metallic (Gray)",hex:"#5A5F63"},
+          ],
+        },
+        "3rd Gen (2007-2017)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "XL":        { engine:"5.4L Triton V8 (300hp)", drivetrain:"4WD", transmission:"Automatic", note:"XLT Premium replaced the old Eddie Bauer trim starting 2011, matching a broader Ford-wide retirement of that Eddie Bauer sub-brand. Genuinely major mid-cycle shift for 2015 — the long-running Triton V8 was retired entirely, replaced by a smaller, more efficient 3.5L EcoBoost V6, a real turning point for the segment as a whole." },
+            "XLT":       { engines:["5.4L Triton V8 (300hp)","3.5L Twin-Turbo EcoBoost V6 (365hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "Limited":   { engines:["5.4L Triton V8 (300hp)","3.5L Twin-Turbo EcoBoost V6 (365hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "King Ranch":{ engine:"3.5L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine long-wheelbase Expedition EL/MAX version also offered throughout this generation for extra 3rd-row and cargo room." },
+            "Platinum":  { engine:"3.5L Twin-Turbo EcoBoost V6 (365hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Tuxedo Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"White Platinum Metallic (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "4th Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "XL":        { engine:"3.5L Twin-Turbo EcoBoost V6 (375hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Switched to a genuine aluminum body over a high-strength steel frame, borrowing the weight-savings approach Ford had already proven on the F-150. 2022 facelift added the off-road-focused Timberline trim and a new front/rear fascia." },
+            "XLT":       { engine:"3.5L Twin-Turbo EcoBoost V6 (375-440hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "Limited":   { engine:"3.5L Twin-Turbo EcoBoost V6 (375-440hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "King Ranch":{ engine:"3.5L Twin-Turbo EcoBoost V6 (375-440hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Platinum":  { engine:"3.5L Twin-Turbo EcoBoost V6 (440hp)", drivetrain:"4WD", transmission:"Automatic", note:"440hp high-output tune debuted on the Limited Stealth Edition and became broadly available across upper trims by 2022." },
+            "Timberline":{ engine:"3.5L Twin-Turbo EcoBoost V6 (375hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2022 — genuine off-road package, all-terrain tires and a locking rear differential, regular-length only (no Max version)." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Agate Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Star White Metallic Tri-Coat (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "5th Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Active":   { engine:"3.5L Twin-Turbo EcoBoost V6 (400hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"First full redesign since 2018 — new front and rear styling, reworked interior, and the debut of the off-road Tremor trim, the Expedition's first ever. Regular-length and extended-length Max versions continue, offered on every trim except Tremor." },
+            "King Ranch":{ engine:"3.5L Twin-Turbo EcoBoost V6 (400hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Platinum": { engine:"3.5L Twin-Turbo EcoBoost V6 (400hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Tremor":   { engine:"3.5L Twin-Turbo EcoBoost High-Output V6 (440hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine off-road specialist trim with extra ground clearance, all-terrain tires, and the segment's most powerful engine tune." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Agate Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Rapid Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Star White Metallic Tri-Coat (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
     },
     "Explorer": {
       generations:{
@@ -5943,6 +6043,54 @@ const VEHICLES = {
             {name:"Performance Blue (Blue)",hex:"#1E4B8E"},
             {name:"Shadow Black (Black)",hex:"#1A1A1A"},
             {name:"Race Red (Red)",hex:"#C8102E"},
+          ],
+        },
+      },
+    },
+    "Focus": {
+      generations:{
+        "1st Gen (2000-2007)":{
+          years:["2000","2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "LX":  { engine:"2.0L Zetec 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Escort as Ford's compact car worldwide, sold as a sedan, 3-door, 5-door hatchback, and wagon in the US. The US kept this same basic body and platform through a facelift for 2005-2007, well after Europe had already moved on to its own second-generation Focus." },
+            "ZX3 / ZX5":{ engine:"2.0L Zetec 4-cylinder (110-130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"ZX3 (3-door) and ZX5 (5-door) hatchback trims — genuine enthusiast favorites of the lineup for their light weight and sharp handling." },
+            "SVT":  { engine:"2.0L Zetec DOHC 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Manual", note:"2002-2004 only — Ford's Special Vehicle Team hot hatch, a genuine cult favorite that predates the later ST/RS badges reaching the US market at all." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Infra-Red (Red)",hex:"#C8102E"},
+            {name:"Sonic Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen — North America (2008-2011)":{
+          years:["2008","2009","2010","2011"],
+          trims:{
+            "S":  { engine:"2.0L Duratec 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely unique situation — this US-market 'second generation' was actually still derived from the original 2000 platform, restyled to look newer, while the rest of the world had already moved to a completely different global Focus. Coupe and sedan only, no more hatchback for the US this generation." },
+            "SE": { engine:"2.0L Duratec 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SES":{ engine:"2.0L Duratec 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Vapor Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "S":       { engine:"2.0L Duratec 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (Dual-Clutch)"], note:"First truly global Focus platform ever sold in the US — sedan and 5-door hatchback body styles, and the first Focus Electric (2012-2018, a compliance car sold only in select states). A 1.0L EcoBoost 3-cylinder joined for 2015, genuinely tiny for the US market." },
+            "SE":      { engine:"2.0L Duratec 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (Dual-Clutch)"] },
+            "Titanium":{ engine:"2.0L Duratec 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Automatic (Dual-Clutch)" },
+            "ST":      { engine:"2.0L Turbocharged EcoBoost 4-cylinder (252hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2013 — the first Focus ST ever sold in the US, hatchback only, manual only." },
+            "RS":      { engine:"2.3L Turbocharged EcoBoost 4-cylinder (350hp)", drivetrain:"AWD", transmission:"Manual", note:"Added 2016 — the first (and only) Focus RS ever officially sold in the US, after two earlier European-only RS generations. Genuine rally-bred AWD system with a Drift Mode, developed with input from rally driver Ken Block. This was also the final Focus generation sold in the US — Ford discontinued the whole Focus lineup after 2018 to focus on SUVs and trucks." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Nitrous Blue (Blue)",hex:"#1C6BE8"},
           ],
         },
       },
