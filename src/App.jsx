@@ -5653,6 +5653,34 @@ const VEHICLES = {
     },
   },
   "Ford": {
+    "Bronco II": {
+      years:["1984","1985","1986","1987","1988","1989","1990"],
+      trims:{
+        "Base": { engine:"2.8L Cologne V6 (115hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Ford's answer to the Chevy S-10 Blazer and Jeep Cherokee, built on a shortened Ranger pickup platform. 4WD was standard at launch — a 2WD version came later. A weak Mitsubishi 2.3L turbodiesel was offered through 1987 but sold poorly. Ford also faced real rollover-related litigation over this generation, similar to concerns later raised about the full-size Bronco." },
+        "XLS":  { engine:"2.8L Cologne V6 (115hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"] },
+        "XLT":  { engines:["2.8L Cologne V6 (115hp)","2.9L Cologne V6 (140hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"2.9L fuel-injected V6 replaced the carbureted 2.8L for 1986, a genuine power and reliability improvement." },
+        "Eddie Bauer": { engine:"2.9L Cologne V6 (140hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Final model year was 1990, with the last truck built in February that year — replaced by the larger, unibody-adjacent Explorer for 1991, which effectively created the modern compact/mid-size SUV segment as Ford knew it going forward." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Dark Canyon Red Metallic (Red)",hex:"#8B2E2E"},
+      ],
+    },
+    "EXP": {
+      years:["1982","1983","1984","1985","1986","1987","1988"],
+      trims:{
+        "Base":  { engine:"1.6L CVH 4-cylinder (70-80hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Ford's first-ever 2-seater since the original 1955 Thunderbird — a sporty coupe built on the Escort platform, with the rear seat area converted to extra cargo space instead. Sold alongside a badge-engineered Mercury LN7 twin for 1982-1983. A minor facelift arrived for 1985." },
+        "Turbo Coupe": { engine:"1.6L Turbocharged CVH 4-cylinder (120hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1984 — genuinely quick for a small FWD coupe of the era. Discontinued after 1988 with no successor; Ford's small-coupe role was later filled by cars like the Escort GT and Probe instead." },
+      },
+      colors:[
+        {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Charcoal Metallic (Gray)",hex:"#4A4E52"},
+      ],
+    },
     "F-150": {
       generations:{
         "9th Gen (1992-1996)":{
@@ -5758,6 +5786,34 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Granada": {
+      years:["1981","1982"],
+      trims:{
+        "Base": { engines:["2.3L 4-cylinder (88hp)","3.3L Inline-6 (87hp)","4.2L V8 (115hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Moved to the newer Fox platform (the same one underpinning the contemporary Fairmont), growing from a compact into a genuine mid-size car in the process. A 4-cylinder became available for the first time. A wagon body style, new for 1982, was also the Granada's final model year — the nameplate was retired and effectively replaced by the LTD for 1983." },
+        "GL":   { engines:["3.3L Inline-6 (87hp)","3.8L V6 (112hp)"], drivetrain:"RWD", transmission:"Automatic", note:"3.8L Essex V6 arrived partway through 1982, one of the first Fox-platform Fords to get it." },
+        "GLX":  { engine:"3.8L V6 (112hp)", drivetrain:"RWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Midnight Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "LTD": {
+      years:["1983","1984","1985","1986"],
+      trims:{
+        "Base":     { engines:["2.3L 4-cylinder (88-90hp)","3.3L Inline-6 (87hp)","3.8L V6 (112-120hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Not to be confused with the full-size LTD Crown Victoria, which stayed on the older Panther platform — this smaller LTD moved onto the Fox platform to directly replace the Granada, splitting Ford's mid-size and full-size lineups into two genuinely separate cars for the first time. Sedan and wagon body styles only, no 2-door. The inline-6 was dropped once the Essex V6 arrived for 1984." },
+        "LX":       { engine:"3.8L V6 (112-120hp)", drivetrain:"RWD", transmission:"Automatic", note:"Added an Interior Luxury Package as standard — a common formula across Ford's Fox-platform lineup at the time." },
+        "Brougham": { engine:"3.8L V6 (112-120hp)", drivetrain:"RWD", transmission:"Automatic", note:"Top trim, genuine Broughm-era touches like a padded 'sail cloth canvas' roof option. Replaced entirely by the front-wheel-drive Taurus for 1986, sold alongside it for that one final transition year." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
     "Mustang GT": {
       generations:{
