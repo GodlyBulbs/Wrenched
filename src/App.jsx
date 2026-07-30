@@ -5688,6 +5688,34 @@ const VEHICLES = {
         {name:"Dark Canyon Red Metallic (Red)",hex:"#8B2E2E"},
       ],
     },
+    "Bronco Sport": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Big Bend":   { engine:"1.5L Turbocharged 3-cylinder (180-181hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuinely different animal from the body-on-frame Bronco despite sharing the name and a lot of the retro styling cues — this is a unibody crossover, built on the same C2 platform as the Escape and Focus. Ford markets its AWD system as '4x4' here, though it's a genuine on-demand AWD setup, not a true low-range 4WD transfer case. The Base trim was dropped after 2023, making Big Bend the new entry point; a Heritage trim (styling package, mechanically identical to Big Bend) and a graphics-focused Free Wheeling special edition were both added along the way." },
+        "Outer Banks":{ engine:"1.5L Turbocharged 3-cylinder (180-181hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Badlands":   { engine:"2.0L Turbocharged 4-cylinder (245-250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"The genuine off-road specialist of the lineup — twin-clutch rear drive unit and a locking rear differential, exclusive to this engine/trim combination. A Sasquatch package (larger tires, more ground clearance) is also available here and on Outer Banks." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+        {name:"Cyber Orange Metallic (Orange)",hex:"#E8601C"},
+      ],
+    },
+    "Econoline / E-Series": {
+      years:["1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014"],
+      trims:{
+        "E-150":  { engines:["4.9L Inline-6 (145-160hp)","5.0L V8 (185-205hp)","5.8L V8 (210-225hp)","4.2L V6 (205hp)","4.6L V8 (225-255hp)"], drivetrain:"RWD", transmission:"Automatic", note:"Ford's full-size van/cargo workhorse, sold as the Econoline through 2001 before adopting the E-Series name to align with the broader lineup naming. Cargo van, passenger Club Wagon, and cutaway chassis body styles all shared this same basic platform. The 1997 refresh brought the new overhead-cam Triton V8 family, replacing the older pushrod Windsor engines." },
+        "E-250":  { engines:["4.9L Inline-6 (145-160hp)","5.8L V8 (210-225hp)","4.6L V8 (225-255hp)","5.4L V8 (255-305hp)"], drivetrain:"RWD", transmission:"Automatic" },
+        "E-350":  { engines:["7.5L V8 (230-245hp)","7.3L Power Stroke Turbo-Diesel V8 (185-275hp)","6.8L Triton V10 (275-362hp)","6.0L/6.4L/6.7L Power Stroke Turbo-Diesel V8 (235-300hp)"], drivetrain:"RWD", transmission:"Automatic", note:"Heaviest-duty trim, the one most commonly seen as ambulances, shuttle buses, and Class C motorhome chassis. Genuinely one of Ford's longest-running nameplates — only the F-Series has been in continuous production longer. Full van production ended after 2014; cutaway and stripped-chassis versions continued on afterward for commercial upfitters." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Medium Wedgewood Blue Metallic (Blue)",hex:"#4A6B8E"},
+      ],
+    },
     "Escape": {
       generations:{
         "1st Gen (2001-2007)":{
@@ -6416,6 +6444,52 @@ const VEHICLES = {
             {name:"Tuxedo Black (Black)",hex:"#1A1A1A"},
             {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
             {name:"Ingot Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Windstar / Freestar": {
+      generations:{
+        "Windstar 1st Gen (1995-1998)":{
+          years:["1995","1996","1997","1998"],
+          trims:{
+            "GL": { engines:["3.0L Vulcan V6 (150hp)","3.8L Essex V6 (155-200hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Replaced the rear-wheel-drive Aerostar with Ford's first genuine front-wheel-drive minivan, moving much closer to the Chrysler minivan formula that had defined the segment. Sold alongside the outgoing Aerostar for its first few years while Ford wound that older van down." },
+            "LX": { engine:"3.8L Essex V6 (155-200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Deep Wedgewood Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Windstar 2nd Gen (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "LX":       { engine:"3.0L Vulcan V6 (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely troubled generation reliability-wise — the 2000 Windstar in particular developed a real reputation for engine cradle rust and other issues that dogged the nameplate afterward." },
+            "SEL":      { engine:"3.8L Essex V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited":  { engine:"3.8L Essex V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Estate Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "Freestar / Monterey (2004-2007)":{
+          years:["2004","2005","2006","2007"],
+          trims:{
+            "S":       { engine:"3.9L Essex V6 (193hp)", drivetrain:"FWD", transmission:"Automatic", note:"Renamed from Windstar to Freestar as part of a broader Ford naming push to start every passenger-car nameplate with 'F.' Genuinely just a heavily revised Windstar underneath despite the new name — stiffer chassis, upgraded brakes and axles, but the same basic bones. Also sold as the Mercury Monterey, reviving that nameplate after decades away. Discontinued after 2007 with no direct minivan successor — Ford stepped away from the segment in North America, later covering some of the same role with the Taurus X and Flex crossovers instead." },
+            "SE":      { engine:"3.9L Essex V6 (193hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SEL":     { engine:"4.2L V6 (201hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited": { engine:"4.2L V6 (201hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Stone Metallic (Gray)",hex:"#5A5F63"},
           ],
         },
       },
