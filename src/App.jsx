@@ -6884,6 +6884,36 @@ const VEHICLES = {
     },
   },
   "Genesis": {
+    "G70": {
+      generations:{
+        "1st Gen (2019-2021)":{
+          years:["2019","2020","2021"],
+          trims:{
+            "2.0T": { engine:"2.0L Turbocharged 4-cylinder (252-255hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genesis's first-ever compact sports sedan, aimed directly at the BMW 3 Series and Audi A4 — genuinely well-regarded by critics for its chassis balance right out of the gate. The 2.0T Sport was the only Genesis ever offered with a manual transmission, a real rarity in this segment by 2019." },
+            "3.3T": { engine:"3.3L Twin-Turbo V6 (365hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Shares its engine with the G80 3.3T of the same era." },
+          },
+          colors:[
+            {name:"Uyuni White (White)",hex:"#F5F5F5"},
+            {name:"Savile Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Marlin Blue (Blue)",hex:"#1E3A6B"},
+            {name:"Santiago Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "Facelift (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "2.0T": { engine:"2.0L Turbocharged 4-cylinder (252-300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Refreshed styling and interior, and the manual transmission was dropped entirely — automatic only from here on. For 2026, the 2.0L was replaced by a 2.5L turbo four making 300hp, a real power jump for the base engine." },
+            "3.3T": { engine:"3.3L Twin-Turbo V6 (365hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Renamed 3.3T Sport Prestige for later model years, with an optional variable exhaust bumping output slightly to 368hp." },
+          },
+          colors:[
+            {name:"Uyuni White (White)",hex:"#F5F5F5"},
+            {name:"Vik Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardiff Green (Green)",hex:"#2E5A3A"},
+            {name:"Adriatic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "G80": {
       generations:{
         "1st Gen (2017-2019)":{
@@ -6914,6 +6944,77 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "G90": {
+      generations:{
+        "1st Gen (2017-2022)":{
+          years:["2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "3.3T": { engine:"3.3L Twin-Turbo V6 (365hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genesis's genuine flagship, launched alongside the G80 as one of the brand's original two models — the direct successor to the Hyundai Equus, aimed at the Mercedes S-Class and BMW 7 Series. Full-size, long-wheelbase-only proportions from the very start, no shorter variant ever offered." },
+            "5.0":  { engine:"5.0L V8 (420hp)", drivetrain:"RWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Uyuni White (White)",hex:"#F5F5F5"},
+            {name:"Savile Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Marlin Blue (Blue)",hex:"#1E3A6B"},
+            {name:"Santiago Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "2nd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "3.5T":    { engine:"3.5L Twin-Turbo V6 (375hp)", drivetrain:"AWD", transmission:"Automatic", note:"All-new generation, AWD now standard across the board — no more RWD-only option. The old naturally-aspirated V8 was dropped entirely." },
+            "3.5T E-Supercharger": { engine:"3.5L Twin-Turbo Mild-Hybrid V6 with 48V Electric Supercharger (375-409hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely unusual solution to turbo lag — a small 48-volt electric supercharger spins up instantly to fill in low-RPM response before the conventional turbos take over. A Prestige Black trim was added for 2026 with unique dark-finish exterior treatment." },
+          },
+          colors:[
+            {name:"Uyuni White (White)",hex:"#F5F5F5"},
+            {name:"Vik Black (Black)",hex:"#1A1A1A"},
+            {name:"Ceres Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Mauna Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+      },
+    },
+    "GV60": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Advanced":   { engine:"Dual Electric Motors (314hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genesis's first dedicated EV, riding on the same E-GMP platform shared with the Hyundai Ioniq 5 and Kia EV6 — genuinely distinct styling and interior from either sibling though, with a signature rotating 'Crystal Sphere' gear selector that flips over to reveal the shifter once the car powers on." },
+        "Performance":{ engine:"Dual Electric Motors (429hp, 483hp with Boost Mode)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Boost Mode is a genuinely temporary overboost, unlocking the full 483hp for about 10 seconds via a steering-wheel-mounted button — a real motorsport-inspired touch for a luxury EV." },
+      },
+      colors:[
+        {name:"Uyuni White (White)",hex:"#F5F5F5"},
+        {name:"Vik Black (Black)",hex:"#1A1A1A"},
+        {name:"Hanauma Mint (Green)",hex:"#7EC8B8"},
+        {name:"Sao Paulo Lime (Green)",hex:"#A8D82A"},
+      ],
+    },
+    "GV70": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "2.5T": { engine:"2.5L Turbocharged 4-cylinder (300hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genesis's compact luxury SUV, sharing its platform with the G70 sedan — a real answer to the BMW X3 and Audi Q5. AWD is standard across every trim, no FWD or RWD-only option offered." },
+        "3.5T": { engine:"3.5L Twin-Turbo V6 (375hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Electrified": { engine:"Dual Electric Motors (429hp, 483hp with Boost Mode)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2023 — a genuine all-electric version of the gas GV70, sharing its powertrain and Boost Mode function with the GV60 Performance rather than being a from-scratch EV design." },
+      },
+      colors:[
+        {name:"Uyuni White (White)",hex:"#F5F5F5"},
+        {name:"Vik Black (Black)",hex:"#1A1A1A"},
+        {name:"Makalu Gray (Gray)",hex:"#6B6E6F"},
+        {name:"Adriatic Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "GV80": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "2.5T": { engine:"2.5L Turbocharged 4-cylinder (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genesis's genuine flagship SUV and the brand's first-ever SUV, period — a real 3-row option (optional on 2.5T, standard on many 3.5T trims), competing with the BMW X5 and Mercedes GLE. Standard RWD is a genuine rarity in this segment; most rivals default to AWD." },
+        "3.5T": { engine:"3.5L Twin-Turbo V6 (375hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "Coupe":{ engine:"3.5L Twin-Turbo V6 (375hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2023 — a sportier, sloped-roofline 2-row variant of the standard GV80, trading some rear headroom and the 3-row option for a more coupe-like silhouette." },
+      },
+      colors:[
+        {name:"Uyuni White (White)",hex:"#F5F5F5"},
+        {name:"Vik Black (Black)",hex:"#1A1A1A"},
+        {name:"Makalu Gray (Gray)",hex:"#6B6E6F"},
+        {name:"Cardiff Green (Green)",hex:"#2E5A3A"},
+      ],
     },
   },
   "GMC": {
