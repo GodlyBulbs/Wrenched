@@ -5061,32 +5061,6 @@ const VEHICLES = {
     },
   },
   "Ferrari": {
-    "12Cilindri": {
-      years:["2024","2025","2026"],
-      trims:{
-        "12Cilindri":        { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the 812 Superfast as Ferrari's naturally-aspirated V12 flagship — styling deliberately echoes the 1968-1973 365 GTB/4 'Daytona.' Deliberately no hybrid assist despite Ferrari having the tech on hand elsewhere in the lineup; several upgrades (titanium con rods, ceramic-coated exhaust) were carried over from the track-focused 812 Competizione." },
-        "12Cilindri Spider": { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Launched alongside the coupe rather than following later — a genuine first for a Ferrari front-engine V12 flagship. Retractable hard top, 14-second operation at speeds up to 27mph." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
-    "296 GTB / GTS": {
-      years:["2022","2023","2024","2025","2026"],
-      trims:{
-        "296 GTB": { engine:"3.0L Twin-Turbo Hybrid V6 (819hp combined)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"The first road-going Ferrari V6 in over 50 years, since the Dino 246 — a 120° twin-turbo V6 paired with a 165hp electric motor mounted between the engine and an 8-speed dual-clutch gearbox. Name combines total displacement (2.992L) and cylinder count with the 'GTB' (Gran Turismo Berlinetta) badge. About 16 miles of pure-electric range." },
-        "296 GTS": { engine:"3.0L Twin-Turbo Hybrid V6 (819hp combined)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2023 — open-top version with the same retractable hard top concept as the SF90 Spider, folding in 14 seconds at speeds up to 28mph." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
     "348": {
       years:["1990","1991","1992","1993","1994","1995"],
       trims:{
@@ -5240,57 +5214,6 @@ const VEHICLES = {
         {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
-    "812 Competizione": {
-      years:["2022","2023","2024"],
-      trims:{
-        "Competizione":   { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"A track-focused special series built on the 812 Superfast's bones — titanium connecting rods, revised valve timing, and a raised 9,500rpm redline pushed output past the Superfast's 789hp. Over 300lbs lighter than the Superfast too, plus independent rear-wheel steering and a new aero package for real added downforce. Direct successor to the F12tdf and 599 GTO lineage of limited-run front-engine V12 specials." },
-        "Competizione A": { engine:"6.5L Naturally-Aspirated V12 (819hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"'A' for Aperta — a targa-top version launched alongside the coupe, a tribute to Ferrari's open-top tradition." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
-    "812 Superfast": {
-      years:["2017","2018","2019","2020","2021","2022","2023","2024"],
-      trims:{
-        "Superfast": { engine:"6.5L Naturally-Aspirated V12 (789hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the F12berlinetta as Ferrari's V12 flagship, and was the most powerful, fastest road-going Ferrari at launch — the naturally-aspirated V12 grew from 6.2 to 6.5 liters over the F12's engine. Named for its roughly 800 metric horsepower (812) and the Superfast badge Ferrari first used on 1950s-60s front-engine V12 grand tourers." },
-        "GTS":       { engine:"6.5L Naturally-Aspirated V12 (789hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2019 — the first front-engine V12 series-production convertible Ferrari had built in 50 years (the 550, 575, and 599 convertibles were all limited, special-customer-only editions). Retractable hard top operable at speeds up to 28mph." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-        {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
-      ],
-    },
-    "849 Testarossa": {
-      years:["2026"],
-      trims:{
-        "849 Testarossa":        { engine:"4.0L Twin-Turbo Hybrid V8 (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the SF90 Stradale as Ferrari's mid-engine flagship — a heavily revised version of the SF90's twin-turbo V8 (now 830 metric horsepower on its own, up 50) paired with the same three-motor PHEV hybrid system for a combined 1,050 cv. Name borrows from the 1950s-60s 250 Testa Rossa racers: '8' for the cylinder count, '49' for each cylinder's displacement in cc. Revealed September 2025, production beginning mid-2026." },
-        "849 Testarossa Spider": { engine:"4.0L Twin-Turbo Hybrid V8 (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Open-top version, revealed alongside the coupe rather than following later." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
-    "Amalfi": {
-      years:["2025","2026"],
-      trims:{
-        "Base": { engine:"3.9L Twin-Turbo V8 (631hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the Roma as Ferrari's entry-level front-engine GT — an evolution of the Roma's V8 (up 20hp) in a lighter, updated body, named for the Amalfi Coast. Deliberately kept non-hybrid while much of the rest of the lineup electrifies. Notably brought back physical steering wheel buttons after the Roma and 296 had switched to touch-capacitive controls, a change Ferrari made in direct response to owner feedback." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
     "California": {
       years:["2008","2009","2010","2011","2012","2013","2014"],
       trims:{
@@ -5315,18 +5238,6 @@ const VEHICLES = {
         {name:"Bianco Avus (White)",hex:"#F5F5F5"},
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
-    "Daytona SP3": {
-      years:["2022","2023","2024","2025"],
-      trims:{
-        "Base": { engine:"6.5L Naturally-Aspirated V12 (829hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Third entry in Ferrari's limited-run 'Icona' series (after the Monza SP1/SP2), a tribute to Ferrari's 1-2-3 sweep at the 1967 24 Hours of Daytona — styling borrows from the 330 P3/4, P4, and 412 P racers that finished that podium. Butterfly doors, LaFerrari-derived chassis, and the first mid-mounted Ferrari V12 without hybrid assistance since the Enzo. Limited to 599 units, all sold before public unveiling, at roughly $2.25 million each." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
       ],
     },
     "Enzo": {
@@ -5394,18 +5305,6 @@ const VEHICLES = {
         {name:"Argento Nurburgring (Silver)",hex:"#C0C0C0"},
       ],
     },
-    "F80": {
-      years:["2025","2026"],
-      trims:{
-        "Base": { engine:"3.0L Twin-Turbo Hybrid V6 (1184hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the LaFerrari as Ferrari's flagship halo hypercar, and the sixth in the 288 GTO/F40/F50/Enzo/LaFerrari lineage. A genuine departure from that lineage's V12 tradition — a twin-turbo V6 derived from the Le Mans-winning 499P race car, paired with three electric motors (two up front for AWD, one acting as a starter/generator) for a combined 1,184hp. Butterfly doors, active suspension, and an F1-style 'S-Duct' front end. Limited to 799 units, roughly $3.9 million each." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Blu Scuro (Blue)",hex:"#1B2A4A"},
-      ],
-    },
     "FF": {
       years:["2011","2012","2013","2014","2015","2016"],
       trims:{
@@ -5444,18 +5343,6 @@ const VEHICLES = {
         {name:"Blu Tour de France (Blue)",hex:"#1E3A6B"},
       ],
     },
-    "Luce": {
-      years:["2026","2027"],
-      trims:{
-        "Base": { engine:"Quad Electric Motor (1035hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Ferrari's first-ever production electric vehicle, and its first true 4/5-seat model — a liftback sedan with rear coach doors, styled by former Apple design chief Jony Ive and Marc Newson at LoveFrom. Four independently-controlled motors give real torque-vectoring, on an 800-volt architecture with a 122kWh battery good for roughly 330 miles WLTP (280 EPA-estimated). Name means 'light' in Italian. Revealed May 2026, deliveries starting late 2026 at around $640,000." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
-      ],
-    },
     "Mondial t": {
       years:["1990","1991","1992","1993"],
       trims:{
@@ -5467,74 +5354,6 @@ const VEHICLES = {
         {name:"Nero (Black)",hex:"#1A1A1A"},
         {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
         {name:"Grigio Titanio (Gray)",hex:"#6B6E6F"},
-      ],
-    },
-    "Portofino": {
-      generations:{
-        "Portofino (2018-2020)":{
-          years:["2018","2019","2020"],
-          trims:{
-            "Base": { engine:"3.9L Twin-Turbo V8 (591hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the California T as Ferrari's entry-level front-engine convertible — retained the retractable hard top concept, now paired with lighter aluminum construction and sharper handling than the car it replaced." },
-          },
-          colors:[
-            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
-            {name:"Nero (Black)",hex:"#1A1A1A"},
-            {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-          ],
-        },
-        "Portofino M (2021-2023)":{
-          years:["2021","2022","2023"],
-          trims:{
-            "Base": { engine:"3.9L Twin-Turbo V8 (612hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"'M' for Modificata — same 3.9L displacement and torque as the standard Portofino, but a genuine 20hp bump from new cam profiles and a turbo-speed sensor, paired with a new 8-speed dual-clutch (replacing the old 7-speed). First Ferrari GT convertible with a 5-position Manettino. Ferrari's first model ever launched exclusively online, during COVID lockdown. Replaced by the Roma Spider." },
-          },
-          colors:[
-            {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-            {name:"Bianco Avus (White)",hex:"#F5F5F5"},
-            {name:"Nero (Black)",hex:"#1A1A1A"},
-            {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-          ],
-        },
-      },
-    },
-    "Purosangue": {
-      years:["2023","2024","2025","2026"],
-      trims:{
-        "Base": { engine:"6.5L Naturally-Aspirated V12 (715hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Ferrari's first-ever four-door, four-seat production car — the brand avoids calling it an SUV, preferring 'FUV' (Ferrari Utility Vehicle). Genuinely unusual layout for the segment: a naturally-aspirated V12 mounted mid-front, behind the front axle, rather than the turbo V8s or V6 hybrids most rivals use. Rear-hinged 'suicide' doors open automatically. Name means 'thoroughbred' in Italian." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-        {name:"Blu Pozzi (Blue)",hex:"#1E3A6B"},
-      ],
-    },
-    "Roma / Roma Spider": {
-      years:["2020","2021","2022","2023","2024","2025","2026"],
-      trims:{
-        "Roma":        { engine:"3.9L Twin-Turbo V8 (611hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Replaced the Portofino's role as Ferrari's 'everyday' front-engine GT, but with sharper, more understated styling inspired by 1950s-60s Rome — Ferrari calls the look 'La Nuova Dolce Vita.' Shares its twin-turbo V8 family (voted International Engine of the Year four years running) with the Portofino." },
-        "Roma Spider": { engine:"3.9L Twin-Turbo V8 (612hp)", drivetrain:"RWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2023, three years after the coupe — the first front-engine Ferrari with a fabric soft top (rather than a retractable hardtop) since the 1969 365 GTS4. Folds in about 13.5 seconds at speeds up to 37mph, only 185lbs heavier than the coupe." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Bianco Avus (White)",hex:"#F5F5F5"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
-      ],
-    },
-    "SF90 Stradale": {
-      years:["2020","2021","2022","2023","2024","2025","2026"],
-      trims:{
-        "Stradale":    { engine:"4.0L Twin-Turbo Hybrid V8 (986hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Ferrari's first series-production plug-in hybrid, and its first mid-engine AWD road car — a rear-mounted electric motor plus two more on the front axle for independent torque vectoring, on top of a 769hp twin-turbo V8. Named for Ferrari's 90th anniversary (Scuderia Ferrari, 1929-2019). About 16 miles of pure-electric range." },
-        "Spider":      { engine:"4.0L Twin-Turbo Hybrid V8 (986hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2021 — retractable hard top version, Ferrari's first-ever production plug-in hybrid spider." },
-        "XX Stradale": { engine:"4.0L Twin-Turbo Hybrid V8 (1016hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2024 — the first road-legal cars in Ferrari's XX Programme, previously reserved for track-only specials. Adds an 'Extra Boost' overboost function and revised aero over the standard SF90." },
-        "XX Spider":   { engine:"4.0L Twin-Turbo Hybrid V8 (1016hp combined)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch)", note:"Added 2024 alongside the XX Stradale — open-top version with the same XX Programme upgrades." },
-      },
-      colors:[
-        {name:"Rosso Corsa (Red)",hex:"#C8102E"},
-        {name:"Giallo Modena (Yellow)",hex:"#F5C800"},
-        {name:"Nero (Black)",hex:"#1A1A1A"},
-        {name:"Grigio Silverstone (Silver)",hex:"#C0C0C0"},
       ],
     },
   },
@@ -10168,6 +9987,7 @@ function AppShell(){
   const [subLoading,setSubLoading]=useState(true);
   const [subCustomerId,setSubCustomerId]=useState(null);
   const [subUpdatedAt,setSubUpdatedAt]=useState(null);
+  const [subPeriodEnd,setSubPeriodEnd]=useState(null);
 
   useEffect(()=>{
     supabase.auth.getSession().then(({data:{session}})=>{setSession(session);setAuthLoading(false);});
@@ -10185,6 +10005,7 @@ function AppShell(){
       setSubStatus(data?.status||"inactive");
       setSubCustomerId(data?.stripe_customer_id||null);
       setSubUpdatedAt(data?.updated_at||null);
+      setSubPeriodEnd(data?.current_period_end||null);
       setSubLoading(false);
     });
   },[session]);
@@ -10269,13 +10090,21 @@ function AppShell(){
   const GRACE_PERIOD_MS=5*24*60*60*1000;
   const inGracePeriod=subStatus==="past_due"&&subUpdatedAt&&(Date.now()-new Date(subUpdatedAt).getTime())<GRACE_PERIOD_MS;
   const graceDaysLeft=inGracePeriod?Math.ceil((GRACE_PERIOD_MS-(Date.now()-new Date(subUpdatedAt).getTime()))/(24*60*60*1000)):0;
+  const inTrial=subStatus==="trialing";
+  const trialDaysLeft=inTrial&&subPeriodEnd?Math.max(0,Math.ceil((new Date(subPeriodEnd).getTime()-Date.now())/(24*60*60*1000))):0;
   const isOwner=session?.user?.email?.toLowerCase()===OWNER_EMAIL;
-  if(!isOwner&&subStatus!=="active"&&!inGracePeriod)return<SubscribeScreen session={session}/>;
+  if(!isOwner&&subStatus!=="active"&&!inTrial&&!inGracePeriod)return<SubscribeScreen session={session}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
     <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
+
+      {inTrial&&(
+        <div style={{background:"#10202A",borderBottom:"1px solid #3B9AE8",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
+          <span style={{color:"#3B9AE8",fontSize:"13px"}}>You're on a free trial — <b>{trialDaysLeft} day{trialDaysLeft!==1?"s":""}</b> left before your card is charged.</span>
+        </div>
+      )}
 
       {inGracePeriod&&(
         <div style={{background:"#2A1810",borderBottom:"1px solid #FF6B2B",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
