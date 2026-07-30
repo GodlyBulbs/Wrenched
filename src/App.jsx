@@ -5716,6 +5716,21 @@ const VEHICLES = {
         {name:"Medium Wedgewood Blue Metallic (Blue)",hex:"#4A6B8E"},
       ],
     },
+    "EcoSport": {
+      years:["2018","2019","2020","2021","2022"],
+      trims:{
+        "S":       { engine:"1.0L Turbocharged 3-cylinder (123hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Ford's most affordable SUV at the time, a genuinely tiny subcompact crossover built in Craiova, Romania, positioned below even the compact Escape. Distinctive side-hinged rear cargo door (swinging open rather than lifting up) rather than a conventional hatchback liftgate — a real point of difference, and some owners found it inconvenient in tight parking spots." },
+        "SE":      { engine:"1.0L Turbocharged 3-cylinder (123hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+        "SES":     { engine:"2.0L 4-cylinder (166hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Titanium":{ engines:["1.0L Turbocharged 3-cylinder (123hp)","2.0L 4-cylinder (166hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"For its final 2022 model year, Ford dropped the tiny 3-cylinder and front-wheel drive entirely — every trim came standard with the 2.0L four-cylinder and AWD. Discontinued after 2022 with no replacement, as Ford consolidated its small-SUV lineup." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+        {name:"Rich Copper Metallic (Copper)",hex:"#B87333"},
+      ],
+    },
     "Edge": {
       generations:{
         "1st Gen (2007-2014)":{
@@ -6126,6 +6141,38 @@ const VEHICLES = {
         },
       },
     },
+    "Flex": {
+      generations:{
+        "Pre-Facelift (2009-2012)":{
+          years:["2009","2010","2011","2012"],
+          trims:{
+            "SE":      { engine:"3.5L Duratec V6 (262hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely unusual entry in Ford's lineup — a boxy, Woodie-wagon-inspired 3-row crossover built on a stretched Taurus platform, with the Ford badge on the hood replaced by 'FLEX' lettering. Never a huge sales success, but well-regarded critically and known for having the highest owner retention rate in Ford's entire lineup at the time." },
+            "SEL":     { engine:"3.5L Duratec V6 (262hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Limited": { engines:["3.5L Duratec V6 (262hp)","3.5L Twin-Turbo EcoBoost V6 (355hp)"], drivetrain:"AWD", transmission:"Automatic", note:"EcoBoost twin-turbo option added 2010 — a genuinely potent engine for a family 3-row hauler." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Candy Metallic (Red)",hex:"#9B1B30"},
+            {name:"White Suede Metallic (White)",hex:"#F0F0F0"},
+          ],
+        },
+        "Facelift (2013-2019)":{
+          years:["2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "SE":      { engine:"3.5L Duratec V6 (287hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"New front-end styling spelling out FLEX across the hood in block letters, plus a revised interior and dashboard. Both engines got a real power bump over the pre-facelift years. Discontinued after 2019 — Ford officially confirmed the end after 11 years in production, with no direct successor as the brand shifted further toward the Explorer and Expedition to cover that same 3-row role." },
+            "SEL":     { engine:"3.5L Duratec V6 (287hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Limited": { engines:["3.5L Duratec V6 (287hp)","3.5L Twin-Turbo EcoBoost V6 (365hp)"], drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"White Platinum Metallic (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
     "Focus": {
       generations:{
         "1st Gen (2000-2007)":{
@@ -6201,6 +6248,41 @@ const VEHICLES = {
         {name:"Bright Red (Red)",hex:"#C8102E"},
         {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
       ],
+    },
+    "Maverick": {
+      generations:{
+        "1st Gen (2022-2025)":{
+          years:["2022","2023","2024","2025"],
+          trims:{
+            "XL":     { engines:["2.5L Hybrid 4-cylinder (191hp combined)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine return to a segment Ford had abandoned decades earlier — a true compact pickup, sized well below the Ranger, built on the same unibody platform shared with the Escape and Bronco Sport. Hybrid is FWD-only and standard; the turbo four is optional, required for AWD. At launch, the Hybrid's 42mpg city rating made it the most fuel-efficient pickup truck sold in America by a wide margin, beating every diesel full-size truck on the market." },
+            "XLT":    { engines:["2.5L Hybrid 4-cylinder (191hp combined)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Lariat": { engines:["2.5L Hybrid 4-cylinder (191hp combined)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Tremor": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2023 — an off-road package (available on XLT and Lariat) with a retuned suspension and all-terrain tires, raising ground clearance to 9.4 inches." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Cactus Gray (Green-Gray)",hex:"#8A9A7E"},
+            {name:"Alto Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "XL":     { engine:"2.5L Hybrid 4-cylinder (191hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine mid-cycle overhaul rather than a full platform change — named MotorTrend's 2026 Truck of the Year. Hybrid now runs through a CVT rather than a conventional automatic. The old FX4 off-road package was folded into a standalone Tremor trim, and a new street-styled Lobo trim was added, with a lowered sport suspension and unique wheels rather than off-road hardware." },
+            "XLT":    { engines:["2.5L Hybrid 4-cylinder (191hp combined)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Lariat": { engines:["2.5L Hybrid 4-cylinder (191hp combined)","2.0L Turbocharged 4-cylinder (250hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Lobo":   { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"Added 2026 — a genuine 'street truck' trim with a lowered suspension, unique wheels, and a 7-speed quick-shift transmission mode via paddle shifters, prioritizing on-road character over off-road capability." },
+            "Tremor": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Cactus Gray (Green-Gray)",hex:"#8A9A7E"},
+            {name:"Lime Squeeze (Green)",hex:"#A8D82A"},
+          ],
+        },
+      },
     },
     "Mustang GT": {
       generations:{
