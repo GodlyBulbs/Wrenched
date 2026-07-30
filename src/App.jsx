@@ -7018,6 +7018,71 @@ const VEHICLES = {
     },
   },
   "GMC": {
+    "Jimmy": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "SL":  { engines:["2.5L Tech IV 4-cylinder (105hp)","4.3L Vortec V6 (160-195hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"GMC's rebadged twin of the Chevrolet S-10 Blazer, sold as the 'S-15 Jimmy' before dropping the S-15 prefix in 1992 once the full-size Jimmy was renamed Yukon. A 4-door body style arrived in March 1990 as a 1990.5/1991 model, joining the original 2-door — a genuine first for this class of compact SUV, beating the Ford Explorer to market by several months." },
+            "SLE": { engine:"4.3L Vortec V6 (160-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SLT": { engine:"4.3L Vortec V6 (195hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Quasar Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1995-2001)":{
+          years:["1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "SL":  { engine:"4.3L Vortec V6 (190-195hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign — the first since the nameplate's 1983 debut — bringing a more rounded, aerodynamic body, a standard driver's airbag, and standard 4-wheel ABS. Only one engine offered from here on out, the 4.3L Vortec V6, in varying states of tune." },
+            "SLS": { engine:"4.3L Vortec V6 (190-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SLE": { engine:"4.3L Vortec V6 (190-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A top-trim Envoy version was introduced in 1998 as a plusher variant of the Jimmy, eventually splitting off as its own standalone model and effectively replacing the Jimmy in GMC's lineup after the 2001 model year." },
+            "SLT": { engine:"4.3L Vortec V6 (190-195hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Toreador Red Metallic (Red)",hex:"#6B1A2A"},
+          ],
+        },
+      },
+    },
+    "Safari": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "SLX": { engine:"4.3L V6 (150-200hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"GMC's truck-based, rear/all-wheel-drive minivan, a genuine corporate twin to the Chevrolet Astro — same body, different grille and badging. AWD and 4-wheel ABS were both added for 1990, along with a longer extended-length body option. A real alternative to the front-wheel-drive Chrysler minivans of the era, aimed at buyers who wanted more towing capacity and available all-wheel traction." },
+            "SLE": { engine:"4.3L V6 (150-200hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "SLT": { engine:"4.3L V6 (150-200hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Quasar Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1995-2005)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "SLX": { engine:"4.3L Vortec V6 (190hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"A genuine facelift more than a full redesign — new grille, hood, fenders, and front fascia, plus composite headlights on upper trims, but the same basic underlying body shell carried through to the very end. The short-wheelbase body was dropped this generation, leaving only the extended-length van. 2003 brought a genuine chassis upgrade shared with the half-ton pickups — bigger brakes, 6-lug wheels, and beefed-up suspension components. One of GMC's longest-running nameplates by the time it was finally discontinued after 2005, with no direct successor." },
+            "SLE": { engine:"4.3L Vortec V6 (190hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "SLT": { engine:"4.3L Vortec V6 (190hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Bronzemist Metallic (Brown)",hex:"#7A5A3A"},
+          ],
+        },
+      },
+    },
     "Sierra": {
       generations:{
         "C/K 1st Gen (1990-1998)":{
@@ -7090,6 +7155,38 @@ const VEHICLES = {
             {name:"Onyx Black (Black)",hex:"#1A1A1A"},
             {name:"Cayenne Red Tintcoat (Red)",hex:"#9B1B30"},
             {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Sonoma": {
+      generations:{
+        "1st Gen (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engines:["2.5L Tech IV 4-cylinder (94-105hp)","2.8L V6 (125hp)","4.3L Vortec V6 (160-195hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Renamed from S-15 to Sonoma for the 1991 model year, dropping the old 'Sierra' compact-truck trim designation to avoid confusion with the full-size Sierra. Regular and extended cab body styles, short and long beds." },
+            "GT":   { engine:"4.3L Vortec V6 (195hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 1992 — a sportier appearance package borrowing the Syclone's looks (blacked-out trim, lowered stance) without the turbo engine or AWD underneath." },
+            "Syclone": { engine:"4.3L Turbocharged V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"1991 only, with a handful of stragglers built in 1992 — a genuinely legendary factory hot-rod truck, built in partnership with Production Automotive Services. At the time, it was the quickest-accelerating production vehicle GM sold, genuinely embarrassing contemporary sports cars in period magazine tests. All-wheel drive and a Mitsubishi-sourced turbocharger were both real firsts for an American production pickup." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Quasar Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1994-2004)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "SL":  { engines:["2.2L 4-cylinder (118hp)","4.3L Vortec V6 (165-195hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely thorough redesign, more rounded and modern than the outgoing truck. Regular, extended, and (later) crew cab body styles were all offered. A driver's airbag arrived in 1995, dual front airbags by 1998. Discontinued after 2004, replaced by the larger, more modern Canyon." },
+            "SLS": { engine:"4.3L Vortec V6 (165-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SLE": { engine:"4.3L Vortec V6 (165-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Forest Green Metallic (Green)",hex:"#1E3A2A"},
           ],
         },
       },
