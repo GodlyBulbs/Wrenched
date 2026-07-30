@@ -5702,6 +5702,21 @@ const VEHICLES = {
         {name:"Cyber Orange Metallic (Orange)",hex:"#E8601C"},
       ],
     },
+    "Contour": {
+      years:["1995","1996","1997","1998","1999","2000"],
+      trims:{
+        "GL": { engine:"2.0L Zetec 4-cylinder (125hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely massive engineering investment for Ford — the Contour was the North American version of the European Mondeo, developed as part of a reported $6 billion global-platform program alongside the Mercury Mystique twin. Replaced the aging Tempo, but ended up sized awkwardly close to the smaller Escort while priced close to the larger Taurus, a real positioning problem that dogged it the whole way." },
+        "LX": { engines:["2.0L Zetec 4-cylinder (125hp)","2.5L Duratec V6 (170hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "SE": { engine:"2.5L Duratec V6 (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "SVT":{ engine:"2.5L SVT-Tuned Duratec V6 (195-200hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 1998 — Ford's Special Vehicle Team hot-rodded sedan, upgraded cams, throttle body, and suspension over the standard SE. Genuinely developed a cult following among enthusiasts despite the car's slow sales overall. By 2000, the lineup had been trimmed down to just the SE and SVT before Ford discontinued the whole Contour line, replaced in spirit by the Taurus SE trim and eventually the Focus." },
+      },
+      colors:[
+        {name:"Rangoon Red (Red)",hex:"#9B1B30"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Deep Amethyst Metallic (Purple)",hex:"#4A2E5A"},
+      ],
+    },
     "Econoline / E-Series": {
       years:["1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014"],
       trims:{
@@ -6141,6 +6156,20 @@ const VEHICLES = {
         },
       },
     },
+    "Five Hundred": {
+      years:["2005","2006","2007"],
+      trims:{
+        "SE":      { engine:"3.0L Duratec V6 (203hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine attempt at a full-size flagship sedan to replace the aging Taurus, riding on the Ford D3 platform — an evolution of Volvo's own P2 architecture, a real byproduct of Ford owning Volvo at the time. Shared its basic design and drivetrain with both the Mercury Montego sedan and the Freestyle crossover wagon. Only ever offered with a single V6 engine across its whole run — no four-cylinder, no V8." },
+        "SEL":     { engine:"3.0L Duratec V6 (203hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"FWD SEL and Limited got a conventional 6-speed automatic; AWD versions (and the base FWD SE) used a CVT instead." },
+        "Limited": { engine:"3.0L Duratec V6 (203hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Despite genuine strengths — a spacious cabin, strong crash-test scores, capable AWD — sales never took off. Discontinued after 2007 and directly replaced by a reworked, renamed, and more powerful 2008 Taurus, essentially the same car under a more recognizable badge." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+        {name:"Dark Ink Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "Flex": {
       generations:{
         "Pre-Facelift (2009-2012)":{
@@ -6217,6 +6246,43 @@ const VEHICLES = {
             {name:"Shadow Black (Black)",hex:"#1A1A1A"},
             {name:"Race Red (Red)",hex:"#C8102E"},
             {name:"Nitrous Blue (Blue)",hex:"#1C6BE8"},
+          ],
+        },
+      },
+    },
+    "Fusion": {
+      generations:{
+        "1st Gen (2006-2012)":{
+          years:["2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "S":  { engine:"2.3L Duratec 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced both the Contour and the outgoing Taurus in Ford's mid-size lineup, sharing its underlying platform with the Mazda6. AWD became available for 2007 on V6 models. 2010 brought a genuinely significant mid-cycle refresh with new styling, an upgraded 2.5L base four-cylinder, and the debut of the Fusion Hybrid — the 2010 Fusion was also named MotorTrend's Car of the Year." },
+            "SE": { engines:["2.3L Duratec 4-cylinder (160hp)","2.5L Duratec 4-cylinder (175hp)","3.0L Duratec V6 (221-240hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "SEL":{ engines:["3.0L Duratec V6 (221-240hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Sport": { engine:"3.5L Duratec V6 (263hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added with the 2010 refresh — the quickest gas-powered Fusion of this generation." },
+            "Hybrid":{ engine:"2.5L Atkinson-Cycle Hybrid 4-cylinder (191hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Arrived for 2010 — one of the earliest true hybrid sedans on the US market, genuinely competitive with the Camry and Accord hybrids of the same era on efficiency." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Steel Blue Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "2nd Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "S":       { engine:"2.5L Duratec 4-cylinder (175hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely striking Aston Martin-inspired redesign, sharing its global platform (and the Mondeo name overseas) with Ford of Europe. Turbocharged four-cylinders replaced the old V6 as the step-up engine choice — a 1.6L (later 1.5L) and 2.0L EcoBoost, the 1.6L being the only engine ever paired with a manual transmission this generation." },
+            "SE":      { engines:["1.5L Turbocharged 4-cylinder (181hp)","2.0L Turbocharged 4-cylinder (245hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Titanium":{ engine:"2.0L Turbocharged 4-cylinder (245hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Sport":   { engine:"2.7L Twin-Turbo EcoBoost V6 (325-335hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2017 — the most powerful Fusion ever built, and the first Fusion Sport with a genuine V6 since the outgoing generation. This was also the final Fusion generation — production ended in 2020 with no successor, as Ford stepped away from sedans almost entirely." },
+            "Hybrid":  { engine:"2.0L Atkinson-Cycle Hybrid 4-cylinder (188hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "Energi":  { engine:"2.0L Atkinson-Cycle Plug-In Hybrid 4-cylinder (188hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Added 2013 — the Fusion's plug-in hybrid variant, with a genuine all-electric-only driving range before the gas engine engaged." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Blue Metallic (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
