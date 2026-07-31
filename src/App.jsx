@@ -7115,6 +7115,50 @@ const VEHICLES = {
         },
       },
     },
+    "Envoy": {
+      generations:{
+        "1st Gen (1998-2000)":{
+          years:["1998","1999","2000"],
+          trims:{
+            "Base": { engine:"4.3L Vortec V6 (190hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Originally just a top-line luxury trim of the GMC Jimmy rather than a standalone model — leather interior, a floor-mounted shifter, and a mostly monochromatic exterior with alloy wheels, in the same vein as the closely related Oldsmobile Bravada. Retired after 2000 before returning as a genuine standalone model." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Toreador Red Metallic (Red)",hex:"#6B1A2A"},
+          ],
+        },
+        "2nd Gen (2002-2009)":{
+          years:["2002","2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "SLE": { engine:"4.2L Vortec Inline-6 (270-291hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Fully replaced the Jimmy in GMC's lineup this generation, offered only as a 5-door SUV. Shares its GMT360 platform most closely with the Chevrolet TrailBlazer, though with genuinely distinct GMC styling. Named Motor Trend's Sport/Utility of the Year for 2002. The unusual Envoy XUV variant (2004-2005) featured a retractable roof panel and a MidGate partition, blending pickup-bed and SUV functionality — sales fell well short of Ford's projections, and it was discontinued after just two years." },
+            "SLT": { engines:["4.2L Vortec Inline-6 (270-291hp)","5.3L Vortec V8 (290-320hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic", note:"The V8 arrived for 2005, GM's 'Displacement on Demand' cylinder-deactivation technology included to help offset the fuel economy hit." },
+            "Denali": { engine:"5.3L Vortec V8 (320hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2005 — genuine top-of-the-line trim with a distinctive chrome mesh grille, real wood-grain interior trim, and a Bose sound system. Both the standard-wheelbase Envoy and the longer Envoy XL could be had in Denali guise. The Envoy XL and Envoy XUV were both discontinued after 2006 when the Oklahoma City plant that built them closed, replaced by the new Acadia crossover; the standard Envoy soldiered on through 2009 before being replaced by the Terrain and Acadia for good." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Hummer EV": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "EV2":  { engine:"Dual Electric Motors (625hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"GMC's revival of the Hummer name — dormant since GM discontinued the standalone Hummer brand during its 2009 bankruptcy — now as an electric-only sub-line, sharing its GM BT1 platform with the Chevrolet Silverado EV and Cadillac Escalade IQ. Genuinely massive: over 9,000 lbs for some configurations, among the heaviest passenger vehicles sold in America. Offered as both a 4-door pickup truck and a 5-door SUV body style. CrabWalk — a party trick that lets all four wheels steer in unison for diagonal movement — is a real, functional off-road feature, not just marketing." },
+        "EV2X": { engine:"Dual Electric Motors (625hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "EV3X": { engine:"Triple Electric Motors (830-1000hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2023, taking over the 3-motor flagship spot after the limited-run Edition 1 (2022 only, 1,000hp, exclusively Moonshadow White with bronze wheels) sold out." },
+      },
+      colors:[
+        {name:"Moonshadow White (White)",hex:"#F0F0F0"},
+        {name:"Interstellar White (White)",hex:"#F5F5F5"},
+        {name:"Lunar Shadow Metallic (Gray)",hex:"#4A4E52"},
+        {name:"Volcanic Red (Red)",hex:"#9B1B30"},
+      ],
+    },
     "Jimmy": {
       generations:{
         "1st Gen (1990-1994)":{
@@ -7176,6 +7220,49 @@ const VEHICLES = {
             {name:"Onyx Black (Black)",hex:"#1A1A1A"},
             {name:"Bright Red (Red)",hex:"#C8102E"},
             {name:"Medium Bronzemist Metallic (Brown)",hex:"#7A5A3A"},
+          ],
+        },
+      },
+    },
+    "Savana": {
+      generations:{
+        "Vandura / Rally (1990-1995)":{
+          years:["1990","1991","1992","1993","1994","1995"],
+          trims:{
+            "Base": { engines:["4.3L V6 (165hp)","5.0L V8 (170hp)","5.7L V8 (200hp)","7.4L V8 (230hp)","6.2L Diesel V8","6.5L Diesel V8"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"GMC's full-size van in its last years under the old Vandura (cargo) and Rally (passenger) names, dating back to a 1971 body design — this was the same basic G-Series van made famous by the A-Team's iconic black-and-red example. Offered in 1500, 2500, and 3500 weight classes across multiple wheelbases. The Rally Wagon went on sale in late 1994 as a 1995 model, with the Vandura following in early 1995; 1996 was the final year for both names before the Savana replaced them outright." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Medium Quasar Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "1st Gen Savana (1996-2002)":{
+          years:["1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "G1500": { engine:"4.3L Vortec V6 (195hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine ground-up redesign replacing the decades-old Vandura/Rally, developed alongside its corporate twin, the Chevrolet Express. More aerodynamic styling than the outgoing van, with rounded fender corners and flush-mounted door handles and glass. Offered as a cargo van, passenger van, and cutaway chassis in 135-inch and 155-inch wheelbase lengths." },
+            "G2500": { engines:["4.3L Vortec V6 (195hp)","5.0L V8","5.7L V8","6.5L Turbo-Diesel V8"], drivetrain:"RWD", transmission:"Automatic" },
+            "G3500": { engines:["5.7L V8 (245hp)","7.4L V8","6.5L Turbo-Diesel V8"], drivetrain:"RWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Bronzemist Metallic (Brown)",hex:"#7A5A3A"},
+          ],
+        },
+        "2nd Gen Savana (2003-2026)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "2500": { engines:["4.3L Vortec V6 (195-276hp)","6.0L V8","6.6L Duramax Turbo-Diesel V8"], drivetrains:["RWD","AWD"], transmission:"Automatic", note:"A genuinely long-lived platform — this same basic generation has now run for over two decades with only detail updates, one of GMC's oldest continuously-produced designs. AWD became available for the first time in 2003, a real rarity for a full-size van of this class. The V6 was updated to the modern EcoTec3 4.3L for later model years, now making 276hp." },
+            "3500": { engines:["6.0L V8","6.6L Duramax Turbo-Diesel V8","6.6L V8 (401hp)"], drivetrain:"RWD", transmission:"Automatic", note:"Cargo, passenger, and cutaway-chassis body styles all remain available in the current lineup, still a genuine workhorse choice for fleets, ambulance upfitters, and shuttle operators well into the 2020s." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Hot (Red)",hex:"#C8102E"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
