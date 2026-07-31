@@ -7018,6 +7018,103 @@ const VEHICLES = {
     },
   },
   "GMC": {
+    "Acadia": {
+      generations:{
+        "1st Gen (2007-2016)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "SLE": { engine:"3.6L V6 (275-288hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"GMC's first-ever crossover SUV, replacing three different vehicles at once across the Buick-Pontiac-GMC dealer network — the Safari van, the Envoy, and the Pontiac Montana SV6 minivan. Shares its GM Lambda platform with the Saturn Outlook, Chevrolet Traverse, and Buick Enclave. Only ever offered with one engine this whole generation, a 3.6L V6." },
+            "SLT": { engine:"3.6L V6 (275-288hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Denali": { engine:"3.6L V6 (288hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2011 — the Acadia's introduction to GMC's Denali luxury sub-brand, which by this point had already become better known across GMC's whole lineup than most of the individual model names themselves." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2017-2023)":{
+          years:["2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "SLE": { engines:["2.5L 4-cylinder (193hp)","2.0L Turbocharged 4-cylinder (230hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine size reduction — this generation actually shrank compared to the outgoing Acadia, shifting from a full-size 3-row to more of a true midsize footprint, closer in size to competitors like the Ford Edge. The 2.0L turbo replaced the base 2.5L on upper trims starting with the 2020 refresh, which also added the off-road AT4 trim and switched every engine to a 9-speed automatic." },
+            "SLT": { engines:["2.5L 4-cylinder (193hp)","2.0L Turbocharged 4-cylinder (230hp)","3.6L V6 (310hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "AT4": { engine:"3.6L V6 (310hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2020 — standard twin-clutch AWD and off-road-tuned suspension, the Acadia's first genuine off-road-focused trim." },
+            "Denali": { engines:["2.0L Turbocharged 4-cylinder (230hp)","3.6L V6 (310hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Quartz Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Pepperdust Metallic (Bronze)",hex:"#7A5A3A"},
+          ],
+        },
+        "3rd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Elevation": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine return to full-size proportions after the previous generation's downsizing — longer, wider, and taller, with a real jump in power from a single, more potent turbo four-cylinder that replaced the old V6/turbo-four/base-four three-engine spread entirely. Every 2024+ Acadia uses this same engine, a genuinely simplified approach compared to prior generations' sprawling engine charts." },
+            "AT4": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrain:"AWD", transmission:"Automatic", note:"Standard Active Torque Control AWD system exclusive to this trim, a real step up in off-road sophistication from the prior generation's twin-clutch setup." },
+            "Denali": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Denali Ultimate": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Added 2026 — a genuine new flagship above the regular Denali, with a keycard replacing the traditional key fob and a 16-speaker Bose system exclusive to this trim." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Deep Cherry Metallic (Red)",hex:"#9B1B30"},
+            {name:"Chalk Dust Metallic (Tan)",hex:"#B8A888"},
+          ],
+        },
+      },
+    },
+    "Canyon": {
+      generations:{
+        "1st Gen (2004-2012)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "SL":  { engines:["2.8L Vortec 4-cylinder (175hp)","2.9L 4-cylinder (185hp)","3.5L Inline-5 (220hp)","3.7L Inline-5 (242hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Replaced the aging Sonoma with a genuine ground-up redesign, sharing its GMT355 platform with the Chevrolet Colorado — both were designed from scratch rather than being carried over from the old S-series trucks. Both engines here are inline configurations derived from the Envoy's Vortec 4.2L inline-six, a real engineering oddity for a compact truck. A 2007 mid-cycle refresh swapped in slightly larger, more powerful versions of both engines." },
+            "SLE": { engines:["2.8L Vortec 4-cylinder (175hp)","3.5L Inline-5 (220hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SLT": { engine:"3.7L Inline-5 (242hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Fire Red (Red)",hex:"#C8102E"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2015-2022)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "SL":  { engines:["2.5L Ecotec 4-cylinder (200hp)","3.6L V6 (305-308hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Returned after a 2-year production gap, all-new and naturally aspirated across the board at launch — genuinely refreshing in an era when most rivals were going turbo. A 2.8L Duramax turbo-diesel four joined the lineup later, a genuine rarity for this class of truck in the US market. AT4 and Denali trims arrived for 2021, both real firsts for the Canyon nameplate." },
+            "SLE": { engines:["2.5L Ecotec 4-cylinder (200hp)","3.6L V6 (305-308hp)","2.8L Duramax Turbo-Diesel 4-cylinder"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "SLT": { engines:["3.6L V6 (305-308hp)","2.8L Duramax Turbo-Diesel 4-cylinder"], drivetrain:"4WD", transmission:"Automatic" },
+            "AT4": { engine:"3.6L V6 (308hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2021 — the Canyon's first genuine off-road-focused trim." },
+            "Denali": { engine:"3.6L V6 (308hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2021 alongside the AT4, bringing the Denali luxury sub-brand to the mid-size truck for the first time." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Elevation": { engine:"2.7L Turbocharged 4-cylinder (237-310hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine ground-up redesign borrowing heavily from the full-size Sierra's design language and engineering — bolder, more aggressive truck styling than any prior Canyon. Only one engine family offered now, GM's 2.7L 'TurboMax' turbo-four, in two states of tune depending on trim. The AT4X, added for this generation, is the most off-road-focused Canyon ever built, with genuine Multimatic DSSV dampers and front/rear locking differentials." },
+            "AT4":  { engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "AT4X": { engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2023 — a genuine 2-inch factory lift, ultra-wide track, and an available AEV Edition package with hot-stamped boron steel skid plates." },
+            "Denali": { engine:"2.7L Turbocharged 4-cylinder (310hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Coastal Dune (Tan)",hex:"#C8B896"},
+          ],
+        },
+      },
+    },
     "Jimmy": {
       generations:{
         "1st Gen (1990-1994)":{
@@ -7187,6 +7284,53 @@ const VEHICLES = {
             {name:"Onyx Black (Black)",hex:"#1A1A1A"},
             {name:"Bright Red (Red)",hex:"#C8102E"},
             {name:"Dark Forest Green Metallic (Green)",hex:"#1E3A2A"},
+          ],
+        },
+      },
+    },
+    "Terrain": {
+      generations:{
+        "1st Gen (2010-2017)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "SLE": { engines:["2.4L 4-cylinder (182hp)","3.0L V6 (264hp)","3.6L V6 (301hp)"], drivetrain:"FWD", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"GMC's entry into the compact crossover segment, replacing the short-lived Pontiac Torrent and closely related to the Chevrolet Equinox of the same generation. The original 3.0L V6 developed a real reputation for engine problems and was replaced by a more powerful, more reliable 3.6L V6 for 2013 — the same year the Denali trim debuted, the Terrain's introduction to GMC's luxury sub-brand." },
+            "SLT": { engines:["2.4L 4-cylinder (182hp)","3.0L V6 (264hp)","3.6L V6 (301hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Denali": { engine:"3.6L V6 (301hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2013." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "SLE": { engines:["1.5L Turbocharged 4-cylinder (170hp)","1.6L Duramax Turbo-Diesel 4-cylinder (137hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely major downsizing and re-engineering — every engine went turbocharged, and this generation briefly offered a diesel option, a real rarity for the segment, though it was dropped again after just two model years (2018-2019) amid GM's broader diesel emissions issues elsewhere in its lineup. A 2022 refresh brought updated styling and simplified the powertrain lineup." },
+            "SLT": { engines:["1.5L Turbocharged 4-cylinder (170hp)","2.0L Turbocharged 4-cylinder (252hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "AT4": { engine:"1.5L Turbocharged 4-cylinder (175hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2021." },
+            "Denali": { engines:["1.5L Turbocharged 4-cylinder (170-175hp)","2.0L Turbocharged 4-cylinder (252hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Pepperdust Metallic (Bronze)",hex:"#7A5A3A"},
+          ],
+        },
+        "3rd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Elevation": { engine:"1.5L Turbocharged 4-cylinder (175hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT/8-Speed)", note:"A genuine ground-up redesign borrowing the bold, truck-inspired styling language of the Sierra and Yukon — a real departure from the softer, more rounded look of the outgoing generation. Launched for 2025 with only the Elevation trim available; AT4 and Denali were added back for 2026 to fill out the lineup. FWD models use a CVT, while AWD models get a conventional 8-speed automatic." },
+            "AT4": { engine:"1.5L Turbocharged 4-cylinder (175hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2026 — standard AWD, plus a dedicated Terrain Mode drive setting exclusive to this trim." },
+            "Denali": { engine:"1.5L Turbocharged 4-cylinder (175hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2026." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Glacier White Tricoat (White)",hex:"#F0F0F0"},
+            {name:"Deep Cherry Metallic (Red)",hex:"#9B1B30"},
           ],
         },
       },
