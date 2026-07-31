@@ -7422,6 +7422,19 @@ const VEHICLES = {
         },
       },
     },
+    "Typhoon": {
+      years:["1992","1993"],
+      trims:{
+        "Base": { engine:"4.3L Turbocharged V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuine sibling to the Syclone — a 2-door SUV version of the same idea, built on the Jimmy platform rather than the Sonoma pickup, and sharing the exact same turbocharged, intercooled 4.3L V6 and AWD driveline. Also built by Production Automotive Services of Troy, Michigan, alongside the Syclone and Sonoma GT. Unlike the Syclone, which was black-only, the Typhoon was offered in a genuine range of colors. Only 4,697 were built across both model years before poor sales and PAS losing its contract ended production." },
+      },
+      colors:[
+        {name:"Midnight Black (Black)",hex:"#1A1A1A"},
+        {name:"Frost White (White)",hex:"#F5F5F5"},
+        {name:"Apple Red (Red)",hex:"#C8102E"},
+        {name:"Bright Teal (Teal)",hex:"#1E8A8A"},
+        {name:"Forest Green Metallic (Green)",hex:"#1E3A2A"},
+      ],
+    },
     "Yukon": {
       generations:{
         "1st Gen (1992-1999)":{
@@ -7919,6 +7932,62 @@ const VEHICLES = {
           ],
         },
       },
+    },
+  },
+  "Hummer": {
+    "H1": {
+      years:["1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2006"],
+      trims:{
+        "Base": { engines:["6.2L Detroit Diesel V8 (150hp)","6.5L Detroit Diesel V8 (190hp)","5.7L Vortec Gas V8 (195hp)","6.5L Turbo-Diesel V8 (205hp)"], drivetrain:"4WD", transmissions:["Automatic"], note:"The genuine original — a civilian version of the military M998 Humvee, built by AM General, whose license to sell it civilian-side came at the personal urging of Arnold Schwarzenegger in the late 1980s. GM bought the Hummer name in 1999 and marketed the AM General-built truck as the H1, while developing all-new H2 and H3 models of its own. Massively wide (86.5 inches) with a central drivetrain tunnel that eats into cabin space — comfort was never the point. A 5.7L Vortec gas V8 was briefly offered 1995-1996 alongside the standard diesels, a rare gas-engine option in an otherwise diesel-dominated lineup. No 2005 model year was offered." },
+        "Alpha": { engine:"6.6L Duramax Turbo-Diesel V8 (300hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added for the H1's final model year, 2006 — genuinely the most powerful and most refined H1 ever built, using GM's modern Duramax diesel in place of the old Detroit Diesel units. Production ended after this single model year as GM shifted its Hummer development focus fully to the H2 and H3." },
+      },
+      colors:[
+        {name:"Alpine White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Desert Sand (Tan)",hex:"#C8B896"},
+        {name:"Blazer Green (Green)",hex:"#1E3A2A"},
+      ],
+    },
+    "H2": {
+      generations:{
+        "SUV (2003-2009)":{
+          years:["2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engines:["6.0L V8 (316-325hp)","6.2L V8 (393hp)"], drivetrain:"4WD", transmission:"Automatic", note:"GM's first genuinely in-house-designed Hummer, built by AM General on a modified GMC Sierra 2500HD frame — a real bridge between the uncompromising H1 and something more usable day-to-day, with three-zone climate control and other genuine luxury touches the H1 never offered. The 6.2L V8 replaced the 6.0L for the final two model years, bringing a real jump in output alongside a new 6-speed automatic." },
+          },
+          colors:[
+            {name:"Pewter Fusion (Silver)",hex:"#8A8D8F"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Slate Blue Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "SUT (2005-2009)":{
+          years:["2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engines:["6.0L V8 (316-325hp)","6.2L V8 (393hp)"], drivetrain:"4WD", transmission:"Automatic", note:"Added 2005 — Sport Utility Truck, a genuine open-bed pickup variant of the H2 with a midgate that could fold down to extend the bed into the cabin, similar in concept to the Chevy Avalanche. Longer overall than the standard SUV to accommodate the bed." },
+          },
+          colors:[
+            {name:"Pewter Fusion (Silver)",hex:"#8A8D8F"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Victory Red (Red)",hex:"#C8102E"},
+            {name:"Slate Blue Metallic (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+      },
+    },
+    "H3": {
+      years:["2006","2007","2008","2009","2010"],
+      trims:{
+        "Base":  { engines:["3.5L Inline-5 (220hp)","3.7L Inline-5 (242hp)"], drivetrain:"4WD", transmission:"Automatic", note:"The 'baby Hummer' — genuinely the first Hummer designed and built entirely in-house by GM, sharing roughly 10% of its components and its GMT-345 platform (a modified GMT355) with the Chevrolet Colorado and GMC Canyon. Significantly smaller, lighter, and more affordable than the H2, drawing real criticism from Hummer purists but opening the brand up to a much wider audience. The 3.7L replaced the original 3.5L inline-five for 2007." },
+        "Alpha": { engine:"5.3L Vortec V8 (300hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2008 — swapped in a proper V8 for buyers who found the inline-five underpowered, while keeping the H3's compact, off-road-focused footprint. An H3T pickup truck variant was also sold 2009-2010, adding a genuine 5-foot cargo bed. Production of the whole Hummer brand ended in 2010 following GM's bankruptcy restructuring, with the name lying dormant until GMC revived it as the all-electric Hummer EV in 2022." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Red (Red)",hex:"#C8102E"},
+        {name:"Slate Blue Metallic (Blue)",hex:"#4A6B8E"},
+      ],
     },
   },
   "Hyundai": {
