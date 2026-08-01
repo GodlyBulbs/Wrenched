@@ -7845,6 +7845,19 @@ const VEHICLES = {
         },
       },
     },
+    "CR-Z": {
+      years:["2011","2012","2013","2014","2015","2016"],
+      trims:{
+        "Base": { engine:"1.5L Hybrid 4-cylinder (122hp combined)", drivetrain:"FWD", transmissions:["Manual (6-Speed)","Automatic (CVT)"], note:"Genuinely marketed as a spiritual successor to the beloved 1980s-90s CR-X — a sporty, lightweight 2-seat hybrid hatchback, and the first hybrid ever sold anywhere with a proper 6-speed manual transmission. Used Honda's IMA (Integrated Motor Assist) system pairing a small electric motor with a conventional gas engine, rather than the more complex two-motor systems Honda later adopted." },
+        "EX": { engine:"1.5L Hybrid 4-cylinder (122-130hp combined)", drivetrain:"FWD", transmissions:["Manual (6-Speed)","Automatic (CVT)"], note:"A 2013 update brought a more powerful lithium-ion battery pack (replacing the original nickel-metal hydride unit) on select trims, bumping combined output. Discontinued after 2016 with no direct successor — a real end to Honda's line of small, sporty, driver-focused hybrids for several years." },
+      },
+      colors:[
+        {name:"Milano Red (Red)",hex:"#C8102E"},
+        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Polished Metal Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Storm Silver Metallic (Silver)",hex:"#8A8D8F"},
+      ],
+    },
     "Del Sol": {
       years:["1993","1994","1995","1996","1997"],
       trims:{
@@ -7899,6 +7912,49 @@ const VEHICLES = {
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Milano Red (Red)",hex:"#C8102E"},
             {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Insight": {
+      generations:{
+        "1st Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"1.0L Hybrid 3-cylinder (68-73hp combined)", drivetrain:"FWD", transmissions:["Manual (5-Speed)","Automatic (CVT)"], note:"America's first-ever mass-produced hybrid, genuinely beating the Toyota Prius to the US market by about a year. A stark, purpose-built 2-seat liftback with aluminum body panels and covered rear wheels to minimize drag — the most fuel-efficient car in America for years, with an EPA rating around 70 mpg on the manual. Used Honda's original IMA (Integrated Motor Assist) hybrid system." },
+          },
+          colors:[
+            {name:"Citrus Yellow Metallic (Yellow)",hex:"#F5C800"},
+            {name:"New Formula Red (Red)",hex:"#C8102E"},
+            {name:"Titanium Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "2nd Gen (2010-2014)":{
+          years:["2010","2011","2012","2013","2014"],
+          trims:{
+            "LX": { engine:"1.3L Hybrid 4-cylinder (98-122hp combined)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuinely more conventional 5-door hatchback this time, clearly styled to echo the Toyota Prius after that car became the hybrid segment's dominant seller. A real shift away from the original's stark 2-seat concept toward broader mainstream appeal." },
+            "EX": { engine:"1.3L Hybrid 4-cylinder (98-122hp combined)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2019-2022)":{
+          years:["2019","2020","2021","2022"],
+          trims:{
+            "LX": { engine:"1.5L Atkinson-Cycle Hybrid 4-cylinder (151hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Genuinely repositioned again — this time as a Civic-based 4-door sedan with a more upscale, premium bent than either of its two predecessors, using Honda's newer two-motor hybrid system in place of the old IMA setup. The LX trim was dropped after 2021, leaving just EX and Touring. Discontinued after 2022 with the nameplate going dormant, though Honda has since confirmed a fourth-generation Insight returning as a crossover SUV." },
+            "EX": { engine:"1.5L Atkinson-Cycle Hybrid 4-cylinder (151hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "Touring": { engine:"1.5L Atkinson-Cycle Hybrid 4-cylinder (151hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Molten Lava Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
@@ -7972,6 +8028,66 @@ const VEHICLES = {
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Radiant Red Metallic (Red)",hex:"#9B1B30"},
             {name:"Sonic Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Passport": {
+      generations:{
+        "1st Gen (1994-1997)":{
+          years:["1994","1995","1996","1997"],
+          trims:{
+            "DX": { engine:"2.6L 4-cylinder (120hp)", drivetrain:"RWD", transmission:"Manual", note:"Honda's first-ever SUV, and a genuinely different approach than developing one from scratch — a lightly rebadged Isuzu Rodeo, built through a partnership where Isuzu (which had stopped making passenger cars of its own) supplied the vehicle and Honda supplied its dealer network and reputation for reliability. Body-on-frame construction, a real departure from every other Honda model at the time. The 4-cylinder DX was RWD-only; V6 trims could be had with 4WD." },
+            "LX": { engine:"3.2L V6 (175-190hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"190hp arrived for 1996, the final full model year before the 4-cylinder engine and this generation both were dropped." },
+            "EX": { engine:"3.2L V6 (175-190hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Sunlight Gold Metallic (Gold)",hex:"#B8952A"},
+          ],
+        },
+        "2nd Gen (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "LX": { engine:"3.2L V6 (205hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Still built alongside the redesigned Isuzu Rodeo of the same era, riding on a shorter wheelbase than the outgoing model despite a longer overall body. Discontinued after 2002 in favor of the all-new, Honda-designed Pilot — genuinely marking the end of Honda's Isuzu partnership for US-market SUVs." },
+            "EX": { engine:"3.2L V6 (205hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Satin Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2019-2025)":{
+          years:["2019","2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "Sport": { engine:"3.5L V6 (280hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuine revival after 17 years away, now an all-Honda design sharing its underlying platform with the 3-row Pilot but built as a 2-row, 5-passenger SUV — slotted between the CR-V and Pilot in the lineup. TrailSport arrived 2022, the Passport's first genuine off-road-focused trim; a mild 2024 refresh updated the cabin and infotainment." },
+            "EX-L":  { engine:"3.5L V6 (280hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)" },
+            "TrailSport": { engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "Elite": { engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "RTL": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"A genuinely thorough redesign sharing its new platform with the redesigned Pilot — bigger, boxier, and more overtly off-road-focused than ever, with 'Born Wild' styling and a doubled-up TrailSport lineup (TrailSport and TrailSport Elite) rather than just one off-road trim. Second-generation i-VTM4 torque-vectoring AWD is now standard across the board — no more FWD option." },
+            "TrailSport": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"Off-road-tuned suspension, heavy-duty skid plates rated to support the vehicle's full weight, and 31-inch all-terrain tires." },
+            "TrailSport Elite": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"Added for this generation — the most off-road-capable Passport Honda has ever built, with exclusive Sunset Orange and Ash Green Metallic color options." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Sunset Orange (Orange)",hex:"#E8601C"},
+            {name:"Ash Green Metallic (Green)",hex:"#5A6E5E"},
           ],
         },
       },
