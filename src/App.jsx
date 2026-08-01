@@ -8522,6 +8522,37 @@ const VEHICLES = {
     },
   },
   "Infiniti": {
+    "FX / QX70": {
+      generations:{
+        "1st Gen (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "FX35": { engine:"3.5L VQ35DE V6 (280hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (5-Speed)", note:"Infiniti's genuine sport-focused crossover, replacing the truck-based QX4 with a real driver-oriented alternative built on the Nissan 350Z's FM platform — no real off-road pretensions, just style and quick handling. The 3.5L V6 was recognized on Ward's 10 Best Engines list every year it was offered." },
+            "FX45": { engine:"4.5L V8 (315-320hp)", drivetrain:"AWD", transmission:"Automatic (5-Speed)", note:"Shared its V8 with the Q45 flagship sedan — genuine power flagship of the original FX lineup, AWD-only." },
+          },
+          colors:[
+            {name:"Ivory Pearl (White)",hex:"#F0F0F0"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Laser Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Diamond Graphite (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2009-2017)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "FX35": { engine:"3.5L VQ35DE V6 (303hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"A genuine major redesign, adopting real double-wishbone front suspension (replacing the old strut design) borrowed from the contemporary G37 and EX35 — a real, significant gain in body rigidity and handling precision. Renamed QX70 for 2014 as part of Infiniti's brand-wide alphanumeric naming overhaul; the FX37 replaced the FX35 for 2013 with a larger, more powerful V6." },
+            "FX37": { engine:"3.7L VQ37VHR V6 (325hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"Replaced the FX35 for 2013, continuing as the QX70 3.7 after the 2014 rename." },
+            "FX50": { engine:"5.0L V8 (390hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship of the whole FX/QX70 lineup, continuing as the QX70 5.0 after the rename. Production ended after 2017 with no direct successor, ending Infiniti's sport-crossover lineup entirely." },
+          },
+          colors:[
+            {name:"Moonlight White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Malbec Black (Dark Red)",hex:"#4A1A1A"},
+            {name:"Graphite Shadow (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "G35 / G37": {
       generations:{
         "G35 (2003-2008)":{
@@ -8548,6 +8579,200 @@ const VEHICLES = {
             {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
             {name:"Malbec Black (Dark Red)",hex:"#4A1A1A"},
             {name:"Graphite Shadow (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "M / Q70": {
+      generations:{
+        "M30 (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "Base": { engine:"3.0L VG30E V6 (162hp)", drivetrain:"RWD", transmission:"Automatic", note:"Infiniti's genuine original mid-size entry, sold alongside the flagship Q45 at the brand's 1989-1990 US launch — a real, thinly-disguised Nissan Leopard, sold as both a coupe and a genuine convertible. Discontinued after 1992 with a real 13-year gap before the M nameplate returned." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Sherwood Green (Green)",hex:"#1E3A2A"},
+            {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "M45 (2003-2004)":{
+          years:["2003","2004"],
+          trims:{
+            "Base": { engine:"4.5L V8 (340hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"A genuine return of the M nameplate after over a decade away, and a real driver-focused flagship sedan — based on the JDM Nissan Gloria, with only a single powerful V8 offered, no smaller engine option. Real light weight for its class gave it genuinely quick 0-60 performance for a full-size luxury sedan." },
+          },
+          colors:[
+            {name:"Ivory Pearl (White)",hex:"#F0F0F0"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Diamond Graphite (Gray)",hex:"#6B6E6F"},
+            {name:"Twilight Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "M35 / M45 (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "M35": { engine:"3.5L VQ35DE V6 (280-303hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"A genuine ground-up redesign, expanding the lineup with real V6 and V8 choices side by side for the first time — real AWD (badged M35x/M45x) also became available, a genuine point of difference for a rear-drive-based luxury sedan platform. The V6 got a real power bump for 2009, borrowed from the contemporary G37." },
+            "M45": { engine:"4.5L V8 (325-340hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Moonlight White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Malbec Black (Dark Red)",hex:"#4A1A1A"},
+            {name:"Graphite Shadow (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "M37 / M56 / Q70 (2011-2019)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "37": { engine:"3.7L VQ37VHR V6 (330hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"A genuine third-generation redesign, renamed M37/M56 with new engine displacements before the whole lineup was renamed again to Q70 for 2014 as part of Infiniti's brand-wide alphanumeric overhaul — same car, same generation, different badge. A genuine Hybrid variant, borrowing its system from the Q50 Hybrid, was also offered. A stretched Q70L long-wheelbase variant arrived for real extra rear legroom." },
+            "56": { engine:"5.6L VK56VD V8 (420hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship of the whole M/Q70 lineage — the most powerful sedan Infiniti had built to that point." },
+            "Hybrid": { engine:"3.5L VQ35HR Hybrid V6 (360hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"Offered 2011-2016, sharing its hybrid system with the Q50 Hybrid — genuinely rare on the used market today. Production of the whole Q70 lineup ended after 2019 with no direct successor, as Infiniti's sedan strategy consolidated around the smaller Q50." },
+          },
+          colors:[
+            {name:"Majestic White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Hermosa Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Q50": {
+      years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "3.7": { engine:"3.7L VQ37VHR V6 (328hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Replaced the G37 nameplate for 2014 as part of Infiniti's global switch to alphanumeric Q/QX naming — mechanically a direct carryover of the outgoing G-series underneath, sharing the same VQ37 V6 for launch year only. A genuine Hybrid variant, borrowing its system from the Nissan/Infiniti M35h, was also offered for 2014-2015." },
+        "2.0t": { engine:"2.0L Turbocharged 4-cylinder (208hp)", drivetrain:"RWD", transmission:"Automatic", note:"Added 2016 as a genuine lower-cost, more fuel-efficient entry point, sourced from Mercedes-Benz as part of a Nissan-Daimler engine-sharing agreement." },
+        "3.0t": { engine:"3.0L Twin-Turbo V6 (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Replaced the old naturally-aspirated V6 for 2016 — a genuine major powertrain shift, real direct-injected twin-turbo power in place of the previous VQ37." },
+        "Red Sport 400": { engine:"3.0L Twin-Turbo V6 (400hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genuine performance flagship, a higher-output tune of the same twin-turbo V6 — real, legitimate competition for the BMW 340i and Mercedes-AMG C43 of the same era. Production ended after 2024 with no confirmed direct successor, ending the Q50's decade-long run, though Infiniti has since signaled interest in reviving the nameplate." },
+      },
+      colors:[
+        {name:"Majestic White (White)",hex:"#F5F5F5"},
+        {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+        {name:"Hermosa Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Q60": {
+      years:["2017","2018","2019","2020","2021","2022"],
+      trims:{
+        "2.0t": { engine:"2.0L Turbocharged 4-cylinder (208hp)", drivetrain:"RWD", transmission:"Automatic", note:"Replaced the aging G37 coupe's successor role after a brief gap — sharing its FM platform and powertrains with the Q50 sedan, with genuinely sharper, more dramatic styling than its 4-door sibling." },
+        "3.0t": { engine:"3.0L Twin-Turbo V6 (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "Red Sport 400": { engine:"3.0L Twin-Turbo V6 (400hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Genuine performance flagship coupe, sharing its high-output twin-turbo V6 with the Red Sport 400 sedan. Discontinued after 2022 with no direct successor, ending Infiniti's coupe lineup entirely — though renderings and rumors of a revival have circulated since." },
+      },
+      colors:[
+        {name:"Majestic White (White)",hex:"#F5F5F5"},
+        {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+        {name:"Slate Gray (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "QX4": {
+      years:["1997","1998","1999","2000","2001","2002","2003"],
+      trims:{
+        "Base": { engine:"3.3L VG33E V6 (168hp)", drivetrain:"4WD", transmission:"Automatic", note:"Infiniti's genuine first-ever SUV, a real badge-engineered version of the Nissan Pathfinder — body-on-frame construction with genuine off-road-capable 4WD hardware, wrapped in a more upscale interior than its Nissan sibling." },
+        "Touring": { engine:"3.5L VQ35DE V6 (240hp)", drivetrain:"4WD", transmission:"Automatic", note:"The larger 3.5L V6 arrived for 2001, shared with the contemporary Nissan Pathfinder — a real power bump for the QX4's final years. Discontinued after 2003, replaced by the more car-like, sport-focused FX." },
+      },
+      colors:[
+        {name:"Ivory Pearl (White)",hex:"#F0F0F0"},
+        {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Sherwood Green (Green)",hex:"#1E3A2A"},
+        {name:"Diamond Graphite (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "QX50": {
+      generations:{
+        "1st Gen — EX35/EX37/QX50 (2008-2017)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "35": { engine:"3.5L VQ35HR V6 (297hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"Launched as the EX35 — a genuine compact luxury crossover, positioned below the larger FX, with real sport-sedan-like handling thanks to the double-wishbone front suspension shared with the G37. Renamed QX50 for 2014 as part of Infiniti's brand-wide alphanumeric overhaul; the larger EX37/QX50 engine arrived for 2013." },
+            "37": { engine:"3.7L VQ37VHR V6 (325hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"Replaced the 3.5L for 2013, continuing as the QX50's sole engine after the 2014 rename. This same basic platform ran for nearly a decade with only detail updates before the all-new second generation arrived." },
+          },
+          colors:[
+            {name:"Moonlight White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Malbec Black (Dark Red)",hex:"#4A1A1A"},
+            {name:"Graphite Shadow (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Pure": { engine:"2.0L VC-Turbo 4-cylinder (268hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely major redesign and a real world-first — the VC-Turbo engine can mechanically vary its own compression ratio on the fly (from 8:1 up to 14:1) depending on driving conditions, a genuine engineering breakthrough Infiniti spent over two decades developing, blending real turbocharged power with naturally-aspirated efficiency. AWD became standard across the board for 2025." },
+            "Luxe": { engine:"2.0L VC-Turbo 4-cylinder (268hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "Sensory": { engine:"2.0L VC-Turbo 4-cylinder (268hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Autograph": { engine:"2.0L VC-Turbo 4-cylinder (268hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Genuine flagship trim, with the most premium interior appointments Infiniti offers on the QX50." },
+          },
+          colors:[
+            {name:"Majestic White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Slate Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "QX60": {
+      generations:{
+        "1st Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"3.5L VQ35DE V6 (265-295hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Launched for 2013 badged JX35 for that single model year, before Infiniti renamed it QX60 for 2014 as part of the brand's broader alphanumeric naming overhaul. Shares its platform with the Nissan Pathfinder and Murano — a genuine 3-row, 7-passenger crossover positioned as Infiniti's family-friendly flagship. A Hybrid variant was offered 2014-2017." },
+            "Hybrid": { engine:"2.5L Supercharged Hybrid V6 (250hp combined)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Offered 2014-2017 only, a genuinely unusual supercharged (rather than turbocharged) hybrid V6 shared with the Nissan Pathfinder Hybrid of the same era." },
+          },
+          colors:[
+            {name:"Moonlight White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Graphite Shadow (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Pure": { engine:"3.5L VQ35 V6 (295hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuinely major redesign, sharing its new platform with the redesigned Nissan Pathfinder — real evidence of a much sharper, more upscale interior than the outgoing generation, addressing a long-standing criticism that the QX60 felt too much like a re-skinned Nissan inside." },
+            "Luxe": { engine:"3.5L VQ35 V6 (295hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "Sensory": { engine:"3.5L VQ35 V6 (295hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "Autograph": { engine:"3.5L VQ35 V6 (295hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine flagship trim, with the most premium interior appointments Infiniti offers on the QX60." },
+          },
+          colors:[
+            {name:"Majestic White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Bordeaux (Dark Red)",hex:"#4A1A1A"},
+          ],
+        },
+      },
+    },
+    "QX80": {
+      generations:{
+        "1st Gen (2014-2024)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Base": { engine:"5.6L VK56VD V8 (400-403hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (7-Speed)", note:"Renamed from QX56 for 2014 as part of the brand's naming overhaul, though mechanically a direct carryover — genuine full-size, body-on-frame flagship SUV, sharing its platform with the Nissan Armada and Patrol. This same basic generation, with only detail updates, ran for a full 11 model years." },
+            "Luxe": { engine:"5.6L VK56VD V8 (400-403hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+            "Sensory": { engine:"5.6L VK56VD V8 (400-403hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+          },
+          colors:[
+            {name:"Majestic White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Hermosa Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2025-2027)":{
+          years:["2025","2026","2027"],
+          trims:{
+            "Pure": { engine:"3.5L Twin-Turbo V6 (450hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"A genuinely major powertrain shift — the naturally-aspirated V8 is gone for good, replaced by a twin-turbo V6 shared with the Nissan Patrol and Armada, a real power and towing gain over the outgoing generation despite losing two cylinders. A genuine R-spec performance variant, teased with GT-R-adjacent engine work, has been signaled for a future model year." },
+            "Luxe": { engine:"3.5L Twin-Turbo V6 (450hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "Sensory": { engine:"3.5L Twin-Turbo V6 (450hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "Autograph": { engine:"3.5L Twin-Turbo V6 (450hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine flagship trim, the most premium interior appointments Infiniti offers on the QX80." },
+          },
+          colors:[
+            {name:"Majestic White (White)",hex:"#F5F5F5"},
+            {name:"Black Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Dynamic Sunstone Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Bordeaux (Dark Red)",hex:"#4A1A1A"},
           ],
         },
       },
@@ -8850,7 +9075,7 @@ const VEHICLES = {
         "1st Gen Tail (1990-1991)":{
           years:["1990","1991"],
           trims:{
-            "Base": { engine:"2.5L V6 (156hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Lexus's original two launch models (alongside the LS 400) when the brand debuted for 1990 — a genuinely badge-engineered Toyota Camry-based sedan, positioned as Lexus's accessible entry point below the flagship LS." },
+            "250": { engine:"2.5L V6 (156hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Lexus's original two launch models (alongside the LS 400) when the brand debuted for 1990 — a genuinely badge-engineered Toyota Camry-based sedan, positioned as Lexus's accessible entry point below the flagship LS." },
           },
           colors:[
             {name:"Diamond White (White)",hex:"#F5F5F5"},
@@ -8862,7 +9087,7 @@ const VEHICLES = {
         "2nd Gen (1992-1996)":{
           years:["1992","1993","1994","1995","1996"],
           trims:{
-            "Base": { engine:"3.0L V6 (185-188hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, still Camry-based but with real distinct Lexus styling and a genuinely more powerful V6." },
+            "300": { engine:"3.0L V6 (185-188hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, still Camry-based but with real distinct Lexus styling and a genuinely more powerful V6." },
           },
           colors:[
             {name:"Diamond White (White)",hex:"#F5F5F5"},
@@ -8874,7 +9099,7 @@ const VEHICLES = {
         "3rd Gen (1997-2001)":{
           years:["1997","1998","1999","2000","2001"],
           trims:{
-            "Base": { engine:"3.0L V6 (200-210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely more refined and upscale, closing the gap to the flagship LS in real interior quality and quietness." },
+            "300": { engine:"3.0L V6 (200-210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely more refined and upscale, closing the gap to the flagship LS in real interior quality and quietness." },
           },
           colors:[
             {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
@@ -9065,7 +9290,7 @@ const VEHICLES = {
         {name:"Cypress Pearl (Green)",hex:"#3B7A5A"},
       ],
     },
-    "IS300": {
+    "IS": {
       generations:{
         "XE10 (2001-2005)":{
           years:["2001","2002","2003","2004","2005"],
@@ -9404,6 +9629,35 @@ const VEHICLES = {
         {name:"Infrared (Red)",hex:"#C8102E"},
         {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
       ],
+    },
+    "SC": {
+      generations:{
+        "1st Gen (1992-2000)":{
+          years:["1992","1993","1994","1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "300": { engine:"3.0L Inline-6 2JZ-GE (225hp)", drivetrain:"RWD", transmissions:["Manual (5-Speed)","Automatic (4-Speed)"], note:"Debuted August 1991 as a 1992 model, roughly three months after the V8-only SC400 launched — a genuine grand touring coupe built on the same platform as the Toyota Soarer (its JDM twin) and sharing engine architecture with the Mk IV Supra Turbo. The SC300 was the only SC ever offered with a manual transmission. A 1998 update brought VVT-i technology, improving low-end torque and refinement." },
+            "400": { engine:"4.0L V8 1UZ-FE (250-290hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed/5-Speed)", note:"Launched first, in May 1991 as a 1992 model — automatic-only from day one. Motor Trend named it Import Car of the Year for 1992, and it made Car and Driver's Ten Best list four years running (1992-1995). Output climbed from the original 250hp up to 260hp for 1996, then 290hp for 1998 with the arrival of VVT-i and a genuine 5-speed automatic. Discontinued after 2000, replaced by the all-new SC430 convertible for 2002 — a real changing of the guard that shifted the SC from grand-touring coupe to a more leisure-focused hardtop convertible." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Emerald Green Pearl (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "2nd Gen — SC430 (2002-2010)":{
+          years:["2002","2003","2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "430": { engine:"4.3L V8 3UZ-FE (288-300hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed/6-Speed)", note:"A genuinely major shift in character from its predecessor — a real retractable hardtop convertible, sharing its V8 and 5-speed automatic with the contemporary LS430 flagship sedan. Aimed more at relaxed, top-down cruising than outright sporty handling, drawing real comparisons to the contemporary Ford Thunderbird retro-convertible of the same era. Genuinely one of the first Japanese-market Lexus models too — it was badged Lexus even in Japan (rather than Toyota Soarer) starting in late 2005, a real symbolic first for the brand in its home market. Sold well initially, around 14,000 units a year through 2002-2003, before demand tapered off steadily; production ended in July 2010 with no direct successor for nearly a decade, until the modern LC eventually picked up the flagship coupe/convertible role." },
+          },
+          colors:[
+            {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Tiger Eye Pearl (Bronze)",hex:"#B8952A"},
+          ],
+        },
+      },
     },
     "TX": {
       years:["2024","2025","2026"],
@@ -10575,6 +10829,51 @@ const VEHICLES = {
     },
   },
   "Mitsubishi": {
+    "3000GT": {
+      years:["1991","1992","1993","1994","1995","1996","1997","1998","1999"],
+      trims:{
+        "Base": { engine:"3.0L SOHC V6 (161-164hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Mitsubishi's genuine flagship sports coupe/grand tourer, replacing the aging Starion — sold in Japan as the GTO, and badge-engineered for Chrysler as the Dodge Stealth through 1996, a real product of the two companies' manufacturing partnership at the time. A real 1994 facelift replaced the original pop-up headlights with fixed units and updated the front and rear styling." },
+        "SL": { engine:"3.0L DOHC V6 (222hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "VR-4": { engine:"3.0L Twin-Turbo DOHC V6 (300-320hp)", drivetrain:"AWD", transmissions:["Manual (5-Speed/6-Speed)","Automatic"], note:"The genuine halo trim — full-time AWD, 4-wheel steering, and active aerodynamics (an electronically adjustable front spoiler and retractable rear wing) made it one of the most technologically advanced Japanese sports cars of its era, a real rival to the 300ZX Turbo and Supra Turbo. A Spyder convertible variant was offered 1995-1996. Discontinued in the US after 1999 with no direct successor, as Mitsubishi's performance-flagship role shifted to the Lancer Evolution instead." },
+      },
+      colors:[
+        {name:"Diamond White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Caracus Red (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Diamante": {
+      generations:{
+        "1st Gen (1992-1996)":{
+          years:["1992","1993","1994","1995","1996"],
+          trims:{
+            "LS": { engine:"3.0L SOHC V6 (175-202hp)", drivetrain:"FWD", transmission:"Automatic", note:"Mitsubishi's genuine flagship sedan, positioned as a real near-luxury alternative to the Acura Legend and Lexus ES — genuinely well-equipped for the era, with standard features like a driver's airbag and 4-wheel disc brakes ahead of many rivals. A real DOHC engine update partway through the run bumped output from 175hp to 202hp." },
+            "ES": { engine:"3.0L SOHC V6 (175-202hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Emerald Green (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "2nd Gen (1997-2005)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "ES": { engine:"3.5L V6 (205-210hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, growing larger and adopting a smoother, more aerodynamic shape. A real 2004 facelift updated the front and rear styling for the final two model years. Discontinued after 2005 with no direct successor, as Mitsubishi's US sedan lineup consolidated around the smaller Galant instead." },
+            "LS": { engine:"3.5L V6 (205-210hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "VR-X": { engine:"3.5L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sport-styled top trim, with real Sportronic manual-shift capability on the automatic transmission and unique wheels." },
+          },
+          colors:[
+            {name:"Dover White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Graphite Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Eclipse": {
       generations:{
         "1st Gen (1990-1994)":{
@@ -10635,6 +10934,107 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Eclipse Cross": {
+      years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "ES": { engine:"1.5L Turbocharged 4-cylinder (148-152hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine name revival — borrowing the Eclipse badge for an all-new compact crossover, with no mechanical relation to the old sport coupe beyond the name itself, a real move that drew some criticism from enthusiasts. Slots between the smaller Outlander Sport and larger Outlander in Mitsubishi's US lineup, sharing its platform with both." },
+        "SE": { engine:"1.5L Turbocharged 4-cylinder (148-152hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+        "SEL": { engine:"1.5L Turbocharged 4-cylinder (152hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Top trim, with the most premium interior appointments and standard AWC (All-Wheel Control) traction system." },
+      },
+      colors:[
+        {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Black Diamond (Black)",hex:"#1A1A1A"},
+        {name:"Red Diamond (Red)",hex:"#C8102E"},
+        {name:"Titanium Gray (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Endeavor": {
+      years:["2004","2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "LS": { engine:"3.8L V6 (225hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (4-Speed)", note:"Replaced the aging Montero Sport, built on a genuine car-based platform shared with the Galant sedan — a real shift toward unibody construction and away from the truck-based Montero Sport it succeeded. Built domestically at Mitsubishi's Normal, Illinois plant. A real 50/50 default torque split gave the optional AWD system genuine all-weather balance." },
+        "SE": { engine:"3.8L V6 (225hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (4-Speed)" },
+        "Limited": { engine:"3.8L V6 (225hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)", note:"A 2010 update brought a genuine touchscreen infotainment system, though it came too late to meaningfully boost sales. Discontinued after 2011 with no direct successor, as the redesigned US-market Outlander effectively absorbed the Endeavor's mid-size SUV role." },
+      },
+      colors:[
+        {name:"Dover White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Caracus Red (Red)",hex:"#9B1B30"},
+        {name:"Graphite Gray Pearl (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Galant": {
+      generations:{
+        "E30 Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "S":  { engine:"1.8L 4-cylinder (88hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine mainstream mid-size sedan, sold alongside the closely related Eagle Premier and Dodge/Plymouth Colt Vista siblings through various Chrysler-Mitsubishi partnership arrangements of the era." },
+            "LS": { engine:"2.0L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "VR-4": { engine:"2.0L Turbocharged 4-cylinder (195hp)", drivetrain:"AWD", transmission:"Manual (5-Speed)", note:"A genuinely serious homologation special — built to satisfy Group A rally regulations, with full-time AWD, 4-wheel steering, and a real turbocharged engine shared in spirit with the contemporary Eclipse GSX. Sold in the US only 1991-1992 in very limited numbers, making it a genuine rarity and cult favorite among Mitsubishi enthusiasts today — a real precursor to the Lancer Evolution's whole philosophy years before that nameplate existed." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "E50 (1994-1998)":{
+          years:["1994","1995","1996","1997","1998"],
+          trims:{
+            "S":  { engine:"2.4L 4-cylinder (141hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign, growing more mainstream and less overtly rally-inspired than the outgoing VR-4-equipped generation — the turbocharged AWD variant was discontinued in the US, a real end to the Galant's brief performance-flagship era." },
+            "ES": { engine:"2.4L 4-cylinder (141hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "LS": { engine:"2.5L V6 (163-174hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Emerald Green (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "E70/E80 (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "ES": { engine:"2.4L 4-cylinder (141hp)", drivetrain:"FWD", transmission:"Automatic", note:"Grew again into genuine mid-size territory, with real V6 power available for buyers wanting more than the standard four-cylinder." },
+            "LS": { engine:"3.0L V6 (195hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "GTZ": { engine:"3.0L V6 (195hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added later in this generation's run — genuine sport-styled trim with unique wheels and a firmer suspension." },
+          },
+          colors:[
+            {name:"Dover White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Vernal Green (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "E90 (2004-2012)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "DE": { engine:"2.4L 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely bolder, more aggressive redesign, sharing its platform with the contemporary Eclipse. A real Ralliart performance trim brought a genuine V6 with a real sport-tuned suspension, though nothing close to the old VR-4's AWD turbo pedigree. This was the final Galant generation; Mitsubishi discontinued the nameplate in the US after 2012 with no direct successor, as the brand's US sedan lineup contracted around the smaller Lancer." },
+            "ES": { engine:"2.4L 4-cylinder (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Ralliart": { engine:"3.8L V6 (230hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sport-performance trim, with a real firmer suspension and unique styling — though badge-only in spirit compared to the AWD Ralliart Lancer of the same era." },
+          },
+          colors:[
+            {name:"Dover White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Kalapana Black Pearl (Black)",hex:"#0A0A0A"},
+          ],
+        },
+      },
+    },
+    "i-MiEV": {
+      years:["2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "ES": { engine:"Electric Motor (66hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Mitsubishi's first-ever US-market EV, and genuinely one of the earliest mass-market electric cars sold anywhere in America — a real kei-car-derived economy EV, egg-shaped and tiny, with rear-mounted motor and RWD, a genuinely unusual layout for a modern car. Real range was quite limited, around 62 miles, and sales stayed niche throughout its run. Also sold in badge-engineered form by Peugeot (i-On) and Citroën (C-Zero) in markets outside the US." },
+        "SE": { engine:"Electric Motor (66hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Discontinued in the US after 2017 with no direct successor for several years, until the Outlander PHEV and later EVs eventually took over Mitsubishi's US electrification efforts." },
+      },
+      colors:[
+        {name:"Pearl White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Caracus Red (Red)",hex:"#9B1B30"},
+        {name:"Marine Blue (Blue)",hex:"#1E6BA8"},
+      ],
     },
     "Lancer": {
       generations:{
@@ -10712,6 +11112,218 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Mighty Max": {
+      years:["1990","1991","1992","1993","1994","1995","1996"],
+      trims:{
+        "Base": { engine:"2.0L 4-cylinder (88hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Mitsubishi's genuine compact pickup, closely related under the skin to the Dodge Ram 50 sold through Chrysler dealers via the same manufacturing partnership. A real, genuinely capable body-on-frame truck aimed at buyers who wanted Japanese reliability at a budget price." },
+        "SP": { engine:"2.4L 4-cylinder (116hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+        "LS": { engine:"3.0L V6 (143hp)", drivetrain:"4WD", transmission:"Automatic", note:"The V6 arrived for 1992, real extra power and towing capability over the four-cylinder-only earlier years. Discontinued after 1996 with no direct replacement in the US for nearly a decade, until the Raider (based on the Dodge Dakota) picked up Mitsubishi's compact-truck role in 2006." },
+      },
+      colors:[
+        {name:"Diamond White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Caracus Red (Red)",hex:"#9B1B30"},
+        {name:"Timberline Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "Mirage": {
+      generations:{
+        "1st Gen (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "S":  { engine:"1.5L 4-cylinder (92hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine budget-friendly subcompact, sold as both a sedan and a hatchback — closely related underneath to the Eagle Summit and Plymouth/Dodge Colt, real badge-engineered siblings from Mitsubishi's Diamond-Star and Chrysler partnership years." },
+            "LS": { engine:"1.6L 4-cylinder (113hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1997-2002)":{
+          years:["1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "DE": { engine:"1.8L 4-cylinder (113hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine sportier redesign, with a real GT trim on the coupe body style offering the largest engine yet available in a Mirage. Discontinued in the US after 2002 — the nameplate went dormant stateside for over a decade before returning as an all-new, much smaller subcompact in 2014." },
+            "LS": { engine:"1.8L 4-cylinder (113hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "GT": { engine:"2.4L 4-cylinder (142hp)", drivetrain:"FWD", transmission:"Automatic", note:"Coupe-only, genuinely the most powerful Mirage of this generation." },
+          },
+          colors:[
+            {name:"Dover White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Vernal Green (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "3rd Gen (2014-2024)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "ES": { engine:"1.2L 3-cylinder (74-78hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"A genuine return after a 12-year US absence, and a real reinvention — now one of the smallest, lightest, most fuel-efficient cars sold in America, with a tiny 3-cylinder engine built purely around efficiency rather than power. A real sedan companion, the Mirage G4, launched alongside it for buyers wanting a trunk instead of a hatchback. Discontinued in the US after 2024 with no direct successor, as Mitsubishi's US lineup shifted entirely toward crossovers — ending America's cheapest new car nameplate at the time." },
+            "LE": { engine:"1.2L 3-cylinder (78hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SE": { engine:"1.2L 3-cylinder (78hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"White Diamond (White)",hex:"#F5F5F5"},
+            {name:"Black Diamond (Black)",hex:"#1A1A1A"},
+            {name:"Red Diamond (Red)",hex:"#C8102E"},
+            {name:"Titan Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Montero": {
+      generations:{
+        "2nd Gen (1992-1999)":{
+          years:["1992","1993","1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"3.0L SOHC V6 (141-153hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Mitsubishi's genuine flagship, body-on-frame off-road SUV — a rounder, more city-friendly redesign over the boxier first generation. Real Super Select 4WD, allowing full-time AWD-like operation without the driveline strain of a traditional part-time transfer case, was a genuine technical highlight ahead of many rivals." },
+            "LS": { engine:"3.0L SOHC V6 (153-173hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "SR": { engine:"3.5L DOHC V6 (173-177hp)", drivetrain:"4WD", transmission:"Automatic", note:"A larger, more powerful DOHC V6 arrived for the final years of this generation, a real response to the segment's growing horsepower expectations by the late 1990s." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Timberline Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "LS": { engines:["3.5L V6 (200hp)","3.8L V6 (215-218hp)"], drivetrain:"4WD", transmission:"Automatic", note:"A genuine ground-up redesign, growing larger and more refined — real full-time 4WD (ActiveTrac) remained standard, a genuine point of pride given most rivals had shifted to on-demand AWD by this point. The larger 3.8L V6 replaced the 3.5L for 2003, since Mitsubishi never offered a V8 in this class. Discontinued in the US after 2006 with no direct successor, as the smaller, car-based Endeavor took over Mitsubishi's mid-size SUV role instead — ending the Montero's storied run in North America." },
+            "Limited": { engine:"3.8L V6 (215-218hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Dover White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Graphite Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Montero Sport": {
+      years:["1997","1998","1999","2000","2001","2002","2003","2004"],
+      trims:{
+        "ES": { engine:"3.0L V6 (173hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine mid-size, more affordable companion to the full-size Montero — built on a real truck-based platform shared with the contemporary Mighty Max/Dodge Ram 50 pickup lineage rather than the pricier Montero's own architecture. Curvy, distinctive styling stood apart from the boxier SUVs common in the segment at the time." },
+        "LS": { engine:"3.0L V6 (173hp)", drivetrain:"4WD", transmission:"Automatic" },
+        "XLS": { engine:"3.5L V6 (200hp)", drivetrain:"4WD", transmission:"Automatic", note:"The larger 3.5L V6 arrived for 2000, a real power step up. Discontinued after 2004, replaced by the car-based Endeavor — a genuine shift away from truck-based SUV construction for Mitsubishi's mid-size offering." },
+      },
+      colors:[
+        {name:"Diamond White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Caracus Red (Red)",hex:"#9B1B30"},
+        {name:"Timberline Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "Outlander": {
+      generations:{
+        "1st Gen (2003-2006)":{
+          years:["2003","2004","2005","2006"],
+          trims:{
+            "LS": { engine:"2.4L 4-cylinder (160hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"Mitsubishi's genuine entry into the burgeoning compact crossover segment, sold in Japan and elsewhere as the Airtrek — a genuine 2-row-only layout at launch, without the third-row seat that later generations would add." },
+            "XLS": { engine:"2.4L 4-cylinder (160hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Dover White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Kalapana Black (Black)",hex:"#0A0A0A"},
+          ],
+        },
+        "2nd Gen (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "ES": { engine:"2.4L 4-cylinder (168hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (CVT)", note:"A genuine ground-up redesign, growing to add a real third-row seat for the first time — genuine 7-passenger capability, a real point of difference against many rivals in the compact-crossover class. A V6 option arrived for buyers wanting more power than the standard four." },
+            "SE": { engine:"2.4L 4-cylinder (168hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (CVT)" },
+            "XLS": { engine:"3.0L V6 (220-230hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Dover White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Caracus Red (Red)",hex:"#9B1B30"},
+            {name:"Graphite Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2014-2021)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "ES": { engine:"2.4L 4-cylinder (166hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely major shift arrived for 2018 — the Outlander PHEV, Mitsubishi's first-ever plug-in hybrid for the US, combining a gas engine with dual electric motors (one per axle) for real all-electric-only range and genuine electric AWD without a mechanical driveshaft. This was also the last Outlander generation ever offered with a V6, a real end of an era as the brand shifted toward smaller, more efficient engines." },
+            "SE": { engines:["2.4L 4-cylinder (166hp)","3.0L V6 (224-227hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "GT": { engine:"3.0L V6 (224-227hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "PHEV": { engine:"2.0L Plug-In Hybrid 4-cylinder (190-221hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2018 — Mitsubishi's first-ever plug-in hybrid sold in the US, a genuine technical showcase for the brand." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Labrador Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Rally Red (Red)",hex:"#C8102E"},
+            {name:"Sunshine Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "4th Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "ES": { engine:"2.5L 4-cylinder (181hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely major redesign, co-developed with Nissan (a real product of the Renault-Nissan-Mitsubishi Alliance) and sharing its underlying platform with the Nissan Rogue — the V6 is gone for good, replaced entirely by a shared 4-cylinder engine across the whole lineup, including a fresh generation of the PHEV." },
+            "SE": { engine:"2.5L 4-cylinder (181hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SEL": { engine:"2.5L 4-cylinder (181hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "PHEV": { engine:"2.4L Plug-In Hybrid 4-cylinder (248hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuine second-generation plug-in hybrid, with real improved electric-only range over the outgoing generation's system." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Diamond (Black)",hex:"#1A1A1A"},
+            {name:"Red Diamond (Red)",hex:"#C8102E"},
+            {name:"Mica Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Outlander Sport": {
+      generations:{
+        "1st Gen (2011-2022)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "ES": { engine:"2.0L 4-cylinder (148hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Mitsubishi's genuine subcompact crossover entry, sold globally as the RVR/ASX — a real long-lived platform that ran for over a decade with only detail updates, one of the longest single-generation runs of any modern Mitsubishi. Positioned below the Outlander, sharing that model's basic underpinnings in a smaller footprint." },
+            "SE": { engines:["2.0L 4-cylinder (148hp)","2.4L 4-cylinder (168hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "GT": { engine:"2.4L 4-cylinder (168hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Labrador Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Rally Red (Red)",hex:"#C8102E"},
+            {name:"Sunshine Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "2nd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "ES": { engine:"2.0L 4-cylinder (148hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine mid-cycle refresh built on the same basic platform, but with real updated styling and technology — the larger 2.4L engine remained available on upper trims, while the smaller 2.0L continued as the value-focused base engine." },
+            "SE": { engine:"2.0L 4-cylinder (148hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SEL": { engine:"2.4L 4-cylinder (168hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Black Edition": { engine:"2.4L 4-cylinder (168hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Genuine blacked-out styling package, added in later model years of this generation." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Diamond (Black)",hex:"#1A1A1A"},
+            {name:"Red Diamond (Red)",hex:"#C8102E"},
+            {name:"Mica Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Raider": {
+      years:["2006","2007","2008","2009"],
+      trims:{
+        "LS": { engine:"3.7L V6 (210hp)", drivetrains:["RWD","4WD"], transmissions:["Manual (6-Speed)","Automatic"], note:"A genuine badge-engineered version of the Dodge Dakota, built on the same real Chrysler ND platform — a product of the DaimlerChrysler-Mitsubishi alliance of the mid-2000s, filling the gap left by the Mighty Max's discontinuation a decade earlier. Extended Cab and Double Cab body styles were both offered." },
+        "XLS": { engine:"4.7L V8 (230hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"The larger Dakota-sourced V8 gave the Raider genuine mid-size-plus towing capability, a real step up from anything Mitsubishi had offered in a truck before." },
+        "Duro Cross": { engine:"4.7L V8 (230hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine off-road-styled special edition, with a distinct blacked-out grille and unique wheels. Discontinued after 2009 alongside the wind-down of the DaimlerChrysler-Mitsubishi partnership, with no direct successor — ending Mitsubishi's US pickup truck presence entirely for over 15 years." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red (Red)",hex:"#9B1B30"},
+        {name:"Graphite Metallic (Gray)",hex:"#6B6E6F"},
+      ],
     },
   },
   "Nissan": {
@@ -13697,11 +14309,11 @@ const VEHICLES = {
     },
     "Supra": {
       generations:{
-        "A70 Tail (1990-1993)":{
-          years:["1990","1991","1992","1993"],
+        "A70 (1986-1992)":{
+          years:["1986","1987","1988","1989","1990","1991","1992"],
           trims:{
-            "Base": { engine:"3.0L 7M-GE Inline-6 (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"By this point the Supra had genuinely split off from the Celica entirely, becoming its own dedicated RWD sports car / grand tourer. A driver-side airbag and revised interior arrived with a 1990 update. This was the final stretch of the A70 before the legendary A80 replaced it." },
-            "Turbo": { engine:"3.0L 7M-GTE Turbocharged 6-cylinder (232hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuinely potent for the era, with a real Targa-top option available." },
+            "Base": { engine:"3.0L 7M-GE Inline-6 (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The Supra's genuine split from the Celica, becoming its own dedicated RWD sports car / grand tourer — starting mid-1986, Toyota dropped the 'Celica' prefix entirely and the two nameplates became fully separate models. A 1989 refresh brought a new front bumper, taillights, and badging; a driver-side airbag arrived for 1990. 1991 introduced a more modern 5-spoke wheel design, replacing the earlier 'saw blade' wheels. Sales fell off sharply after the early 1990-91 recession, and this was the final stretch of the A70 before the legendary A80 replaced it for 1993." },
+            "Turbo": { engine:"3.0L 7M-GTE Turbocharged 6-cylinder (230-232hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuinely potent for the era, with a real Targa-top option available — though from 1991 on, the open-top Sport Roof became Turbo-exclusive, with naturally-aspirated buyers limited to a conventional power sunroof. The 7M-GTE's biggest known weakness is a factory-under-torqued head gasket, a well-documented issue on unmodified examples today." },
           },
           colors:[
             {name:"Super White (White)",hex:"#F5F5F5"},
