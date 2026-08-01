@@ -8970,6 +8970,109 @@ const VEHICLES = {
     },
   },
   "Mazda": {
+    "626": {
+      generations:{
+        "GD Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "DX": { engine:"2.0L I4 (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Mazda's genuine mainstream mid-size sedan, sold alongside the closely related Ford Probe (which shared its platform). A turbocharged GT trim brought real performance to the lineup, a genuine rarity for a mainstream Japanese family sedan of the era." },
+            "GT": { engine:"2.2L Turbocharged I4 (145hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely quick for a family sedan of its time, though dropped once the next generation arrived." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "GE (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "DX": { engine:"2.0L I4 (118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign shared with the Ford Probe and Mazda MX-6 coupe. A real V6 option arrived for the first time, a genuine step up for the segment." },
+            "LX": { engine:"2.5L V6 (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "ES": { engine:"2.5L V6 (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Merlot Mica (Red)",hex:"#6B1A2A"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "GF (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "LX": { engine:"2.0L I4 (125hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely thorough redesign for its final US-market generation before being replaced by the Mazda6. This was the final 626 generation sold in the US." },
+            "ES": { engine:"2.5L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunburst Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Estate Blue Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "B-Series": {
+      generations:{
+        "Pre-Ranger (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "B2200": { engine:"2.2L I4 (93hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Mazda's own genuine compact pickup design, sharing roots with the Ford Courier of prior decades but distinctly Mazda-engineered by this point. A real budget-friendly alternative to the Ranger and other compact trucks of the era." },
+            "B2600i": { engine:"2.6L I4 (104hp)", drivetrain:"4WD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Sand Beige (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "Ranger-Based (1994-2006)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "B3000": { engine:"3.0L V6 (145hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine badge-engineering arrangement — from this point on, the B-Series was mechanically identical to the contemporary Ford Ranger, built alongside it and differing mainly in grille and badging. A real cost-effective way for Mazda to keep a compact truck in its lineup without developing one independently." },
+            "B4000": { engine:"4.0L V6 (160hp)", drivetrain:"4WD", transmission:"Automatic", note:"Discontinued after 2006 in the US, with no direct successor — Mazda stepped away from the compact truck segment stateside for good, later selling the BT-50 (a Ford Ranger-adjacent truck) only in markets outside North America." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Deep Wedgewood Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "CX-3": {
+      years:["2016","2017","2018","2019","2020","2021"],
+      trims:{
+        "Sport": { engine:"2.0L 4-cylinder (146-148hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"Mazda's genuine subcompact crossover entry, positioned below the CX-5 with real sporty, driver-focused handling that earned it critical praise well beyond its price point. A 2018 refresh brought updated styling and cabin materials. Discontinued after 2021 in the US, effectively replaced by the newer, larger CX-30." },
+        "Touring": { engine:"2.0L 4-cylinder (146-148hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)" },
+        "Grand Touring": { engine:"2.0L 4-cylinder (146-148hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+      },
+      colors:[
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+        {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
+      ],
+    },
+    "CX-30": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (186hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuinely stylish subcompact crossover, slotting between the smaller CX-3 and larger CX-5 — real KODO-design styling and a genuinely upscale interior for the segment, one of the reasons the CX-30 earned real critical praise from launch. A 2.5L Turbo joined for 2021, borrowed from the larger CX-5/CX-9, a genuine power option most subcompact rivals didn't offer." },
+        "Select": { engine:"2.5L 4-cylinder (186hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)" },
+        "Premium": { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Turbo added 2021, real power for a subcompact crossover." },
+        "Carbon Turbo": { engine:"2.5L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+      },
+      colors:[
+        {name:"Snowflake White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+        {name:"Polymetal Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "CX-5": {
       generations:{
         "KE (2013-2016)":{
@@ -9023,6 +9126,85 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "CX-50": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"A genuinely more rugged, off-road-oriented sibling to the CX-5, built on a wider stance with real increased ground clearance — Mazda's answer to buyers cross-shopping the RAV4 and CR-V's outdoorsy trims. Built at Mazda's new Alabama plant, a joint venture with Toyota, marking real US production for Mazda for the first time in decades." },
+        "Select": { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+        "Turbo": { engine:"2.5L Turbocharged 4-cylinder (227-256hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+        "Meridian Edition": { engine:"2.5L Turbocharged 4-cylinder (256hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"A genuine off-road-focused special trim, with all-terrain tires and unique styling — a real signal of Mazda pushing further into rugged-crossover territory." },
+        "Hybrid": { engine:"2.5L Hybrid 4-cylinder (219hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Added 2024, genuinely using Toyota-sourced hybrid technology — a real product of the same Alabama joint-venture plant relationship." },
+      },
+      colors:[
+        {name:"Snowflake White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+        {name:"Zircon Sand Metallic (Tan)",hex:"#C8B89A"},
+      ],
+    },
+    "CX-7": {
+      years:["2007","2008","2009","2010","2011","2012"],
+      trims:{
+        "i SV": { engine:"2.5L 4-cylinder (161hp)", drivetrain:"FWD", transmission:"Automatic (5-Speed)", note:"A genuinely sporty-driving mid-size crossover, styled with real RX-8-inspired flair — prominent front fenders and a distinctive 5-point grille. The base naturally-aspirated 2.5L four arrived for 2010 as a lower-cost, more fuel-efficient alternative to the turbo." },
+        "i Touring": { engine:"2.5L 4-cylinder (161hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (5-Speed)" },
+        "s Grand Touring": { engine:"2.3L Turbocharged 4-cylinder (244hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"The genuine performance flagship — a real 244hp turbo four gave the CX-7 legitimate sporty-crossover credibility, though at a real fuel-economy cost that drew criticism throughout its production run. Discontinued after 2012 with no direct successor, as the CX-5 took over as Mazda's compact crossover offering." },
+      },
+      colors:[
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"True Red (Red)",hex:"#C8102E"},
+        {name:"Galaxy Gray Mica (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "CX-9": {
+      generations:{
+        "1st Gen (2007-2015)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Sport": { engines:["3.5L Ford-Sourced V6 (263hp)","3.7L V6 (273hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"Mazda's genuine flagship 3-row crossover, sharing its underlying CD3 platform with the Ford Edge — a real product of the Ford-Mazda alliance still in place at the time. The original 3.5L Ford-sourced V6 was replaced by Mazda's own larger 3.7L unit for 2008, a genuine power and refinement upgrade." },
+            "Touring": { engine:"3.7L V6 (273hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)" },
+            "Grand Touring": { engine:"3.7L V6 (273hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Zeal Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Sky Blue Mica (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2016-2023)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Sport": { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuinely bold move — dropping the V6 entirely in favor of a turbocharged four-cylinder, real evidence of Mazda's SkyActiv efficiency philosophy applied to its largest vehicle. Output varies by fuel: 227hp on regular 87-octane, a genuine 250hp when running premium — a real rarity in how Mazda tuned the engine's boost to reward higher-octane fuel." },
+            "Touring": { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)" },
+            "Grand Touring": { engine:"2.5L Turbocharged 4-cylinder (227-250hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+            "Signature": { engine:"2.5L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Top trim, genuinely upscale Nappa leather interior — Mazda leaning into a real near-luxury positioning. Discontinued after 2023, replaced by the larger CX-90." },
+          },
+          colors:[
+            {name:"Snowflake White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+            {name:"Machine Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "CX-90": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Select": { engine:"3.3L Turbocharged Inline-6 (280hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Mazda's genuine new flagship, replacing the CX-9 with a real ground-up redesign — a longitudinal inline-6 turbo engine and rear-biased AWD, a genuinely different, more premium architecture than any prior mainstream Mazda. Aimed as much at near-luxury 3-row rivals as at mainstream family SUVs." },
+        "Preferred": { engine:"3.3L Turbocharged Inline-6 (280hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Premium": { engine:"3.3L Turbocharged Inline-6 (280hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Turbo S": { engine:"3.3L Turbocharged Inline-6 (340hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"The genuine performance flagship, running on recommended premium fuel for its full 340hp rating — a real high-output tune of the same basic inline-6." },
+        "PHEV": { engine:"2.5L Plug-In Hybrid Inline-4 (323hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine plug-in hybrid variant, pairing a smaller 4-cylinder with electric motors for real all-electric-only range before the gas engine engages." },
+      },
+      colors:[
+        {name:"Rhodium White Premium (White)",hex:"#F0F0F0"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+        {name:"Zircon Sand Metallic (Tan)",hex:"#C8B89A"},
+      ],
     },
     "Mazda3": {
       generations:{
@@ -9264,6 +9446,31 @@ const VEHICLES = {
         },
       },
     },
+    "Millenia": {
+      years:["1995","1996","1997","1998","1999","2000","2001","2002"],
+      trims:{
+        "Base": { engine:"2.5L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Mazda's genuine flagship sedan, positioned as a real near-luxury alternative to the Acura Legend and Lexus ES — a real step above the mainstream 626, built to give Mazda a genuine entry into the entry-luxury segment." },
+        "S": { engine:"2.3L Miller-Cycle Supercharged V6 (210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely unique engineering — the Miller-cycle combustion process, combined with a supercharger, delivered real V6-plus power from a smaller displacement engine with genuinely better fuel efficiency, a technical curiosity Mazda never repeated. Discontinued after 2002 with no direct successor, as Mazda stepped back from the near-luxury sedan segment entirely." },
+      },
+      colors:[
+        {name:"Sunburst Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Classic Red (Red)",hex:"#C8102E"},
+        {name:"Evergreen Mica (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "MX-30": {
+      years:["2022","2023"],
+      trims:{
+        "Premium": { engine:"Electric Motor (143hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Mazda's first-ever EV for the US market, and a genuinely short-lived one — sold only in California for two model years with a real, deliberately modest 100-mile range, positioned as more of a stylish urban runabout than a mainstream EV competitor. Distinctive rear-hinged 'freestyle' half-doors carried over the styling cue from the old RX-8. Real cork-accented interior trim was a genuine nod to Mazda's origins as a cork manufacturer." },
+      },
+      colors:[
+        {name:"Ceramic Metallic (White)",hex:"#E8E8E8"},
+        {name:"Jet Black Mica (Black)",hex:"#1A1A1A"},
+        {name:"Soul Red Crystal (Red)",hex:"#9B1B30"},
+        {name:"Polymetal Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "MX-5 Miata": {
       generations:{
         "NA6 (1990-1993)":{
@@ -9384,6 +9591,144 @@ const VEHICLES = {
             {name:"Deep Crystal Blue Mica (Blue)",hex:"#1B3A6B"},
             {name:"Ceramic Metallic (Silver)",hex:"#C8C8C8"},
             {name:"Zircon Sand Metallic (Tan)",hex:"#C8B89A"},
+          ],
+        },
+      },
+    },
+    "MX-6": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+      trims:{
+        "DX": { engine:"2.2L I4 (118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine sporty coupe sibling to the 626 sedan, sharing its platform with both the 626 and the closely related Ford Probe. A turbocharged GT trim brought real performance to the first-generation cars before being dropped." },
+        "LX": { engine:"2.5L V6 (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "GT": { engine:"2.2L Turbocharged I4 (145hp)", drivetrain:"FWD", transmission:"Manual", note:"1990-1992 only — genuinely quick for a mainstream Japanese coupe of the era, before the V6 took over as the performance option for the redesigned second generation. Discontinued after 1997 with no direct successor, as Mazda's coupe lineup consolidated." },
+      },
+      colors:[
+        {name:"Crystal White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Classic Red (Red)",hex:"#C8102E"},
+        {name:"Twilight Blue Mica (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Protege": {
+      generations:{
+        "BG (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "DX": { engine:"1.6L I4 (82hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuinely replaced the 323 nameplate in the US (the 323 name continued a bit longer for the hatchback), Mazda's compact economy car aimed at the Civic and Corolla. A real LX trim brought the larger, more powerful 1.8L engine." },
+            "LX": { engine:"1.8L I4 (103hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Twilight Blue Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "BH (1995-1998)":{
+          years:["1995","1996","1997","1998"],
+          trims:{
+            "DX": { engine:"1.5L I4 (92hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, growing slightly and adopting rounder, more modern styling. The LX trim's 1.8L engine got a real DOHC upgrade for extra power." },
+            "LX": { engine:"1.8L DOHC I4 (122hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Merlot Mica (Red)",hex:"#6B1A2A"},
+            {name:"Blue Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "BJ (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "DX": { engine:"1.6L I4 (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely sportier redesign, with the Protege5 wagon-hatchback variant added for 2002 as a real enthusiast favorite. The Mazdaspeed Protege arrived for 2003 — Mazda's first-ever US Mazdaspeed model, a genuine limited-run turbocharged special that helped set the template for the later Mazdaspeed3 and Mazdaspeed6." },
+            "LX": { engine:"2.0L I4 (130hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "ES": { engine:"2.0L I4 (130hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Mazdaspeed": { engine:"2.0L Turbocharged I4 (170hp)", drivetrain:"FWD", transmission:"Manual (5-Speed)", note:"2003 only — genuinely limited to around 4,500 units, well above the original planned run of 2,000. This was the final Protege generation before the nameplate was replaced by the Mazda3 for 2004." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Vivid Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Titanium Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "RX-7": {
+      generations:{
+        "FC Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "GTU": { engine:"13B Naturally-Aspirated Rotary (160hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuinely stripped-down, track-focused special — lighter weight, four-piston brakes, and 16-inch wheels, a real enthusiast favorite of the FC generation. Offered as a coupe or, for the first time in RX-7 history, a genuine convertible." },
+            "Turbo": { engine:"13B Turbocharged Rotary (200hp)", drivetrain:"RWD", transmission:"Manual", note:"The final two years of the FC before the legendary FD replaced it — genuinely potent for its era, using a single turbocharger with an air-to-air intercooler." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Montego Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "FD (1993-1995)":{
+          years:["1993","1994","1995"],
+          trims:{
+            "Base": { engine:"13B-REW Sequential Twin-Turbo Rotary (255hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Genuinely the pinnacle of rotary sports car development — a real 50/50 weight distribution, sequential twin-turbocharging (a small primary turbo for instant low-end response, a larger secondary kicking in higher up) that largely eliminated the turbo lag that plagued earlier turbo rotaries. Sold in the US for only three model years due to weak sales against the price and a strengthening yen, making US-market FDs genuinely scarce today — roughly 14,000 units total. Widely considered one of the greatest handling cars of its era, regardless of price." },
+            "Touring": { engine:"13B-REW Sequential Twin-Turbo Rotary (255hp)", drivetrain:"RWD", transmissions:["Manual (5-Speed)","Automatic"] },
+            "R1/R2": { engine:"13B-REW Sequential Twin-Turbo Rotary (255hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Genuine performance-focused package with a stiffer suspension and unique wheels, aimed squarely at track-day buyers." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Vintage Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Montego Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+      },
+    },
+    "RX-8": {
+      years:["2004","2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Standard": { engine:"13B-MSP Renesis Rotary (189hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"The genuine spiritual successor to the RX-7, though a real departure in concept — a naturally-aspirated (rather than turbocharged) rotary called the Renesis, paired with an unusual 4-door layout using rear-hinged 'freestyle' suicide doors and a genuine rear seat, a first for an RX-badged Mazda. The last mass-produced rotary-engine car from any manufacturer before the RX-8's 2012 discontinuation." },
+        "Sport": { engines:["13B-MSP Renesis Rotary (189hp)","13B-MSP Renesis Rotary (232-238hp)"], drivetrain:"RWD", transmissions:["Manual (6-Speed)","Automatic"], note:"The higher-output 232-238hp tune was reserved for cars equipped with the 6-speed manual; automatic-equipped cars made the lower 189hp figure." },
+        "Grand Touring": { engine:"13B-MSP Renesis Rotary (232-238hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)" },
+        "R3": { engine:"13B-MSP Renesis Rotary (232hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Added 2009 — genuine performance-focused trim with a Bilstein-tuned suspension and unique 19-inch wheels, a real enthusiast favorite for its final model years." },
+      },
+      colors:[
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+        {name:"True Red (Red)",hex:"#C8102E"},
+        {name:"Velocity Red Mica (Red)",hex:"#9B1B30"},
+      ],
+    },
+    "Tribute": {
+      generations:{
+        "1st Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "DX": { engine:"2.0L I4 (130hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine badge-engineered twin of the Ford Escape, built on the same platform and sharing most mechanical components — Mazda's real answer to the compact-SUV boom of the early 2000s without developing one independently. Real Mazda-specific styling touches (grille, wheels) were the main visual differences." },
+            "LX": { engines:["2.0L I4 (130hp)","3.0L V6 (200hp)"], drivetrains:["FWD","4WD"], transmission:"Automatic" },
+            "ES": { engine:"3.0L V6 (200hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Sunfire White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Titanium Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2008-2011)":{
+          years:["2008","2009","2010","2011"],
+          trims:{
+            "i": { engine:"2.5L I4 (171hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"A genuine mid-cycle update, still built on the same basic Escape-derived platform but with real styling and interior refreshes. Mazda finally got the green light from Ford to sell a genuine Hybrid variant, previously reserved for the Escape and Mercury Mariner siblings — discontinued for good after 2011, as Mazda's SUV lineup consolidated around the CX-5 and CX-7 instead." },
+            "s Sport": { engine:"3.0L V6 (240hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "s Grand Touring": { engine:"3.0L V6 (240hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.5L Atkinson-Cycle Hybrid I4 (155hp combined)", drivetrains:["FWD","4WD"], transmission:"Automatic (e-CVT)", note:"Added 2008 — Mazda's first-ever hybrid, genuinely shared its powertrain with the Ford Escape Hybrid and Mercury Mariner Hybrid." },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Mica (Black)",hex:"#1A1A1A"},
+            {name:"True Red (Red)",hex:"#C8102E"},
+            {name:"Galaxy Gray Mica (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
