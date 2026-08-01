@@ -7873,6 +7873,21 @@ const VEHICLES = {
         {name:"Vogue Silver Metallic (Silver)",hex:"#C0C0C0"},
       ],
     },
+    "Element": {
+      years:["2003","2004","2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "DX":  { engine:"2.4L i-VTEC 4-cylinder (160hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely oddball, purpose-built compact utility vehicle — boxy, upright, and covered in scratch-resistant plastic body cladding, built on a stretched CR-V platform. Distinctive rear-hinged 'suicide' back doors and a completely removable rear seat made it a real favorite for surfers, campers, and dog owners; Honda leaned into that with an available water-resistant interior package. DX trim dropped after 2004." },
+        "LX":  { engine:"2.4L i-VTEC 4-cylinder (160-166hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"Added 2004 as a mid-range trim between DX and EX." },
+        "EX":  { engine:"2.4L i-VTEC 4-cylinder (160-166hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic"], note:"A 2007 refresh brought a genuine power bump (166hp, up from 160) along with a new drive-by-wire throttle and a 5-speed automatic replacing the old 4-speed." },
+        "SC":  { engine:"2.4L i-VTEC 4-cylinder (166hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2007, replacing the earlier EX-P appearance package — sport-tuned suspension, 18-inch wheels, and painted (rather than plastic-clad) body panels. Genuinely won Dogcars.com's 'Dog Car of the Year' award in 2007, an honor Honda itself leaned into with a factory 'Dog Friendly' accessory package added for 2010. Dropped for the Element's final 2011 model year, alongside the manual transmission and navigation option, before the whole nameplate was discontinued with no direct successor." },
+      },
+      colors:[
+        {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Tango Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Root Beer Metallic (Brown)",hex:"#5A3A28"},
+      ],
+    },
     "Fit": {
       generations:{
         "1st Gen (2007-2008)":{
@@ -7912,6 +7927,38 @@ const VEHICLES = {
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Milano Red (Red)",hex:"#C8102E"},
             {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "HR-V": {
+      generations:{
+        "1st Gen (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "LX": { engine:"1.8L i-VTEC 4-cylinder (141hp)", drivetrains:["FWD","AWD"], transmissions:["Manual (6-Speed)","Automatic (CVT)"], note:"Honda's first-ever subcompact SUV, sharing its platform with the Fit and slotting in below the CR-V. The 6-speed manual was FWD-only and dropped after the 2019 model year, leaving CVT as the sole transmission choice from then on. Sport and Touring trims were added for 2019 alongside a styling refresh." },
+            "EX":  { engine:"1.8L i-VTEC 4-cylinder (141hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "Touring": { engine:"1.8L i-VTEC 4-cylinder (141hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Added 2019, dropped again after 2021." },
+          },
+          colors:[
+            {name:"White Orchid Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "LX":   { engine:"2.0L DOHC i-VTEC 4-cylinder (158hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely thorough redesign built on the Civic's platform rather than the Fit's, growing noticeably in size and maturity — real 'baby CR-V' styling and proportions this time around. Every trim shares the same naturally-aspirated four-cylinder and CVT; no manual, no turbo, and no hybrid option offered, a real point of criticism versus more electrified rivals. A 2026 update standardized a larger 9-inch touchscreen and wireless phone charging across the whole lineup." },
+            "Sport":{ engine:"2.0L DOHC i-VTEC 4-cylinder (158hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "EX-L": { engine:"2.0L DOHC i-VTEC 4-cylinder (158hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Sunset Orange Pearl (Orange)",hex:"#E8601C"},
+            {name:"Solar Silver Metallic (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
@@ -8208,6 +8255,39 @@ const VEHICLES = {
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Rallye Red (Red)",hex:"#C8102E"},
             {name:"Meteoroid Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Ridgeline": {
+      generations:{
+        "1st Gen (2006-2014)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "RT":  { engines:["3.5L V6 (247hp)","3.5L V6 (250hp)"], drivetrain:"AWD", transmission:"Automatic (5-Speed)", note:"Honda's first-ever pickup truck, and a genuinely unconventional one — a unibody, car-based design derived from the Pilot's platform rather than a traditional body-on-frame truck, giving it a distinctly car-like ride most rivals couldn't match. Standard AWD via Honda's VTM-4 system, and a genuinely clever lockable in-bed trunk built into the composite bed. A dual-action tailgate could swing open sideways or drop down like a conventional truck. The engine got a modest power bump (247 to 250hp) for 2009 with the addition of VTEC." },
+            "RTS": { engine:"3.5L V6 (250hp)", drivetrain:"AWD", transmission:"Automatic (5-Speed)" },
+            "RTL": { engine:"3.5L V6 (247-250hp)", drivetrain:"AWD", transmission:"Automatic (5-Speed)", note:"Top trim, with leather, heated seats, and a sunroof. Discontinued after 2014, with the nameplate on a 2-year hiatus before returning as an all-new second generation." },
+          },
+          colors:[
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Steel Green Metallic (Green)",hex:"#3A5A4A"},
+          ],
+        },
+        "2nd Gen (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Sport": { engine:"3.5L V6 (280hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)", note:"Returned after a 2-year gap, still genuinely unibody rather than body-on-frame, but with a real power bump from the new Earth Dreams V6 and a modern 9-speed automatic. A 2021 mid-cycle refresh brought bolder, more traditionally truck-like styling and added the off-road-focused TrailSport trim." },
+            "RTL":   { engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "TrailSport": { engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Added 2021 — all-terrain tires and an off-road-tuned suspension, the Ridgeline's first genuine off-road-focused trim." },
+            "Black Edition": { engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Top trim, with an 8-speaker 540-watt premium audio system and the most premium interior appointments. A Two-Tone paint option with a black roof was added for 2026." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Ash Green Metallic (Green)",hex:"#5A6E5E"},
           ],
         },
       },
