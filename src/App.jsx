@@ -7071,7 +7071,7 @@ const VEHICLES = {
         "1st Gen (2004-2012)":{
           years:["2004","2005","2006","2007","2008","2009","2010","2011","2012"],
           trims:{
-            "SL":  { engines:["2.8L Vortec 4-cylinder (175hp)","2.9L 4-cylinder (185hp)","3.5L Inline-5 (220hp)","3.7L Inline-5 (242hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Replaced the aging Sonoma with a genuine ground-up redesign, sharing its GMT355 platform with the Chevrolet Colorado — both were designed from scratch rather than being carried over from the old S-series trucks. Both engines here are inline configurations derived from the Envoy's Vortec 4.2L inline-six, a real engineering oddity for a compact truck. A 2007 mid-cycle refresh swapped in slightly larger, more powerful versions of both engines." },
+            "SL":  { engines:["2.8L Vortec 4-cylinder (175hp)","2.9L 4-cylinder (185hp)","3.5L Inline-5 (220hp)","3.7L Inline-5 (242hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Replaced the aging Sonoma with a genuine ground-up redesign, sharing its GMT355 platform with the Chevrolet Colorado — both were designed from scratch rather than being carried over from the old S-series trucks. Both engines here are inline configurations derived from the Envoy's Vortec 4.2L inline-six, a real engineering oddity for a compact truck. A 2007 mid-cycle refresh swapped in slightly larger, more powerful versions of both engines." },
             "SLE": { engines:["2.8L Vortec 4-cylinder (175hp)","3.5L Inline-5 (220hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
             "SLT": { engine:"3.7L Inline-5 (242hp)", drivetrain:"4WD", transmission:"Automatic" },
           },
@@ -7348,7 +7348,7 @@ const VEHICLES = {
         "1st Gen (1990-1993)":{
           years:["1990","1991","1992","1993"],
           trims:{
-            "Base": { engines:["2.5L Tech IV 4-cylinder (94-105hp)","2.8L V6 (125hp)","4.3L Vortec V6 (160-195hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Renamed from S-15 to Sonoma for the 1991 model year, dropping the old 'Sierra' compact-truck trim designation to avoid confusion with the full-size Sierra. Regular and extended cab body styles, short and long beds." },
+            "Base": { engines:["2.5L Tech IV 4-cylinder (94-105hp)","2.8L V6 (125hp)","4.3L Vortec V6 (160-195hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Renamed from S-15 to Sonoma for the 1991 model year, dropping the old 'Sierra' compact-truck trim designation to avoid confusion with the full-size Sierra. Regular and extended cab body styles, short and long beds." },
             "GT":   { engine:"4.3L Vortec V6 (195hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 1992 — a sportier appearance package borrowing the Syclone's looks (blacked-out trim, lowered stance) without the turbo engine or AWD underneath." },
             "Syclone": { engine:"4.3L Turbocharged V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"1991 only, with a handful of stragglers built in 1992 — a genuinely legendary factory hot-rod truck, built in partnership with Production Automotive Services. At the time, it was the quickest-accelerating production vehicle GM sold, genuinely embarrassing contemporary sports cars in period magazine tests. All-wheel drive and a Mitsubishi-sourced turbocharger were both real firsts for an American production pickup." },
           },
@@ -7362,7 +7362,7 @@ const VEHICLES = {
         "2nd Gen (1994-2004)":{
           years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
           trims:{
-            "SL":  { engines:["2.2L 4-cylinder (118hp)","4.3L Vortec V6 (165-195hp)"], drivetrain:"RWD", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely thorough redesign, more rounded and modern than the outgoing truck. Regular, extended, and (later) crew cab body styles were all offered. A driver's airbag arrived in 1995, dual front airbags by 1998. Discontinued after 2004, replaced by the larger, more modern Canyon." },
+            "SL":  { engines:["2.2L 4-cylinder (118hp)","4.3L Vortec V6 (165-195hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely thorough redesign, more rounded and modern than the outgoing truck. Regular, extended, and (later) crew cab body styles were all offered. A driver's airbag arrived in 1995, dual front airbags by 1998. Discontinued after 2004, replaced by the larger, more modern Canyon." },
             "SLS": { engine:"4.3L Vortec V6 (165-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
             "SLE": { engine:"4.3L Vortec V6 (165-195hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
           },
@@ -11271,6 +11271,37 @@ const VEHICLES = {
         },
       },
     },
+    "bZ": {
+      generations:{
+        "bZ4X (2023-2025)":{
+          years:["2023","2024","2025"],
+          trims:{
+            "XLE": { engine:"Electric Motor (201hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (Single-Speed)", note:"Toyota's first-ever dedicated EV platform for the US market, co-developed with Subaru (which sold its own version as the Solterra) — a genuinely late entry into the mainstream EV space compared to rivals. Dual-motor AWD models made slightly more power (214hp) than the single-motor FWD version." },
+            "Limited": { engine:"Electric Motor (201-214hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Cavalry Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "bZ (2026)":{
+          years:["2026"],
+          trims:{
+            "SE": { engine:"Electric Motor (338hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Renamed simply 'bZ' for this generation, dropping the '4X' suffix as part of a broader update — genuine power and range improvements over the outgoing bZ4X. A rugged Woodland trim was added, aimed at buyers who wanted a more overland-capable EV crossover." },
+            "Limited": { engine:"Electric Motor (338hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Woodland": { engine:"Electric Motor (338hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine off-road-styled trim, with all-terrain tires and unique styling." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Cypress Metallic (Green)",hex:"#4A6B5A"},
+          ],
+        },
+      },
+    },
     "Camry": {
       generations:{
         "V20 Tail (1990-1991)":{
@@ -11384,6 +11415,51 @@ const VEHICLES = {
         },
       },
     },
+    "Celica": {
+      generations:{
+        "5th Gen Tail (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "ST": { engine:"1.6L 4A-FE 4-cylinder (105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely rounder, more aerodynamic redesign, sold as coupe, liftback, and convertible body styles. The GT-Four (All-Trac Turbo in the US) was a genuine rally homologation special — turbocharged and AWD, built to compete in and win the World Rally Championship, with real motorsport pedigree Toyota's mainstream lineup rarely touched." },
+            "GT": { engine:"2.2L 5S-FE 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "All-Trac Turbo": { engine:"2.0L 3S-GTE Turbocharged 4-cylinder (200-225hp)", drivetrain:"AWD", transmission:"Manual", note:"The US name for the GT-Four — genuinely rare and expensive for a Celica, but a real giant-killer with rally-proven AWD and turbo power most rivals couldn't match." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Super Red (Red)",hex:"#C8102E"},
+            {name:"Dark Emerald Pearl (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "6th Gen (1994-1999)":{
+          years:["1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "ST": { engine:"1.8L 7A-FE 4-cylinder (105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely more organic, curvy redesign — real evidence of Toyota's design language of the mid-90s. The GT-Four (ST205, All-Trac Turbo in the US) continued the rally-homologation tradition, now with real power to match its AWD hardware, though this was the final Celica generation ever offered with AWD or a turbo in the US." },
+            "GT": { engine:"2.2L 5S-FE 4-cylinder (135hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "All-Trac Turbo": { engine:"2.0L 3S-GTE Turbocharged 4-cylinder (255hp)", drivetrain:"AWD", transmission:"Manual", note:"1994-1995 only in the US — genuinely the most powerful Celica ever sold stateside, before Toyota discontinued the AWD turbo variant here entirely." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunfire Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Spectra Blue Mica (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "7th Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "GT": { engine:"1.8L 1ZZ-FE 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely sharp, angular final redesign, styled with real input from Toyota's European design studio (ED²) — one of the more distinctive Celica shapes, though it drew mixed reactions at launch. AWD and turbo power were both gone for good this generation, a real departure from the GT-Four era. Discontinued after 2005 in the US (2006 elsewhere) alongside the MR2, as Toyota's sport-compact lineup wound down amid falling demand for the segment as a whole." },
+            "GT-S": { engine:"1.8L 2ZZ-GE VVTL-i 4-cylinder (180hp)", drivetrain:"FWD", transmission:"Manual (6-Speed)", note:"Shared its high-revving, variable-valve-timing engine with the Lotus Elise — a genuine surprise co-development, and a real high point for naturally-aspirated four-cylinder power in this class at the time." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Silver Streak Mica (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Corolla": {
       generations:{
         "E90 Tail (1990-1992)":{
@@ -11483,6 +11559,341 @@ const VEHICLES = {
         },
       },
     },
+    "FJ Cruiser": {
+      years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+      trims:{
+        "Base": { engine:"4.0L V6 (239-260hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine retro tribute to the boxy 1960s-80s FJ40-series Land Cruiser, sharing its platform and drivetrain with the contemporary 4Runner underneath the throwback styling. Distinctive rear-hinged half-doors, a low-mounted white roof, and available in bold, unusual colors that stood out from the rest of Toyota's lineup. A real-deal, genuinely capable off-roader — not just a styling exercise — with a locking rear differential available on 4WD models. Discontinued after 2014 in the US, alongside a broader wind-down of Toyota's more niche off-road specialty models." },
+        "Trail Teams": { engine:"4.0L V6 (260hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine limited-run special editions released most years, with unique colors and TRD-tuned suspension upgrades." },
+      },
+      colors:[
+        {name:"Iceberg (White)",hex:"#F0F0F0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red (Red)",hex:"#C8102E"},
+        {name:"Voodoo Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "GR Corolla": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Core": { engine:"1.6L Turbocharged 3-cylinder (300hp)", drivetrain:"AWD", transmissions:["Manual (6-Speed)","Automatic (8-Speed)"], note:"Genuinely one of the most surprising performance cars Toyota has ever built for the US — a tiny turbocharged 3-cylinder making a real 300hp, paired with a rally-derived AWD system (GR-Four, adjustable between 60/40, 50/50, and 30/70 front/rear splits) borrowed in spirit from the GR Yaris that never officially came to America. An 8-speed automatic (GR-DAT) arrived for 2024, a genuine option for buyers who wanted the performance without the manual." },
+        "Circuit Edition": { engine:"1.6L Turbocharged 3-cylinder (300hp)", drivetrain:"AWD", transmissions:["Manual (6-Speed)","Automatic (8-Speed)"], note:"Adds a genuine carbon-fiber roof and forged BBS wheels for real weight savings over the Core trim." },
+        "Morizo Edition": { engine:"1.6L Turbocharged 3-cylinder (300hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"2023 only — a genuine limited-run, track-focused special edition named for Toyota chairman Akio Toyoda's racing alias, with a shorter final-drive ratio, no rear seats, and a unique suspension tune. Manual-only." },
+      },
+      colors:[
+        {name:"Super White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Supersonic Red (Red)",hex:"#C8102E"},
+        {name:"Heavy Metal (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "GR86": {
+      generations:{
+        "1st Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"2.0L Boxer 4-cylinder (200-205hp)", drivetrains:["RWD"], transmissions:["Manual","Automatic"], note:"Co-developed with Subaru — genuinely the same car mechanically as the BRZ, built at Subaru's own plant, with only minor styling and suspension-tuning differences between the two. Sold in the US first as the Scion FR-S (2013-2016), then rebadged Toyota 86 once Scion was discontinued (2017-2020). Real driver-focused character, prioritizing light weight and RWD balance over outright power." },
+          },
+          colors:[
+            {name:"Halo (White)",hex:"#F5F5F5"},
+            {name:"Raven (Black)",hex:"#1A1A1A"},
+            {name:"Firestorm (Red)",hex:"#C8102E"},
+            {name:"World Rally Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.4L Boxer 4-cylinder (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Renamed GR86 (Gazoo Racing's performance sub-brand) for this generation, with a genuine power bump from a larger boxer engine — a real answer to enthusiast complaints that the first generation was underpowered. Skipped the 2021 model year during the transition." },
+            "Premium": { engine:"2.4L Boxer 4-cylinder (228hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Halo (White)",hex:"#F5F5F5"},
+            {name:"Raven (Black)",hex:"#1A1A1A"},
+            {name:"Track bRED (Red)",hex:"#C8102E"},
+            {name:"Neptune Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
+    "Highlander": {
+      generations:{
+        "1st Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base": { engines:["2.4L 4-cylinder (155hp)","3.0L V6 (220hp)","3.3L V6 (230hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine departure from Toyota's truck-based SUVs like the 4Runner and Land Cruiser — car-based unibody construction shared with the Camry, aimed at buyers who wanted 3-row-adjacent versatility without the truck-like ride. The 3.3L V6 replaced the original 3.0L for 2004." },
+            "Limited": { engine:"3.3L V6 (230hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Hybrid": { engine:"3.3L V6 Hybrid (268hp combined)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Added 2006 — genuinely one of the first hybrid SUVs on the market, using a separate electric motor to drive the rear wheels for AWD without a mechanical driveshaft." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Driftwood Pearl (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "2nd Gen (2008-2013)":{
+          years:["2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engines:["2.7L 4-cylinder (187hp)","3.5L V6 (270hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Grew significantly, built on the longer Avalon-derived platform for a genuinely roomier third row than the cramped original. Only V6 and Hybrid were offered at first; the 4-cylinder joined for 2009 as a lower-cost entry point." },
+            "Limited": { engine:"3.5L V6 (270hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Hybrid": { engine:"3.3L V6 Hybrid (231hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Blizzard Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Magnetic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "LE": { engines:["2.7L 4-cylinder (185hp)","3.5L V6 (270-295hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Sharper, more sculpted styling and genuine seating for up to 8, with higher-quality cabin materials than the outgoing generation. A 2017 refresh brought a more powerful V6 and a new 8-speed automatic." },
+            "XLE": { engine:"3.5L V6 (270-295hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Limited": { engine:"3.5L V6 (270-295hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Hybrid": { engine:"3.5L V6 Hybrid (231-306hp combined)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Blizzard Pearl (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Toasted Walnut Pearl (Brown)",hex:"#6B4A2E"},
+          ],
+        },
+        "4th Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "L":  { engines:["3.5L V6 (295hp)","2.4L Turbocharged 4-cylinder (265hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuinely major powertrain shift for 2023 — the long-running V6 was dropped from non-hybrid trims in favor of a turbocharged four-cylinder, a real efficiency-driven change that drew some criticism from buyers who preferred the V6's smoothness. The hybrid also switched from V6 to a 4-cylinder-based system, now the more efficient and often better-reviewed powertrain choice." },
+            "LE": { engines:["3.5L V6 (295hp)","2.4L Turbocharged 4-cylinder (265hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)" },
+            "XLE": { engine:"2.4L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Limited": { engine:"2.4L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (243hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Cypress Metallic (Green)",hex:"#4A6B5A"},
+          ],
+        },
+      },
+    },
+    "Land Cruiser": {
+      generations:{
+        "80-Series Tail (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "Base": { engines:["4.0L Inline-6 (155hp)","4.5L Inline-6 (212hp)"], drivetrain:"4WD", transmission:"Automatic", note:"A genuine, real body-on-frame off-road icon — the Land Cruiser's reputation as one of the most durable, capable overland vehicles ever built was well-established by this point, with a real cult following among serious off-roaders worldwide. Full-time 4WD with a locking center differential arrived for 1991, standard across the board." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Emerald Green Metallic (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "100-Series (1998-2007)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base": { engine:"4.7L V8 (230-271hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuine switch from the old inline-6 to a smoother, more powerful V8 — real independent front suspension arrived too, a first for the Land Cruiser, trading a bit of ultimate off-road articulation for a real improvement in on-road ride comfort. Increasingly positioned as a genuine luxury SUV in the US, priced well above most rivals." },
+          },
+          colors:[
+            {name:"Natural White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Desert Sand Mica (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "200-Series (2008-2021)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "Base": { engine:"5.7L V8 (381hp)", drivetrain:"4WD", transmission:"Automatic", note:"Grew genuinely larger and more powerful, with real luxury-SUV pricing and equipment to match — by this point the Land Cruiser had become a real six-figure proposition in top trim. Discontinued in the US after 2021 with sales dwindling against its own in-house Lexus LX sibling, before the nameplate returned two years later in a smaller, more affordable form." },
+          },
+          colors:[
+            {name:"Blizzard White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Attitude Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sandy Beach Metallic (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "250-Series (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "1958": { engine:"2.4L Turbocharged Hybrid 4-cylinder (326hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine return after a 3-year US absence, and a real reinvention — smaller, lighter, and significantly more affordable than the outgoing 200-Series, with a hybrid-only 4-cylinder replacing the old naturally-aspirated V8 entirely. Named for the year the Land Cruiser nameplate first came to the US, the '1958' trim is a genuine back-to-basics, retro-styled entry point with round headlights and steel wheels." },
+            "Land Cruiser": { engine:"2.4L Turbocharged Hybrid 4-cylinder (326hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "First Edition": { engine:"2.4L Turbocharged Hybrid 4-cylinder (326hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine limited-run launch-year special edition." },
+          },
+          colors:[
+            {name:"Blizzard Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sandstone (Tan)",hex:"#C8B896"},
+            {name:"Trail Dust (Brown)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "Matrix": {
+      generations:{
+        "1st Gen (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (123-130hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"A genuinely versatile Corolla-based hatchback/wagon crossover, sharing its platform with the near-identical Pontiac Vibe — a real product of the NUMMI joint-venture plant Toyota shared with GM. AWD was a genuine point of difference against most compact-car-based hatchbacks of the era." },
+            "XR": { engine:"1.8L 4-cylinder (123-130hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "XRS": { engine:"1.8L VVTL-i 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2005 — shared its high-revving, variable-valve-timing engine with the Celica GT-S and Corolla XRS of the same era, a genuine enthusiast favorite for its rev-happy character." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Blue Streak Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2009-2013)":{
+          years:["2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (132hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely more mature, less overtly sporty redesign — the XRS trim's high-revving engine and AWD were both dropped this generation, a real departure from the original's enthusiast-friendly positioning. Discontinued after 2013 with no direct successor, as Toyota folded the hatchback role into the Corolla iM a few years later." },
+            "S": { engine:"2.4L 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Blue Ribbon Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Mirai": {
+      generations:{
+        "1st Gen (2016-2020)":{
+          years:["2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"Hydrogen Fuel Cell Electric Motor (151hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuine technology showcase — one of the very first hydrogen fuel-cell vehicles sold (mostly leased) to retail customers in the US, available only in California near hydrogen fueling infrastructure. Like an EV to drive, but refuels in minutes rather than hours, with only water vapor as a tailpipe byproduct." },
+          },
+          colors:[
+            {name:"Cosmic Blue Mica (Blue)",hex:"#1E4B8E"},
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "2nd Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "XLE": { engine:"Hydrogen Fuel Cell Electric Motor (182hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine ground-up redesign, switching from FWD to RWD and adopting real luxury-sedan styling and proportions, sharing its platform underpinnings with the Lexus LS. A genuine range improvement too, over 400 miles on a full hydrogen tank in top trim." },
+            "Limited": { engine:"Hydrogen Fuel Cell Electric Motor (182hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Hydro Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
+    "MR2": {
+      generations:{
+        "SW20 (1991-1995)":{
+          years:["1991","1992","1993","1994","1995"],
+          trims:{
+            "Base": { engine:"2.2L 5S-FE 4-cylinder (130hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuinely dramatic redesign over the boxy original, adopting curvaceous, Ferrari-adjacent styling that earned it a real 'poor man's Ferrari' nickname. Mid-engine, rear-drive layout carried over as the car's core identity. Early cars had a real reputation for snap oversteer at the limit, addressed with suspension geometry revisions in later production years." },
+            "Turbo": { engine:"2.0L 3S-GTE Turbocharged 4-cylinder (200hp)", drivetrain:"RWD", transmission:"Manual", note:"Shared its turbocharged engine family with the Celica GT-Four. US emissions tuning capped output at 200hp, well below the 240+ hp the same basic engine made in Japan. Discontinued after 1995 in the US — the naturally-aspirated model continued a few more years, but the Turbo never returned stateside." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Super Red (Red)",hex:"#C8102E"},
+            {name:"Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "ZZW30 (2000-2005)":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"1.8L 1ZZ-FE 4-cylinder (138hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine return to a smaller, lighter formula, dropping below a ton in curb weight — a real philosophical callback to the original 1984 MR2. Convertible-only this time (badged 'Spyder' in some markets), with pop-up headlights dropped for good due to updated pedestrian-safety regulations. Widely regarded as the best-handling MR2 of the three generations despite modest power. Discontinued after 2005 in the US alongside the Celica, ending Toyota's mid-engine sports car for nearly two decades." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+      },
+    },
+    "Prius": {
+      generations:{
+        "1st Gen (2001-2003)":{
+          years:["2001","2002","2003"],
+          trims:{
+            "Base": { engine:"1.5L Hybrid 4-cylinder (70hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Genuinely the first mass-produced gas-electric hybrid sold in the US, arriving as a 2001 model — a real technological showcase for Toyota's Hybrid Synergy Drive system, even if performance and styling took a back seat to fuel economy in these early years." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Vintage Jade Metallic (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "2nd Gen (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Base": { engine:"1.5L Hybrid 4-cylinder (110hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuine ground-up redesign, adopting the distinctive liftback shape that became the Prius's signature silhouette for years afterward. This is the generation that really made the Prius a mainstream cultural phenomenon and a genuine status symbol among early hybrid adopters." },
+            "Touring": { engine:"1.5L Hybrid 4-cylinder (110hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Seaside Pearl (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "3rd Gen (2010-2015)":{
+          years:["2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Two": { engine:"1.8L Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuinely bigger engine (1.8L, up from 1.5L) actually improved both power and real-world fuel economy at once — a real engineering win. The Prius family also expanded this generation with the smaller Prius c hatchback and the larger, wagon-like Prius v, both spun off as related nameplates." },
+            "Three": { engine:"1.8L Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "Four": { engine:"1.8L Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+            "Plug-in Hybrid": { engine:"1.8L Plug-In Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Added 2012 — the Prius's first plug-in variant, with a genuine (if modest) all-electric-only range before the gas engine engaged." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Blue Ribbon Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "L Eco": { engine:"1.8L Hybrid 4-cylinder (121hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuinely angular, divisive redesign — real love-it-or-hate-it styling, a sharp departure from the softer curves of prior generations. AWD-e arrived for 2019, using a small rear electric motor for genuine all-weather traction without a mechanical driveshaft, a real first for the Prius." },
+            "LE": { engine:"1.8L Hybrid 4-cylinder (121hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "Limited": { engine:"1.8L Hybrid 4-cylinder (121hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "Prime": { engine:"1.8L Plug-In Hybrid 4-cylinder (121-220hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Renamed from Plug-in Hybrid to Prime for this generation, with a real jump in both electric-only range and available features." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Electric Storm Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "5th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "LE": { engine:"2.0L Hybrid 4-cylinder (194hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)", note:"A genuinely dramatic reinvention — real sports-car-adjacent styling and a substantial power jump made this the quickest and best-reviewed Prius ever built, finally shedding the nameplate's long-running reputation as slow but efficient. The Prime plug-in variant makes even more power thanks to its larger battery." },
+            "XLE": { engine:"2.0L Hybrid 4-cylinder (194hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "Limited": { engine:"2.0L Hybrid 4-cylinder (194hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "Prime": { engine:"2.0L Plug-In Hybrid 4-cylinder (220hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Guardian Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "RAV4": {
       generations:{
         "XA10 (1996-2000)":{
@@ -11562,6 +11973,351 @@ const VEHICLES = {
             {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
             {name:"Supersonic Red (Red)",hex:"#C8102E"},
             {name:"Terra (Brown)",hex:"#8A6B4A"},
+          ],
+        },
+      },
+    },
+    "Sequoia": {
+      generations:{
+        "1st Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "SR5": { engine:"4.7L V8 (240-282hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Toyota's first genuine full-size SUV for the US, built on a strengthened version of the Tundra pickup platform — a real, serious entry against the Expedition, Tahoe, and Suburban. Genuine 8-passenger, 3-row seating and real body-on-frame towing capability." },
+            "Limited": { engine:"4.7L V8 (240-282hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Natural White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Desert Sand Mica (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "2nd Gen (2008-2022)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "SR5": { engine:"4.7L V8 (276hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)", note:"A genuinely major redesign — a longer wheelbase, a real independent rear suspension (a first for a truck-based Toyota SUV), and a much roomier cabin, borrowing heavily from the same-year Tundra's styling. The optional 5.7L V8 gave the Sequoia genuine towing muscle up to 10,000 lbs. This same basic generation ran for a full 15 model years with only detail updates." },
+            "Limited": { engine:"5.7L V8 (381hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+            "Platinum": { engine:"5.7L V8 (381hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+            "TRD Pro": { engine:"5.7L V8 (381hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"Added later in this generation's run — genuine off-road specialist trim with Fox shocks and unique styling, sharing its philosophy with the equivalent Tacoma and Tundra trims." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Cement Gray (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+        "3rd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "SR5": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrains:["RWD","4WD"], transmission:"Automatic (10-Speed)", note:"A genuinely massive powertrain shift — hybrid-only for the entire lineup, dropping the naturally-aspirated V8 entirely in favor of a twin-turbo hybrid V6 shared with the Tundra, a real jump in both power and towing capability. Built on the same TNGA-F platform as the redesigned Tundra and Land Cruiser." },
+            "Limited": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "Platinum": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "TRD Pro": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "Capstone": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Genuine flagship trim, with the most premium interior appointments Toyota offers on the Sequoia." },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Army Green (Green)",hex:"#4A5A3A"},
+          ],
+        },
+      },
+    },
+    "Sienna": {
+      generations:{
+        "1st Gen (1998-2003)":{
+          years:["1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "CE": { engine:"3.0L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic", note:"Toyota's genuine successor to the aging, RWD-based Previa — a real switch to a more conventional FWD minivan layout built on a stretched Camry platform, much closer to what American minivan buyers actually expected from the segment leaders." },
+            "LE": { engine:"3.0L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLE": { engine:"3.0L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Woodland Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (2004-2010)":{
+          years:["2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "CE": { engines:["3.3L V6 (230hp)","3.5L V6 (266hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Grew genuinely larger, and became the first Sienna offered with AWD — a real point of difference against most rival minivans of the era, which stuck to FWD-only. The 3.5L V6 replaced the 3.3L for a 2007 refresh." },
+            "LE": { engines:["3.3L V6 (230hp)","3.5L V6 (266hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "XLE": { engine:"3.5L V6 (266hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Silver Sky Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2011-2020)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "L":  { engine:"3.5L V6 (266-296hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Genuinely the only minivan on the market ever offered with AWD across this entire generation — a real point of pride Toyota leaned on heavily in marketing, especially in snowbelt regions. A sporty SE trim added a firmer suspension and unique styling for buyers who wanted a minivan that didn't look or drive like one." },
+            "LE": { engine:"3.5L V6 (266-296hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "SE": { engine:"3.5L V6 (266-296hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Limited": { engine:"3.5L V6 (266-296hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Predawn Gray Mica (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "LE": { engine:"2.5L Hybrid 4-cylinder (245hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)", note:"A genuinely significant powertrain shift — hybrid-only for the entire lineup, dropping the V6 entirely, a real first for a mainstream minivan. AWD returned via a separate electric rear motor rather than a mechanical driveshaft, similar in concept to the RAV4 Hybrid's system." },
+            "XLE": { engine:"2.5L Hybrid 4-cylinder (245hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "XSE": { engine:"2.5L Hybrid 4-cylinder (245hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+            "Limited": { engine:"2.5L Hybrid 4-cylinder (245hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+            "Platinum": { engine:"2.5L Hybrid 4-cylinder (245hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Cypress Metallic (Green)",hex:"#4A6B5A"},
+          ],
+        },
+      },
+    },
+    "Supra": {
+      generations:{
+        "A70 Tail (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engine:"3.0L 7M-GE Inline-6 (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"By this point the Supra had genuinely split off from the Celica entirely, becoming its own dedicated RWD sports car / grand tourer. A driver-side airbag and revised interior arrived with a 1990 update. This was the final stretch of the A70 before the legendary A80 replaced it." },
+            "Turbo": { engine:"3.0L 7M-GTE Turbocharged 6-cylinder (232hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuinely potent for the era, with a real Targa-top option available." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Super Red (Red)",hex:"#C8102E"},
+            {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "A80 (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "Base": { engine:"3.0L 2JZ-GE 6-cylinder (220hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genuinely the most famous Supra generation, made into a household name partly by its co-starring role in The Fast and the Furious. A real ground-up redesign — shorter, lighter (aluminum body panels shaved real weight), and more aerodynamic than the outgoing A70. This is the generation most people picture when they hear 'Supra.'" },
+            "Turbo": { engine:"3.0L 2JZ-GTE Twin-Turbo 6-cylinder (320-321hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"The legendary 2JZ-GTE — genuinely one of the most revered tuner engines ever built, with an iron block famous for handling well over 1,000hp on stock internals with the right supporting mods. A real cult icon in the tuning world for decades after production ended. Sold in the US only through 1998 before the nameplate went dormant for over 20 years." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Renaissance Red (Red)",hex:"#9B1B30"},
+            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "A90 GR Supra (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "2.0": { engine:"2.0L Turbocharged 4-cylinder (255hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine, controversial revival — co-developed with BMW and sharing its Z4 platform and both engine options with that car, a real departure from Toyota building the Supra entirely in-house like the A80. The 4-cylinder arrived for 2021 as a lower-cost entry point." },
+            "3.0": { engine:"3.0L Turbocharged Inline-6 (335-382hp)", drivetrain:"RWD", transmissions:["Manual (6-Speed)","Automatic (8-Speed)"], note:"A genuine manual transmission finally arrived for 2023, a real answer to enthusiast criticism that the launch-year Supra was automatic-only. Output climbed from 335hp at launch to 382hp with a 2024 engine update. Production ended after the 2026 model year with no confirmed successor, ending the A90's run after roughly six years back on the market." },
+          },
+          colors:[
+            {name:"Absolute Zero White (White)",hex:"#F0F0F0"},
+            {name:"Nocturnal (Black)",hex:"#1A1A1A"},
+            {name:"Renaissance Red 2.0 (Red)",hex:"#9B1B30"},
+            {name:"Nitro Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+      },
+    },
+    "Tacoma": {
+      generations:{
+        "1st Gen (1995-2004)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engines:["2.4L 4-cylinder (142hp)","2.7L 4-cylinder (150hp)","3.4L V6 (190hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Replaced the aging Toyota Pickup, taking the Tacoma name for the North American market specifically — genuinely designed and engineered with US buyers in mind rather than being a straight import. A TRD supercharger option for the V6 was a real factory-backed performance upgrade, unusual for the segment at the time." },
+            "SR5": { engines:["2.7L 4-cylinder (150hp)","3.4L V6 (190hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "TRD": { engine:"3.4L V6 (190hp)", drivetrain:"4WD", transmission:"Manual", note:"Genuine off-road package with a locking rear differential and upgraded suspension — the badge that would go on to define Toyota's off-road sub-brand for decades." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red (Red)",hex:"#C8102E"},
+            {name:"Woodland Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (2005-2015)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Base": { engines:["2.7L 4-cylinder (159hp)","4.0L V6 (236hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Grew genuinely larger, into true midsize territory, and added a real Double Cab (4-door) body style alongside Regular and Access Cab. This generation is widely regarded as a real sweet spot for reliability and value in the used market." },
+            "SR5": { engines:["2.7L 4-cylinder (159hp)","4.0L V6 (236hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "TRD Sport": { engine:"4.0L V6 (236hp)", drivetrain:"4WD", transmission:"Automatic", note:"Street-focused off-road-styled trim." },
+            "TRD Off-Road": { engine:"4.0L V6 (236hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine off-road hardware including a locking rear differential." },
+            "TRD Pro": { engine:"4.0L V6 (236hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2015 — the most off-road-focused Tacoma of this generation, with TRD-tuned Bilstein shocks and unique styling." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Magnetic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2016-2023)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "SR": { engine:"2.7L 4-cylinder (159hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign with sharper styling and a much-improved interior over the outgoing generation. The 4.0L V6 was replaced by a newer, more powerful 3.5L V6 — a real technology jump, though early years drew some criticism for a busy ride and imprecise steering that later model-year suspension tweaks helped address." },
+            "SR5": { engines:["2.7L 4-cylinder (159hp)","3.5L V6 (278hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "TRD Sport": { engine:"3.5L V6 (278hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "TRD Off-Road": { engine:"3.5L V6 (278hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"] },
+            "TRD Pro": { engine:"3.5L V6 (278hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Army Green (Green)",hex:"#4A5A3A"},
+          ],
+        },
+        "4th Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "SR": { engine:"2.4L Turbocharged 4-cylinder (228hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (8-Speed)", note:"A genuinely major platform switch — moves to Toyota's TNGA-F truck architecture shared with the Tundra, Sequoia, and Land Cruiser, dropping the naturally-aspirated V6 entirely in favor of a turbocharged four-cylinder in both gas and hybrid forms. A crew-cab body style option was added to lower trims for 2026." },
+            "SR5": { engine:"2.4L Turbocharged 4-cylinder (228-278hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (8-Speed)" },
+            "TRD Off-Road": { engine:"2.4L Turbocharged 4-cylinder (278hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "TRD Pro": { engine:"2.4L i-Force Max Turbo Hybrid 4-cylinder (326hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "Trailhunter": { engine:"2.4L i-Force Max Turbo Hybrid 4-cylinder (326hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine new overland-focused flagship trim, added for this generation with ARB-supplied hardware and a rear-mounted air compressor built in at the factory — Toyota's most off-road-ready Tacoma to date, though its long-term reliability remains unproven given how new the platform is." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Solar Octane (Orange)",hex:"#E8601C"},
+            {name:"Army Green (Green)",hex:"#4A5A3A"},
+          ],
+        },
+      },
+    },
+    "Tundra": {
+      generations:{
+        "1st Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engines:["3.4L V6 (190hp)","4.7L V8 (240-282hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Toyota's first genuine attempt at a true full-size, half-ton-class pickup for the US market — a real, serious swing at the Big Three's home turf, though it was still a bit smaller than the domestic competition at launch. A stepside bed option arrived for 2003, and a TRD supercharger was available for the V6." },
+            "SR5": { engine:"4.7L V8 (240-282hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "Limited": { engine:"4.7L V8 (282hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red (Red)",hex:"#C8102E"},
+            {name:"Driftwood Metallic (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "2nd Gen (2007-2021)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "SR": { engines:["4.0L V6 (236hp)","4.6L V8 (310hp)","5.7L V8 (381-401hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely huge, ground-up redesign — real full-size, half-ton (and beyond) proportions now, finally matching the domestic competition head-on. The mighty 5.7L V8 became the range-topping engine, with a genuine reputation for durability that helped the Tundra build real long-term brand loyalty. This same basic generation ran with only detail updates for 15 model years, one of the longest single-generation runs of any modern pickup." },
+            "SR5": { engines:["4.6L V8 (310hp)","5.7L V8 (381-401hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "TRD Pro": { engine:"5.7L V8 (381-401hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2015 — genuine off-road specialist trim with Fox shocks and unique styling." },
+            "1794 Edition": { engine:"5.7L V8 (381-401hp)", drivetrain:"4WD", transmission:"Automatic", note:"Named for the year the ranch that Toyota's San Antonio plant now sits on was founded — a genuine luxury-leaning trim with Western-inspired leather trim." },
+            "Platinum": { engine:"5.7L V8 (381-401hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Cement Gray (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+        "3rd Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "SR": { engine:"3.4L Twin-Turbo V6 (358-389hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (10-Speed)", note:"A genuinely major powertrain switch — the beloved naturally-aspirated V8 is gone for good, replaced entirely by a twin-turbocharged V6, in both standard and hybrid (i-Force Max) forms. A real jump in both power and towing capability over the outgoing generation, though it drew some criticism from V8 loyalists at launch." },
+            "SR5": { engine:"3.4L Twin-Turbo V6 (389hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (10-Speed)" },
+            "Limited": { engine:"3.4L Twin-Turbo V6 (389hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "TRD Pro": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Hybrid-only for this trim, with genuine ISO Dynamic seats (isolated on their own suspension for a smoother ride over rough terrain) as a real technical highlight. A 2026 exclusive Wave Maker turquoise color option was added." },
+            "Capstone": { engine:"3.4L i-Force Max Twin-Turbo Hybrid V6 (437hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Genuine flagship trim, hybrid-only, with the most premium interior appointments Toyota offers on the Tundra." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Supersonic Red (Red)",hex:"#C8102E"},
+            {name:"Wave Maker (Turquoise)",hex:"#1E8A8A"},
+          ],
+        },
+      },
+    },
+    "Venza": {
+      generations:{
+        "1st Gen (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Base": { engines:["2.7L 4-cylinder (182hp)","3.5L V6 (268hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely unusual entry — a car-based wagon/crossover crossbreed, taller and more SUV-like than a Camry wagon but lower and sportier than the Highlander, aimed squarely at empty-nesters wanting a raised seating position without full SUV bulk." },
+          },
+          colors:[
+            {name:"Blizzard Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Cypress Pearl (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "2nd Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "LE": { engine:"2.5L Hybrid 4-cylinder (219hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"A genuine revival after a 5-year hiatus, now hybrid-only and sharing its platform with the RAV4 and Highlander — a real repositioning as an efficiency-focused crossover rather than the original's sporty-wagon character. Standard AWD across the whole lineup." },
+            "XLE": { engine:"2.5L Hybrid 4-cylinder (219hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+            "Limited": { engine:"2.5L Hybrid 4-cylinder (219hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Wind Chill Pearl (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Flare Pearl (Red)",hex:"#9B1B30"},
+            {name:"Cypress Metallic (Green)",hex:"#4A6B5A"},
+          ],
+        },
+      },
+    },
+    "Yaris": {
+      generations:{
+        "1st Gen (2007-2011)":{
+          years:["2007","2008","2009","2010","2011"],
+          trims:{
+            "Base": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Echo as Toyota's entry-level subcompact, sold as both a sedan and a genuinely distinctive 3-door/5-door hatchback with an unusual center-mounted gauge cluster." },
+            "S": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Vivid Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "2nd Gen (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "L": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine mid-cycle refresh over the outgoing generation rather than a full redesign — the sedan continued largely unchanged through 2018, while the hatchback was replaced early by a rebadged Mazda2 sold as the Yaris iA / Yaris Sedan starting 2017." },
+            "LE": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SE": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Barcelona Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Electric Storm Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "3rd Gen (2019-2020)":{
+          years:["2019","2020"],
+          trims:{
+            "L": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely Mazda-engineered generation — both the sedan (badged Yaris, formerly Yaris iA) and the newly-added hatchback were rebadged versions of the Mazda2, built by Mazda in Mexico. Discontinued in the US after 2020 with no direct successor, as Toyota exited the subcompact segment stateside entirely." },
+            "LE": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "XLE": { engine:"1.5L 4-cylinder (106hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Red Crystal Metallic (Red)",hex:"#9B1B30"},
+            {name:"Blue Crush Metallic (Blue)",hex:"#1E6BA8"},
           ],
         },
       },
