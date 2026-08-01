@@ -8832,6 +8832,239 @@ const VEHICLES = {
     },
   },
   "Lexus": {
+    "CT": {
+      years:["2011","2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "200h": { engine:"1.8L Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Lexus's genuine entry-level, hybrid-only compact hatchback, sharing its real underlying platform and Hybrid Synergy Drive powertrain with the Toyota Prius/Auris family — a real attempt to bring Lexus badge appeal to a younger, more budget-conscious buyer. A 2014 refresh brought a bolder spindle grille, and a further update followed for 2017. Discontinued in the US after 2017 with no direct successor, as Lexus consolidated its compact lineup around the newer UX." },
+        "F Sport": { engine:"1.8L Hybrid 4-cylinder (134hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Genuine sport-styled trim package, with a firmer suspension, unique wheels, and aluminum pedals." },
+      },
+      colors:[
+        {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+        {name:"Nebula Gray Pearl (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "ES": {
+      generations:{
+        "1st Gen Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "Base": { engine:"2.5L V6 (156hp)", drivetrain:"FWD", transmission:"Automatic", note:"One of Lexus's original two launch models (alongside the LS 400) when the brand debuted for 1990 — a genuinely badge-engineered Toyota Camry-based sedan, positioned as Lexus's accessible entry point below the flagship LS." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1992-1996)":{
+          years:["1992","1993","1994","1995","1996"],
+          trims:{
+            "Base": { engine:"3.0L V6 (185-188hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, still Camry-based but with real distinct Lexus styling and a genuinely more powerful V6." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Emerald Green Pearl (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "3rd Gen (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"3.0L V6 (200-210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely more refined and upscale, closing the gap to the flagship LS in real interior quality and quietness." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Bamboo Pearl (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "4th Gen (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "300": { engine:"3.0L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely grew larger again, adopting real numeric badging (ES300, later ES330) matching the rest of Lexus's naming convention. The larger 3.3L V6 arrived for 2004 as the ES330." },
+            "330": { engine:"3.3L V6 (225hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Golden Almond Metallic (Tan)",hex:"#C8AA6E"},
+          ],
+        },
+        "5th Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "350": { engine:"3.5L V6 (272hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely bigger, more powerful redesign, shifting the ES more firmly into genuine near-luxury territory rather than a dressed-up Camry." },
+          },
+          colors:[
+            {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Cassia Pearl (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "6th Gen (2013-2018)":{
+          years:["2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "350": { engine:"3.5L V6 (268hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "300h": { engine:"2.5L Hybrid I4 (200hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Added 2013 — genuinely the ES's first-ever hybrid variant, using Toyota's proven Hybrid Synergy Drive system." },
+          },
+          colors:[
+            {name:"Ultra White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "7th Gen (2019-2025)":{
+          years:["2019","2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "250": { engine:"2.5L Turbocharged I4 (203-250hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely sharper, more driver-focused redesign, sharing its real TNGA-K platform with the Camry and Avalon. AWD arrived as a genuine option for the first time in ES history, starting with a smaller turbo four." },
+            "350": { engine:"3.5L V6 (302hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "300h": { engine:"2.5L Hybrid I4 (215hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "8th Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "350h": { engine:"2.5L Hybrid I4 (244hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)", note:"A genuinely major redesign with a longer wheelbase and a real new 14-inch infotainment touchscreen. For the first time, the ES lineup expands to include genuine all-electric variants — the ES 350e and ES 500e — alongside the traditional hybrid, a real sign of Lexus's gradual electrification push." },
+            "350e": { engine:"Electric Motor", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine all-electric ES variant, new for this generation." },
+            "500e": { engine:"Dual Electric Motors", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance-oriented all-electric ES variant." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+          ],
+        },
+      },
+    },
+    "GS": {
+      generations:{
+        "1st Gen (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "300": { engine:"3.0L Inline-6 (220hp)", drivetrain:"RWD", transmission:"Automatic", note:"Lexus's genuine sport sedan entry, positioned between the entry-level ES and the flagship LS — real Italdesign-penned styling (also sold in Japan as the Toyota Aristo), giving it a distinct look from the more conservative ES and LS of the same era." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Emerald Green Pearl (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "2nd Gen (1998-2005)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "300": { engine:"3.0L Inline-6 (220hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine V8 option arrived as the GS400 — a real power step up from the inline-six, later enlarged and renamed GS430 for 2001." },
+            "400": { engine:"4.0L V8 (300hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "430": { engine:"4.3L V8 (300hp)", drivetrain:"RWD", transmission:"Automatic", note:"Replaced the GS400 for 2001, a genuine displacement increase with a modest torque bump." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Golden Almond Metallic (Tan)",hex:"#C8AA6E"},
+          ],
+        },
+        "3rd Gen (2006-2011)":{
+          years:["2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "300": { engine:"3.0L V6 (245hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely sharper, more athletic redesign. Real hybrid technology arrived with the GS450h — genuinely the world's first hybrid V6 luxury sport sedan, using the same basic Hybrid Synergy Drive architecture as the RX400h." },
+            "350": { engine:"3.5L V6 (303hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Replaced the GS300 for 2007, a genuine power and displacement increase." },
+            "460": { engine:"4.6L V8 (342hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Added 2008, replacing the GS430 — shared its V8 with the LS flagship." },
+            "450h": { engine:"3.5L V6 Hybrid (339hp combined)", drivetrain:"RWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nebula Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "350": { engine:"3.5L V6 (306-311hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine performance flagship arrived with the GS F, using the same naturally-aspirated V8 as the RC F — real Yamaha-tuned character in a genuine 4-door sport sedan package. This was also the final GS generation; Lexus discontinued the nameplate after 2020 with no direct successor, its role effectively absorbed by the ES." },
+            "450h": { engine:"3.5L V6 Hybrid (338hp combined)", drivetrain:"RWD", transmission:"Automatic (e-CVT)" },
+            "F": { engine:"5.0L V8 (467hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Added 2016 — genuine performance flagship, sharing its naturally-aspirated V8 with the RC F, a real rarity for a 4-door luxury sedan by this point in the industry." },
+          },
+          colors:[
+            {name:"Ultra White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Caviar (Dark Gray)",hex:"#3A3D3F"},
+          ],
+        },
+      },
+    },
+    "GX": {
+      generations:{
+        "1st Gen (2003-2009)":{
+          years:["2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "470": { engine:"4.7L V8 (235-270hp)", drivetrain:"4WD", transmission:"Automatic", note:"Lexus's genuine mid-size, off-road-capable SUV, slotting between the crossover-based RX and the flagship LX — built on the same real body-on-frame platform as the Toyota 4Runner. A genuine mid-cycle power bump in 2005 pushed the same basic V8 from 235hp to 270hp." },
+          },
+          colors:[
+            {name:"Classic Silver Metallic (Silver)",hex:"#C0C0C0"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Golden Almond Metallic (Tan)",hex:"#C8AA6E"},
+          ],
+        },
+        "2nd Gen (2010-2023)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "460": { engine:"4.6L V8 (301hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"A genuinely long-lived platform, running with only detail updates for a full 14 model years — one of the longest single-generation runs of any modern SUV. Real body-on-frame, genuine off-road capability, a philosophy Lexus kept largely unchanged the whole time this generation was in production." },
+            "Luxury": { engine:"4.6L V8 (301hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nebula Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "3rd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "550 Premium": { engine:"3.4L Twin-Turbo V6 (349hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"A genuinely major redesign, finally dropping the naturally-aspirated V8 for a real twin-turbo V6 — a genuine power and towing capacity improvement, up to 9,096 lbs, a class-leading figure. Shares its real TNGA-F body-on-frame platform with the Land Cruiser and Tacoma." },
+            "550 Luxury": { engine:"3.4L Twin-Turbo V6 (349hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "550 Overtrail": { engine:"3.4L Twin-Turbo V6 (349hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Added a genuine off-road-focused trim, with front and rear locking differentials and a real factory suspension lift — the most trail-capable GX ever built." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Incendiary Red (Red)",hex:"#C8102E"},
+            {name:"Iron Oxide (Orange)",hex:"#B8562A"},
+          ],
+        },
+      },
+    },
+    "HS": {
+      years:["2010","2011","2012"],
+      trims:{
+        "250h": { engine:"2.4L Hybrid 4-cylinder (187hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Lexus's genuine first-ever dedicated hybrid-only model, arriving as a real dedicated sedan (rather than a hybrid variant of a gas model) built on the same platform as the Toyota Avensis and Scion tC. A real attempt to give Lexus its own version of the Prius halo effect, though sales never really took off. Discontinued after 2012 with no direct successor, as Lexus shifted its hybrid strategy toward offering hybrid variants of existing models (ES 300h, RX 450h) instead of standalone hybrid-only nameplates." },
+      },
+      colors:[
+        {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+        {name:"Cypress Pearl (Green)",hex:"#3B7A5A"},
+      ],
+    },
     "IS300": {
       generations:{
         "XE10 (2001-2005)":{
@@ -8886,6 +9119,331 @@ const VEHICLES = {
             {name:"Obsidian (Black)",hex:"#1A1A1A"},
             {name:"Incendiary Red (Red)",hex:"#C8102E"},
             {name:"Grecian Water (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "LC": {
+      years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "500": { engine:"5.0L V8 (471hp)", drivetrain:"RWD", transmission:"Automatic (10-Speed)", note:"Lexus's genuine flagship grand tourer, and a real design triumph — the production LC stayed remarkably faithful to the stunning LF-LC concept that previewed it, a rarity in the industry. A naturally-aspirated V8, genuinely rare in this segment by 2018, gives it a real distinct character against turbocharged German rivals. A genuine Convertible body style joined for 2021." },
+        "500h": { engine:"3.5L Hybrid V6 (354-359hp combined)", drivetrain:"RWD", transmission:"Automatic (10-Speed, Multi-Stage Hybrid)", note:"A genuinely unique hybrid transmission — a real 4-speed automatic mechanically linked to a CVT-like hybrid unit, simulating 10 total gear ratios for a more engaging, less rubber-band feel than a typical hybrid CVT." },
+        "500 Convertible": { engine:"5.0L V8 (471hp)", drivetrain:"RWD", transmission:"Automatic (10-Speed)", note:"Added 2021 — genuine soft-top convertible, the first open-top Lexus flagship in the brand's history. Production ended after the 2026 model year with no confirmed successor." },
+      },
+      colors:[
+        {name:"Cloud White (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Infrared (Red)",hex:"#C8102E"},
+        {name:"Structural Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "LFA": {
+      years:["2010","2011","2012"],
+      trims:{
+        "Base": { engine:"4.8L V10 (553hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed Sequential)", note:"A genuine, no-compromise supercar — a decade-long, reportedly billion-dollar engineering exercise that produced one of the most celebrated engines ever built, a naturally-aspirated V10 co-developed with Yamaha that revs to a genuinely screaming 9,000 rpm. Extensive carbon-fiber construction throughout, with a real 48/52 front/rear weight distribution. Limited to exactly 500 units worldwide, hand-built over roughly a month each — genuinely one of the rarest and most sought-after Lexus products ever made, values have climbed well into seven figures since production ended." },
+        "Nürburgring Package": { engine:"4.8L V10 (563hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed Sequential)", note:"A genuine track-focused variant, with a real fixed rear wing and a stiffer, track-tuned suspension — only 50 of the 500 total LFAs built wore this package." },
+      },
+      colors:[
+        {name:"Whitest White (White)",hex:"#F5F5F5"},
+        {name:"Matte Black (Black)",hex:"#1A1A1A"},
+        {name:"Molten Pearl (Orange)",hex:"#E8601C"},
+        {name:"Rich Steel Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "LS": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "400": { engine:"4.0L V8 (250hp)", drivetrain:"RWD", transmission:"Automatic", note:"Lexus's genuine founding car, launched alongside the ES for the brand's 1990 debut — the LS400 shocked the entire luxury car establishment with real Mercedes/BMW-rivaling refinement at a genuinely lower price, a real watershed moment that forced established European luxury brands to take Japanese competition seriously." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Classic Red (Red)",hex:"#C8102E"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1995-2000)":{
+          years:["1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "400": { engine:"4.0L V8 (260-290hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine evolutionary redesign, refining the original's formula rather than reinventing it — real continued emphasis on quietness and smoothness above all else." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Bamboo Pearl (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "3rd Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "430": { engine:"4.3L V8 (290hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuinely larger, more powerful V8 and real technology firsts — adaptive cruise control and a genuine self-parking feature (2004+), both real industry firsts for a mainstream luxury sedan." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Golden Almond Metallic (Tan)",hex:"#C8AA6E"},
+          ],
+        },
+        "4th Gen (2007-2017)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "460": { engine:"4.6L V8 (380hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine technology showcase — debuted the industry's first-ever 8-speed automatic transmission, and real AWD became available for the first time in LS history, a genuine acknowledgment of snowbelt buyers who'd been shut out of the RWD-only prior generations." },
+            "460L": { engine:"4.6L V8 (380hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"Genuine long-wheelbase variant, with real extra rear legroom for chauffeur-driven buyers." },
+            "600h L": { engine:"5.0L V8 Hybrid (438hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Genuine flagship hybrid, long-wheelbase only — the most powerful and most expensive Lexus sedan of its era." },
+          },
+          colors:[
+            {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nebula Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2018-2026)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "500": { engine:"3.5L Twin-Turbo V6 (416hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (10-Speed)", note:"A genuinely massive shift — the naturally-aspirated V8 dropped entirely for the first time in LS history, replaced by a real twin-turbo V6, a genuine sign of Lexus's efficiency-focused direction. A striking, real coupe-like fastback roofline was also a genuine styling departure from the more formal, upright silhouette of prior generations. Lexus confirmed the LS is being discontinued after the 2026 model year, ending the nameplate that founded the brand, with the electric-focused future lineup taking its place." },
+            "500h": { engine:"3.5L Hybrid V6 (354hp combined)", drivetrain:"RWD", transmission:"Automatic (Multi-Stage Hybrid)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "LX": {
+      generations:{
+        "1st Gen (1996-1997)":{
+          years:["1996","1997"],
+          trims:{
+            "450": { engine:"4.5L Inline-6 (212hp)", drivetrain:"4WD", transmission:"Automatic", note:"Lexus's genuine first-ever SUV, and a real, thinly-disguised version of the Toyota Land Cruiser (J80) — solid front and rear axles, full-time 4WD, and genuine heavy-duty off-road hardware, wrapped in a real luxury interior with leather and wood trim." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Emerald Green Pearl (Green)",hex:"#1E3A2A"},
+          ],
+        },
+        "2nd Gen (1998-2007)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "470": { engine:"4.7L V8 (230-268hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuine switch to independent front suspension, trading a bit of ultimate off-road articulation for real on-road ride comfort — mirroring the same shift the Land Cruiser made at the same time, since the two remained closely related underneath." },
+          },
+          colors:[
+            {name:"Natural White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Desert Sand Mica (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "3rd Gen (2008-2021)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "570": { engine:"5.7L V8 (383hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"Grew genuinely larger and more powerful, with real luxury-flagship pricing to match — by this point a genuine six-figure proposition in top trim. A real 2-row (5-passenger) or 3-row (8-passenger) configuration was offered, a genuine point of flexibility most rivals didn't match." },
+            "570 Sport": { engine:"5.7L V8 (383hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "600": { engine:"3.5L Twin-Turbo V6 (409hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"A genuine ground-up redesign, finally dropping the naturally-aspirated V8 for a real twin-turbo V6 — a genuine power gain over the outgoing 570, shared with the Land Cruiser and GX. A genuine 700h hybrid variant, the LX's most powerful ever, arrived for 2025." },
+            "700h": { engine:"3.5L Twin-Turbo Hybrid V6 (457hp combined)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Added 2025 — genuine flagship performance hybrid, the most powerful LX ever built." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+          ],
+        },
+      },
+    },
+    "NX": {
+      generations:{
+        "1st Gen (2015-2021)":{
+          years:["2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "200t": { engine:"2.0L Turbocharged 4-cylinder (235hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Lexus's first-ever genuine compact luxury crossover, a real answer to the Audi Q5 and BMW X3 — distinctive, sharply creased 'spindle grille' styling that was genuinely divisive but unmistakably Lexus. Renamed NX300 for 2018, a badge change without any real mechanical difference." },
+            "300": { engine:"2.0L Turbocharged 4-cylinder (235hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "300h": { engine:"2.5L Hybrid 4-cylinder (194hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "350": { engine:"2.4L Turbocharged 4-cylinder (275hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign, sharing its real TNGA-K platform with the RAV4 and Toyota Highlander. A genuine plug-in hybrid, the 450h+, arrived as the most powerful and most electrified NX ever — a real technical showcase for Lexus's electrification push. FWD became available on 350h models for 2026, widening the price range at the entry point." },
+            "350h": { engine:"2.5L Hybrid 4-cylinder (240hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "450h+": { engine:"2.5L Plug-In Hybrid 4-cylinder (304hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Real all-electric-only range of about 37 miles before the gas engine engages." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Infrared (Red)",hex:"#C8102E"},
+            {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+          ],
+        },
+      },
+    },
+    "RC": {
+      years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "300": { engine:"2.0L Turbocharged 4-cylinder (241hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Lexus's genuine 2-door coupe, positioned between the IS sedan and the flagship LC — a real, single generation that ran essentially unchanged for over a decade with only a 2019 mid-cycle refresh (new front/rear styling, closer visually to the LC). Originally badged RC200t before Lexus renamed it RC300." },
+        "350": { engine:"3.5L V6 (306-318hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+        "300h": { engine:"2.5L Hybrid 4-cylinder (176-178hp combined)", drivetrain:"RWD", transmission:"Automatic (e-CVT)" },
+        "F": { engine:"5.0L V8 (467-472hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, sharing its naturally-aspirated V8 (a real rarity in this class by the mid-2010s) with the GS F and IS500. A genuinely visceral, high-revving engine developed with input from Yamaha — real motorsport pedigree in a mainstream Lexus. Production ended after the 2025 model year, with Lexus not immediately confirming a direct successor." },
+      },
+      colors:[
+        {name:"Ultra White (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Infrared (Red)",hex:"#C8102E"},
+        {name:"Caviar (Dark Gray)",hex:"#3A3D3F"},
+      ],
+    },
+    "RX": {
+      generations:{
+        "1st Gen (1999-2003)":{
+          years:["1999","2000","2001","2002","2003"],
+          trims:{
+            "300": { engine:"3.0L V6 (220hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely category-defining vehicle — the RX 300 is widely credited as the launch point for the modern car-based luxury crossover SUV, arriving well ahead of most rivals and setting the template the whole segment eventually followed." },
+          },
+          colors:[
+            {name:"Diamond White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Cassis Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Bamboo Pearl (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "2nd Gen (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "330": { engine:"3.3L V6 (230hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Grew genuinely larger with more standard features. The 400h arrived in 2006 as the world's first luxury hybrid SUV, a real technological showcase that helped establish Lexus as a genuine hybrid leader among luxury brands." },
+            "350": { engine:"3.5L V6 (270hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Replaced the 330 for 2007, a genuine power bump." },
+            "400h": { engine:"3.3L V6 Hybrid (268hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Salsa Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Golden Almond Metallic (Tan)",hex:"#C8AA6E"},
+          ],
+        },
+        "3rd Gen (2010-2015)":{
+          years:["2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "350": { engine:"3.5L V6 (275hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely bolder, more angular redesign — a real styling departure from the softer curves of prior generations. The 450h hybrid gained genuine exhaust-heat recovery technology, a real efficiency improvement over the outgoing 400h." },
+            "450h": { engine:"3.5L V6 Hybrid (295hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Starfire Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nebula Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "350": { engine:"3.5L V6 (295hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine long-wheelbase 350L 3-row variant arrived for 2018 — the RX's first-ever 3-row option, addressing a real gap versus rivals like the Acura MDX and Audi Q7." },
+            "350L": { engine:"3.5L V6 (295hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "450h": { engine:"3.5L V6 Hybrid (308hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+            "450hL": { engine:"3.5L V6 Hybrid (308hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nightfall Mica (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "350": { engine:"2.4L Turbocharged I4 (275hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuinely major powertrain shift — the naturally-aspirated V6 dropped entirely in favor of a turbocharged four across the whole lineup, real evidence of Lexus's efficiency push. The genuine 3-row 'L' variants were discontinued this generation, with the new TX taking over the 3-row role instead." },
+            "350h": { engine:"2.5L Hybrid I4 (246hp combined)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "450h+": { engine:"2.5L Plug-In Hybrid I4 (304-367hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Genuine plug-in hybrid, with real all-electric-only range before the gas engine engages." },
+            "500h F Sport Performance": { engine:"2.4L Turbocharged Hybrid I4 (366hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Added rear-wheel steering and adaptive suspension — a genuinely sportier take on the RX formula, with the most power of any RX ever built." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+          ],
+        },
+      },
+    },
+    "RZ": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "300e": { engine:"Single Electric Motor (201hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Lexus's first-ever dedicated, ground-up EV platform — not shared with a Toyota sibling like the earlier UX 300e, though it does share underlying architecture with the Toyota bZ4X and Subaru Solterra. Added 2025 as a genuine lower-cost, RWD entry point below the original AWD-only 450e." },
+        "450e": { engine:"Dual Electric Motors (308hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine steer-by-wire technology was offered as an option — a real industry first for a production Lexus, using an electronic rather than mechanical steering connection." },
+        "550e": { engine:"Dual Electric Motors (536hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2026 — genuine performance flagship of the RZ lineup, the most powerful electric Lexus built to date." },
+      },
+      colors:[
+        {name:"Cloud White (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Infrared (Red)",hex:"#C8102E"},
+        {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+      ],
+    },
+    "TX": {
+      years:["2024","2025","2026"],
+      trims:{
+        "350": { engine:"2.4L Turbocharged 4-cylinder (275hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"Lexus's genuine first-ever true 3-row crossover built specifically for the US market, filling a real gap left when the old RX-L's 3-row option proved too cramped for many buyers. Shares its real TNGA-K platform with the Toyota Grand Highlander, built at the same Indiana plant." },
+        "500h": { engine:"2.4L Turbocharged Hybrid 4-cylinder (366hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+        "550h+": { engine:"3.5L Plug-In Hybrid V6 (404hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Genuine plug-in hybrid flagship, with real all-electric-only range of about 33 miles before the gas engine engages." },
+      },
+      colors:[
+        {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Obsidian (Black)",hex:"#1A1A1A"},
+        {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+        {name:"Cypress Metallic (Green)",hex:"#4A6B5A"},
+      ],
+    },
+    "UX": {
+      generations:{
+        "1st Gen (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "200": { engine:"2.0L 4-cylinder (169hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Lexus's genuine subcompact crossover entry, positioned below the NX — real striking, angular styling that stood out even by Lexus's already-distinctive design standards. The gas-only UX200 was dropped early, leaving the hybrid as the sole engine choice for most of this generation's run. A genuine UX300e all-electric variant was sold in limited numbers overseas but never officially in the US." },
+            "250h": { engine:"2.0L Hybrid 4-cylinder (181hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Infrared (Red)",hex:"#C8102E"},
+            {name:"Nori Green Pearl (Green)",hex:"#3B5A3A"},
+          ],
+        },
+        "2nd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "300h": { engine:"2.0L Hybrid 4-cylinder (196hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)", note:"A genuine mid-cycle redesign with real styling and interior refreshes, plus a genuine power bump for the hybrid system — the gas-only variant was dropped entirely, making the UX hybrid-only from this point forward." },
+          },
+          colors:[
+            {name:"Eminent White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian (Black)",hex:"#1A1A1A"},
+            {name:"Matador Red Mica (Red)",hex:"#9B1B30"},
+            {name:"Cadmium Orange (Orange)",hex:"#E8601C"},
           ],
         },
       },
