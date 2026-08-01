@@ -7762,6 +7762,20 @@ const VEHICLES = {
         },
       },
     },
+    "Clarity": {
+      years:["2017","2018","2019","2020","2021"],
+      trims:{
+        "Plug-In Hybrid": { engine:"1.5L Plug-In Hybrid 4-cylinder (212hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"The genuine centerpiece of Honda's Clarity family of electrified sedans — all three variants (Plug-In Hybrid, Fuel Cell, and a short-lived pure-electric version) shared the same basic body and interior. The Plug-In Hybrid offered roughly 48 miles of electric-only range before the gas engine kicked in, one of the longer PHEV ranges available at the time. Base and Touring trims were the only two offered." },
+        "Fuel Cell": { engine:"Hydrogen Fuel Cell Electric Motor (174hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Sold and leased exclusively in California near hydrogen fueling infrastructure, mostly around LA, the Bay Area, and Sacramento. Genuinely emissions-free at the tailpipe, with only water vapor as a byproduct — a real technical showcase, though the lack of hydrogen stations elsewhere kept it a very niche offering." },
+        "Electric": { engine:"Electric Motor (161hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuine short-lived, lease-only pure-EV variant offered 2017-2019 in California and Oregon with roughly 89 miles of range — Honda dropped it early, well before the Plug-In Hybrid and Fuel Cell versions, which continued through 2021 when the whole Clarity lineup was discontinued with no direct successor." },
+      },
+      colors:[
+        {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Molten Lava Pearl (Red)",hex:"#6B1A2A"},
+      ],
+    },
     "CR-V": {
       generations:{
         "1st Gen (1997-2001)":{
@@ -7856,6 +7870,19 @@ const VEHICLES = {
         {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
         {name:"Polished Metal Metallic (Silver)",hex:"#C0C0C0"},
         {name:"Storm Silver Metallic (Silver)",hex:"#8A8D8F"},
+      ],
+    },
+    "Crosstour": {
+      years:["2010","2011","2012","2013","2014","2015"],
+      trims:{
+        "EX":  { engines:["2.4L 4-cylinder (192hp)","3.5L V6 (271-278hp)"], drivetrains:["FWD","AWD"], transmissions:["Automatic (5-Speed)","Automatic (6-Speed)"], note:"Sold as the 'Accord Crosstour' its first two years before Honda dropped the Accord prefix for 2012 — a 5-door coupe-SUV crossover built on the Accord sedan's platform, slotted between the CR-V and Pilot. Genuinely divisive styling drew real criticism from day one, with its high beltline and steeply raked rear roofline. The 4-cylinder engine (FWD-only) arrived in 2012; AWD was V6-only throughout. A clever removable underfloor cargo tray was a genuine practical touch borrowed from the wagon-adjacent design." },
+        "EX-L":{ engines:["2.4L 4-cylinder (192hp)","3.5L V6 (271-278hp)"], drivetrains:["FWD","AWD"], transmissions:["Automatic (5-Speed)","Automatic (6-Speed)"], note:"A 2013 refresh brought an updated V6 with a genuine 6-speed automatic, up from the original's 5-speed, plus keyless entry and push-button start. Discontinued after 2015 with no direct successor, as Honda pulled back from the coupe-SUV concept entirely in North America." },
+      },
+      colors:[
+        {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Basque Red Pearl (Red)",hex:"#6B1A2A"},
+        {name:"Celestial Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
     "Del Sol": {
@@ -8258,6 +8285,20 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "Prologue": {
+      years:["2024","2025","2026"],
+      trims:{
+        "EX":      { engines:["Single Electric Motor (220hp)","Dual Electric Motors (300hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (Single-Speed)", note:"Honda's first-ever mass-market all-electric SUV, and a genuine joint effort with General Motors — built on GM's Ultium platform and closely related under the skin to the Chevrolet Blazer EV, though with distinct Honda styling and interior. An 85kWh battery is standard across the whole lineup; FWD models use a single motor, AWD adds a second for real all-wheel traction and a meaningful power bump." },
+        "Touring": { engines:["Single Electric Motor (220hp)","Dual Electric Motors (300hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (Single-Speed)" },
+        "Elite":   { engine:"Dual Electric Motors (300hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Top trim, with 21-inch wheels — the largest ever offered on a Honda — and access to Tesla Supercharger stations alongside the usual public charging networks. No significant changes for 2026 beyond a new Frostline White Pearl color option and a standard portable charging kit across the board." },
+      },
+      colors:[
+        {name:"Diffused Sky Pearl (Blue)",hex:"#4A7B9D"},
+        {name:"Frostline White Pearl (White)",hex:"#F0F0F0"},
+        {name:"Raven Black (Black)",hex:"#1A1A1A"},
+        {name:"North Shore Pearl (Blue)",hex:"#1E4B8E"},
+      ],
     },
     "Ridgeline": {
       generations:{
