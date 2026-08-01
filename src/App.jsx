@@ -7380,7 +7380,7 @@ const VEHICLES = {
         "1st Gen (2010-2017)":{
           years:["2010","2011","2012","2013","2014","2015","2016","2017"],
           trims:{
-            "SLE": { engines:["2.4L 4-cylinder (182hp)","3.0L V6 (264hp)","3.6L V6 (301hp)"], drivetrain:"FWD", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"GMC's entry into the compact crossover segment, replacing the short-lived Pontiac Torrent and closely related to the Chevrolet Equinox of the same generation. The original 3.0L V6 developed a real reputation for engine problems and was replaced by a more powerful, more reliable 3.6L V6 for 2013 — the same year the Denali trim debuted, the Terrain's introduction to GMC's luxury sub-brand." },
+            "SLE": { engines:["2.4L 4-cylinder (182hp)","3.0L V6 (264hp)","3.6L V6 (301hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"GMC's entry into the compact crossover segment, replacing the short-lived Pontiac Torrent and closely related to the Chevrolet Equinox of the same generation. The original 3.0L V6 developed a real reputation for engine problems and was replaced by a more powerful, more reliable 3.6L V6 for 2013 — the same year the Denali trim debuted, the Terrain's introduction to GMC's luxury sub-brand." },
             "SLT": { engines:["2.4L 4-cylinder (182hp)","3.0L V6 (264hp)","3.6L V6 (301hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
             "Denali": { engine:"3.6L V6 (301hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2013." },
           },
@@ -7899,6 +7899,199 @@ const VEHICLES = {
             {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
             {name:"Milano Red (Red)",hex:"#C8102E"},
             {name:"Aegean Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Odyssey": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "LX": { engines:["2.2L 4-cylinder (140hp)","2.3L 4-cylinder (150hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Honda's first-ever minivan, and a genuinely unusual entry into the segment — rather than sliding doors, it used swing-out, front-hinged rear doors with fixed windows, a real point of difference (and criticism) versus the Chrysler and GM minivans of the era. Built in Japan initially, production moved to Honda's Alabama plant partway through the run. The 2.3L engine arrived for 1998." },
+            "EX": { engine:"2.3L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bordeaux Red Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Sebring Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (1999-2004)":{
+          years:["1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "LX": { engine:"3.5L V6 (210-240hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, growing significantly larger and switching to real sliding rear doors for the first time — a much closer match to what American minivan buyers actually expected. The old 4-cylinder engines were dropped entirely in favor of a single, more powerful V6. This generation is largely credited with turning the Odyssey into a genuine sales and reputation success in the segment." },
+            "EX": { engine:"3.5L V6 (210-240hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Satin Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2005-2010)":{
+          years:["2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "LX": { engine:"3.5L V6 (244-255hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely significant redesign, adding a real 8-passenger capacity and a fold-flat third row into the floor — a real convenience advance for the segment. VCM (Variable Cylinder Management) arrived on higher trims, deactivating cylinders during light-load cruising for better fuel economy." },
+            "EX": { engine:"3.5L V6 (244-255hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Touring": { engine:"3.5L V6 (255hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Nighthawk Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "4th Gen (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "LX": { engine:"3.5L V6 (248-250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely boxier, more upright styling than the outgoing generation, with a real focus on maximizing interior volume. The old 5-speed automatic gave way to a 6-speed for most trims." },
+            "EX": { engine:"3.5L V6 (248-250hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Touring Elite": { engine:"3.5L V6 (248-250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added a built-in vacuum cleaner (HondaVAC) for 2014 — a genuinely unusual and much-talked-about factory feature for a minivan." },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Dark Cherry Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Modern Steel Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2018-2026)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "EX-L": { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic (10-Speed)", note:"Introduced Magic Slide second-row seats, which can shift laterally for easier third-row access without fully removing a seat — a genuine ergonomics win over the outgoing generation's removable captain's chairs. A CVT was briefly offered on lower trims before being dropped in favor of the 10-speed automatic across the whole lineup." },
+            "Sport-L": { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic (10-Speed)" },
+            "Touring": { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic (10-Speed)" },
+            "Elite": { engine:"3.5L V6 (280hp)", drivetrain:"FWD", transmission:"Automatic (10-Speed)", note:"Top trim, with an 11-speaker premium audio system exclusive to this grade. 2026 model year continued largely unchanged." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Pilot": {
+      generations:{
+        "1st Gen (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "LX": { engine:"3.5L V6 (240hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Honda's first-ever 3-row SUV for the US market, sharing its Global Light Truck platform underpinnings with the contemporary Odyssey and Acura MDX. Genuinely boxy, truck-like styling for this first generation, a look Honda would move away from and then partly return to over the years that followed." },
+            "EX":  { engine:"3.5L V6 (240hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "EX-L":{ engine:"3.5L V6 (244hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Taffeta White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redrock Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Silver Pearl Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "LX": { engine:"3.5L V6 (250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Kept the boxy, upright profile of the original but genuinely refined it — a new VCM-equipped V6 could shut down cylinders under light load for better fuel economy, and the shifter moved from the steering column to the center console." },
+            "EX":  { engine:"3.5L V6 (250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+            "Touring": { engine:"3.5L V6 (250hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"White Diamond Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Dark Cherry Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Alabaster Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "LX": { engine:"3.5L V6 (280hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuinely softer, more carlike redesign, moving away from the boxier looks of the first two generations. Honda's second-generation i-VTM4 torque-vectoring AWD system arrived here. A troublesome 9-speed automatic was introduced on upper trims for 2016, a real reliability sore spot that drew some criticism before the 2019 mid-cycle refresh smoothed things out and brought back a physical volume knob." },
+            "EX-L": { engines:["3.5L V6 (280hp)"], drivetrains:["FWD","AWD"], transmissions:["Automatic (6-Speed)","Automatic (9-Speed)"] },
+            "Elite":{ engine:"3.5L V6 (280hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "TrailSport": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Added 2022 alongside the Sport trim — the Pilot's first genuine off-road-focused variant, though the true off-road-tuned suspension didn't arrive until the following generation." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Deep Scarlet Pearl (Red)",hex:"#6B1A2A"},
+            {name:"Sonic Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "4th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "Sport":  { engine:"3.5L V6 (285hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (10-Speed)", note:"A genuine return to a boxier, more truck-like look after the softer previous generation, sharing styling cues with the modern Ridgeline. The most powerful, most off-road-capable Pilot Honda has ever built — TrailSport gets a real 1-inch suspension lift, steel skid plates, and all-terrain tires this time around, a step beyond the previous generation's largely cosmetic TrailSport package. A 2026 facelift added a larger 12.3-inch touchscreen, roof rails, and a power tailgate as standard across the board." },
+            "EX-L":   { engine:"3.5L V6 (285hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (10-Speed)" },
+            "TrailSport": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)" },
+            "Touring":{ engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)" },
+            "Elite":  { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)" },
+            "Black Edition": { engine:"3.5L V6 (285hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"Top trim, with exclusive dark-finish styling and the most premium interior appointments in the lineup." },
+          },
+          colors:[
+            {name:"Platinum White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Ash Green Metallic (Green)",hex:"#5A6E5E"},
+            {name:"Solar Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Prelude": {
+      generations:{
+        "3rd Gen Tail (1988-1991)":{
+          years:["1988","1989","1990","1991"],
+          trims:{
+            "S":  { engine:"2.0L SOHC 4-cylinder (105-109hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuinely groundbreaking for its class — the first production car in the world with 4-wheel steering, a real mechanical (not electronic) system that Honda beat every rival automaker to market with. The 1988 2.0Si 4WS reportedly out-slalomed every Ferrari and Lamborghini road-tested that year, a genuinely startling result for a mainstream Japanese coupe." },
+            "Si":  { engines:["2.0L DOHC 4-cylinder (135hp)","2.1L DOHC 4-cylinder (145hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The larger 2.1L arrived for the 1990-1991 model years, the final two years of this generation before an all-new Prelude replaced it." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Bimini Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (1992-1996)":{
+          years:["1992","1993","1994","1995","1996"],
+          trims:{
+            "S":  { engine:"2.2L 4-cylinder (135hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely major styling shift toward smoother, more organic curves. This was also the Prelude's first generation with VTEC available in the US, a real technological showcase moment for Honda's variable valve timing system." },
+            "Si": { engine:"2.3L 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "VTEC": { engine:"2.2L DOHC VTEC 4-cylinder (190hp)", drivetrain:"FWD", transmission:"Manual", note:"The genuine performance flagship, one of the highest specific-output naturally-aspirated engines sold in the US at the time." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Milano Red (Red)",hex:"#C8102E"},
+            {name:"Cayman Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "5th Gen (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"2.2L DOHC VTEC 4-cylinder (195-200hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely the least sold generation in the Prelude's whole history, a real sign of the sport-compact-coupe segment's declining fortunes by the late 1990s. Honda pulled the plug on the nameplate entirely after 2001, with no direct successor for almost 25 years." },
+            "Type SH": { engine:"2.2L DOHC VTEC 4-cylinder (195-200hp)", drivetrain:"FWD", transmission:"Manual", note:"'Super Handling' — added Honda's Active Torque Transfer System (ATTS), which could actively send more torque to the outside front wheel while cornering, a genuine mechanical torque-vectoring system years ahead of most rivals." },
+          },
+          colors:[
+            {name:"Championship White (White)",hex:"#F5F5F5"},
+            {name:"Flamenco Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"San Marino Red (Red)",hex:"#C8102E"},
+            {name:"Tahitian Green Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "6th Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "Base": { engine:"2.0L Atkinson-Cycle Hybrid 4-cylinder (200hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"A genuine revival after nearly 25 years away, sharing its underlying platform and hybrid powertrain with the Civic Hybrid rather than being an all-new architecture. Debuts Honda's S+ Shift feature, a software mode that mimics the feel and response of a conventional manual transmission through the electric motors. Produces the exact same 200hp the outgoing 2001 Prelude made from its high-revving VTEC four, but with far more torque (232 lb-ft vs 156 lb-ft)." },
+          },
+          colors:[
+            {name:"Winter Frost Pearl (White)",hex:"#F0F0F0"},
+            {name:"Crystal Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Rallye Red (Red)",hex:"#C8102E"},
+            {name:"Meteoroid Gray Metallic (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
