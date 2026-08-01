@@ -9767,6 +9767,764 @@ const VEHICLES = {
         },
       },
     },
+    "Armada": {
+      generations:{
+        "1st Gen (2004-2015)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "SE": { engine:"5.6L VK56DE V8 (305-317hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)", note:"Nissan's genuine flagship full-size SUV, built on the same F-Alpha platform as the Titan pickup and closely related to the Infiniti QX56 — a real, serious entry into a segment long dominated by the Big Three. Genuine 3-row seating for up to 8." },
+            "SL": { engine:"5.6L VK56DE V8 (305-317hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)" },
+            "Platinum": { engine:"5.6L VK56DE V8 (317hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)" },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Alert (Red)",hex:"#C8102E"},
+            {name:"Navy Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2017-2024)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "SV": { engine:"5.6L VK56VD V8 (390-400hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"A genuinely major platform switch — moved off the Titan/QX56 architecture onto the body-on-frame chassis shared with the Nissan Patrol and Infiniti QX80, a real gain in ride quality and refinement. A 2021 refresh brought updated styling and pushed V8 output up to 400hp." },
+            "SL": { engine:"5.6L VK56VD V8 (390-400hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+            "Platinum": { engine:"5.6L VK56VD V8 (390-400hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "SV": { engine:"3.5L VR35DDTT Twin-Turbo V6 (425hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (9-Speed)", note:"A genuinely significant powertrain switch — the old 5.6L V8 is gone entirely, replaced by a twin-turbo V6 shared in spirit with the GT-R's engine family, running on regular unleaded despite the turbocharging. Towing capacity actually held steady at 8,500 lbs despite losing two cylinders, a real engineering win. Available adaptive air suspension arrived for the first time this generation." },
+            "SL": { engine:"3.5L VR35DDTT Twin-Turbo V6 (425hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "PRO-4X": { engine:"3.5L VR35DDTT Twin-Turbo V6 (425hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine off-road specialist trim." },
+            "Platinum": { engine:"3.5L VR35DDTT Twin-Turbo V6 (425hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "Nismo": { engine:"3.5L VR35DDTT Twin-Turbo V6 (460hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Added 2026 — the Armada's first-ever Nismo variant and the most powerful Armada ever built, with retuned steering, exhaust, and adaptive air suspension for a genuinely sportier feel in a full-size SUV." },
+          },
+          colors:[
+            {name:"Pearl White Tricoat (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Stealth Gray (Gray)",hex:"#4A4E52"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Frontier": {
+      generations:{
+        "D21 Hardbody Tail (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "XE": { engines:["2.4L KA24E 4-cylinder (134hp)","3.0L VG30E V6 (153hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Sold simply as the 'Nissan Truck' or 'Hardbody' before the Frontier name arrived — genuinely rugged, boxy styling that's since become a real cult favorite among off-road and overland enthusiasts for its simplicity and toughness." },
+            "SE": { engine:"3.0L VG30E V6 (153hp)", drivetrain:"4WD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Nautical Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "D22 (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "XE": { engines:["2.4L KA24DE 4-cylinder (143hp)","3.3L VG33E V6 (170hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"First truck to officially carry the Frontier name in the US, genuinely more car-like and modern than the outgoing Hardbody. A supercharged 3.3L V6 arrived in 2000, making a real 210hp — a genuinely potent, if uncommon, option for a compact truck of this era." },
+            "SE": { engines:["3.3L VG33E V6 (170hp)","3.3L Supercharged V6 (210hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Molten Lava Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "D40 (2005-2021)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "XE":   { engines:["2.5L QR25DE 4-cylinder (152-158hp)","4.0L VQ40DE V6 (261-275hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic (5-Speed)"], note:"A genuinely long-lived platform, running with only minor updates for a full 17 model years — one of Nissan's longest-serving vehicle generations. King Cab and Crew Cab body styles both offered." },
+            "SE":   { engines:["2.5L QR25DE 4-cylinder (152-158hp)","4.0L VQ40DE V6 (261-275hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "PRO-4X": { engine:"4.0L VQ40DE V6 (261-275hp)", drivetrain:"4WD", transmission:"Automatic", note:"The genuine off-road specialist trim, with a locking rear differential, Bilstein shocks, and skid plates — a real enthusiast favorite by the time the D40's long run finally ended." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "D41 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "S":   { engine:"3.8L VQ38DD V6 (310hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (9-Speed)", note:"A genuinely thorough redesign after nearly two decades on the old platform — a new, more powerful V6, a modern 9-speed automatic, and updated infotainment. Nissan markets it with a real point of pride as the only midsize truck with a standard V6 this potent, since most rivals had shifted to smaller turbo fours by this point." },
+            "SV":  { engine:"3.8L VQ38DD V6 (310hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (9-Speed)" },
+            "PRO-4X": { engine:"3.8L VQ38DD V6 (310hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "PRO-4X R": { engine:"3.8L VQ38DD V6 (310hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"An off-road-focused variant with Ohlins remote-reservoir coilover suspension, added later in this generation's run. A limited-run Roush Performance package became available on the PRO-4X starting with the 2026 model year, a real first for a factory Nissan product." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Afterburn Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
+    "GT-R": {
+      years:["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Premium": { engine:"3.8L Twin-Turbo V6 (480-565hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch, 6-Speed)", note:"Nissan's genuine halo car, and the direct successor to the legendary Skyline GT-R lineage — though sold under just the 'GT-R' name in the US, dropping 'Skyline' entirely as it became a standalone model (chassis code R35). Standard AWD via the ATTESA E-TS system and a hand-built 3.8L twin-turbo V6, each engine assembled start-to-finish by a single named technician. Output climbed steadily over the model's long 16-year US run, from 480hp at launch to 565hp by the end. A 2012 facelift, a 2017 major refresh (new grille, dashboard, and titanium exhaust), and new turbos in 2020 were the major touchpoints along the way." },
+        "Track Edition": { engine:"3.8L Twin-Turbo V6 (565-600hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch, 6-Speed)", note:"A genuinely track-focused variant, borrowing chassis and aero components from the Nismo without going all the way to that model's full price and power. Reintroduced for 2017 after an earlier run." },
+        "Nismo": { engine:"3.8L Twin-Turbo V6 (600hp)", drivetrain:"AWD", transmission:"Automatic (Dual-Clutch, 6-Speed)", note:"Added 2014 — genuine motorsport-derived flagship, larger turbos borrowed from Nissan's GT3 racing program, a carbon-fiber front splitter and rear wing, and hand-welded structural seam reinforcement. A mechanical front limited-slip differential was added for the car's final 2024 model year, alongside T-Spec Takumi and Skyline special editions marking the R35's retirement after an 18-year run with no direct successor confirmed at the time." },
+      },
+      colors:[
+        {name:"Pearl White (White)",hex:"#F5F5F5"},
+        {name:"Super Black (Black)",hex:"#1A1A1A"},
+        {name:"Vibrant Red (Red)",hex:"#C8102E"},
+        {name:"Bayside Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Juke": {
+      years:["2011","2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "S":  { engine:"1.6L Turbocharged 4-cylinder (188hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic (CVT)"], note:"A genuinely polarizing, bug-eyed subcompact crossover — real love-it-or-hate-it styling that made it one of the most distinctive shapes on the road at launch. Turbocharged from day one across the whole lineup, a real rarity for the segment at the time." },
+        "SV": { engine:"1.6L Turbocharged 4-cylinder (188hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+        "SL": { engine:"1.6L Turbocharged 4-cylinder (188hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+        "NISMO RS": { engine:"1.6L Turbocharged 4-cylinder (215hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic (CVT)"], note:"Genuine factory hot-rod version, with a real power bump, a limited-slip differential (FWD models), and a stiffer, more track-focused suspension. Discontinued after 2017 in the US with no direct successor — later global Juke generations were never sold stateside." },
+      },
+      colors:[
+        {name:"White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Super Black (Black)",hex:"#1A1A1A"},
+        {name:"Red Alert (Red)",hex:"#C8102E"},
+        {name:"Nightshade (Purple)",hex:"#3A2E4A"},
+      ],
+    },
+    "Kicks": {
+      generations:{
+        "1st Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S":  { engine:"1.6L 4-cylinder (122-125hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Nissan's entry-level crossover, effectively replacing the discontinued Juke and Versa Note in one stroke — genuinely just FWD, no AWD option offered this whole generation, a real trade-off for the low starting price." },
+            "SV": { engine:"1.6L 4-cylinder (122-125hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SR": { engine:"1.6L 4-cylinder (122-125hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember (Red)",hex:"#9B1B30"},
+            {name:"Electric Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "S":  { engine:"2.0L 4-cylinder (141hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine ground-up redesign, sharing its CMF-B platform with the global Renault-Nissan-Alliance small-car family. Grew larger, gained a real power bump, and AWD became available for the first time — a genuine gap filled versus the outgoing generation." },
+            "SV": { engine:"2.0L 4-cylinder (141hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SR": { engine:"2.0L 4-cylinder (141hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Leaf": {
+      generations:{
+        "1st Gen (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "S":  { engine:"Electric Motor (107-110hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"One of the first genuinely mass-market, mainstream-priced electric cars sold in the US, alongside the Chevy Volt — a real milestone for the segment. A 24kWh battery was standard at launch, with real-world range around 73-84 miles; a larger 30kWh pack arrived for 2016, pushing range to about 107 miles." },
+            "SV": { engine:"Electric Motor (107hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)" },
+            "SL": { engine:"Electric Motor (107hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2018-2025)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "S":  { engine:"Electric Motor (147hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuinely major redesign with real styling to match — no longer the quirky, bug-eyed original, now looking like a fairly conventional hatchback. A 40kWh battery was standard, good for roughly 149 miles of range." },
+            "SV": { engine:"Electric Motor (147-214hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)" },
+            "SL Plus": { engine:"Electric Motor (214hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Added a genuinely larger 60kWh battery (branded 'Plus'), extending range to around 212-226 miles — a real answer to the original 40kWh version's fairly modest range." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "S":  { engine:"Electric Motor (174hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuinely dramatic redesign, switching from a conventional hatchback body to a striking crossover-styled shape — a real departure from every prior Leaf. Built on the newer Renault-Nissan-Alliance EV platform, with access to Tesla Supercharger stations alongside standard public charging." },
+            "SV": { engine:"Electric Motor (214hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)" },
+            "Platinum": { engine:"Electric Motor (214hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Deep Ocean Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Maxima": {
+      generations:{
+        "4th Gen (1989-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "GXE": { engine:"3.0L VE30DE V6 (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign that shed the boxy 1980s styling of its predecessor for smoother, more aerodynamic lines — real evidence of Nissan's design department maturing. Marketed as a '4-Door Sports Car,' a tagline the Maxima would keep coming back to for decades." },
+            "SE":  { engine:"3.0L VE30DE V6 (160hp)", drivetrain:"FWD", transmission:"Manual", note:"The sportier trim, with a firmer suspension and available limited-slip differential — a real enthusiast favorite of this generation." },
+            "GLE": { engine:"3.0L VE30DE V6 (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Vail Red (Red)",hex:"#9B1B30"},
+            {name:"Manhattan Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "A32 (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "GXE": { engine:"3.0L VQ30DE V6 (190hp)", drivetrain:"FWD", transmission:"Automatic", note:"Debuted Nissan's now-legendary VQ engine family — the VQ30DE was genuinely one of the most acclaimed V6 engines of its era, landing on Ward's 10 Best Engines list for ten consecutive years running." },
+            "SE":  { engine:"3.0L VQ30DE V6 (190hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GLE": { engine:"3.0L VQ30DE V6 (190hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunset Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sheer Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "A33 (2000-2003)":{
+          years:["2000","2001","2002","2003"],
+          trims:{
+            "GXE": { engine:"3.0L VQ30DE V6 (222hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine power bump for the same basic VQ30DE, now making 222hp. Real enthusiast cult status for this generation's SE trim, with sharp handling that punched well above the Maxima's mainstream-sedan price point." },
+            "SE":  { engine:"3.0L VQ30DE V6 (222-227hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GLE": { engine:"3.0L VQ30DE V6 (222hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Sonoma Sunset Metallic (Orange)",hex:"#C86A2E"},
+            {name:"Majestic Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "A34 (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "SE": { engine:"3.5L VQ35DE V6 (255-265hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Now built on the Altima's platform, and the first Maxima ever offered with a CVT — a genuinely significant shift for a car that had built its reputation partly on a sporty manual option, which was dropped entirely this generation." },
+            "SL": { engine:"3.5L VQ35DE V6 (255-265hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Code Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Royal Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "A35 (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (290hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Grew again to genuine full-size proportions and leaned further into a near-luxury positioning, with paddle shifters simulating six preset ratios through the CVT for a sportier feel." },
+            "SV": { engine:"3.5L VQ35DE V6 (290hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Winter Frost White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Navy Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "A36 (2016-2023)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "SV": { engine:"3.5L VQ35DE V6 (300hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuinely dramatic final redesign — sharp, aggressive 'floating roof' styling, and the last Maxima generation Nissan ever built. Discontinued after 2023 as sedan demand kept declining and Nissan shifted focus toward electric vehicles; a 2019 mid-cycle refresh brought a bolder V-motion grille and a genuine step toward true luxury-sedan territory." },
+            "SR":  { engine:"3.5L VQ35DE V6 (300hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Sport-tuned suspension and performance dampers, without ever offering a manual — the only VQ35DE-powered Maxima performance trim of its era." },
+            "Platinum": { engine:"3.5L VQ35DE V6 (300hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Pearl White Tricoat (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Coulis Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Murano": {
+      generations:{
+        "1st Gen (2003-2007)":{
+          years:["2003","2004","2005","2006","2007"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (240-245hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely bold, curvy design for its era — Nissan's first crossover, unibody rather than truck-based, and a real style leader that helped kick off the whole mid-size crossover boom of the 2000s. First Nissan sold in the US with a CVT." },
+            "SL": { engine:"3.5L VQ35DE V6 (240-245hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SE": { engine:"3.5L VQ35DE V6 (240-245hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Sonoma Sunset Metallic (Orange)",hex:"#C86A2E"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Platinum Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2009-2014)":{
+          years:["2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (260-265hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Real evolutionary redesign, refining the original's curvy formula rather than reinventing it. A genuinely unusual CrossCabriolet convertible variant was offered 2011-2014 — the only 2-door convertible crossover ever sold in the US, a real niche product that drew as much curiosity as sales." },
+            "SV": { engine:"3.5L VQ35DE V6 (260-265hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "LE": { engine:"3.5L VQ35DE V6 (260-265hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Glacier Pearl (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Tuscan Sun Metallic (Orange)",hex:"#C86A2E"},
+            {name:"Graphite Blue (Blue)",hex:"#4A6B8E"},
+          ],
+        },
+        "3rd Gen (2015-2024)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (260hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuinely dramatic, more angular redesign with a real luxury-adjacent interior — reviewers often noted it felt more like an Infiniti than a mainstream Nissan inside. A 2019 refresh brought updated styling and new colors; this generation ran for a full decade with only detail changes otherwise." },
+            "SV": { engine:"3.5L VQ35DE V6 (260hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "Platinum": { engine:"3.5L VQ35DE V6 (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "SV":  { engine:"2.0L Turbocharged VC-Turbo 4-cylinder (241hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"A genuine powertrain first for the Murano — its very first year without a V6 in over two decades, switching to a variable-compression turbo four shared with the Infiniti QX60. AWD became standard across the board, a real departure from the FWD-based trims of prior generations." },
+            "SL":  { engine:"2.0L Turbocharged VC-Turbo 4-cylinder (241hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "Platinum": { engine:"2.0L Turbocharged VC-Turbo 4-cylinder (241hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Pearl White Tricoat (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Pathfinder": {
+      generations:{
+        "1st Gen Tail (1990-1995)":{
+          years:["1990","1991","1992","1993","1994","1995"],
+          trims:{
+            "XE": { engine:"3.0L VG30E V6 (153hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine pickup-truck-derived SUV, sharing its body-on-frame chassis with the contemporary Hardbody truck. Originally 2-door only when it launched in 1987; a 4-door body style joined for 1990 and became the sole option by 1991, a real reflection of where the whole SUV market was heading." },
+            "SE": { engine:"3.0L VG30E V6 (153hp)", drivetrain:"4WD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Emerald Pearl (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "R50 (1996-2004)":{
+          years:["1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "XE": { engines:["3.3L VG33E V6 (168hp)","3.5L VQ35DE V6 (240hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine switch to unibody construction, a real departure from the truck-based original. A mid-cycle 1999.5 refresh pushed the Pathfinder more upmarket, while the truck-based Xterra took over the rugged, budget-friendly role the old base Pathfinder used to fill. The 3.5L V6 arrived for 2001, a real power jump over the outgoing 3.3L." },
+            "SE": { engines:["3.3L VG33E V6 (168hp)","3.5L VQ35DE V6 (240hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "LE": { engine:"3.5L VQ35DE V6 (240hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunlit Copper Metallic (Copper)",hex:"#B87333"},
+            {name:"Majestic Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "R51 (2005-2012)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "S":  { engine:"4.0L VQ40DE V6 (266-270hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"A genuine return to body-on-frame truck construction, sharing its chassis with the Xterra and Frontier — real off-road credibility over the previous unibody generation, plus a genuine third-row seat for the first time." },
+            "SE": { engine:"4.0L VQ40DE V6 (266-270hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)" },
+            "LE": { engine:"4.0L VQ40DE V6 (266-270hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)" },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Brick (Red)",hex:"#9B1B30"},
+            {name:"Night Armor (Gray)",hex:"#4A4E52"},
+          ],
+        },
+        "R52 (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (260hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine switch back to unibody, car-based construction, sacrificing some off-road ability for real gains in ride comfort, fuel economy, and interior space for a growing family-hauler audience. A CVT replaced the old 5-speed automatic across the board." },
+            "SV": { engine:"3.5L VQ35DE V6 (260hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "Platinum": { engine:"3.5L VQ35DE V6 (260-284hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Arctic Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "R53 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (284hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (9-Speed)", note:"A genuinely bolder, boxier redesign launched alongside the equally new Frontier — a real image shift toward rugged capability, with a proper rotary dial 4x4 selector and seven drive modes. Real towing improvements too, up to 6,000 lbs when properly equipped." },
+            "SV": { engine:"3.5L VQ35DE V6 (284hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (9-Speed)" },
+            "Rock Creek": { engine:"3.5L VQ35DE V6 (284hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Added as a genuine off-road-focused trim, with all-terrain tires and unique styling." },
+            "Platinum": { engine:"3.5L VQ35DE V6 (284hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Pearl White Tricoat (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Quest": {
+      generations:{
+        "1st Gen (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "XE": { engine:"3.0L VG30E V6 (151hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine joint venture with Ford — the Quest shared its entire body and platform with the Mercury Villager, built together at a Ford plant in Ohio, a real rarity for a Japanese-branded vehicle of the era. Nissan handled the engine and some interior details, while Ford handled the rest." },
+            "GXE": { engine:"3.0L VG30E V6 (151hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Sedona Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1999-2002)":{
+          years:["1999","2000","2001","2002"],
+          trims:{
+            "GXE": { engine:"3.3L VG33E V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Continued the Ford/Mercury joint-venture arrangement with a genuine redesign, still built alongside the Villager. Real reliability concerns (particularly with transmissions) dogged this generation's reputation." },
+            "GLE": { engine:"3.3L VG33E V6 (170hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunlit Sand Metallic (Tan)",hex:"#C8B896"},
+            {name:"Majestic Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (240hp)", drivetrain:"FWD", transmission:"Automatic (5-Speed)", note:"A genuine ground-up, all-Nissan redesign, ending the Ford/Mercury partnership entirely — real distinctive styling with a raised, stadium-style second and third row for better visibility. A 2007 refresh brought a mild power adjustment down to 235hp with updated emissions tuning. Skipped the 2010 model year before returning again redesigned." },
+            "SE": { engine:"3.5L VQ35DE V6 (235-240hp)", drivetrain:"FWD", transmission:"Automatic (5-Speed)" },
+            "SL": { engine:"3.5L VQ35DE V6 (235-240hp)", drivetrain:"FWD", transmission:"Automatic (5-Speed)" },
+          },
+          colors:[
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Code Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Royal Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2011-2017)":{
+          years:["2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "S":  { engine:"3.5L VQ35DE V6 (260hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuinely more van-shaped, boxier redesign after the stadium-seating original — a real shift toward maximizing interior space over the previous generation's distinctive styling. The LE trim was renamed Platinum for 2015. Discontinued after 2017 with no direct successor, as Nissan stepped away from the minivan segment entirely." },
+            "SV": { engine:"3.5L VQ35DE V6 (260hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SL": { engine:"3.5L VQ35DE V6 (260hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "Platinum": { engine:"3.5L VQ35DE V6 (260hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Renamed from LE for 2015." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Storm Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Rogue": {
+      generations:{
+        "1st Gen (2008-2013)":{
+          years:["2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "S":  { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Nissan's first-ever compact crossover, slotting in below the Murano — a real answer to the booming small-crossover segment of the late 2000s, sharing its platform with the Sentra. Only ever offered with a single 4-cylinder engine and a CVT for this whole generation." },
+            "SL": { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "Krom": { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuine limited-run appearance package (2011-2013) with unique 18-inch wheels and blacked-out trim." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Ocean Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2014-2020)":{
+          years:["2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "S":  { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine ground-up redesign, growing in size and adding a real third-row seat option — a genuinely rare feature in this class. The smaller outgoing model didn't disappear entirely; it was rebadged and sold alongside this generation as the Rogue Sport (a version of the global Qashqai) for buyers wanting something more compact. A Hybrid variant was offered 2017-2019." },
+            "SV": { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SL": { engine:"2.5L QR25DE 4-cylinder (170hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Hybrid": { engine:"2.0L Supercharged Hybrid 4-cylinder (176hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Offered 2017-2019 only, a genuinely unusual supercharged (rather than turbocharged) hybrid four-cylinder shared with the Infiniti QX60 Hybrid." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Caspian Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "S":  { engine:"1.5L Turbocharged VC-Turbo 3-cylinder (201hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"A genuine powertrain shift — this generation's sole engine is a variable-compression turbocharged 3-cylinder, an unusually sophisticated piece of engineering for a mainstream compact crossover. Real off-road-styled Rock Creek trim added later in the run. For 2026.5, a Plug-In Hybrid variant arrived based on the Mitsubishi Outlander PHEV, a genuine product of the Renault-Nissan-Mitsubishi Alliance sharing parts across member brands." },
+            "SV": { engine:"1.5L Turbocharged VC-Turbo 3-cylinder (201hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+            "SL": { engine:"1.5L Turbocharged VC-Turbo 3-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Rock Creek": { engine:"1.5L Turbocharged VC-Turbo 3-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Off-road-styled trim added later in this generation's run, with all-terrain tires and unique badging." },
+            "Plug-In Hybrid": { engine:"2.4L Plug-In Hybrid 4-cylinder", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Added for 2026.5 — genuinely based on the Mitsubishi Outlander PHEV platform, a real product of Nissan's alliance partnership with Mitsubishi and Renault." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Sentra": {
+      generations:{
+        "3rd Gen Tail (1991-1994)":{
+          years:["1991","1992","1993","1994"],
+          trims:{
+            "E":   { engine:"1.6L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely thorough redesign, growing in size and refinement over the outgoing model. Debuted the legendary SE-R performance trim, which quickly became a genuine cult favorite in the sport-compact scene — sharp handling and a torquey 2.0L four-cylinder made it a real giant-killer against pricier rivals." },
+            "GXE": { engine:"1.6L 4-cylinder (110hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SE-R":{ engine:"2.0L SR20DE 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Manual", note:"Motor Trend named the 1991 SE-R one of its 'Import Car of the Year' finalists — genuinely potent for the class, with a real four-wheel independent suspension most economy-car rivals couldn't match." },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Aztec Red (Red)",hex:"#9B1B30"},
+            {name:"Sedona Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"1.6L GA16DE 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine focus on safety this generation, with dual airbags standard across the whole lineup — a real point of pride for Nissan at the time in the budget-sedan segment." },
+            "GXE": { engine:"1.6L GA16DE 4-cylinder (115hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "GLE": { engine:"1.6L GA16DE 4-cylinder (115hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SE":  { engine:"2.0L SR20DE 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Manual", note:"The SE-R name briefly stepped aside for a plain SE trim during this generation, though it carried the same sporty spirit." },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Sunset Orange Pearl (Orange)",hex:"#C86A2E"},
+            {name:"Storm Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "XE":  { engine:"1.8L QG18DE 4-cylinder (126hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Grew noticeably in size, blurring the line between compact and mid-size. The SE-R nameplate returned for 2002 with a genuinely potent 2.5L four-cylinder, and the range-topping Spec V brought a 6-speed manual and a helical limited-slip differential — a real enthusiast darling that traded blows with the contemporary Civic Si." },
+            "GXE": { engine:"1.8L QG18DE 4-cylinder (126hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "SE-R":{ engine:"2.5L QR25DE 4-cylinder (165-177hp)", drivetrain:"FWD", transmission:"Automatic", note:"Returned for 2002 after a brief hiatus." },
+            "SE-R Spec V": { engine:"2.5L QR25DE 4-cylinder (175-200hp)", drivetrain:"FWD", transmission:"Manual (6-Speed)", note:"Added 2002, updated with more power for the 2007 mid-cycle carryover." },
+          },
+          colors:[
+            {name:"Cloud White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Code Red (Red)",hex:"#C8102E"},
+            {name:"Blue Onyx (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "6th Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "2.0":  { engine:"2.0L QR20DE 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Grew large enough that the EPA classified it as a mid-size car despite Nissan still marketing it as compact — styled to look like a downsized Altima. First Sentra ever offered with a CVT." },
+            "2.0S": { engine:"2.0L QR20DE 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SE-R":{ engine:"2.5L QR25DE 4-cylinder (177hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Returned mid-2007 alongside the Spec V, both borrowing their engine from the contemporary Altima and Sentra's own SE-R history." },
+            "SE-R Spec V": { engine:"2.5L QR25DE 4-cylinder (200hp)", drivetrain:"FWD", transmission:"Manual (6-Speed)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Alert (Red)",hex:"#C8102E"},
+            {name:"Metallic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "7th Gen (2013-2019)":{
+          years:["2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "S":  { engine:"1.8L MRA8DE 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"A genuine focus on weight reduction and fuel economy over outright performance — the SE-R and Spec V performance trims were both dropped entirely this generation, a real departure from the Sentra's enthusiast-friendly history. A turbocharged 1.6L SR trim arrived for 2017, offering a partial return to sportier ambitions." },
+            "SV": { engine:"1.8L MRA8DE 4-cylinder (130hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SR": { engine:"1.6L Turbocharged 4-cylinder (188hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Added 2017 — genuinely the most powerful Sentra since the Spec V, though automatic-only." },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Electric Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "8th Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "S":  { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuinely striking redesign, borrowing sleek, coupe-like proportions and the V-motion grille from the rest of Nissan's modern lineup — a real image upgrade over the more anonymous outgoing generation." },
+            "SV": { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SR": { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "9th Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "S":  { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"An all-new generation with sharper, more coupe-like styling and a genuinely stiffer chassis, though the engine and CVT carry over unchanged from the outgoing car. Real technology jump with new 12.3-inch gauge cluster and infotainment screens, and the SL top trim returned to the lineup after a hiatus." },
+            "SV": { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SR": { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SL": { engine:"2.0L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Top trim, returning to the Sentra lineup for this generation." },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Boulder Gray Pearl (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Titan": {
+      generations:{
+        "1st Gen (2004-2015)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "XE": { engine:"5.6L VK56DE V8 (305-317hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)", note:"Nissan's first genuine full-size, half-ton pickup for the US market, built on the F-Alpha platform shared with the Armada and Infiniti QX56 — a real, serious attempt to crack the segment dominated by the Big Three. Only ever offered with a single 5.6L V8 across the whole generation, no smaller engine option." },
+            "SE": { engine:"5.6L VK56DE V8 (305-317hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)" },
+            "PRO-4X": { engine:"5.6L VK56DE V8 (317hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"Genuine off-road specialist trim with a locking rear differential, Bilstein shocks, and skid plates." },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Alert (Red)",hex:"#C8102E"},
+            {name:"Navy Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2017-2024)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S":  { engine:"5.6L Endurance V8 (390-400hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (7-Speed)", note:"A genuinely thorough redesign with an all-new 'Endurance' V8, sharing its Titan XD sibling's chassis platform with the Nissan NV commercial van. The Titan XD variant offered a genuinely unusual optional 5.0L Cummins turbo-diesel V8 (2016-2019) — real heavy-duty-adjacent capability from a half-ton-class truck, a genuine rarity in the segment. A 2020 refresh brought a 9-speed automatic and bumped V8 output to 400hp; the diesel option was dropped after 2019 amid weak demand." },
+            "SV": { engine:"5.6L Endurance V8 (390-400hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (7-Speed)" },
+            "PRO-4X": { engine:"5.6L Endurance V8 (390-400hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Genuine off-road specialist trim, carried over in spirit from the first generation." },
+            "SL": { engine:"5.6L Endurance V8 (390-400hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (7-Speed)" },
+            "Platinum Reserve": { engine:"5.6L Endurance V8 (390-400hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (7-Speed)", note:"Top trim. The whole Titan and Titan XD lineup was discontinued after the 2024 model year, ending Nissan's 20-year run in the full-size truck segment with no replacement announced, leaving the mid-size Frontier as Nissan's sole US truck offering." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Versa": {
+      generations:{
+        "1st Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "S":  { engine:"1.8L QG18DE 4-cylinder (122hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Nissan's genuine entry-level subcompact, replacing the aging Sentra-adjacent budget models with a real dedicated small-car platform shared globally as the Tiida. Sold as both a 5-door hatchback and, from 2007, a 4-door sedan — the hatchback offered a genuinely huge amount of interior space for the class." },
+            "SL": { engine:"1.8L QG18DE 4-cylinder (122hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Aspen White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Code Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Metallic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2012-2019)":{
+          years:["2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "S":  { engine:"1.6L HR16DE 4-cylinder (109hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"A genuine split in strategy — the sedan and hatchback stopped sharing a single nameplate this generation, with the hatch spun off as the standalone 'Versa Note' while the 4-door kept the plain Versa name. At launch, the Versa sedan was genuinely the cheapest new car sold in America." },
+            "SV": { engine:"1.6L HR16DE 4-cylinder (109hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SL": { engine:"1.6L HR16DE 4-cylinder (109hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Alert (Red)",hex:"#C8102E"},
+            {name:"Metallic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "S":  { engine:"1.6L HR16DE 4-cylinder (122hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuine ground-up redesign, sedan-only this time — the Versa Note hatchback was discontinued, leaving just the 4-door. Real styling and safety-tech upgrades made it look and feel far more grown-up than its budget price suggested. Nissan discontinued the Versa for the US market after 2025, ending its run as America's cheapest new car with no direct successor — the Sentra and Kicks now cover the low end of Nissan's US lineup instead." },
+            "SV": { engine:"1.6L HR16DE 4-cylinder (122hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+            "SR": { engine:"1.6L HR16DE 4-cylinder (122hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Fresh Powder (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Ember (Red)",hex:"#9B1B30"},
+            {name:"Deep Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Xterra": {
+      generations:{
+        "1st Gen (2000-2004)":{
+          years:["2000","2001","2002","2003","2004"],
+          trims:{
+            "XE": { engines:["2.4L KA24DE 4-cylinder (143hp)","3.3L VG33E V6 (170hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Genuinely filled the budget-friendly, rugged SUV role left vacant when the Pathfinder moved upmarket and unibody — a real truck-based (Frontier-derived) body-on-frame SUV aimed squarely at active, outdoorsy buyers. A distinctive roof-mounted rear cargo box was a genuine signature styling touch, functioning as a first-aid kit or gear-storage compartment." },
+            "SE": { engine:"3.3L VG33E V6 (170hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Molten Lava Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "2nd Gen (2005-2015)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "X":  { engines:["2.5L QR25DE 4-cylinder (152-165hp)","4.0L VQ40DE V6 (261-265hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic (5-Speed)", note:"A genuine ground-up redesign, sharing its platform with the second-gen Pathfinder and Frontier — still body-on-frame, still genuinely off-road capable. The 4-cylinder was dropped after 2011, leaving the V6 as the sole engine for the final years. Discontinued after 2015 with no direct successor for nearly a decade, though Nissan has since confirmed a genuine Xterra revival is in development, expected to keep a naturally-aspirated V6 rather than following the segment's shift to turbo fours." },
+            "S":  { engine:"4.0L VQ40DE V6 (261-265hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)" },
+            "PRO-4X": { engine:"4.0L VQ40DE V6 (261-265hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"Genuine off-road specialist trim with a locking rear differential, Bilstein shocks, and skid plates, sharing the badge and philosophy with the equivalent Frontier and Pathfinder trims." },
+          },
+          colors:[
+            {name:"Avalanche White (White)",hex:"#F5F5F5"},
+            {name:"Super Black (Black)",hex:"#1A1A1A"},
+            {name:"Lava Red (Red)",hex:"#9B1B30"},
+            {name:"Night Armor (Gray)",hex:"#4A4E52"},
+          ],
+        },
+      },
+    },
     "Z": {
       generations:{
         "Z32 300ZX (1990-1996)":{
