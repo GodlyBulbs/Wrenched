@@ -10382,6 +10382,91 @@ const VEHICLES = {
     },
   },
   "Mini": {
+    "Clubman": {
+      generations:{
+        "R55 (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (118-121hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely unique wagon-style stretch of the Cooper hatchback, adding 9.4 inches of length and a real 'Clubdoor' — a small, rear-hinged third door on the passenger side only (right-hand drive markets got it on the driver's side), a genuinely quirky solution rather than a conventional 4-door layout. Real split rear barn doors instead of a conventional hatch, a genuine nod to the original 1960s Mini Traveller/Countryman wagons." },
+            "S":    { engine:"1.6L Turbocharged 4-cylinder (172-181hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "JCW":  { engine:"1.6L Turbocharged 4-cylinder (208-211hp)", drivetrain:"FWD", transmission:"Manual", note:"Added 2009 — genuine performance flagship of the Clubman lineup." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Lightning Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "F54 (2016-2024)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 3-cylinder (134hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely major redesign — real conventional 4-door-plus-liftgate practicality replacing the old Clubdoor arrangement, and now built on BMW's shared UKL platform (also underpinning the BMW 2 Series Active Tourer). Real ALL4 AWD became available for the first time in Clubman history, a genuine point of difference against the standard hatchback." },
+            "S":    { engine:"2.0L Turbocharged 4-cylinder (189-192hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"] },
+            "JCW":  { engines:["2.0L Turbocharged 4-cylinder (228-231hp)","2.0L Turbocharged 4-cylinder (301-306hp)"], drivetrain:"AWD", transmission:"Automatic", note:"A genuinely massive 2023 update brought a real new, more powerful 2.0L engine shared with the BMW M135i — a genuine third more power and torque over the outgoing JCW tune, a real rarity for a mid-cycle refresh. This was also the final Clubman generation; production ended in 2024 with no direct successor, as Mini's lineup shifted toward the smaller Aceman crossover instead." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"British Racing Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+      },
+    },
+    "Cooper": {
+      generations:{
+        "R50 (2002-2006)":{
+          years:["2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The genuine non-supercharged sibling to the Cooper S, launched at the same time — a naturally-aspirated version of the same basic Tritec engine family (co-developed with Chrysler and built in Brazil), a real budget-friendlier entry point into the reborn BMW-era Mini lineup." },
+          },
+          colors:[
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Pure Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Astro Black (Black)",hex:"#1A1A1A"},
+            {name:"Liquid Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "R56 (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder N12 (118hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Real naturally-aspirated sibling to the turbocharged Cooper S of the same generation — genuinely simpler, genuinely cheaper to maintain, and a real favorite among owners who prioritized reliability over outright power. N16 engine (2011-2013) brought a modest power bump." },
+            "N16": { engine:"1.6L 4-cylinder N16 (121hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"2011-2013 — genuinely improved timing chain design over the earlier N12." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Lightning Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "F56 (2014-2021)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 3-cylinder B38 (134-136hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely major shift — the base Cooper's first-ever turbocharged engine, and genuinely Mini's first-ever 3-cylinder, sharing its basic B38 architecture with several BMW products. Real evidence that even the entry-level Mini had moved decisively away from naturally-aspirated simplicity." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Moonwalk Grey (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "F56 Facelift (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 3-cylinder (134hp)", drivetrain:"FWD", transmission:"Automatic (Dual-Clutch)", note:"Manual availability has narrowed significantly on the base Cooper in recent years, much like the Cooper S — check current-year specifics before assuming one's offered. This F56 generation is Mini's last gasoline-only hardtop; the redesigned Cooper that replaced it added a genuine parallel electric variant to the lineup for the first time." },
+          },
+          colors:[
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"British Racing Green (Green)",hex:"#2E5A3A"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"White Silver (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
     "Cooper S": {
       generations:{
         "R53 (2002-2006)":{
@@ -10436,6 +10521,54 @@ const VEHICLES = {
             {name:"British Racing Green (Green)",hex:"#2E5A3A"},
             {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
             {name:"White Silver (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
+    "Countryman": {
+      generations:{
+        "R60 (2011-2016)":{
+          years:["2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (121hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"Mini's first-ever genuine crossover/SUV, and the brand's largest model at the time — a real 4-door body style, a first for Mini in the US, with genuine ALL4 AWD available for real all-weather capability. Positioned as a practical, family-friendly Mini without abandoning the go-kart handling reputation entirely." },
+            "S":    { engine:"1.6L Turbocharged 4-cylinder (181-189hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"] },
+            "JCW":  { engine:"1.6L Turbocharged 4-cylinder (208-215hp)", drivetrain:"AWD", transmission:"Manual", note:"Added 2013 — genuine performance flagship, real AWD standard for maximum traction." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Lightning Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "F60 (2017-2023)":{
+          years:["2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 3-cylinder (134hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"A genuinely major redesign, growing larger and adopting real BMW UKL-platform underpinnings shared with the BMW X1 and X2. A genuine plug-in hybrid, the Countryman SE ALL4, arrived as a real first for Mini — combining a gas engine with an electric motor for genuine all-electric-only range before the gas engine engages." },
+            "S":    { engine:"2.0L Turbocharged 4-cylinder (189hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"] },
+            "JCW":  { engines:["2.0L Turbocharged 4-cylinder (228-231hp)","2.0L Turbocharged 4-cylinder (301hp)"], drivetrain:"AWD", transmission:"Automatic", note:"Received the same genuine major power upgrade as the JCW Clubman in its final years — a real jump to over 300hp, shared with the BMW M135i's engine." },
+            "SE ALL4": { engine:"1.5L Plug-In Hybrid 3-cylinder (221-306hp combined)", drivetrain:"AWD", transmission:"Automatic", note:"Mini's first-ever plug-in hybrid, genuinely capable of real all-electric-only driving for short trips before the gas engine kicks in." },
+          },
+          colors:[
+            {name:"Pepper White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"British Racing Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "U25 (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"1.5L Turbocharged 3-cylinder (170hp)", drivetrain:"FWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuinely all-new generation, real evidence of a deepened partnership with Great Wall Motors for manufacturing — built in China for the first time in Countryman history. A genuine all-electric variant, the Countryman SE ALL4, arrived alongside the gas models as a real full-EV option for the first time, not just a plug-in hybrid." },
+            "S":    { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+            "JCW":  { engine:"2.0L Turbocharged 4-cylinder (300hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the most powerful gas Countryman ever built." },
+            "SE ALL4": { engine:"Dual Electric Motors (308hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Mini's first genuine full-electric Countryman, a real technological leap from the previous generation's plug-in hybrid approach." },
+          },
+          colors:[
+            {name:"Chili Red (Red)",hex:"#C8102E"},
+            {name:"Nanuq White (White)",hex:"#F0F0F0"},
+            {name:"Midnight Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Legend Grey (Gray)",hex:"#6B6E6F"},
           ],
         },
       },
