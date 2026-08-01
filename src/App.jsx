@@ -10818,6 +10818,20 @@ const VEHICLES = {
         {name:"Brilliant Bronze Metallic (Bronze)",hex:"#B87333"},
       ],
     },
+    "Baja": {
+      years:["2003","2004","2005","2006"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (165hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"A genuinely unusual entry — a real unibody, car-based pickup built on the Legacy/Outback wagon platform, with a small bed and a novel 'switchback' pass-through into the cabin for hauling longer items. Standard AWD was a real point of difference against every other small pickup on the market. Never a big sales success, but a genuine cult favorite today for its oddball, one-of-a-kind concept." },
+        "Sport": { engine:"2.5L 4-cylinder (165hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Turbo": { engine:"2.5L Turbocharged 4-cylinder (210hp)", drivetrain:"AWD", transmission:"Manual (5-Speed)", note:"Shared its turbocharged engine with the contemporary WRX — genuinely quick for such an unusual little truck. Discontinued after 2006 with no direct successor, as Subaru stepped away from the pickup segment in the US entirely." },
+      },
+      colors:[
+        {name:"Crystal Gray Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "BRZ": {
       generations:{
         "1st Gen (2013-2020)":{
@@ -10848,6 +10862,54 @@ const VEHICLES = {
             {name:"Ice Silver Metallic (Silver)",hex:"#C0C0C0"},
             {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
             {name:"Solar Orange Pearl (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
+    "Crosstrek": {
+      generations:{
+        "1st Gen XV Crosstrek (2013-2017)":{
+          years:["2013","2014","2015","2016","2017"],
+          trims:{
+            "Premium": { engine:"2.0L 4-cylinder (148hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"], note:"Sold initially as the 'XV Crosstrek,' a genuine spiritual successor to the old Impreza Outback Sport — a lifted, cladding-equipped hatchback aimed at buyers wanting a smaller, more affordable alternative to the Outback. Built on the Impreza's platform, sharing its basic mechanical bones underneath the rugged styling." },
+            "Limited": { engine:"2.0L 4-cylinder (148hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Pure Red (Red)",hex:"#C8102E"},
+            {name:"Tangerine Orange Pearl (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "2nd Gen (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engines:["2.0L 4-cylinder (152hp)","2.5L 4-cylinder (182hp)"], drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Dropped the 'XV' from the name, now simply Crosstrek. A genuine plug-in Hybrid variant arrived 2019-2022, pairing Subaru's boxer engine with electric motors for a modest all-electric range. The more powerful 2.5L engine finally arrived for 2021, addressing a real, long-standing complaint that the Crosstrek was underpowered against rivals." },
+            "Premium": { engines:["2.0L 4-cylinder (152hp)","2.5L 4-cylinder (182hp)"], drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Limited": { engine:"2.5L 4-cylinder (182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Hybrid": { engine:"2.0L Plug-In Hybrid 4-cylinder (148hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"2019-2022 only — Subaru's first plug-in hybrid, with a modest genuine all-electric-only range before the gas engine engaged." },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Pure Red (Red)",hex:"#C8102E"},
+            {name:"Sun Bathed Orange Pearl (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "3rd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (180-182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuine ground-up redesign, sharing more with the current Impreza while keeping the same basic lifted-hatchback formula. The 2.5L engine became standard across the board by 2026, replacing the smaller 2.0L base engine entirely. A genuine next-generation series-parallel hybrid system arrived for 2026, a real technical step up from the older plug-in system used previously." },
+            "Sport": { engine:"2.5L 4-cylinder (180-182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Limited": { engine:"2.5L 4-cylinder (180-182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Wilderness": { engine:"2.5L 4-cylinder (180hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Added 2024 — genuine off-road specialist trim with 9.3 inches of ground clearance, all-terrain tires, and a real towing capacity bump to 3,500 lbs (vs. 1,500 lbs on other trims)." },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (194hp combined)", drivetrain:"AWD", transmission:"Automatic (e-CVT)", note:"Added 2026 — a genuine next-generation series-parallel hybrid system, a real technical departure from the earlier plug-in setup, offered on Sport and Limited trims." },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Lithium Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Autumn Green Metallic (Green)",hex:"#3B7A5A"},
           ],
         },
       },
@@ -11006,6 +11068,273 @@ const VEHICLES = {
             {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
             {name:"Solar Orange (Orange)",hex:"#E8601C"},
             {name:"Horizon Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Justy": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "DL": { engine:"1.2L 3-cylinder (73hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic (CVT)"], note:"Subaru's genuine budget entry-level economy hatchback, built in Japan on a rebadged Suzuki Cultus/Swift platform. A genuinely early adopter of CVT technology in the US — Subaru offered a continuously variable transmission on the Justy years before CVTs became common elsewhere in the industry. AWD was a real point of difference for such a tiny, cheap car." },
+      },
+      colors:[
+        {name:"White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cherry Red (Red)",hex:"#9B1B30"},
+        {name:"Sky Blue (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "Legacy": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "L":  { engine:"2.2L SOHC 4-cylinder (130hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"Subaru's genuine flagship sedan/wagon, replacing the aging Loyale and establishing the brand's now-signature symmetrical AWD system as a real, mainstream option rather than a niche feature. A genuinely turbocharged version was offered in limited numbers early on before being dropped." },
+            "LS": { engine:"2.2L SOHC 4-cylinder (130hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ivory White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cherry Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "L":  { engine:"2.2L SOHC 4-cylinder (137hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"Introduced the Outback trim for 1995 — initially just a raised-suspension, cladding-equipped version of the Legacy wagon, genuinely credited as one of the earliest true crossover concepts, arriving a full three years before the Lexus RX. A 2.5L DOHC engine and full GT trim arrived for 1996." },
+            "GT": { engine:"2.5L DOHC 4-cylinder (155-165hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sequoia Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (2000-2004)":{
+          years:["2000","2001","2002","2003","2004"],
+          trims:{
+            "L":  { engine:"2.5L 4-cylinder (165hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"The Outback fully split off as its own standalone model this generation, no longer just a Legacy trim level. A genuine turbocharged GT arrived for 2000, a real return to Subaru's turbo roots in the US market." },
+            "GT": { engine:"2.5L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Manual (5-Speed)", note:"Genuinely potent for a mainstream family sedan/wagon of the era — the same basic turbo-four family that powered the contemporary WRX." },
+          },
+          colors:[
+            {name:"White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Blue Ridge Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2005-2009)":{
+          years:["2005","2006","2007","2008","2009"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (168hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"A 3.0L flat-6 (H6) joined the lineup as a smooth, naturally-aspirated alternative to the turbo GT — a genuine choice between two very different performance characters." },
+            "2.5GT": { engine:"2.5L Turbocharged 4-cylinder (243-250hp)", drivetrain:"AWD", transmissions:["Manual (5-Speed/6-Speed)","Automatic"], note:"A real Spec.B trim (2007-2009) added a 6-speed manual and genuine performance-tuned suspension for the enthusiast crowd." },
+            "3.0R": { engine:"3.0L H6 (245hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Newport Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen (2010-2014)":{
+          years:["2010","2011","2012","2013","2014"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (170hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (CVT)"], note:"Grew genuinely larger and more mainstream in character. The turbo GT was only offered for the 2010 model year before being dropped for good — the final year any Legacy sedan offered turbo power in the US. A 3.6L H6 replaced the old 3.0L." },
+            "2.5GT": { engine:"2.5L Turbocharged 4-cylinder (265hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"2010 only — the last turbocharged Legacy sedan ever sold in the US." },
+            "3.6R": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Newport Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "6th Gen (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (175hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuinely more conservative, mainstream-focused redesign — no manual, no turbo, a real shift toward comfort and efficiency over the sportier character of earlier generations." },
+            "3.6R": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Venetian Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Twilight Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "7th Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuine return of turbo power for the Legacy sedan, sharing its platform with the Outback — the 3.6L H6 was dropped in favor of a smaller, more efficient turbocharged four-cylinder as the range-topping engine. This was also the final Legacy generation; Subaru discontinued the sedan after 2025, the last one rolling off the line in Lafayette, Indiana, with no direct successor as the brand shifted fully toward crossovers." },
+            "Sport": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Limited": { engines:["2.5L 4-cylinder (182hp)","2.4L Turbocharged 4-cylinder (260hp)"], drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Autumn Green Metallic (Green)",hex:"#3B7A5A"},
+          ],
+        },
+      },
+    },
+    "Loyale": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "DL": { engine:"1.8L 4-cylinder (90hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"The final years of Subaru's genuine bread-and-butter compact before the Impreza and Legacy took over — sold as sedan, wagon, and a genuine 4WD Turbo wagon variant, with the 'Loyale' name itself (short for 'loyalty') applied for its last US-market generation to distinguish it from the newer Legacy that launched alongside it." },
+        "L":  { engine:"1.8L 4-cylinder (90hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"] },
+      },
+      colors:[
+        {name:"White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cherry Red (Red)",hex:"#9B1B30"},
+        {name:"Teal Metallic (Teal)",hex:"#1E8A8A"},
+      ],
+    },
+    "Outback": {
+      generations:{
+        "2nd Gen (2000-2004)":{
+          years:["2000","2001","2002","2003","2004"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (165hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"Fully split off as its own standalone model this generation, no longer just a Legacy wagon trim — a real acknowledgment of how big a role the Outback had come to play in Subaru's lineup and identity. A genuine 3.0L H6 (VDC trim) joined for extra smoothness and power." },
+            "Limited": { engine:"2.5L 4-cylinder (165hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "VDC": { engine:"3.0L H6 (212hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added Vehicle Dynamics Control (Subaru's stability control system) as standard, a real safety technology ahead of many rivals at the time." },
+          },
+          colors:[
+            {name:"White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Sedona Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Blue Ridge Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2005-2009)":{
+          years:["2005","2006","2007","2008","2009"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (168hp)", drivetrain:"AWD", transmissions:["Manual","Automatic"], note:"A genuine turbocharged XT trim brought real performance to the wagon-based crossover formula, a rarity for the segment. Grew larger again, further distancing itself visually from the Legacy sedan it was still mechanically related to." },
+            "2.5XT": { engine:"2.5L Turbocharged 4-cylinder (243-250hp)", drivetrain:"AWD", transmissions:["Manual (5-Speed)","Automatic"] },
+            "3.0R": { engine:"3.0L H6 (245hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Sage Green Metallic (Green)",hex:"#5A7A5A"},
+          ],
+        },
+        "4th Gen (2010-2014)":{
+          years:["2010","2011","2012","2013","2014"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (170hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuinely major shift — taller, more upright, and more SUV-like than ever, moving further from its wagon roots. The turbo XT was dropped this generation, replaced by a 3.6L H6 as the power option." },
+            "3.6R": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Cypress Green Pearl (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "5th Gen (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "2.5i": { engine:"2.5L 4-cylinder (175hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"The genuinely more popular of the two Legacy-platform siblings by a wide margin — the Outback consistently outsold the sedan it shared its bones with. Real EyeSight driver-assist technology became widely available across the lineup this generation." },
+            "3.6R": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Venetian Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Wilderness Green Metallic (Green)",hex:"#3B5A3A"},
+          ],
+        },
+        "6th Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuine turbo return for the Outback too, with the H6 dropped in favor of the smaller, torquier turbo-four as the upper-trim engine. The genuinely off-road-focused Wilderness trim arrived for 2022, with real factory-lifted suspension, all-terrain tires, and beefed-up underbody protection — a serious answer to buyers cross-shopping the Outback against truck-based SUVs." },
+            "Onyx Edition": { engine:"2.5L 4-cylinder (182hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Wilderness": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"Added 2022 — genuine off-road specialist trim, a real departure from the Outback's traditionally more road-focused character." },
+            "Touring": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Autumn Green Metallic (Green)",hex:"#3B7A5A"},
+          ],
+        },
+        "7th Gen (2026)":{
+          years:["2026"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (180hp)", drivetrain:"AWD", transmission:"Automatic (CVT)", note:"A genuinely boxier, more SUV-like redesign — a real departure from the softer, wagon-derived silhouette the Outback had carried since its very beginning, now looking much closer to a conventional crossover SUV. With the Legacy sedan discontinued after 2025, the Outback effectively stands alone as Subaru's flagship, taking over that role fully." },
+            "Wilderness": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+            "Touring": { engine:"2.4L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Cascade Green Metallic (Green)",hex:"#3B5A3A"},
+          ],
+        },
+      },
+    },
+    "Solterra": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Premium": { engine:"Dual Electric Motors (214hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Subaru's first-ever dedicated EV, co-developed with Toyota (which sold its own version as the bZ4X) — genuinely built on a shared platform, though Subaru tuned the suspension and standardized AWD across the whole lineup, staying true to the brand's symmetrical AWD identity even in electric form. A genuine X-Mode off-road traction system carried over from Subaru's gas-powered lineup, a real point of difference against most other compact EVs." },
+        "Limited": { engine:"Dual Electric Motors (214hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Touring": { engine:"Dual Electric Motors (214hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Crystal White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+        {name:"Autumn Green Metallic (Green)",hex:"#3B7A5A"},
+        {name:"Frost Pearl (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "SVX": {
+      years:["1992","1993","1994","1995","1996","1997"],
+      trims:{
+        "LS":  { engine:"3.3L H6 (231hp)", drivetrain:"FWD", transmission:"Automatic (4-Speed)", note:"A genuinely bold, unusual grand-touring coupe from a brand not otherwise known for style — real aircraft-inspired 'window-in-window' glass, with only the lower portion of each side window able to roll down. Subaru's largest, most powerful engine at the time, a real showcase of what the brand could do outside its usual economy-car wheelhouse. Sold in the US with front-wheel drive only for most of the run, despite AWD being available in some other markets." },
+        "LSi": { engine:"3.3L H6 (231hp)", drivetrain:"FWD", transmission:"Automatic (4-Speed)" },
+        "L":   { engine:"3.3L H6 (231hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)", note:"AWD became available for 1992-1994, a genuine rarity for a personal luxury coupe of this era. Discontinued after 1996 in the US (1997 elsewhere) with no direct successor, as Subaru retreated fully back to its practical, AWD-wagon identity." },
+      },
+      colors:[
+        {name:"Silver Sheen Metallic (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cherry Red (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Tribeca": {
+      generations:{
+        "1st Gen — B9 Tribeca (2006-2007)":{
+          years:["2006","2007"],
+          trims:{
+            "Limited": { engine:"3.0L H6 (245hp)", drivetrain:"AWD", transmission:"Automatic", note:"Subaru's first-ever 3-row crossover, launched with a genuinely polarizing 'nose cone' front grille design widely criticized at the time — real evidence that not every Subaru styling risk paid off. Named for New York's TriBeCa neighborhood, an unusual choice for a Japanese SUV." },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Garnet Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Seaside Blue Pearl (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Premium": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuine facelift toning down the controversial original nose, dropping the 'B9' prefix to become simply 'Tribeca.' A larger, more powerful 3.6L H6 replaced the original 3.0L. Never a strong seller against established 3-row rivals; discontinued after 2014 with no direct successor, leaving Subaru without a 3-row option until the Ascent arrived years later." },
+            "Limited": { engine:"3.6L H6 (256hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Satin White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Crystal Black Silica (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red Pearl (Red)",hex:"#9B1B30"},
+            {name:"Deep Indigo Pearl (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
