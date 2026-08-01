@@ -12338,6 +12338,248 @@ const VEHICLES = {
       },
     },
   },
+  "Suzuki": {
+    "Aerio": {
+      years:["2002","2003","2004","2005","2006","2007"],
+      trims:{
+        "S": { engines:["2.0L I4 (127hp)","2.3L I4 (155hp)"], drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"Replaced the aging Esteem, offered as both a genuine sedan and a distinctive SX hatchback body style — real tall, upright proportions gave it more interior room than its compact footprint suggested. Real AWD availability, a genuine rarity for a compact car of this era, was a point of real differentiation against the Civic and Corolla. The larger 2.3L engine arrived for 2004." },
+        "LX": { engine:"2.3L I4 (155hp)", drivetrains:["FWD","AWD"], transmission:"Automatic" },
+        "SX": { engine:"2.3L I4 (155hp)", drivetrain:"AWD", transmission:"Automatic", note:"The genuine hatchback body style, dropped after 2006 — the sedan continued alone for the Aerio's final 2007 model year before being replaced by the SX4." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Cyclone Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Equator": {
+      years:["2009","2010","2011","2012"],
+      trims:{
+        "Base": { engine:"2.5L I4 (152hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"A genuine badge-engineered version of the Nissan Frontier, built at the same Nissan plant in Smyrna, Tennessee — a real product of the same Renault-Nissan alliance that saw GM and Suzuki collaborate on other models. Suzuki's genuine last-ditch attempt to round out its US lineup with a pickup before exiting the American car market entirely." },
+        "Sport": { engine:"4.0L V6 (261hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Discontinued after 2012 alongside the rest of Suzuki's US car lineup, with no direct successor — Suzuki's very last new pickup truck sold in America." },
+      },
+      colors:[
+        {name:"Super White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+        {name:"Metallic Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Esteem": {
+      years:["1995","1996","1997","1998","1999","2000","2001","2002"],
+      trims:{
+        "GL": { engine:"1.6L I4 (95hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Suzuki's genuine step up from the tiny Swift, aimed at the Civic and Corolla — sold as a sedan and, briefly, a genuine wagon body style. Real reliability and value made it a genuine sleeper pick in the compact segment, even if it never sold in huge numbers." },
+        "GLX": { engine:"1.8L I4 (122hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely more powerful trim, with a real 16-valve DOHC engine. Discontinued after 2002, replaced by the Aerio." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+        {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Forenza": {
+      years:["2004","2005","2006","2007","2008"],
+      trims:{
+        "S": { engine:"2.0L I4 (119-127hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely rebadged Daewoo Lacetti (Nubira), styled by real Pininfarina design work — a real product of the tangled GM-Daewoo-Suzuki corporate relationship of the mid-2000s, sold in the US through Suzuki's own dealer network. Offered as a genuine sedan and, from 2005, a real wagon body style." },
+        "LX": { engine:"2.0L I4 (127hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "EX": { engine:"2.0L I4 (127hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 2008, alongside the closely related Reno hatchback — Suzuki's compact-car lineup consolidated around the SX4 going forward." },
+      },
+      colors:[
+        {name:"Superior White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Grand Vitara": {
+      generations:{
+        "1st Gen (1999-2005)":{
+          years:["1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "JS": { engine:"2.0L I4 (127-140hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Suzuki's genuine step up from the smaller Sidekick — real body-on-frame construction with genuine part-time 4WD and a low-range transfer case, aimed at buyers wanting authentic off-road capability at a real budget price. A genuine V6 arrived for 2001, a real power option most rivals in this price class didn't offer." },
+            "JLX": { engines:["2.0L I4 (140hp)","2.5L V6 (155-165hp)"], drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Twilight Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2006-2013)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"2.4L I4 (166hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuine ground-up redesign, still body-on-frame and genuinely off-road capable, though now with real independent front suspension for improved on-road manners. This was Suzuki's longest-surviving US model, remaining on sale right up until the brand's complete withdrawal from the American car market at the end of 2012 (with lingering 2013 leftover-stock sales)." },
+            "Premium": { engine:"3.2L V6 (230hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"Genuine V6 option, sharing engineering roots with GM — a real power flagship for the whole Suzuki lineup at the time." },
+          },
+          colors:[
+            {name:"Superior White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Kizashi": {
+      years:["2010","2011","2012","2013"],
+      trims:{
+        "S": { engine:"2.4L I4 (180-185hp)", drivetrain:"FWD", transmissions:["Manual (6-Speed)","Automatic (CVT)"], note:"Genuinely one of the best-reviewed cars Suzuki ever sold in America, and a real irony that it arrived just as the brand's US car business was collapsing — critics widely praised its sharp handling and genuine mid-size sedan value. Manual output (185hp) was slightly higher than CVT-equipped cars (180hp)." },
+        "SE": { engine:"2.4L I4 (180-185hp)", drivetrains:["FWD","AWD"], transmissions:["Manual (6-Speed)","Automatic (CVT)"], note:"Genuine AWD option, a real rarity in the mid-size sedan segment at the time." },
+        "GTS": { engine:"2.4L I4 (180-185hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)" },
+        "Sport": { engine:"2.4L I4 (185hp)", drivetrain:"FWD", transmission:"Manual (6-Speed)", note:"Genuine sport-tuned suspension and unique styling — a real enthusiast trim for a brand not otherwise known for performance cars. Discontinued after 2013 as Suzuki formally exited the US automobile market entirely at the end of that year, focusing afterward on motorcycles, ATVs, and marine engines only." },
+      },
+      colors:[
+        {name:"Pearl White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bold Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Cosmic Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Reno": {
+      years:["2005","2006","2007","2008"],
+      trims:{
+        "S": { engine:"2.0L I4 (127hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuinely just the hatchback version of the Forenza, sharing every mechanical component but wearing distinct styling — a real attempt to give the same rebadged Daewoo underpinnings broader appeal by covering more body styles. Discontinued after 2008 alongside the Forenza." },
+        "EX": { engine:"2.0L I4 (127hp)", drivetrain:"FWD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Superior White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Samurai": {
+      years:["1990","1991","1992","1993","1994","1995"],
+      trims:{
+        "JX": { engine:"1.3L I4 (63hp)", drivetrain:"4WD", transmission:"Manual", note:"A genuinely tiny, purpose-built off-roader — light weight, real part-time 4WD with a low-range transfer case, and a distinctive soft-top/hardtop convertible body. Genuinely controversial in the US after a 1988 Consumer Reports rollover test claim that dogged the model's reputation for years, a claim Suzuki disputed and eventually sued over. A real cult favorite among off-road enthusiasts today for its light weight and genuine trail capability." },
+        "JL": { engine:"1.3L I4 (63hp)", drivetrain:"4WD", transmission:"Manual", note:"Discontinued in the US after 1995, though continued being built and sold in other markets for years afterward." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Sahara Beige (Tan)",hex:"#C8B896"},
+      ],
+    },
+    "Sidekick": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998"],
+      trims:{
+        "JS": { engine:"1.6L I4 (80-95hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine step up from the tiny Samurai — real 2-door and 4-door body styles (the 4-door long-wheelbase version arrived for 1991), with genuine part-time 4WD and a low-range transfer case. Also sold in North America as the Chevrolet/Geo Tracker, a real product of the CAMI joint-venture plant Suzuki shared with GM in Ontario, Canada." },
+        "JX": { engine:"1.6L I4 (95hp)", drivetrain:"4WD", transmission:"Automatic" },
+        "JLX": { engine:"1.6L I4 (95hp)", drivetrain:"4WD", transmission:"Automatic", note:"Top trim, 4-door only." },
+        "Sport": { engine:"2.0L V6 (120hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 1996 — genuine V6 power option for the Sidekick's final years before it was replaced by the Vitara/Grand Vitara for 1999." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+        {name:"Cyclone Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Swift": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "GA": { engine:"1.0L I4 (55hp)", drivetrain:"FWD", transmission:"Manual", note:"Suzuki's genuine entry-level economy hatchback, a rebadged version of the Suzuki Cultus and closely related to the GM-badged Geo Metro/Chevrolet Sprint sold at the very same time through different dealer networks. A genuine sedan body style was also offered alongside the hatchback." },
+            "GL": { engine:"1.3L I4 (70hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "GT": { engine:"1.6L DOHC I4 (100hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuinely quick and light for its class — Car and Driver tested it against contemporary sport coupes and it held its own on pure agility, if not outright power. A real cult favorite among budget-minded enthusiasts of the era." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1995-2001)":{
+          years:["1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"1.3L I4 (70hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, though still built on largely carryover mechanicals — real budget-price positioning remained the whole point, competing on price against the Geo Metro/Chevrolet Metro badge-siblings and the Hyundai Excel. Discontinued in the US after 2001 with no direct successor, as Suzuki's US lineup shifted upmarket toward the Aerio and later SX4." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+            {name:"Sky Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "SX4": {
+      years:["2007","2008","2009","2010","2011","2012","2013"],
+      trims:{
+        "Base": { engine:"2.0L I4 (143-150hp)", drivetrains:["FWD","4WD"], transmission:"Manual", note:"Replaced the Aerio, offered as both a genuine hatchback and sedan — the hatchback came standard with real AWD, a genuine rarity for the class, while the sedan was FWD-only. Co-developed with Fiat, which sold its own badge-engineered version as the Sedici in Europe. This was genuinely Suzuki's last new model launch in the US before the brand's 2012 exit from the American car market." },
+        "Sport": { engine:"2.0L I4 (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Sedan-only trim, genuinely sportier styling and suspension tuning." },
+        "SE": { engine:"2.0L I4 (150hp)", drivetrain:"4WD", transmission:"Automatic (CVT)" },
+      },
+      colors:[
+        {name:"Superior White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Verona": {
+      years:["2004","2005","2006"],
+      trims:{
+        "S": { engine:"2.5L Inline-6 (155hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine rebadged Daewoo Magnus, positioned as Suzuki's mid-size flagship sedan — real Italdesign styling, and a genuinely unusual inline-6 engine layout for a front-wheel-drive family sedan, a rarity in this segment. Standard automatic transmission across the whole lineup, no manual ever offered." },
+        "LX": { engine:"2.5L Inline-6 (155hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "EX": { engine:"2.5L Inline-6 (155hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 2006 with no direct successor — Suzuki's mid-size sedan slot went unfilled in the US until the Kizashi arrived several years later." },
+      },
+      colors:[
+        {name:"Superior White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "X-90": {
+      years:["1996","1997","1998"],
+      trims:{
+        "Base": { engine:"1.6L I4 (95hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely bizarre, one-of-a-kind concept — a 2-seat-only coupe/SUV hybrid built on the Sidekick/Vitara platform, with a real T-top removable roof and a genuine separate trunk, despite the SUV-like body-on-frame construction and available 4WD underneath. Real cult curiosity value today for its sheer weirdness — genuinely nothing else on the market looked or was configured like it. Only around 7,200 were sold in the US across its short run, replacing the Samurai in Suzuki's lineup before being discontinued itself after 1998 with no direct successor." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+      ],
+    },
+    "XL7": {
+      generations:{
+        "1st Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "Base": { engines:["2.5L V6 (155hp)","2.7L V6 (185hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual (5-Speed)","Automatic"], note:"Suzuki's genuine flagship SUV, slotting above the Grand Vitara — a real stretched, body-on-frame version of that platform with genuine third-row seating for up to seven. A real 5-speed manual transmission was offered, a genuine rarity for a 3-row SUV in this segment. The larger 2.7L V6 arrived for 2004, a genuine power bump." },
+            "Touring": { engine:"2.7L V6 (185hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Silver Ice Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2007-2009)":{
+          years:["2007","2008","2009"],
+          trims:{
+            "Base": { engine:"3.6L V6 (252hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuinely major shift — moved to a GM-sourced unibody crossover platform, closely related to the Chevrolet Equinox/Saturn Outlook family, real evidence of the deepening GM-Suzuki partnership by this point. A genuine 3.6L V6, more powerful than any prior Suzuki engine, replaced the old 2.7L. Discontinued after 2009 with no direct successor, as Suzuki's US SUV lineup contracted to just the Grand Vitara for its remaining years in the American market." },
+            "Luxury": { engine:"3.6L V6 (252hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Superior White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+  },
   "Toyota": {
     "4Runner": {
       generations:{
