@@ -8421,6 +8421,75 @@ const VEHICLES = {
     },
   },
   "Hyundai": {
+    "Accent": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "L": { engine:"1.5L SOHC 4-cylinder (92hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Excel as Hyundai's genuine entry-level subcompact, sold as both a sedan and a hatchback — a real step up in quality and refinement over the notoriously rough Excel it succeeded." },
+            "GS": { engine:"1.5L SOHC 4-cylinder (92hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Regatta Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2000-2005)":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GL": { engine:"1.5L SOHC 4-cylinder (92hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine mid-cycle redesign, with a real 1.6L engine option arriving for buyers wanting a bit more power than the base 1.5L." },
+            "GS": { engine:"1.6L DOHC 4-cylinder (104hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Ivory White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sonic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2006-2011)":{
+          years:["2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "GLS": { engine:"1.6L DOHC 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely more mature, rounder redesign, with real safety and quality improvements that helped Hyundai's brand image climb throughout the 2000s." },
+            "SE": { engine:"1.6L DOHC 4-cylinder (110hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Noble White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2012-2017)":{
+          years:["2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "GLS": { engine:"1.6L GDI 4-cylinder (138hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely striking, swoopy 'Fluidic Sculpture' redesign — real evidence of Hyundai's design language maturing well past its budget-brand roots." },
+            "SE": { engine:"1.6L GDI 4-cylinder (138hp)", drivetrain:"FWD", transmission:"Manual" },
+          },
+          colors:[
+            {name:"Century White (White)",hex:"#F5F5F5"},
+            {name:"Ultra Black (Black)",hex:"#1A1A1A"},
+            {name:"Boston Red (Red)",hex:"#9B1B30"},
+            {name:"Marathon Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "5th Gen (2018-2022)":{
+          years:["2018","2019","2020","2021","2022"],
+          trims:{
+            "SE": { engine:"1.6L GDI 4-cylinder (120-132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely sharper, more angular redesign for its final US-market generation. Discontinued after 2022 as Hyundai streamlined its electrified lineup and shifted focus toward the Venue and Elantra to cover the segment's lower end." },
+            "SEL": { engine:"1.6L GDI 4-cylinder (120-132hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Ceramic White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Red (Red)",hex:"#9B1B30"},
+            {name:"Intense Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
     "Elantra": {
       generations:{
         "J1 (1991-1995)":{
@@ -8516,6 +8585,236 @@ const VEHICLES = {
             {name:"Abyss Black (Black)",hex:"#1A1A1A"},
             {name:"Intense Blue (Blue)",hex:"#1E4B8E"},
             {name:"Performance Blue (Blue)",hex:"#1C6BE8"},
+          ],
+        },
+      },
+    },
+    "Excel": {
+      years:["1990","1991","1992","1993","1994"],
+      trims:{
+        "GL": { engine:"1.5L SOHC 4-cylinder (68-81hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Hyundai's first-ever model sold in the US, launched back in 1986 — a genuine badge-engineered Mitsubishi Precis sibling underneath, built on a licensed Mitsubishi Mirage platform. Real budget pricing made it a genuine sales phenomenon early on, though a real reputation for rough build quality and reliability issues followed it for years." },
+        "GLS": { engine:"1.5L SOHC 4-cylinder (81hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 1994, replaced by the genuinely more refined Accent — a real turning point for Hyundai's quality reputation in the US." },
+      },
+      colors:[
+        {name:"Crystal White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Regatta Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Santa Fe": {
+      generations:{
+        "1st Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "GLS": { engines:["2.4L 4-cylinder (149hp)","2.7L V6 (173-181hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Hyundai's genuine first-ever SUV/crossover for the US market — real, distinctively rounded 'jellybean' styling that stood apart from the boxier SUVs common at the time, a real gamble that paid off as the Santa Fe quickly became one of Hyundai's best-selling models." },
+            "LX": { engine:"2.7L V6 (173-181hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ivory White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sonic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "GLS": { engines:["2.7L V6 (185hp)","3.3L V6 (242-249hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely more conventional, boxier redesign, adding a real third-row seat option for the first time — a genuine 7-passenger configuration to compete with larger family-hauler rivals." },
+            "Limited": { engine:"3.3L V6 (242-249hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Noble White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2013-2018)":{
+          years:["2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "GLS": { engine:"2.4L 4-cylinder (190hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine lineup split — the standard 2-row Santa Fe Sport and the longer, 3-row Santa Fe (later Santa Fe XL) were sold side by side as distinct models sharing one badge family, a real point of confusion for shoppers that Hyundai eventually simplified in the next generation." },
+            "Sport 2.0T": { engine:"2.0L Turbocharged 4-cylinder (240-264hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "XL": { engine:"3.3L V6 (290hp)", drivetrain:"AWD", transmission:"Automatic", note:"The genuine 3-row, long-wheelbase variant." },
+          },
+          colors:[
+            {name:"Frost White (White)",hex:"#F5F5F5"},
+            {name:"Becketts Black (Black)",hex:"#1A1A1A"},
+            {name:"Serrano Red (Red)",hex:"#9B1B30"},
+            {name:"Marlin Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "SE": { engine:"2.4L 4-cylinder (185hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine simplification back to a single, unified Santa Fe model, dropping the Sport/XL split of the prior generation — real bold, angular styling and a genuine Hybrid variant arrived for 2021, a first for the nameplate." },
+            "SEL": { engines:["2.4L 4-cylinder (185hp)","2.5L Turbocharged 4-cylinder (277-281hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)" },
+            "Calligraphy": { engine:"2.5L Turbocharged 4-cylinder (277-281hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine flagship trim, added 2021 with the most premium interior appointments." },
+            "Hybrid": { engine:"1.6L Turbocharged Hybrid 4-cylinder (226hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Added 2021, Santa Fe's first-ever hybrid variant." },
+          },
+          colors:[
+            {name:"Quartz White (White)",hex:"#F5F5F5"},
+            {name:"Twilight Black (Black)",hex:"#1A1A1A"},
+            {name:"Calypso Red (Red)",hex:"#9B1B30"},
+            {name:"Cyber Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "5th Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "SE": { engine:"2.5L Turbocharged 4-cylinder (277hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuinely dramatic, boxy redesign with real off-road-adjacent styling cues — a distinct visual departure from the smoother, rounder shapes Hyundai had used for the Santa Fe up to this point. A genuine Hybrid variant continues alongside the standard turbo engine." },
+            "SEL": { engines:["2.5L Turbocharged 4-cylinder (277hp)","1.6L Turbocharged Hybrid 4-cylinder (231hp combined)"], drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)" },
+            "Calligraphy": { engine:"2.5L Turbocharged 4-cylinder (277hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Serenity White (White)",hex:"#F5F5F5"},
+            {name:"Abyss Black (Black)",hex:"#1A1A1A"},
+            {name:"Serengeti Orange (Orange)",hex:"#B8562A"},
+            {name:"Cyber Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Sonata": {
+      generations:{
+        "Y2 Tail (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (92-128hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Hyundai's genuine step up into the mid-size sedan segment, developed with real Mitsubishi engineering assistance during the brand's earliest years in the US market." },
+            "GLS": { engine:"3.0L V6 (142hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Regatta Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Y3 (1995-1998)":{
+          years:["1995","1996","1997","1998"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (128hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign with real quality and refinement improvements, still using Mitsubishi-derived powertrains." },
+            "GLS": { engine:"3.0L V6 (142hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ivory White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sonic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "EF (1999-2005)":{
+          years:["1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GLS": { engine:"2.4L 4-cylinder (149hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely smoother, more Jaguar-esque redesign — a real style statement for the brand. This generation gradually moved from Mitsubishi-derived engines toward Hyundai's own in-house-developed powertrains." },
+            "LX": { engines:["2.5L V6 (170hp)","2.7L V6 (170hp)"], drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Noble White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Red (Red)",hex:"#9B1B30"},
+            {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "NF (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "GLS": { engine:"2.4L 4-cylinder (162-175hp)", drivetrain:"FWD", transmission:"Automatic", note:"The first Sonata ever built at Hyundai's own US assembly plant in Montgomery, Alabama, and the first with all-Hyundai-designed engines throughout the lineup — a real milestone generation for the brand's American manufacturing presence." },
+            "Limited": { engine:"3.3L V6 (234-249hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Powder White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Tango Red (Red)",hex:"#9B1B30"},
+            {name:"Dark Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "YF (2011-2014)":{
+          years:["2011","2012","2013","2014"],
+          trims:{
+            "GLS": { engine:"2.4L 4-cylinder (198hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"A genuinely dramatic, swoopy 'Fluidic Sculpture' redesign that dropped the V6 entirely in favor of a real turbocharged four-cylinder as the performance option — a genuine hybrid variant also arrived, Hyundai's first." },
+            "2.0T": { engine:"2.0L Turbocharged 4-cylinder (274hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+            "Hybrid": { engine:"2.4L Hybrid 4-cylinder (206hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Shimmering White (White)",hex:"#F5F5F5"},
+            {name:"Midnight Black (Black)",hex:"#1A1A1A"},
+            {name:"Venetian Red (Red)",hex:"#9B1B30"},
+            {name:"Indigo Night Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "LF (2015-2019)":{
+          years:["2015","2016","2017","2018","2019"],
+          trims:{
+            "SE": { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"A genuinely more conservative, toned-down redesign compared to the swoopy YF, with a real broader range of turbocharged and hybrid engine choices than any prior Sonata generation." },
+            "Eco": { engine:"1.6L Turbocharged 4-cylinder (177-178hp)", drivetrain:"FWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+            "Sport 2.0T": { engine:"2.0L Turbocharged 4-cylinder (245hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+            "Hybrid": { engine:"2.0L Hybrid 4-cylinder (193hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Quartz White (White)",hex:"#F5F5F5"},
+            {name:"Phantom Black (Black)",hex:"#1A1A1A"},
+            {name:"Scarlet Red (Red)",hex:"#9B1B30"},
+            {name:"Marlin Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "DN8 (2020-2024)":{
+          years:["2020","2021","2022","2023","2024"],
+          trims:{
+            "SE": { engine:"2.5L 4-cylinder (191hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"A genuinely striking redesign with real chrome trim lines integrated into the body sculpting — a distinctive, love-it-or-hate-it design that made the Sonata stand out sharply from segment rivals. The N Line performance trim brought genuine turbocharged power and sport-tuned handling for the first time under that badge." },
+            "SEL": { engines:["2.5L 4-cylinder (191hp)","1.6L Turbocharged 4-cylinder (180hp)"], drivetrain:"FWD", transmission:"Automatic (8-Speed)" },
+            "N Line": { engine:"2.5L Turbocharged 4-cylinder (290hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Added 2021 — genuine performance flagship, the most powerful Sonata ever built to that point." },
+            "Hybrid": { engine:"2.0L Hybrid 4-cylinder (192hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Quartz White (White)",hex:"#F5F5F5"},
+            {name:"Abyss Black (Black)",hex:"#1A1A1A"},
+            {name:"Calypso Red (Red)",hex:"#9B1B30"},
+            {name:"Portofino Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "8th Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "SEL": { engine:"2.5L 4-cylinder (191hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"A genuinely thorough mid-cycle refresh so significant that some considered it a real new generation in its own right — real AWD became available for the first time in Sonata history, and a new N Line grade brought sportier styling to the lineup." },
+            "N Line": { engine:"2.5L Turbocharged 4-cylinder (290hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed Dual-Clutch)" },
+            "Limited": { engines:["2.5L 4-cylinder (191hp)","2.0L Hybrid 4-cylinder (192hp combined)"], drivetrains:["FWD","AWD"], transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Serenity White (White)",hex:"#F5F5F5"},
+            {name:"Abyss Black (Black)",hex:"#1A1A1A"},
+            {name:"Serengeti Orange (Orange)",hex:"#B8562A"},
+            {name:"Portofino Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Tiburon": {
+      generations:{
+        "1st Gen (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (128hp)", drivetrain:"FWD", transmission:"Manual (5-Speed)", note:"Hyundai's first-ever genuine sport coupe for the US market — real pop-up-adjacent, sharply creased styling aimed squarely at the Honda Prelude and Toyota Celica. The larger 2.0L engine arrived for 2000, a real power bump for the final two years of this generation. No 2002 model year was offered during the transition to the redesigned second generation." },
+            "FX": { engine:"2.0L 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual (5-Speed)","Automatic"], note:"Added 2000 with the larger engine and genuine sport-tuned suspension." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sonic Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "GS": { engine:"2.0L 4-cylinder (138-140hp)", drivetrain:"FWD", transmissions:["Manual (5-Speed)","Automatic"], note:"A genuinely sleeker, more aggressive redesign, real work by designer Peter Schreyer (who later became Hyundai/Kia's chief design officer) — a real turning point for the brand's design ambitions. A genuine V6 option arrived for the first time in Tiburon history." },
+            "GT V6": { engine:"2.7L V6 (172-181hp)", drivetrain:"FWD", transmissions:["Manual (5-Speed/6-Speed)","Automatic"], note:"Genuine performance flagship. Discontinued after 2008 with no direct successor, as Hyundai stepped away from the affordable sport-coupe segment entirely for over a decade." },
+          },
+          colors:[
+            {name:"Noble White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tsukuba Red (Red)",hex:"#9B1B30"},
+            {name:"Vivid Blue (Blue)",hex:"#1E4B8E"},
           ],
         },
       },
@@ -8779,6 +9078,84 @@ const VEHICLES = {
     },
   },
   "Jeep": {
+    "Cherokee": {
+      generations:{
+        "XJ (1990-2001)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"2.5L I4 (130hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Genuinely one of the most influential SUVs ever built — the XJ pioneered real unibody construction in a segment dominated by body-on-frame trucks, a template the entire compact-SUV class eventually followed. The legendary 4.0L inline-6 became the definitive engine choice, prized for its real torque and durability — a genuine cult favorite among off-road enthusiasts to this day, decades after production ended." },
+            "Sport": { engine:"4.0L Inline-6 (173-190hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"] },
+            "Limited": { engine:"4.0L Inline-6 (190hp)", drivetrain:"4WD", transmission:"Automatic", note:"A remarkable 18-year production run with only a 1997 mid-cycle refresh — genuinely one of the longest single-generation SUV lifecycles ever, only ending when the Liberty took over the compact-SUV role for 2002." },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Forest Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "KL (2014-2023)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Latitude": { engine:"2.4L 4-cylinder (184hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (9-Speed)", note:"A genuine name revival after the Liberty's decade-long run — this generation was built on a real Fiat-derived unibody platform, a genuine departure from the body-on-frame character the Cherokee name once carried. Real controversial, angular styling at launch (with slit-like running lights above the main headlights) drew mixed reviews before a 2019 facelift softened the look considerably and added a genuine turbocharged engine option." },
+            "Limited": { engine:"3.2L V6 (271hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (9-Speed)" },
+            "Trailhawk": { engines:["3.2L V6 (271hp)","2.0L Turbocharged 4-cylinder (270hp)"], drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine off-road specialist trim with real Jeep Active Drive Lock and a locking rear differential. Discontinued after 2023 with no direct successor — Jeep's compact-SUV role shifted to focus on the Compass instead." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Diamond Black (Black)",hex:"#1A1A1A"},
+            {name:"Firecracker Red (Red)",hex:"#C8102E"},
+            {name:"Baja Tan (Tan)",hex:"#C8B896"},
+          ],
+        },
+      },
+    },
+    "Compass": {
+      generations:{
+        "1st Gen (2007-2017)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Sport": { engine:"2.0L 4-cylinder (158hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (CVT)", note:"Jeep's genuine first-ever car-based crossover, sharing its unibody platform with the closely related Patriot — a real departure from Jeep's traditionally body-on-frame, off-road-first identity, aimed at buyers who wanted the badge without the truck-like ride." },
+            "Latitude": { engine:"2.4L 4-cylinder (172hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic (CVT)"] },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red (Red)",hex:"#C8102E"},
+            {name:"Sarge Green (Green)",hex:"#4A5A3A"},
+          ],
+        },
+        "2nd Gen (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Sport": { engine:"2.4L 4-cylinder (180hp)", drivetrains:["FWD","4WD"], transmission:"Automatic (6-Speed/9-Speed)", note:"A genuine ground-up redesign, real evidence of Jeep leaning into the Grand Cherokee's styling cues at a smaller, more affordable scale. A 2022 refresh brought a smaller, more efficient turbocharged engine to replace the outgoing naturally-aspirated four on most trims." },
+            "Latitude": { engines:["2.4L 4-cylinder (180hp)","1.3L Turbocharged 4-cylinder (200hp)"], drivetrains:["FWD","4WD"], transmission:"Automatic" },
+            "Trailhawk": { engine:"2.4L 4-cylinder (180hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine off-road specialist trim with real skid plates and a locking rear differential — Jeep's Trail Rated badge applied to the compact-crossover segment." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Diamond Black (Black)",hex:"#1A1A1A"},
+            {name:"Firecracker Red (Red)",hex:"#C8102E"},
+            {name:"Baja Tan (Tan)",hex:"#C8B896"},
+          ],
+        },
+      },
+    },
+    "Gladiator": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Sport": { engine:"3.6L V6 (285hp)", drivetrain:"4WD", transmissions:["Manual (6-Speed)","Automatic (8-Speed)"], note:"A genuine, real Wrangler-based pickup truck — Jeep's first since the Comanche was discontinued in 1992, sharing its front end, doors, and much of its rugged off-road hardware with the contemporary Wrangler JL, stretched with a genuine 5-foot bed out back. Real 4-wheel steering wasn't offered, but genuine solid axles front and rear, along with a real removable roof and doors, kept the true Jeep off-road spirit intact." },
+        "Overland": { engine:"3.6L V6 (285hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+        "Mojave": { engine:"3.6L V6 (285hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Added 2020 — genuine desert-running, high-speed off-road specialist trim with real Fox internal-bypass shocks, a first for the Gladiator lineup." },
+        "Rubicon": { engines:["3.6L V6 (285hp)","3.0L EcoDiesel V6 (260hp)"], drivetrain:"4WD", transmissions:["Manual (6-Speed)","Automatic (8-Speed)"], note:"Genuine rock-crawling specialist trim with locking front and rear differentials and a real disconnecting front sway bar. A genuine diesel option arrived for 2021, a real first for the Gladiator and a rarity in the segment." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Diamond Black (Black)",hex:"#1A1A1A"},
+        {name:"Firecracker Red (Red)",hex:"#C8102E"},
+        {name:"Sarge Green (Green)",hex:"#4A5A3A"},
+      ],
+    },
     "Grand Cherokee": {
       generations:{
         "ZJ (1993-1998)":{
@@ -8852,6 +9229,65 @@ const VEHICLES = {
         },
       },
     },
+    "Liberty": {
+      generations:{
+        "KJ (2002-2007)":{
+          years:["2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Sport": { engine:"2.4L 4-cylinder (150hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Replaced the beloved XJ Cherokee, real rounder, more rugged-cute styling — the first Jeep ever built with real rack-and-pinion steering. The Renegade off-road trim (renamed Latitude for 2007) brought unique styling and off-road cred; a genuine turbodiesel option was offered briefly (2005-2006) before US emissions regulations forced its withdrawal." },
+            "Renegade": { engine:"3.7L V6 (210hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Limited": { engine:"3.7L V6 (210hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Stone White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Jeep Green (Green)",hex:"#3B5A3A"},
+          ],
+        },
+        "KK (2008-2012)":{
+          years:["2008","2009","2010","2011","2012"],
+          trims:{
+            "Sport": { engine:"3.7L V6 (210hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (4-Speed)", note:"A genuine boxier redesign styled to echo the Dakar-adjacent look of the closely related Dodge Nitro, sharing that model's platform. Discontinued after 2012, replaced by the all-new, unibody Cherokee — ending the Liberty nameplate for good after a decade in the US market." },
+            "Limited": { engine:"3.7L V6 (210hp)", drivetrain:"4WD", transmission:"Automatic (4-Speed)" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red (Red)",hex:"#C8102E"},
+            {name:"Sarge Green (Green)",hex:"#4A5A3A"},
+          ],
+        },
+      },
+    },
+    "Patriot": {
+      years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+      trims:{
+        "Sport": { engine:"2.0L 4-cylinder (158hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic (CVT)"], note:"Launched alongside the closely related Compass, but with genuinely boxier, more traditionally Jeep-like styling — real flat glass and upright proportions gave it a look closer to a shrunken Wrangler or Cherokee than its curvier Compass sibling. A real Freedom Drive II off-road package was available, adding genuine low-range gearing most car-based crossovers of the era lacked entirely." },
+        "Latitude": { engine:"2.4L 4-cylinder (172hp)", drivetrains:["FWD","4WD"], transmissions:["Manual","Automatic (CVT)"] },
+        "Limited": { engine:"2.4L 4-cylinder (172hp)", drivetrain:"4WD", transmission:"Automatic (CVT)", note:"Discontinued after 2017 with no direct successor, as Jeep consolidated its compact-crossover lineup around the Compass alone." },
+      },
+      colors:[
+        {name:"Stone White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Inferno Red (Red)",hex:"#C8102E"},
+        {name:"Sarge Green (Green)",hex:"#4A5A3A"},
+      ],
+    },
+    "Wagoneer": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"5.7L V8 (392hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (8-Speed)", note:"A genuine revival of Jeep's original 1963-1991 luxury-SUV nameplate — real full-size, body-on-frame construction shared with the pricier Grand Wagoneer, positioned as Jeep's genuine answer to the Chevrolet Tahoe and Ford Expedition. A genuine twin-turbo inline-6 (the 'Hurricane') began replacing the V8 on select trims starting with the 2024 model year." },
+        "Series II": { engine:"5.7L V8 (392hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+        "Series III": { engine:"3.0L Twin-Turbo Inline-6 (420hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine flagship Wagoneer trim, with the newer turbocharged inline-6 replacing the V8 for a real power and efficiency gain." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Diamond Black (Black)",hex:"#1A1A1A"},
+        {name:"Velvet Red (Red)",hex:"#9B1B30"},
+        {name:"Baltic Gray (Gray)",hex:"#6B6E6F"},
+      ],
+    },
     "Wrangler": {
       generations:{
         "YJ Tail (1990-1995)":{
@@ -8918,6 +9354,349 @@ const VEHICLES = {
     },
   },
   "Kia": {
+    "Forte": {
+      generations:{
+        "1st Gen (2010-2013)":{
+          years:["2010","2011","2012","2013"],
+          trims:{
+            "LX": { engine:"2.0L 4-cylinder (156hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Spectra as Kia's compact sedan, with a genuine Koup 2-door coupe variant added for 2010 — real evidence of Kia's design department (under Peter Schreyer) starting to hit its stride." },
+            "SX": { engine:"2.4L 4-cylinder (173hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Racing Red (Red)",hex:"#C8102E"},
+            {name:"Titanium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2014-2018)":{
+          years:["2014","2015","2016","2017","2018"],
+          trims:{
+            "LX": { engine:"1.8L 4-cylinder (145hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely more refined redesign, with real quality and NVH improvements that helped Forte compete more directly against the Civic and Corolla." },
+            "EX": { engine:"2.0L 4-cylinder (173hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Currant Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Sea Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2019-2024)":{
+          years:["2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "LXS": { engine:"2.0L 4-cylinder (147hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"A genuinely sharper, more upscale redesign borrowing styling cues from the Stinger. The GT trim brought a real turbocharged engine and a genuine dual-clutch automatic for a much sportier character than any prior Forte." },
+            "GT": { engine:"1.6L Turbocharged 4-cylinder (201hp)", drivetrain:"FWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Currant Red (Red)",hex:"#9B1B30"},
+            {name:"Sparkling Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Optima": {
+      generations:{
+        "1st Gen (2001-2006)":{
+          years:["2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (138hp)", drivetrain:"FWD", transmission:"Automatic", note:"Kia's genuine entry into the mid-size sedan segment — closely related under the skin to the Hyundai Sonata of the same era, a real product of the two companies' shared corporate ownership." },
+            "SE": { engine:"2.7L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Racing Red (Red)",hex:"#C8102E"},
+            {name:"Steel Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (175hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, real evidence of Kia's steadily improving build quality and refinement during this era." },
+            "EX": { engine:"2.7L V6 (194hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Spicy Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Sea Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2011-2015)":{
+          years:["2011","2012","2013","2014","2015"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (192hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely dramatic, Peter Schreyer-influenced redesign — real evidence of Kia's design ambitions catching up to its engineering. A genuine turbocharged SX trim and Hybrid variant both arrived this generation, real signs of the lineup broadening significantly." },
+            "SX Turbo": { engine:"2.0L Turbocharged 4-cylinder (274hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Hybrid": { engine:"2.4L Hybrid 4-cylinder (206hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Remington Red (Red)",hex:"#9B1B30"},
+            {name:"Corsa Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2016-2020)":{
+          years:["2016","2017","2018","2019","2020"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (185hp)", drivetrain:"FWD", transmission:"Automatic", note:"A real broader engine spread than any prior generation — a smaller turbo four for efficiency-minded buyers, a larger turbo four for the sportier SX, plus genuine Hybrid and Plug-In Hybrid variants. This was the final Optima generation; the nameplate was replaced by the K5 for 2021." },
+            "EX": { engine:"1.6L Turbocharged 4-cylinder (178hp)", drivetrain:"FWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+            "SX": { engine:"2.0L Turbocharged 4-cylinder (245hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Plug-In Hybrid": { engine:"2.0L Plug-In Hybrid 4-cylinder (202hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Remington Red (Red)",hex:"#9B1B30"},
+            {name:"Horizon Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Rio": {
+      generations:{
+        "1st Gen (2001-2005)":{
+          years:["2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"1.5L 4-cylinder (96hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Kia's genuine entry-level subcompact for the US market, offered as both a sedan and a real Rio Cinco wagon body style — real budget pricing was the whole point, with generous warranty coverage to offset early reliability concerns." },
+            "Cinco": { engine:"1.6L 4-cylinder (104hp)", drivetrain:"FWD", transmission:"Automatic", note:"The wagon body style." },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Racing Red (Red)",hex:"#C8102E"},
+            {name:"Steel Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2006-2011)":{
+          years:["2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "LX": { engine:"1.6L 4-cylinder (110hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, with the Rio5 hatchback replacing the old Cinco wagon body style." },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Spicy Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Sea Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2012-2017)":{
+          years:["2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "LX": { engine:"1.6L 4-cylinder (138hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely sharper, more European-influenced redesign — real evidence of Kia design chief Peter Schreyer's growing influence across the whole lineup." },
+            "SX": { engine:"1.6L 4-cylinder (138hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Signal Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Flame (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "S": { engine:"1.6L 4-cylinder (120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (CVT)"], note:"Discontinued in the US after 2023 with no direct successor, as Kia's entry-level segment shrank amid a broader industry shift away from cheap subcompacts." },
+            "LX": { engine:"1.6L 4-cylinder (120hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Currant Red (Red)",hex:"#9B1B30"},
+            {name:"Sparkling Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Sephia": {
+      years:["1994","1995","1996","1997","1998","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"1.6L 4-cylinder (88hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Kia's very first model sold in the US, marking the brand's real entry into the American market — a genuine budget-friendly compact sedan aimed squarely at price-conscious buyers. A real 1.8L engine option arrived for the final two model years." },
+        "LS": { engine:"1.8L 4-cylinder (125hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 2001, replaced by the Spectra — the Sephia name itself continued in some overseas markets for a while longer." },
+      },
+      colors:[
+        {name:"Clear White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Racing Red (Red)",hex:"#C8102E"},
+        {name:"Steel Blue (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "Sorento": {
+      generations:{
+        "1st Gen (2003-2009)":{
+          years:["2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "LX": { engine:"3.5L V6 (192hp)", drivetrains:["RWD","4WD"], transmission:"Automatic", note:"Kia's genuine first-ever SUV for the US market, real body-on-frame construction with genuine off-road-capable 4WD — a serious, no-frills truck-based approach rather than a car-based crossover." },
+            "EX": { engine:"3.5L V6 (192hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Racing Red (Red)",hex:"#C8102E"},
+            {name:"Steel Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2011-2015)":{
+          years:["2011","2012","2013","2014","2015"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (191hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely major shift to real unibody, car-based construction — a real trade-off of some off-road toughness for genuinely better on-road ride and fuel economy, mirroring the same shift most of the segment made around this time." },
+            "SX": { engine:"3.5L V6 (276hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Remington Red (Red)",hex:"#9B1B30"},
+            {name:"Corsa Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2016-2020)":{
+          years:["2016","2017","2018","2019","2020"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (185hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely more refined redesign, with a real broader engine range including a turbocharged four for buyers wanting efficiency without giving up power." },
+            "EX": { engine:"3.3L V6 (290hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "SXL": { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Remington Red (Red)",hex:"#9B1B30"},
+            {name:"Horizon Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "LX": { engine:"2.5L 4-cylinder (191hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine bold, boxy redesign with real off-road-adjacent styling and a genuinely expanded electrified lineup — Hybrid and Plug-In Hybrid variants both joined the standard gas engine for the first time in Sorento history." },
+            "SX": { engine:"2.5L Turbocharged 4-cylinder (281hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Hybrid": { engine:"1.6L Turbocharged Hybrid 4-cylinder (227hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+            "Plug-In Hybrid": { engine:"1.6L Turbocharged Plug-In Hybrid 4-cylinder (261hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Runway Red (Red)",hex:"#9B1B30"},
+            {name:"Wolf Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Soul": {
+      generations:{
+        "1st Gen (2010-2013)":{
+          years:["2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (122hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely quirky, boxy compact hatchback aimed at a younger, more style-conscious buyer — real distinct 'hamster' advertising campaigns made it a genuine cultural touchstone well beyond its actual sales figures." },
+            "!": { engine:"2.0L 4-cylinder (142hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Black Cherry (Black)",hex:"#1A1A1A"},
+            {name:"Alien (Green)",hex:"#8ABE3B"},
+            {name:"Molten Lava (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "2nd Gen (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine evolutionary redesign keeping the boxy shape that made the original such a genuine style statement. A genuine all-electric Soul EV arrived for 2015, Kia's first mass-market EV in the US." },
+            "!": { engine:"2.0L 4-cylinder (164hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "EV": { engine:"Electric Motor (109-201hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Added 2015 — Kia's first-ever EV sold in the US, initially with real modest range that improved substantially with a later battery upgrade." },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Inferno Red (Red)",hex:"#C8102E"},
+            {name:"Caribbean Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "3rd Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "LX": { engine:"2.0L 4-cylinder (147hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"A genuinely sharper, more angular redesign — the EV variant was dropped this generation, replaced in Kia's EV lineup by the dedicated Niro EV and EV6. Discontinued after 2025 with no direct successor, as Kia's small-hatchback segment consolidated." },
+            "GT-Line": { engine:"2.0L 4-cylinder (147hp)", drivetrain:"FWD", transmission:"Automatic (CVT)" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Runway Red (Red)",hex:"#9B1B30"},
+            {name:"Mineral Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "Sportage": {
+      generations:{
+        "1st Gen (1995-2002)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (130hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"Kia's genuine first-ever SUV for the US market, real body-on-frame construction with a genuine off-road-capable part-time 4WD system — a budget-friendly alternative to the more established Japanese compact SUVs of the era." },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Racing Red (Red)",hex:"#C8102E"},
+            {name:"Forest Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (2005-2010)":{
+          years:["2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "LX": { engine:"2.0L 4-cylinder (140hp)", drivetrains:["FWD","4WD"], transmission:"Automatic", note:"A genuine switch to unibody, car-based construction — sharing its platform with the contemporary Hyundai Tucson, a real product of the two companies' shared engineering resources." },
+            "EX": { engine:"2.7L V6 (173hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Spicy Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Sea Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2011-2016)":{
+          years:["2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (176hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely sharper, Peter Schreyer-influenced redesign that helped establish Kia's design language across the whole lineup. The turbocharged SX brought real hot-hatch-adjacent performance to a compact crossover, a genuine rarity for the segment." },
+            "SX": { engine:"2.0L Turbocharged 4-cylinder (260hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Signal Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Flame (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "4th Gen (2017-2022)":{
+          years:["2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "LX": { engine:"2.4L 4-cylinder (181hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely more mature, rounder redesign, with real interior quality improvements that helped close the gap to established segment leaders." },
+            "SX Turbo": { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Clear White (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Remington Red (Red)",hex:"#9B1B30"},
+            {name:"Mineral Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "5th Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "LX": { engine:"2.5L 4-cylinder (187hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuinely bold, angular redesign sharing its architecture with the closely related Hyundai Tucson — real Hybrid and Plug-In Hybrid variants joined the lineup for the first time in Sportage history, a genuine sign of Kia's broader electrification push." },
+            "X-Line": { engine:"2.5L 4-cylinder (187hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Hybrid": { engine:"1.6L Turbocharged Hybrid 4-cylinder (227hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+            "Plug-In Hybrid": { engine:"1.6L Turbocharged Plug-In Hybrid 4-cylinder (261hp combined)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+            {name:"Aurora Black (Black)",hex:"#1A1A1A"},
+            {name:"Runway Red (Red)",hex:"#9B1B30"},
+            {name:"Wolf Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
     "Stinger": {
       generations:{
         "Gen 1 Pre-Facelift (2018-2021)":{
@@ -8948,8 +9727,67 @@ const VEHICLES = {
         },
       },
     },
+    "Telluride": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "LX": { engine:"3.8L V6 (291hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"Kia's genuine flagship 3-row SUV, and a real critical and sales smash hit from launch — genuinely bold, boxy styling and a surprisingly premium interior for the price helped it win multiple 'SUV of the Year' awards its debut year. Built alongside its close cousin, the Hyundai Palisade, at Kia's plant in West Point, Georgia." },
+        "S": { engine:"3.8L V6 (291hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "X-Pro": { engine:"3.8L V6 (291hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2023 — genuine off-road-focused trim with all-terrain tires and real skid plates, a first for the Telluride lineup." },
+        "SX Prestige": { engine:"3.8L V6 (291hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine flagship trim, with the most premium interior appointments Kia offers on the Telluride. A full redesign is planned for the 2027 model year, expected to bring a genuine turbocharged engine and available hybrid power for the first time." },
+      },
+      colors:[
+        {name:"Snow White Pearl (White)",hex:"#F5F5F5"},
+        {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+        {name:"Gravity Gray (Gray)",hex:"#6B6E6F"},
+        {name:"Dawning Red (Red)",hex:"#9B1B30"},
+      ],
+    },
   },
   "Lamborghini": {
+    "Aventador": {
+      years:["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+      trims:{
+        "LP 700-4": { engine:"6.5L V12 (690hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Automated Manual)", note:"Replaced the Murcielago as Lamborghini's genuine flagship, with a real ground-up carbon-fiber monocoque chassis — a genuine technological leap forward for the brand. Real scissor doors and dramatic angular styling carried forward the design language established by the Countach decades earlier." },
+        "S": { engine:"6.5L V12 (730hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Automated Manual)", note:"Added 2017 with genuine rear-wheel steering, a real handling upgrade over the original." },
+        "SVJ": { engine:"6.5L V12 (760hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Automated Manual)", note:"Genuine track-focused flagship, holder of the Nürburgring lap record for production cars at its 2018 debut — real active aerodynamics (ALA system) set it apart from lesser Aventador variants." },
+        "Ultimae": { engine:"6.5L V12 (770hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Automated Manual)", note:"The genuine final Aventador variant, produced for the 2022 model year to send off the model — the most powerful naturally-aspirated V12 Lamborghini ever built. Replaced by the hybrid Revuelto for 2024, marking real the end of Lamborghini's purely gas-powered flagship era." },
+      },
+      colors:[
+        {name:"Bianco Isis (White)",hex:"#F5F5F5"},
+        {name:"Nero Nemesis (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Mars (Red)",hex:"#C8102E"},
+        {name:"Verde Mantis (Green)",hex:"#5AA83A"},
+      ],
+    },
+    "Diablo": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"5.7L V12 (485hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Replaced the legendary Countach, and was the first Lamborghini to officially exceed 200 mph — a genuine design collaboration that began under Chrysler's brief ownership of Lamborghini, styled with input from Marcello Gandini (the Countach's original designer) though heavily reworked by Chrysler's design team before production." },
+        "VT": { engine:"5.7L-6.0L V12 (492-529hp)", drivetrain:"AWD", transmission:"Manual (5-Speed)", note:"Added 1993 — Lamborghini's first-ever AWD supercar, using a real viscous-coupling center differential (VT stands for Viscous Traction) for genuine improved traction and driver confidence at the limit." },
+        "SV": { engine:"5.7L-6.0L V12 (510-529hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Genuine 'Sport Veloce' RWD-only performance variant, lighter and more track-focused than the AWD VT." },
+        "GT": { engine:"6.0L V12 (575-600hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"The genuine final, most extreme Diablo variants (GT and the ultra-rare GTR/SE30 Jota specials) closed out the model's 11-year run before the Murcielago took over as flagship for 2002." },
+      },
+      colors:[
+        {name:"Bianco Diamante (White)",hex:"#F5F5F5"},
+        {name:"Nero Noctis (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Diablo (Red)",hex:"#C8102E"},
+        {name:"Giallo Diablo (Yellow)",hex:"#F5C800"},
+      ],
+    },
+    "Gallardo": {
+      years:["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013"],
+      trims:{
+        "Base": { engine:"5.0L V10 (493hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Genuinely Lamborghini's first-ever V10, and by far its best-selling model of all time to that point — a real 'entry-level' Lamborghini (relatively speaking) built to compete more directly with the Ferrari F430, with a genuinely distinctive, uneven firing order that gave the V10 its signature raspy sound." },
+        "Superleggera": { engine:"5.0L V10 (513-542hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Genuine lightweight, track-focused variant with real carbon-fiber body panels shaving significant weight." },
+        "LP560-4": { engine:"5.2L V10 (552-570hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"A genuine 2008 update brought the larger, more powerful 5.2L V10 and real direct fuel injection — the last major evolution before the Gallardo was replaced by the Huracan for 2015." },
+      },
+      colors:[
+        {name:"Bianco Monocerus (White)",hex:"#F5F5F5"},
+        {name:"Nero Noctis (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Mars (Red)",hex:"#C8102E"},
+        {name:"Giallo Midas (Yellow)",hex:"#F5C800"},
+      ],
+    },
     "Huracan": {
       generations:{
         "LP 610-4 / LP 580-2 (2014-2019)":{
@@ -8981,8 +9819,137 @@ const VEHICLES = {
         },
       },
     },
+    "Murcielago": {
+      years:["2002","2003","2004","2005","2006","2007","2008","2009","2010"],
+      trims:{
+        "Base": { engine:"6.2L V12 (572hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Lamborghini's first genuine ground-up new model under Audi's ownership, and the first new Lamborghini design in over a decade — a real return-to-form flagship after the aging Diablo, styled by Luc Donckerwolke. A genuine Roadster convertible joined for 2004." },
+        "LP640": { engine:"6.5L V12 (632hp)", drivetrain:"AWD", transmissions:["Manual (6-Speed)","Automatic (6-Speed E-Gear)"], note:"A 2006 update brought a real larger, more powerful V12 and a genuine E-Gear automated-manual transmission option for the first time." },
+        "LP670-4 SV": { engine:"6.5L V12 (661hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed E-Gear)", note:"Genuine final, most extreme Murcielago variant — real carbon-fiber body panels shaved roughly 220 lbs versus the standard car. Replaced by the Aventador for 2012." },
+      },
+      colors:[
+        {name:"Bianco Isis (White)",hex:"#F5F5F5"},
+        {name:"Nero Nemesis (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Mars (Red)",hex:"#C8102E"},
+        {name:"Arancio Atlas (Orange)",hex:"#E8601C"},
+      ],
+    },
+    "Revuelto": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Base": { engine:"6.5L V12 Hybrid (1001hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Replaced the Aventador as Lamborghini's genuine flagship, and the brand's first-ever plug-in hybrid production car — a real naturally-aspirated V12 (still revving to a screaming 9,500 rpm) paired with three electric motors, two up front handling torque-vectoring and one integrated into the transmission. Genuinely the lightest and most powerful production V12 Lamborghini ever built, a real technical showcase for how the brand plans to keep its V12 heritage alive in a hybrid era." },
+      },
+      colors:[
+        {name:"Bianco Genesis (White)",hex:"#F5F5F5"},
+        {name:"Nero Aldebaran (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Efesto (Red)",hex:"#C8102E"},
+        {name:"Verde Citimaeus (Green)",hex:"#3B7A5A"},
+      ],
+    },
+    "Urus": {
+      years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (641hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Lamborghini's genuine first-ever SUV since the military-derived LM002 of the 1980s, and a real sales phenomenon — sharing its underlying MLB Evo platform with the Audi Q7/Q8, Porsche Cayenne, and Bentley Bentayga, but with genuinely distinct, aggressive styling and the fastest 0-60 time of any SUV at launch." },
+        "S": { engine:"4.0L Twin-Turbo V8 (657hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Performante": { engine:"4.0L Twin-Turbo V8 (657hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine lightweight, track-focused variant with real carbon-fiber body panels and a stiffer suspension." },
+        "SE": { engine:"4.0L Twin-Turbo Plug-In Hybrid V8 (789-800hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2024 — Lamborghini's first-ever plug-in hybrid SUV, with genuine all-electric-only driving capability for short trips, a real sign of the brand's broader electrification push across its whole lineup." },
+      },
+      colors:[
+        {name:"Bianco Icarus (White)",hex:"#F5F5F5"},
+        {name:"Nero Noctis (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Mars (Red)",hex:"#C8102E"},
+        {name:"Giallo Auge (Yellow)",hex:"#F5C800"},
+      ],
+    },
   },
   "Land Rover": {
+    "Defender": {
+      generations:{
+        "Classic — NAS 90 (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "90": { engine:"3.9L V8 (182hp)", drivetrain:"4WD", transmissions:["Manual (5-Speed)"], note:"A genuinely spartan, purpose-built off-roader sold in the US for only a few years as the 'North American Spec' (NAS) Defender 90 — real solid axles and a body-on-frame chassis inherited from decades of Land Rover military and farm-vehicle heritage. Genuinely rare in the US today, a real cult favorite among collectors given how briefly it was officially sold here." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Coniston Green (Green)",hex:"#2E5A3A"},
+            {name:"Aa Red (Red)",hex:"#C8102E"},
+            {name:"Marseilles Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "New Generation (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (296hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine, real ground-up revival after over two decades away from the US market — a monocoque unibody chassis replaced the old body-on-frame design, a real modernization while keeping genuine serious off-road capability (up to 35.4 inches of wading depth). Sold as both the shorter 90 and longer 110 body styles, later joined by an even longer 130 with a real third-row seat." },
+            "SE": { engine:"3.0L Turbocharged Inline-6 (355-395hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "X": { engine:"3.0L Turbocharged Inline-6 (395hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "V8": { engine:"5.0L Supercharged V8 (518hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Added 2021 — genuine performance flagship, the most powerful Defender ever built, with a real snarling supercharged V8 shared with other JLR performance models." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Tasman Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Gondwana Stone (Tan)",hex:"#C8B896"},
+          ],
+        },
+      },
+    },
+    "Discovery": {
+      generations:{
+        "Series I / II (1994-2004)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "SD": { engine:"3.9L V8 (182hp)", drivetrain:"4WD", transmission:"Manual (5-Speed)", note:"Land Rover's genuine mid-size, family-friendly SUV — real body-on-frame construction with genuine off-road-capable permanent 4WD, a step down in price and up in practicality from the flagship Range Rover of the same era." },
+            "SE": { engines:["4.0L V8 (182-188hp)","4.6L V8 (217hp)"], drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Chawton White (White)",hex:"#F5F5F5"},
+            {name:"Java Black (Black)",hex:"#1A1A1A"},
+            {name:"Rutland Red (Red)",hex:"#9B1B30"},
+            {name:"Epsom Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "LR3 (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "SE": { engine:"4.0L V6 (216hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"Badged LR3 for the US market, a genuinely major redesign — real fully independent air suspension replaced the old live axles, a genuine ride-quality improvement, with a distinctive asymmetrical rear tailgate design and a two-piece opening layout." },
+            "HSE": { engine:"4.4L V8 (300hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Chawton White (White)",hex:"#F5F5F5"},
+            {name:"Java Black (Black)",hex:"#1A1A1A"},
+            {name:"Rimini Red (Red)",hex:"#9B1B30"},
+            {name:"Galway Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "LR4 (2010-2016)":{
+          years:["2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "HSE": { engine:"5.0L V8 (375-380hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed/8-Speed)", note:"A genuine mid-cycle refresh renamed LR4, with a real more powerful and efficient direct-injected V8 replacing the outgoing engine — the same basic body and structure carried over, with real updated styling and technology." },
+            "HSE Luxury": { engine:"5.0L V8 (375-380hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Discontinued after 2016, replaced by the all-new fifth-generation Discovery, which dropped the LR4 badge in favor of returning to the plain 'Discovery' name." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Nara Bronze (Bronze)",hex:"#B87333"},
+          ],
+        },
+        "5th Gen (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "SE": { engine:"3.0L Supercharged V6 (340hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine major redesign, switching from body-on-frame-adjacent construction to a real aluminum monocoque platform — a genuine weight reduction while keeping serious off-road capability, including a class-leading towing rating for the segment. A smaller turbocharged four-cylinder joined the lineup for 2021, real evidence of the industry-wide efficiency push." },
+            "HSE": { engines:["3.0L Supercharged V6 (340-355hp)","2.0L Turbocharged 4-cylinder (296hp)"], drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "P525 Metropolitan Edition": { engine:"3.0L Twin-Turbo V6 (395hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine 2025 mid-cycle refresh brought a more powerful new engine family and updated styling for the Discovery's final years on this platform." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Namib Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+      },
+    },
     "Range Rover": {
       generations:{
         "Classic (1990-1995)":{
@@ -9050,6 +10017,82 @@ const VEHICLES = {
             {name:"Santorini Black (Black)",hex:"#1A1A1A"},
             {name:"Fuji White (White)",hex:"#F5F5F5"},
             {name:"Batumi Gold (Gold)",hex:"#B8A050"},
+            {name:"Varesine Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Range Rover Evoque": {
+      generations:{
+        "1st Gen (2012-2019)":{
+          years:["2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Pure": { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Land Rover's genuine subcompact luxury crossover, and a real design triumph — the production Evoque stayed remarkably faithful to the striking LRX concept that previewed it. Offered as both a genuine 5-door and, uniquely, a 2-door Coupe body style, the latter a real rarity in the segment." },
+            "Prestige": { engine:"2.0L Turbocharged 4-cylinder (240hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Nara Bronze (Bronze)",hex:"#B87333"},
+          ],
+        },
+        "2nd Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (246hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"A genuine ground-up redesign, dropping the 2-door Coupe body style entirely and focusing solely on the more practical 5-door — real mild-hybrid technology arrived across the lineup for improved efficiency." },
+            "R-Dynamic SE": { engine:"2.0L Turbocharged 4-cylinder (246-296hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "Autobiography": { engine:"2.0L Turbocharged 4-cylinder (296hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine flagship trim, with the most premium interior appointments Land Rover offers on the Evoque." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Eiger Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Range Rover Sport": {
+      generations:{
+        "1st Gen (2006-2013)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "HSE": { engine:"4.4L V8 (300hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"A genuinely sportier, more road-focused sibling to the full-size Range Rover, sharing its platform with the contemporary Discovery/LR3 rather than the pricier flagship — real evidence of Land Rover expanding its lineup to compete more directly with the Porsche Cayenne and BMW X5." },
+            "Supercharged": { engines:["4.2L Supercharged V8 (390hp)","5.0L Supercharged V8 (510hp)"], drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship, the larger 5.0L supercharged V8 arriving for 2010 with a real substantial power bump." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Rimini Red (Red)",hex:"#9B1B30"},
+            {name:"Stornoway Grey (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2014-2022)":{
+          years:["2014","2015","2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "SE": { engine:"3.0L Supercharged V6 (340hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuinely major redesign, shedding real weight with an all-aluminum monocoque body — a genuine improvement in both on-road handling and off-road capability at once. The SVR trim became Land Rover's genuine performance flagship of the whole lineup." },
+            "HSE": { engine:"3.0L Supercharged V6 (340hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "SVR": { engine:"5.0L Supercharged V8 (518-575hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, developed with real input from Jaguar Land Rover's Special Vehicle Operations division — a genuinely track-capable luxury SUV." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Namib Orange (Orange)",hex:"#E8601C"},
+          ],
+        },
+        "3rd Gen (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "SE": { engine:"3.0L Turbocharged Inline-6 (395hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine third redesign, sharing its platform with the full-size Range Rover — the naturally-aspirated Supercharged V8 gave way to a real twin-turbo inline-6 with electric assist as the standard performance option, a genuine sign of Land Rover's broader efficiency push. The SV trim replaced the old SVR as the genuine performance flagship." },
+            "Autobiography": { engine:"4.4L Twin-Turbo V8 (523hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "SV": { engine:"4.4L Twin-Turbo V8 (626hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the most powerful Range Rover Sport ever built." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
             {name:"Varesine Blue (Blue)",hex:"#1E3A6B"},
           ],
         },
@@ -9704,6 +10747,38 @@ const VEHICLES = {
     },
   },
   "Lincoln": {
+    "Aviator": {
+      generations:{
+        "1st Gen (2003-2005)":{
+          years:["2003","2004","2005"],
+          trims:{
+            "Premium": { engine:"4.6L V8 (302hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"Lincoln's genuine mid-size SUV, closely related under the skin to the Ford Explorer and Mercury Mountaineer of the same era — real body-on-frame truck construction with a genuine V8, aimed at buyers wanting more capability than the Navigator's full-size bulk." },
+            "Ultimate": { engine:"4.6L V8 (302hp)", drivetrain:"4WD", transmission:"Automatic (5-Speed)", note:"Discontinued after 2005 with a genuine 15-year gap before the Aviator name returned — Lincoln's SUV lineup consolidated around the MKX in the interim." },
+          },
+          colors:[
+            {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"True Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Standard": { engine:"3.0L Twin-Turbo V6 (400hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"A genuine revival, sharing its real rear-wheel-drive-based platform with the Ford Explorer and Police Interceptor Utility — a real technical step up from the Aviator's front-drive-based predecessor. A genuine Grand Touring plug-in hybrid variant became the most powerful Lincoln SUV ever built." },
+            "Reserve": { engine:"3.0L Twin-Turbo V6 (400hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)" },
+            "Black Label": { engine:"3.0L Twin-Turbo V6 (400hp)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"Genuine ultra-premium trim with unique interior themes and concierge-level ownership perks, Lincoln's real flagship customer experience." },
+            "Grand Touring": { engine:"3.0L Twin-Turbo Plug-In Hybrid V6 (494hp combined)", drivetrain:"AWD", transmission:"Automatic (10-Speed)", note:"Genuine plug-in hybrid flagship, with real all-electric-only range before the gas engine engages." },
+          },
+          colors:[
+            {name:"Ceramic Pearl (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Vermillion Red (Red)",hex:"#9B1B30"},
+            {name:"Diffused Sky Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
     "Continental": {
       generations:{
         "8th Gen Tail (1990-1994)":{
@@ -9746,8 +10821,194 @@ const VEHICLES = {
         },
       },
     },
+    "Mark VIII": {
+      years:["1993","1994","1995","1996","1997","1998"],
+      trims:{
+        "Base": { engine:"4.6L Intech V8 (280hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"A genuinely dramatic, aerodynamic 2-door personal luxury coupe, real evidence of Lincoln's design department pushing into more modern territory after the boxier Mark VII. Shared its FN10 platform loosely with the contemporary Ford Thunderbird." },
+        "LSC": { engine:"4.6L Intech V8 (290hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"'Luxury Sport Coupe' — genuine performance-oriented trim with a firmer suspension and unique wheels. Discontinued after 1998 with no direct successor, as personal luxury coupes fell out of favor across the industry — the Lincoln LS sedan picked up the sporty-Lincoln mantle instead." },
+      },
+      colors:[
+        {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+        {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+        {name:"Toreador Red (Red)",hex:"#9B1B30"},
+        {name:"Deep Jewel Green (Green)",hex:"#1E3A2A"},
+      ],
+    },
+    "MKZ": {
+      generations:{
+        "1st Gen (2007-2012)":{
+          years:["2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engine:"3.5L V6 (263hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"Launched as the Zephyr for 2006, renamed MKZ for 2007 as part of Lincoln's broader alphanumeric naming push — closely related under the skin to the contemporary Ford Fusion and Mercury Milan. A genuine Hybrid variant arrived for 2011, Lincoln's first-ever hybrid." },
+            "Hybrid": { engine:"2.5L Hybrid 4-cylinder (191hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)" },
+          },
+          colors:[
+            {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"True Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2013-2020)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Premiere": { engine:"3.7L V6 (300hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuinely bolder, more distinctive redesign with a real signature split-wing grille that became Lincoln's new design signature. A 2017 refresh brought genuine turbocharged engine options, including a real 400hp twin-turbo V6, up from the outgoing naturally-aspirated V6." },
+            "Reserve": { engines:["2.0L Turbocharged 4-cylinder (245hp)","3.0L Twin-Turbo V6 (350-400hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)" },
+            "Hybrid": { engine:"2.0L Hybrid 4-cylinder (188-200hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Discontinued after 2020 with no direct successor, as Lincoln's sedan lineup contracted around the Continental before that too was eventually dropped, leaving Lincoln as an SUV-only brand in the US." },
+          },
+          colors:[
+            {name:"Ceramic Pearl (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Diamond (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Nautilus": {
+      generations:{
+        "1st Gen — MKX (2007-2018)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Premiere": { engine:"3.5L V6 (265hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"Launched as the MKX, Lincoln's genuine mid-size crossover — closely related under the skin to the contemporary Ford Edge, with 'X' standing for crossover. Renamed Nautilus for the 2019 model year as part of Lincoln's move away from alphanumeric MK naming." },
+            "Reserve": { engine:"2.7L Twin-Turbo V6 (335hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"True Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "Standard": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine mid-cycle nameplate change with real updated styling and technology — same basic Ford Edge-derived platform, now with a real 8-speed automatic replacing the old 6-speed." },
+            "Reserve": { engine:"2.7L Twin-Turbo V6 (335hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Ceramic Pearl (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Diamond (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Premiere": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuinely major redesign, real evidence of a deepened manufacturing partnership with Chinese automaker Changan — built at a joint-venture plant in China. A genuine hybrid variant joined the lineup, real evidence of Lincoln's broader electrification push across its remaining SUV nameplates." },
+            "Reserve": { engines:["2.0L Turbocharged 4-cylinder (250hp)","2.0L Turbocharged Hybrid 4-cylinder (310hp combined)"], drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Black Label": { engine:"2.0L Turbocharged Hybrid 4-cylinder (310hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Ceramic Pearl (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Vermillion Red (Red)",hex:"#9B1B30"},
+            {name:"Diffused Sky Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "Navigator": {
+      generations:{
+        "1st Gen (1998-2002)":{
+          years:["1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engine:"5.4L V8 (230-260hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (4-Speed)", note:"Lincoln's genuine first-ever SUV, and a real trailblazer — one of the earliest full-size luxury SUVs on the market, closely related to the Ford Expedition underneath but with a genuinely more opulent interior. A real sales phenomenon that helped define the whole full-size luxury SUV segment." },
+          },
+          colors:[
+            {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Wedgewood Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2003-2006)":{
+          years:["2003","2004","2005","2006"],
+          trims:{
+            "Luxury": { engine:"5.4L V8 (300hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (4-Speed)", note:"A genuine redesign shared with the second-gen Expedition, real independent rear suspension arrived for a genuinely smoother ride than the outgoing solid-axle design." },
+            "Ultimate": { engine:"5.4L V8 (300hp)", drivetrain:"4WD", transmission:"Automatic (4-Speed)" },
+          },
+          colors:[
+            {name:"Ivory Parchment (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"True Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2007-2017)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engines:["5.4L V8 (310hp)","3.5L Twin-Turbo V6 (380hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic (6-Speed)", note:"A genuine long-running generation, running for a full decade with only detail updates — a genuine EcoBoost twin-turbo V6 replaced the aging V8 for 2015, a real power and efficiency gain that also brought the Navigator in line with the rest of Lincoln's turbocharged lineup." },
+            "Select": { engine:"3.5L Twin-Turbo V6 (380hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"White Platinum (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red (Red)",hex:"#9B1B30"},
+            {name:"Bronze Fire (Bronze)",hex:"#B87333"},
+          ],
+        },
+        "4th Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Standard": { engine:"3.5L Twin-Turbo V6 (450-457hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (10-Speed)", note:"A genuinely major redesign with a real all-new independent rear suspension, and genuinely one of the most powerful full-size luxury SUVs on the market — real evidence of Lincoln's push to differentiate the Navigator further from the Ford Expedition it's still mechanically related to." },
+            "Reserve": { engine:"3.5L Twin-Turbo V6 (450-457hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "Black Label": { engine:"3.5L Twin-Turbo V6 (457hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"Genuine ultra-premium trim with unique interior themes and concierge-level ownership perks." },
+          },
+          colors:[
+            {name:"White Platinum (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red (Red)",hex:"#9B1B30"},
+            {name:"Flight Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "5th Gen (2025-2027)":{
+          years:["2025","2026","2027"],
+          trims:{
+            "Standard": { engine:"3.5L Twin-Turbo V6 (440hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)", note:"A genuinely bold redesign with real dramatic full-width lighting front and rear — a genuine visual leap forward for Lincoln's flagship SUV, with a substantially upgraded interior and technology suite." },
+            "Reserve": { engine:"3.5L Twin-Turbo V6 (440hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+            "Black Label": { engine:"3.5L Twin-Turbo V6 (440hp)", drivetrain:"4WD", transmission:"Automatic (10-Speed)" },
+          },
+          colors:[
+            {name:"Ceramic Pearl (White)",hex:"#F5F5F5"},
+            {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+            {name:"Vermillion Red (Red)",hex:"#9B1B30"},
+            {name:"Diffused Sky Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "Town Car": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Signature": { engine:"4.6L Modular V8 (190-239hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"Lincoln's genuine flagship, full-size RWD luxury sedan for over two decades — a real traditional body-on-frame-adjacent platform shared with the Ford Crown Victoria and Mercury Grand Marquis. Genuinely became the default choice for livery and limousine service across America, a real institution in the taxi and chauffeur industry well beyond its retail sales." },
+        "Cartier": { engine:"4.6L Modular V8 (190-239hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)" },
+        "Signature L": { engine:"4.6L Modular V8 (239hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"Genuine stretched-wheelbase variant for extra rear legroom, popular with livery operators. Discontinued after 2011 with no direct successor, ending Lincoln's real body-on-frame RWD sedan lineage for good — a real symbolic end to a whole era of traditional American luxury sedans." },
+      },
+      colors:[
+        {name:"Vibrant White (White)",hex:"#F5F5F5"},
+        {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+        {name:"Toreador Red (Red)",hex:"#9B1B30"},
+        {name:"Light French Silk (Tan)",hex:"#C8B896"},
+      ],
+    },
   },
   "Maserati": {
+    "Ghibli": {
+      years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Base": { engine:"3.0L Twin-Turbo V6 (345hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"Maserati's genuine entry-level sedan, real evidence of Ferrari-engineered engine work even at this price point — a genuine mid-size sport sedan sharing its Chrysler-derived platform with the larger Quattroporte and Levante SUV, positioned to compete with the BMW 5 Series and Mercedes E-Class." },
+        "S Q4": { engine:"3.0L Twin-Turbo V6 (404hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Trofeo": { engine:"3.8L Twin-Turbo V8 (580hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2020 — genuine performance flagship, sharing its Ferrari-built V8 with the Quattroporte and Levante Trofeo variants. Production ended in late 2023 (2024 model year) with no direct successor, as Maserati's sedan lineup wound down in favor of the newer Grecale crossover." },
+      },
+      colors:[
+        {name:"Bianco Alpi (White)",hex:"#F5F5F5"},
+        {name:"Nero Ribelle (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Energia (Red)",hex:"#C8102E"},
+        {name:"Blu Nobile (Blue)",hex:"#1E3A6B"},
+      ],
+    },
     "GranTurismo": {
       generations:{
         "1st Gen (2008-2019)":{
@@ -9776,6 +11037,80 @@ const VEHICLES = {
             {name:"Nero Enigma (Black)",hex:"#1A1A1A"},
             {name:"Rosso Vincente (Red)",hex:"#C8102E"},
             {name:"Blu Nobile (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Grecale": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "GT": { engine:"2.0L Mild-Hybrid Turbocharged 4-cylinder (300hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Maserati's genuine first-ever compact luxury crossover, sharing its underlying platform with the Alfa Romeo Stelvio — real evidence of Maserati chasing the booming compact-SUV segment with a genuinely more accessible entry point than the larger Levante." },
+        "Modena": { engine:"2.0L Mild-Hybrid Turbocharged 4-cylinder (330hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Trofeo": { engine:"3.0L Twin-Turbo V6 (523hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, sharing its Nettuno-family V6 architecture with the MC20 supercar — a real technical showcase in a compact SUV package." },
+        "Folgore": { engine:"Tri-Motor Electric (536hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Maserati's first-ever all-electric production model, added 2023 — a real sign of the brand's broader electrification strategy across its whole lineup." },
+      },
+      colors:[
+        {name:"Bianco Alpi (White)",hex:"#F5F5F5"},
+        {name:"Nero Ribelle (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Vincente (Red)",hex:"#C8102E"},
+        {name:"Blu Intenso (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Levante": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Base": { engine:"3.0L Twin-Turbo V6 (345hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Maserati's genuine first-ever SUV, sharing its platform with the Ghibli and Quattroporte sedans — a real, serious mid-size luxury crossover entry aimed at the Porsche Cayenne and BMW X5, with genuine standard AWD and a limited-slip rear differential across the whole lineup." },
+        "S": { engine:"3.0L Twin-Turbo V6 (424hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "GTS": { engine:"3.8L Twin-Turbo V8 (550hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine V8 flagship, sharing its Ferrari-built engine with the equivalent Ghibli and Quattroporte Trofeo variants." },
+        "Trofeo": { engine:"3.8L Twin-Turbo V8 (580hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the most powerful Levante ever built. Production ended in 2024 with no direct successor, as the Levante was retired without an immediate replacement in Maserati's lineup." },
+      },
+      colors:[
+        {name:"Bianco Alpi (White)",hex:"#F5F5F5"},
+        {name:"Nero Ribelle (Black)",hex:"#1A1A1A"},
+        {name:"Rosso Energia (Red)",hex:"#C8102E"},
+        {name:"Grigio Maratea (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "MC20": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Coupe": { engine:"3.0L Twin-Turbo V6 (621hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Maserati's genuine return to building a true, no-compromise mid-engine supercar — the 'Nettuno' V6 is a real in-house Maserati design, using genuine pre-chamber combustion technology borrowed from Formula 1, a rare and technically significant engineering feat for a road car engine of this scale. Real butterfly doors and a carbon-fiber tub chassis round out the supercar credentials." },
+        "Cielo": { engine:"3.0L Twin-Turbo V6 (621hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Added 2023 — genuine retractable hardtop convertible variant, real electrochromic glass roof panel as a unique feature." },
+        "Folgore": { engine:"Tri-Motor Electric (760hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine all-electric variant built on the same basic platform — real evidence of Maserati proving out EV performance credentials at the supercar level." },
+      },
+      colors:[
+        {name:"Bianco Audace (White)",hex:"#F5F5F5"},
+        {name:"Nero Enigma (Black)",hex:"#1A1A1A"},
+        {name:"Giallo Genio (Yellow)",hex:"#F5C800"},
+        {name:"Blu Infinito (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Quattroporte": {
+      generations:{
+        "5th Gen (2004-2012)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engine:"4.2L V8 (400hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Maserati's genuine flagship luxury sport sedan, real Pininfarina-designed styling and a genuine Ferrari-built V8 under the hood — a real 'four-door Ferrari' character that set it apart from more clinical German rivals." },
+            "S": { engine:"4.7L V8 (425hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"The larger 4.7L V8 arrived for 2009, a genuine power bump for the model's final years before the redesigned sixth generation." },
+          },
+          colors:[
+            {name:"Bianco Eldorado (White)",hex:"#F5F5F5"},
+            {name:"Nero Carbonio (Black)",hex:"#1A1A1A"},
+            {name:"Rosso Trionfale (Red)",hex:"#9B1B30"},
+            {name:"Grigio Touring (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "6th Gen (2013-2024)":{
+          years:["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S Q4": { engine:"3.0L Twin-Turbo V6 (404hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine downsizing move for the entry engine — a twin-turbo V6 replacing the old naturally-aspirated V8 for lower trims, though the V8 remained available on the range-topping GTS. Genuinely the largest Quattroporte ever built, with real limousine-like rear legroom." },
+            "GTS": { engine:"3.8L Twin-Turbo V8 (523-580hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, sharing its Ferrari-built V8 with the equivalent Ghibli and Levante Trofeo variants. Production ended in 2024 with no direct successor, as Maserati's sedan lineup wound down amid a broader strategic shift toward SUVs and the MC20 supercar." },
+          },
+          colors:[
+            {name:"Bianco Alpi (White)",hex:"#F5F5F5"},
+            {name:"Nero Ribelle (Black)",hex:"#1A1A1A"},
+            {name:"Rosso Energia (Red)",hex:"#C8102E"},
+            {name:"Blu Passione (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
