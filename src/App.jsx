@@ -9504,6 +9504,107 @@ const VEHICLES = {
       },
     },
   },
+  "Isuzu": {
+    "Amigo": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "S": { engine:"2.3L 4-cylinder (74hp)", drivetrains:["RWD","4WD"], transmission:"Manual", note:"Isuzu's genuine compact, budget-friendly soft-top SUV, sharing its platform with the Isuzu pickup — a real bare-bones off-roader aimed at outdoorsy buyers on a budget. A real fuel-injected 2.6L engine option arrived for improved drivability." },
+            "XS": { engine:"2.6L 4-cylinder (100hp)", drivetrain:"4WD", transmission:"Manual", note:"Discontinued after 1994, with a real 4-year gap before the nameplate's mid-1990s revival on the Rodeo platform." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sahara Beige (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "2nd Gen (1998-2000)":{
+          years:["1998","1999","2000"],
+          trims:{
+            "S": { engine:"2.2L 4-cylinder (130hp)", drivetrains:["RWD","4WD"], transmission:"Manual", note:"A genuine revival sharing its platform with the larger Rodeo — real short-wheelbase, real 2-door body with a genuine folding soft-top over the rear seats plus a pop-up front sunroof. Renamed Rodeo Sport for 2001, ending the Amigo name's second and final US run." },
+            "S V6": { engine:"3.2L V6 (205hp)", drivetrain:"4WD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Copper Mica (Copper)",hex:"#B87333"},
+            {name:"Zephyr Green Metallic (Green)",hex:"#3B7A5A"},
+          ],
+        },
+      },
+    },
+    "Impulse": {
+      years:["1990","1991","1992"],
+      trims:{
+        "Base": { engine:"2.3L 4-cylinder (130hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine sport coupe styled by Giorgetto Giugiaro, real evidence Isuzu tried to build genuine brand cachet beyond its truck-and-SUV reputation. The RS Turbo variant brought a genuine AWD, turbocharged performance flagship to the lineup, a real technical showcase for a brand not otherwise known for performance cars." },
+        "RS Turbo": { engine:"1.6L Turbocharged 4-cylinder (160hp)", drivetrain:"AWD", transmission:"Manual", note:"Genuine AWD turbo performance flagship, with real Lotus-tuned suspension — a genuine engineering collaboration most buyers never knew about. Discontinued after 1992 in the US with no direct successor, as Isuzu's US passenger-car ambitions wound down in favor of focusing on trucks and SUVs." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Rodeo": {
+      generations:{
+        "1st Gen (1991-1997)":{
+          years:["1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "S": { engine:"2.6L 4-cylinder (120hp)", drivetrains:["RWD","4WD"], transmission:"Manual", note:"Isuzu's genuine mid-size SUV, real evidence the brand was carving out a real niche in the booming early-90s SUV market — this same basic platform was also sold as the Honda Passport through a real cross-badging arrangement between the two companies." },
+            "LS": { engine:"3.2L V6 (175hp)", drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Timberline Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (1998-2004)":{
+          years:["1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "S": { engine:"2.2L 4-cylinder (130hp)", drivetrains:["RWD","4WD"], transmission:"Manual", note:"A genuine redesign, still shared with the Honda Passport of the same era — real independent front suspension arrived for a genuinely smoother ride. A larger, more powerful V6 arrived for the final years before Isuzu's eventual 2009 exit from the US passenger-vehicle market." },
+            "LS": { engines:["3.2L V6 (205hp)","3.5L V6 (215hp)"], drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Zephyr Green Metallic (Green)",hex:"#3B7A5A"},
+          ],
+        },
+      },
+    },
+    "Trooper": {
+      years:["1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+      trims:{
+        "S": { engine:"3.2L V6 (175hp)", drivetrain:"4WD", transmission:"Manual", note:"Isuzu's genuine flagship, full-size body-on-frame SUV — real serious off-road credentials with a genuine two-speed transfer case, a real favorite among off-road enthusiasts for its rugged, no-nonsense construction. Also sold with real minor badge differences as the Acura SLX for a brief period in the mid-1990s." },
+        "LS": { engines:["3.2L V6 (175hp)","3.5L V6 (215hp)"], drivetrain:"4WD", transmission:"Automatic" },
+        "Limited": { engine:"3.5L V6 (215hp)", drivetrain:"4WD", transmission:"Automatic", note:"Discontinued in the US after 2002, replaced by the smaller Axiom — a real end to Isuzu's flagship-SUV ambitions in America." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "VehiCROSS": {
+      years:["1999","2000","2001"],
+      trims:{
+        "Base": { engine:"3.5L V6 (215hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuinely one of the strangest, most distinctive SUVs ever sold in America — real angular, aggressive bodywork with exposed body-color plastic cladding, developed initially as a real concept-car design study that Isuzu decided to put into limited production largely unchanged. A genuine cult favorite today among collectors for its sheer, uncompromising weirdness — only about 4,150 were ever sold in the US across its short 3-year run." },
+      },
+      colors:[
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cement Gray (Gray)",hex:"#8A8D8F"},
+        {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+        {name:"Ironman Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+  },
   "Jeep": {
     "Cherokee": {
       generations:{
@@ -12699,6 +12800,194 @@ const VEHICLES = {
       },
     },
   },
+  "Mercury": {
+    "Cougar": {
+      generations:{
+        "7th Gen (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "LS": { engine:"3.8L V6 (140hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine personal-luxury coupe, sharing its real MN12 platform with the Ford Thunderbird — Mercury's genuine answer to the personal-coupe segment, with distinctive styling that set it apart from its Ford sibling despite the shared bones underneath." },
+            "XR7": { engine:"4.6L V8 (210hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuine performance flagship, sharing its modular V8 with contemporary Mustangs and other Ford products. Discontinued after 1997, with a real 2-year gap before the nameplate's front-drive revival." },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Wedgewood Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "8th Gen (1999-2002)":{
+          years:["1999","2000","2001","2002"],
+          trims:{
+            "V6": { engine:"2.5L V6 (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely major shift — a real sport-compact coupe now, sharing its platform with the European Ford Mondeo, a genuine departure from the Cougar's traditional RWD personal-luxury character. A smaller inline-4 arrived as the base engine, real evidence of Mercury chasing a younger buyer with this generation." },
+            "V6 Sport": { engine:"2.5L V6 (170hp)", drivetrain:"FWD", transmission:"Manual", note:"Discontinued after 2002 with no direct successor, ending the Cougar nameplate's 35-year US run for good." },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Infra-Red (Red)",hex:"#C8102E"},
+            {name:"Fever Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+      },
+    },
+    "Grand Marquis": {
+      generations:{
+        "1st Gen Tail (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "GS": { engine:"4.6L V8 (190-210hp)", drivetrain:"RWD", transmission:"Automatic", note:"Mercury's genuine full-size, body-on-frame flagship sedan, sharing its Panther platform with the Ford Crown Victoria — real traditional American luxury, a comfortable, spacious, RWD sedan for buyers who still wanted that classic formula in the 1990s." },
+            "LS": { engine:"4.6L V8 (190-210hp)", drivetrain:"RWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Light Sage Metallic (Green)",hex:"#5A7A5A"},
+          ],
+        },
+        "2nd Gen (1998-2011)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "GS": { engine:"4.6L V8 (200-224hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine major redesign, real updated styling but the same fundamental body-on-frame, RWD, V8 formula that made the Grand Marquis a genuine institution among traditional American sedan buyers, taxi and livery fleets, and retirees alike." },
+            "LS": { engine:"4.6L V8 (200-224hp)", drivetrain:"RWD", transmission:"Automatic", note:"Discontinued after 2011 alongside the shutdown of the entire Mercury brand and the Panther platform it rode on — a real, genuine end to traditional body-on-frame American sedans." },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Light French Silk (Tan)",hex:"#C8B896"},
+          ],
+        },
+      },
+    },
+    "Mariner": {
+      years:["2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Base": { engine:"2.3L 4-cylinder (153hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine rebadged Ford Escape, Mercury's compact SUV entry — real more upscale trim and standard features distinguished it from its Ford sibling underneath." },
+        "Premier": { engine:"3.0L V6 (200-201hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Hybrid": { engine:"2.3L Hybrid 4-cylinder (155hp combined)", drivetrains:["FWD","AWD"], transmission:"Automatic (e-CVT)", note:"Added 2006 — genuine hybrid variant sharing its system with the Ford Escape Hybrid and Mazda Tribute Hybrid. Discontinued after 2011 alongside the complete shutdown of the Mercury brand." },
+      },
+      colors:[
+        {name:"Vibrant White (White)",hex:"#F5F5F5"},
+        {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+        {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+        {name:"Dark Ink Blue (Blue)",hex:"#1B2A4A"},
+      ],
+    },
+    "Milan": {
+      years:["2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Base": { engine:"2.3L 4-cylinder (160-175hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine rebadged Ford Fusion, Mercury's genuine mid-size sedan entry — real more upscale interior trim and standard equipment set it apart from its Ford sibling, sharing its platform with the Lincoln MKZ/Zephyr as well." },
+        "Premier": { engine:"3.0L V6 (221-240hp)", drivetrain:"AWD", transmission:"Automatic" },
+        "Hybrid": { engine:"2.5L Hybrid 4-cylinder (191hp combined)", drivetrain:"FWD", transmission:"Automatic (e-CVT)", note:"Added 2010 — genuine hybrid variant. Discontinued after 2011 alongside the shutdown of the entire Mercury brand, ending the Milan's single-generation run." },
+      },
+      colors:[
+        {name:"Vibrant White (White)",hex:"#F5F5F5"},
+        {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+        {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Dark Blue Pearl (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Mountaineer": {
+      generations:{
+        "1st Gen (1997-2001)":{
+          years:["1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"4.0L V6 (160hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Mercury's genuine first-ever SUV, a real rebadged Ford Explorer — genuinely aimed at buyers who wanted Explorer-level capability with a more upscale, distinctive Mercury badge and trim." },
+            "AWD": { engine:"5.0L V8 (215hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Wedgewood Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2002-2005)":{
+          years:["2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"4.0L V6 (210hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"A genuine redesign shared with the Explorer, real independent rear suspension arrived for a genuinely smoother on-road ride than the outgoing solid-axle setup." },
+            "Premier": { engine:"4.6L V8 (239hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"True Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "Base": { engine:"4.0L V6 (210hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "Premier": { engine:"4.6L V8 (292hp)", drivetrain:"AWD", transmission:"Automatic", note:"Discontinued after 2010 alongside the wind-down of the Mercury brand, ending 13 years of Mountaineer production." },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Ink Blue (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+      },
+    },
+    "Sable": {
+      generations:{
+        "2nd Gen (1992-1995)":{
+          years:["1992","1993","1994","1995"],
+          trims:{
+            "GS": { engine:"3.0L V6 (140hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine rebadged Ford Taurus, Mercury's mid-size sedan entry — real distinct front and rear styling (including Mercury's signature 'waterfall' grille) gave it a more upscale, unique identity than a plain badge-swap." },
+            "LS": { engine:"3.8L V6 (145hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Opal Frost Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (1996-1999)":{
+          years:["1996","1997","1998","1999"],
+          trims:{
+            "GS": { engine:"3.0L V6 (145hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuinely dramatic, oval-themed redesign shared with the equally distinctive third-gen Taurus — real polarizing styling that drew mixed reactions, though the Sable's own front-end design was genuinely more conservative than its Ford sibling's." },
+            "LS": { engine:"3.0L Duratec V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Toreador Red (Red)",hex:"#9B1B30"},
+            {name:"Light Prairie Tan (Tan)",hex:"#C8B896"},
+          ],
+        },
+        "4th Gen (2000-2005)":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GS": { engine:"3.0L V6 (155-200hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine toned-down redesign, real softer, less controversial styling than the outgoing oval-themed generation. Discontinued after 2005, with a real 3-year gap before the Sable name was revived on a different, larger platform." },
+            "LS Premium": { engine:"3.0L Duratec V6 (200hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Redfire Metallic (Red)",hex:"#9B1B30"},
+            {name:"Medium Wedgewood Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "5th Gen (2008-2009)":{
+          years:["2008","2009"],
+          trims:{
+            "Premier": { engine:"3.5L V6 (263hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine revival built on the larger Ford Five Hundred/Freestyle-derived D3 platform — real full-size proportions, a genuine step up from the mid-size Sables of the past. Discontinued after just two model years as part of Mercury's broader lineup contraction ahead of the whole brand's eventual 2011 shutdown." },
+          },
+          colors:[
+            {name:"Vibrant White (White)",hex:"#F5F5F5"},
+            {name:"Black Clearcoat (Black)",hex:"#1A1A1A"},
+            {name:"Sangria Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+  },
   "Mini": {
     "Clubman": {
       generations:{
@@ -14292,6 +14581,448 @@ const VEHICLES = {
             {name:"Boulder Gray (Gray)",hex:"#6B6E6F"},
             {name:"Ikazuchi Yellow (Yellow)",hex:"#F5C800"},
             {name:"Seiran Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+  },
+  "Oldsmobile": {
+    "88": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999"],
+      trims:{
+        "Base": { engine:"3.8L V6 (165hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine full-size flagship sedan, marketed from 1989 on as the 'Eighty Eight' — real comfortable, spacious FWD family sedan continuing a nameplate that dated all the way back to 1949, one of Oldsmobile's genuine longest-running model names." },
+        "LSS": { engine:"3.8L Supercharged V6 (225hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sport-luxury trim, with real supercharged power for a genuine performance edge in a comfort-focused sedan." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+        {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "Alero": {
+      years:["1999","2000","2001","2002","2003","2004"],
+      trims:{
+        "GX": { engine:"2.2L 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Achieva, Oldsmobile's genuine compact sedan and coupe entry — real evidence of GM's brand-wide N-body platform sharing, closely related under the skin to the Chevrolet Malibu and Pontiac Grand Am. Real evidence of Oldsmobile's 'not your father's Oldsmobile' rebranding push aimed at younger buyers." },
+        "GL": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "GLS": { engine:"3.4L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sportier trim. Discontinued after 2004 alongside GM's complete shutdown of the Oldsmobile brand, ending Alero production." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+        {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Aurora": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"4.0L V8 (250hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine, real ground-up-designed flagship sedan built to rejuvenate Oldsmobile's aging image — real distinctive, swoopy styling and a genuine Northstar-derived V8 gave it legitimate near-luxury credentials, though the brand's declining reputation limited its real sales success." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Dark Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2001-2003)":{
+          years:["2001","2002","2003"],
+          trims:{
+            "3.5": { engine:"3.5L V6 (215hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign, real smaller V6 engine option arrived alongside the continuing V8, a genuine attempt to broaden the price range. Production ended in 2003 alongside GM's phased shutdown of the entire Oldsmobile brand — a real symbolic end for the marque's flagship model." },
+            "4.0": { engine:"4.0L V8 (250hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Bravada": {
+      generations:{
+        "1st Gen (1991-1994)":{
+          years:["1991","1992","1993","1994"],
+          trims:{
+            "Base": { engine:"4.3L V6 (160hp)", drivetrain:"AWD", transmission:"Automatic", note:"Oldsmobile's genuine first-ever SUV, a real rebadged S-10 Blazer with genuine standard AWD (SmartTrak) — a real point of luxury and capability differentiation over its Chevrolet and GMC siblings." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Forest Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "2nd Gen (1996-2001)":{
+          years:["1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engine:"4.3L V6 (190hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuine redesign, real interior trim styled to echo the Aurora sedan — a genuine 1998 facelift brought updated bumpers and the new 'Rocket O' emblem." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Dark Sapphire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (2002-2004)":{
+          years:["2002","2003","2004"],
+          trims:{
+            "Base": { engine:"4.2L Inline-6 (275hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)", note:"A genuine final redesign, real launch vehicle for GM's new GMT360 mid-size SUV platform, sharing its underlying architecture with the Chevrolet TrailBlazer, GMC Envoy, and Isuzu Ascender — a genuine real inline-6, a rarity in the segment. Discontinued after 2004 alongside GM's complete shutdown of Oldsmobile." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Cutlass Supreme": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+      trims:{
+        "S": { engine:"3.1L V6 (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine real FWD redesign of Oldsmobile's storied Cutlass Supreme nameplate, sharing its GM W-body platform with the Buick Regal and Pontiac Grand Prix — a real mid-size personal-luxury sedan and coupe with decades of brand equity behind the name." },
+        "SL": { engine:"3.1L V6 (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "Convertible": { engine:"3.4L V6 (210hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine convertible body style added for the final years. Discontinued after 1997, replaced by the Intrigue — ending the Cutlass Supreme nameplate after over three decades." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+        {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "Intrigue": {
+      years:["1998","1999","2000","2001","2002"],
+      trims:{
+        "GX": { engine:"3.8L V6 (195hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Cutlass Supreme as Oldsmobile's genuine mid-size sedan flagship — real evidence of the brand's 'not your father's Oldsmobile' repositioning, with genuinely sharper handling and more contemporary styling than its predecessor." },
+        "GL": { engine:"3.8L V6 (195-215hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "GLS": { engine:"3.5L V6 (215hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sport-tuned trim, real DOHC V6 for the sportiest trim. Discontinued after 2002 as GM began winding down the entire Oldsmobile brand, ending the Intrigue after just one generation." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+        {name:"Dark Sapphire Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+  },
+  "Plymouth": {
+    "Acclaim": {
+      years:["1990","1991","1992","1993","1994","1995"],
+      trims:{
+        "Base": { engine:"2.5L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Plymouth's genuine mid-size sedan entry, sharing its K-car-derived AA-body platform with the Dodge Spirit and Chrysler LeBaron — real, honest transportation aimed at value-conscious buyers, a genuine Plymouth hallmark throughout the brand's history." },
+        "LE": { engine:"3.0L Mitsubishi V6 (141hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "LX": { engine:"3.0L Mitsubishi V6 (141hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 1995, replaced by the Breeze — the Acclaim's genuine 'cab-forward' successor." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+        {name:"Cameo Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Breeze": {
+      years:["1996","1997","1998","1999","2000"],
+      trims:{
+        "Base": { engine:"2.0L 4-cylinder (132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the Acclaim, sharing its genuine 'cab-forward' JA platform with the Chrysler Cirrus and Dodge Stratus — real dramatic, aerodynamic styling that was genuinely ahead of its time for a budget-priced mid-size sedan." },
+        "Expresso": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"Discontinued after 2000 (a few 2001 leftover models sold), as Plymouth's own brand wind-down accelerated toward its full 2001 discontinuation." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+        {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+      ],
+    },
+    "Neon": {
+      generations:{
+        "1st Gen (1995-1999)":{
+          years:["1995","1996","1997","1998","1999"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely charming, distinctive compact sedan with real friendly, smiling headlight styling that made it a genuine cultural touchstone — the 'Hi.' advertising campaign was a real memorable moment in 1990s car marketing. Also sold as the Dodge Neon, with the Plymouth version featuring subtly different trim." },
+            "Sport": { engine:"2.0L DOHC 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sportier trim, a real enthusiast favorite for its light weight and eager DOHC engine — genuinely competitive against the Civic Si and Neon's other sport-compact rivals of the era." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildfire Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (2000-2001)":{
+          years:["2000","2001"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (132hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign with real more rounded, mature styling — this was the very last new Plymouth model, and 2001 was the final model year the Neon was ever sold under the Plymouth badge before Chrysler discontinued the entire brand, leaving the Neon to continue as a Dodge-only model." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildfire Red (Red)",hex:"#C8102E"},
+            {name:"Intense Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "Prowler": {
+      years:["1997","1999","2000","2001"],
+      trims:{
+        "Base": { engine:"3.5L V6 (214-253hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuinely one of the most audacious factory-built cars of the 1990s — a real, no-compromise retro hot-rod with exposed front suspension, an aluminum body and chassis, and open front wheel wells, styled to genuinely evoke a 1930s street rod. Skipped the 1998 model year for real running production changes; production later moved to the Chrysler badge for the car's final years (2001-2002) as part of Plymouth's own brand wind-down." },
+      },
+      colors:[
+        {name:"Prowler Purple (Purple)",hex:"#5A2E7A"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Prowler Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Prowler Red (Red)",hex:"#C8102E"},
+      ],
+    },
+    "Voyager": {
+      generations:{
+        "2nd Gen Tail (1990-1995)":{
+          years:["1990","1991","1992","1993","1994","1995"],
+          trims:{
+            "Base": { engine:"2.5L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"One of the genuine original minivan pioneers alongside the Dodge Caravan and Chrysler Town & Country — real stretched K-car underpinnings, a genuine market-defining formula that essentially invented the modern minivan segment when it first launched back in 1984." },
+            "LE": { engines:["3.0L V6 (141hp)","3.3L V6 (162hp)"], drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+            {name:"Deep Slate Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "3rd Gen (1996-2000)":{
+          years:["1996","1997","1998","1999","2000"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine ground-up redesign, real evidence of Chrysler's minivan dominance continuing into a second decade — a genuine Grand Voyager long-wheelbase variant offered real extra cargo and passenger room. This was the final Voyager generation sold under the Plymouth badge; the brand's 2001 discontinuation ended Plymouth's minivan production for good, with the nameplate continuing on as the Chrysler Voyager and Dodge Caravan." },
+            "SE": { engines:["3.0L V6 (150hp)","3.3L V6 (158hp)","3.8L V6 (166hp)"], drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+  },
+  "Pontiac": {
+    "Firebird": {
+      generations:{
+        "3rd Gen Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "Base": { engine:"3.1L V6 (140hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"The final years of the third-generation Firebird, sharing its F-body platform with the Chevrolet Camaro — real genuine pony-car rivalry between the two GM siblings continued right through this generation's end." },
+            "Formula": { engine:"5.0L V8 (170-205hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Trans Am GTA": { engine:"5.7L V8 (235hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuine performance flagship of this generation, before the all-new fourth-gen Firebird took over for 1993." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (1993-2002)":{
+          years:["1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engines:["3.4L V6 (160hp)","3.8L V6 (200hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine dramatic, wedge-shaped redesign, real evidence of pony-car styling pushing into more aggressive, aero-focused territory. The LS1 V8 arrived for 1998, borrowed directly from the C5 Corvette — a genuine engineering high point for the whole Firebird lineage." },
+            "Formula": { engines:["5.7L LT1 V8 (275-285hp)","5.7L LS1 V8 (305-320hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+            "Trans Am WS6": { engine:"5.7L LS1 V8 (320-325hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuine Ram Air performance flagship, real functional hood scoops and a genuine 320-325hp tune — one of the most powerful, best-value American performance cars of its era. Discontinued after 2002 alongside the Camaro, ending GM's F-body platform and both pony cars for a real 7-year gap before the Camaro's 2010 revival — the Firebird itself never returned." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Cameo Ivory (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
+    "G6": {
+      years:["2005","2006","2007","2008","2009","2010"],
+      trims:{
+        "Base": { engines:["3.5L V6 (200hp)","2.4L 4-cylinder (169hp)"], drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Grand Am as Pontiac's genuine mid-size sedan, real evidence of the brand's continued push toward more contemporary styling and technology — genuine coupe and convertible body styles joined the sedan later in the run, a rare configuration breadth for this segment." },
+        "GT": { engine:"3.9L V6 (227hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "GXP": { engine:"3.6L V6 (252hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship. Discontinued after 2010 alongside GM's complete shutdown of the Pontiac brand." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red (Red)",hex:"#9B1B30"},
+        {name:"Blue Streak Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "G8": {
+      years:["2008","2009"],
+      trims:{
+        "Base": { engine:"3.6L V6 (256hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine real rear-wheel-drive sport sedan, imported from GM's Australian Holden subsidiary and badged Pontiac for the US — real evidence of Pontiac's late-brand attempt to reclaim its performance identity before the whole marque was shut down." },
+        "GT": { engine:"6.0L V8 (361hp)", drivetrain:"RWD", transmission:"Automatic" },
+        "GXP": { engine:"6.2L V8 (415hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Added 2009 — genuine performance flagship, sharing its LS3 V8 with the C6 Corvette. Discontinued after just two model years when GM shuttered the entire Pontiac brand amid its 2009 bankruptcy restructuring — a real, genuine loss for American RWD performance sedans." },
+      },
+      colors:[
+        {name:"Summit White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Sport Slate Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Grand Am": {
+      generations:{
+        "1st Gen Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "LE": { engine:"2.3L Quad 4 4-cylinder (160-180hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Pontiac's genuine sport-compact entry, real Quad 4 engine technology (a genuinely high-revving, high-output DOHC four) gave it legitimate performance credibility relative to segment rivals." },
+            "SE": { engine:"3.3L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1992-1998)":{
+          years:["1992","1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "SE": { engine:"2.3L Quad 4 4-cylinder (150-175hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, real evidence of Pontiac's continued 'excitement' brand positioning throughout the 1990s, with genuinely aggressive body cladding and sporty styling cues even on mainstream trims." },
+            "GT": { engine:"3.1L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Green Metallic (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (1999-2005)":{
+          years:["1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "SE": { engine:"2.4L Twin Cam 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine final redesign, real evidence of Pontiac's N-body platform reaching maturity — the Grand Am was consistently one of Pontiac's best-selling models throughout this generation. Discontinued after 2005, replaced by the G6." },
+            "GT": { engine:"3.4L V6 (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red (Red)",hex:"#9B1B30"},
+            {name:"Navy Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Grand Prix": {
+      generations:{
+        "5th Gen Tail (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "SE": { engine:"3.1L V6 (140hp)", drivetrain:"FWD", transmission:"Automatic", note:"Pontiac's genuine sporty mid-size sedan and coupe, sharing its GM W-body platform with the Buick Regal and Oldsmobile Cutlass Supreme — real driver-focused cockpit-style dashboard was a genuine Grand Prix signature." },
+            "GTP": { engine:"3.4L V6 (200-215hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine performance flagship trim, a real callback to the Grand Prix's storied 1960s-70s performance heritage." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "6th Gen (1997-2003)":{
+          years:["1997","1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "SE": { engine:"3.1L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign, real evidence GM continued refining the same basic W-body platform across multiple model generations. A genuine supercharged GTP variant made it one of the more legitimately quick front-drive sedans of its era." },
+            "GTP": { engine:"3.8L Supercharged V6 (240-260hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "7th Gen (2004-2008)":{
+          years:["2004","2005","2006","2007","2008"],
+          trims:{
+            "Base": { engine:"3.8L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine final redesign before the nameplate's discontinuation — a genuine GXP flagship with real V8 power gave the front-drive Grand Prix a legitimately potent send-off. Discontinued after 2008 with no direct successor, as Pontiac's sedan lineup consolidated around the G6 and G8." },
+            "GXP": { engine:"5.3L V8 (303hp)", drivetrain:"FWD", transmission:"Automatic (4-Speed)", note:"Genuine V8 performance flagship, a genuine rarity for a front-drive family sedan." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red (Red)",hex:"#9B1B30"},
+            {name:"Steel Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "GTO": {
+      years:["2004","2005","2006"],
+      trims:{
+        "Base": { engine:"5.7L LS1 V8 (350hp)", drivetrain:"RWD", transmissions:["Manual (6-Speed)","Automatic"], note:"A genuine revival of Pontiac's legendary 1960s muscle-car nameplate — real imported from GM's Australian Holden subsidiary (badged Monaro there), with a genuine LS1 V8 shared with the C5 Corvette. Real conservative, understated styling drew criticism from enthusiasts expecting something more visually aggressive to match the storied GTO name." },
+        "6.0": { engine:"6.0L LS2 V8 (400hp)", drivetrain:"RWD", transmissions:["Manual (6-Speed)","Automatic"], note:"The larger LS2 V8 arrived for 2005, a real substantial power bump that also brought genuinely more aggressive hood scoops and dual exhaust styling to better match the GTO name's heritage. Discontinued after 2006 with no direct successor, as Pontiac's US import arrangement with Holden wound down." },
+      },
+      colors:[
+        {name:"Cyclone Gray Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Torrid Red (Red)",hex:"#C8102E"},
+        {name:"Impulse Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Solstice": {
+      years:["2006","2007","2008","2009"],
+      trims:{
+        "Base": { engine:"2.4L 4-cylinder (177hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"A genuine, real 2-seat roadster, sharing its Kappa platform with the closely related Saturn Sky — real dramatic, curvaceous styling that drew genuine praise as one of the best-looking American cars of its era, a genuine bright spot for Pontiac's late-brand lineup." },
+        "GXP": { engine:"2.0L Turbocharged 4-cylinder (260hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Added 2007 — genuine performance flagship, real turbocharged power gave it legitimately quick acceleration. A genuine hardtop coupe body style joined for 2009. Discontinued after 2009 alongside GM's complete shutdown of the Pontiac brand." },
+      },
+      colors:[
+        {name:"Cool Slate Metallic (Gray)",hex:"#6B6E6F"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Cayenne Red (Red)",hex:"#9B1B30"},
+        {name:"Cyclone Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Sunfire": {
+      years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+      trims:{
+        "SE": { engine:"2.2L 4-cylinder (120hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Pontiac's genuine entry-level compact sedan and coupe, sharing its J-body platform with the Chevrolet Cavalier — real evidence GM's compact car strategy relied heavily on shared platforms with distinct brand-specific styling and marketing." },
+        "GT": { engine:"2.4L 4-cylinder (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sportier trim with a real more powerful engine and body kit. Discontinued after 2005 with no direct successor, as GM's compact lineup consolidated around the newer G5/Cobalt platform." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Vibe": {
+      generations:{
+        "1st Gen (2003-2008)":{
+          years:["2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "Base": { engine:"1.8L 4-cylinder (130hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine, real Toyota co-development — built alongside its nearly identical Toyota Matrix twin at the NUMMI joint-venture plant in California, giving Pontiac buyers real Toyota-level engineering and reliability under a Pontiac badge." },
+            "GT": { engine:"1.8L 4-cylinder (130hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sportier trim with a real high-revving VVTL-i engine shared with the Toyota Celica GT-S and Matrix XRS." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Electric Blue Metallic (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2009-2010)":{
+          years:["2009","2010"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign, still co-developed and built alongside the Toyota Matrix. Discontinued after 2010 alongside the complete shutdown of the entire Pontiac brand — a real, genuine end to GM's partnership with Toyota on this model." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Red (Red)",hex:"#9B1B30"},
+            {name:"Blue Streak Metallic (Blue)",hex:"#1E3A6B"},
           ],
         },
       },
