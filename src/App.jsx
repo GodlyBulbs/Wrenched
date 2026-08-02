@@ -2437,6 +2437,229 @@ const VEHICLES = {
       ],
     },
   },
+  "Buick": {
+    "Century": {
+      generations:{
+        "6th Gen (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Special": { engine:"3.3L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic", note:"Buick's genuine bread-and-butter mid-size sedan for decades — real conservative, comfortable styling aimed squarely at older, value-conscious buyers, a genuine staple of American driveways well into the 1990s." },
+            "Custom": { engine:"3.3L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "7th Gen (1997-2005)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Custom": { engine:"3.1L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine mild redesign of the same basic W-body platform underneath — real evidence Buick kept the Century's formula largely unchanged even as competitors modernized more aggressively. Discontinued after 2005, replaced by the all-new LaCrosse, ending the Century nameplate's run after nearly 70 years of on-and-off use." },
+            "Limited": { engine:"3.1L V6 (160hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Enclave": {
+      generations:{
+        "1st Gen (2008-2017)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "CX": { engine:"3.6L V6 (275-288hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Buick's genuine flagship 3-row crossover, sharing its GM Lambda platform with the Chevrolet Traverse and GMC Acadia — real evidence of Buick's brand repositioning toward SUVs and a younger, more upscale buyer base, a genuine turning point for the brand's US fortunes." },
+            "CXL": { engine:"3.6L V6 (275-288hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Carbon Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Essence": { engine:"3.6L V6 (310hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuine ground-up redesign, real evidence of Buick's continued push upmarket — genuinely one of the best-selling models in the brand's entire US lineup, a real driver of Buick's ongoing relevance in the crossover era." },
+            "Avenir": { engine:"3.6L V6 (310hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine flagship trim, Buick's real top-tier sub-brand designation, with the most premium interior appointments." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Slate Metallic (Gray)",hex:"#4A4E52"},
+          ],
+        },
+        "3rd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Preferred": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuine redesign, dropping the V6 for a turbocharged four-cylinder — real evidence of GM's broader engine-downsizing strategy applied to a genuine full-size 3-row crossover." },
+            "Avenir": { engine:"2.5L Turbocharged 4-cylinder (328hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Dark Moon Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "LaCrosse": {
+      generations:{
+        "1st Gen (2005-2009)":{
+          years:["2005","2006","2007","2008","2009"],
+          trims:{
+            "CX": { engine:"3.8L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced both the Century and Regal in one stroke, real evidence of Buick simplifying its confusing, overlapping mid-size sedan lineup — sold in Canada as the Allure to avoid a real unfortunate French-language connotation of the LaCrosse name." },
+            "CXS": { engine:"3.6L V6 (240hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "Super": { engine:"5.3L V8 (300hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2008 — a genuinely surprising V8 option for a mainstream Buick sedan, a real performance flagship most buyers never expected from the brand at the time." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black Onyx (Black)",hex:"#1A1A1A"},
+            {name:"Crimson Pearl (Red)",hex:"#9B1B30"},
+            {name:"Bright Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (2010-2016)":{
+          years:["2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "CX": { engine:"3.6L V6 (280hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely major redesign, real premium interior quality that earned genuine comparisons to European luxury sedans well above its price point. A genuine eAssist mild-hybrid variant brought real efficiency-focused tech to the lineup." },
+            "eAssist": { engine:"2.4L Hybrid 4-cylinder (182hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Carbon Black (Black)",hex:"#1A1A1A"},
+            {name:"Crystal Red Tintcoat (Red)",hex:"#9B1B30"},
+            {name:"Quicksilver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2017-2019)":{
+          years:["2017","2018","2019"],
+          trims:{
+            "Essence": { engine:"3.6L V6 (310hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine final redesign before the nameplate's US discontinuation — real evidence of Buick's broader shift away from sedans toward crossovers. Discontinued in the US after 2019, though production continued in China for that market." },
+            "Avenir": { engine:"3.6L V6 (310hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "LeSabre": {
+      generations:{
+        "8th Gen (1992-1999)":{
+          years:["1992","1993","1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "Custom": { engine:"3.8L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Buick's genuine full-size flagship sedan for decades — real soft, comfortable ride and a spacious, genuinely quiet cabin made it a perennial favorite among retirees and long-distance highway drivers, a real Buick brand hallmark." },
+            "Limited": { engine:"3.8L V6 (170-205hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "9th Gen (2000-2005)":{
+          years:["2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Custom": { engine:"3.8L V6 (205hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine final redesign, still riding on the same basic full-size H-body platform. Discontinued after 2005, replaced by the more modern Lucerne — a real end to the LeSabre nameplate after four decades." },
+            "Limited": { engine:"3.8L V6 (205hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Park Avenue": {
+      generations:{
+        "1st Gen Tail (1991-1996)":{
+          years:["1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Base": { engine:"3.8L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Buick's genuine near-luxury flagship, positioned above the LeSabre — real plush, genuinely quiet ride quality was the whole point, a car built for effortless highway cruising over sporty handling." },
+            "Ultra": { engine:"3.8L Supercharged V6 (205hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine supercharged performance flagship, a real surprising amount of power for such a comfort-focused car." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (1997-2005)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "Base": { engine:"3.8L V6 (205hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign with real more contemporary styling, though the fundamental comfort-first mission remained unchanged. Discontinued after 2005, replaced by the Lucerne — ending the Park Avenue nameplate's run as Buick's genuine near-luxury flagship." },
+            "Ultra": { engine:"3.8L Supercharged V6 (240hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "Regal": {
+      generations:{
+        "1st Gen W-Body (1990-1996)":{
+          years:["1990","1991","1992","1993","1994","1995","1996"],
+          trims:{
+            "Custom": { engine:"3.1L V6 (135hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine switch to GM's new W-body platform, sharing its bones with the Pontiac Grand Prix and Oldsmobile Cutlass Supreme — real evidence of GM's mid-size lineup consolidating around shared architecture. The final years of Buick's more traditional, rear-drive personal-luxury Regal era had already ended before this generation began." },
+            "Gran Sport": { engine:"3.8L V6 (170hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine sport-performance trim, a real callback to the Regal's turbocharged Grand National heyday of the 1980s, though without the outright power of that legendary predecessor." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Light Sapphire Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen W-Body (1997-2004)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "LS": { engine:"3.8L V6 (200hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine redesign on the same basic W-body architecture — real evidence of GM extending platform lifecycles across multiple model generations to save development costs." },
+            "GS": { engine:"3.8L Supercharged V6 (240hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine supercharged performance flagship, real enthusiast favorite for its combination of comfort and genuine straight-line speed. Discontinued after 2004, replaced by the LaCrosse — ending domestic US Regal production for several years before the nameplate's later revival." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Medium Garnet Red (Red)",hex:"#6B1A2A"},
+            {name:"Sterling Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "3rd Gen (2011-2020)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (182hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"A genuine revival built on the Opel Insignia platform — real European-engineered handling and design brought a genuinely more athletic character than any prior domestic Regal. A real Sportback liftback and TourX wagon body style both joined the sedan later in this generation's run." },
+            "GS": { engine:"2.0L Turbocharged 4-cylinder (259-270hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship, with real AWD and a genuinely sport-tuned chassis." },
+            "TourX": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2018 — a genuine wagon body style, a real rarity in the mainstream American market by this point. Discontinued after 2020 alongside the rest of the Regal lineup, ending Buick's US sedan and wagon offerings entirely as the brand shifted to an SUV-only lineup." },
+          },
+          colors:[
+            {name:"Summit White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Twilight Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Chili Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Satin Steel Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+  },
   "Cadillac": {
     "Allanté": {
       years:["1990","1991","1992","1993"],
@@ -4455,6 +4678,48 @@ const VEHICLES = {
       },
     },
   },
+  "Daewoo": {
+    "Lanos": {
+      years:["1999","2000","2001","2002"],
+      trims:{
+        "S": { engine:"1.6L 4-cylinder (105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Daewoo's genuine entry-level subcompact for its short-lived US venture — real Giorgetto Giugiaro styling (through Italdesign) gave it a genuinely more stylish look than its budget price suggested. Sold as a hatchback and sedan; notably lacked ABS even as an option, a real point of criticism at the time." },
+        "Sport": { engine:"1.6L 4-cylinder (105hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sportier trim with leather upholstery and alloy wheels. Daewoo's US operations wound down after 2002 amid the parent company's real financial collapse and eventual GM acquisition, ending sales of all three US Daewoo models simultaneously." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Leganza": {
+      years:["1999","2000","2001","2002"],
+      trims:{
+        "SE": { engine:"2.2L 4-cylinder (131hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Daewoo's genuine flagship for the US market, marketed as a 'luxury midsize' sedan despite competing more directly with genuine compact rivals like the Mazda 626 and Mitsubishi Galant — real Giorgetto Giugiaro styling, originally developed from a rejected Jaguar concept design." },
+        "SX": { engine:"2.2L 4-cylinder (131hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "CDX": { engine:"2.2L 4-cylinder (131hp)", drivetrain:"FWD", transmission:"Automatic", note:"Top trim, with genuine leather and additional convenience features. Like its Lanos and Nubira siblings, discontinued in the US after 2002." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red (Red)",hex:"#9B1B30"},
+        {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "Nubira": {
+      years:["1999","2000","2001","2002"],
+      trims:{
+        "SE": { engine:"2.0L 4-cylinder (129hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Daewoo's genuine compact-class entry, sold as sedan, hatchback, and wagon body styles — a real broader range of configurations than most rivals offered at the time. This same basic platform later resurfaced in the US market as the Suzuki Forenza and Reno after GM's Daewoo acquisition, real evidence of the design living on well past the original brand's US departure." },
+        "CDX": { engine:"2.0L 4-cylinder (129hp)", drivetrain:"FWD", transmission:"Automatic", note:"Top trim. Discontinued in the US after 2002 alongside the rest of Daewoo's American lineup, ending the brand's brief, genuine attempt to establish itself in the US new-car market." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red (Red)",hex:"#9B1B30"},
+        {name:"Ocean Blue Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+  },
   "Dodge": {
     "Avenger": {
       generations:{
@@ -5058,6 +5323,79 @@ const VEHICLES = {
           ],
         },
       },
+    },
+  },
+  "Eagle": {
+    "Premier": {
+      years:["1990","1991","1992"],
+      trims:{
+        "LX": { engine:"2.5L 4-cylinder (111hp)", drivetrain:"FWD", transmission:"Automatic", note:"A genuine real product of AMC's final years before Chrysler's 1987 acquisition — designed with real input from Renault (part-owner of AMC at the time) and styled by Giorgetto Giugiaro, a genuinely sophisticated design for the era. Also sold briefly as the Dodge Monaco." },
+        "ES": { engine:"3.0L PRV V6 (150hp)", drivetrain:"FWD", transmission:"Automatic", note:"The genuine PRV V6 was a real joint Peugeot-Renault-Volvo design, a genuine engineering curiosity for an American-badged sedan. Discontinued after 1992, replaced by the all-new Eagle Vision." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+        {name:"Cameo Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Summit": {
+      years:["1990","1991","1992","1993","1994","1995","1996"],
+      trims:{
+        "DL": { engine:"1.5L 4-cylinder (81-92hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine rebadged Mitsubishi Mirage, sold through Chrysler's Eagle division as part of the real Diamond-Star Motors partnership — a real budget-friendly compact aimed at import-curious American buyers who wanted a Chrysler-network dealership experience." },
+        "ES": { engine:"1.8L 4-cylinder (113hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+        "Wagon": { engine:"2.4L 4-cylinder (136hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine rebadged Mitsubishi Expo/RVR wagon, added 1992 — real AWD availability was a genuine point of difference for a compact wagon of this era. Discontinued after 1996 alongside the wind-down of the whole Eagle brand." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+        {name:"Sapphire Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Talon": {
+      generations:{
+        "1st Gen (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "Base": { engine:"2.0L 4-cylinder (92-135hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine sibling to the Mitsubishi Eclipse, both built at the real Diamond-Star Motors plant in Normal, Illinois — a genuine product of Chrysler's positioning of Eagle as its 'import fighter' performance division. Real pop-up headlights and a distinct front fascia set it apart visually from its Eclipse twin." },
+            "TSi": { engine:"2.0L Turbocharged 4-cylinder (195hp)", drivetrain:"FWD", transmission:"Manual" },
+            "TSi AWD": { engine:"2.0L Turbocharged 4-cylinder (195-210hp)", drivetrain:"AWD", transmission:"Manual", note:"Genuine performance flagship, real full-time AWD gave it a genuine edge in wet or snowy conditions over its FWD-only rivals — a real tuner-scene favorite for its tunable 4G63 turbo engine, shared with the Lancer Evolution family." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildfire Red (Red)",hex:"#C8102E"},
+            {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+          ],
+        },
+        "2nd Gen (1995-1998)":{
+          years:["1995","1996","1997","1998"],
+          trims:{
+            "ESi": { engine:"2.0L 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuine redesign shared with the second-gen Eclipse — real evidence US buyers actually preferred the Eagle version over the more mainstream Mitsubishi-badged twin during this generation, a genuine rarity for the usually-overlooked Eagle brand." },
+            "TSi": { engine:"2.0L Turbocharged 4-cylinder (140-210hp)", drivetrains:["FWD","AWD"], transmission:"Manual", note:"Discontinued after 1998 alongside the complete shutdown of the Eagle brand — Chrysler folded Eagle entirely for 1999, ending its decade-long run as the automaker's import-fighter division." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Wildfire Red (Red)",hex:"#C8102E"},
+            {name:"Sapphire Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Vision": {
+      years:["1993","1994","1995","1996","1997"],
+      trims:{
+        "ESi": { engine:"3.3L V6 (153hp)", drivetrain:"FWD", transmission:"Automatic", note:"Replaced the Premier as Eagle's genuine flagship sedan, sharing its 'cab-forward' LH platform design with the Chrysler Concorde and Dodge Intrepid — real dramatic, aerodynamic styling that was genuinely ahead of its time for a mainstream full-size sedan." },
+        "TSi": { engine:"3.5L V6 (214hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine performance-oriented trim, with a real more powerful V6 and sport-tuned suspension. Discontinued after 1997 with no direct Eagle successor — its role was effectively absorbed by the Chrysler 300M a couple years later, as Eagle itself wound down toward its 1998 discontinuation." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Wildberry Red (Red)",hex:"#9B1B30"},
+        {name:"Deep Amethyst Pearl (Purple)",hex:"#4A2E5A"},
+      ],
     },
   },
   "Ferrari": {
@@ -7014,6 +7352,95 @@ const VEHICLES = {
         {name:"Vik Black (Black)",hex:"#1A1A1A"},
         {name:"Makalu Gray (Gray)",hex:"#6B6E6F"},
         {name:"Cardiff Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
+  },
+  "Geo": {
+    "Metro": {
+      generations:{
+        "1st Gen (1989-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "Base": { engine:"1.0L 3-cylinder (55hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine rebadged Suzuki Cultus, sold through Chevrolet dealerships under GM's real Geo sub-brand — genuinely one of the most fuel-efficient cars ever sold in America, with the manual-transmission XFI variant rated around 50+ mpg highway, a real remarkable figure even by today's standards." },
+            "LSi": { engine:"1.3L 4-cylinder (70hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Convertible": { engine:"1.0L 3-cylinder (55hp)", drivetrain:"FWD", transmission:"Manual", note:"Offered 1990-1993 — a genuinely unusual, budget-friendly convertible variant, real evidence GM was willing to experiment with body styles even on its cheapest model." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red (Red)",hex:"#C8102E"},
+            {name:"Bright Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "2nd Gen (1995-1997)":{
+          years:["1995","1996","1997"],
+          trims:{
+            "Base": { engine:"1.0L 3-cylinder (55hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign built on the second-generation Suzuki Swift platform — real evidence the Metro remained GM's genuine budget-fuel-economy champion right up until the Geo brand's own discontinuation. Rebadged as the Chevrolet Metro for 1998 when GM folded the Geo brand into Chevrolet entirely." },
+            "LSi": { engine:"1.3L 4-cylinder (70-79hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Radiant Red (Red)",hex:"#C8102E"},
+            {name:"Medium Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Prizm": {
+      generations:{
+        "1st Gen (1989-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (102hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine rebadged Toyota Sprinter (a Corolla variant never sold under the Toyota name in the US) — a real product of the NUMMI joint-venture plant in Fremont, California, shared between GM and Toyota. Real Toyota build quality and reliability at a genuine Chevrolet-dealer price point made it a real sleeper favorite among value-conscious buyers." },
+            "GSi": { engine:"1.6L DOHC 4-cylinder (130hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sportier trim with a real more powerful DOHC engine, rear spoiler, and bucket seats." },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (1993-1997)":{
+          years:["1993","1994","1995","1996","1997"],
+          trims:{
+            "Base": { engine:"1.6L 4-cylinder (105hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign on the newer Corolla platform, real continued NUMMI production kept the Toyota-level build quality intact. Rebadged as the Chevrolet Prizm for 1998 when the Geo brand folded into Chevrolet." },
+            "LSi": { engine:"1.8L 4-cylinder (105-125hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Super White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Sunfire Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+      },
+    },
+    "Storm": {
+      years:["1990","1991","1992","1993"],
+      trims:{
+        "Base": { engine:"1.6L 4-cylinder (95hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine rebadged Isuzu Impulse, sold as Geo's sport-compact offering — real distinctive, wedge-shaped styling gave it genuine visual flair well beyond its budget price point, offered as both a 3-door and unusual 5-door hatchback body style." },
+        "GSi": { engine:"1.6L DOHC 4-cylinder (130hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sportier trim, with a real more powerful DOHC engine shared with the Prizm GSi. Discontinued after 1993 with no direct successor, as Geo's lineup consolidated around its more popular Metro, Prizm, and Tracker models." },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red (Red)",hex:"#C8102E"},
+        {name:"Bright Aqua (Teal)",hex:"#1E8A8A"},
+      ],
+    },
+    "Tracker": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+      trims:{
+        "Base": { engine:"1.6L 4-cylinder (80hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuine rebadged Suzuki Sidekick, Geo's real entry into the compact SUV segment — offered as both a genuine 2-door soft-top convertible and a more conventional hardtop, with real part-time 4WD available for genuine off-road capability. Rebadged as the Chevrolet Tracker for 1998 when the Geo brand folded into Chevrolet, continuing through 2004." },
+        "LSi": { engine:"1.6L 4-cylinder (95hp)", drivetrain:"4WD", transmission:"Automatic" },
+      },
+      colors:[
+        {name:"Bright White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Radiant Red (Red)",hex:"#C8102E"},
+        {name:"Cyclone Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
     },
   },
