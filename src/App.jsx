@@ -11882,6 +11882,80 @@ const VEHICLES = {
     },
   },
   "Mercedes-Benz": {
+    "C-Class": {
+      generations:{
+        "W202 (1994-2000)":{
+          years:["1994","1995","1996","1997","1998","1999","2000"],
+          trims:{
+            "C220": { engine:"2.2L Inline-4 (147hp)", drivetrain:"RWD", transmission:"Automatic", note:"Replaced the beloved 190E as Mercedes-Benz's genuine entry-level model — the first vehicle ever to officially wear the 'C-Class' badge, a real naming convention that continues to this day." },
+            "C280": { engine:"2.8L Inline-6 (194hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "C36 AMG": { engine:"3.6L Inline-6 (268hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuinely the first-ever AMG-badged production Mercedes sold through regular dealer channels — a real turning point that began AMG's transition from an independent tuning house to a fully integrated in-house performance division." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Imperial Red (Red)",hex:"#9B1B30"},
+            {name:"Smoke Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W203 (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "C240": { engine:"2.6L V6 (168hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine redesign with distinctive, real 'fried-egg' headlight styling — a real coupe body style (Sport Coupe) was also offered, later spun off as its own CLC-Class nameplate." },
+            "C320": { engine:"3.2L V6 (215hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "C55 AMG": { engine:"5.4L V8 (362hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuine naturally-aspirated V8 performance flagship, a real enthusiast favorite for its raw, unassisted power delivery before turbocharging became the AMG norm." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Firemist Red (Red)",hex:"#9B1B30"},
+            {name:"Brilliant Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W204 (2008-2014)":{
+          years:["2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "C300": { engine:"3.0L V6 (228hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"A genuinely sharper, more contemporary redesign borrowing styling cues from the S-Class and CLS-Class of the era. A real dedicated 2-door coupe body style arrived for 2012, its own distinct model within the W204 family." },
+            "C350": { engine:"3.5L V6 (268-302hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)" },
+            "C63 AMG": { engine:"6.2L V8 (451-481hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"Genuine naturally-aspirated V8 performance flagship, a real high-water mark for AMG's screaming, unassisted V8 era before the switch to turbocharging." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Mars Red (Red)",hex:"#C8102E"},
+            {name:"Iridium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W205 (2015-2021)":{
+          years:["2015","2016","2017","2018","2019","2020","2021"],
+          trims:{
+            "C300": { engine:"2.0L Turbocharged 4-cylinder (241hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuinely more refined, S-Class-inspired redesign — real evidence of Mercedes-Benz trickling flagship technology and styling down through the whole lineup. Real turbocharged four-cylinder power became the sole non-AMG engine option, a genuine efficiency-driven shift." },
+            "AMG C43": { engine:"3.0L Twin-Turbo V6 (362-385hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "AMG C63 S": { engine:"4.0L Twin-Turbo V8 (469-503hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship, the first C63 with turbocharging — a real controversial shift for AMG purists, though the new engine delivered genuinely more power and torque than any prior naturally-aspirated C63." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Selenite Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "W206 (2022-2026)":{
+          years:["2022","2023","2024","2025","2026"],
+          trims:{
+            "C300": { engine:"2.0L Turbocharged Mild-Hybrid 4-cylinder (255hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuinely major shift — four-cylinder power only across the entire lineup for the first time in C-Class history, even on the AMG range-topper, with real turbocharging and 48-volt mild-hybrid assistance replacing every prior six- and eight-cylinder option." },
+            "AMG C43": { engine:"2.0L Turbocharged Mild-Hybrid 4-cylinder (416hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "AMG C63 S E-Performance": { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (671hp combined)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuinely the most powerful four-cylinder production engine ever built at its debut — a real plug-in hybrid system pairs the M139 turbo four with a rear electric motor for genuinely startling, S-Class-flagship-rivaling output from a compact sedan." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Patagonia Red (Red)",hex:"#9B1B30"},
+            {name:"High-Tech Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "E-Class": {
       generations:{
         "W124 (1990-1993)":{
@@ -11965,6 +12039,234 @@ const VEHICLES = {
             {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
             {name:"Polar White (White)",hex:"#F5F5F5"},
             {name:"Spectral Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+    "G-Class": {
+      generations:{
+        "W463 (2002-2018)":{
+          years:["2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "G500": { engine:"5.0L V8 (292hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"The genuine 'G-Wagen' officially arrived in US showrooms for 2002, decades after its 1979 military-vehicle origins — real solid front and rear axles and three genuine locking differentials gave it off-road capability matched by almost nothing else sold with a luxury-brand badge. Its boxy, largely unchanged silhouette became a genuine status symbol and streetwear icon well beyond its off-road roots." },
+            "G550": { engine:"5.5L V8 (382hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Replaced the G500 badge for 2009, a genuine displacement and power increase." },
+            "G63 AMG": { engine:"5.5L Biturbo V8 (536hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship, real twin-turbo power transforming a decades-old military-derived platform into a genuine 0-60-in-4-seconds luxury SUV." },
+            "G65 AMG": { engine:"6.0L Biturbo V12 (621hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"The genuine range-topping variant, with a real V12 shared with the S65 AMG sedan — one of the most expensive, most powerful SUVs money could buy at the time." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Mystic Red (Red)",hex:"#6B1A2A"},
+            {name:"Iridium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "New W463 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "G550": { engine:"4.0L Biturbo V8 (416hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"A genuine ground-up redesign after nearly two decades on the original platform — real independent front suspension replaced the old solid axle, a genuine ride-quality improvement while keeping the same three locking differentials and iconic boxy silhouette intact. Real evidence Mercedes understood not to mess with a design icon." },
+            "AMG G63": { engine:"4.0L Biturbo V8 (577-585hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship, real distinctive quad exhaust tips and a genuinely absurd combination of off-road hardware and supercar-adjacent acceleration." },
+            "G580 EQG": { engine:"Quad Electric Motors (579hp)", drivetrain:"4WD", transmission:"Automatic (Single-Speed)", note:"Added 2025 — Mercedes-Benz's first-ever all-electric G-Wagen, with real individual motors at each wheel enabling a genuine 'G-Turn' feature that can rotate the vehicle in place." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Manufaktur Red (Red)",hex:"#6B1A2A"},
+            {name:"Selenite Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "GLC": {
+      generations:{
+        "X204 — GLK (2010-2015)":{
+          years:["2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "GLK350": { engine:"3.5L V6 (268hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"Launched as the GLK-Class, Mercedes-Benz's genuine first-ever compact luxury crossover for the US — real boxy, upright styling that echoed the G-Class in miniature, before the GLC replaced it with softer, more conventional crossover proportions." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Mars Red (Red)",hex:"#C8102E"},
+            {name:"Palladium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "X253 (2016-2022)":{
+          years:["2016","2017","2018","2019","2020","2021","2022"],
+          trims:{
+            "GLC300": { engine:"2.0L Turbocharged 4-cylinder (241-255hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"Renamed from GLK, a real ground-up redesign sharing its platform with the contemporary C-Class — genuinely the best-selling model in Mercedes-Benz's entire US lineup, a real cash cow for the brand throughout this generation's run." },
+            "AMG GLC43": { engine:"3.0L Twin-Turbo V6 (362-385hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "AMG GLC63": { engine:"4.0L Twin-Turbo V8 (469-503hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship, sharing its engine with the equivalent C63 sedan." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Selenite Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "X254 (2023-2026)":{
+          years:["2023","2024","2025","2026"],
+          trims:{
+            "GLC300": { engine:"2.0L Turbocharged Mild-Hybrid 4-cylinder (255hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuine redesign sharing its platform with the contemporary C-Class — real 48-volt mild-hybrid assistance across the lineup for improved efficiency. A genuine all-electric GLC EV joined the lineup for 2025, Mercedes-Benz's first electric compact SUV built on a dedicated new 800-volt architecture." },
+            "AMG GLC43": { engine:"2.0L Turbocharged Mild-Hybrid 4-cylinder (416hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "GLC EV": { engine:"Electric Motors (536hp combined)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2025 — Mercedes-Benz's first dedicated electric compact SUV, built on a genuine 800-volt architecture for real fast-charging capability." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Patagonia Red (Red)",hex:"#9B1B30"},
+            {name:"High-Tech Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "GLE": {
+      generations:{
+        "W163 — M-Class (1998-2005)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "ML320": { engine:"3.2L V6 (215hp)", drivetrain:"4WD", transmission:"Automatic", note:"Sold as the M-Class, Mercedes-Benz's genuine first-ever SUV for the US market, and controversially built at the brand's first-ever US assembly plant in Vance, Alabama — a real symbolic shift for a brand long associated purely with German engineering." },
+            "ML430": { engine:"4.3L V8 (268hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "ML55 AMG": { engine:"5.0L V8 (342hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine early AMG SUV performance flagship, a real rarity for the segment at the time." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Imperial Red (Red)",hex:"#9B1B30"},
+            {name:"Brilliant Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W164 (2006-2011)":{
+          years:["2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "ML350": { engine:"3.5L V6 (268hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"A genuine ground-up redesign with real improved on-road manners and interior quality — a genuine acknowledgment that most buyers wanted a comfortable family hauler more than a serious off-roader." },
+            "ML550": { engine:"5.5L V8 (382hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+            "ML63 AMG": { engine:"6.2L V8 (503hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Genuine naturally-aspirated V8 performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Firemist Red (Red)",hex:"#9B1B30"},
+            {name:"Iridium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W166 — M-Class/GLE (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "ML350": { engine:"3.5L V6 (302hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Renamed GLE mid-cycle for 2016, part of Mercedes-Benz's brand-wide SUV naming overhaul — same basic W166 platform continued underneath the new badge, now aligned with the C/E/S-Class naming logic (GLE roughly corresponding to the E-Class in size)." },
+            "GLE400": { engine:"3.0L Twin-Turbo V6 (329hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)" },
+            "AMG GLE63 S": { engine:"5.5L Biturbo V8 (577hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Selenite Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "W167 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "GLE350": { engine:"2.0L Turbocharged 4-cylinder (255hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"A genuine ground-up redesign, built from scratch as a real GLE rather than an evolved M-Class platform for the first time — real E-Active Body Control adaptive suspension became available, a genuine technical showcase. A distinctive 2-door GLE Coupe body style also joined the lineup." },
+            "GLE450": { engine:"3.0L Turbocharged Mild-Hybrid Inline-6 (362-375hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)" },
+            "GLE450e": { engine:"3.0L Turbocharged Plug-In Hybrid Inline-6 (381hp combined)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine plug-in hybrid variant, with real all-electric-only range for shorter trips." },
+            "AMG GLE63 S": { engine:"4.0L Twin-Turbo V8 (603hp)", drivetrain:"4WD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship, the most powerful GLE ever built. A 2027 refresh is planned bringing MB.OS software and updated styling." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Patagonia Red (Red)",hex:"#9B1B30"},
+            {name:"High-Tech Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
+    "S-Class": {
+      generations:{
+        "W126 Tail (1990-1991)":{
+          years:["1990","1991"],
+          trims:{
+            "300SE": { engine:"3.0L Inline-6 (188hp)", drivetrain:"RWD", transmission:"Automatic", note:"Mercedes-Benz's genuine flagship luxury sedan, real evidence of the marque's engineering-first philosophy — the final years of a generation widely regarded as one of the most over-engineered, durable luxury sedans ever built." },
+            "560SEL": { engine:"5.6L V8 (238hp)", drivetrain:"RWD", transmission:"Automatic", note:"The genuine long-wheelbase flagship, before the redesigned W140 took over for 1992." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Smoke Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Blue Black (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+        "W140 (1992-1999)":{
+          years:["1992","1993","1994","1995","1996","1997","1998","1999"],
+          trims:{
+            "S320": { engine:"3.2L Inline-6 (228hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuinely massive, over-built flagship — real evidence of Mercedes-Benz's no-compromise engineering philosophy taken to its extreme, famously delayed and over-budget in development but genuinely bulletproof once it arrived. The lightest production V12 in the world at the time powered the range-topping S600." },
+            "S420": { engine:"4.2L V8 (275hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "S600": { engine:"6.0L V12 (389hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuine flagship, a real technical tour de force that also underpinned several Pagani and other exotic hypercars of the era." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Smoke Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Imperial Red (Red)",hex:"#9B1B30"},
+          ],
+        },
+        "W220 (2000-2006)":{
+          years:["2000","2001","2002","2003","2004","2005","2006"],
+          trims:{
+            "S430": { engine:"4.3L V8 (275hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuinely lighter, more efficient redesign, real evidence of Mercedes-Benz reining in the excess of the outgoing W140 without sacrificing real luxury-flagship presence." },
+            "S500": { engine:"5.0L V8 (302hp)", drivetrains:["RWD","AWD"], transmission:"Automatic" },
+            "S600": { engine:"5.5L Biturbo V12 (493hp)", drivetrain:"RWD", transmission:"Automatic" },
+            "S65 AMG": { engine:"6.0L Biturbo V12 (604hp)", drivetrain:"RWD", transmission:"Automatic", note:"Genuine performance flagship of the whole lineup." },
+          },
+          colors:[
+            {name:"Alabaster White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Firemist Red (Red)",hex:"#9B1B30"},
+            {name:"Brilliant Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W221 (2007-2013)":{
+          years:["2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "S550": { engine:"5.5L V8 (382hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (7-Speed)", note:"A genuinely more athletic redesign, real active suspension technology and a genuine hybrid variant (S400 Hybrid) arrived — Mercedes-Benz's first-ever hybrid sold in the US." },
+            "S400 Hybrid": { engine:"3.5L V6 Hybrid (295hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed)" },
+            "S65 AMG": { engine:"6.0L Biturbo V12 (621hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Mars Red (Red)",hex:"#C8102E"},
+            {name:"Iridium Silver (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "W222 (2014-2020)":{
+          years:["2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "S450": { engine:"3.0L Twin-Turbo V6 (362hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuinely dramatic technology showcase — real Magic Body Control suspension used a forward-facing stereo camera to scan the road ahead and preemptively adjust the suspension, a genuine world-first for a production car." },
+            "S560": { engine:"4.0L Twin-Turbo V8 (463hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "S650": { engine:"6.0L Biturbo V12 (621hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed)" },
+            "AMG S63": { engine:"4.0L Twin-Turbo V8 (603hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship of the mainstream AMG lineup, sitting just below the range-topping S65." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Designo Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Selenite Gray (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "W223 (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "S500": { engine:"3.0L Turbocharged Mild-Hybrid Inline-6 (429hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (9-Speed)", note:"A genuine major redesign with real rear-axle steering (up to 10 degrees on long-wheelbase models) and a genuine plug-in hybrid variant offering real all-electric-only range. A 2026 mid-cycle refresh was billed as the largest in the S-Class's 140-year history, with over 2,700 individual parts revised." },
+            "S580": { engine:"4.0L Twin-Turbo V8 (496hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "S580e": { engine:"3.0L Turbocharged Plug-In Hybrid Inline-6 (510hp combined)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+            "AMG S63 E-Performance": { engine:"4.0L Twin-Turbo Plug-In Hybrid V8 (791hp combined)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Genuine performance flagship, the most powerful S-Class sedan ever built — real hybrid assistance pushes output well past what the naturally-aspirated or even earlier turbo AMG S-Class variants ever achieved." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Obsidian Black (Black)",hex:"#1A1A1A"},
+            {name:"Patagonia Red (Red)",hex:"#9B1B30"},
+            {name:"High-Tech Silver (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
@@ -13569,6 +13871,94 @@ const VEHICLES = {
     },
   },
   "Porsche": {
+    "911": {
+      generations:{
+        "964 Tail (1990-1994)":{
+          years:["1990","1991","1992","1993","1994"],
+          trims:{
+            "Carrera 2": { engine:"3.6L Flat-6 (247hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"A genuinely major evolution of the classic air-cooled 911 shape — roughly 85% new parts compared to the outgoing G-series, with real power steering and ABS becoming standard for the first time in 911 history." },
+            "Turbo": { engine:"3.3L Turbocharged Flat-6 (315-355hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuine performance flagship, still using the older 3.3L turbo engine even as the naturally-aspirated cars moved to 3.6L." },
+          },
+          colors:[
+            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Midnight Blue Metallic (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+        "993 (1995-1998)":{
+          years:["1995","1996","1997","1998"],
+          trims:{
+            "Carrera": { engine:"3.6L Flat-6 (272hp)", drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"Genuinely the last air-cooled 911 ever built — a real cult favorite among purists to this day, with a completely redesigned multi-link rear suspension that fixed the old 911's notorious lift-off oversteer tendencies." },
+            "Turbo": { engine:"3.6L Twin-Turbo Flat-6 (400hp)", drivetrain:"AWD", transmission:"Manual", note:"The first-ever 911 Turbo with standard AWD, and the first with twin turbochargers — a genuine technical leap that also happened to be the final air-cooled Turbo ever built." },
+          },
+          colors:[
+            {name:"Grand Prix White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Arctic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "996 (1999-2004)":{
+          years:["1999","2000","2001","2002","2003","2004"],
+          trims:{
+            "Carrera": { engines:["3.4L Flat-6 (296hp)","3.6L Flat-6 (320hp)"], drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic"], note:"A genuinely controversial, real ground-up redesign — the first-ever water-cooled 911, sharing headlight styling with the contemporary Boxster that drew real criticism from purists at launch. The M96 engine family carries a genuine known risk of IMS bearing failure, a real point owners and buyers still watch for today." },
+            "Turbo": { engine:"3.6L Twin-Turbo Flat-6 (415-450hp)", drivetrain:"AWD", transmission:"Manual", note:"Used the more robust Mezger engine architecture (shared with the GT3/GT2), genuinely immune to the IMS bearing issue that affects the naturally-aspirated 996 Carreras." },
+            "GT3": { engine:"3.6L Flat-6 (360hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 2004 — genuine track-focused flagship, real motorsport-derived Mezger engine and a stripped-down, purist-focused chassis." },
+          },
+          colors:[
+            {name:"Speed Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Arctic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "997 (2005-2012)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Carrera": { engines:["3.6L Flat-6 (325hp)","3.8L Flat-6 (345-385hp)"], drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic (PDK)"], note:"A genuine return to round, classic-inspired headlight styling, a real acknowledgment of the 996's design criticism. The 997.2 facelift (2009+) brought genuine direct-injection engines and Porsche's first-ever dual-clutch PDK transmission, resolving the IMS bearing issue for good." },
+            "Turbo": { engine:"3.6L Twin-Turbo Flat-6 (480-530hp)", drivetrain:"AWD", transmissions:["Manual","Automatic (PDK)"] },
+            "GT3": { engine:"3.6L-3.8L Flat-6 (415-450hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuine track-focused flagship, with real motorsport-derived suspension geometry and aerodynamics." },
+            "GT2 RS": { engine:"3.6L Twin-Turbo Flat-6 (620hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 2011 — genuinely the most powerful, most extreme road-going 911 built to that point, RWD-only despite the standard Turbo's AWD system, a real widowmaker reputation." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"GT Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "991 (2012-2019)":{
+          years:["2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "Carrera": { engines:["3.4L Flat-6 (350hp)","3.0L Twin-Turbo Flat-6 (370-420hp)"], drivetrains:["RWD","AWD"], transmissions:["Manual","Automatic (PDK)"], note:"A genuinely major redesign, real longer wheelbase and wider track. The 991.2 facelift (2017+) brought a genuinely significant shift — turbocharging for the base Carrera engines for the first time in non-Turbo 911 history, a real efficiency-driven change that added meaningful power too." },
+            "Turbo": { engine:"3.8L Twin-Turbo Flat-6 (520-580hp)", drivetrain:"AWD", transmission:"Automatic (PDK)" },
+            "GT3": { engine:"3.8L-4.0L Flat-6 (475-520hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"], note:"Real manual transmission returned as an option for 2018, after being PDK-only for the prior 991.1 GT3 — a genuine response to enthusiast demand." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"GT Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "992 (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Carrera": { engine:"3.0L Twin-Turbo Flat-6 (379-388hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (PDK)", note:"A genuine substantial redesign, real wider bodywork across the whole lineup (previously reserved for S/4S/Turbo models only) and a first-ever hybrid variant announced for later in this generation's run." },
+            "Carrera S": { engine:"3.0L Twin-Turbo Flat-6 (443-473hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (PDK)" },
+            "Turbo S": { engine:"3.7L Twin-Turbo Flat-6 (572-640hp)", drivetrain:"AWD", transmission:"Automatic (PDK)", note:"Genuine performance flagship of the mainstream lineup." },
+            "GT3": { engine:"4.0L Flat-6 (502-518hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"], note:"Genuine track-focused flagship, with a real motorsport-derived double-wishbone front suspension, a first for a road-going 911." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"GT Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+      },
+    },
     "Boxster": {
       generations:{
         "986 (1997-2004)":{
@@ -13631,8 +14021,301 @@ const VEHICLES = {
         },
       },
     },
+    "Cayenne": {
+      generations:{
+        "9PA (2003-2010)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "Base": { engine:"3.2L V6 (247hp)", drivetrain:"4WD", transmission:"Automatic", note:"Porsche's genuine first-ever SUV, and a real controversial gamble at launch — developed alongside the Volkswagen Touareg, a real departure from Porsche's sports-car-only heritage that drew criticism from purists but ultimately saved the company financially, funding development of later sports cars." },
+            "S": { engine:"4.5L V8 (340hp)", drivetrain:"4WD", transmission:"Automatic" },
+            "Turbo": { engine:"4.5L Twin-Turbo V8 (450-500hp)", drivetrain:"4WD", transmission:"Automatic", note:"Genuine performance flagship, real supercar-adjacent acceleration in a body-on-frame-adjacent SUV package." },
+          },
+          colors:[
+            {name:"Carrara White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Meteor Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "92A (2011-2018)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"3.6L V6 (300hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuinely lighter, more efficient redesign, real evidence Porsche listened to criticism of the original's bulk. A genuine S Hybrid variant arrived, Porsche's first-ever hybrid production model." },
+            "S": { engine:"4.8L V8 (400hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "Turbo S": { engine:"4.8L Twin-Turbo V8 (570hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Rhodium Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "9YA — E3 (2019-2023)":{
+          years:["2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"3.0L Turbocharged V6 (335-340hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine third redesign, sharing its underlying MLB Evo platform with the Audi Q7/Q8, Lamborghini Urus, and Bentley Bentayga. A genuine E-Hybrid plug-in variant offered real all-electric-only range for the first time in Cayenne history." },
+            "S": { engine:"2.9L Twin-Turbo V6 (434-440hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "Turbo": { engine:"4.0L Twin-Turbo V8 (541-631hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the Turbo GT variant (added 2021) held the production-SUV Nürburgring lap record at its debut." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Quartzite Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "E3.2 (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"3.0L Turbocharged V6 (348hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"A genuine mid-cycle refresh with real updated styling and technology — a genuine all-electric Cayenne (built on the E4 platform) was confirmed for a later model year, running alongside the continuing gas and hybrid E3.2 for a real transitional period." },
+            "S E-Hybrid": { engine:"2.9L Twin-Turbo Plug-In Hybrid V6 (536hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "Turbo E-Hybrid": { engine:"4.0L Twin-Turbo Plug-In Hybrid V8 (729-739hp combined)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the most powerful Cayenne ever built." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Arctic Gray (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "Cayman": {
+      generations:{
+        "987 (2006-2012)":{
+          years:["2006","2007","2008","2009","2010","2011","2012"],
+          trims:{
+            "Base": { engines:["2.7L Flat-6 (245hp)","2.9L Flat-6 (265hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Porsche's genuine hardtop coupe sibling to the Boxster, sharing that car's mid-engine platform — real evidence Porsche saw demand for a fixed-roof version of its entry sports car, arguably an even stiffer, more focused chassis than the convertible it was based on." },
+            "S": { engines:["3.4L Flat-6 (295hp)","3.4L Flat-6 (320hp)"], drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Speed Yellow (Yellow)",hex:"#F5C800"},
+            {name:"Basalt Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Arctic Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "981 (2013-2016)":{
+          years:["2013","2014","2015","2016"],
+          trims:{
+            "Base": { engine:"2.7L Flat-6 (275hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"], note:"A genuine ground-up redesign shared with the Boxster, real evidence of Porsche's growing chassis and platform sophistication — widely considered by many enthusiasts to be the best-handling mid-engine Porsche of its era, before turbocharging arrived." },
+            "S": { engine:"3.4L Flat-6 (325-340hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"] },
+            "GT4": { engine:"3.8L Flat-6 (385hp)", drivetrain:"RWD", transmission:"Manual", note:"Added 2016 — genuine track-focused flagship, borrowing suspension and aero components from the 911 GT3, a real enthusiast favorite." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"GT Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "982 — 718 (2017-2026)":{
+          years:["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged Flat-4 (300hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"], note:"Renamed 718 Cayman, a genuine nod to Porsche's 1950s-60s 718 racing heritage — a real controversial switch to turbocharged flat-4 power for the base and S models, a genuine departure from the beloved flat-6 sound that drew real criticism from purists, even as performance numbers improved." },
+            "S": { engine:"2.5L Turbocharged Flat-4 (350hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"] },
+            "GT4": { engine:"4.0L Flat-6 (414-420hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (PDK)"], note:"Genuine track-focused flagship, keeping the naturally-aspirated flat-6 alive for the enthusiast-focused top trim even as lesser models went turbo-four." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Miami Blue (Blue)",hex:"#1C9AE8"},
+          ],
+        },
+      },
+    },
+    "Macan": {
+      generations:{
+        "95B (2015-2023)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (248hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed PDK)", note:"Porsche's genuine compact SUV, positioned below the larger Cayenne — sharing its underlying MLB platform with the Audi Q5, though genuinely more driver-focused in its tuning. Quickly became Porsche's best-selling model globally, ahead of even the Cayenne." },
+            "S": { engine:"3.0L Twin-Turbo V6 (340-354hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed PDK)" },
+            "GTS": { engine:"2.9L Twin-Turbo V6 (375-434hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed PDK)" },
+            "Turbo": { engine:"2.9L Twin-Turbo V6 (434-440hp)", drivetrain:"4WD", transmission:"Automatic (7-Speed PDK)", note:"Genuine performance flagship of the gas-powered Macan. Production continued alongside the all-new electric Macan for several years before this generation was finally retired." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Dolomite Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "XAB — Electric (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"Single Electric Motor (355hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuinely complete reinvention — Porsche's first-ever all-electric SUV, built on the dedicated Premium Platform Electric (PPE) architecture shared with upcoming Audi EVs. Real 800-volt architecture enables genuinely fast charging, a technical showcase carried over from the Taycan." },
+            "4": { engine:"Dual Electric Motors (402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "4S": { engine:"Dual Electric Motors (509hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Turbo": { engine:"Dual Electric Motors (630-639hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, the quickest and most powerful Macan ever built." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Carmine Red (Red)",hex:"#9B1B30"},
+            {name:"Arctic Gray (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "Panamera": {
+      generations:{
+        "970 (2010-2016)":{
+          years:["2010","2011","2012","2013","2014","2015","2016"],
+          trims:{
+            "Base": { engine:"3.6L V6 (300hp)", drivetrains:["RWD","AWD"], transmission:"Automatic", note:"Porsche's genuine first-ever full-size luxury sedan, a real 4-door, 4-seat liftback aimed squarely at the Mercedes S-Class and BMW 7 Series — genuinely controversial styling at launch, with a real fastback silhouette that drew mixed reviews. A genuine S E-Hybrid plug-in variant arrived, Porsche's first-ever plug-in hybrid." },
+            "4S": { engine:"4.8L V8 (400hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "Turbo": { engine:"4.8L Twin-Turbo V8 (500-570hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Carrara White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Meteor Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "971 (2017-2023)":{
+          years:["2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"2.9L Twin-Turbo V6 (330hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (PDK)", note:"A genuinely more resolved, better-proportioned redesign — real evidence Porsche refined the fastback formula the original 970 pioneered. A genuine Sport Turismo wagon-adjacent body style joined the lineup, a real practical alternative to the standard liftback." },
+            "4S": { engine:"2.9L Twin-Turbo V6 (440hp)", drivetrain:"AWD", transmission:"Automatic (PDK)" },
+            "Turbo S": { engine:"4.0L Twin-Turbo V8 (550-630hp)", drivetrain:"AWD", transmission:"Automatic (PDK)" },
+            "Turbo S E-Hybrid": { engine:"4.0L Twin-Turbo Plug-In Hybrid V8 (680-690hp combined)", drivetrain:"AWD", transmission:"Automatic (PDK)", note:"Genuine performance flagship of the whole lineup, combining the biggest gas engine with electric assistance for the most power ever offered in a Panamera." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Quartzite Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "971.2 — E3 (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"2.9L Twin-Turbo V6 (348hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (PDK)", note:"A genuine mid-cycle refresh with real updated hybrid technology, sharing improved battery and electric-motor tech with the latest Cayenne — real evidence of Porsche standardizing its hybrid architecture across the SUV and sedan lineups." },
+            "4S": { engine:"2.9L Twin-Turbo Plug-In Hybrid V6 (536hp combined)", drivetrain:"AWD", transmission:"Automatic (PDK)" },
+            "Turbo E-Hybrid": { engine:"4.0L Twin-Turbo Plug-In Hybrid V8 (670-771hp combined)", drivetrain:"AWD", transmission:"Automatic (PDK)", note:"Genuine performance flagship, the most powerful production Panamera ever built." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Guards Red (Red)",hex:"#C8102E"},
+            {name:"Arctic Gray (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "Taycan": {
+      generations:{
+        "1st Gen (2020-2023)":{
+          years:["2020","2021","2022","2023"],
+          trims:{
+            "Base": { engine:"Dual Electric Motors (402hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)", note:"Porsche's genuine first-ever purpose-built electric vehicle, and a real technical showcase — an 800-volt architecture (a genuine industry first for a production EV) enabled real ultra-fast charging, while a real 2-speed transmission on the rear motor was a genuine engineering rarity most EV makers skip entirely. Cross Turismo (wagon-styled) and Sport Turismo body variants joined the sedan." },
+            "4S": { engine:"Dual Electric Motors (429-483hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)" },
+            "Turbo": { engine:"Dual Electric Motors (616-670hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)" },
+            "Turbo S": { engine:"Dual Electric Motors (750-761hp)", drivetrain:"AWD", transmission:"Automatic (2-Speed)", note:"Genuine performance flagship of the launch generation, real 0-60 times under 2.7 seconds." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Carmine Red (Red)",hex:"#9B1B30"},
+            {name:"Frozen Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "2nd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Base": { engine:"Single Electric Motor (402hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuinely significant mid-cycle update with a real larger, more energy-dense battery and an updated rear motor borrowed from the Macan Electric — genuine range and charging improvements across the board. The Turbo GT variant, added for this update, held real production-EV lap records at multiple tracks." },
+            "4S": { engine:"Dual Electric Motors (509hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Turbo S": { engine:"Dual Electric Motors (938hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship." },
+            "Turbo GT": { engine:"Dual Electric Motors (1092hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2025 — genuine track-focused flagship, the most powerful production Porsche ever built at its debut, real Weissach Package option shedding additional weight for lap-time-focused buyers." },
+          },
+          colors:[
+            {name:"Carrara White Metallic (White)",hex:"#F5F5F5"},
+            {name:"Jet Black Metallic (Black)",hex:"#1A1A1A"},
+            {name:"Carmine Red (Red)",hex:"#9B1B30"},
+            {name:"Neptune Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
   },
   "Ram": {
+    "1500": {
+      generations:{
+        "2nd Gen (1994-2001)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001"],
+          trims:{
+            "Base": { engines:["3.9L V6 (175hp)","5.2L V8 (220hp)","5.9L V8 (245hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely dramatic redesign that transformed Ram from an also-ran into a real segment leader — big-rig-inspired styling with a real bold, chrome-heavy grille was a genuine gamble that paid off, giving Ram a distinct identity against the Ford F-150 and Chevy Silverado. A genuine 8.0L V10, borrowed from the Viper's engine family in spirit, was offered as the range-topping engine option." },
+            "SLT": { engines:["5.9L V8 (245hp)","8.0L V10 (300hp)"], drivetrain:"4WD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Forest Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (2002-2008)":{
+          years:["2002","2003","2004","2005","2006","2007","2008"],
+          trims:{
+            "ST": { engine:"3.7L V6 (215hp)", drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely major redesign, with real evidence of Ram's continued big-rig styling identity. The legendary 5.7L Hemi V8 debuted in 2003 — a genuine revival of Chrysler's famed Hemi name, real evidence the brand knew how to market nostalgia into a genuine sales driver." },
+            "SLT": { engines:["4.7L V8 (235-310hp)","5.7L Hemi V8 (345hp)"], drivetrain:"4WD", transmission:"Automatic" },
+            "SRT-10": { engine:"8.3L V10 (500hp)", drivetrain:"RWD", transmissions:["Manual (6-Speed)","Automatic"], note:"A genuinely bizarre, wonderful factory hot-rod truck — borrowed its V10 directly from the Dodge Viper, briefly the fastest production pickup truck in the world. A real cult favorite among enthusiasts today for its sheer absurdity." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Brilliant Black (Black)",hex:"#1A1A1A"},
+            {name:"Patriot Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2009-2018)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Tradesman": { engines:["3.7L V6 (215hp)","4.7L V8 (310hp)","3.6L Pentastar V6 (305hp)"], drivetrains:["RWD","4WD"], transmissions:["Manual","Automatic"], note:"A genuinely major ride-quality improvement — real coil-spring rear suspension replaced the old leaf springs, a genuine first for a half-ton pickup and a real differentiator against every other truck in the class. The Pentastar V6 replaced the aging 3.7L/4.7L engines for 2013, a real leap in both power and efficiency." },
+            "Big Horn": { engine:"5.7L Hemi V8 (390-395hp)", drivetrains:["RWD","4WD"], transmission:"Automatic" },
+            "EcoDiesel": { engine:"3.0L EcoDiesel V6 (240-260hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Added 2014 — genuinely the first light-duty, full-size pickup in the modern era to offer a small-displacement diesel, real class-leading fuel economy that helped redefine expectations for half-ton efficiency." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen — DT (2019-2024)":{
+          years:["2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "Tradesman": { engines:["3.6L Pentastar eTorque V6 (305hp)","3.0L EcoDiesel V6 (260hp)"], drivetrains:["RWD","4WD"], transmission:"Automatic (8-Speed)", note:"A genuinely major redesign with a real 48-volt eTorque mild-hybrid system standard on both the V6 and V8, a genuine efficiency and smoothness improvement. The outgoing DS-body truck continued selling alongside this new generation as the value-focused 'Ram 1500 Classic' for several more years, a real unusual dual-lineup strategy." },
+            "Laramie": { engine:"5.7L Hemi eTorque V8 (395hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "TRX": { engine:"6.2L Supercharged Hemi V8 (702hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Added 2021 — a genuine factory-built high-speed desert-running performance truck, real Ford Raptor rival with class-leading horsepower. Discontinued after 2023 with no direct successor as Ram shifted focus to the electric-adjacent Ramcharger concept." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen Refresh (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Tradesman": { engine:"3.0L Twin-Turbo Hurricane Inline-6 (420hp)", drivetrains:["RWD","4WD"], transmission:"Automatic (8-Speed)", note:"A genuinely major powertrain shift — the new twin-turbo Hurricane inline-6 replaced the Pentastar V6 and, briefly, even the legendary Hemi V8 across most trims, a real controversial move that drew significant customer pushback. Ram brought the 5.7L Hemi back for 2026 'by popular demand,' a genuine rare case of an automaker publicly reversing an engine decision due to real backlash." },
+            "Laramie": { engines:["3.0L Twin-Turbo Hurricane Inline-6 (420-540hp)","5.7L Hemi V8 (395hp)"], drivetrain:"4WD", transmission:"Automatic (8-Speed)" },
+            "RHO": { engine:"3.0L Twin-Turbo Hurricane Inline-6 (540hp)", drivetrain:"4WD", transmission:"Automatic (8-Speed)", note:"Genuine high-performance off-road trim, replacing the discontinued supercharged TRX with turbocharged six-cylinder power instead — a real philosophical shift in how Ram approaches its performance-truck flagship." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Diamond Black (Black)",hex:"#1A1A1A"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Hydro Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
     "2500": {
       generations:{
         "1st Gen (1990-1993)":{
@@ -13719,7 +14402,284 @@ const VEHICLES = {
       },
     },
   },
+  "Saab": {
+    "9-3": {
+      generations:{
+        "1st Gen — NG900 Tail (1999-2002)":{
+          years:["1999","2000","2001","2002"],
+          trims:{
+            "S": { engine:"2.3L 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine rename of the outgoing 'new generation' 900 rather than an all-new model — Saab renamed it 9-3 for the US starting 1999, aligning with the rest of the world's naming. Real turbocharging remained a genuine Saab signature, a technology the brand had championed since the 1970s." },
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (185-205hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Viggen": { engine:"2.3L Turbocharged 4-cylinder (225hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine performance flagship, named after the Swedish Saab Viggen fighter jet — real evidence of Saab's aerospace heritage bleeding into its road-car marketing." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Laser Red (Red)",hex:"#C8102E"},
+            {name:"Nocturne Blue (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+        "2nd Gen (2003-2011)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "Linear": { engine:"2.0L Turbocharged 4-cylinder (175hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign, sharing its Epsilon platform with the Opel Vectra and (later) Chevrolet Malibu — real evidence of GM's ownership shaping Saab's engineering more directly than in prior generations. A genuine SportCombi wagon body style and a real Turbo X AWD variant both broadened the lineup." },
+            "Aero": { engine:"2.8L Turbocharged V6 (250-280hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Turbo X": { engine:"2.8L Turbocharged V6 (280hp)", drivetrain:"AWD", transmission:"Automatic", note:"Added 2008 — genuinely the first-ever AWD Saab road car, a real limited-run special edition celebrating the brand's turbocharging heritage. Production ended in 2011 alongside Saab Automobile's bankruptcy, ending the 9-3 (and Saab's whole US presence) for good." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Laser Red (Red)",hex:"#C8102E"},
+            {name:"Cosmic Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "9-4X": {
+      years:["2011","2012"],
+      trims:{
+        "Base": { engine:"2.8L Turbocharged V6 (265hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuine, real GM-platform-sharing crossover, built on the same underlying architecture as the Cadillac SRX — Saab's first-ever mid-size crossover, arriving just as the company's finances were collapsing. Real Saab styling cues (the wraparound windshield, ignition key on the center console) distinguished it from its Cadillac cousin underneath." },
+        "Premium": { engine:"3.6L V6 (265hp)", drivetrain:"AWD", transmission:"Automatic", note:"Genuinely one of the rarest modern Saabs — production was cut short almost immediately by Saab Automobile's 2011-2012 bankruptcy, with only a few hundred units ever built and sold before the factory closed for good." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Laser Red (Red)",hex:"#C8102E"},
+        {name:"Cosmic Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "9-5": {
+      generations:{
+        "1st Gen (1998-2009)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "S": { engine:"2.3L Turbocharged 4-cylinder (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Saab's genuine flagship sedan and wagon, replacing the aging 9000 — real turbocharged four-cylinder power throughout the lineup, a genuine rarity for an executive-class car of this era that mostly relied on naturally-aspirated sixes and eights. Real known 'oil sludge' issues affected 1999-2003 models, addressed by a revised PCV system from 2004 on." },
+            "Aero": { engine:"2.3L Turbocharged 4-cylinder (230-260hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuine performance flagship, real evidence Saab could extract serious power from a modest-displacement turbo four well before that became an industry-wide trend." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Laser Red (Red)",hex:"#C8102E"},
+            {name:"Nocturne Blue (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+        "2nd Gen (2010-2011)":{
+          years:["2010","2011"],
+          trims:{
+            "Turbo4": { engine:"2.0L Turbocharged 4-cylinder (220hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuine ground-up redesign, arriving late in Saab's independent existence under new ownership (Spyker) after GM divested the brand — real striking, more dramatic styling than any prior 9-5. Production was cut tragically short by Saab's 2011-2012 bankruptcy, making this generation genuinely rare and short-lived." },
+            "Aero XWD": { engine:"2.8L Turbocharged V6 (300hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship, the last new Saab engine ever to reach production before the company's collapse." },
+          },
+          colors:[
+            {name:"Arctic White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Laser Red (Red)",hex:"#C8102E"},
+            {name:"Cosmic Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "9-7X": {
+      years:["2005","2006","2007","2008","2009"],
+      trims:{
+        "4.2i": { engine:"4.2L Inline-6 (291hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)", note:"A genuine, real badge-engineered version of the GMT360 platform shared with the Chevrolet TrailBlazer, GMC Envoy, and Buick Rainier — Saab's first-ever SUV, built at GM's Moraine, Ohio plant rather than in Sweden, a real point of controversy among Saab purists who felt it diluted the brand's identity." },
+        "5.3i": { engine:"5.3L V8 (300hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)" },
+        "Aero": { engine:"6.0L V8 (390hp)", drivetrain:"AWD", transmission:"Automatic (4-Speed)", note:"Genuine performance flagship, sharing its engine with the contemporary Chevrolet SSR and Trailblazer SS. Discontinued after 2009 with no direct successor, as the smaller, more Saab-engineered 9-4X eventually took over the brand's crossover role." },
+      },
+      colors:[
+        {name:"Ice White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Laser Red (Red)",hex:"#C8102E"},
+        {name:"Steel Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "900": {
+      generations:{
+        "Classic Tail (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "S": { engine:"2.1L 4-cylinder (128hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"The final years of the original, genuinely beloved 'classic' 900 — a real distinctive, jet-fighter-inspired cabin design with a low-mounted ignition key between the seats, a genuine Saab signature feature carried through decades of the brand's cars." },
+            "Turbo": { engine:"2.0L Turbocharged 4-cylinder (160hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A real convertible body style, added 1986, remained a genuine enthusiast favorite through the end of this generation's run before the all-new 'NG900' replaced it for 1994." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red (Red)",hex:"#9B1B30"},
+            {name:"Nautic Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "NG900 (1994-1998)":{
+          years:["1994","1995","1996","1997","1998"],
+          trims:{
+            "S": { engine:"2.3L 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign, built on GM's GM2900 platform — Saab's first model developed under GM's part-ownership, a real early sign of the shared-platform strategy that would define the brand's final two decades. A genuine 'Sensonic' clutchless manual transmission was a real Saab-specific engineering curiosity." },
+            "SE": { engines:["2.0L Turbocharged 4-cylinder (185hp)","2.5L V6 (170hp)"], drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Renamed 9-3 for the US starting with the 1999 model year, ending the 900 nameplate's run after two decades." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Laser Red (Red)",hex:"#C8102E"},
+            {name:"Nocturne Blue (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+      },
+    },
+  },
+  "Saturn": {
+    "Aura": {
+      years:["2007","2008","2009"],
+      trims:{
+        "XE": { engine:"2.4L 4-cylinder (169hp)", drivetrain:"FWD", transmission:"Automatic", note:"Genuinely one of the best-reviewed Saturns ever built, and a real sign of what the brand could have become — sharing its GM Epsilon platform with the Chevrolet Malibu and Pontiac G6, but with real distinct styling and handling tuning that earned it 2007 North American Car of the Year." },
+        "XR": { engine:"3.5L V6 (224hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "Green Line": { engine:"2.4L Hybrid 4-cylinder (164hp combined)", drivetrain:"FWD", transmission:"Automatic", note:"Genuine mild-hybrid variant, added 2007. Discontinued after 2009 as part of GM's broader wind-down of the Saturn brand during its 2009 bankruptcy restructuring." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red (Red)",hex:"#9B1B30"},
+        {name:"Electric Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "Ion": {
+      years:["2003","2004","2005","2006","2007"],
+      trims:{
+        "1": { engine:"2.2L Ecotec 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the aging S-Series, real evidence of Saturn's plastic-body-panel philosophy continuing into a new generation — genuinely quirky details like a center-mounted instrument cluster and a real 4-door 'Quad Coupe' with rear-hinged half-doors set it apart from mainstream compacts." },
+        "3": { engine:"2.2L Ecotec 4-cylinder (140hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "Red Line": { engine:"2.0L Supercharged 4-cylinder (205hp)", drivetrain:"FWD", transmission:"Manual (5-Speed)", note:"Genuine performance flagship, added 2004 — a real enthusiast favorite that showed Saturn had genuine driving-focused ambitions late in the brand's life. Discontinued after 2007, replaced by the Astra (a rebadged Opel) for Saturn's compact-car role." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Chili Pepper Red (Red)",hex:"#C8102E"},
+        {name:"Electric Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "Outlook": {
+      years:["2007","2008","2009","2010"],
+      trims:{
+        "XE": { engine:"3.6L V6 (270-288hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Saturn's genuine flagship 3-row crossover, a real corporate triplet sharing its GM Lambda platform with the Buick Enclave and GMC Acadia — genuine real 8-passenger seating and a much more upscale interior than Saturn's budget-brand reputation might suggest." },
+        "XR": { engine:"3.6L V6 (270-288hp)", drivetrain:"AWD", transmission:"Automatic", note:"Discontinued after 2010 as part of GM's shutdown of the entire Saturn brand following its 2009 bankruptcy — a genuine, real end to the brand after two decades." },
+      },
+      colors:[
+        {name:"Polar White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ruby Red (Red)",hex:"#9B1B30"},
+        {name:"Slate Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "S-Series": {
+      generations:{
+        "1st Gen (1991-1995)":{
+          years:["1991","1992","1993","1994","1995"],
+          trims:{
+            "SL": { engine:"1.9L SOHC 4-cylinder (85-100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Saturn's genuine founding model — the very first car built at the brand's dedicated Spring Hill, Tennessee plant, real evidence of GM's bold experiment to create an entirely new, no-haggle-pricing brand from scratch. A genuinely original, in-house-designed engine and a real plastic composite body panel construction were both true engineering firsts for the brand." },
+            "SL2": { engine:"1.9L DOHC 4-cylinder (124-140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "SC": { engine:"1.9L DOHC 4-cylinder (124hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuine 2-door coupe variant, added for 1991." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Cherry Red (Red)",hex:"#9B1B30"},
+            {name:"Medium Blue Green (Blue)",hex:"#2E6B7A"},
+          ],
+        },
+        "2nd Gen (1996-1999)":{
+          years:["1996","1997","1998","1999"],
+          trims:{
+            "SL": { engine:"1.9L SOHC 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine mid-cycle redesign, real curvier styling and improved interior room over the boxier original — the plastic body panel construction, a genuine Saturn signature, carried over unchanged." },
+            "SL2": { engine:"1.9L DOHC 4-cylinder (124hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "SW2": { engine:"1.9L DOHC 4-cylinder (124hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuine wagon body style." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Medium Blue Green (Blue)",hex:"#2E6B7A"},
+          ],
+        },
+        "3rd Gen (2000-2002)":{
+          years:["2000","2001","2002"],
+          trims:{
+            "SL": { engine:"1.9L SOHC 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine final refresh — largely the same underlying space-frame chassis as the second generation, with real updated exterior panels and interior. Discontinued after 2002, replaced by the all-new Ion — the final generation to use Saturn's signature dent-resistant plastic body panels." },
+            "SL2": { engine:"1.9L DOHC 4-cylinder (124hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Bright Red (Red)",hex:"#C8102E"},
+            {name:"Sienna Bronze (Bronze)",hex:"#B87333"},
+          ],
+        },
+      },
+    },
+    "Sky": {
+      years:["2007","2008","2009"],
+      trims:{
+        "Base": { engine:"2.4L 4-cylinder (177hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine, real 2-seat roadster, sharing its Kappa platform with the closely related Pontiac Solstice — real dramatic, sharply creased styling penned under GM design chief Ed Welburn's era stood out sharply from Saturn's usual conservative styling." },
+        "Red Line": { engine:"2.0L Turbocharged 4-cylinder (260hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Genuine performance flagship, a real enthusiast darling with genuinely sharp handling. Discontinued after 2009 alongside the wind-down of the entire Saturn brand — one of the last models ever sold under the Saturn nameplate before GM shuttered it for good." },
+      },
+      colors:[
+        {name:"Quicksilver (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Chili Pepper Red (Red)",hex:"#C8102E"},
+        {name:"Thunder Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Vue": {
+      generations:{
+        "1st Gen (2002-2007)":{
+          years:["2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base": { engine:"2.2L 4-cylinder (143hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (CVT)", note:"Saturn's genuine first-ever SUV/crossover, a real unibody, car-based design aimed at the booming compact-crossover segment of the early 2000s — a genuine CVT transmission was offered, a real rarity for the segment at the time." },
+            "Red Line": { engine:"3.5L V6 (250hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 2006 — genuine sport-performance trim with a firmer suspension and unique styling." },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Chili Pepper Red (Red)",hex:"#C8102E"},
+            {name:"Deep Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2008-2010)":{
+          years:["2008","2009","2010"],
+          trims:{
+            "XE": { engine:"2.4L 4-cylinder (169hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (6-Speed)", note:"A genuine ground-up redesign sharing its platform with the Chevrolet Equinox and GMC Terrain — real Green Line hybrid variants brought genuine efficiency-focused trims to the lineup. Discontinued after 2010 as GM shut down the entire Saturn brand following its 2009 bankruptcy, ending two decades of the 'different kind of car company.'" },
+            "XR": { engine:"3.6L V6 (257hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+            "Green Line": { engine:"2.4L Hybrid 4-cylinder (170hp combined)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Polar White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Ruby Red (Red)",hex:"#9B1B30"},
+            {name:"Slate Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+  },
   "Scion": {
+    "FR-S": {
+      years:["2013","2014","2015","2016"],
+      trims:{
+        "Base": { engine:"2.0L Boxer 4-cylinder (200hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine co-development with Subaru (sold there as the BRZ), and Scion's genuine halo car — a lightweight, RWD sports coupe aimed squarely at driving purists, with real emphasis on chassis balance over outright power. When Scion was folded back into Toyota for 2017, this same car continued unbroken as the Toyota 86, later GR86 — a real seamless brand transition for a single continuous model." },
+      },
+      colors:[
+        {name:"Halo (White)",hex:"#F5F5F5"},
+        {name:"Raven (Black)",hex:"#1A1A1A"},
+        {name:"Firestorm (Red)",hex:"#C8102E"},
+        {name:"Ultramarine (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "iQ": {
+      years:["2012","2013","2014","2015"],
+      trims:{
+        "Base": { engine:"1.3L 4-cylinder (94hp)", drivetrain:"FWD", transmission:"Automatic (CVT)", note:"Genuinely one of the smallest cars ever sold in the US, a real 4-seat (in a tight pinch) micro-car aimed at buyers who wanted the smallest possible footprint for city driving — sold in Japan and Europe as the Toyota iQ. A genuinely clever asymmetrical dashboard and offset front passenger seat squeezed real usable space out of a tiny footprint. Discontinued after 2015 as US demand for true micro-cars never really materialized." },
+      },
+      colors:[
+        {name:"Cement (Gray)",hex:"#8A8D8F"},
+        {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Absolutely Red (Red)",hex:"#C8102E"},
+        {name:"Blue Streak Metallic (Blue)",hex:"#1E4B8E"},
+      ],
+    },
     "tC": {
       generations:{
         "First Generation (2005-2010)":{
@@ -13763,6 +14723,58 @@ const VEHICLES = {
           ],
         },
       },
+    },
+    "xA": {
+      years:["2004","2005","2006"],
+      trims:{
+        "Base": { engine:"1.5L 4-cylinder (108hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"One of Scion's genuine two launch models at the brand's 2003 debut (alongside the xB) — a rebadged Toyota ist, aimed at import-tuner-adjacent young buyers with real no-haggle pricing and factory-backed accessory customization. Genuinely outsold by its boxier xB sibling by a wide margin. Discontinued after 2006, replaced by the similarly-sized xD." },
+      },
+      colors:[
+        {name:"Sonic Blue (Blue)",hex:"#1E6BA8"},
+        {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Absolutely Red (Red)",hex:"#C8102E"},
+        {name:"Cool Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "xB": {
+      generations:{
+        "1st Gen (2004-2006)":{
+          years:["2004","2005","2006"],
+          trims:{
+            "Base": { engine:"1.5L 4-cylinder (108hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Scion's genuine breakout hit and the brand's real style icon — a rebadged Toyota bB, real boxy, kei-car-inspired proportions that stood out sharply from anything else on the road. Genuinely outsold its more conventional xA sibling by roughly 2-to-1, a real surprise given how unconventional its looks were." },
+          },
+          colors:[
+            {name:"Sonic Blue (Blue)",hex:"#1E6BA8"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Solar Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "2nd Gen (2008-2015)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Base": { engine:"2.4L 4-cylinder (158hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign, growing larger on a bigger platform while keeping the same fundamentally boxy shape — a real more powerful engine addressed complaints that the original was underpowered. Genuinely won the IIHS Top Safety Pick award for six consecutive years. Discontinued after 2015 alongside the wider phase-out of the Scion brand, effectively replaced by the Toyota-badged Corolla iM." },
+          },
+          colors:[
+            {name:"Blue Streak Metallic (Blue)",hex:"#1E4B8E"},
+            {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Absolutely Red (Red)",hex:"#C8102E"},
+            {name:"Cement (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "xD": {
+      years:["2008","2009","2010","2011","2012","2013","2014"],
+      trims:{
+        "Base": { engine:"1.8L 4-cylinder (128hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Replaced the xA as Scion's genuine entry-level subcompact hatchback, sold in Japan as the Toyota ist — real evidence of the brand rounding out its lineup with a more conventional, less polarizing shape than the boxy xB. Discontinued after 2014 with no direct successor, as Scion's lineup consolidated around fewer models heading into the brand's eventual 2016 discontinuation." },
+      },
+      colors:[
+        {name:"Sonic Blue (Blue)",hex:"#1E6BA8"},
+        {name:"Black Sand Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Absolutely Red (Red)",hex:"#C8102E"},
+        {name:"Cool Silver (Silver)",hex:"#C0C0C0"},
+      ],
     },
   },
   "Shelby": {
@@ -15878,6 +16890,68 @@ const VEHICLES = {
     },
   },
   "Volkswagen": {
+    "Atlas": {
+      generations:{
+        "1st Gen (2018-2023)":{
+          years:["2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "S": { engine:"3.6L VR6 (235hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"Volkswagen's genuine first-ever full-size 3-row SUV for the US market, built at the brand's Chattanooga, Tennessee plant specifically for American buyers — real genuine 7-seat capacity, a segment VW had never seriously competed in before. A smaller turbocharged four-cylinder joined for 2020 as a lower-cost entry option." },
+            "SE": { engines:["3.6L VR6 (235hp)","2.0L Turbocharged 4-cylinder (235hp)"], drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Cardinal Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Tourmaline Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (235-269hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine mid-cycle redesign, dropping the V6 entirely in favor of turbo-four power across the whole lineup — real evidence of VW's broader efficiency push. A 2027 full redesign is planned, built on the upgraded MQB Evo architecture with real more premium interior materials." },
+            "SEL": { engine:"2.0L Turbocharged 4-cylinder (269hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Aurora Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Platinum Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "Beetle": {
+      generations:{
+        "New Beetle (1998-2010)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine, real retro revival — built on the same platform as the contemporary Golf/Jetta, with a distinctive rounded silhouette deliberately styled to echo the original air-cooled Beetle. A genuine flower vase on the dashboard was a real, much-discussed styling touch. Real turbocharged and VR6 engines brought genuine performance options to a car mostly bought for its looks and nostalgia appeal." },
+            "GLS": { engine:"1.8L Turbocharged 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "Turbo S": { engine:"1.8L Turbocharged 4-cylinder (180hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine performance flagship of the New Beetle era, sharing its engine with the contemporary GTI." },
+          },
+          colors:[
+            {name:"Reflex Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "2nd Gen (2012-2019)":{
+          years:["2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "S": { engine:"2.5L 4-cylinder (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine redesign with real flatter, wider, more masculine proportions — a deliberate move away from the softer, more rounded 'New Beetle' shape toward styling closer to the original air-cooled classic. A genuine convertible body style continued alongside the coupe." },
+            "R-Line": { engine:"2.0L Turbocharged 4-cylinder (210hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+            "Final Edition": { engine:"2.0L Turbocharged 4-cylinder (174hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"Genuine send-off special edition marking the end of Beetle production in 2019 — Volkswagen has stated no direct successor is planned, ending the nameplate's storied run in the US for good, at least for now." },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Stonewashed Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
     "Golf": {
       generations:{
         "Mk2 Tail (1990-1992)":{
@@ -15982,6 +17056,117 @@ const VEHICLES = {
         },
       },
     },
+    "ID.4": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Standard": { engine:"Single Electric Motor (201hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Volkswagen's genuine first mass-market EV for the US, built on the dedicated MEB electric platform — a real spiritual successor to the brand's air-cooled Beetle and Microbus era in spirit, if not in looks, aimed at bringing EV ownership to a broader, more mainstream price point. Real US-built versions began rolling off the Chattanooga, Tennessee line in 2022, joining imports from Germany." },
+        "Pro": { engine:"Single Electric Motor (201hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)" },
+        "Pro S 4Motion": { engine:"Dual Electric Motors (295hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine dual-motor AWD flagship of the lineup, with real quicker acceleration than the standard RWD models." },
+      },
+      colors:[
+        {name:"Pure White (White)",hex:"#F5F5F5"},
+        {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+        {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+        {name:"Tourmaline Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Jetta": {
+      generations:{
+        "Mk2 Tail (1990-1992)":{
+          years:["1990","1991","1992"],
+          trims:{
+            "GL": { engine:"1.8L 4-cylinder (100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Volkswagen's genuine sedan companion to the Golf, sharing that car's platform and mechanicals but with a real, more conventional trunk — a genuine favorite among budget-minded buyers wanting German engineering feel at a real accessible price." },
+            "GLI": { engine:"2.0L 16V 4-cylinder (134hp)", drivetrain:"FWD", transmission:"Manual", note:"Genuine sport-performance trim, now covered as its own separate model in this database given its distinct enthusiast identity and long production run." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Zircon Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk3 (1993-1998)":{
+          years:["1993","1994","1995","1996","1997","1998"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign, real rounder, more aerodynamic styling shared with the contemporary Golf. The VR6 engine brought genuine six-cylinder smoothness to a compact sedan, a real rarity in the segment." },
+            "GLX": { engine:"2.8L VR6 (172hp)", drivetrain:"FWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Cape White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Reflex Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk4 (1999-2005)":{
+          years:["1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely more upscale, refined redesign, real evidence of VW pushing Jetta further toward near-luxury territory — genuinely high-quality interior materials for the segment. A real TDI diesel option offered genuine fuel-economy standouts long before diesel became commonplace in mainstream compacts." },
+            "GLS": { engine:"1.8L Turbocharged 4-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+            "TDI": { engine:"1.9L Turbodiesel 4-cylinder (90-100hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Genuine diesel option, real class-leading fuel economy for the era." },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Blue Anthracite (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk5 (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "S": { engine:"2.5L 5-cylinder (150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign sharing its real European-market platform underpinnings with the Golf/Rabbit of the same generation — a real unusual 5-cylinder engine became the standard base powertrain, a genuine rarity in the segment." },
+            "TDI": { engine:"2.0L Turbodiesel 4-cylinder (140hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"] },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "Mk6 (2011-2018)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "S": { engine:"2.0L 4-cylinder (115hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely more budget-focused redesign for the US market specifically, real evidence VW simplified and cost-reduced the Jetta to better compete on price against the Civic and Corolla — a real point of criticism from reviewers who felt interior quality took a step back." },
+            "SE": { engine:"1.8L Turbocharged 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "TDI": { engine:"2.0L Turbodiesel 4-cylinder (140-150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Caught up in Volkswagen's real 2015 diesel emissions scandal ('Dieselgate') — the TDI engine was found to use real defeat-device software to cheat emissions tests, a genuine major scandal that led to the TDI's discontinuation across VW's US lineup and billions in real settlements and buybacks." },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Silk Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "Mk7 (2019-2024)":{
+          years:["2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S": { engine:"1.4L Turbocharged 4-cylinder (147hp)", drivetrain:"FWD", transmissions:["Manual","Automatic (8-Speed)"], note:"A genuine ground-up redesign, real growing larger with a longer wheelbase — a smaller, more efficient turbo engine replaced the outgoing 2.0L. Diesel power was gone for good in the US following the Dieselgate fallout." },
+            "SE": { engine:"1.4L Turbocharged 4-cylinder (147hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Silk Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "Mk8 (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "S": { engine:"1.5L Turbocharged 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"A genuine mid-cycle refresh with real updated styling and a new, slightly more powerful engine — VW confirmed the Jetta GLI's manual transmission is being dropped from this generation onward, a genuine loss lamented by enthusiasts as automakers increasingly move away from clutch pedals." },
+            "SEL": { engine:"1.5L Turbocharged 4-cylinder (158hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Aurora Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Platinum Gray Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
     "Jetta GLI": {
       generations:{
         "Mk2 (1990-1992)":{
@@ -16062,6 +17247,122 @@ const VEHICLES = {
         },
       },
     },
+    "Passat": {
+      generations:{
+        "B3/B4 (1990-1997)":{
+          years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+          trims:{
+            "GL": { engine:"2.0L 4-cylinder (134hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Volkswagen's genuine mid-size sedan and wagon, positioned above the Jetta — a real more substantial, European-executive-car feel than most mainstream mid-size rivals of the era offered." },
+            "GLX": { engine:"2.8L VR6 (172hp)", drivetrain:"FWD", transmission:"Automatic", note:"Added 1992, genuine VR6 power brought real smoothness and performance to the lineup." },
+          },
+          colors:[
+            {name:"Alpine White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Zircon Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "B5 (1998-2005)":{
+          years:["1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "GLS": { engine:"1.8L Turbocharged 4-cylinder (150hp)", drivetrains:["FWD","AWD"], transmissions:["Manual","Automatic"], note:"A genuinely major redesign, sharing its real B5 platform with the Audi A4 — a genuine engineering upgrade that brought Audi-level refinement to a mainstream VW badge. The genuine W8 engine (2002-2004) was a real technical curiosity, an unusual narrow-angle 8-cylinder configuration rarely seen anywhere else in the industry." },
+            "GLX": { engine:"2.8L VR6 (190hp)", drivetrain:"AWD", transmission:"Automatic" },
+            "W8": { engine:"4.0L W8 (275hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Genuinely one of the most unusual engines VW ever put in a Passat — a real narrow-angle W8, essentially two VR4 engine banks joined at a common crankshaft, a real technical showcase that never sold in large numbers." },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Blue Anthracite (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "B6 (2006-2010)":{
+          years:["2006","2007","2008","2009","2010"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuinely bigger, more substantial redesign, real evidence VW pushed the Passat further upmarket in both size and price — some felt it grew too close to the Audi A6 in positioning, a real factor in the sales-focused redesign that followed." },
+            "VR6 4Motion": { engine:"3.6L VR6 (280hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "B7 — NMS (2012-2019)":{
+          years:["2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "S": { engine:"2.5L 5-cylinder (170hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely US-specific redesign (the 'New Midsize Sedan,' or NMS) built at VW's Chattanooga, Tennessee plant — real evidence VW deliberately simplified and cost-reduced the Passat to better compete on price against the Camry and Accord, growing larger with real more American-friendly proportions." },
+            "SE": { engine:"1.8L Turbocharged 4-cylinder (170hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "TDI": { engine:"2.0L Turbodiesel 4-cylinder (140-150hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"Also caught up in the 2015 Dieselgate emissions scandal, discontinued alongside the rest of VW's US diesel lineup." },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Silk Blue Metallic (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "B8 (2020-2022)":{
+          years:["2020","2021","2022"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (174hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)", note:"A genuine mild refresh of the NMS platform rather than a full redesign — VW discontinued the Passat in the US after 2022 with no direct successor, as sedan demand continued declining and the brand shifted focus to SUVs and EVs. The Passat nameplate continues selling in Europe on an entirely different platform, but is gone from America for now." },
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (174hp)", drivetrain:"FWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Platinum Gray Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
+    "Tiguan": {
+      generations:{
+        "1st Gen (2009-2017)":{
+          years:["2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"Volkswagen's genuine compact crossover entry, positioned below the larger Touareg — real turbocharged power standard across the whole lineup gave it genuinely sporty, driver-focused handling relative to segment rivals." },
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (200hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Candy White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Tornado Red (Red)",hex:"#C8102E"},
+            {name:"Shadow Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2018-2024)":{
+          years:["2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (184hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuinely major redesign, growing substantially larger and adding a real optional third-row seat for the US market specifically — a genuine departure from the smaller, sportier first generation, prioritizing practicality and family-hauler appeal instead." },
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (184hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "SEL R-Line": { engine:"2.0L Turbocharged 4-cylinder (184hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Kings Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Stonewashed Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+        "3rd Gen (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "S": { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrains:["FWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine redesign with real updated styling and technology, sharing its underlying platform with the European Tiguan for the first time in several generations — a genuine convergence of VW's global and US-specific product strategies." },
+            "SE": { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "SEL": { engine:"2.0L Turbocharged 4-cylinder (201hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Pure White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black Pearl (Black)",hex:"#1A1A1A"},
+            {name:"Aurora Red Metallic (Red)",hex:"#9B1B30"},
+            {name:"Platinum Gray Metallic (Gray)",hex:"#8A8D8F"},
+          ],
+        },
+      },
+    },
   },
   "Volvo": {
     "240": {
@@ -16078,6 +17379,155 @@ const VEHICLES = {
         {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
         {name:"Dark Blue Metallic (Blue)",hex:"#1E3A6B"},
       ],
+    },
+    "850": {
+      years:["1993","1994","1995","1996","1997"],
+      trims:{
+        "Base": { engine:"2.4L Inline-5 (168hp)", drivetrain:"FWD", transmissions:["Manual","Automatic"], note:"A genuinely revolutionary Volvo — the brand's first-ever FWD, transverse-engine sedan/wagon, real evidence of a total ground-up rethink after decades of RWD platforms. A genuine 5-cylinder engine (unusual for the segment) and real 'Side Impact Protection System' side airbags helped cement Volvo's safety-first reputation for a new generation of buyers." },
+        "Turbo": { engine:"2.3L Turbocharged Inline-5 (222hp)", drivetrain:"FWD", transmission:"Automatic" },
+        "T5-R": { engine:"2.3L Turbocharged Inline-5 (240hp)", drivetrain:"FWD", transmission:"Manual", note:"A genuine limited-run performance special (1995 only) that surprised the industry — a real factory-backed Volvo race program (British Touring Car Championship) fed directly into road-car development, a genuine rarity for the brand's buttoned-down image at the time. Renamed S70/V70 for 1998, ending the 850 nameplate." },
+      },
+      colors:[
+        {name:"Ivory White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Bright Red (Red)",hex:"#C8102E"},
+        {name:"Regatta Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "S60": {
+      generations:{
+        "1st Gen (2001-2009)":{
+          years:["2001","2002","2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "2.4": { engine:"2.4L Inline-5 (168hp)", drivetrain:"FWD", transmission:"Automatic", note:"Volvo's genuine compact-executive sport sedan, replacing the aging S70 — real sharper, more athletic styling and handling than Volvo's boxier past, aimed squarely at the BMW 3 Series and Audi A4." },
+            "T5": { engine:"2.3L Turbocharged Inline-5 (247hp)", drivetrain:"FWD", transmission:"Automatic" },
+            "R": { engine:"2.5L Turbocharged Inline-5 (300hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Genuine performance flagship, real Volvo's answer to the BMW M3 and Audi S4 — a genuine rally-inspired AWD system and Öhlins adjustable dampers, a real enthusiast favorite that showed Volvo could build a genuine sport sedan." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire (Black)",hex:"#1A1A1A"},
+            {name:"Passion Red (Red)",hex:"#C8102E"},
+            {name:"Barents Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2011-2018)":{
+          years:["2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "T5": { engine:"2.5L Turbocharged Inline-5 (250hp)", drivetrains:["FWD","AWD"], transmission:"Automatic", note:"A genuine ground-up redesign, real sportier, more dramatic styling than the outgoing generation. A genuine Polestar performance package (later spun off as its own standalone brand) brought factory-backed tuning upgrades." },
+            "T6": { engine:"3.0L Turbocharged Inline-6 (300-325hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire (Black)",hex:"#1A1A1A"},
+            {name:"Passion Red (Red)",hex:"#C8102E"},
+            {name:"Rebel Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "T5": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"A genuinely major redesign, built on Volvo's SPA platform shared with the S90 — real evidence of the brand's post-Ford, post-Geely-acquisition renaissance, with a genuinely more premium interior and safety technology than ever. The T8 plug-in hybrid brought real supercar-adjacent acceleration to a compact sedan." },
+            "T6": { engine:"2.0L Turbocharged Supercharged 4-cylinder (316hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "T8 Polestar Engineered": { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (455hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, with real Öhlins adjustable dampers and Polestar-tuned software — the most powerful S60 ever built." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Fusion Red (Red)",hex:"#9B1B30"},
+            {name:"Denim Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "S90": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "T5": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"Volvo's genuine flagship sedan, replacing the S80 — real Scandinavian minimalist design and a genuinely distinctive 'Thor's Hammer' LED headlight signature helped establish Volvo's modern design language across the whole lineup." },
+        "T6": { engine:"2.0L Turbocharged Supercharged 4-cylinder (316hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "T8 Recharge": { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (400-455hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine plug-in hybrid flagship, with real all-electric-only range for shorter trips. Discontinued in the US after 2025, with the all-electric ES90 taking over the brand's flagship-sedan role going forward." },
+      },
+      colors:[
+        {name:"Crystal White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Fusion Red (Red)",hex:"#9B1B30"},
+        {name:"Denim Blue (Blue)",hex:"#4A7B9D"},
+      ],
+    },
+    "XC40": {
+      years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "T4": { engine:"2.0L Turbocharged 4-cylinder (187hp)", drivetrain:"FWD", transmission:"Automatic (8-Speed)", note:"Volvo's genuine first-ever compact luxury crossover, and a real design statement — the brand's youngest, most playful styling to date, with genuinely bold two-tone paint options and a distinctive floating center console. Won 2018 European Car of the Year." },
+        "T5": { engine:"2.0L Turbocharged 4-cylinder (247hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "Recharge": { engine:"Dual Electric Motors (201-402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2021 — Volvo's first-ever fully electric production model, sharing its dedicated EV platform underpinnings with the Polestar 2. The gas-powered XC40 continued selling alongside the Recharge variant for several more years." },
+      },
+      colors:[
+        {name:"Crystal White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Fusion Red (Red)",hex:"#9B1B30"},
+        {name:"Sage Green (Green)",hex:"#5A7A5A"},
+      ],
+    },
+    "XC60": {
+      generations:{
+        "1st Gen (2010-2017)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "3.2": { engine:"3.2L Inline-6 (240hp)", drivetrain:"AWD", transmission:"Automatic", note:"Volvo's genuine compact luxury crossover, positioned below the larger XC90 — real evidence of the brand rounding out its SUV lineup to compete with the BMW X3 and Audi Q5. Genuine City Safety autonomous emergency braking arrived as standard equipment, a real industry-leading safety feature at the time." },
+            "T6": { engine:"3.0L Turbocharged Inline-6 (281-325hp)", drivetrain:"AWD", transmission:"Automatic" },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire (Black)",hex:"#1A1A1A"},
+            {name:"Flamenco Red (Red)",hex:"#C8102E"},
+            {name:"Rebel Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "2nd Gen (2018-2026)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "T5": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign built on Volvo's SPA platform, sharing its architecture with the S90 and XC90 — genuinely one of the brand's best-selling models globally. A real 2021 and 2025 facelift kept the design fresh, with a further full redesign in the works." },
+            "T6": { engine:"2.0L Turbocharged Supercharged 4-cylinder (316hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "T8 Recharge": { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (400-455hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine plug-in hybrid flagship, the most powerful XC60 ever built." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Fusion Red (Red)",hex:"#9B1B30"},
+            {name:"Denim Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+    "XC90": {
+      generations:{
+        "1st Gen (2003-2014)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "2.5T": { engine:"2.5L Turbocharged Inline-5 (208hp)", drivetrain:"AWD", transmission:"Automatic", note:"Volvo's genuine first-ever SUV, and a real sales phenomenon for the brand — genuine 3-row, 7-passenger capability wrapped in Volvo's safety-first reputation made it a real favorite among safety-conscious families. Real rollover-mitigation technology was a genuine engineering point of pride." },
+            "V8": { engine:"4.4L V8 (311hp)", drivetrain:"AWD", transmission:"Automatic", note:"A genuinely unusual, real Yamaha-built V8 — Volvo's first V8 in decades, added for buyers wanting more power than the standard turbo five or six." },
+          },
+          colors:[
+            {name:"Ice White (White)",hex:"#F5F5F5"},
+            {name:"Black Sapphire (Black)",hex:"#1A1A1A"},
+            {name:"Flamenco Red (Red)",hex:"#C8102E"},
+            {name:"Barents Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2015-2026)":{
+          years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "T5": { engine:"2.0L Turbocharged 4-cylinder (250hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuinely dramatic redesign, real evidence of Volvo's post-Geely-acquisition renaissance — one of the most acclaimed interiors in the industry at launch, with a genuine minimalist Scandinavian design philosophy that influenced the rest of the brand's lineup. A real 2020 mid-cycle refresh and a further 2024 update kept the platform competitive for over a decade." },
+            "T6": { engine:"2.0L Turbocharged Supercharged 4-cylinder (316hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "T8 Recharge": { engine:"2.0L Turbocharged Plug-In Hybrid 4-cylinder (400-455hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine plug-in hybrid flagship, the most powerful XC90 ever built — real all-electric-only range for shorter trips before the gas engine engages." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+            {name:"Fusion Red (Red)",hex:"#9B1B30"},
+            {name:"Denim Blue (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
     },
   },
 };
