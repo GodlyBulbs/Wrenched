@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { supabase } from "./supabase";
 
@@ -19896,6 +19896,61 @@ function AddCarForm({onSave,onCancel}){
     </div>
   );
 
+  const MakeSearch=({label,val,set,opts,placeholder})=>{
+    const [query,setQuery]=useState("");
+    const [open,setOpen]=useState(false);
+    const [hover,setHover]=useState("");
+    const wrapRef=useRef(null);
+
+    useEffect(()=>{
+      const handleClick=(e)=>{
+        if(wrapRef.current&&!wrapRef.current.contains(e.target)){
+          setOpen(false);
+          setQuery("");
+        }
+      };
+      document.addEventListener("mousedown",handleClick);
+      return ()=>document.removeEventListener("mousedown",handleClick);
+    },[]);
+
+    const filtered=query?opts.filter(o=>o.toLowerCase().includes(query.toLowerCase())):opts;
+
+    return(
+      <div ref={wrapRef}>
+        <span style={LS}>{label}</span>
+        <div style={{position:"relative"}}>
+          <input
+            style={IS}
+            value={open?query:val}
+            onChange={e=>{setQuery(e.target.value);setOpen(true);}}
+            onFocus={()=>{setOpen(true);setQuery("");}}
+            onKeyDown={e=>{if(e.key==="Escape"){setOpen(false);setQuery("");e.target.blur();}}}
+            placeholder={placeholder}
+            autoComplete="off"
+          />
+          <div style={{position:"absolute",right:"12px",top:"50%",transform:"translateY(-50%)",color:"#FF6B2B",pointerEvents:"none",fontSize:"10px"}}>▼</div>
+          {open&&(
+            <div style={{position:"absolute",top:"calc(100% + 4px)",left:0,right:0,maxHeight:"240px",overflowY:"auto",background:"#1C1C1C",border:"1px solid #333",borderRadius:"4px",zIndex:20,boxShadow:"0 8px 24px rgba(0,0,0,0.4)"}}>
+              {filtered.length>0?filtered.map(o=>(
+                <div
+                  key={o}
+                  onMouseDown={()=>{set(o);setOpen(false);setQuery("");}}
+                  onMouseEnter={()=>setHover(o)}
+                  onMouseLeave={()=>setHover("")}
+                  style={{padding:"10px 16px",fontSize:"14px",cursor:"pointer",color:o===val?"#FF6B2B":"#E8E4DC",background:o===val?"rgba(255,107,43,0.1)":(hover===o?"rgba(255,107,43,0.06)":"transparent")}}
+                >
+                  {o}
+                </div>
+              )):(
+                <div style={{padding:"10px 16px",color:"#555",fontSize:"14px"}}>No matches</div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const InfoBox=({label,value})=>(
     <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(255,107,43,0.08)",borderRadius:"4px",borderLeft:"3px solid #FF6B2B",animation:"fadeSlide 0.3s ease forwards"}}>
       <span style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>{label}</span>
@@ -19908,7 +19963,7 @@ function AddCarForm({onSave,onCancel}){
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,52px)",color:"#E8E4DC",marginBottom:"8px"}}>ADD A CAR</div>
       <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Pick your car, trim, and color.</p>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"16px",marginBottom:"24px"}}>
-        <SW label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");resetDownstream();}} opts={makes} placeholder="Select make" disabled={false}/>
+        <MakeSearch label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");resetDownstream();}} opts={makes} placeholder="Search or select make"/>
         <SW label="MODEL" val={fModel} set={v=>{setFModel(v);resetDownstream();}} opts={models} placeholder="Select model" disabled={!fMake}/>
         {hasGenerations?(
           <SW label="GENERATION" val={fGeneration} set={v=>{setFGeneration(v);setFYear("");setFTrim("");setFEngine("");setFDrivetrain("");setFTransmission("");}} opts={generations} placeholder="Select generation" disabled={!fModel}/>
