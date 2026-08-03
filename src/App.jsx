@@ -11522,6 +11522,36 @@ const VEHICLES = {
       ],
     },
   },
+  "Lucid": {
+    "Air": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Pure": { engine:"Single Electric Motor (430hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine, real technical showcase from a company founded by former Tesla engineers — the Air debuted with the longest EPA range of any production EV at launch (516 miles on the Dream Edition Range), a real engineering achievement built on genuinely industry-leading motor and battery efficiency." },
+        "Touring": { engine:"Dual Electric Motors (620hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Grand Touring": { engine:"Dual Electric Motors (819hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine range and luxury flagship, with a real glass canopy roof and one of the most spacious, minimalist interiors in the segment." },
+        "Sapphire": { engine:"Tri-Motor Electric (1234hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Added 2023 — genuine performance flagship, real supercar-rivaling acceleration (0-60 in under 2 seconds) in a genuine 4-door luxury sedan package, a technical showcase for what Lucid's in-house motor and battery technology can do at the extreme." },
+      },
+      colors:[
+        {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+        {name:"Stellar White (White)",hex:"#F5F5F5"},
+        {name:"Zenith Red (Red)",hex:"#9B1B30"},
+        {name:"Cosmos Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Gravity": {
+      years:["2025","2026"],
+      trims:{
+        "Touring": { engine:"Dual Electric Motors (819hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Lucid's genuine first-ever SUV, and a real follow-up to the acclaimed Air sedan — real genuine 3-row seating carried over the Air's industry-leading efficiency and range technology into a larger, more practical body style, aimed squarely at the Rivian R1S and other premium electric SUVs." },
+        "Grand Touring": { engine:"Dual Electric Motors (828hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine flagship trim, with the most premium interior appointments and real class-leading range for a 3-row electric SUV." },
+      },
+      colors:[
+        {name:"Infinite Black (Black)",hex:"#1A1A1A"},
+        {name:"Stellar White (White)",hex:"#F5F5F5"},
+        {name:"Zenith Red (Red)",hex:"#9B1B30"},
+        {name:"Eureka Gold (Gold)",hex:"#B8952A"},
+      ],
+    },
+  },
   "Maserati": {
     "Ghibli": {
       years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
@@ -14812,6 +14842,49 @@ const VEHICLES = {
       },
     },
   },
+  "Polestar": {
+    "2": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Single Motor": { engine:"Single Electric Motor (272hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"Polestar's genuine first mainstream production model — a real spin-off brand from Volvo (both under Chinese parent Geely), aimed at buyers wanting genuine Scandinavian minimalist design in EV form, positioned as a direct rival to the Tesla Model 3. The FWD single-motor variant arrived in 2022, a real more affordable entry point below the original AWD-only launch model." },
+        "Dual Motor": { engine:"Dual Electric Motors (408hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Performance": { engine:"Dual Electric Motors (476hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with real Öhlins adjustable dampers and forged wheels — a genuine callback to Polestar's motorsport-tuning roots as Volvo's former in-house performance division." },
+      },
+      colors:[
+        {name:"Snow (White)",hex:"#F5F5F5"},
+        {name:"Space Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#9B1B30"},
+        {name:"Thunder (Gray)",hex:"#4A4E52"},
+      ],
+    },
+    "3": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Long Range Single Motor": { engine:"Single Electric Motor (295hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Polestar's genuine first SUV, sharing its underlying platform with the Volvo EX90 — real Scandinavian design language applied to a genuine mid-size luxury crossover format, positioned to compete with the Tesla Model Y and BMW iX3." },
+        "Long Range Dual Motor": { engine:"Dual Electric Motors (489hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Performance": { engine:"Dual Electric Motors (517hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with real Öhlins adjustable dampers." },
+      },
+      colors:[
+        {name:"Snow (White)",hex:"#F5F5F5"},
+        {name:"Space Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#9B1B30"},
+        {name:"Storm (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "4": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Long Range Single Motor": { engine:"Single Electric Motor (272hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuinely distinctive, real coupe-SUV silhouette with a real bold design choice — no rear windshield at all, replaced by a rear-facing camera feeding a digital mirror, a genuine industry first for a production vehicle." },
+        "Long Range Dual Motor": { engine:"Dual Electric Motors (544hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Snow (White)",hex:"#F5F5F5"},
+        {name:"Space Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#9B1B30"},
+        {name:"Jupiter (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+  },
   "Pontiac": {
     "Firebird": {
       generations:{
@@ -15559,6 +15632,106 @@ const VEHICLES = {
         },
       },
     },
+    "3500": {
+      generations:{
+        "1st Gen (1990-1993)":{
+          years:["1990","1991","1992","1993"],
+          trims:{
+            "Base": { engines:["5.9L V8 (230hp)","5.9L Cummins 12-Valve Diesel (160-180hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"Genuinely the heavy-duty, dual-rear-wheel 'dually' sibling to the 2500, built for real serious towing and payload work — this same basic era introduced the legendary Cummins inline-6 diesel to Dodge trucks for the first time in 1989, an engine that would go on to define the whole heavy-duty segment for decades." },
+          },
+          drivetrainOptions:["4WD"],
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Silver Metallic (Silver)",hex:"#C0C0C0"},
+          ],
+        },
+        "2nd Gen (1994-2002)":{
+          years:["1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+          trims:{
+            "Base": { engines:["5.9L V8 (230hp)","5.9L Cummins 24V Diesel (215-245hp)","8.0L V10 (300hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"A genuine major redesign shared with the 1500/2500, real big-rig-inspired styling — the 8.0L V10, borrowed in spirit from the Viper's engine family, made the 3500 (alongside the 2500) the first factory V10-powered pickup truck ever sold. The Cummins diesel got a genuine 24-valve head update in 1998, a real refinement over the earlier 12-valve design." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Black (Black)",hex:"#111111"},
+            {name:"Forest Green (Green)",hex:"#2E5A3A"},
+          ],
+        },
+        "3rd Gen (2003-2009)":{
+          years:["2003","2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "SLT": { engines:["5.7L Hemi V8 (305hp)","5.9L Cummins Diesel (305hp)","6.7L Cummins Diesel (350hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"A genuine redesign bringing the revived 5.7L Hemi V8 to the heavy-duty lineup — the V10 was discontinued after 2003, and a real larger 6.7L Cummins replaced the outgoing 5.9L for 2007, a genuine displacement and capability increase. A genuine first for the segment: a factory-integrated exhaust brake on Cummins-equipped trucks." },
+            "Mega Cab": { engine:"6.7L Cummins Diesel (350hp)", drivetrain:"4WD", transmission:"Automatic", note:"Added 2006 — a genuinely massive cab configuration with real class-leading rear-seat legroom, aimed at buyers who wanted heavy-duty capability without sacrificing passenger comfort." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Mineral Gray Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "4th Gen (2010-2018)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Tradesman": { engines:["5.7L Hemi V8 (383hp)","6.7L Cummins Diesel (350-385hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"A genuine major redesign, real coil-spring rear suspension arrived on the 2500 but the 3500 kept genuine leaf springs for maximum load-carrying capability — real evidence of the two trucks' diverging priorities despite sharing a badge. Ram kept offering a genuine manual transmission on the diesel throughout this generation, a real point of pride after both Ford and GM dropped theirs." },
+            "Laramie": { engine:"6.7L Cummins Diesel (350-385hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+            "Power Wagon": { engine:"6.4L Hemi V8 (410hp)", drivetrain:"4WD", transmission:"Automatic", note:"A genuine off-road-focused special, with real front and rear locking differentials and a real 2-inch factory suspension lift." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"True Blue Pearl (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "5th Gen — Heavy Duty (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Tradesman": { engines:["6.4L Hemi V8 (410hp)","6.7L Cummins Diesel (370-420hp)"], drivetrain:"4WD", transmissions:["Manual","Automatic"], note:"A genuine ground-up redesign, real evidence of the 3500's continued climb in both capability and luxury — genuine towing capacity climbed to a real class-leading 36,610 lbs with the High-Output Cummins, a genuinely staggering figure for a pickup truck. Limited and Limited Longhorn trims are Cummins-only, real evidence the top of the lineup has moved decisively toward diesel power." },
+            "Laramie": { engine:"6.7L Cummins Diesel (370-420hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)" },
+            "Limited": { engine:"6.7L Cummins Diesel (420hp)", drivetrain:"4WD", transmission:"Automatic (6-Speed)", note:"Genuine flagship trim, Cummins-only — the 6.4L Hemi V8 was dropped from the Mega Cab entirely for 2025, real evidence of the segment's continued shift toward diesel-dominant heavy-duty trucks." },
+          },
+          colors:[
+            {name:"Bright White (White)",hex:"#F5F5F5"},
+            {name:"Flame Red (Red)",hex:"#C8102E"},
+            {name:"Granite Crystal Metallic (Gray)",hex:"#6B6E6F"},
+            {name:"Patriot Blue Pearl (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+      },
+    },
+  },
+  "Rivian": {
+    "R1S": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "Dual-Motor": { engine:"Dual Electric Motors (533hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Rivian's genuine flagship electric SUV, sharing its real body-on-frame-adjacent 'skateboard' platform with the R1T pickup — genuine 3-row, 7-passenger seating aimed at families wanting Range Rover-adjacent capability with zero tailpipe emissions. Built at Rivian's own dedicated plant in Normal, Illinois." },
+        "Dual-Motor Performance": { engine:"Dual Electric Motors (665hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Quad-Motor": { engine:"Quad Electric Motors (835-1025hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with real independent motors at each wheel enabling genuine torque-vectoring capability most rivals can't match — a real technical showcase for what a dedicated EV platform can achieve. A 2025 update boosted the Gen 2 Quad-Motor output further, to a genuinely startling 1,025hp." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Rivian Blue (Blue)",hex:"#1E6BA8"},
+        {name:"Illinois Gold (Gold)",hex:"#B8952A"},
+        {name:"Limestone (Tan)",hex:"#C8B896"},
+      ],
+    },
+    "R1T": {
+      years:["2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Dual-Motor": { engine:"Dual Electric Motors (533hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuinely the first mass-market all-electric pickup truck to reach American customers, beating both the Ford F-150 Lightning and Tesla Cybertruck to market — a real, genuine off-road-capable body-on-frame-adjacent design with a distinctive front trunk (frunk) and a genuine 'gear tunnel' storage compartment running between the cab and bed, real thoughtful details for outdoor-adventure buyers." },
+        "Dual-Motor Performance": { engine:"Dual Electric Motors (665hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+        "Quad-Motor": { engine:"Quad Electric Motors (835-1025hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance and off-road flagship, with real independent motors at each wheel — a genuine 'Tank Turn' feature lets it rotate in place by spinning wheels on opposite sides in different directions, a real party trick with genuine off-road utility." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Rivian Blue (Blue)",hex:"#1E6BA8"},
+        {name:"Canyon Red (Red)",hex:"#9B1B30"},
+        {name:"Forest Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
   },
   "Saab": {
     "9-3": {
@@ -15936,6 +16109,50 @@ const VEHICLES = {
     },
   },
   "Shelby": {
+    "GT350": {
+      years:["2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "Base": { engine:"5.2L Flat-Plane Crank V8 (526hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine revival of the legendary 1965 GT350 nameplate, built on the S550 Mustang platform — the genuine star of the show is the 'Voodoo' engine, a flat-plane-crankshaft V8 far more common in exotic European cars than American muscle, giving it a genuinely unique, high-revving, Ferrari-adjacent exhaust note unlike anything else Ford has ever built. Manual transmission only, no automatic offered at any point." },
+        "R": { engine:"5.2L Flat-Plane Crank V8 (526hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuine track-focused variant, real carbon-fiber wheels (a first for any American production car) and no rear seat, shaving real weight for genuine lap-time gains. Discontinued after 2020, replaced by the returning GT500 as Shelby's flagship performance Mustang." },
+      },
+      colors:[
+        {name:"Oxford White (White)",hex:"#F5F5F5"},
+        {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+        {name:"Lightning Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "GT500": {
+      generations:{
+        "S197 (2007-2014)":{
+          years:["2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "Base": { engine:"5.4L Supercharged V8 (500-550hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine revival after a 37-year absence, and at launch the most powerful production Mustang Ford had ever built — real supercharged power positioned it as the genuine successor to the SVT Cobra it replaced. Real iron-block engine construction made early cars genuinely nose-heavy, addressed with a lighter aluminum block for 2010." },
+            "GT500KR": { engine:"5.4L Supercharged V8 (540hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"'King of the Road' — a genuine 2008 limited-edition tribute to the legendary 1968 GT500KR, with real unique hood, stripes, and a genuine power bump over the standard GT500." },
+            "Super Snake": { engine:"5.8L Supercharged V8 (662-850hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine Shelby American aftermarket/dealer-installed upgrade package rather than a factory Ford trim — real 850hp track-only tune was available alongside the 662hp street-legal version, genuinely one of the most powerful Mustangs ever built at the time. The larger 5.8L 'Trinity' supercharged V8 arrived for the standard GT500 in 2013, a real substantial power increase for the car's final two model years before a 6-year hiatus." },
+          },
+          colors:[
+            {name:"Performance White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Grabber Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+        "S550 (2020-2022)":{
+          years:["2020","2021","2022"],
+          trims:{
+            "Base": { engine:"5.2L Supercharged Predator V8 (760hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuinely dramatic return after a 6-year hiatus, with a real new 'Predator' supercharged V8 replacing the old Modular-family engine entirely — genuinely the most powerful street-legal Ford ever built to that point. A real dual-clutch automatic became the sole transmission option, no manual offered — a genuine departure from every prior GT500's manual-only tradition, aimed at delivering the fastest possible acceleration." },
+            "Carbon Fiber Track Pack": { engine:"5.2L Supercharged Predator V8 (760hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine track-focused package with real carbon-fiber wheels and enhanced aerodynamics. Discontinued after 2022 alongside the broader S550 Mustang generation's send-off, with the GT500 nameplate's future uncertain heading into the all-electric era." },
+          },
+          colors:[
+            {name:"Oxford White (White)",hex:"#F5F5F5"},
+            {name:"Shadow Black (Black)",hex:"#1A1A1A"},
+            {name:"Race Red (Red)",hex:"#C8102E"},
+            {name:"Grabber Blue Metallic (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
     "Series 1": {
       years:["1999"],
       trims:{
@@ -15948,6 +16165,38 @@ const VEHICLES = {
         {name:"Red (Red)",hex:"#C8102E"},
         {name:"Black (Black)",hex:"#1A1A1A"},
       ],
+    },
+  },
+  "Smart": {
+    "Fortwo": {
+      generations:{
+        "1st Gen US (2008-2015)":{
+          years:["2008","2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "Pure": { engine:"1.0L 3-cylinder (70hp)", drivetrain:"RWD", transmissions:["Manual (Automated)","Automatic"], note:"A genuine joint venture between Mercedes-Benz and watchmaker Swatch (the name is a literal combination of 'Swatch Mercedes ART') — the smallest car ever officially sold in the US market at the time, genuinely short enough to legally park nose-in against a curb in some cities. Real rear-engine, rear-wheel-drive layout, a genuine rarity for a modern small car." },
+            "Passion": { engine:"1.0L 3-cylinder (70hp)", drivetrain:"RWD", transmission:"Automatic", note:"A genuine electric variant was offered in very limited numbers starting 2013, a real precursor to the fully-electric-only lineup that would follow." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black (Black)",hex:"#1A1A1A"},
+            {name:"Rally Red (Red)",hex:"#C8102E"},
+            {name:"Cyber Yellow (Yellow)",hex:"#F5C800"},
+          ],
+        },
+        "2nd Gen US (2016-2019)":{
+          years:["2016","2017","2018","2019"],
+          trims:{
+            "Pure": { engine:"0.9L Turbocharged 3-cylinder (89hp)", drivetrain:"RWD", transmissions:["Manual","Automatic (Dual-Clutch)"], note:"A genuine redesign co-developed with Renault-Nissan, real wider track and bolder styling than the outgoing generation. Real Cabrio (convertible) body style continued alongside the coupe." },
+            "Electric Drive": { engine:"Electric Motor (80hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Genuine all-electric variant, and eventually the sole US powertrain option as Mercedes-Benz shifted the whole Smart lineup to EV-only worldwide. Discontinued in the US after 2019 with no direct successor, as Mercedes-Benz withdrew the Smart brand from the American market entirely — the nameplate continued selling in Europe and, later, China under a real joint venture with Geely." },
+          },
+          colors:[
+            {name:"Crystal White (White)",hex:"#F5F5F5"},
+            {name:"Deep Black (Black)",hex:"#1A1A1A"},
+            {name:"Carbon Red (Red)",hex:"#9B1B30"},
+            {name:"Cyber Blue (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
     },
   },
   "Subaru": {
@@ -16825,6 +17074,110 @@ const VEHICLES = {
             {name:"Black (Black)",hex:"#1A1A1A"},
             {name:"Boston Red Metallic (Red)",hex:"#9B1B30"},
             {name:"Galactic Gray Metallic (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+  },
+  "Tesla": {
+    "Cybertruck": {
+      years:["2024","2025","2026"],
+      trims:{
+        "AWD": { engine:"Dual Electric Motors (600hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuinely one of the most distinctive vehicles ever put into production — a real, unpainted stainless-steel exoskeleton body (no paint needed, no traditional body panels) and a genuine steer-by-wire system, no direct mechanical connection between the steering wheel and front wheels, a real industry first for a mass-production vehicle. Real 800-volt architecture and bidirectional charging let it power a home during an outage." },
+        "Cyberbeast": { engine:"Tri-Motor Electric (845hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with a real 0-60 time under 2.6 seconds despite weighing nearly 7,000 lbs — a genuinely startling figure for a vehicle this size and mass." },
+      },
+      colors:[
+        {name:"Stainless Steel (Silver)",hex:"#C0C0C0"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ultra Red (Red)",hex:"#C8102E"},
+        {name:"Lunar Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Model 3": {
+      generations:{
+        "1st Gen (2017-2023)":{
+          years:["2017","2018","2019","2020","2021","2022","2023"],
+          trims:{
+            "Standard Range": { engine:"Single Electric Motor (271hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Genuinely the car that made Tesla a mass-market brand — a real, more affordable EV that finally delivered on the company's founding mission of building an electric car for everyday buyers, not just wealthy early adopters. Real minimalist interior centered entirely around a single touchscreen, no traditional gauge cluster, became a genuine Tesla design signature." },
+            "Long Range": { engine:"Dual Electric Motors (346hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Performance": { engine:"Dual Electric Motors (480hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship of this generation, with real 0-60 times under 3.2 seconds." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Solid Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Multi-Coat (Red)",hex:"#C8102E"},
+            {name:"Deep Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen — Highland (2024-2026)":{
+          years:["2024","2025","2026"],
+          trims:{
+            "Standard": { engine:"Single Electric Motor (283hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine major refresh (internally code-named 'Highland') with real updated styling, a genuinely quieter cabin with more acoustic glass and insulation, and a real rear touchscreen for back-seat passengers — evolutionary rather than revolutionary, but a genuine meaningful step forward." },
+            "Premium": { engines:["Single Electric Motor (283hp)","Dual Electric Motors (346hp)"], drivetrains:["RWD","AWD"], transmission:"Automatic (Single-Speed)" },
+            "Performance": { engine:"Dual Electric Motors (510hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with real adaptive suspension added for the first time on a Model 3." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Solid Black (Black)",hex:"#1A1A1A"},
+            {name:"Ultra Red (Red)",hex:"#C8102E"},
+            {name:"Stealth Gray (Gray)",hex:"#4A4E52"},
+          ],
+        },
+      },
+    },
+    "Model S": {
+      years:["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "Long Range": { engine:"Dual Electric Motors (670hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Tesla's genuine first mass-market success and the car that established the company as a legitimate automaker rather than a niche curiosity — real over 400 miles of range in later years, a genuinely industry-leading figure that helped normalize long-range EVs. A real distinctive steering yoke (rather than a conventional round wheel) arrived with a 2021 redesign, a genuinely controversial styling choice." },
+        "Plaid": { engine:"Tri-Motor Electric (1020hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with a real 0-60 time under 2 seconds — one of the quickest-accelerating production cars ever built, gas or electric. Production ended in 2025 as Tesla discontinued both the Model S and Model X, narrowing the brand's US lineup to Model 3, Model Y, and Cybertruck." },
+      },
+      colors:[
+        {name:"Pearl White (White)",hex:"#F5F5F5"},
+        {name:"Solid Black (Black)",hex:"#1A1A1A"},
+        {name:"Red Multi-Coat (Red)",hex:"#C8102E"},
+        {name:"Deep Blue Metallic (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Model X": {
+      years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "Long Range": { engine:"Dual Electric Motors (670hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Tesla's genuine flagship SUV, and a real technical showcase — distinctive rear 'Falcon Wing' doors that open vertically upward, a genuine engineering challenge Tesla insisted on despite the real complexity and cost involved. Real 3-row seating for up to 7." },
+        "Plaid": { engine:"Tri-Motor Electric (1020hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, real supercar-rivaling acceleration in a 3-row SUV package. Production ended in 2025 alongside the Model S, as Tesla narrowed its US lineup." },
+      },
+      colors:[
+        {name:"Pearl White (White)",hex:"#F5F5F5"},
+        {name:"Solid Black (Black)",hex:"#1A1A1A"},
+        {name:"Red Multi-Coat (Red)",hex:"#C8102E"},
+        {name:"Midnight Silver Metallic (Silver)",hex:"#8A8D8F"},
+      ],
+    },
+    "Model Y": {
+      generations:{
+        "1st Gen (2020-2025)":{
+          years:["2020","2021","2022","2023","2024","2025"],
+          trims:{
+            "Long Range": { engine:"Dual Electric Motors (384hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Sharing roughly 75% of its parts with the Model 3, the Y quickly became genuinely one of the best-selling vehicles in the world, not just among EVs — a real crossover-shaped answer to buyers who wanted Model 3-level efficiency and tech with more interior space and cargo room." },
+            "Performance": { engine:"Dual Electric Motors (456hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Solid Black (Black)",hex:"#1A1A1A"},
+            {name:"Red Multi-Coat (Red)",hex:"#C8102E"},
+            {name:"Deep Blue Metallic (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen — Juniper (2025-2026)":{
+          years:["2025","2026"],
+          trims:{
+            "Standard": { engine:"Single Electric Motor (295hp)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine major refresh (internally code-named 'Juniper'), sharing much of its updated styling and technology with the Highland-era Model 3 — real full-width front and rear light bars became a new Tesla design signature, along with a genuinely quieter, more refined cabin." },
+            "Premium": { engine:"Dual Electric Motors (384hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+            "Performance": { engine:"Dual Electric Motors (456hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, with real adaptive suspension added for this generation." },
+          },
+          colors:[
+            {name:"Pearl White (White)",hex:"#F5F5F5"},
+            {name:"Solid Black (Black)",hex:"#1A1A1A"},
+            {name:"Ultra Red (Red)",hex:"#C8102E"},
+            {name:"Quicksilver (Silver)",hex:"#C0C0C0"},
           ],
         },
       },
