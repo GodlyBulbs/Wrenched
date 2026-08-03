@@ -19500,7 +19500,14 @@ const rotationNote=(drivetrain)=>{
   return "Rotation pattern depends on drivetrain — check your owner's manual for the recommended pattern.";
 };
 
-const MAINTENANCE_ITEMS=[
+const isElectric=(car)=>{
+  const e=car?.engine||"";
+  if(!(/electric/i.test(e)&&/motor/i.test(e)))return false;
+  if(/hybrid|turbo|supercharg|\d\.\dl|v\d{1,2}\b|cylinder|inline|boxer|\bflat\b|range extender|\d+cc\b/i.test(e))return false;
+  return true;
+};
+
+const MAINTENANCE_ITEMS_GAS=[
   {
     key:"oil",
     name:"Engine Oil & Filter",
@@ -19514,9 +19521,9 @@ const MAINTENANCE_ITEMS=[
   {
     key:"tires",
     name:"Tire Rotation",
-    mileInterval:6000,
+    mileInterval:10000,
     monthInterval:6,
-    notes:(car)=>rotationNote(car.drivetrain),
+    notes:(car)=>rotationNote(car.drivetrain)+" A lot of owners just pair this with every other oil change for convenience — that works fine, just don't stretch much past 10k either way.",
   },
   {
     key:"airfilter",
@@ -19575,6 +19582,13 @@ const MAINTENANCE_ITEMS=[
     },
   },
   {
+    key:"timingbelt",
+    name:"Timing Belt / Chain",
+    mileInterval:90000,
+    monthInterval:84,
+    notes:()=>"This is the one item on this list where guessing wrong can total your engine — on most modern 4-cylinders (interference engines), a snapped timing belt bends valves and can mean a full rebuild. Belt-driven engines are commonly due somewhere between 60k-105k mi depending on manufacturer; timing chains are technically 'lifetime' but can stretch and are worth inspecting past 100k-150k mi. Look up whether your specific engine uses a belt or chain and its real interval — don't rely on the default here.",
+  },
+  {
     key:"battery",
     name:"Battery",
     mileInterval:null,
@@ -19629,6 +19643,86 @@ const MAINTENANCE_ITEMS=[
     notes:()=>"Only applies if your car has traditional hydraulic power steering — many newer cars use electric power steering instead, which has no fluid to change at all. Check your owner's manual if you're not sure which your car has.",
   },
 ];
+
+const MAINTENANCE_ITEMS_EV=[
+  {
+    key:"tires",
+    name:"Tire Rotation",
+    mileInterval:10000,
+    monthInterval:6,
+    notes:(car)=>rotationNote(car.drivetrain)+" EVs are heavier and put down instant torque, which can chew through tires faster than a comparable gas car — don't skip this one.",
+  },
+  {
+    key:"cabinfilter",
+    name:"Cabin Air Filter",
+    mileInterval:15000,
+    monthInterval:12,
+    notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
+  },
+  {
+    key:"brakepads",
+    name:"Brake Pads",
+    mileInterval:40000,
+    monthInterval:24,
+    notes:()=>"EVs lean heavily on regenerative braking to slow down, so the physical brake pads usually see a lot less wear than on a gas car — many owners go well past 50k mi before needing pads. Worth a periodic look anyway, since pads and calipers can occasionally seize up from being under-used rather than overused.",
+  },
+  {
+    key:"brakerotors",
+    name:"Brake Rotors",
+    mileInterval:60000,
+    monthInterval:24,
+    notes:()=>"Usually inspected whenever the pads are checked. Regenerative braking means rotors can develop light surface rust from going long stretches without real pad contact — not usually a problem, just something to be aware of.",
+  },
+  {
+    key:"coolant",
+    name:"Coolant",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:()=>"EVs use coolant to manage battery and motor temperature, not to cool a combustion engine — a different job than on a gas car, but still a real service item. Intervals vary a lot by manufacturer, so check your owner's manual rather than assuming a gas-car interval applies.",
+  },
+  {
+    key:"battery12v",
+    name:"12V Auxiliary Battery",
+    mileInterval:null,
+    monthInterval:36,
+    notes:()=>"Separate from your main traction battery — nearly every EV still has a small 12V battery running accessories, infotainment, and low-voltage systems, same as a gas car. It's easy to forget it's there, but if it dies, the car often won't power on even with a full charge in the main pack. Most last 3-5 years.",
+  },
+  {
+    key:"brakefluid",
+    name:"Brake Fluid",
+    mileInterval:30000,
+    monthInterval:24,
+    notes:()=>"Brake fluid absorbs moisture from the air over time, which lowers its boiling point — this is a real safety item, not just a nice-to-have. Most manufacturers call for a change every 2-3 years regardless of mileage. A cloudy or dark color is a sign it's overdue.",
+  },
+  {
+    key:"wipers",
+    name:"Wiper Blades",
+    mileInterval:null,
+    monthInterval:12,
+    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
+  },
+  {
+    key:"alignment",
+    name:"Wheel Alignment",
+    mileInterval:12000,
+    monthInterval:12,
+    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. EVs' extra weight can make misalignment wear tires faster than on a gas car, so it's worth staying on top of.",
+  },
+  {
+    key:"difffluid",
+    name:"Reduction Gear / Differential Fluid",
+    mileInterval:60000,
+    monthInterval:48,
+    notes:(car)=>{
+      const dt=car.drivetrain;
+      if(dt&&/awd|4wd/i.test(dt))return"Dual-motor AWD EVs typically have a front and rear drive unit, each with its own reduction-gear fluid — check your manufacturer's interval, since this is often much longer than a comparable gas differential.";
+      return"Single-motor EVs have one drive unit with its own gear fluid. Often a very long or 'lifetime' interval — check your owner's manual before assuming service is needed.";
+    },
+  },
+];
+
+const getMaintenanceItems=(car)=>isElectric(car)?MAINTENANCE_ITEMS_EV:MAINTENANCE_ITEMS_GAS;
+
 
 function CarCard({car,onSelect,onDelete,hasAlerts}){
   const colorHex=car.colorHex||"#1C1C1C";
@@ -20080,6 +20174,7 @@ function AppShell(){
   const [view,setView]=useState("garage");
   const [garage,setGarage]=useState([]);
   const [activeCar,setActiveCar]=useState(null);
+  const items=activeCar?getMaintenanceItems(activeCar):MAINTENANCE_ITEMS_GAS;
   const [activeTab,setActiveTab]=useState("maintenance");
   const [activeBrand,setActiveBrand]=useState(null);
   const [showBell,setShowBell]=useState(false);
@@ -20140,11 +20235,11 @@ function AppShell(){
   const startWizard=()=>{setWizardStep(0);setWizardMileage("");setWizardAnswers({});};
 
   const wizardNext=(skip)=>{
-    const item=MAINTENANCE_ITEMS[wizardStep];
+    const item=items[wizardStep];
     const miles=skip?null:roundToTen(parseInt(wizardMileage)||0);
     setWizardAnswers(prev=>({...prev,[item.key]:miles}));
     setWizardMileage("");
-    if(wizardStep<MAINTENANCE_ITEMS.length-1){
+    if(wizardStep<items.length-1){
       setWizardStep(wizardStep+1);
     }else{
       finishWizard({...wizardAnswers,[item.key]:miles});
@@ -20152,7 +20247,7 @@ function AppShell(){
   };
 
   const finishWizard=(answers)=>{
-    const maintenance=MAINTENANCE_ITEMS.map(item=>({
+    const maintenance=items.map(item=>({
       name:item.name,
       mileInterval:item.mileInterval,
       monthInterval:item.monthInterval,
@@ -20331,18 +20426,18 @@ function AppShell(){
                   wizardStep>=0?(
                     <div style={{padding:"24px 0"}}>
                       <div style={{display:"flex",gap:"6px",marginBottom:"28px"}}>
-                        {MAINTENANCE_ITEMS.map((_,i)=>(
+                        {items.map((_,i)=>(
                           <div key={i} style={{flex:1,height:"4px",borderRadius:"2px",background:i<=wizardStep?"#FF6B2B":"#2A2A2A"}}/>
                         ))}
                       </div>
-                      <div style={{color:"#555",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {MAINTENANCE_ITEMS.length}</div>
-                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",marginBottom:"8px"}}>{MAINTENANCE_ITEMS[wizardStep].name}</div>
-                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>Recommended every {MAINTENANCE_ITEMS[wizardStep].mileInterval?`${MAINTENANCE_ITEMS[wizardStep].mileInterval.toLocaleString()} miles`:`${MAINTENANCE_ITEMS[wizardStep].monthInterval} months`}</div>
-                      <div style={{color:"#666",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{MAINTENANCE_ITEMS[wizardStep].notes(activeCar)}</div>
+                      <div style={{color:"#555",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {items.length}</div>
+                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",marginBottom:"8px"}}>{items[wizardStep].name}</div>
+                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>Recommended every {items[wizardStep].mileInterval?`${items[wizardStep].mileInterval.toLocaleString()} miles`:`${items[wizardStep].monthInterval} months`}</div>
+                      <div style={{color:"#666",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{items[wizardStep].notes(activeCar)}</div>
                       <span style={LS}>WHEN WAS THIS LAST DONE?</span>
                       <input style={{...IS,marginBottom:"12px"}} type="number" value={wizardMileage} onChange={e=>setWizardMileage(e.target.value)} placeholder="Enter mileage" autoFocus/>
                       <div style={{display:"flex",gap:"10px"}}>
-                        <button onClick={()=>wizardNext(false)} disabled={!wizardMileage} style={{...BP(!!wizardMileage),flex:2}}>{wizardStep<MAINTENANCE_ITEMS.length-1?"SAVE & NEXT":"SAVE & FINISH"}</button>
+                        <button onClick={()=>wizardNext(false)} disabled={!wizardMileage} style={{...BP(!!wizardMileage),flex:2}}>{wizardStep<items.length-1?"SAVE & NEXT":"SAVE & FINISH"}</button>
                         <button onClick={()=>wizardNext(true)} style={{flex:1,background:"transparent",border:"1px solid #2A2A2A",color:"#666",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer"}}>NOT SURE</button>
                       </div>
                     </div>
@@ -20350,7 +20445,7 @@ function AppShell(){
                     <div style={{textAlign:"center",padding:"48px 24px"}}>
                       <div style={{fontSize:"48px",marginBottom:"16px"}}>❗</div>
                       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"8px"}}>SET UP MAINTENANCE TRACKER</div>
-                      <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — oil, tires, filters, brakes, coolant, and transmission fluid.</div>
+                      <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — {isElectric(activeCar)?"tires, brakes, coolant, and the 12V battery.":"oil, tires, filters, brakes, coolant, and transmission fluid."}</div>
                       <button onClick={startWizard} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>START SETUP</button>
                     </div>
                   )
