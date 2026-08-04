@@ -19631,8 +19631,8 @@ const MAINTENANCE_ITEMS_GAS=[
     notes:(car)=>{
       const dt=car.drivetrain;
       if(dt&&/awd|4wd/i.test(dt))return"AWD/4WD systems typically have both a front and rear differential (or a transfer case too) — each with its own fluid and interval. Check your owner's manual for whether they're serviced together or separately.";
-      if(dt&&/rwd/i.test(dt))return"RWD cars have a single rear differential. Often overlooked since it's out of sight — a burnt smell or whining noise from underneath is a sign it's overdue.";
-      return"Not applicable to most FWD cars without a separate rear differential — check your owner's manual if you're not sure what drivetrain-specific components your car has.";
+      if(dt&&/rwd|2wd/i.test(dt))return"RWD/2WD trucks and cars have a single rear differential. Often overlooked since it's out of sight — a burnt smell or whining noise from underneath is a sign it's overdue.";
+      return"Check your owner's manual if you're not sure what drivetrain-specific components your car has.";
     },
   },
   {
@@ -19721,7 +19721,12 @@ const MAINTENANCE_ITEMS_EV=[
   },
 ];
 
-const getMaintenanceItems=(car)=>isElectric(car)?MAINTENANCE_ITEMS_EV:MAINTENANCE_ITEMS_GAS;
+const getMaintenanceItems=(car)=>{
+  const ev=isElectric(car);
+  const base=ev?MAINTENANCE_ITEMS_EV:MAINTENANCE_ITEMS_GAS;
+  const isFWD=car?.drivetrain==="FWD";
+  return(isFWD&&!ev)?base.filter(item=>item.key!=="difffluid"):base;
+};
 
 
 function CarCard({car,onSelect,onDelete,hasAlerts}){
