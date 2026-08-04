@@ -19476,6 +19476,7 @@ function BrandDot({brand,size=8}){
 
 function statusColor(item,mileage){
   if(!item.lastMiles&&!item.lastDate) return "unset";
+  if(item.mileInterval==null&&item.monthInterval==null) return "green";
   if(item.mileInterval==null){
     if(!item.lastDate) return "unset";
     const dueDate=new Date(item.lastDate);
@@ -19587,6 +19588,14 @@ const MAINTENANCE_ITEMS_GAS=[
     notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
   },
   {
+    key:"pcv",
+    name:"PCV Valve",
+    category:"Filters",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:()=>"Cheap and easy to overlook — the PCV (Positive Crankcase Ventilation) valve recycles blow-by gases back into the intake instead of venting them to atmosphere. A stuck or clogged valve can cause a rough idle, oil leaks from excess crankcase pressure, or long-term sludge buildup. Often checked or swapped at the same time as an air filter service since it's usually right there in the engine bay.",
+  },
+  {
     key:"timingbelt",
     name:"Timing Belt / Chain",
     category:"Belts",
@@ -19630,9 +19639,17 @@ const MAINTENANCE_ITEMS_GAS=[
     key:"alignment",
     name:"Wheel Alignment",
     category:"Tires & Alignment",
-    mileInterval:12000,
-    monthInterval:12,
-    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. Uneven tire wear is the biggest tell something's off.",
+    mileInterval:null,
+    monthInterval:null,
+    notes:()=>"This one's event-driven, not on a clock — get it checked any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. Uneven tire wear is the biggest tell something's off. Log it here whenever it happens so you've got a record, but it won't nag you on a fixed schedule.",
+  },
+  {
+    key:"struts",
+    name:"Struts / Shocks",
+    category:"Tires & Alignment",
+    mileInterval:70000,
+    monthInterval:84,
+    notes:()=>"There's no hard replacement schedule here — these wear out gradually rather than failing outright, so most people don't notice until ride quality has quietly gotten worse. A bouncy ride, nose-diving under braking, clunking over bumps, or uneven tire wear are the usual tells. 50k-100k mi is a common rough range depending on driving style and road conditions — this default splits the difference.",
   },
   {
     key:"sparkplugs",
@@ -19728,9 +19745,17 @@ const MAINTENANCE_ITEMS_EV=[
     key:"alignment",
     name:"Wheel Alignment",
     category:"Tires & Alignment",
-    mileInterval:12000,
-    monthInterval:12,
-    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. EVs' extra weight can make misalignment wear tires faster than on a gas car, so it's worth staying on top of.",
+    mileInterval:null,
+    monthInterval:null,
+    notes:()=>"This one's event-driven, not on a clock — get it checked any time you hit a real pothole hard, get new tires, or notice the car pulling to one side. EVs' extra weight can make misalignment wear tires faster than on a gas car, so it's worth staying on top of. Log it here whenever it happens so you've got a record, but it won't nag you on a fixed schedule.",
+  },
+  {
+    key:"struts",
+    name:"Struts / Shocks",
+    category:"Tires & Alignment",
+    mileInterval:60000,
+    monthInterval:72,
+    notes:()=>"EVs are meaningfully heavier than a comparable gas car, which can wear struts and shocks faster — a bouncy ride, nose-diving under braking, clunking over bumps, or uneven tire wear are the usual tells. There's no hard replacement schedule since these wear out gradually rather than failing outright, so most people don't notice until it's already degraded a fair bit.",
   },
   {
     key:"battery12v",
@@ -20467,7 +20492,7 @@ function AppShell(){
                       </div>
                       <div style={{color:"#555",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {items.length}</div>
                       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",marginBottom:"8px"}}>{items[wizardStep].name}</div>
-                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>Recommended every {items[wizardStep].mileInterval?`${items[wizardStep].mileInterval.toLocaleString()} miles`:`${items[wizardStep].monthInterval} months`}</div>
+                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>{items[wizardStep].mileInterval?`Recommended every ${items[wizardStep].mileInterval.toLocaleString()} miles`:items[wizardStep].monthInterval?`Recommended every ${items[wizardStep].monthInterval} months`:"No fixed schedule — logged whenever it happens"}</div>
                       <div style={{color:"#666",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{items[wizardStep].notes(activeCar)}</div>
                       <span style={LS}>WHEN WAS THIS LAST DONE?</span>
                       <input style={{...IS,marginBottom:"12px"}} type="number" value={wizardMileage} onChange={e=>setWizardMileage(e.target.value)} placeholder="Enter mileage" autoFocus/>
@@ -20516,8 +20541,10 @@ function AppShell(){
                                     <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>
                                       {item.mileInterval?
                                         `Every ${item.mileInterval.toLocaleString()} mi${item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}`
-                                        :
+                                        :item.monthInterval?
                                         `Every ${item.monthInterval} months${item.lastDate?` · Last: ${new Date(item.lastDate).toLocaleDateString()} · Due: ${new Date(new Date(item.lastDate).setMonth(new Date(item.lastDate).getMonth()+item.monthInterval)).toLocaleDateString()}`:" · Not logged yet"}`
+                                        :
+                                        `No fixed schedule${item.lastDate?` · Last logged: ${new Date(item.lastDate).toLocaleDateString()}`:" · Not logged yet"}`
                                       }
                                     </div>
                                     {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
