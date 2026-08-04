@@ -19507,10 +19507,13 @@ const isElectric=(car)=>{
   return true;
 };
 
+const MAINTENANCE_CATEGORIES=["Fluids","Filters","Belts","Brakes","Tires & Alignment","Electrical","Other"];
+
 const MAINTENANCE_ITEMS_GAS=[
   {
     key:"oil",
     name:"Engine Oil & Filter",
+    category:"Fluids",
     mileInterval:5000,
     monthInterval:6,
     notes:(car)=>{
@@ -19519,43 +19522,9 @@ const MAINTENANCE_ITEMS_GAS=[
     },
   },
   {
-    key:"tires",
-    name:"Tire Rotation",
-    mileInterval:10000,
-    monthInterval:6,
-    notes:(car)=>rotationNote(car.drivetrain)+" A lot of owners just pair this with every other oil change for convenience — that works fine, just don't stretch much past 10k either way.",
-  },
-  {
-    key:"airfilter",
-    name:"Engine Air Filter",
-    mileInterval:15000,
-    monthInterval:12,
-    notes:()=>"Check sooner if you drive in dusty or dirty conditions.",
-  },
-  {
-    key:"cabinfilter",
-    name:"Cabin Air Filter",
-    mileInterval:15000,
-    monthInterval:12,
-    notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
-  },
-  {
-    key:"brakepads",
-    name:"Brake Pads",
-    mileInterval:25000,
-    monthInterval:12,
-    notes:()=>"Wear varies a lot with driving style — this is a rough interval, not a hard rule. Check pad thickness through the wheel spokes if you can, or have it checked at a tire rotation.",
-  },
-  {
-    key:"brakerotors",
-    name:"Brake Rotors",
-    mileInterval:50000,
-    monthInterval:24,
-    notes:()=>"Usually inspected (and resurfaced or replaced if scored/warped) whenever the pads are done. Don't need to be swapped on their own schedule most of the time.",
-  },
-  {
     key:"coolant",
     name:"Coolant / Antifreeze",
+    category:"Fluids",
     mileInterval:30000,
     monthInterval:24,
     notes:()=>"Interval depends heavily on coolant type — conventional green coolant is usually ~30k mi, long-life (pink/orange, Dex-Cool style) can run 100k+. Check your owner's manual before assuming.",
@@ -19563,6 +19532,7 @@ const MAINTENANCE_ITEMS_GAS=[
   {
     key:"transfluid",
     name:"Transmission Fluid",
+    category:"Fluids",
     mileInterval:30000,
     monthInterval:24,
     notes:(car)=>{
@@ -19572,60 +19542,17 @@ const MAINTENANCE_ITEMS_GAS=[
     },
   },
   {
-    key:"sparkplugs",
-    name:"Spark Plugs",
-    mileInterval:60000,
-    monthInterval:60,
-    notes:(car)=>{
-      const turbo=car.engine&&/turbo/i.test(car.engine);
-      return turbo?"Turbocharged engines run hotter and harder on plugs — some manufacturers want these done closer to 30-40k rather than the standard 60-100k. Check your owner's manual, don't assume the longer interval applies.":"Modern iridium/platinum plugs are usually good for 60-100k miles — a genuine 'lifetime' part until the interval's up, not something to guess at by feel. Confirm your exact interval in the owner's manual since it varies a lot by engine.";
-    },
-  },
-  {
-    key:"timingbelt",
-    name:"Timing Belt / Chain",
-    mileInterval:90000,
-    monthInterval:84,
-    notes:()=>"This is the one item on this list where guessing wrong can total your engine — on most modern 4-cylinders (interference engines), a snapped timing belt bends valves and can mean a full rebuild. Belt-driven engines are commonly due somewhere between 60k-105k mi depending on manufacturer; timing chains are technically 'lifetime' but can stretch and are worth inspecting past 100k-150k mi. Look up whether your specific engine uses a belt or chain and its real interval — don't rely on the default here.",
-  },
-  {
-    key:"battery",
-    name:"Battery",
-    mileInterval:null,
-    monthInterval:36,
-    notes:()=>"This one's about age, not mileage — most batteries last 3-5 years regardless of how much you drive. Cold weather kills batteries faster than heat does, so if you're somewhere with real winters, lean toward the shorter end. Have it load-tested at any auto parts store for free before assuming it's dead.",
-  },
-  {
     key:"brakefluid",
     name:"Brake Fluid",
+    category:"Fluids",
     mileInterval:30000,
     monthInterval:24,
-    notes:()=>"Brake fluid absorbs moisture from the air over time, which lowers its boiling point — this is a real safety item, not just a nice-to-have. Most manufacturers call for a change every 2-3 years regardless of mileage. A cloudy or dark color is a sign it's overdue.",
-  },
-  {
-    key:"serpentinebelt",
-    name:"Serpentine / Drive Belt",
-    mileInterval:60000,
-    monthInterval:60,
-    notes:()=>"Drives your alternator, power steering, and A/C compressor off the crankshaft. Look for visible cracking or fraying on the ribbed side — a snapped belt on the road takes out your power steering, charging, and cooling all at once.",
-  },
-  {
-    key:"wipers",
-    name:"Wiper Blades",
-    mileInterval:null,
-    monthInterval:12,
-    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
-  },
-  {
-    key:"alignment",
-    name:"Wheel Alignment",
-    mileInterval:12000,
-    monthInterval:12,
-    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. Uneven tire wear is the biggest tell something's off.",
+    notes:()=>"Same DOT 3/4 fluid your clutch (if you've got a manual) shares a reservoir spec with — both absorb moisture from the air over time, which lowers the boiling point. This is a real safety item, not just a nice-to-have. Most manufacturers call for a change every 2-3 years regardless of mileage. A cloudy or dark color is a sign it's overdue.",
   },
   {
     key:"difffluid",
     name:"Differential Fluid",
+    category:"Fluids",
     mileInterval:30000,
     monthInterval:24,
     notes:(car)=>{
@@ -19638,79 +19565,125 @@ const MAINTENANCE_ITEMS_GAS=[
   {
     key:"powersteering",
     name:"Power Steering Fluid",
+    category:"Fluids",
     mileInterval:50000,
     monthInterval:36,
     notes:()=>"Only applies if your car has traditional hydraulic power steering — many newer cars use electric power steering instead, which has no fluid to change at all. Check your owner's manual if you're not sure which your car has.",
   },
-];
-
-const MAINTENANCE_ITEMS_EV=[
   {
-    key:"tires",
-    name:"Tire Rotation",
-    mileInterval:10000,
-    monthInterval:6,
-    notes:(car)=>rotationNote(car.drivetrain)+" EVs are heavier and put down instant torque, which can chew through tires faster than a comparable gas car — don't skip this one.",
+    key:"airfilter",
+    name:"Engine Air Filter",
+    category:"Filters",
+    mileInterval:15000,
+    monthInterval:12,
+    notes:()=>"Check sooner if you drive in dusty or dirty conditions.",
   },
   {
     key:"cabinfilter",
     name:"Cabin Air Filter",
+    category:"Filters",
     mileInterval:15000,
     monthInterval:12,
     notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
   },
   {
+    key:"timingbelt",
+    name:"Timing Belt / Chain",
+    category:"Belts",
+    mileInterval:90000,
+    monthInterval:84,
+    notes:()=>"This is the one item on this list where guessing wrong can total your engine — on most modern 4-cylinders (interference engines), a snapped timing belt bends valves and can mean a full rebuild. Belt-driven engines are commonly due somewhere between 60k-105k mi depending on manufacturer; timing chains are technically 'lifetime' but can stretch and are worth inspecting past 100k-150k mi. Look up whether your specific engine uses a belt or chain and its real interval — don't rely on the default here.",
+  },
+  {
+    key:"serpentinebelt",
+    name:"Serpentine / Drive Belt",
+    category:"Belts",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:()=>"Drives your alternator, power steering, and A/C compressor off the crankshaft. Look for visible cracking or fraying on the ribbed side — a snapped belt on the road takes out your power steering, charging, and cooling all at once.",
+  },
+  {
     key:"brakepads",
     name:"Brake Pads",
-    mileInterval:40000,
-    monthInterval:24,
-    notes:()=>"EVs lean heavily on regenerative braking to slow down, so the physical brake pads usually see a lot less wear than on a gas car — many owners go well past 50k mi before needing pads. Worth a periodic look anyway, since pads and calipers can occasionally seize up from being under-used rather than overused.",
+    category:"Brakes",
+    mileInterval:25000,
+    monthInterval:12,
+    notes:()=>"Wear varies a lot with driving style — this is a rough interval, not a hard rule. Check pad thickness through the wheel spokes if you can, or have it checked at a tire rotation.",
   },
   {
     key:"brakerotors",
     name:"Brake Rotors",
-    mileInterval:60000,
+    category:"Brakes",
+    mileInterval:50000,
     monthInterval:24,
-    notes:()=>"Usually inspected whenever the pads are checked. Regenerative braking means rotors can develop light surface rust from going long stretches without real pad contact — not usually a problem, just something to be aware of.",
+    notes:()=>"Usually inspected (and resurfaced or replaced if scored/warped) whenever the pads are done. Don't need to be swapped on their own schedule most of the time.",
   },
+  {
+    key:"tires",
+    name:"Tire Rotation",
+    category:"Tires & Alignment",
+    mileInterval:10000,
+    monthInterval:6,
+    notes:(car)=>rotationNote(car.drivetrain)+" A lot of owners just pair this with every other oil change for convenience — that works fine, just don't stretch much past 10k either way.",
+  },
+  {
+    key:"alignment",
+    name:"Wheel Alignment",
+    category:"Tires & Alignment",
+    mileInterval:12000,
+    monthInterval:12,
+    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. Uneven tire wear is the biggest tell something's off.",
+  },
+  {
+    key:"sparkplugs",
+    name:"Spark Plugs",
+    category:"Electrical",
+    mileInterval:60000,
+    monthInterval:60,
+    notes:(car)=>{
+      const turbo=car.engine&&/turbo/i.test(car.engine);
+      return turbo?"Turbocharged engines run hotter and harder on plugs — some manufacturers want these done closer to 30-40k rather than the standard 60-100k. Check your owner's manual, don't assume the longer interval applies.":"Modern iridium/platinum plugs are usually good for 60-100k miles — a genuine 'lifetime' part until the interval's up, not something to guess at by feel. Confirm your exact interval in the owner's manual since it varies a lot by engine.";
+    },
+  },
+  {
+    key:"battery",
+    name:"Battery",
+    category:"Electrical",
+    mileInterval:null,
+    monthInterval:36,
+    notes:()=>"This one's about age, not mileage — most batteries last 3-5 years regardless of how much you drive. Cold weather kills batteries faster than heat does, so if you're somewhere with real winters, lean toward the shorter end. Have it load-tested at any auto parts store for free before assuming it's dead.",
+  },
+  {
+    key:"wipers",
+    name:"Wiper Blades",
+    category:"Other",
+    mileInterval:null,
+    monthInterval:12,
+    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
+  },
+];
+
+const MAINTENANCE_ITEMS_EV=[
   {
     key:"coolant",
     name:"Coolant",
+    category:"Fluids",
     mileInterval:60000,
     monthInterval:60,
     notes:()=>"EVs use coolant to manage battery and motor temperature, not to cool a combustion engine — a different job than on a gas car, but still a real service item. Intervals vary a lot by manufacturer, so check your owner's manual rather than assuming a gas-car interval applies.",
   },
   {
-    key:"battery12v",
-    name:"12V Auxiliary Battery",
-    mileInterval:null,
-    monthInterval:36,
-    notes:()=>"Separate from your main traction battery — nearly every EV still has a small 12V battery running accessories, infotainment, and low-voltage systems, same as a gas car. It's easy to forget it's there, but if it dies, the car often won't power on even with a full charge in the main pack. Most last 3-5 years.",
-  },
-  {
     key:"brakefluid",
     name:"Brake Fluid",
+    category:"Fluids",
     mileInterval:30000,
     monthInterval:24,
     notes:()=>"Brake fluid absorbs moisture from the air over time, which lowers its boiling point — this is a real safety item, not just a nice-to-have. Most manufacturers call for a change every 2-3 years regardless of mileage. A cloudy or dark color is a sign it's overdue.",
   },
   {
-    key:"wipers",
-    name:"Wiper Blades",
-    mileInterval:null,
-    monthInterval:12,
-    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
-  },
-  {
-    key:"alignment",
-    name:"Wheel Alignment",
-    mileInterval:12000,
-    monthInterval:12,
-    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. EVs' extra weight can make misalignment wear tires faster than on a gas car, so it's worth staying on top of.",
-  },
-  {
     key:"difffluid",
     name:"Reduction Gear / Differential Fluid",
+    category:"Fluids",
     mileInterval:60000,
     monthInterval:48,
     notes:(car)=>{
@@ -19718,6 +19691,62 @@ const MAINTENANCE_ITEMS_EV=[
       if(dt&&/awd|4wd/i.test(dt))return"Dual-motor AWD EVs typically have a front and rear drive unit, each with its own reduction-gear fluid — check your manufacturer's interval, since this is often much longer than a comparable gas differential.";
       return"Single-motor EVs have one drive unit with its own gear fluid. Often a very long or 'lifetime' interval — check your owner's manual before assuming service is needed.";
     },
+  },
+  {
+    key:"cabinfilter",
+    name:"Cabin Air Filter",
+    category:"Filters",
+    mileInterval:15000,
+    monthInterval:12,
+    notes:()=>"Replace sooner if you notice weak airflow or odors from the vents. Usually behind the glovebox.",
+  },
+  {
+    key:"brakepads",
+    name:"Brake Pads",
+    category:"Brakes",
+    mileInterval:40000,
+    monthInterval:24,
+    notes:()=>"EVs lean heavily on regenerative braking to slow down, so the physical brake pads usually see a lot less wear than on a gas car — many owners go well past 50k mi before needing pads. Worth a periodic look anyway, since pads and calipers can occasionally seize up from being under-used rather than overused.",
+  },
+  {
+    key:"brakerotors",
+    name:"Brake Rotors",
+    category:"Brakes",
+    mileInterval:60000,
+    monthInterval:24,
+    notes:()=>"Usually inspected whenever the pads are checked. Regenerative braking means rotors can develop light surface rust from going long stretches without real pad contact — not usually a problem, just something to be aware of.",
+  },
+  {
+    key:"tires",
+    name:"Tire Rotation",
+    category:"Tires & Alignment",
+    mileInterval:10000,
+    monthInterval:6,
+    notes:(car)=>rotationNote(car.drivetrain)+" EVs are heavier and put down instant torque, which can chew through tires faster than a comparable gas car — don't skip this one.",
+  },
+  {
+    key:"alignment",
+    name:"Wheel Alignment",
+    category:"Tires & Alignment",
+    mileInterval:12000,
+    monthInterval:12,
+    notes:()=>"Also worth checking any time you hit a real pothole hard, get new tires, or notice the car pulling to one side or the steering wheel sitting crooked when driving straight. EVs' extra weight can make misalignment wear tires faster than on a gas car, so it's worth staying on top of.",
+  },
+  {
+    key:"battery12v",
+    name:"12V Auxiliary Battery",
+    category:"Electrical",
+    mileInterval:null,
+    monthInterval:36,
+    notes:()=>"Separate from your main traction battery — nearly every EV still has a small 12V battery running accessories, infotainment, and low-voltage systems, same as a gas car. It's easy to forget it's there, but if it dies, the car often won't power on even with a full charge in the main pack. Most last 3-5 years.",
+  },
+  {
+    key:"wipers",
+    name:"Wiper Blades",
+    category:"Other",
+    mileInterval:null,
+    monthInterval:12,
+    notes:()=>"Cheap, easy, and easy to forget. Streaking, skipping, or squeaking are all signs it's time — most rubber degrades from UV exposure alone even on a car that isn't driven much.",
   },
 ];
 
@@ -20254,6 +20283,7 @@ function AppShell(){
   const finishWizard=(answers)=>{
     const maintenance=items.map(item=>({
       name:item.name,
+      category:item.category,
       mileInterval:item.mileInterval,
       monthInterval:item.monthInterval,
       notes:item.notes(activeCar),
@@ -20464,45 +20494,54 @@ function AppShell(){
                         <span style={{color:"#FF3B3B"}}>● Overdue</span>
                       </div>
                     </div>
-                    {activeCar.maintenance.map((item,i)=>{
-                      const sc=statusColor(item,activeCar.mileage||0);
-                      const milesDue=(item.lastMiles||0)+item.mileInterval;
-                      const history=item.history||[];
-                      const isExpanded=expandedHistory===item.name;
+                    {MAINTENANCE_CATEGORIES.map(cat=>{
+                      const groupItems=activeCar.maintenance.filter(item=>(item.category||"Other")===cat);
+                      if(groupItems.length===0)return null;
                       return(
-                        <div key={i} style={{background:"#1C1C1C",border:`1px solid ${sc==="unset"?"#2A2A2A":STATUS_COLORS[sc]+"44"}`,borderRadius:"6px",marginBottom:"10px",overflow:"hidden"}}>
-                          <div style={{padding:"16px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"12px"}}>
-                            <div style={{flex:1}}>
-                              <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"4px"}}>
-                                <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
-                                <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
-                              </div>
-                              <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>
-                                {item.mileInterval?
-                                  `Every ${item.mileInterval.toLocaleString()} mi${item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}`
-                                  :
-                                  `Every ${item.monthInterval} months${item.lastDate?` · Last: ${new Date(item.lastDate).toLocaleDateString()} · Due: ${new Date(new Date(item.lastDate).setMonth(new Date(item.lastDate).getMonth()+item.monthInterval)).toLocaleDateString()}`:" · Not logged yet"}`
-                                }
-                              </div>
-                              {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
-                              {history.length>0&&(
-                                <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"#FF6B2B",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
-                                  {isExpanded?"▲ HIDE HISTORY":`▼ VIEW HISTORY (${history.length})`}
+                        <div key={cat} style={{marginBottom:"20px"}}>
+                          <div style={{color:"#FF6B2B",fontSize:"11px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"10px",paddingLeft:"2px"}}>{cat.toUpperCase()}</div>
+                          {groupItems.map((item,i)=>{
+                            const sc=statusColor(item,activeCar.mileage||0);
+                            const milesDue=(item.lastMiles||0)+item.mileInterval;
+                            const history=item.history||[];
+                            const isExpanded=expandedHistory===item.name;
+                            return(
+                              <div key={i} style={{background:"#1C1C1C",border:`1px solid ${sc==="unset"?"#2A2A2A":STATUS_COLORS[sc]+"44"}`,borderRadius:"6px",marginBottom:"10px",overflow:"hidden"}}>
+                                <div style={{padding:"16px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"12px"}}>
+                                  <div style={{flex:1}}>
+                                    <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"4px"}}>
+                                      <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
+                                      <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
+                                    </div>
+                                    <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>
+                                      {item.mileInterval?
+                                        `Every ${item.mileInterval.toLocaleString()} mi${item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}`
+                                        :
+                                        `Every ${item.monthInterval} months${item.lastDate?` · Last: ${new Date(item.lastDate).toLocaleDateString()} · Due: ${new Date(new Date(item.lastDate).setMonth(new Date(item.lastDate).getMonth()+item.monthInterval)).toLocaleDateString()}`:" · Not logged yet"}`
+                                      }
+                                    </div>
+                                    {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
+                                    {history.length>0&&(
+                                      <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"#FF6B2B",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
+                                        {isExpanded?"▲ HIDE HISTORY":`▼ VIEW HISTORY (${history.length})`}
+                                      </div>
+                                    )}
+                                  </div>
+                                  <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"#1CE84A",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
                                 </div>
-                              )}
-                            </div>
-                            <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"#1CE84A",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
-                          </div>
-                          {isExpanded&&history.length>0&&(
-                            <div style={{padding:"0 16px 16px",borderTop:"1px solid #2A2A2A",marginTop:"4px",paddingTop:"12px"}}>
-                              {history.map((h,hi)=>(
-                                <div key={hi} style={{display:"flex",justifyContent:"space-between",padding:"6px 0 6px 16px",fontSize:"12px",color:"#888",borderBottom:hi<history.length-1?"1px solid #222":"none"}}>
-                                  <span>{h.miles.toLocaleString()} mi</span>
-                                  <span style={{color:"#555"}}>{new Date(h.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
+                                {isExpanded&&history.length>0&&(
+                                  <div style={{padding:"0 16px 16px",borderTop:"1px solid #2A2A2A",marginTop:"4px",paddingTop:"12px"}}>
+                                    {history.map((h,hi)=>(
+                                      <div key={hi} style={{display:"flex",justifyContent:"space-between",padding:"6px 0 6px 16px",fontSize:"12px",color:"#888",borderBottom:hi<history.length-1?"1px solid #222":"none"}}>
+                                        <span>{h.miles.toLocaleString()} mi</span>
+                                        <span style={{color:"#555"}}>{new Date(h.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
                         </div>
                       );
                     })}
