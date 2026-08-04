@@ -19724,9 +19724,6 @@ const BRAND_LINKS = {
   "Injen":"https://injen.com",
 };
 
-// Generic mod categories every car can quick-mark, even without a full parts catalog.
-const QUICK_UPGRADE_CATEGORIES=["Air Intake","Exhaust","Downpipe","Intercooler","Turbo/Supercharger","Injectors","Spark Plugs","Ignition Coils","Tune/Tuner","Suspension","Brakes","Wheels","Clutch"];
-
 const OWNER_EMAIL="mattjustice1999@gmail.com";
 const roundToTen=(n)=>Math.round(n/10)*10;
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
@@ -20555,7 +20552,6 @@ function AppShell(){
   const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setView("car-detail");};
   const syncCar=async(updated)=>{setGarage(prev=>prev.map(c=>c.id===updated.id?updated:c));setActiveCar(updated);await updateGarageItem(updated);};
   const toggleBuildItem=(item)=>{const exists=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);syncCar({...activeCar,build:exists?activeCar.build.filter(b=>!(b.brand===item.brand&&b.part===item.part)):[...(activeCar.build||[]),item]});};
-  const toggleUpgradeCategory=(cat)=>{const current=activeCar.upgradedCategories||[];const exists=current.includes(cat);syncCar({...activeCar,upgradedCategories:exists?current.filter(c=>c!==cat):[...current,cat]});};
 
   const startWizard=()=>{setWizardStep(0);setWizardMileage("");setWizardAnswers({});};
 
@@ -20929,20 +20925,8 @@ function AppShell(){
 
             {activeTab==="build"&&(
               <div>
-                <span style={LS}>WHAT'S UPGRADED ON THIS CAR?</span>
-                <p style={{color:"#555",fontSize:"12px",marginBottom:"16px"}}>Tap what applies — works even for cars without a full parts catalog yet.</p>
-                <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginBottom:"32px"}}>
-                  {QUICK_UPGRADE_CATEGORIES.map(cat=>{
-                    const on=(activeCar.upgradedCategories||[]).includes(cat);
-                    return(
-                      <div key={cat} onClick={()=>toggleUpgradeCategory(cat)} style={{padding:"9px 16px",borderRadius:"4px",border:on?"1px solid #FF6B2B":"1px solid #2A2A2A",background:on?"rgba(255,107,43,0.12)":"#1C1C1C",color:on?"#FF6B2B":"#888",fontSize:"13px",cursor:"pointer",userSelect:"none",display:"flex",alignItems:"center",gap:"6px",transition:"all 0.15s"}}>
-                        {on&&<span style={{fontSize:"10px"}}>✓</span>}{cat}
-                      </div>
-                    );
-                  })}
-                </div>
                 {!activeCar.build||activeCar.build.length===0?(
-                  <div style={{textAlign:"center",padding:"48px 0",borderTop:"1px solid #1C1C1C"}}>
+                  <div style={{textAlign:"center",padding:"48px 0"}}>
                     <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO SPECIFIC PARTS LOGGED YET</div>
                     <div style={{color:"#444",fontSize:"14px",marginBottom:"20px"}}>Go to Mods and start adding parts</div>
                     <button onClick={()=>setActiveTab("mods")} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>BROWSE MODS</button>
