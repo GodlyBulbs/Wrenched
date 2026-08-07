@@ -792,6 +792,172 @@ const VEHICLES = {
       ],
     },
   },
+  "Aston Martin": {
+    "DB11": {
+      years:["2017","2018","2019","2020","2021","2022","2023"],
+      trims:{
+        "V8": { engine:"4.0L Twin-Turbo V8 (503hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine, real ground-up redesign that replaced the venerable DB9, and the first Aston Martin ever powered by a Mercedes-AMG-sourced engine — real evidence of a deepening technical partnership between the two marques that began after Daimler took a minority stake in Aston Martin in 2013." },
+        "V12": { engine:"5.2L Twin-Turbo V12 (600-630hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)" },
+        "AMR": { engine:"5.2L Twin-Turbo V12 (630hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, real evidence of Aston Martin Racing's motorsport pedigree filtering down into a road-going special edition. Discontinued after 2023, replaced by the DB12." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Hyper Red (Red)",hex:"#C8102E"},
+        {name:"Skyfall Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "DB12": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Coupe": { engine:"4.0L Twin-Turbo V8 (671hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine major evolution of the DB11, with real significantly more power from the same basic AMG-sourced V8 architecture — Aston Martin markets this as a genuine 'Super Tourer,' positioning it as more track-capable than a traditional grand tourer while still offering real long-distance comfort." },
+        "Volante": { engine:"4.0L Twin-Turbo V8 (671hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine convertible body style, offered alongside the coupe from launch." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Hyper Red (Red)",hex:"#C8102E"},
+        {name:"Cosmos Orange (Orange)",hex:"#E8601C"},
+      ],
+    },
+    "DB7": {
+      years:["1994","1995","1996","1997","1998","1999","2000","2001","2002","2003"],
+      trims:{
+        "Base": { engine:"3.2L Supercharged Inline-6 (335hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine, real financial savior for Aston Martin — developed under Ford's ownership (acquired 1987) with real substantial engineering input from Jaguar's own contemporary XJS, the DB7 became genuinely the best-selling Aston Martin model in the brand's history up to that point, keeping the company solvent through the 1990s." },
+        "Vantage": { engine:"5.9L V12 (420hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Added 1999 — genuine performance flagship, Aston Martin's first V12 engine and the real foundation for the V12 powertrains that would define the brand's flagship models for the next two decades. Discontinued after 2003, replaced by the all-new DB9." },
+      },
+      colors:[
+        {name:"Silver Fox (Silver)",hex:"#C0C0C0"},
+        {name:"British Racing Green (Green)",hex:"#0D4A2E"},
+        {name:"Meteorite Silver (Silver)",hex:"#8A8D8F"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+      ],
+    },
+    "DB9": {
+      years:["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016"],
+      trims:{
+        "Base": { engine:"6.0L V12 (450-470hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine, real all-new bonded-aluminum platform (Aston Martin's own 'VH' architecture) replacing the DB7 — genuinely one of the most enduringly beautiful Aston Martin designs ever built, with over 16,500 produced across its 12-year run, real evidence of just how well the shape held up over time." },
+        "GT": { engine:"6.0L V12 (540hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine send-off special edition for the DB9's final year, with real sportier styling and the most power the model ever offered. Discontinued after 2016, replaced by the all-new DB11." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Volcano Red (Red)",hex:"#C8102E"},
+        {name:"Casino Royale (Green)",hex:"#0D4A2E"},
+      ],
+    },
+    "DBS": {
+      years:["2008","2009","2010","2011","2012"],
+      trims:{
+        "Base": { engine:"5.9L V12 (510-517hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine real DB9-based flagship, replacing the first-generation Vanquish as Aston Martin's top model — famously featured in the James Bond film 'Casino Royale' (2006), a genuine real-world marketing boost most automakers could only dream of. Discontinued after 2012, replaced by the second-generation Vanquish." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Volcano Red (Red)",hex:"#C8102E"},
+        {name:"Casino Royale (Green)",hex:"#0D4A2E"},
+      ],
+    },
+    "DBS Superleggera": {
+      years:["2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Base": { engine:"5.2L Twin-Turbo V12 (715hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine, real revival of the historic 'Superleggera' name (Italian for 'super light,' a real nod to the lightweight coachbuilding techniques of Carrozzeria Touring Superleggera, who helped shape Aston Martin's cars in the 1960s) — built on the DB11 V12 platform but with real substantial engineering changes to differentiate it as the brand's genuine flagship grand tourer." },
+        "770 Ultimate": { engine:"5.2L Twin-Turbo V12 (759hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine send-off special edition, limited to 499 units worldwide, marking the end of this model's production run in 2024." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Hyper Red (Red)",hex:"#C8102E"},
+        {name:"Skyfall Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "DBX": {
+      years:["2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (542hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Aston Martin's genuine first-ever SUV, and a real existential bet for the brand — real evidence that even the most traditionally sports-car-focused manufacturers eventually needed an SUV to survive financially, given how much of the luxury market has shifted toward crossovers." },
+        "707": { engine:"4.0L Twin-Turbo V8 (697hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Added 2023 — genuine performance flagship, at launch genuinely the most powerful SUV in the world, a title it briefly held before rivals responded." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Hyper Red (Red)",hex:"#C8102E"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+      ],
+    },
+    "Rapide": {
+      years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "Base": { engine:"5.9L V12 (470-476hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Aston Martin's genuine first-ever 4-door sedan, real evidence the brand wanted a genuine practical option for buyers who loved the DB9's styling but needed real rear-seat space for family use." },
+        "S": { engine:"6.0L V12 (552-595hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-refreshed variant, added 2013 with real more power and updated styling. Discontinued after 2020 with no direct successor, ending Aston Martin's 4-door sedan lineup for the time being." },
+      },
+      colors:[
+        {name:"Stratus White (White)",hex:"#F5F5F5"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Volcano Red (Red)",hex:"#C8102E"},
+        {name:"Casino Royale (Green)",hex:"#0D4A2E"},
+      ],
+    },
+    "Vanquish": {
+      generations:{
+        "1st Gen (2001-2007)":{
+          years:["2001","2002","2003","2004","2005","2006","2007"],
+          trims:{
+            "Base": { engine:"5.9L V12 (460hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"A genuine real flagship built with a distinctive carbon-fiber composite body over an aluminum structure, a genuine technical showcase for Aston Martin under Ford ownership — famously driven by James Bond in 'Die Another Day' (2002), real global visibility for a brand that had long punched below its weight commercially." },
+            "S": { engine:"5.9L V12 (520-565hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship of this generation. Discontinued after 2007, replaced by the DBS." },
+          },
+          colors:[
+            {name:"Silver Fox (Silver)",hex:"#C0C0C0"},
+            {name:"British Racing Green (Green)",hex:"#0D4A2E"},
+            {name:"Meteorite Silver (Silver)",hex:"#8A8D8F"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+          ],
+        },
+        "2nd Gen (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "Base": { engine:"5.9L V12 (565hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine revival of the Vanquish name, replacing the DBS as Aston Martin's flagship — real styling inspired by the exotic One-77 hypercar, a genuine technical and design showcase brought down to a (relatively) more attainable price point." },
+            "S": { engine:"5.9L V12 (595hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship. Discontinued after 2018, replaced by the new DBS Superleggera, with the Vanquish name itself later revived on a completely different, mid-engine platform." },
+          },
+          colors:[
+            {name:"Stratus White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Volcano Red (Red)",hex:"#C8102E"},
+            {name:"Ultramarine Black (Blue)",hex:"#1B2A4A"},
+          ],
+        },
+      },
+    },
+    "Vantage": {
+      generations:{
+        "1st Gen (2006-2018)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "V8": { engine:"4.3L-4.7L V8 (380-436hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine, real entry point into the Aston Martin lineup, and one of the brand's longest-running models — sharing its basic 'VH' architecture with the DB9 but in a genuinely smaller, more focused 2-seat sports-car package aimed more directly at the Porsche 911." },
+            "V12": { engine:"5.9L V12 (510-565hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Added 2009 — genuine performance flagship, real evidence of Aston Martin stuffing its biggest engine into the smallest available body for maximum effect. Discontinued after 2018, replaced by an all-new second-generation Vantage." },
+          },
+          colors:[
+            {name:"Stratus White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Volcano Red (Red)",hex:"#C8102E"},
+            {name:"Cumulus Grey (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+        "2nd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"4.0L Twin-Turbo V8 (503-656hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign with real dramatic, aggressive new styling — the AMG-sourced twin-turbo V8 continued the deepening technical partnership between Aston Martin and Mercedes-Benz that began with the prior-generation DB11." },
+            "S": { engine:"4.0L Twin-Turbo V8 (656hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship of this generation, the most powerful Vantage ever built." },
+          },
+          colors:[
+            {name:"Stratus White (White)",hex:"#F5F5F5"},
+            {name:"Jet Black (Black)",hex:"#1A1A1A"},
+            {name:"Hyper Red (Red)",hex:"#C8102E"},
+            {name:"Lime Essence (Green)",hex:"#7AB800"},
+          ],
+        },
+      },
+    },
+  },
   "Audi": {
     "100": {
       years:["1990","1991","1992","1993","1994"],
@@ -1471,6 +1637,152 @@ const VEHICLES = {
         {name:"Tornado Black (Black)",hex:"#1A1A1A"},
         {name:"Diamond Silver Metallic (Silver)",hex:"#C0C0C0"},
         {name:"Malachite Green Pearl (Green)",hex:"#2E5A3A"},
+      ],
+    },
+  },
+  "Bentley": {
+    "Arnage": {
+      years:["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"],
+      trims:{
+        "Base": { engine:"4.4L Twin-Turbo V8 (350hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"A genuine, real handmade British ultra-luxury flagship — sharing its underlying platform with the contemporary Rolls-Royce Silver Seraph from the era when both marques were still under common ownership, before Volkswagen (Bentley) and BMW (Rolls-Royce) split the two brands apart in 1998." },
+        "Red Label": { engine:"6.75L Twin-Turbo V8 (400hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)" },
+        "T": { engine:"6.75L Twin-Turbo V8 (450-500hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship, real massive iron-block V8 that traced its roots back to the 1950s Rolls-Royce/Bentley engine family. Discontinued after 2009, the last Bentley sedan to use the legacy pushrod V8 before the brand fully transitioned to Volkswagen Group-sourced engines." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+        {name:"Royal Ruby (Red)",hex:"#6B1A2A"},
+        {name:"Meteor (Gray)",hex:"#4A4E52"},
+      ],
+    },
+    "Azure": {
+      years:["1995","1996","1997","1998","1999","2000","2001","2002","2003","2006","2007","2008","2009"],
+      trims:{
+        "Base": { engine:"6.75L Twin-Turbo V8 (385hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"Bentley's genuine flagship convertible — a real hand-built, ultra-low-volume grand tourer with a fully retractable soft top, priced well into six figures even in the 1990s. Production paused after 2003 before a real all-new generation returned for 2006-2009." },
+        "T": { engine:"6.75L Twin-Turbo V8 (450hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship of the revived 2006-2009 generation, sharing its basic Arnage-derived platform and V8." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+        {name:"Royal Ruby (Red)",hex:"#6B1A2A"},
+        {name:"Silver Tempest (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Bentayga": {
+      years:["2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      trims:{
+        "V8": { engine:"4.0L Twin-Turbo V8 (500-542hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Bentley's genuine first-ever SUV, and a real controversial gamble for a brand built entirely on hand-built sedans and grand tourers — sharing its Volkswagen Group MLB Evo platform with the Lamborghini Urus, Audi Q7/Q8, and Porsche Cayenne, though with genuinely bespoke Bentley styling and a fully hand-trimmed interior on top." },
+        "W12": { engine:"6.0L Twin-Turbo W12 (600hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine flagship engine option, sharing its distinctive W12 configuration with the Continental GT and Flying Spur." },
+        "Hybrid": { engine:"3.0L Turbocharged Plug-In Hybrid V6 (442hp combined)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Added 2021 — genuine plug-in hybrid variant, real evidence of Bentley's broader electrification push even in its heaviest, most traditionally gas-thirsty model." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+        {name:"Dragon Red (Red)",hex:"#9B1B30"},
+        {name:"Verdant (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "Continental GT": {
+      generations:{
+        "1st Gen (2004-2011)":{
+          years:["2004","2005","2006","2007","2008","2009","2010","2011"],
+          trims:{
+            "Base": { engine:"6.0L Twin-Turbo W12 (552hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"A genuine, real turning point for Bentley under new Volkswagen Group ownership — the Continental GT was priced at roughly half what a traditional hand-built Bentley cost, real evidence of VW's platform-sharing strategy bringing genuine economies of scale to a brand previously built almost entirely by hand. Genuinely became Bentley's best-selling model by a wide margin, transforming the company's fortunes." },
+            "Speed": { engine:"6.0L Twin-Turbo W12 (600-610hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+            "Supersports": { engine:"6.0L Twin-Turbo W12 (621hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship of this generation, with a real flex-fuel capability (E85 ethanol) alongside its supercar-rivaling output." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Moroccan Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2012-2018)":{
+          years:["2012","2013","2014","2015","2016","2017","2018"],
+          trims:{
+            "V8": { engine:"4.0L Twin-Turbo V8 (500-521hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine, real major expansion of the Continental GT's engine lineup — the smaller twin-turbo V8, shared with the Audi S8 and other Volkswagen Group performance models, brought real improved fuel economy without a huge sacrifice in outright performance, a genuine first for the model since its 2003 launch." },
+            "W12": { engine:"6.0L Twin-Turbo W12 (567-582hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Supersports": { engine:"6.0L Twin-Turbo W12 (700hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Sequin Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2019-2026)":{
+          years:["2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "V8": { engine:"4.0L Twin-Turbo V8 (542hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign sharing its underlying MSB platform with the Porsche Panamera — real evidence of continued deep engineering cooperation across Volkswagen Group's luxury brands." },
+            "W12": { engine:"6.0L Twin-Turbo W12 (626hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Speed": { engine:"6.0L Twin-Turbo W12 (650-659hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship of this generation, the most powerful Continental GT ever built at its debut." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Neptune (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
+    "Flying Spur": {
+      generations:{
+        "1st Gen (2005-2013)":{
+          years:["2005","2006","2007","2008","2009","2010","2011","2012","2013"],
+          trims:{
+            "Base": { engine:"6.0L Twin-Turbo W12 (552hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)", note:"Launched as the 'Continental Flying Spur,' the genuine 4-door sedan counterpart to the Continental GT coupe — sharing that car's platform and W12 engine but with a real 12.6-inch longer wheelbase for genuine limousine-like rear legroom, a lower-cost alternative to the flagship Arnage of the same era." },
+            "Speed": { engine:"6.0L Twin-Turbo W12 (600-616hp)", drivetrain:"AWD", transmission:"Automatic (6-Speed)" },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Moroccan Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2014-2019)":{
+          years:["2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "V8": { engine:"4.0L Twin-Turbo V8 (500-521hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Renamed simply 'Flying Spur' for this generation, dropping 'Continental' from the name — real evidence Bentley wanted to establish the sedan as its own distinct nameplate rather than just a stretched coupe." },
+            "W12": { engine:"6.0L Twin-Turbo W12 (616-625hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Sequin Blue (Blue)",hex:"#1E4B8E"},
+          ],
+        },
+        "3rd Gen (2020-2026)":{
+          years:["2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "V8": { engine:"4.0L Twin-Turbo V8 (542hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign sharing its MSB platform with the Continental GT and Porsche Panamera. A genuine plug-in hybrid variant later joined the lineup, real evidence of Bentley's broader electrification push." },
+            "W12": { engine:"6.0L Twin-Turbo W12 (626hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+            "Speed": { engine:"6.0L Twin-Turbo W12 (650-659hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, sharing its output with the equivalent Continental GT Speed." },
+          },
+          colors:[
+            {name:"Glacier White (White)",hex:"#F5F5F5"},
+            {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+            {name:"Dragon Red (Red)",hex:"#9B1B30"},
+            {name:"Neptune (Blue)",hex:"#1E6BA8"},
+          ],
+        },
+      },
+    },
+    "Mulsanne": {
+      years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+      trims:{
+        "Base": { engine:"6.75L Twin-Turbo V8 (505hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Bentley's genuine flagship, hand-built sedan replacing the Arnage — real continuation of the legendary L-Series V8, an engine architecture tracing its roots back to the 1950s, right up until this car's discontinuation. Each Mulsanne took hundreds of hours of hand-assembly at Bentley's historic Crewe, England factory." },
+        "Speed": { engine:"6.75L Twin-Turbo V8 (530hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship. Discontinued after 2020 with no direct successor, ending the legendary L-Series V8's production run after nearly 60 years — a real, genuine end of an era for Bentley's engine lineage." },
+      },
+      colors:[
+        {name:"Glacier White (White)",hex:"#F5F5F5"},
+        {name:"Beluga Black (Black)",hex:"#1A1A1A"},
+        {name:"Dragon Red (Red)",hex:"#9B1B30"},
+        {name:"Portofino (Blue)",hex:"#1E3A6B"},
       ],
     },
   },
@@ -2434,6 +2746,71 @@ const VEHICLES = {
         {name:"Black (Black)",hex:"#1A1A1A"},
         {name:"Le Mans Blue Metallic (Blue)",hex:"#1E3A6B"},
         {name:"Stratus Gray Metallic (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+  },
+  "Bugatti": {
+    "Chiron": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "Base": { engine:"8.0L Quad-Turbo W16 (1479hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine successor to the Veyron, retaining that car's real quad-turbocharged W16 architecture but with genuinely substantial power and refinement gains — at launch, one of the most expensive and exclusive production cars in the world, with fewer than 500 ever built across the whole model's run." },
+        "Super Sport": { engine:"8.0L Quad-Turbo W16 (1578-1600hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine performance flagship, real evidence of Bugatti continuing to push its 20-year-old W16 architecture to genuinely absurd extremes. Discontinued after 2024, ending production of the last purely gas-powered Bugatti before the hybrid V16 Tourbillon took over as the brand's new flagship." },
+      },
+      colors:[
+        {name:"Bugatti Line (Silver/Black)",hex:"#C0C0C0"},
+        {name:"French Racing Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Italian Red (Red)",hex:"#C8102E"},
+      ],
+    },
+    "Divo": {
+      years:["2019"],
+      trims:{
+        "Base": { engine:"8.0L Quad-Turbo W16 (1479hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine track-focused, real more aerodynamically aggressive variant of the Chiron, named after French racing driver Albert Divo — genuinely one of the rarest modern Bugattis, limited to only 40 units worldwide, all of which sold out before the car was even officially unveiled." },
+      },
+      colors:[
+        {name:"Bugatti Line (Silver/Black)",hex:"#C0C0C0"},
+        {name:"French Racing Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Divo Orange (Orange)",hex:"#E8601C"},
+      ],
+    },
+    "EB110": {
+      years:["1991","1992","1993","1994","1995"],
+      trims:{
+        "GT": { engine:"3.5L Quad-Turbo V12 (542hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"A genuine, real revival of the Bugatti name after nearly 40 years of dormancy — unveiled on Ettore Bugatti's 110th birthday (hence the '110' in the name), with genuinely groundbreaking construction: the first-ever production car with a full carbon-fiber monocoque chassis, real evidence this small revived marque was determined to lead on technology from day one." },
+        "SS": { engine:"3.5L Quad-Turbo V12 (611hp)", drivetrain:"AWD", transmission:"Manual (6-Speed)", note:"Genuine performance flagship ('Super Sport'), real lighter and more powerful than the standard GT. Production ended in 1995 when the original revived company went bankrupt — a real, genuine false start before Volkswagen's later acquisition and the Veyron finally cemented Bugatti's modern comeback a decade later." },
+      },
+      colors:[
+        {name:"Bugatti Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Giallo Bugatti (Yellow)",hex:"#F5C800"},
+        {name:"Nero (Black)",hex:"#1A1A1A"},
+        {name:"Rosso (Red)",hex:"#C8102E"},
+      ],
+    },
+    "Tourbillon": {
+      years:["2026"],
+      trims:{
+        "Base": { engine:"8.3L Hybrid V16 (1800hp combined)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine, real dramatic technical departure — Bugatti's first-ever hypercar to abandon the quad-turbo W16 architecture that defined the Veyron and Chiron eras, real evidence the brand sees a naturally-aspirated hybrid V16 (paired with three electric motors) as the future rather than more forced induction. Real evidence of new majority ownership under Rimac/Porsche's Bugatti Rimac joint venture, formed in 2021." },
+      },
+      colors:[
+        {name:"Bugatti Line (Silver/Black)",hex:"#C0C0C0"},
+        {name:"French Racing Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Argent (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Veyron": {
+      years:["2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+      trims:{
+        "16.4": { engine:"8.0L Quad-Turbo W16 (987-1001hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine, real world-changing hypercar — the first production car ever to break 1,000 horsepower and 250 mph, real evidence of Volkswagen's willingness to spend genuinely unlimited engineering resources on a real technical flex piece. Widely reported that Volkswagen lost real money on every single Veyron sold, a genuine point of automotive-industry legend regardless of its exact accuracy." },
+        "Super Sport": { engine:"8.0L Quad-Turbo W16 (1200hp)", drivetrain:"AWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine performance flagship, which briefly held the real Guinness World Record for fastest production car at 267.8 mph. Discontinued after 2015, replaced by the all-new Chiron — ending the Veyron's decade-long reign as the benchmark hypercar of its era." },
+      },
+      colors:[
+        {name:"Bugatti Line (Silver/Black)",hex:"#C0C0C0"},
+        {name:"French Racing Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Jet Black (Black)",hex:"#1A1A1A"},
+        {name:"Pearl White (White)",hex:"#F0F0F0"},
       ],
     },
   },
@@ -9605,6 +9982,209 @@ const VEHICLES = {
       ],
     },
   },
+  "Jaguar": {
+    "E-Pace": {
+      years:["2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "S": { engine:"2.0L Turbocharged 4-cylinder (246hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)", note:"Jaguar's genuine compact luxury crossover entry, sharing its underlying platform with the Range Rover Evoque — real evidence of the deepening engineering ties between Jaguar and Land Rover under their shared parent company." },
+        "R-Dynamic S": { engine:"2.0L Turbocharged 4-cylinder (296hp)", drivetrain:"AWD", transmission:"Automatic (9-Speed)" },
+      },
+      colors:[
+        {name:"Fuji White (White)",hex:"#F5F5F5"},
+        {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+        {name:"Firenze Red (Red)",hex:"#9B1B30"},
+        {name:"Caesium Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "F-Pace": {
+      years:["2017","2018","2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "P250": { engine:"2.0L Turbocharged 4-cylinder (247-296hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Jaguar's genuine first-ever SUV, and a real turning point for the brand's US sales fortunes — sharing its aluminum-intensive iQ-Al platform with the XE and second-generation XF sedans, with genuinely sporty handling for the segment thanks to that shared sedan-derived architecture." },
+        "P400": { engine:"3.0L Supercharged V6 (340-380hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)" },
+        "SVR": { engine:"5.0L Supercharged V8 (550hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, developed with real input from Jaguar Land Rover's Special Vehicle Operations division." },
+      },
+      colors:[
+        {name:"Fuji White (White)",hex:"#F5F5F5"},
+        {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+        {name:"Firenze Red (Red)",hex:"#9B1B30"},
+        {name:"Eiger Grey (Gray)",hex:"#6B6E6F"},
+      ],
+    },
+    "F-Type": {
+      years:["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+      trims:{
+        "P300": { engine:"2.0L Turbocharged 4-cylinder (296hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine, real spiritual successor to the legendary E-Type, and Jaguar's first true 2-seat sports car in decades — offered as both a coupe and convertible from launch, with real dramatic styling that drew immediate comparisons to the brand's storied past." },
+        "P450": { engine:"5.0L Supercharged V8 (444-450hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)" },
+        "R": { engine:"5.0L Supercharged V8 (550-575hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship. Discontinued after 2023 with no direct successor, as Jaguar paused its entire lineup ahead of an all-electric relaunch." },
+      },
+      colors:[
+        {name:"Fuji White (White)",hex:"#F5F5F5"},
+        {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+        {name:"Firenze Red (Red)",hex:"#9B1B30"},
+        {name:"British Racing Green (Green)",hex:"#0D4A2E"},
+      ],
+    },
+    "I-Pace": {
+      years:["2019","2020","2021","2022","2023","2024"],
+      trims:{
+        "S": { engine:"Dual Electric Motors (394hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Jaguar's genuine first-ever mass-production EV, and a real early mover in the luxury electric SUV space, beating many established rivals to market — real striking, cab-forward styling with a shorter hood than any gas Jaguar, since there's no traditional engine to package up front." },
+        "HSE": { engine:"Dual Electric Motors (394hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"Fuji White (White)",hex:"#F5F5F5"},
+        {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+        {name:"Photon Red (Red)",hex:"#9B1B30"},
+        {name:"Caesium Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "S-Type": {
+      years:["1999","2000","2001","2002","2003","2004","2005","2006","2007","2008"],
+      trims:{
+        "3.0": { engine:"3.0L V6 (240hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"A genuine real revival of a storied 1960s nameplate, and a real turning point for Jaguar under Ford ownership — sharing its underlying DEW98 platform with the Lincoln LS, a genuine cross-brand engineering arrangement most buyers never knew about." },
+        "4.2": { engine:"4.2L V8 (300hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)" },
+        "R": { engine:"4.2L Supercharged V8 (390hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship. Discontinued after 2008, replaced by the all-new XF — ending the S-Type nameplate's second act after nearly a decade." },
+      },
+      colors:[
+        {name:"Zircon Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+        {name:"Carnival Red (Red)",hex:"#9B1B30"},
+        {name:"Platinum Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "X-Type": {
+      years:["2002","2003","2004","2005","2006","2007","2008"],
+      trims:{
+        "2.5": { engine:"2.5L V6 (194hp)", drivetrain:"AWD", transmission:"Automatic (5-Speed)", note:"A genuine, real controversial entry-level Jaguar — built on a stretched, reinforced version of the Ford Mondeo platform, a genuine cost-sharing arrangement under Ford's ownership that drew criticism from purists who felt it diluted the brand's prestige. Standard AWD was a genuine rarity for an entry-luxury sedan of this era." },
+        "3.0": { engine:"3.0L V6 (227hp)", drivetrain:"AWD", transmission:"Automatic (5-Speed)", note:"Discontinued after 2008 alongside the S-Type, both replaced by the new XF — the X-Type's sales never met Ford's ambitious expectations, a real cautionary tale in badge-engineered luxury cars." },
+      },
+      colors:[
+        {name:"Zircon Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+        {name:"Carnival Red (Red)",hex:"#9B1B30"},
+        {name:"Platinum Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "XE": {
+      years:["2016","2017","2018","2019","2020","2021","2022","2023"],
+      trims:{
+        "P250": { engine:"2.0L Turbocharged 4-cylinder (247-296hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine, real from-scratch entry-luxury sedan, sharing its iQ-Al aluminum-intensive platform with the F-Pace and second-gen XF — a genuine engineering high point for Jaguar's post-Ford, Tata-owned era, aimed squarely at the BMW 3 Series and Mercedes C-Class." },
+        "S": { engine:"3.0L Supercharged V6 (340hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Discontinued in the US after 2020 (though it continued selling in other markets through 2023), as Jaguar's US sedan lineup contracted alongside declining segment-wide demand." },
+      },
+      colors:[
+        {name:"Fuji White (White)",hex:"#F5F5F5"},
+        {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+        {name:"Firenze Red (Red)",hex:"#9B1B30"},
+        {name:"Caesium Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "XF": {
+      generations:{
+        "X250 (2009-2015)":{
+          years:["2009","2010","2011","2012","2013","2014","2015"],
+          trims:{
+            "3.0": { engine:"3.0L V6 (240-380hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (6-Speed/8-Speed)", note:"A genuinely dramatic redesign replacing the aging S-Type, with a real futuristic interior party trick — a rotary gear selector that rose from the center console on startup, a genuinely memorable touch that helped redefine Jaguar's design language for the modern era." },
+            "5.0": { engine:"5.0L V8 (385hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)" },
+            "XFR": { engine:"5.0L Supercharged V8 (470-550hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Polaris White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Italian Racing Red (Red)",hex:"#9B1B30"},
+            {name:"Indigo Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "X260 (2016-2024)":{
+          years:["2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+          trims:{
+            "25t": { engine:"2.0L Turbocharged 4-cylinder (240-296hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign, real substantial weight savings from an aluminum-intensive body, sharing its iQ-Al platform with the XE and F-Pace." },
+            "S": { engine:"3.0L Supercharged V6 (340-380hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Discontinued after 2024 as Jaguar paused its entire gas-powered lineup ahead of an all-electric relaunch planned for later in the decade." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Firenze Red (Red)",hex:"#9B1B30"},
+            {name:"Eiger Grey (Gray)",hex:"#6B6E6F"},
+          ],
+        },
+      },
+    },
+    "XJ": {
+      generations:{
+        "X300 / X308 (1995-2003)":{
+          years:["1995","1996","1997","1998","1999","2000","2001","2002","2003"],
+          trims:{
+            "Vanden Plas": { engine:"4.0L Inline-6 (245hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"A genuine real redesign that finally moved Jaguar's flagship away from decades-old underpinnings, real evidence of the brand modernizing under Ford's stewardship (acquired 1989) while still keeping the classic, unmistakably Jaguar silhouette. The X308 facelift (1998+) brought a genuine switch to Jaguar's new AJ-V8 engine family, replacing the venerable inline-6." },
+            "XJR": { engines:["4.0L Supercharged Inline-6 (370hp)","4.0L Supercharged V8 (370hp)"], drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"Genuine performance flagship of this generation, with real supercharged power years before it became commonplace across the luxury segment." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"British Racing Green (Green)",hex:"#0D4A2E"},
+            {name:"Carnival Red (Red)",hex:"#9B1B30"},
+            {name:"Anthracite (Gray)",hex:"#4A4E52"},
+          ],
+        },
+        "X350 / X358 (2004-2009)":{
+          years:["2004","2005","2006","2007","2008","2009"],
+          trims:{
+            "Vanden Plas": { engine:"4.2L V8 (300hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"A genuinely bold engineering shift — a real all-aluminum monocoque body, a genuine first for a full-size luxury sedan, shaving real weight versus the outgoing steel-bodied X300/X308." },
+            "Super V8": { engine:"4.2L Supercharged V8 (400hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)" },
+            "XJR": { engine:"4.2L Supercharged V8 (400hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship of this generation." },
+          },
+          colors:[
+            {name:"Diamond White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Carnival Red (Red)",hex:"#9B1B30"},
+            {name:"Zircon Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "X351 (2010-2019)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+          trims:{
+            "3.0": { engine:"3.0L Supercharged V6 (340hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)", note:"A genuinely dramatic redesign, real dramatically more contemporary styling that broke sharply from the traditionally conservative XJ shape of prior generations — a real polarizing move at launch that most reviewers eventually came around on." },
+            "Supercharged": { engine:"5.0L Supercharged V8 (470hp)", drivetrains:["RWD","AWD"], transmission:"Automatic (8-Speed)" },
+            "XJR": { engine:"5.0L Supercharged V8 (550-575hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance flagship, the most powerful XJ ever built. Discontinued after 2019 with no direct successor, ending Jaguar's flagship sedan for good as the brand's focus shifted decisively toward SUVs and its planned all-electric future." },
+          },
+          colors:[
+            {name:"Fuji White (White)",hex:"#F5F5F5"},
+            {name:"Santorini Black (Black)",hex:"#1A1A1A"},
+            {name:"Italian Racing Red (Red)",hex:"#9B1B30"},
+            {name:"Loire Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "XK": {
+      generations:{
+        "X100 (1997-2005)":{
+          years:["1997","1998","1999","2000","2001","2002","2003","2004","2005"],
+          trims:{
+            "XK8": { engine:"4.0L V8 (290hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"A genuine real spiritual successor to the legendary E-Type, real evidence Jaguar wanted a proper 2-door grand tourer back in its lineup after years without one — offered as both a coupe and convertible from launch." },
+            "XKR": { engine:"4.0L Supercharged V8 (370-390hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"Genuine performance flagship of this generation, with real supercharged power." },
+          },
+          colors:[
+            {name:"Platinum Silver (Silver)",hex:"#C0C0C0"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Carnival Red (Red)",hex:"#9B1B30"},
+            {name:"British Racing Green (Green)",hex:"#0D4A2E"},
+          ],
+        },
+        "X150 (2006-2014)":{
+          years:["2006","2007","2008","2009","2010","2011","2012","2013","2014"],
+          trims:{
+            "XK": { engine:"4.2L V8 (300hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"A genuine ground-up redesign, real aluminum monocoque construction shared engineering DNA with the contemporary XJ — genuinely more modern, more powerful, and lighter than the outgoing X100." },
+            "XKR": { engine:"5.0L Supercharged V8 (470-510hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)" },
+            "XKR-S": { engine:"5.0L Supercharged V8 (550hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed)", note:"Genuine performance flagship of this generation, the most powerful XK ever built. Discontinued after 2014 with no direct successor, replaced in spirit by the smaller, more focused F-Type — ending the XK/XK8 nameplate's 17-year run." },
+          },
+          colors:[
+            {name:"Polaris White (White)",hex:"#F5F5F5"},
+            {name:"Ebony Black (Black)",hex:"#1A1A1A"},
+            {name:"Italian Racing Red (Red)",hex:"#9B1B30"},
+            {name:"Indigo Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+  },
   "Jeep": {
     "Cherokee": {
       generations:{
@@ -9876,6 +10456,49 @@ const VEHICLES = {
             {name:"Firecracker Red (Red)",hex:"#C8102E"},
             {name:"Sarge Green (Green)",hex:"#3B5A3A"},
             {name:"Hydro Blue Pearl (Blue)",hex:"#4A7B9D"},
+          ],
+        },
+      },
+    },
+  },
+  "Karma": {
+    "Revero": {
+      generations:{
+        "1st Gen (2017-2019)":{
+          years:["2017","2018","2019"],
+          trims:{
+            "Base": { engine:"2.0L Turbocharged Extended-Range Electric (404hp combined)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine revival of the Fisker Karma, built by California-based Karma Automotive (owned by Chinese auto-parts maker Wanxiang) at a real US assembly plant in Moreno Valley — a genuinely rare case of a Chinese-owned company building a car domestically in America. Real extended-range electric layout: a GM-sourced turbo four acts purely as a generator, never directly driving the wheels, with two rear electric motors doing all the actual propulsion." },
+          },
+          colors:[
+            {name:"Balboa Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Anthracite Gray (Gray)",hex:"#4A4E52"},
+            {name:"Marsala Red (Red)",hex:"#6B1A2A"},
+          ],
+        },
+        "Revero GT/GTS (2020)":{
+          years:["2020"],
+          trims:{
+            "GT": { engine:"1.5L Turbocharged Extended-Range Electric (404hp combined)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"A genuine mid-cycle refresh, swapping the range-extender engine to a BMW-sourced 1.5L turbo three-cylinder — real evidence of how much a small, low-volume automaker relies on major manufacturer partnerships for core components." },
+            "GTS": { engine:"1.5L Turbocharged Extended-Range Electric (536-540hp combined)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship of this generation, with a real substantial power bump over the GT — new body panels (hood, doors, deck lid) and genuine electronic torque vectoring set it apart visually and mechanically." },
+          },
+          colors:[
+            {name:"Balboa Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Anthracite Gray (Gray)",hex:"#4A4E52"},
+            {name:"Marsala Red (Red)",hex:"#6B1A2A"},
+          ],
+        },
+        "GS-6 (2021-2022, 2025)":{
+          years:["2021","2022","2025"],
+          trims:{
+            "GS-6": { engine:"1.5L Turbocharged Extended-Range Electric (536hp combined)", drivetrain:"RWD", transmission:"Automatic (Single-Speed)", note:"The Revero name was retired in favor of GS-6 for these model years — same basic GTS-level output (536hp, 550 lb-ft), still using the BMW-sourced 1.5L turbo three as a range-extending generator. Genuinely one of the rarest cars on American roads — Karma's total annual production numbers in the low hundreds, and celebrities like Pitbull have owned genuinely one-of-a-kind customized examples." },
+          },
+          colors:[
+            {name:"Balboa Blue (Blue)",hex:"#1E4B8E"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Anthracite Gray (Gray)",hex:"#4A4E52"},
+            {name:"Marsala Red (Red)",hex:"#6B1A2A"},
           ],
         },
       },
@@ -11522,6 +12145,99 @@ const VEHICLES = {
       ],
     },
   },
+  "Lotus": {
+    "Eletre": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"Dual Electric Motors (603hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Lotus's genuine first-ever SUV, and a real seismic shift for a brand whose entire 75-year identity was built on lightweight, minimalist sports cars — real evidence of new majority owner Geely (Chinese automotive giant) pushing Lotus toward a broader, more commercially viable lineup." },
+        "R": { engine:"Dual Electric Motors (905hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance flagship, real supercar-rivaling acceleration in a genuinely massive SUV package — a striking departure from everything Lotus previously stood for, though the company insists genuine driving-dynamics engineering still underpins the whole vehicle." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Nimbus Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#C8102E"},
+        {name:"Cyan Blue (Blue)",hex:"#1E8AAE"},
+      ],
+    },
+    "Elise": {
+      years:["2005","2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Base": { engine:"1.8L 4-cylinder (190hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine, real distillation of Lotus founder Colin Chapman's core philosophy — 'simplify, then add lightness' — federalized for the US market starting 2005 after years of only selling in Europe. A genuine bonded-aluminum extruded chassis kept curb weight around 2,000 lbs, genuinely light even by sports-car standards, letting a modest Toyota-sourced engine deliver real go-kart-like handling." },
+        "SC": { engine:"1.8L Supercharged 4-cylinder (218hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuine performance flagship of the US-market Elise. Discontinued in the US after 2011 as Lotus's whole lineup contracted, with only the Evora continuing to be officially sold here for several years afterward." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ardent Red (Red)",hex:"#C8102E"},
+        {name:"Chrome Orange (Orange)",hex:"#E8601C"},
+      ],
+    },
+    "Emira": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "V6": { engine:"3.5L Supercharged V6 (400-420hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Officially the last-ever pure gas-powered Lotus, replacing the Elise, Exige, and Evora all at once — real evidence Lotus wanted one genuinely well-rounded sports car to close out the internal-combustion era rather than three overlapping niche models. Shares its supercharged V6 heritage with the outgoing Evora." },
+        "i4": { engine:"2.0L Turbocharged 4-cylinder (360-400hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Genuine AMG-sourced engine option, real evidence of Lotus's technical partnership with Mercedes-AMG — a real lighter, more efficient alternative to the V6 for buyers who wanted a bit less weight over the front axle." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Nimbus Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#C8102E"},
+        {name:"Seneca Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Esprit": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004"],
+      trims:{
+        "S4": { engine:"2.2L Turbocharged 4-cylinder (264hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"A genuine automotive icon, real evidence a small British manufacturer could build a legitimate Ferrari and Porsche rival — famously driven (and, in one memorable scene, transformed into a submarine) by James Bond in 'The Spy Who Loved Me,' a real defining moment in the car's cultural legacy. The distinctive wedge-shaped styling, penned by Giorgetto Giugiaro, barely changed across the model's entire multi-decade production run." },
+        "V8": { engine:"3.5L Twin-Turbo V8 (350-354hp)", drivetrain:"RWD", transmission:"Manual (5-Speed)", note:"Added 1996 — genuine performance flagship, Lotus's first-ever V8, developed real in-house. Discontinued after 2004, ending the Esprit's remarkable 28-year production run — genuinely one of the longest-lived sports car nameplates in automotive history." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Racing Green (Green)",hex:"#0D4A2E"},
+        {name:"Norfolk Mustard (Yellow)",hex:"#D4A017"},
+      ],
+    },
+    "Evija": {
+      years:["2020","2021","2022","2023","2024"],
+      trims:{
+        "Base": { engine:"Quad Electric Motors (1972hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"A genuine, real ultra-low-volume electric hypercar, limited to only 130 units worldwide — at its debut, genuinely the most powerful production car ever built, gas or electric. A real technical showcase of what Lotus's engineering team could achieve unconstrained by cost, previewing design and technology that would later inform the more attainable Emira and Eletre." },
+      },
+      colors:[
+        {name:"Sospiro Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Nimbus Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#C8102E"},
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+      ],
+    },
+    "Evora": {
+      years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],
+      trims:{
+        "Base": { engine:"3.5L V6 (276hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genuinely the only mid-engined 2+2 in the world at its launch, offering real (if tight) rear seats most rivals couldn't match — for several years, this was the sole Lotus model officially sold in the US after the Elise and Exige were discontinued here in 2011, keeping the brand's American presence alive on this one model alone." },
+        "S": { engine:"3.5L Supercharged V6 (345hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"] },
+        "GT430": { engine:"3.5L Supercharged V6 (430hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuine performance flagship, the most powerful Evora ever built. Discontinued after 2021, replaced by the all-new Emira — ending an era of Lotus's traditional lightweight sports car formula built on the older, established platform architecture." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ardent Red (Red)",hex:"#C8102E"},
+        {name:"Metallic Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "Exige": {
+      years:["2006","2007","2008","2009","2010","2011"],
+      trims:{
+        "Base": { engine:"1.8L 4-cylinder (190hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine, real harder-edged, more track-focused version of the Elise, with a distinctive fixed roof and real functional aerodynamic add-ons — genuinely one of the most focused, least compromised sports cars sold in the US during its run." },
+        "S": { engine:"1.8L Supercharged 4-cylinder (240-257hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuine performance flagship of the US-market Exige. Discontinued in the US after 2011 alongside the Elise, as Lotus's lineup contracted to just the Evora for several years." },
+      },
+      colors:[
+        {name:"Lotus White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ardent Red (Red)",hex:"#C8102E"},
+        {name:"Chrome Orange (Orange)",hex:"#E8601C"},
+      ],
+    },
+  },
   "Lucid": {
     "Air": {
       years:["2021","2022","2023","2024","2025","2026"],
@@ -12437,6 +13153,138 @@ const VEHICLES = {
           ],
         },
       },
+    },
+  },
+  "McLaren": {
+    "570S": {
+      years:["2015","2016","2017","2018","2019"],
+      trims:{
+        "Base": { engine:"3.8L Twin-Turbo V8 (562hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"McLaren's genuine entry point into its modern lineup, dubbed the 'Sports Series' — real evidence the young British manufacturer wanted a more attainable model below its flagship Super Series cars, though 'entry-level' at McLaren still meant real supercar performance and a genuine carbon-fiber tub chassis shared with every other model in the lineup." },
+        "GT4": { engine:"3.8L Twin-Turbo V8 (562hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine track-focused, race-homologated variant. Discontinued after 2019, replaced by the more powerful, more focused 600LT and later Artura." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Vermillion Red (Red)",hex:"#C8102E"},
+      ],
+    },
+    "650S": {
+      years:["2014","2015","2016","2017"],
+      trims:{
+        "Base": { engine:"3.8L Twin-Turbo V8 (641hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine, real evolution of the MP4-12C rather than a ground-up redesign — sharing that car's carbon-fiber 'MonoCell' chassis and basic twin-turbo V8, but with real substantial power and styling updates that addressed much of the criticism leveled at the original 12C." },
+        "Spider": { engine:"3.8L Twin-Turbo V8 (641hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine convertible body style, sharing the same carbon tub and V8 as the coupe. Discontinued after 2017, replaced by the all-new 720S." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Volcano Yellow (Yellow)",hex:"#F5C800"},
+      ],
+    },
+    "720S": {
+      years:["2017","2018","2019","2020","2021","2022"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (710hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine ground-up redesign of McLaren's flagship 'Super Series,' with real dramatic double-skin bodywork and distinctive eye-socket headlight design — genuinely one of the most track-capable, aerodynamically sophisticated supercars sold to the public at the time of its launch." },
+        "Spider": { engine:"4.0L Twin-Turbo V8 (710hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+        "Track Pack": { engine:"4.0L Twin-Turbo V8 (720hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine track-focused package with real weight savings and aero upgrades. Discontinued after 2022, replaced by the 750S." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Belize Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "750S": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (740hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine evolution of the 720S, real evidence McLaren refined an already highly-regarded platform rather than starting from scratch — genuine real weight reduction (about 66 lbs lighter than the 720S) and an updated version of the same basic twin-turbo V8." },
+        "Spider": { engine:"4.0L Twin-Turbo V8 (740hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)" },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Aurora Green (Green)",hex:"#0D8A5A"},
+      ],
+    },
+    "Artura": {
+      years:["2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"3.0L Twin-Turbo Hybrid V6 (671hp combined)", drivetrain:"RWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"McLaren's genuine first hybrid production supercar, and a real from-scratch redesign built on an all-new carbon-fiber platform — real evidence the brand sees hybridization as the future of the supercar segment, with a genuine electric-only mode for quiet, low-speed driving that no prior McLaren offered." },
+        "Spider": { engine:"3.0L Twin-Turbo Hybrid V6 (690hp combined)", drivetrain:"RWD", transmission:"Automatic (8-Speed Dual-Clutch)", note:"Added 2025 — genuine retractable hardtop convertible variant with a slight power bump over the coupe." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Flux Green (Green)",hex:"#0D8A5A"},
+      ],
+    },
+    "F1": {
+      years:["1993","1994","1995","1996","1997","1998"],
+      trims:{
+        "Base": { engine:"6.1L V12 (618hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuinely one of the most celebrated cars in automotive history — a real central driving seat with two passenger seats flanking it, a genuine gold-foil-lined engine bay (gold's real heat-reflective properties made it the ideal material, cost be damned), and a real BMW-built V12 producing figures that made it the world's fastest production car for years. Only 106 were ever built across all variants, genuinely one of the rarest and most valuable cars ever made." },
+        "LM": { engine:"6.1L V12 (627hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine, real road-legal tribute to the F1 GTR race cars that won Le Mans outright in 1995 — only 5 ever built, making it genuinely one of the rarest McLarens in existence." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Ricard Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "GT": {
+      years:["2019","2020","2021","2022"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (612hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine, real more comfort-oriented grand tourer within McLaren's lineup, positioned to compete more directly with Ferrari's Roma and Portofino — real evidence the brand wanted a genuine daily-drivable, long-distance-capable supercar alongside its more track-focused models, with a genuinely usable rear cargo area under the rear glass hatch." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Cassius Blue (Blue)",hex:"#1E4B8E"},
+      ],
+    },
+    "MP4-12C": {
+      years:["2011","2012","2013","2014"],
+      trims:{
+        "Base": { engine:"3.8L Twin-Turbo V8 (592-616hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"The genuine, real first modern-era McLaren road car, and the true foundation of the whole current lineup — a real carbon-fiber 'MonoCell' chassis (a genuine Formula 1-derived construction technique) underpinned every McLaren that followed. Renamed simply '12C' partway through this run, dropping the 'MP4' Formula 1-team prefix." },
+        "Spider": { engine:"3.8L Twin-Turbo V8 (616hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"Genuine convertible body style. Discontinued after 2014, replaced by the improved 650S." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Silica White (White)",hex:"#F5F5F5"},
+        {name:"Volcano Yellow (Yellow)",hex:"#F5C800"},
+      ],
+    },
+    "P1": {
+      years:["2013","2014","2015"],
+      trims:{
+        "Base": { engine:"3.8L Twin-Turbo Hybrid V8 (903hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine hybrid hypercar built to real rival the Ferrari LaFerrari and Porsche 918 Spyder, all launched within the same era — real evidence a hybrid powertrain could deliver genuine extra performance, not just efficiency, at the absolute top of the automotive world. Only 375 were ever built, each one genuinely hand-assembled." },
+        "GTR": { engine:"3.8L Twin-Turbo Hybrid V8 (986hp combined)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine track-only variant, not road-legal, with real widened bodywork and extreme aerodynamics. Only 58 were ever built." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Volcano Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Ice Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Senna": {
+      years:["2018","2019"],
+      trims:{
+        "Base": { engine:"4.0L Twin-Turbo V8 (789hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine, real uncompromising track-focused hypercar, named in honor of legendary Formula 1 driver Ayrton Senna — real deliberately controversial styling, prioritizing aerodynamic function over conventional beauty, with the largest rear wing ever fitted to a road-legal McLaren at launch. Only 500 were ever built." },
+        "GTR": { engine:"4.0L Twin-Turbo V8 (814hp)", drivetrain:"RWD", transmission:"Automatic (7-Speed Dual-Clutch)", note:"A genuine track-only variant, not road-legal, with real even more extreme aerodynamics. Only 75 were ever built, genuinely one of the rarest and most track-focused McLarens ever made." },
+      },
+      colors:[
+        {name:"McLaren Orange (Orange)",hex:"#FF6B00"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Victory Grey (Gray)",hex:"#6B6E6F"},
+        {name:"Delta Red (Red)",hex:"#C8102E"},
+      ],
     },
   },
   "Mercedes-Benz": {
@@ -15733,6 +16581,145 @@ const VEHICLES = {
       ],
     },
   },
+  "Rolls-Royce": {
+    "Cullinan": {
+      years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      trims:{
+        "Base": { engine:"6.75L Twin-Turbo V12 (563hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Rolls-Royce's genuine first-ever SUV, named after a genuine, real famous 3,100-carat diamond discovered in South Africa in 1905 — a real symbolic name choice for what the brand marketed as its own genuine gem. Standard AWD and real off-road capability, a first for Rolls-Royce, though virtually no owner ever takes one off pavement." },
+        "Black Badge": { engine:"6.75L Twin-Turbo V12 (592hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-and-styling flagship trim, real darker, more aggressive exterior treatment and a genuinely sportier suspension tune than the standard Cullinan." },
+      },
+      colors:[
+        {name:"English White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#6B1A2A"},
+        {name:"Salamanca Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Dawn": {
+      years:["2016","2017","2018","2019","2020","2021"],
+      trims:{
+        "Base": { engine:"6.6L Twin-Turbo V12 (563hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine convertible variant sharing its basic architecture with the Wraith and Ghost, real evidence of Rolls-Royce genuinely rebuilding most of the car's body panels (over 80%) rather than simply chopping the roof off an existing coupe — a genuine engineering-first approach to a real drop-top luxury grand tourer." },
+        "Black Badge": { engine:"6.6L Twin-Turbo V12 (593hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-and-styling flagship trim. Discontinued after 2021 with no direct successor, as Rolls-Royce's convertible lineup wound down ahead of the brand's broader shift toward the all-electric Spectre." },
+      },
+      colors:[
+        {name:"English White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#6B1A2A"},
+        {name:"Cassini Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+    "Ghost": {
+      generations:{
+        "1st Gen (2010-2020)":{
+          years:["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+          trims:{
+            "Base": { engine:"6.6L Twin-Turbo V12 (563hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine, real more 'accessible' entry point into Rolls-Royce ownership, sharing its underlying platform with the contemporary BMW 7 Series — real evidence of the deep engineering ties between Rolls-Royce and its parent company BMW, which acquired rights to the marque name in 1998. The 'Ghost' name is a genuine callback to the historic 1906 Silver Ghost." },
+            "V-Specification": { engine:"6.6L Twin-Turbo V12 (600hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-oriented special edition of this generation." },
+          },
+          colors:[
+            {name:"English White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Magma Red (Red)",hex:"#6B1A2A"},
+            {name:"Salamanca Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "2nd Gen (2021-2026)":{
+          years:["2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"6.75L Twin-Turbo V12 (563hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign, sharing its underlying 'Architecture of Luxury' aluminum spaceframe platform with the Phantom and Cullinan for the first time — real evidence of Rolls-Royce consolidating its entire modern lineup onto one shared, purpose-built foundation." },
+            "Black Badge": { engine:"6.75L Twin-Turbo V12 (592hp)", drivetrain:"AWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-and-styling flagship trim, the most powerful Ghost ever built." },
+          },
+          colors:[
+            {name:"English White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Magma Red (Red)",hex:"#6B1A2A"},
+            {name:"Cassini Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+      },
+    },
+    "Phantom": {
+      generations:{
+        "VII (2003-2017)":{
+          years:["2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          trims:{
+            "Base": { engine:"6.75L V12 (453-460hp)", drivetrain:"RWD", transmission:"Automatic (6-Speed/8-Speed)", note:"Genuinely the first Rolls-Royce built entirely from scratch under BMW's ownership, replacing the outgoing Silver Seraph — a real, genuine engineering showpiece with a distinctive rear-hinged 'Coach Door' design and an unmistakable, imposing presence that redefined the brand for the modern era. Real Drophead Coupé (convertible) and Coupé (2-door) variants joined the standard 4-door sedan later in this generation's run." },
+          },
+          colors:[
+            {name:"English White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Magma Red (Red)",hex:"#6B1A2A"},
+            {name:"Metropolitan Blue (Blue)",hex:"#1E3A6B"},
+          ],
+        },
+        "VIII (2018-2026)":{
+          years:["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+          trims:{
+            "Base": { engine:"6.75L Twin-Turbo V12 (563hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine ground-up redesign on Rolls-Royce's new 'Architecture of Luxury' aluminum spaceframe platform, the real foundation that would later underpin the Cullinan, Ghost, and Spectre too. A genuine art installation ('The Gallery') built into the dashboard lets owners commission bespoke artwork visible behind the glass — a real, extraordinary level of customization even by Rolls-Royce's own standards." },
+            "Series II": { engine:"6.75L Twin-Turbo V12 (563hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine mid-cycle refresh (2023+) with real updated styling and technology, the brand's true flagship sedan." },
+          },
+          colors:[
+            {name:"English White (White)",hex:"#F5F5F5"},
+            {name:"Black (Black)",hex:"#1A1A1A"},
+            {name:"Magma Red (Red)",hex:"#6B1A2A"},
+            {name:"Andalusian White (White)",hex:"#F0F0F0"},
+          ],
+        },
+      },
+    },
+    "Silver Seraph": {
+      years:["1999","2000","2001","2002"],
+      trims:{
+        "Base": { engine:"5.4L V12 (322hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"A genuinely significant turning point in Rolls-Royce's history — the first Rolls-Royce ever powered by a BMW-supplied engine, real evidence of the brand's then-owner Vickers looking outside for modern powertrain technology after decades of in-house V8s. Shared its basic body architecture with the mechanically related Bentley Arnage of the same era, back when both marques were still under common ownership before the 1998 Volkswagen/BMW split." },
+        "Park Ward": { engine:"5.4L V12 (322hp)", drivetrain:"RWD", transmission:"Automatic (5-Speed)", note:"Genuine extended-wheelbase variant with real additional rear legroom. Discontinued after 2002, replaced by the all-new Phantom under BMW's newly-acquired ownership of the Rolls-Royce name — a real symbolic end to the Vickers-era Rolls-Royce lineage." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Royal Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Silver Sand (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Silver Spirit / Silver Spur": {
+      years:["1990","1991","1992","1993","1994","1995","1996","1997"],
+      trims:{
+        "Silver Spirit": { engine:"6.75L V8 (220hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"A genuinely traditional, real body-on-frame Rolls-Royce flagship — the final years of a design that had been in production, with updates, since 1980, real evidence of just how slowly the ultra-luxury segment moved compared to mainstream automakers of the same era." },
+        "Silver Spur": { engine:"6.75L V8 (220hp)", drivetrain:"RWD", transmission:"Automatic (4-Speed)", note:"Genuine extended-wheelbase variant of the Silver Spirit, with real additional rear legroom for chauffeur-driven use. Discontinued after 1997, replaced by the all-new Silver Seraph — ending the classic V8-powered Rolls-Royce lineage." },
+      },
+      colors:[
+        {name:"Arctic White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Royal Blue (Blue)",hex:"#1E3A6B"},
+        {name:"Silver Sand (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Spectre": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Base": { engine:"Dual Electric Motors (577hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Rolls-Royce's genuine first-ever production EV, and real evidence the brand sees electrification as a natural fit for its whole philosophy — a genuinely silent, torque-rich powertrain arguably suits the brand's 'waftability' ethos even better than a traditional V12. Shares its 'Architecture of Luxury' platform with the Phantom and Cullinan." },
+        "Black Badge": { engine:"Dual Electric Motors (659hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine performance-and-styling flagship trim, the most powerful production Rolls-Royce ever built." },
+      },
+      colors:[
+        {name:"English White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#6B1A2A"},
+        {name:"Adamas Silver (Silver)",hex:"#C0C0C0"},
+      ],
+    },
+    "Wraith": {
+      years:["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],
+      trims:{
+        "Base": { engine:"6.6L Twin-Turbo V12 (624hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"A genuine 2-door coupe variant based on the Ghost's platform, real evidence Rolls-Royce wanted a more overtly sporting, dynamic model in its lineup — at launch, genuinely the most powerful and quickest-accelerating Rolls-Royce ever built." },
+        "Black Badge": { engine:"6.6L Twin-Turbo V12 (632hp)", drivetrain:"RWD", transmission:"Automatic (8-Speed)", note:"Genuine performance-and-styling flagship trim. Discontinued after 2023 with no direct successor, replaced in spirit by the all-electric Spectre coupe." },
+      },
+      colors:[
+        {name:"English White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Magma Red (Red)",hex:"#6B1A2A"},
+        {name:"Salamanca Blue (Blue)",hex:"#1E3A6B"},
+      ],
+    },
+  },
   "Saab": {
     "9-3": {
       generations:{
@@ -15852,6 +16839,50 @@ const VEHICLES = {
           ],
         },
       },
+    },
+  },
+  "Saleen": {
+    "S281": {
+      years:["1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"],
+      trims:{
+        "S281": { engine:"4.6L V8 (220-335hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine Ford Mustang GT taken through Saleen's own real conversion process — Steve Saleen's California-based company (founded 1983 by the former racing driver himself) adds a real body kit, Racecraft suspension tuning, and interior upgrades on top of a factory-built Mustang, rather than building a car from scratch. Real naming convention switched from 'Saleen Mustang' to 'S-281' partway through this run, based on the engine's cubic-inch displacement (4.6L ≈ 281 cubic inches)." },
+        "S281SC": { engine:"4.6L Supercharged V8 (465hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"Genuine supercharged performance flagship of the mainstream S281 lineup." },
+        "S281E": { engine:"4.6L Supercharged V8 (550hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuine 'Extreme' trim with real Saleen-supplied internals, not just a bolt-on supercharger — one of the most powerful S281 variants ever built. Discontinued after 2009 as Saleen shifted its lineup focus toward the newer S302 based on the redesigned Mustang." },
+      },
+      colors:[
+        {name:"Performance White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Speed Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Vista Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "S302": {
+      years:["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+      trims:{
+        "S302": { engine:"5.0L V8 (400-435hp)", drivetrain:"RWD", transmissions:["Manual","Automatic"], note:"A genuine successor to the S281, built on Ford's redesigned S197/S550-generation Mustang platform — the '302' name refers to the 5.0L V8's cubic-inch displacement, a real callback to Ford's own historic 302 small-block engine family." },
+        "S302 Black Label": { engine:"5.0L Supercharged V8 (625hp)", drivetrain:"RWD", transmission:"Manual", note:"Genuine performance flagship, with real Saleen-specific supercharger, suspension, and aerodynamic packages that go well beyond a typical bolt-on tuner kit." },
+        "S302E": { engine:"4.6L Supercharged V8 (550-620hp)", drivetrain:"RWD", transmission:"Manual", note:"A genuine extreme-output variant built on the earlier S197 chassis, offered with either a speedster convertible top or a glass roof — real evidence Saleen has always positioned itself as a genuine specialty manufacturer, not just a badge-and-decal tuner." },
+      },
+      colors:[
+        {name:"Performance White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Saleen Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+      ],
+    },
+    "S7": {
+      years:["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"],
+      trims:{
+        "S7": { engine:"7.0L V8 (427ci) (550-750hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Genuinely Saleen's biggest ambition realized — a real ground-up, mid-engine American supercar with a carbon-fiber body, built entirely in-house rather than based on any existing Ford platform, a genuine rarity for a small specialty manufacturer to pull off. Only a few hundred were ever built across the whole run, making it a genuine unicorn on American roads." },
+        "S7 Twin Turbo": { engine:"7.0L Twin-Turbo V8 (427ci) (750hp)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"Added 2005 — genuine performance flagship, real supercar-eclipsing power that put it in direct competition with Ferrari and Lamborghini's flagships of the era, at a genuine fraction of the price." },
+        "S7 Competition": { engine:"7.0L Twin-Turbo V8 (427ci) (1000hp+)", drivetrain:"RWD", transmission:"Manual (6-Speed)", note:"A genuine track-only, race-spec variant with real four-figure horsepower — not street legal, built for genuine competition use. Production of the whole S7 line ended in 2009 amid Saleen's broader business restructuring, with Steve Saleen departing before later returning to found a new venture under his own name." },
+      },
+      colors:[
+        {name:"Competition White (White)",hex:"#F5F5F5"},
+        {name:"Black (Black)",hex:"#1A1A1A"},
+        {name:"Saleen Yellow (Yellow)",hex:"#F5C800"},
+        {name:"Race Red (Red)",hex:"#C8102E"},
+      ],
     },
   },
   "Saturn": {
@@ -18398,6 +19429,60 @@ const VEHICLES = {
           ],
         },
       },
+    },
+  },
+  "VinFast": {
+    "VF6": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Eco": { engine:"Single Electric Motor (174hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"VinFast's genuine subcompact SUV entry, roughly the size of a Honda HR-V — real evidence of this young Vietnamese automaker's rapid product rollout strategy, aiming to bring a genuinely new EV from a genuinely new manufacturer to the US market within just a few years of the company's 2017 founding." },
+        "Plus": { engine:"Dual Electric Motors (201hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"VinFast White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red (Red)",hex:"#9B1B30"},
+        {name:"Ocean Blue (Blue)",hex:"#1E6BA8"},
+      ],
+    },
+    "VF7": {
+      years:["2024","2025","2026"],
+      trims:{
+        "Eco": { engine:"Single Electric Motor (201hp)", drivetrain:"FWD", transmission:"Automatic (Single-Speed)", note:"A genuine, real compact SUV roughly the size of a Mazda CX-5, designed by the Italian firm Pininfarina — real evidence VinFast invested serious money in established design talent to help a brand-new nameplate feel genuinely credible against established competitors right out of the gate." },
+        "Plus": { engine:"Dual Electric Motors (349hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)" },
+      },
+      colors:[
+        {name:"VinFast White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red (Red)",hex:"#9B1B30"},
+        {name:"Forest Green (Green)",hex:"#2E5A3A"},
+      ],
+    },
+    "VF8": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Eco": { engine:"Dual Electric Motors (348hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"VinFast's genuine first model officially sold in the US, and real evidence of Vingroup (the Vietnamese conglomerate behind VinFast) betting big on breaking into the American car market — a genuinely mid-size electric SUV positioned against the Tesla Model Y and similar rivals, initially imported before a planned North Carolina assembly plant comes online." },
+        "Plus": { engine:"Dual Electric Motors (402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine top trim, with a real larger battery pack option offering extended range over the base Eco." },
+      },
+      colors:[
+        {name:"VinFast White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red (Red)",hex:"#9B1B30"},
+        {name:"Saddle Brown (Brown)",hex:"#6B4A2E"},
+      ],
+    },
+    "VF9": {
+      years:["2023","2024","2025","2026"],
+      trims:{
+        "Eco": { engine:"Dual Electric Motors (402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"VinFast's genuine flagship, a real full-size 3-row electric SUV also designed by Pininfarina — the largest, most expensive model in the brand's current US lineup, positioned to compete with the Rivian R1S and similar 3-row electric SUVs." },
+        "Plus": { engine:"Dual Electric Motors (402hp)", drivetrain:"AWD", transmission:"Automatic (Single-Speed)", note:"Genuine top trim, with real additional premium features and a larger available battery pack." },
+      },
+      colors:[
+        {name:"VinFast White (White)",hex:"#F5F5F5"},
+        {name:"Onyx Black (Black)",hex:"#1A1A1A"},
+        {name:"Crimson Red (Red)",hex:"#9B1B30"},
+        {name:"Ocean Blue (Blue)",hex:"#1E6BA8"},
+      ],
     },
   },
   "Volkswagen": {
