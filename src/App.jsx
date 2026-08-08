@@ -32220,6 +32220,152 @@ const TORQUE_SPECS = {
       },
     ],
   },
+  "Plymouth": {
+    "Acclaim": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"95",
+        unit:"ft-lbs",
+        notes:"Confirmed for the whole 1987-1995 production run (also applies to the closely related Plymouth Horizon of the same era) per a well-cited torque chart.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Breeze": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"100",
+        unit:"ft-lbs",
+        notes:"Confirmed as an 85-115 ft-lbs range for the whole 1996-2000 production run per a well-cited torque chart — genuinely wide range, 100 splits the difference. Shares its basic 'Cloud Car' platform with the closely related Dodge Stratus and Chrysler Cirrus of the same era, all citing the identical range.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Neon": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"100",
+        unit:"ft-lbs",
+        notes:"Confirmed as an 85-115 ft-lbs range for the whole 1995-2001 production run per a well-cited torque chart — genuinely wide range, 100 splits the difference. Shares this exact figure with the identically-badged Dodge Neon of the same era (they're the same car, different badge).",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Prowler": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"19mm socket",
+        spec:"100",
+        unit:"ft-lbs",
+        notes:"Confirmed for the whole 1999-2001 production run per a well-cited torque chart — this covers the Plymouth-badged years specifically (1997, 1999-2001), matching the same figure confirmed for the later Chrysler-badged Prowler (2001-2002), since they're mechanically identical under the badge change.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's V6.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Voyager": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"100",
+        unit:"ft-lbs",
+        notes:"Directly confirmed for a 1999 Voyager 3.3L via a mechanic Q&A service — a genuinely close secondary figure of 101 ft-lbs also appears in the same source, essentially the same number with minor rounding.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Don't confuse this with the separate oil pan bolts, which are confirmed at a much lower 105 in-lbs (about 8.75 ft-lbs) for the 1999 3.3L — those secure the pan to the block and are a completely different fastener from the drain plug itself, which we don't have a confirmed figure for yet.",
+      },
+    ],
+  },
+  "Polestar": {
+    "2": [
+      {
+        partName:"Wheel Bolts",
+        size:"19mm socket",
+        spec:"103",
+        unit:"ft-lbs",
+        notes:"140 Nm, genuinely well cross-validated — confirmed via a detailed video wheel-swap guide, independently confirmed again by an owner on the car's own forum who checked directly. Real practical detail worth knowing: the wheel bolts hide under black plastic covers that need to be removed first, and those covers themselves use a larger 24mm socket — easy to grab the wrong size if you're not expecting two different fastener sizes on the same wheel. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+    "3": [
+      {
+        partName:"Wheel Nuts",
+        size:"21mm socket",
+        spec:"129",
+        unit:"ft-lbs",
+        notes:"175 Nm, directly confirmed straight from Polestar's own official service manual — genuinely solid, primary-source data, and a real, meaningful step up from the Polestar 2's 140 Nm figure, reflecting this car's heavier SUV build. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+    "4": [
+      {
+        partName:"Wheel Bolts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car specifically — a reasonable starting point would be somewhere between the Polestar 2's 140 Nm and Polestar 3's 175 Nm figures given this car's positioning between the two in size and weight, but that's an inference, not a confirmed number. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+  },
 };
 
 const CATALOG = {
