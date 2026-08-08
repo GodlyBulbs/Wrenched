@@ -31111,6 +31111,146 @@ const TORQUE_SPECS = {
       },
     ],
   },
+  "Mercedes-Benz": {
+    "C-Class": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"96",
+        unit:"ft-lbs",
+        notes:"130 Nm, genuinely well-confirmed — quoted directly from a 2018 C-Class Coupe owner's manual by one owner, and independently confirmed again straight from a W204-era manual (page 286, per another owner: 'Wheels could become loose if not tightened with a torque of 96 lb-ft'). This is the 'short' 27mm bolt length Mercedes uses on the C-Class — don't confuse it with the longer 45mm bolts used on SUVs, which run a different spec.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"21",
+        unit:"ft-lbs",
+        notes:"28 Nm, confirmed for the 2007-2014 generation via a dedicated torque-spec database.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"35",
+        unit:"ft-lbs",
+        notes:"35-37 ft-lbs is a reasonable reference figure from the closely related GLA (shares Mercedes' compact/MFA-platform 4-cylinder engine family) — not independently confirmed as C-Class-specific.",
+      },
+    ],
+    "E-Class": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"96",
+        unit:"ft-lbs",
+        notes:"130 Nm for the W212-era E-Class, which uses the 'short' 27mm bolt length — but the newer W213 generation switched to the longer 45mm bolts shared with Mercedes' SUV lineup, running a notably higher 111 ft-lbs (150 Nm) instead. A real, meaningful spec change tied to physical hardware, not just a rounding difference — confirm which generation and bolt length you've got before trusting either number.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "G-Class": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"111",
+        unit:"ft-lbs",
+        notes:"150 Nm is a reasonable reference figure shared with Mercedes' other body-on-frame/heavy SUVs (GLE, GLS) that use the longer 45mm bolt length — not independently confirmed as G-Class-specific, but this is genuinely one of the heaviest vehicles in the Mercedes lineup, so don't assume a lighter sedan figure applies.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's V8.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "GLC": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"96",
+        unit:"ft-lbs",
+        notes:"Genuinely conflicting sources on this specific model — one detailed repair-advice chart lists the GLC at 96 ft-lbs (130 Nm), grouped with the sedans, while a separate, hardware-focused MBWorld forum explanation explicitly lists the GLC among the SUVs using the longer 45mm bolts at 110-111 ft-lbs. The two sources genuinely disagree here, unlike most of the rest of the lineup where they're consistent — check your specific owner's manual or the door-jamb sticker rather than trusting either number blindly.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "GLE": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"111",
+        unit:"ft-lbs",
+        notes:"150 Nm, genuinely well cross-validated — independently confirmed by both a detailed repair-advice chart and a separate hardware-focused MBWorld forum explanation, which specifically groups the GLE among the SUVs using the longer 45mm bolt length.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "S-Class": [
+      {
+        partName:"Wheel Bolts",
+        size:"17mm socket",
+        spec:"96",
+        unit:"ft-lbs",
+        notes:"Genuinely conflicting sources here too — a detailed repair-advice chart lists the S-Class at 96 ft-lbs (130 Nm), matching the sedan-length short bolts, while a separate hardware-focused MBWorld explanation explicitly states 'all S class' uses the longer 45mm bolts at 110-111 ft-lbs, the same as the SUV lineup. Real disagreement between two otherwise-reliable sources — check your specific owner's manual or the door-jamb sticker rather than trusting either figure blindly, especially on a car this heavy and expensive to get wrong on.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+  },
 };
 
 const CATALOG = {
