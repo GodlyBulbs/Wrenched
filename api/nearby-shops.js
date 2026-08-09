@@ -65,30 +65,34 @@ async function textSearch(query, lat, lng, apiKey) {
   }));
 }
 
-// Text Search doesn't return phone numbers — a lightweight Place Details
-// call fills that in for each result. Kept optional/best-effort so a
+// Text Search doesn't return phone numbers or a website — a lightweight Place
+// Details call fills both in for each result. Kept optional/best-effort so a
 // details failure never blocks the whole list from rendering.
-async function fetchPhone(placeId, apiKey) {
+async function fetchDetails(placeId, apiKey) {
   try {
     const url = new URL("https://maps.googleapis.com/maps/api/place/details/json");
     url.searchParams.set("place_id", placeId);
-    url.searchParams.set("fields", "formatted_phone_number");
+    url.searchParams.set("fields", "formatted_phone_number,website");
     url.searchParams.set("key", apiKey);
     const res = await fetch(url.toString());
-    if (!res.ok) return null;
+    if (!res.ok) return { phone: null, website: null };
     const data = await res.json();
-    return data.result?.formatted_phone_number || null;
+    return {
+      phone: data.result?.formatted_phone_number || null,
+      website: data.result?.website || null,
+    };
   } catch {
-    return null;
+    return { phone: null, website: null };
   }
 }
 
-async function enrichWithPhones(shops, apiKey) {
+async function enrichWithDetails(shops, apiKey) {
   const enriched = await Promise.all(
-    shops.map(async (shop) => ({
-      ...shop,
-      phone: shop.placeId ? await fetchPhone(shop.placeId, apiKey) : null,
-    }))
+    shops.map(async (shop) => {
+      if (!shop.placeId) return { ...shop, phone: null, website: null };
+      const details = await fetchDetails(shop.placeId, apiKey);
+      return { ...shop, ...details };
+    })
   );
   return enriched;
 }
@@ -150,9 +154,9 @@ export default async function handler(req, res) {
       .slice(0, MAX_RESULTS_PER_CATEGORY);
 
     const [dealersWithPhones, specialtyWithPhones, quickServiceWithPhones] = await Promise.all([
-      enrichWithPhones(dealersSorted, apiKey),
-      enrichWithPhones(specialtySorted, apiKey),
-      enrichWithPhones(quickServiceSorted, apiKey),
+      enrichWithDetails(dealersSorted, apiKey),
+      enrichWithDetails(specialtySorted, apiKey),
+      enrichWithDetails(quickServiceSorted, apiKey),
     ]);
 
     return res.status(200).json({

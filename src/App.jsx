@@ -34847,22 +34847,24 @@ function BrandDot({brand,size=8}){
   return <span style={{display:"inline-block",width:`${size}px`,height:`${size}px`,borderRadius:"50%",background:BRAND_COLORS[brand]||"#666",marginRight:"6px",flexShrink:0}}/>;
 }
 
-function ShopCard({shop}){
+function ShopCard({shop,onRequest}){
   const directionsUrl=shop.lat&&shop.lng
     ?`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}&destination_place_id=${shop.placeId||""}`
     :`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shop.name+" "+(shop.address||""))}`;
   return(
     <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"12px",marginBottom:"8px"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"12px",marginBottom:"10px"}}>
         <div>
           <div style={{color:"#E8E4DC",fontSize:"15px",fontWeight:600,marginBottom:"2px"}}>{shop.name}</div>
           {shop.address&&<div style={{color:"#666",fontSize:"12px"}}>{shop.address}</div>}
         </div>
         {shop.distanceMi!=null&&<div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",whiteSpace:"nowrap"}}>{shop.distanceMi.toFixed(1)} mi</div>}
       </div>
-      <div style={{display:"flex",gap:"8px"}}>
-        {shop.phone&&<a href={`tel:${shop.phone.replace(/[^\d+]/g,"")}`} style={{flex:1,textAlign:"center",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"9px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",textDecoration:"none"}}>CALL</a>}
-        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"9px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",textDecoration:"none"}}>DIRECTIONS</a>
+      <button onClick={()=>onRequest(shop)} style={{width:"100%",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer",marginBottom:"8px"}}>REQUEST APPOINTMENT</button>
+      <div style={{display:"flex",gap:"6px"}}>
+        {shop.phone&&<a href={`tel:${shop.phone.replace(/[^\d+]/g,"")}`} style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>CALL</a>}
+        {shop.website&&<a href={shop.website} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>WEBSITE</a>}
+        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>DIRECTIONS</a>
       </div>
     </div>
   );
@@ -35754,7 +35756,7 @@ function AppShell(){
   const updateGarageItem=async(car)=>await supabase.from("garages").update({car_data:car}).eq("id",car.id);
   const deleteGarageItem=async(id)=>{await supabase.from("garages").delete().eq("id",id);setGarage(prev=>prev.filter(c=>c.id!==id));};
   const addCar=async(carData)=>{const id=await saveGarageItem(carData);if(id){setGarage(prev=>[...prev,{...carData,id}]);setView("garage");}};
-  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setShopsStatus("idle");setShopsError("");setShopsResults({dealers:[],specialty:[],quickService:[]});setView("car-detail");};
+  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setShopsStatus("idle");setShopsError("");setShopsResults({dealers:[],specialty:[],quickService:[]});setRequestingShop(null);setRequestText("");setView("car-detail");};
   const syncCar=async(updated)=>{setGarage(prev=>prev.map(c=>c.id===updated.id?updated:c));setActiveCar(updated);await updateGarageItem(updated);};
   const toggleBuildItem=(item)=>{const exists=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);syncCar({...activeCar,build:exists?activeCar.build.filter(b=>!(b.brand===item.brand&&b.part===item.part)):[...(activeCar.build||[]),item]});};
 
@@ -35840,6 +35842,20 @@ function AppShell(){
       {enableHighAccuracy:false,timeout:10000,maximumAge:300000}
     );
   };
+
+  const [requestingShop,setRequestingShop]=useState(null);
+  const [requestText,setRequestText]=useState("");
+
+  // Drafts the text message for a "Request Appointment" so the client never has to
+  // figure out what to say — pulls in whatever's actually overdue on the car, if anything,
+  // so the request is genuinely useful to the shop rather than a blank "need service" ping.
+  const buildRequestMessage=(car,shop)=>{
+    const dueItems=(car.maintenance||[]).filter(i=>{const s=statusColor(i,car.mileage||0);return s==="red"||s==="yellow";}).map(i=>i.name);
+    const reason=dueItems.length>0?dueItems.slice(0,3).join(", "):"a general check-up / maintenance";
+    return `Hi${shop.name?` ${shop.name}`:""}, I'd like to schedule a service appointment for my ${car.year} ${car.make} ${car.model} (${(car.mileage||0).toLocaleString()} mi). I'm due for ${reason}. What times do you have available this week?`;
+  };
+
+  const openRequestModal=(shop)=>{setRequestingShop(shop);setRequestText(buildRequestMessage(activeCar,shop));};
 
   const Tab=({id,label})=>(<button onClick={()=>setActiveTab(id)} style={{background:"none",border:"none",borderBottom:activeTab===id?"2px solid #FF6B2B":"2px solid transparent",color:activeTab===id?"#FF6B2B":"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"10px 14px",cursor:"pointer",transition:"all 0.15s",whiteSpace:"nowrap"}}>{label}</button>);
 
@@ -36203,7 +36219,7 @@ function AppShell(){
                       <div style={{textAlign:"center",padding:"48px 0"}}>
                         <div style={{fontSize:"32px",marginBottom:"12px"}}>📍</div>
                         <div style={{color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>FIND SHOPS NEAR YOU</div>
-                        <div style={{color:"#666",fontSize:"14px",marginBottom:"4px",maxWidth:"380px",margin:"0 auto 4px"}}>We'll match shops to your {activeCar.year} {activeCar.make} {activeCar.model} — {hasDealer?`your closest ${activeCar.make} dealer, `:""}real independent {activeCar.make} specialists near you, and quick-service chains nearby for oil changes and tires.</div>
+                        <div style={{color:"#666",fontSize:"14px",marginBottom:"4px",maxWidth:"380px",margin:"0 auto 4px"}}>We'll match shops to your {activeCar.year} {activeCar.make} {activeCar.model} — {hasDealer?`your closest ${activeCar.make} dealer, `:""}real independent {activeCar.make} specialists near you, and quick-service chains nearby for oil changes and tires. One tap drafts a text asking for an appointment, so you don't have to figure out what to say.</div>
                         <div style={{color:"#444",fontSize:"12px",marginBottom:"24px"}}>We'll ask your browser for location access — nothing is shared until you approve it.</div>
                         <button onClick={findNearbyShops} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>USE MY LOCATION</button>
                       </div>
@@ -36230,7 +36246,7 @@ function AppShell(){
                             {shopsResults.dealers.length===0?(
                               <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No dealer found within range — try a specialist or quick-service shop below.</div>
                             ):shopsResults.dealers.map((shop,i)=>(
-                              <ShopCard key={i} shop={shop}/>
+                              <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                             ))}
                           </div>
                         )}
@@ -36240,7 +36256,7 @@ function AppShell(){
                           {shopsResults.specialty.length===0?(
                             <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No specialty shops found nearby — {hasDealer?"the dealer above is a solid fallback.":"try a quick-service shop below."}</div>
                           ):shopsResults.specialty.map((shop,i)=>(
-                            <ShopCard key={i} shop={shop}/>
+                            <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                           ))}
                         </div>
                         <div>
@@ -36249,7 +36265,7 @@ function AppShell(){
                           {shopsResults.quickService.length===0?(
                             <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No quick-service chains found nearby.</div>
                           ):shopsResults.quickService.map((shop,i)=>(
-                            <ShopCard key={i} shop={shop}/>
+                            <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                           ))}
                         </div>
                         <button onClick={findNearbyShops} style={{background:"none",border:"1px solid #2A2A2A",color:"#666",padding:"10px 20px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",marginTop:"12px"}}>REFRESH RESULTS</button>
@@ -36275,6 +36291,26 @@ function AppShell(){
             <div style={{display:"flex",gap:"10px"}}>
               <button onClick={confirmDone} style={{flex:1,background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CONFIRM</button>
               <button onClick={()=>setDoneItem(null)} style={{flex:1,background:"transparent",color:"#555",border:"1px solid #2A2A2A",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {requestingShop&&(
+        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:300,padding:"24px"}}>
+          <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"8px",padding:"28px",maxWidth:"400px",width:"100%"}}>
+            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"4px"}}>REQUEST APPOINTMENT</div>
+            <div style={{color:"#555",fontSize:"13px",marginBottom:"16px"}}>{requestingShop.name}</div>
+            <span style={LS}>YOUR MESSAGE</span>
+            <textarea value={requestText} onChange={e=>setRequestText(e.target.value)} rows={5} style={{...IS,marginBottom:"8px",resize:"vertical",fontFamily:"Inter, sans-serif",lineHeight:"1.5"}}/>
+            <div style={{color:"#555",fontSize:"12px",marginBottom:"20px"}}>{requestingShop.phone?"We've drafted this for you — edit it if you'd like, then send it as a text. The shop replies straight to your phone.":"This shop's number isn't listed — try calling or visiting their website instead."}</div>
+            <div style={{display:"flex",gap:"10px"}}>
+              {requestingShop.phone?(
+                <a href={`sms:${requestingShop.phone.replace(/[^\d+]/g,"")}?&body=${encodeURIComponent(requestText)}`} style={{flex:1,textAlign:"center",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",textDecoration:"none"}} onClick={()=>setRequestingShop(null)}>SEND AS TEXT</a>
+              ):(
+                <div style={{flex:1,textAlign:"center",background:"#2A2620",color:"#555",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",borderRadius:"4px"}}>NO PHONE ON FILE</div>
+              )}
+              <button onClick={()=>setRequestingShop(null)} style={{flex:1,background:"transparent",color:"#555",border:"1px solid #2A2A2A",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
             </div>
           </div>
         </div>
