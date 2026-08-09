@@ -26677,6 +26677,100 @@ const TORQUE_SPECS = {
       },
     ],
   },
+  "Geo": {
+    "Metro": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"17mm socket",
+        spec:"45",
+        unit:"ft-lbs",
+        notes:"45 ft-lbs confirmed for the whole 1990-2001 production run per a well-cited repair-advice reference — the very earliest 1989-1990 launch models used a slightly lower 43 ft-lbs, a real minor early-production difference. Genuinely one of the lightest cars in this whole database, so don't be surprised the figure runs lower than most other vehicles.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"21",
+        unit:"ft-lbs",
+        notes:"28 Nm, directly confirmed via a genuine detailed 1999 Metro 1.3L factory torque specification document — genuinely solid, primary-source-adjacent data.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"26",
+        unit:"ft-lbs",
+        notes:"35 Nm, directly confirmed via the same genuine detailed 1999 Metro 1.3L factory torque specification document. The same source also lists the manual transaxle drain plug at a close 21 ft-lbs (28 Nm) and the automatic transaxle drain plug at a lower 17 ft-lbs (23 Nm) — don't confuse either of those with the engine oil drain plug itself.",
+      },
+    ],
+    "Prizm": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"76",
+        unit:"ft-lbs",
+        notes:"Confirmed for the whole 1990-2002 production run per a well-cited repair-advice reference — a genuine badge-engineered Toyota Corolla, and this figure matches the standard Corolla's own independently-confirmed spec of the same era exactly, real evidence of the shared underlying hardware despite the different badge.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Storm": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"86",
+        unit:"ft-lbs",
+        notes:"Confirmed for the whole 1990-1993 production run (its entire US-market lifespan) per a well-cited repair-advice reference.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Tracker": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"55",
+        unit:"ft-lbs",
+        notes:"Directly confirmed via a genuine dedicated Tracker nut/bolt torque specification compilation — the same source also lists the manual transmission fill/drain plugs at 20 ft-lbs and the automatic transmission pan bolts at a much lower 9 ft-lbs, don't confuse either with the wheel lug nuts.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"21",
+        unit:"ft-lbs",
+        notes:"Directly confirmed via the same genuine dedicated Tracker torque specification compilation — genuinely close to (and possibly the same underlying spec as) the Metro's independently-confirmed 21 ft-lb figure, given the shared basic Suzuki-sourced engine family across both cars.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car — the same dedicated compilation lists a separate differential drain plug figure (front and rear) but the exact number wasn't extracted from what we found.",
+      },
+    ],
+  },
   "GMC": {
     "Acadia": [
       {
@@ -27883,6 +27977,44 @@ const TORQUE_SPECS = {
         spec:"129",
         unit:"ft-lbs",
         notes:"175 Nm, directly confirmed straight from Tesla's own official service manual — genuinely solid, primary-source data, and independently reconfirmed across multiple other sources too. A real, important caution from the same manual: the factory 18\" steel wheel is only approved for the Standard trim — installing it on a Premium or Performance Model Y can genuinely damage the suspension.",
+      },
+    ],
+  },
+  "VinFast": {
+    "VF6": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"81",
+        unit:"ft-lbs",
+        notes:"110 Nm is a reasonable reference figure shared with the closely related VF8 (confirmed for that model's spare tire, and per an owner's forum discussion, likely applying to the regular wheels too) — not independently confirmed as VF6-specific, given how genuinely new this model is. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+    "VF7": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"81",
+        unit:"ft-lbs",
+        notes:"110 Nm is a reasonable reference figure shared with the closely related VF8 (confirmed for that model's spare tire, and per an owner's forum discussion, likely applying to the regular wheels too) — not independently confirmed as VF7-specific, given how genuinely new this model is. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+    "VF8": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"81",
+        unit:"ft-lbs",
+        notes:"110±10 N·m, confirmed straight from the owner's manual — genuinely solid, primary-source data. Worth knowing about a real, honest point of owner confusion: the manual explicitly lists this figure for the spare tire specifically, leaving some owners unsure at first whether it applies to the regular wheels too, though a fellow owner confirmed the general tightening torque spec (110±10 N·m) matches. N/A for oil drain and spark plugs, this is a pure EV.",
+      },
+    ],
+    "VF9": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"81",
+        unit:"ft-lbs",
+        notes:"110 Nm is a reasonable reference figure shared with the closely related VF8, given both share much of the same basic platform and wheel hardware — not independently confirmed as VF9-specific. N/A for oil drain and spark plugs, this is a pure EV.",
       },
     ],
   },
@@ -32353,6 +32485,146 @@ const TORQUE_SPECS = {
         spec:"Not confirmed",
         unit:"",
         notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+  },
+  "Mercury": {
+    "Cougar": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"94",
+        unit:"ft-lbs",
+        notes:"Confirmed for the final 2001-2002 generation per a well-cited repair-advice reference.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Genuinely one of the most commonly-asked, unanswered questions on Mercury-specific service Q&A sites — an owner asked this exact question about spark plug and oil torque for a Cougar without a clean confirmed answer surfacing.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Grand Marquis": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"100",
+        unit:"ft-lbs",
+        notes:"100 ft-lbs, genuinely well cross-validated — confirmed for the whole 2003-2011 production run per a well-cited repair-advice reference, and independently reconfirmed straight from a real 2009 Grand Marquis owner's manual (135 Nm, matching the 100 ft-lbs figure almost exactly). The earlier 2001-2002 launch years used a real, wider 85-105 ft-lbs range. Shares its basic Panther platform with the closely related Ford Crown Victoria and Lincoln Town Car of the same era.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's Modular V8.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Mariner": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"98",
+        unit:"ft-lbs",
+        notes:"98 ft-lbs for 2005-2007, climbing slightly to 100 ft-lbs for 2008-2009 and 2011 per a well-cited repair-advice reference — a real, if modest, generation change. Shares its basic platform with the closely related Ford Escape and Mazda Tribute of the same era.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Milan": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"98",
+        unit:"ft-lbs",
+        notes:"Confirmed for 2006-2009 and again for 2011 per a well-cited repair-advice reference — shares its basic platform with the closely related Ford Fusion of the same era.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Mountaineer": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Genuine factory owner's manual pages exist for multiple model years (1997, 2004, 2005, 2006, 2009) specifically covering 'Wheel Lug Nut Torque Specifications,' confirming the spec is officially documented, but we weren't able to extract the precise number from what we found. Shares its basic platform with the closely related Ford Explorer of the same era, which may be a useful reference.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car.",
+      },
+    ],
+    "Sable": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"21mm socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"Genuine factory owner's manual pages exist for multiple model years (2004, 2005, 2008, 2009) specifically covering wheel lug nut torque, confirming the spec is officially documented, but we weren't able to extract the precise number from what we found. Shares its basic platform with the closely related Ford Taurus of the same era, which may be a useful reference.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"Not confirmed",
+        unit:"",
+        notes:"No confirmed factory number locked in yet for this car's specific engine — a real owner specifically asked about head bolt and upper intake torque for a 1997 Sable 3.0L V6 without a clean confirmed spark plug answer surfacing in the same thread.",
       },
       {
         partName:"Oil Drain Plug",
