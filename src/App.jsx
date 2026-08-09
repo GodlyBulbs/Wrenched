@@ -34847,6 +34847,27 @@ function BrandDot({brand,size=8}){
   return <span style={{display:"inline-block",width:`${size}px`,height:`${size}px`,borderRadius:"50%",background:BRAND_COLORS[brand]||"#666",marginRight:"6px",flexShrink:0}}/>;
 }
 
+function ShopCard({shop}){
+  const directionsUrl=shop.lat&&shop.lng
+    ?`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}&destination_place_id=${shop.placeId||""}`
+    :`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shop.name+" "+(shop.address||""))}`;
+  return(
+    <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"12px",marginBottom:"8px"}}>
+        <div>
+          <div style={{color:"#E8E4DC",fontSize:"15px",fontWeight:600,marginBottom:"2px"}}>{shop.name}</div>
+          {shop.address&&<div style={{color:"#666",fontSize:"12px"}}>{shop.address}</div>}
+        </div>
+        {shop.distanceMi!=null&&<div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",whiteSpace:"nowrap"}}>{shop.distanceMi.toFixed(1)} mi</div>}
+      </div>
+      <div style={{display:"flex",gap:"8px"}}>
+        {shop.phone&&<a href={`tel:${shop.phone.replace(/[^\d+]/g,"")}`} style={{flex:1,textAlign:"center",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"9px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",textDecoration:"none"}}>CALL</a>}
+        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"9px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",textDecoration:"none"}}>DIRECTIONS</a>
+      </div>
+    </div>
+  );
+}
+
 function statusColor(item,mileage){
   if(!item.lastMiles&&!item.lastDate) return "unset";
   if(item.mileInterval==null&&item.monthInterval==null) return "green";
@@ -34865,6 +34886,77 @@ function statusColor(item,mileage){
   return "green";
 }
 const STATUS_COLORS={green:"#1CE84A",yellow:"#F5C800",red:"#FF3B3B",unset:"#444"};
+
+// Maps a car's make to the Google-Places-friendly search phrase for its factory dealer network.
+// Several brands sell through a shared dealer storefront (e.g. Fiat through Chrysler-Dodge-Jeep-Ram,
+// Jaguar through Land Rover) rather than having their own standalone dealer — those are grouped here
+// so a Fiat owner is pointed at a real CDJR+Fiat store, not left with no match.
+const BRAND_DEALER_SEARCH={
+  "Abarth":"Fiat dealer","Fiat":"Fiat dealer",
+  "Chrysler":"Chrysler Dodge Jeep Ram dealer","Dodge":"Chrysler Dodge Jeep Ram dealer","Jeep":"Chrysler Dodge Jeep Ram dealer","Ram":"Chrysler Dodge Jeep Ram dealer",
+  "Alfa Romeo":"Alfa Romeo dealer","Maserati":"Maserati dealer",
+  "Ford":"Ford dealer","Lincoln":"Lincoln dealer","Shelby":"Ford dealer",
+  "Chevrolet":"Chevrolet dealer","Buick":"Buick GMC dealer","GMC":"Buick GMC dealer","Cadillac":"Cadillac dealer",
+  "Toyota":"Toyota dealer","Lexus":"Lexus dealer","Scion":"Toyota dealer",
+  "Honda":"Honda dealer","Acura":"Acura dealer",
+  "Nissan":"Nissan dealer","Infiniti":"Infiniti dealer",
+  "Hyundai":"Hyundai dealer","Genesis":"Genesis dealer","Kia":"Kia dealer",
+  "Mazda":"Mazda dealer","Subaru":"Subaru dealer","Mitsubishi":"Mitsubishi dealer","Suzuki":"Suzuki motorcycle and auto dealer",
+  "Volkswagen":"Volkswagen dealer","Audi":"Audi dealer","Porsche":"Porsche dealer",
+  "BMW":"BMW dealer","Mini":"Mini dealer",
+  "Mercedes-Benz":"Mercedes-Benz dealer","Smart":"Mercedes-Benz dealer",
+  "Volvo":"Volvo dealer","Jaguar":"Jaguar Land Rover dealer","Land Rover":"Jaguar Land Rover dealer",
+  "Tesla":"Tesla service center","Rivian":"Rivian service center","Lucid":"Lucid service center","Polestar":"Polestar service center","VinFast":"VinFast dealer",
+  "Ferrari":"Ferrari dealer","Lamborghini":"Lamborghini dealer","Aston Martin":"Aston Martin dealer","Bentley":"Bentley dealer","Rolls-Royce":"Rolls-Royce dealer","McLaren":"McLaren dealer","Bugatti":"Bugatti dealer","Karma":"Karma Automotive dealer","Lotus":"Lotus dealer",
+  "Isuzu":"Isuzu commercial truck dealer",
+};
+
+// Brands with no current-day US factory dealer network — the dealer search is simply skipped
+// for these rather than showing an empty/misleading "dealer" result; the specialty-shop search
+// below picks up the slack instead.
+const DISCONTINUED_BRANDS=new Set(["Pontiac","Saturn","Oldsmobile","Plymouth","Mercury","Eagle","Geo","Daewoo","Hummer","Saleen","Saab"]);
+
+// Independent/specialty shops — the "straight Honda shop" or "Japanese import specialist" case.
+// Google Places doesn't tag shops by brand affinity, so this searches by the real-world language
+// independent shops actually use to advertise a marque/region specialty, grouped by country of
+// origin (shops that specialize in one German marque commonly service several, and so on).
+// Shown alongside the dealer match, not instead of it — per the original ask, both should appear.
+const SPECIALTY_SEARCH={
+  "Abarth":"Italian auto repair specialist","Fiat":"Italian auto repair specialist","Ferrari":"Italian exotic car specialist","Lamborghini":"Italian exotic car specialist","Maserati":"Italian exotic car specialist","Alfa Romeo":"Italian auto repair specialist",
+  "Toyota":"Japanese import auto repair specialist","Lexus":"Japanese import auto repair specialist","Scion":"Japanese import auto repair specialist",
+  "Honda":"Japanese import auto repair specialist","Acura":"Japanese import auto repair specialist",
+  "Nissan":"Japanese import auto repair specialist","Infiniti":"Japanese import auto repair specialist",
+  "Mazda":"Japanese import auto repair specialist","Subaru":"Japanese import auto repair specialist","Mitsubishi":"Japanese import auto repair specialist","Suzuki":"Japanese import auto repair specialist","Isuzu":"Japanese import auto repair specialist",
+  "BMW":"German auto repair specialist","Mini":"German auto repair specialist",
+  "Mercedes-Benz":"German auto repair specialist","Smart":"German auto repair specialist",
+  "Audi":"German auto repair specialist","Volkswagen":"German auto repair specialist","Porsche":"German auto repair specialist",
+  "Jaguar":"British auto repair specialist","Land Rover":"British auto repair specialist","Aston Martin":"British exotic car specialist","Bentley":"British exotic car specialist","Rolls-Royce":"British exotic car specialist","McLaren":"British exotic car specialist","Lotus":"British auto repair specialist","Bugatti":"European exotic car specialist",
+  "Volvo":"Swedish auto repair specialist","Saab":"Swedish auto repair specialist",
+  "Hyundai":"Korean auto repair specialist","Genesis":"Korean auto repair specialist","Kia":"Korean auto repair specialist","Daewoo":"Korean auto repair specialist",
+  "Ford":"domestic auto repair specialist","Lincoln":"domestic auto repair specialist","Shelby":"domestic auto repair specialist",
+  "Chevrolet":"domestic auto repair specialist","Buick":"domestic auto repair specialist","GMC":"domestic auto repair specialist","Cadillac":"domestic auto repair specialist",
+  "Chrysler":"domestic auto repair specialist","Dodge":"domestic auto repair specialist","Jeep":"domestic auto repair specialist","Ram":"domestic auto repair specialist",
+  "Pontiac":"classic American car specialist","Saturn":"domestic auto repair specialist","Oldsmobile":"classic American car specialist","Plymouth":"classic American car specialist","Mercury":"classic American car specialist","Eagle":"domestic auto repair specialist","Geo":"domestic auto repair specialist","Hummer":"domestic auto repair specialist","Saleen":"Mustang performance specialist",
+  "Tesla":"EV repair specialist","Rivian":"EV repair specialist","Lucid":"EV repair specialist","Polestar":"EV repair specialist","VinFast":"EV repair specialist","Karma":"EV repair specialist",
+};
+
+// Brand-agnostic quick-service chains — these work on essentially any car for basic services
+// (oil changes, tires, brakes) regardless of make, so they're always shown alongside the
+// brand-matched dealer/specialty results rather than filtered by brand.
+// Clean UI display label per specialty search term — the search phrases above are optimized
+// for Places API queries, not tab headers, so this maps each one to something readable.
+const SPECIALTY_LABEL={
+  "Italian auto repair specialist":"Italian Auto Specialists","Italian exotic car specialist":"Italian Exotic Specialists",
+  "Japanese import auto repair specialist":"Japanese Import Specialists",
+  "German auto repair specialist":"German Auto Specialists",
+  "British auto repair specialist":"British Auto Specialists","British exotic car specialist":"British Exotic Specialists","European exotic car specialist":"Exotic Specialists",
+  "Swedish auto repair specialist":"Swedish Auto Specialists",
+  "Korean auto repair specialist":"Korean Auto Specialists",
+  "domestic auto repair specialist":"Domestic Auto Specialists","classic American car specialist":"Classic Car Specialists","Mustang performance specialist":"Mustang Specialists",
+  "EV repair specialist":"EV Specialists",
+};
+
+const QUICK_SERVICE_SEARCH_TERMS=["Valvoline Instant Oil Change","Jiffy Lube","Take 5 Oil Change","Les Schwab Tire Center","Firestone Complete Auto Care","Midas auto repair","Pep Boys","Discount Tire"];
 
 const rotationNote=(drivetrain)=>{
   if(drivetrain==="FWD") return "Front tires wear faster on FWD cars. Rotate front-to-back: fronts move straight back, rears cross forward to the opposite front position.";
@@ -35609,6 +35701,9 @@ function AppShell(){
   const items=activeCar?getMaintenanceItems(activeCar):MAINTENANCE_ITEMS_GAS;
   const [activeTab,setActiveTab]=useState("maintenance");
   const [activeBrand,setActiveBrand]=useState(null);
+  const [shopsStatus,setShopsStatus]=useState("idle"); // idle | locating | loading | error | done
+  const [shopsError,setShopsError]=useState("");
+  const [shopsResults,setShopsResults]=useState({dealers:[],specialty:[],quickService:[]});
   const [showBell,setShowBell]=useState(false);
   const [editMileage,setEditMileage]=useState(false);
   const [tempMileage,setTempMileage]=useState("");
@@ -35659,7 +35754,7 @@ function AppShell(){
   const updateGarageItem=async(car)=>await supabase.from("garages").update({car_data:car}).eq("id",car.id);
   const deleteGarageItem=async(id)=>{await supabase.from("garages").delete().eq("id",id);setGarage(prev=>prev.filter(c=>c.id!==id));};
   const addCar=async(carData)=>{const id=await saveGarageItem(carData);if(id){setGarage(prev=>[...prev,{...carData,id}]);setView("garage");}};
-  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setView("car-detail");};
+  const openCar=(car)=>{setActiveCar(car);setActiveBrand(null);setActiveTab("maintenance");setWizardStep(-1);setExpandedHistory(null);setShopsStatus("idle");setShopsError("");setShopsResults({dealers:[],specialty:[],quickService:[]});setView("car-detail");};
   const syncCar=async(updated)=>{setGarage(prev=>prev.map(c=>c.id===updated.id?updated:c));setActiveCar(updated);await updateGarageItem(updated);};
   const toggleBuildItem=(item)=>{const exists=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);syncCar({...activeCar,build:exists?activeCar.build.filter(b=>!(b.brand===item.brand&&b.part===item.part)):[...(activeCar.build||[]),item]});};
 
@@ -35709,6 +35804,42 @@ function AppShell(){
   const getTorqueSpecs=(car)=>TORQUE_SPECS[car.make]?.[car.model]||TORQUE_SPECS["Abarth"]?.[car.model]||TORQUE_SPECS["Fiat"]?.[car.model]||[];
   const getBrands=(car)=>[...new Set(getCatalog(car).map(i=>i.brand))];
   const getCategoriesForBrand=()=>{if(!activeCar||!activeBrand)return{};const cats={};getCatalog(activeCar).filter(i=>i.brand===activeBrand).forEach(i=>{if(!cats[i.category])cats[i.category]=[];cats[i.category].push(i);});return cats;};
+
+  const findNearbyShops=()=>{
+    if(!activeCar)return;
+    if(!navigator.geolocation){setShopsStatus("error");setShopsError("Your browser doesn't support location — try searching from your phone or a different browser.");return;}
+    setShopsStatus("locating");setShopsError("");
+    const hasDealer=!DISCONTINUED_BRANDS.has(activeCar.make);
+    const dealerSearchTerm=hasDealer?(BRAND_DEALER_SEARCH[activeCar.make]||`${activeCar.make} dealer`):null;
+    const specialtySearchTerm=SPECIALTY_SEARCH[activeCar.make]||`${activeCar.make} independent auto repair specialist`;
+    navigator.geolocation.getCurrentPosition(
+      async(pos)=>{
+        setShopsStatus("loading");
+        try{
+          const res=await fetch("/api/nearby-shops",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+            lat:pos.coords.latitude,
+            lng:pos.coords.longitude,
+            dealerSearchTerm,
+            specialtySearchTerm,
+            quickServiceSearchTerms:QUICK_SERVICE_SEARCH_TERMS,
+          })});
+          if(!res.ok)throw new Error("Search failed");
+          const data=await res.json();
+          setShopsResults({dealers:data.dealers||[],specialty:data.specialty||[],quickService:data.quickService||[]});
+          setShopsStatus("done");
+        }catch(err){
+          setShopsStatus("error");
+          setShopsError("Couldn't load nearby shops right now — try again in a moment.");
+        }
+      },
+      (err)=>{
+        setShopsStatus("error");
+        if(err.code===err.PERMISSION_DENIED)setShopsError("Location access was denied. You can turn it back on in your browser or phone settings and try again.");
+        else setShopsError("Couldn't get your location — try again.");
+      },
+      {enableHighAccuracy:false,timeout:10000,maximumAge:300000}
+    );
+  };
 
   const Tab=({id,label})=>(<button onClick={()=>setActiveTab(id)} style={{background:"none",border:"none",borderBottom:activeTab===id?"2px solid #FF6B2B":"2px solid transparent",color:activeTab===id?"#FF6B2B":"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"10px 14px",cursor:"pointer",transition:"all 0.15s",whiteSpace:"nowrap"}}>{label}</button>);
 
@@ -35850,6 +35981,7 @@ function AppShell(){
               <Tab id="specs" label="TORQUE SPECS"/>
               <Tab id="mods" label="MODS"/>
               <Tab id="build" label="MY BUILD"/>
+              <Tab id="shops" label="FIND A SHOP"/>
             </div>
 
             {activeTab==="maintenance"&&(
@@ -36057,6 +36189,75 @@ function AppShell(){
                     ));})()}
                   </div>
                 )}
+              </div>
+            )}
+            {activeTab==="shops"&&(
+              <div>
+                {(()=>{
+                  const hasDealer=!DISCONTINUED_BRANDS.has(activeCar.make);
+                  const specialtyTerm=SPECIALTY_SEARCH[activeCar.make]||`${activeCar.make} independent auto repair specialist`;
+                  const specialtyLabel=SPECIALTY_LABEL[specialtyTerm]||`${activeCar.make} Specialists`;
+                  return(
+                  <div>
+                    {shopsStatus==="idle"&&(
+                      <div style={{textAlign:"center",padding:"48px 0"}}>
+                        <div style={{fontSize:"32px",marginBottom:"12px"}}>📍</div>
+                        <div style={{color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>FIND SHOPS NEAR YOU</div>
+                        <div style={{color:"#666",fontSize:"14px",marginBottom:"4px",maxWidth:"380px",margin:"0 auto 4px"}}>We'll match shops to your {activeCar.year} {activeCar.make} {activeCar.model} — {hasDealer?`your closest ${activeCar.make} dealer, `:""}real independent {activeCar.make} specialists near you, and quick-service chains nearby for oil changes and tires.</div>
+                        <div style={{color:"#444",fontSize:"12px",marginBottom:"24px"}}>We'll ask your browser for location access — nothing is shared until you approve it.</div>
+                        <button onClick={findNearbyShops} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>USE MY LOCATION</button>
+                      </div>
+                    )}
+
+                    {(shopsStatus==="locating"||shopsStatus==="loading")&&(
+                      <div style={{textAlign:"center",padding:"48px 0"}}>
+                        <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px"}}>{shopsStatus==="locating"?"GETTING YOUR LOCATION...":"SEARCHING NEARBY..."}</div>
+                      </div>
+                    )}
+
+                    {shopsStatus==="error"&&(
+                      <div style={{textAlign:"center",padding:"48px 0"}}>
+                        <div style={{color:"#FF3B3B",fontSize:"14px",marginBottom:"20px",maxWidth:"340px",margin:"0 auto 20px"}}>{shopsError}</div>
+                        <button onClick={findNearbyShops} style={{background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>TRY AGAIN</button>
+                      </div>
+                    )}
+
+                    {shopsStatus==="done"&&(
+                      <div>
+                        {hasDealer&&(
+                          <div style={{marginBottom:"32px"}}>
+                            <span style={LS}>Dealers For Your {activeCar.make}</span>
+                            {shopsResults.dealers.length===0?(
+                              <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No dealer found within range — try a specialist or quick-service shop below.</div>
+                            ):shopsResults.dealers.map((shop,i)=>(
+                              <ShopCard key={i} shop={shop}/>
+                            ))}
+                          </div>
+                        )}
+                        <div style={{marginBottom:"32px"}}>
+                          <span style={LS}>{specialtyLabel}</span>
+                          <div style={{color:"#555",fontSize:"12px",marginBottom:"10px"}}>Independent shops that focus on your brand — often a better price than the dealer for routine work.</div>
+                          {shopsResults.specialty.length===0?(
+                            <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No specialty shops found nearby — {hasDealer?"the dealer above is a solid fallback.":"try a quick-service shop below."}</div>
+                          ):shopsResults.specialty.map((shop,i)=>(
+                            <ShopCard key={i} shop={shop}/>
+                          ))}
+                        </div>
+                        <div>
+                          <span style={LS}>QUICK SERVICE NEAR YOU</span>
+                          <div style={{color:"#555",fontSize:"12px",marginBottom:"10px"}}>Any-brand chains for oil changes, tires, and basic service.</div>
+                          {shopsResults.quickService.length===0?(
+                            <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No quick-service chains found nearby.</div>
+                          ):shopsResults.quickService.map((shop,i)=>(
+                            <ShopCard key={i} shop={shop}/>
+                          ))}
+                        </div>
+                        <button onClick={findNearbyShops} style={{background:"none",border:"1px solid #2A2A2A",color:"#666",padding:"10px 20px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",marginTop:"12px"}}>REFRESH RESULTS</button>
+                      </div>
+                    )}
+                  </div>
+                  );
+                })()}
               </div>
             )}
           </div>
