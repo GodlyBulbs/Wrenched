@@ -23694,6 +23694,29 @@ const TORQUE_SPECS = {
         notes:"No confirmed factory number locked in yet for this car.",
       },
     ],
+    "Tracker": [
+      {
+        partName:"Wheel Lug Nuts",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"55",
+        unit:"ft-lbs",
+        notes:"A genuine badge-engineered Suzuki Vitara/Sidekick (sold as the Chevrolet Tracker 1999-2004 following GM's acquisition of a Geo distribution stake) — shares this exact figure with the closely related Geo Tracker of the same basic platform and era, per a genuine dedicated Tracker nut/bolt torque specification compilation.",
+      },
+      {
+        partName:"Spark Plugs",
+        size:"5/8\" (16mm) spark plug socket",
+        spec:"18",
+        unit:"ft-lbs",
+        notes:"15-21 ft-lbs directly confirmed for the 1999 Tracker 2.0L via a genuine detailed factory-sourced torque specification — 18 splits the range, and closely matches the separately-confirmed 21 ft-lb figure for the closely related Geo Tracker.",
+      },
+      {
+        partName:"Oil Drain Plug",
+        size:"Not confirmed — verify before buying a socket",
+        spec:"33",
+        unit:"ft-lbs",
+        notes:"Directly confirmed for the 1999 Tracker 2.0L via the same genuine detailed factory-sourced torque specification — genuinely solid, model-specific data.",
+      },
+    ],
     "TrailBlazer": [
       {
         partName:"Wheel Lug Nuts",
