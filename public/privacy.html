@@ -4,123 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Wrenched</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #0D0D0D;
-    color: #E8E4DC;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-  }
-  header {
-    border-bottom: 1px solid #1C1C1C;
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .dot { width: 8px; height: 8px; background: #FF6B2B; border-radius: 50%; }
-  .brand {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    letter-spacing: 4px;
-    color: #E8E4DC;
-    text-decoration: none;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 6vw, 48px);
-    letter-spacing: 2px;
-    color: #E8E4DC;
-    margin-bottom: 4px;
-  }
-  .updated { color: #666; font-size: 13px; margin-bottom: 40px; }
-  h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 2px;
-    color: #FF6B2B;
-    margin-top: 40px;
-    margin-bottom: 12px;
-  }
-  p, li { color: #B8B4AC; font-size: 15px; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: #FF6B2B; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 14px;
-  }
-  th, td {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid #1C1C1C;
-    color: #B8B4AC;
-  }
-  th {
-    color: #E8E4DC;
-    font-weight: 600;
-  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0D0D0D;color:#C8C4BC;font-family:'Inter',sans-serif;line-height:1.7;}
+  .header{border-bottom:1px solid #1C1C1C;padding:18px 24px;display:flex;align-items:center;gap:10px;}
+  .dot{width:8px;height:8px;background:#FF6B2B;border-radius:50%;}
+  .wordmark{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:#E8E4DC;}
+  .wordmark span{color:#FF6B2B;}
+  .content{max-width:640px;margin:0 auto;padding:48px 24px 80px;}
+  h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,38px);letter-spacing:1px;color:#E8E4DC;margin-bottom:4px;}
+  .updated{color:#555;font-size:13px;margin-bottom:40px;}
+  h2{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#FF6B2B;margin-top:36px;margin-bottom:10px;}
+  p{color:#999;font-size:14px;margin-bottom:14px;}
+  ul{color:#999;font-size:14px;padding-left:20px;}
+  li{margin-bottom:6px;}
+  a{color:#FF6B2B;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .footer{border-top:1px solid #1C1C1C;padding:28px 24px;text-align:center;}
+  .footer a{color:#333;font-size:11px;text-decoration:none;}
+  .footer span{color:#2A2A2A;margin:0 8px;font-size:11px;}
 </style>
 </head>
 <body>
-  <header>
+  <div class="header">
     <div class="dot"></div>
-    <a href="/" class="brand">WRENCHED</a>
-  </header>
-  <main>
-    <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: July 20, 2026</div>
+    <div class="wordmark">WRENCH<span>ED</span></div>
+  </div>
 
-    <p>This Privacy Policy explains what information Wrenched collects, why, and how it's handled. Wrenched does not sell your data, and does not run ads.</p>
+  <div class="content">
+    <h1>PRIVACY POLICY</h1>
+    <div class="updated">Last updated: September 1, 2026</div>
 
-    <h2>1. Information We Collect</h2>
-    <table>
-      <tr><th>What</th><th>Why</th></tr>
-      <tr><td>Email address, password</td><td>Account creation and login (handled securely via Supabase Auth — we never see or store your raw password)</td></tr>
-      <tr><td>Vehicles you add to your garage (make, model, year, trim, mileage, mods, service history)</td><td>To power your maintenance tracker and build recommendations — this is the core function of the App</td></tr>
-      <tr><td>Name, email, vehicle, location, and job details submitted through On-Site</td><td>To evaluate and respond to service requests. This is emailed directly to the operator and is not stored in a separate marketing database.</td></tr>
-    </table>
+    <p>Wrenched ("we," "us," "our") provides a car maintenance tracking and vehicle information app available on the web at wrenched.shop and as an app on iOS and Android. This policy explains what information we collect, why, and how it's handled.</p>
 
-    <h2>2. Third-Party Services We Use</h2>
-    <p>Wrenched relies on a small number of infrastructure providers to operate:</p>
+    <h2>INFORMATION YOU PROVIDE</h2>
+    <p><strong style="color:#C8C4BC">Account information.</strong> When you sign up, we collect your email address and a password to create your account. We use this to let you log in and to send you account-related messages (like a password reset).</p>
+    <p><strong style="color:#C8C4BC">Vehicle and maintenance data.</strong> Information you enter about your cars — year, make, model, mileage, maintenance history, and any modifications you log — is stored so you can access it across sessions. This data is yours; we don't use it for anything beyond providing the app's features to you.</p>
+
+    <h2>INFORMATION COLLECTED AUTOMATICALLY</h2>
+    <p><strong style="color:#C8C4BC">Location.</strong> If you use the "Find a Shop" feature, we ask for your device's location to show nearby repair shops, dealers, and service chains. Location is only requested when you actively use this feature — we don't track your location in the background, and you can decline the permission and use the rest of the app normally.</p>
+
+    <h2>PAYMENT INFORMATION</h2>
+    <p>When you purchase Wrenched, payment is handled directly by Stripe (on the web) or by Apple/Google (in the iOS and Android apps) — we never see or store your full card number. We do receive confirmation that a purchase was completed, which we use to unlock the app for your account.</p>
+
+    <h2>THIRD-PARTY SERVICES WE USE</h2>
     <ul>
-      <li><strong>Supabase</strong> — handles account authentication and stores your garage data</li>
-      <li><strong>Resend</strong> — delivers On-Site booking notification emails</li>
-      <li><strong>Vercel</strong> — hosts the App</li>
+      <li><strong style="color:#C8C4BC">Supabase</strong> — hosts our database and handles account authentication</li>
+      <li><strong style="color:#C8C4BC">Stripe</strong> — processes web payments</li>
+      <li><strong style="color:#C8C4BC">RevenueCat</strong> — manages in-app purchases on iOS and Android, working with Apple and Google's own payment systems</li>
+      <li><strong style="color:#C8C4BC">Google Places API</strong> — powers the "Find a Shop" feature's search for nearby repair shops</li>
     </ul>
-    <p>Each of these providers has its own privacy practices governing infrastructure-level data (like IP addresses in server logs). We only share what's necessary for the App to function — we don't sell or rent your data to anyone.</p>
+    <p>Each of these services has its own privacy practices governing the data they process on our behalf.</p>
 
-    <h2>3. What We Don't Do</h2>
-    <ul>
-      <li>We don't display ads or sell your data to advertisers</li>
-      <li>We don't share your garage data with other users unless you explicitly choose to (e.g. a future shareable build page)</li>
-      <li>We don't use your On-Site request details for anything beyond fulfilling that request</li>
-    </ul>
+    <h2>WHAT WE DON'T DO</h2>
+    <p>We don't sell your personal information. We don't show ads or share your data with advertisers.</p>
 
-    <h2>4. Your Choices</h2>
-    <p>You can update or delete the vehicles in your garage at any time from within the App. To request full account deletion or a copy of your stored data, email us — we'll handle it directly.</p>
+    <h2>DATA RETENTION AND DELETION</h2>
+    <p>We retain your account and vehicle data for as long as your account is active. If you'd like your account and associated data deleted, contact us at <a href="mailto:MattJustice1999@gmail.com">MattJustice1999@gmail.com</a> and we'll process the request.</p>
 
-    <h2>5. Data Retention</h2>
-    <p>Your account and garage data are retained as long as your account is active. If you delete your account, associated garage data is removed from our active database. On-Site request emails may persist in the operator's inbox as a normal record of business communication.</p>
+    <h2>CHILDREN'S PRIVACY</h2>
+    <p>Wrenched is not directed at children under 13, and we don't knowingly collect information from anyone under 13.</p>
 
-    <h2>6. Children's Privacy</h2>
-    <p>Wrenched is not directed at children. You must be at least 18 years old to create an account.</p>
+    <h2>CHANGES TO THIS POLICY</h2>
+    <p>If we make material changes to this policy, we'll update the date at the top of this page.</p>
 
-    <h2>7. Changes to This Policy</h2>
-    <p>If this Policy changes in a meaningful way, we'll update the date above. Significant changes affecting how your data is used will be communicated directly where possible.</p>
+    <h2>CONTACT US</h2>
+    <p>Questions about this policy or your data? Reach us at <a href="mailto:MattJustice1999@gmail.com">MattJustice1999@gmail.com</a>.</p>
+  </div>
 
-    <h2>8. Contact</h2>
-    <p>Questions about your data or this Policy? Reach out at <a href="mailto:mattjustice1999@gmail.com">mattjustice1999@gmail.com</a>.</p>
-  </main>
+  <div class="footer">
+    <a href="/terms.html">Terms</a>
+    <span>·</span>
+    <a href="/privacy.html">Privacy</a>
+  </div>
 </body>
 </html>
