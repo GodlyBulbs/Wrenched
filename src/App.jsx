@@ -1,6 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { supabase } from "./supabase";
+import { Capacitor } from "@capacitor/core";
+import { Purchases } from "@revenuecat/purchases-capacitor";
+
+// RevenueCat API keys are public-safe (they're scoped to identify your app, not
+// authenticate a user) — still kept as env vars so you're not hardcoding them,
+// and so switching between a sandbox/test project and production is a one-line change.
+// Get these from the RevenueCat dashboard: Project Settings → API Keys → App Store / Play Store.
+const REVENUECAT_API_KEY_IOS = import.meta.env.VITE_REVENUECAT_API_KEY_IOS;
+const REVENUECAT_API_KEY_ANDROID = import.meta.env.VITE_REVENUECAT_API_KEY_ANDROID;
 
 const VEHICLES = {
   "Abarth": {
@@ -35640,21 +35649,21 @@ function AddCarForm({onSave,onCancel}){
 }
 
 function SubscribeScreen({session}){
-  const [loading,setLoading]=useState(null);
+  const [loading,setLoading]=useState(false);
   const [error,setError]=useState("");
 
-  const handleSubscribe=async(plan)=>{
-    setLoading(plan);setError("");
+  const handleBuy=async()=>{
+    setLoading(true);setError("");
     try{
       const res=await fetch("/api/create-checkout-session",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({plan,userId:session.user.id,userEmail:session.user.email}),
+        body:JSON.stringify({plan:"lifetime",userId:session.user.id,userEmail:session.user.email}),
       });
       const data=await res.json();
       if(data.url)window.location.href=data.url;
-      else{setError(data.error||"Something went wrong.");setLoading(null);}
-    }catch{setError("Something went wrong.");setLoading(null);}
+      else{setError(data.error||"Something went wrong.");setLoading(false);}
+    }catch{setError("Something went wrong.");setLoading(false);}
   };
 
   return(
@@ -35667,27 +35676,116 @@ function SubscribeScreen({session}){
         <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
-        <div style={{width:"100%",maxWidth:"440px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>ONE MORE STEP</div>
-          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched runs on a subscription — no free tier, no ads. Pick a plan to unlock your garage.</p>
+        <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>YOUR TRIAL'S UP</div>
+          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
 
-          <div style={{display:"flex",flexDirection:"column",gap:"14px",marginBottom:"16px"}}>
-            <button onClick={()=>handleSubscribe("monthly")} disabled={loading} style={{background:"#131313",border:"1px solid #262626",borderRadius:"8px",padding:"20px",cursor:"pointer",textAlign:"left"}}>
-              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"1px"}}>MONTHLY</span>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:"#FF6B2B"}}>{loading==="monthly"?"...":"$5/mo"}</span>
-              </div>
-            </button>
-            <button onClick={()=>handleSubscribe("yearly")} disabled={loading} style={{background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"20px",cursor:"pointer",textAlign:"left",position:"relative"}}>
-              <div style={{position:"absolute",top:"-10px",right:"16px",background:"#FF6B2B",color:"#0D0D0D",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",padding:"3px 10px",borderRadius:"3px"}}>SAVE ~17%</div>
-              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"1px"}}>YEARLY</span>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:"#FF6B2B"}}>{loading==="yearly"?"...":"$50/yr"}</span>
-              </div>
-            </button>
-          </div>
+          <button onClick={handleBuy} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>LIFETIME ACCESS</span>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":"$9.99"}</span>
+            </div>
+            <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No renewal, ever.</div>
+          </button>
+
           {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
-          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Cancel anytime from inside the app. No hidden fees.</p>
+          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Secure checkout powered by Stripe.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// The in-app-purchase counterpart to SubscribeScreen — shown instead of it when
+// running as a native iOS/Android app (Capacitor.isNativePlatform()), since Apple
+// and Google require purchases that unlock app content to go through their own
+// billing systems rather than an external processor like Stripe. Mirrors the same
+// layout/copy as SubscribeScreen so the two feel like the same app, just wired to
+// RevenueCat's purchasePackage() instead of a Stripe checkout redirect.
+function NativeSubscribeScreen({session,onPurchased}){
+  const [offerings,setOfferings]=useState(null);
+  const [offeringsError,setOfferingsError]=useState("");
+  const [loading,setLoading]=useState(false);
+  const [error,setError]=useState("");
+  const [restoring,setRestoring]=useState(false);
+
+  useEffect(()=>{
+    let cancelled=false;
+    Purchases.getOfferings().then(({current})=>{
+      if(cancelled)return;
+      if(!current||!current.availablePackages?.length){setOfferingsError("Lifetime access isn't available right now — try again in a moment.");return;}
+      setOfferings(current);
+    }).catch(()=>{if(!cancelled)setOfferingsError("Couldn't load pricing — check your connection and try again.");});
+    return()=>{cancelled=true;};
+  },[]);
+
+  const syncAfterPurchase=async()=>{
+    try{
+      await fetch("/api/sync-subscription",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:session.user.id})});
+    }catch{/* the webhook will still catch this up shortly even if this call fails */}
+    onPurchased();
+  };
+
+  const handlePurchase=async()=>{
+    if(!lifetimePkg)return;
+    setLoading(true);setError("");
+    try{
+      await Purchases.purchasePackage({aPackage:lifetimePkg});
+      await syncAfterPurchase();
+    }catch(err){
+      if(!err?.userCancelled)setError("Purchase didn't go through — try again.");
+      setLoading(false);
+    }
+  };
+
+  const handleRestore=async()=>{
+    setRestoring(true);setError("");
+    try{
+      await Purchases.restorePurchases();
+      await syncAfterPurchase();
+    }catch{
+      setError("Nothing to restore on this account.");
+    }
+    setRestoring(false);
+  };
+
+  // RevenueCat's standard identifier for a one-time, non-renewing product —
+  // matches the $rc_lifetime package identifier convention (packageType
+  // "LIFETIME") set up on the Offering in the RevenueCat dashboard.
+  const lifetimePkg=offerings?.availablePackages?.find(p=>p.packageType==="LIFETIME");
+
+  return(
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <Wordmark/>
+        </div>
+        <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+      </div>
+      <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
+        <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>YOUR TRIAL'S UP</div>
+          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
+
+          {offeringsError&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{offeringsError}</div>}
+
+          {!offerings&&!offeringsError&&(
+            <div style={{color:"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"20px 0"}}>LOADING PRICING...</div>
+          )}
+
+          {offerings&&lifetimePkg&&(
+            <button onClick={handlePurchase} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>LIFETIME ACCESS</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":lifetimePkg.product.priceString}</span>
+              </div>
+              <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No renewal, ever.</div>
+            </button>
+          )}
+          {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
+          <button onClick={handleRestore} disabled={restoring} style={{background:"none",border:"none",color:"#666",fontSize:"12px",marginTop:"20px",cursor:"pointer",textDecoration:"underline"}}>{restoring?"Checking...":"Restore Purchase"}</button>
+          <p style={{color:"#444",fontSize:"11px",marginTop:"16px"}}>Already bought Wrenched on another device? Use Restore Purchase above — it's tied to your {Capacitor.getPlatform()==="ios"?"Apple ID":"Google account"}, not this specific phone.</p>
         </div>
       </div>
     </div>
@@ -35731,7 +35829,7 @@ function AppShell(){
     return()=>subscription.unsubscribe();
   },[]);
 
-  useEffect(()=>{
+  const refreshSubscription=()=>{
     if(!session){setSubLoading(false);return;}
     setSubLoading(true);
     supabase.from("subscriptions").select("*").eq("user_id",session.user.id).maybeSingle().then(({data})=>{
@@ -35741,6 +35839,20 @@ function AppShell(){
       setSubPeriodEnd(data?.current_period_end||null);
       setSubLoading(false);
     });
+  };
+
+  useEffect(()=>{refreshSubscription();},[session]);
+
+  // RevenueCat is only relevant inside the native iOS/Android app — on web,
+  // Stripe checkout handles everything and this whole block is skipped.
+  // appUserID is set to the Supabase user id so RevenueCat's webhook events
+  // and the sync-subscription endpoint can write straight into the same
+  // subscriptions row Stripe already uses, keyed the same way.
+  useEffect(()=>{
+    if(!session||!Capacitor.isNativePlatform())return;
+    const apiKey=Capacitor.getPlatform()==="ios"?REVENUECAT_API_KEY_IOS:REVENUECAT_API_KEY_ANDROID;
+    if(!apiKey)return;
+    Purchases.configure({apiKey,appUserID:session.user.id}).catch(err=>console.error("RevenueCat configure failed:",err));
   },[session]);
 
   useEffect(()=>{
@@ -35870,13 +35982,14 @@ function AppShell(){
     </Routes>
   );
   if(subLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
-  const GRACE_PERIOD_MS=5*24*60*60*1000;
-  const inGracePeriod=subStatus==="past_due"&&subUpdatedAt&&(Date.now()-new Date(subUpdatedAt).getTime())<GRACE_PERIOD_MS;
-  const graceDaysLeft=inGracePeriod?Math.ceil((GRACE_PERIOD_MS-(Date.now()-new Date(subUpdatedAt).getTime()))/(24*60*60*1000)):0;
+  // Grace-period/past-due handling was removed here — it only made sense for
+  // recurring billing, where a renewal charge could fail. A one-time lifetime
+  // purchase has no renewal, so once subStatus is "active" it stays active
+  // permanently; there's nothing that can lapse.
   const inTrial=subStatus==="trialing";
   const trialDaysLeft=inTrial&&subPeriodEnd?Math.max(0,Math.ceil((new Date(subPeriodEnd).getTime()-Date.now())/(24*60*60*1000))):0;
   const isOwner=session?.user?.email?.toLowerCase()===OWNER_EMAIL;
-  if(!isOwner&&subStatus!=="active"&&!inTrial&&!inGracePeriod)return<SubscribeScreen session={session}/>;
+  if(!isOwner&&subStatus!=="active"&&!inTrial)return Capacitor.isNativePlatform()?<NativeSubscribeScreen session={session} onPurchased={refreshSubscription}/>:<SubscribeScreen session={session}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
@@ -35885,18 +35998,7 @@ function AppShell(){
 
       {inTrial&&(
         <div style={{background:"#10202A",borderBottom:"1px solid #3B9AE8",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
-          <span style={{color:"#3B9AE8",fontSize:"13px"}}>You're on a free trial — <b>{trialDaysLeft} day{trialDaysLeft!==1?"s":""}</b> left before your card is charged.</span>
-        </div>
-      )}
-
-      {inGracePeriod&&(
-        <div style={{background:"#2A1810",borderBottom:"1px solid #FF6B2B",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
-          <span style={{color:"#FF6B2B",fontSize:"13px"}}>Your last payment failed — you have <b>{graceDaysLeft} day{graceDaysLeft!==1?"s":""}</b> to update your card before losing access.</span>
-          <button onClick={async()=>{
-            const res=await fetch("/api/create-portal-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
-            const data=await res.json();
-            if(data.url)window.location.href=data.url;
-          }} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px"}}>UPDATE CARD</button>
+          <span style={{color:"#3B9AE8",fontSize:"13px"}}>You're on a free trial — <b>{trialDaysLeft} day{trialDaysLeft!==1?"s":""}</b> left. Unlock Wrenched forever anytime for a one-time $9.99.</span>
         </div>
       )}
 
@@ -35924,12 +36026,15 @@ function AppShell(){
           {session?.user?.email?.toLowerCase()===OWNER_EMAIL&&(
             <span style={{background:"rgba(255,107,43,0.12)",border:"1px solid #FF6B2B",color:"#FF6B2B",padding:"5px 12px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"10px",letterSpacing:"2px"}}>OWNER</span>
           )}
-          {subCustomerId&&(
+          {subCustomerId&&subStatus==="active"&&(
             <button onClick={async()=>{
               const res=await fetch("/api/create-portal-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
               const data=await res.json();
               if(data.url)window.location.href=data.url;
-            }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Manage subscription</button>
+            }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Billing history</button>
+          )}
+          {!subCustomerId&&Capacitor.isNativePlatform()&&subStatus==="active"&&(
+            <button onClick={()=>window.open(Capacitor.getPlatform()==="ios"?"https://apps.apple.com/account/purchase-history":"https://play.google.com/store/account/orderhistory","_blank")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Purchase history</button>
           )}
           <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>

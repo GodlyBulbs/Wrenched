@@ -1,135 +1,94 @@
+// /api/stripe-webhook.js
+//
+// Handles Stripe events for the one-time $9.99 lifetime purchase. This is
+// simpler than a subscription webhook needed to be — there's no renewal,
+// no cancellation, no "past due" to track. The only event that matters is
+// "checkout.session.completed" for a payment-mode session: the moment that
+// fires, the purchase is done and access should be permanent.
+//
+// Writes into the same `subscriptions` table RevenueCat's webhook also
+// writes to (keyed by user_id) — `status: "active"` here means the same
+// thing regardless of whether it came from Stripe or RevenueCat.
+//
+// SETUP REQUIRED:
+// 1. In the Stripe Dashboard: Developers → Webhooks → Add endpoint
+//    URL: https://wrenched.shop/api/stripe-webhook
+//    Event to send: checkout.session.completed
+// 2. Copy the generated "Signing secret" (starts with whsec_) and add it
+//    to Vercel as: STRIPE_WEBHOOK_SECRET
+// 3. This also needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY, same as
+//    the RevenueCat webhook — should already be set from that setup.
+//
+// Vercel-specific note: Stripe webhook signature verification needs the
+// RAW request body, not Vercel's default auto-parsed JSON — the config
+// export below disables Vercel's body parsing so the raw buffer is
+// available for Stripe's signature check.
+
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import { buffer } from "micro";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-// Service role key bypasses RLS — required here because the webhook has
-// no logged-in user context, but needs to write subscription status for
-// whichever user Stripe tells us just paid, renewed, or canceled.
 const supabaseAdmin = createClient(
-  process.env.VITE_SUPABASE_URL,
+  process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-async function upsertSubscription({ userId, customerId, subscriptionId, status, plan, currentPeriodEnd }) {
-  const { data, error } = await supabaseAdmin.from("subscriptions").upsert(
-    {
-      user_id: userId,
-      stripe_customer_id: customerId,
-      stripe_subscription_id: subscriptionId,
-      status,
-      plan,
-      current_period_end: currentPeriodEnd ? new Date(currentPeriodEnd * 1000).toISOString() : null,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "user_id" }
-  );
-  if (error) {
-    console.error("SUPABASE WRITE FAILED:", JSON.stringify(error));
-    throw new Error("Supabase write failed: " + error.message);
-  }
-  console.log("Subscription upserted successfully for user:", userId);
-  return data;
-}
+export const config = {
+  api: { bodyParser: false },
+};
 
-// Vercel's Web API-style handler — request.text() gives the true raw body,
-// which is what Stripe's signature check requires. This avoids the
-// Next.js-only "config.api.bodyParser" convention, which Vercel's native
-// runtime doesn't actually recognize.
-export async function POST(request) {
-  const rawBody = await request.text();
-  const signature = request.headers.get("stripe-signature");
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  const sig = req.headers["stripe-signature"];
+  const rawBody = await buffer(req);
 
   let event;
   try {
-    event = stripe.webhooks.constructEvent(rawBody, signature, process.env.STRIPE_WEBHOOK_SECRET);
+    event = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
-    console.error("Webhook signature verification failed:", err.message);
-    return new Response(JSON.stringify({ error: "Invalid signature" }), { status: 400 });
+    console.error("Stripe webhook signature verification failed:", err.message);
+    return res.status(400).json({ error: "Invalid signature" });
   }
 
-  try {
-    switch (event.type) {
-      case "checkout.session.completed": {
-        const session = event.data.object;
-        const userId = session.metadata?.userId;
-        const plan = session.metadata?.plan;
-        console.log("checkout.session.completed received. userId:", userId, "plan:", plan, "session.metadata:", JSON.stringify(session.metadata));
-        if (userId) {
-          const subscription = await stripe.subscriptions.retrieve(session.subscription);
-          await upsertSubscription({
-            userId,
-            customerId: session.customer,
-            subscriptionId: session.subscription,
-            status: subscription.status,
-            plan,
-            currentPeriodEnd: subscription.current_period_end,
-          });
-        } else {
-          console.error("NO userId found in session metadata — skipping write. Full session metadata was:", JSON.stringify(session.metadata));
-        }
-        break;
-      }
-
-      case "customer.subscription.updated": {
-        const subscription = event.data.object;
-        const userId = subscription.metadata?.userId;
-        if (userId) {
-          await upsertSubscription({
-            userId,
-            customerId: subscription.customer,
-            subscriptionId: subscription.id,
-            status: subscription.status,
-            plan: subscription.metadata?.plan,
-            currentPeriodEnd: subscription.current_period_end,
-          });
-        }
-        break;
-      }
-
-      case "customer.subscription.deleted": {
-        const subscription = event.data.object;
-        const userId = subscription.metadata?.userId;
-        if (userId) {
-          await upsertSubscription({
-            userId,
-            customerId: subscription.customer,
-            subscriptionId: subscription.id,
-            status: "canceled",
-            plan: subscription.metadata?.plan,
-            currentPeriodEnd: subscription.current_period_end,
-          });
-        }
-        break;
-      }
-
-      case "invoice.payment_failed": {
-        const invoice = event.data.object;
-        if (invoice.subscription) {
-          const subscription = await stripe.subscriptions.retrieve(invoice.subscription);
-          const userId = subscription.metadata?.userId;
-          if (userId) {
-            await upsertSubscription({
-              userId,
-              customerId: subscription.customer,
-              subscriptionId: subscription.id,
-              status: "past_due",
-              plan: subscription.metadata?.plan,
-              currentPeriodEnd: subscription.current_period_end,
-            });
-          }
-        }
-        break;
-      }
-
-      default:
-        // Other event types are fine to ignore — we only act on the ones above.
-        break;
+  if (event.type === "checkout.session.completed") {
+    const session = event.data.object;
+    // Only act on payment-mode sessions (the lifetime purchase) — if this
+    // endpoint ever needs to handle other checkout types later, this guard
+    // keeps them from being mistakenly treated as a lifetime unlock.
+    if (session.mode !== "payment") {
+      return res.status(200).json({ received: true, skipped: true });
     }
 
-    return new Response(JSON.stringify({ received: true }), { status: 200 });
-  } catch (err) {
-    console.error("Webhook handler error:", err.message);
-    return new Response(JSON.stringify({ error: "Webhook handler failed" }), { status: 500 });
+    const userId = session.client_reference_id || session.metadata?.userId;
+    if (!userId) {
+      console.error("stripe-webhook: checkout session had no userId reference");
+      return res.status(200).json({ received: true, skipped: true });
+    }
+
+    try {
+      const { error } = await supabaseAdmin
+        .from("subscriptions")
+        .upsert(
+          {
+            user_id: userId,
+            status: "active",
+            stripe_customer_id: session.customer || null,
+            current_period_end: null, // lifetime — no expiry
+            updated_at: new Date().toISOString(),
+            billing_source: "stripe",
+          },
+          { onConflict: "user_id" }
+        );
+      if (error) throw error;
+    } catch (err) {
+      console.error("stripe-webhook: failed to update subscription:", err);
+      return res.status(500).json({ error: "Failed to update subscription" });
+    }
   }
+
+  return res.status(200).json({ received: true });
 }
