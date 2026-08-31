@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Terms of Service — Wrenched</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
@@ -16,7 +16,7 @@
   }
   header {
     border-bottom: 1px solid #1C1C1C;
-    padding: 18px 24px;
+    padding: calc(18px + env(safe-area-inset-top)) 24px 18px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -32,7 +32,7 @@
   main {
     max-width: 720px;
     margin: 0 auto;
-    padding: 48px 24px 96px;
+    padding: 48px 24px calc(96px + env(safe-area-inset-bottom));
   }
   h1 {
     font-family: 'Bebas Neue', sans-serif;

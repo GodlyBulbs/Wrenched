@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Wrenched — On-Site</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
@@ -43,10 +43,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 32px;
+    padding: calc(20px + env(safe-area-inset-top)) 32px 20px;
     border-bottom: 1px solid var(--line);
     position: sticky;
-    top: 0;
+    top: env(safe-area-inset-top);
     background: rgba(13,13,13,0.92);
     backdrop-filter: blur(8px);
     z-index: 100;
@@ -481,7 +481,7 @@
 
   footer {
     text-align: center;
-    padding: 40px 24px 60px;
+    padding: 40px 24px calc(60px + env(safe-area-inset-bottom));
     font-family: var(--mono);
     font-size: 11px;
     color: var(--text-dimmer);

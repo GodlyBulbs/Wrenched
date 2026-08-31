@@ -35295,7 +35295,7 @@ function Wordmark({size=20}){
 function LandingPage(){
   const navigate=useNavigate();
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",color:"#E8E4DC"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",color:"#E8E4DC",paddingTop:"env(safe-area-inset-top)"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
@@ -35375,7 +35375,7 @@ function AuthScreen({initialMode="login"}){
     finally{setLoading(false);}
   };
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
         <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
         <Wordmark/>
@@ -35448,7 +35448,7 @@ function ResetPasswordScreen({onDone}){
     finally{setLoading(false);}
   };
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
         <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
         <Wordmark/>
@@ -35667,7 +35667,7 @@ function SubscribeScreen({session}){
   };
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
@@ -35755,7 +35755,7 @@ function NativeSubscribeScreen({session,onPurchased}){
   const lifetimePkg=offerings?.availablePackages?.find(p=>p.packageType==="LIFETIME");
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
       <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
@@ -35993,7 +35993,7 @@ function AppShell(){
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
 
       {inTrial&&(
@@ -36002,7 +36002,7 @@ function AppShell(){
         </div>
       )}
 
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,background:"#0D0D0D",zIndex:100}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:"env(safe-area-inset-top)",background:"#0D0D0D",zIndex:100}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}} onClick={()=>setView("garage")}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
           <Wordmark/>
