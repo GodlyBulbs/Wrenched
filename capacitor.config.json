@@ -1,5 +1,8 @@
 {
   "appId": "shop.wrenched.app",
   "appName": "Wrenched",
-  "webDir": "dist"
+  "webDir": "dist",
+  "ios": {
+    "contentInset": "always"
+  }
 }

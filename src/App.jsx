@@ -34844,6 +34844,11 @@ const BRAND_LINKS = {
 };
 
 const OWNER_EMAIL="mattjustice1999@gmail.com";
+// Native apps (Capacitor) load from a local bundle, not from wrenched.shop itself —
+// a relative fetch("/api/...") would try to hit that local origin and fail silently.
+// On the actual website this constant is a no-op (relative and absolute resolve the
+// same), so it's safe to always use it rather than branch on platform.
+const API_BASE=Capacitor.isNativePlatform()?"https://wrenched.shop":"";
 const roundToTen=(n)=>Math.round(n/10)*10;
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
 
@@ -35295,8 +35300,8 @@ function Wordmark({size=20}){
 function LandingPage(){
   const navigate=useNavigate();
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",color:"#E8E4DC",paddingTop:"env(safe-area-inset-top)"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",color:"#E8E4DC"}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
           <Wordmark/>
@@ -35648,14 +35653,14 @@ function AddCarForm({onSave,onCancel}){
   );
 }
 
-function SubscribeScreen({session}){
+function SubscribeScreen({session,onBack}){
   const [loading,setLoading]=useState(false);
   const [error,setError]=useState("");
 
   const handleBuy=async()=>{
     setLoading(true);setError("");
     try{
-      const res=await fetch("/api/create-checkout-session",{
+      const res=await fetch(`${API_BASE}/api/create-checkout-session`,{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({plan:"lifetime",userId:session.user.id,userEmail:session.user.email}),
@@ -35667,17 +35672,20 @@ function SubscribeScreen({session}){
   };
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
-        <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+        <div style={{display:"flex",gap:"8px"}}>
+          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
+          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+        </div>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>YOUR TRIAL'S UP</div>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>{onBack?"UNLOCK EARLY":"YOUR TRIAL'S UP"}</div>
           <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
 
           <button onClick={handleBuy} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
@@ -35702,7 +35710,7 @@ function SubscribeScreen({session}){
 // billing systems rather than an external processor like Stripe. Mirrors the same
 // layout/copy as SubscribeScreen so the two feel like the same app, just wired to
 // RevenueCat's purchasePackage() instead of a Stripe checkout redirect.
-function NativeSubscribeScreen({session,onPurchased}){
+function NativeSubscribeScreen({session,onPurchased,onBack}){
   const [offerings,setOfferings]=useState(null);
   const [offeringsError,setOfferingsError]=useState("");
   const [loading,setLoading]=useState(false);
@@ -35721,7 +35729,7 @@ function NativeSubscribeScreen({session,onPurchased}){
 
   const syncAfterPurchase=async()=>{
     try{
-      await fetch("/api/sync-subscription",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:session.user.id})});
+      await fetch(`${API_BASE}/api/sync-subscription`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:session.user.id})});
     }catch{/* the webhook will still catch this up shortly even if this call fails */}
     onPurchased();
   };
@@ -35755,17 +35763,20 @@ function NativeSubscribeScreen({session,onPurchased}){
   const lifetimePkg=offerings?.availablePackages?.find(p=>p.packageType==="LIFETIME");
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
           <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
-        <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+        <div style={{display:"flex",gap:"8px"}}>
+          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
+          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+        </div>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>YOUR TRIAL'S UP</div>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>{onBack?"UNLOCK EARLY":"YOUR TRIAL'S UP"}</div>
           <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
 
           {offeringsError&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{offeringsError}</div>}
@@ -35802,6 +35813,7 @@ function AppShell(){
   const [activeTab,setActiveTab]=useState("maintenance");
   const [activeBrand,setActiveBrand]=useState(null);
   const [shopsStatus,setShopsStatus]=useState("idle"); // idle | locating | loading | error | done
+  const [showUpgrade,setShowUpgrade]=useState(false);
   const [shopsError,setShopsError]=useState("");
   const [shopsResults,setShopsResults]=useState({dealers:[],specialty:[],quickService:[]});
   const [showBell,setShowBell]=useState(false);
@@ -35824,7 +35836,7 @@ function AppShell(){
     supabase.auth.getSession().then(({data:{session}})=>{setSession(session);setAuthLoading(false);});
     const{data:{subscription}}=supabase.auth.onAuthStateChange((event,session)=>{
       if(event==="PASSWORD_RECOVERY")setIsRecovery(true);
-      setSession(session);setAuthLoading(false);
+      setSession(session);setAuthLoading(false);setShowUpgrade(false);
     });
     return()=>subscription.unsubscribe();
   },[]);
@@ -35930,7 +35942,7 @@ function AppShell(){
       async(pos)=>{
         setShopsStatus("loading");
         try{
-          const res=await fetch("/api/nearby-shops",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+          const res=await fetch(`${API_BASE}/api/nearby-shops`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
             lat:pos.coords.latitude,
             lng:pos.coords.longitude,
             dealerSearchTerm,
@@ -35989,7 +36001,7 @@ function AppShell(){
   const inTrial=subStatus==="trialing";
   const trialDaysLeft=inTrial&&subPeriodEnd?Math.max(0,Math.ceil((new Date(subPeriodEnd).getTime()-Date.now())/(24*60*60*1000))):0;
   const isOwner=session?.user?.email?.toLowerCase()===OWNER_EMAIL;
-  if(!isOwner&&subStatus!=="active"&&!inTrial)return Capacitor.isNativePlatform()?<NativeSubscribeScreen session={session} onPurchased={refreshSubscription}/>:<SubscribeScreen session={session}/>;
+  if(!isOwner&&(subStatus!=="active"&&!inTrial||showUpgrade))return Capacitor.isNativePlatform()?<NativeSubscribeScreen session={session} onPurchased={()=>{refreshSubscription();setShowUpgrade(false);}} onBack={inTrial?()=>setShowUpgrade(false):null}/>:<SubscribeScreen session={session} onBack={inTrial?()=>setShowUpgrade(false):null}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
@@ -35999,6 +36011,7 @@ function AppShell(){
       {inTrial&&(
         <div style={{background:"#10202A",borderBottom:"1px solid #3B9AE8",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
           <span style={{color:"#3B9AE8",fontSize:"13px"}}>You're on a free trial — <b>{trialDaysLeft} day{trialDaysLeft!==1?"s":""}</b> left. Unlock Wrenched forever anytime for a one-time $9.99.</span>
+          <button onClick={()=>setShowUpgrade(true)} style={{background:"#3B9AE8",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>UNLOCK NOW</button>
         </div>
       )}
 
@@ -36028,7 +36041,7 @@ function AppShell(){
           )}
           {subCustomerId&&subStatus==="active"&&(
             <button onClick={async()=>{
-              const res=await fetch("/api/create-portal-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
+              const res=await fetch(`${API_BASE}/api/create-portal-session`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
               const data=await res.json();
               if(data.url)window.location.href=data.url;
             }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Billing history</button>
