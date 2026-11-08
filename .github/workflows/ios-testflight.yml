@@ -1,0 +1,110 @@
+# Builds the iOS app on GitHub's Mac (with Xcode 26) and uploads it to
+# TestFlight. No local Mac needed.
+#
+# Run it from GitHub: Actions tab → "iOS → TestFlight" → Run workflow.
+# (Manual on purpose, so ordinary pushes don't spam App Store Connect.)
+#
+# One-time setup — repo Settings → Secrets and variables → Actions → New secret:
+#   ASC_KEY_ID      Key ID of an App Store Connect API key (Admin access)
+#   ASC_ISSUER_ID   Issuer ID shown above the keys list
+#   ASC_KEY_P8      The full contents of the downloaded AuthKey_XXXX.p8 file
+#
+# Signing is automatic: Xcode uses the API key to create/fetch a cloud-managed
+# distribution certificate and provisioning profile, so nothing has to be
+# exported from a Mac.
+
+name: iOS → TestFlight
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ios-testflight
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash  # explicit bash = -eo pipefail, so a failed xcodebuild fails the step
+
+jobs:
+  build-and-upload:
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      TEAM_ID: 5H844DUW9U
+      KEY_PATH: ${{ github.workspace }}/AuthKey.p8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and build web app
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sync Capacitor (copies web build, runs pod install)
+        run: npx cap sync ios
+
+      - name: Write App Store Connect API key
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          if [ -z "$ASC_KEY_P8" ]; then echo "::error::ASC_KEY_P8 secret is missing"; exit 1; fi
+          printf '%s\n' "$ASC_KEY_P8" > "$KEY_PATH"
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Archive
+        run: |
+          # Build number must go up with every upload; offset past any
+          # builds already sent manually.
+          BUILD_NUMBER=$((GITHUB_RUN_NUMBER + 10))
+          echo "Build number: $BUILD_NUMBER"
+          xcodebuild archive \
+            -workspace ios/App/App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "${{ secrets.ASC_KEY_ID }}" \
+            -authenticationKeyIssuerID "${{ secrets.ASC_ISSUER_ID }}" \
+            DEVELOPMENT_TEAM="$TEAM_ID" \
+            CODE_SIGN_STYLE=Automatic \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
+            | tail -n 200
+
+      - name: Export and upload to App Store Connect
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${TEAM_ID}</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>uploadSymbols</key><true/>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "${{ secrets.ASC_KEY_ID }}" \
+            -authenticationKeyIssuerID "${{ secrets.ASC_ISSUER_ID }}"
+
+      - name: Clean up key
+        if: always()
+        run: rm -f "$KEY_PATH"
