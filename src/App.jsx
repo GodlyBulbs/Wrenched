@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import { supabase } from "./supabase";
 import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
+import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions } from "./ads";
 
 // RevenueCat API keys are public-safe (they're scoped to identify your app, not
 // authenticate a user) — still kept as env vars so you're not hardcoding them,
@@ -35663,7 +35664,7 @@ function SubscribeScreen({session,onBack}){
       const res=await fetch(`${API_BASE}/api/create-checkout-session`,{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({plan:"lifetime",userId:session.user.id,userEmail:session.user.email}),
+        body:JSON.stringify({plan:"remove_ads",userId:session.user.id,userEmail:session.user.email}),
       });
       const data=await res.json();
       if(data.url)window.location.href=data.url;
@@ -35685,19 +35686,19 @@ function SubscribeScreen({session,onBack}){
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>{onBack?"UNLOCK EARLY":"YOUR TRIAL'S UP"}</div>
-          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>GO AD-FREE</div>
+          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
 
           <button onClick={handleBuy} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>LIFETIME ACCESS</span>
-              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":"$9.99"}</span>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>REMOVE ADS</span>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":"$4.99"}</span>
             </div>
-            <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No renewal, ever.</div>
+            <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
           </button>
 
           {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
-          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Secure checkout powered by Stripe.</p>
+          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Secure checkout powered by Stripe. Already removed ads in the iPhone or Android app? Sign in with the same account and it carries over.</p>
         </div>
       </div>
     </div>
@@ -35721,7 +35722,7 @@ function NativeSubscribeScreen({session,onPurchased,onBack}){
     let cancelled=false;
     Purchases.getOfferings().then(({current})=>{
       if(cancelled)return;
-      if(!current||!current.availablePackages?.length){setOfferingsError("Lifetime access isn't available right now — try again in a moment.");return;}
+      if(!current||!current.availablePackages?.length){setOfferingsError("Remove Ads isn't available right now — try again in a moment.");return;}
       setOfferings(current);
     }).catch(()=>{if(!cancelled)setOfferingsError("Couldn't load pricing — check your connection and try again.");});
     return()=>{cancelled=true;};
@@ -35776,8 +35777,8 @@ function NativeSubscribeScreen({session,onPurchased,onBack}){
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>{onBack?"UNLOCK EARLY":"YOUR TRIAL'S UP"}</div>
-          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Unlock Wrenched once, keep it forever — no recurring charge, no subscription to remember to cancel.</p>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>GO AD-FREE</div>
+          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
 
           {offeringsError&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{offeringsError}</div>}
 
@@ -35788,15 +35789,15 @@ function NativeSubscribeScreen({session,onPurchased,onBack}){
           {offerings&&lifetimePkg&&(
             <button onClick={handlePurchase} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>LIFETIME ACCESS</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>REMOVE ADS</span>
                 <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":lifetimePkg.product.priceString}</span>
               </div>
-              <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No renewal, ever.</div>
+              <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
             </button>
           )}
           {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
           <button onClick={handleRestore} disabled={restoring} style={{background:"none",border:"none",color:"#666",fontSize:"12px",marginTop:"20px",cursor:"pointer",textDecoration:"underline"}}>{restoring?"Checking...":"Restore Purchase"}</button>
-          <p style={{color:"#444",fontSize:"11px",marginTop:"16px"}}>Already bought Wrenched on another device? Use Restore Purchase above — it's tied to your {Capacitor.getPlatform()==="ios"?"Apple ID":"Google account"}, not this specific phone.</p>
+          <p style={{color:"#444",fontSize:"11px",marginTop:"16px"}}>Already removed ads on another device? Use Restore Purchase above — it's tied to your {Capacitor.getPlatform()==="ios"?"Apple ID":"Google account"}, not this specific phone.</p>
         </div>
       </div>
     </div>
@@ -35867,6 +35868,18 @@ function AppShell(){
     Purchases.configure({apiKey,appUserID:session.user.id}).catch(err=>console.error("RevenueCat configure failed:",err));
   },[session]);
 
+  // Free with ads: everyone gets the full app. Ads are skipped for the owner
+  // account and for anyone with an "active" row — which is what both a Stripe
+  // payment and a RevenueCat purchase write, including people who bought the
+  // old $9.99 lifetime unlock, so they're automatically ad-free.
+  const adFree=session?.user?.email?.toLowerCase()===OWNER_EMAIL||subStatus==="active";
+  const [bannerHeight,setBannerHeight]=useState(0);
+  useEffect(()=>{
+    if(!session||subLoading||adFree||showUpgrade){removeBanner();setBannerHeight(0);return;}
+    showBanner(setBannerHeight);
+    preloadInterstitial();
+  },[session,subLoading,adFree,showUpgrade]);
+
   useEffect(()=>{
     if(!session)return;
     supabase.from("garages").select("*").eq("user_id",session.user.id).then(({data,error})=>{
@@ -35914,6 +35927,7 @@ function AppShell(){
     const newMileage=Math.max(activeCar.mileage||0,highestEntered);
     syncCar({...activeCar,maintenance,mileage:newMileage});
     setWizardStep(-1);
+    if(!adFree)maybeShowInterstitial();
   };
 
   const markDone=(item)=>{setDoneItem(item);setDoneMileageInput(String(activeCar.mileage||0));};
@@ -35922,6 +35936,7 @@ function AppShell(){
     const entry={miles,date:new Date().toISOString()};
     syncCar({...activeCar,maintenance:activeCar.maintenance.map(i=>i.name===doneItem.name?{...i,lastMiles:miles,lastDate:entry.date,history:[entry,...(i.history||[])]}:i),mileage:miles});
     setDoneItem(null);
+    if(!adFree)maybeShowInterstitial();
   };
   const [expandedHistory,setExpandedHistory]=useState(null);
   const updateMileage=()=>{syncCar({...activeCar,mileage:roundToTen(parseInt(tempMileage)||0)});setEditMileage(false);};
@@ -35998,20 +36013,19 @@ function AppShell(){
   // recurring billing, where a renewal charge could fail. A one-time lifetime
   // purchase has no renewal, so once subStatus is "active" it stays active
   // permanently; there's nothing that can lapse.
-  const inTrial=subStatus==="trialing";
-  const trialDaysLeft=inTrial&&subPeriodEnd?Math.max(0,Math.ceil((new Date(subPeriodEnd).getTime()-Date.now())/(24*60*60*1000))):0;
-  const isOwner=session?.user?.email?.toLowerCase()===OWNER_EMAIL;
-  if(!isOwner&&(subStatus!=="active"&&!inTrial||showUpgrade))return Capacitor.isNativePlatform()?<NativeSubscribeScreen session={session} onPurchased={()=>{refreshSubscription();setShowUpgrade(false);}} onBack={inTrial?()=>setShowUpgrade(false):null}/>:<SubscribeScreen session={session} onBack={inTrial?()=>setShowUpgrade(false):null}/>;
+  const closeUpgrade=()=>setShowUpgrade(false);
+  if(showUpgrade&&!adFree)return Capacitor.isNativePlatform()?<NativeSubscribeScreen session={session} onPurchased={()=>{refreshSubscription();closeUpgrade();}} onBack={closeUpgrade}/>:<SubscribeScreen session={session} onBack={closeUpgrade}/>;
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)"}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)",paddingBottom:bannerHeight?`${bannerHeight}px`:undefined}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
 
-      {inTrial&&(
-        <div style={{background:"#10202A",borderBottom:"1px solid #3B9AE8",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
-          <span style={{color:"#3B9AE8",fontSize:"13px"}}>You're on a free trial — <b>{trialDaysLeft} day{trialDaysLeft!==1?"s":""}</b> left. Unlock Wrenched forever anytime for a one-time $9.99.</span>
-          <button onClick={()=>setShowUpgrade(true)} style={{background:"#3B9AE8",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>UNLOCK NOW</button>
+      {!adFree&&view==="garage"&&(
+        <div style={{background:"#151210",borderBottom:"1px solid #2A2620",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
+          <span style={{color:"#999",fontSize:"13px"}}>Wrenched is free, supported by ads. Remove them forever for a one-time $4.99.</span>
+          <button onClick={()=>setShowUpgrade(true)} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>REMOVE ADS</button>
+          {Capacitor.isNativePlatform()&&<button onClick={showPrivacyOptions} style={{background:"none",border:"none",color:"#555",fontSize:"11px",cursor:"pointer",textDecoration:"underline"}}>Ad privacy choices</button>}
         </div>
       )}
 
@@ -36433,6 +36447,33 @@ function AppShell(){
           </div>
         </div>
       )}
+
+      {!adFree&&!Capacitor.isNativePlatform()&&<WebAdSlot/>}
+    </div>
+  );
+}
+
+// AdSense unit for the website. Renders nothing until VITE_ADSENSE_CLIENT and
+// VITE_ADSENSE_SLOT are set (after AdSense approves wrenched.shop), so it's
+// safe to ship before then.
+const ADSENSE_CLIENT=import.meta.env.VITE_ADSENSE_CLIENT;
+const ADSENSE_SLOT=import.meta.env.VITE_ADSENSE_SLOT;
+function WebAdSlot(){
+  useEffect(()=>{
+    if(!ADSENSE_CLIENT||!ADSENSE_SLOT)return;
+    if(!document.querySelector("script[data-adsense]")){
+      const sc=document.createElement("script");
+      sc.async=true;sc.crossOrigin="anonymous";sc.dataset.adsense="1";
+      sc.src=`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
+      document.head.appendChild(sc);
+    }
+    try{(window.adsbygoogle=window.adsbygoogle||[]).push({});}catch{/* blocked by an ad blocker */}
+  },[]);
+  if(!ADSENSE_CLIENT||!ADSENSE_SLOT)return null;
+  return(
+    <div style={{maxWidth:"760px",margin:"40px auto 0",padding:"0 24px 24px"}}>
+      <div style={{color:"#333",fontSize:"10px",letterSpacing:"2px",fontFamily:"'Bebas Neue', sans-serif",marginBottom:"4px"}}>ADVERTISEMENT</div>
+      <ins className="adsbygoogle" style={{display:"block"}} data-ad-client={ADSENSE_CLIENT} data-ad-slot={ADSENSE_SLOT} data-ad-format="auto" data-full-width-responsive="true"/>
     </div>
   );
 }

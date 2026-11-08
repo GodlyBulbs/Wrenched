@@ -20,11 +20,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
             </intent-filter>
 
         </activity>
+
+        <!-- AdMob app ID. This is Google's TEST app ID — swap in your real one
+             (ca-app-pub-XXXXXXXX~YYYYYYYY from the AdMob dashboard) before release. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -40,4 +44,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>

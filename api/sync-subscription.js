@@ -1,7 +1,7 @@
 // /api/sync-subscription.js
 //
-// Called by the app immediately after a purchase completes, so the paywall
-// clears right away instead of waiting on the RevenueCat webhook (which is
+// Called by the app immediately after a purchase completes, so ads
+// disappear right away instead of waiting on the RevenueCat webhook (which is
 // reliable but can lag a few seconds — fine for renewals/cancellations
 // happening in the background, not great for "I just paid, unlock now").
 //
@@ -52,7 +52,10 @@ export default async function handler(req, res) {
     }
     const rcData = await rcRes.json();
     const entitlements = rcData.subscriber?.entitlements || {};
-    const active = Object.values(entitlements).find((e) => new Date(e.expires_date) > new Date());
+    // A one-time (non-consumable) purchase like Remove Ads has expires_date:
+    // null — it never expires. new Date(null) is 1970, so without the null
+    // check every lifetime purchase looked "inactive" here.
+    const active = Object.values(entitlements).find((e) => !e.expires_date || new Date(e.expires_date) > new Date());
 
     const status = active ? (active.period_type === "trial" ? "trialing" : "active") : "inactive";
     const periodEnd = active?.expires_date || null;
