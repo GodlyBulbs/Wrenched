@@ -8,12 +8,9 @@
 // Anyone who bought Remove Ads (subscriptions.status === "active") never sees
 // either one — App.jsx only calls into this file when the user isn't ad-free.
 //
-// SETUP: until real IDs are set, Google's official TEST ad units are used, so
-// nothing here can generate invalid traffic on your AdMob account. Real IDs go
-// in Vercel/your .env as:
-//   VITE_ADMOB_BANNER_IOS, VITE_ADMOB_INTERSTITIAL_IOS
-//   VITE_ADMOB_BANNER_ANDROID, VITE_ADMOB_INTERSTITIAL_ANDROID
-//   VITE_ADSENSE_CLIENT (ca-pub-...), VITE_ADSENSE_SLOT
+// Real AdMob ad unit IDs are below (they're public, not secrets). To test with
+// Google's test ads instead — e.g. while developing in the simulator — set
+// VITE_ADMOB_TEST=1 in a local .env file. Never tap your own live ads.
 // The AdMob *app* IDs (with a ~) live in Info.plist and AndroidManifest.xml.
 
 import { Capacitor } from "@capacitor/core";
@@ -28,12 +25,13 @@ const TEST_UNITS = {
   android: { banner: "ca-app-pub-3940256099942544/9214589741", interstitial: "ca-app-pub-3940256099942544/1033173712" },
 };
 const REAL_UNITS = {
-  ios: { banner: env.VITE_ADMOB_BANNER_IOS, interstitial: env.VITE_ADMOB_INTERSTITIAL_IOS },
-  android: { banner: env.VITE_ADMOB_BANNER_ANDROID, interstitial: env.VITE_ADMOB_INTERSTITIAL_ANDROID },
+  ios: { banner: "ca-app-pub-5823580625659011/8612419854", interstitial: "ca-app-pub-5823580625659011/8063569604" },
+  android: { banner: "ca-app-pub-5823580625659011/4315896287", interstitial: "ca-app-pub-5823580625659011/1689732941" },
 };
 
-const unit = (kind) => REAL_UNITS[platform]?.[kind] || TEST_UNITS[platform]?.[kind];
-const isTesting = (kind) => !REAL_UNITS[platform]?.[kind];
+const USE_TEST_ADS = env.VITE_ADMOB_TEST === "1";
+const unit = (kind) => (USE_TEST_ADS ? TEST_UNITS : REAL_UNITS)[platform]?.[kind];
+const isTesting = () => USE_TEST_ADS;
 
 // At most one interstitial every 4 minutes, and never in the first 2 minutes
 // of a session — enough to earn something without making the app feel spammy.

@@ -50,7 +50,7 @@
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Wrenched is free and supported by ads. Allowing tracking lets us show ads that are more relevant to you. You'll see the same number of ads either way.</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<string>ca-app-pub-5823580625659011~9457551488</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
