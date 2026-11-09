@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import { supabase } from "./supabase";
 import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
-import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions } from "./ads";
+import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions, SHOW_AD_DEBUG, subscribeAdStatus } from "./ads";
 
 // RevenueCat API keys are public-safe (they're scoped to identify your app, not
 // authenticate a user) — still kept as env vars so you're not hardcoding them,
@@ -36026,6 +36026,7 @@ function AppShell(){
           <span style={{color:"#999",fontSize:"13px"}}>Wrenched is free, supported by ads. Remove them forever for a one-time $4.99.</span>
           <button onClick={()=>setShowUpgrade(true)} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>REMOVE ADS</button>
           {Capacitor.isNativePlatform()&&<button onClick={showPrivacyOptions} style={{background:"none",border:"none",color:"#555",fontSize:"11px",cursor:"pointer",textDecoration:"underline"}}>Ad privacy choices</button>}
+          {SHOW_AD_DEBUG&&<AdDebugLine/>}
         </div>
       )}
 
@@ -36451,6 +36452,13 @@ function AppShell(){
       {!adFree&&!Capacitor.isNativePlatform()&&<WebAdSlot/>}
     </div>
   );
+}
+
+// Only in test-ad builds: shows where the ad setup is stuck, right on screen.
+function AdDebugLine(){
+  const [status,setStatus]=useState("");
+  useEffect(()=>subscribeAdStatus(setStatus),[]);
+  return <div style={{width:"100%",color:"#3B9AE8",fontSize:"11px",fontFamily:"monospace"}}>Ad status: {status}</div>;
 }
 
 // AdSense unit for the website. Renders nothing until VITE_ADSENSE_CLIENT and

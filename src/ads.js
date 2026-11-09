@@ -43,6 +43,22 @@ let initPromise = null;
 let bannerVisible = false;
 let interstitialReady = false;
 let sizeListener = null;
+const loadListeners = [];
+
+// Status line for test-ad builds (VITE_ADMOB_TEST=1), shown on the Garage
+// screen so ad problems can be diagnosed on a phone without Xcode.
+export const SHOW_AD_DEBUG = USE_TEST_ADS;
+let adStatus = "not started";
+const statusSubs = new Set();
+function setStatus(msg) {
+  adStatus = msg;
+  statusSubs.forEach((fn) => fn(msg));
+}
+export function subscribeAdStatus(fn) {
+  statusSubs.add(fn);
+  fn(adStatus);
+  return () => statusSubs.delete(fn);
+}
 
 // Consent (Google's UMP form — only actually shown in the EU/UK/etc. where
 // it's legally required) → Apple's App Tracking Transparency prompt (iOS only,
@@ -52,6 +68,7 @@ export function initAds() {
   if (!Capacitor.isNativePlatform()) return Promise.resolve(false);
   if (initPromise) return initPromise;
   initPromise = (async () => {
+    setStatus("checking consent…");
     try {
       const consent = await AdMob.requestConsentInfo();
       if (consent.isConsentFormAvailable && consent.status === AdmobConsentStatus.REQUIRED) {
@@ -59,6 +76,7 @@ export function initAds() {
       }
     } catch (err) {
       console.warn("AdMob consent check failed:", err);
+      setStatus("consent check failed (continuing): " + (err?.message || err));
     }
     if (platform === "ios") {
       try {
@@ -68,10 +86,13 @@ export function initAds() {
         console.warn("ATT prompt failed:", err);
       }
     }
+    setStatus("starting ad SDK…");
     await AdMob.initialize({ initializeForTesting: isTesting("banner") });
+    setStatus("ad SDK ready");
     return true;
   })().catch((err) => {
     console.error("AdMob init failed:", err);
+    setStatus("ad SDK failed: " + (err?.message || err));
     initPromise = null;
     return false;
   });
@@ -85,6 +106,13 @@ export async function showBanner(onHeight) {
   if (onHeight) {
     sizeListener = await AdMob.addListener(BannerAdPluginEvents.SizeChanged, (size) => onHeight(size?.height || 0));
   }
+  if (!loadListeners.length) {
+    loadListeners.push(
+      await AdMob.addListener(BannerAdPluginEvents.Loaded, () => setStatus("banner loaded ✓")),
+      await AdMob.addListener(BannerAdPluginEvents.FailedToLoad, (e) => setStatus(`banner failed: ${e?.code ?? ""} ${e?.message ?? ""}`)),
+    );
+  }
+  setStatus("requesting banner…");
   try {
     await AdMob.showBanner({
       adId: unit("banner"),
@@ -96,6 +124,7 @@ export async function showBanner(onHeight) {
   } catch (err) {
     bannerVisible = false;
     console.warn("Banner failed:", err);
+    setStatus("banner error: " + (err?.message || err));
   }
 }
 
