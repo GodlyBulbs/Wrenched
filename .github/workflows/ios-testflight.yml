@@ -17,6 +17,11 @@ name: iOS → TestFlight
 
 on:
   workflow_dispatch:
+    inputs:
+      test_ads:
+        description: "Use Google's test ads (to check ad placement before AdMob approves the app)"
+        type: boolean
+        default: false
 
 concurrency:
   group: ios-testflight
@@ -42,6 +47,8 @@ jobs:
           cache: npm
 
       - name: Install and build web app
+        env:
+          VITE_ADMOB_TEST: ${{ inputs.test_ads && '1' || '' }}
         run: |
           npm ci
           npm run build

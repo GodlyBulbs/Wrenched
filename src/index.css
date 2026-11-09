@@ -41,3 +41,18 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
+/* Mobile fit.
+   iPhones auto-zoom the whole page when you tap a text box whose font is under
+   16px — and stay zoomed, which is what made the login/sign-up screens (and the
+   garage after logging in) slide sideways. 16px inputs stop the zoom. */
+input, select, textarea {
+  font-size: 16px !important;
+}
+/* Safety net: the page itself never scrolls sideways. */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }
+}
