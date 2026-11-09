@@ -48,8 +48,10 @@ async function textSearch(query, lat, lng, apiKey) {
   if (!res.ok) return [];
   const data = await res.json();
   if (data.status !== "OK" && data.status !== "ZERO_RESULTS") {
+    // REQUEST_DENIED (billing off, bad key), OVER_QUERY_LIMIT, etc. Throw so the
+    // app shows "couldn't load shops" instead of a misleading "nothing nearby".
     console.error("Places API error:", data.status, data.error_message);
-    return [];
+    throw new Error(`Places API ${data.status}`);
   }
   return (data.results || []).map((r) => ({
     name: r.name,
