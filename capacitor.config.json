@@ -3,6 +3,6 @@
   "appName": "Wrenched",
   "webDir": "dist",
   "ios": {
-    "contentInset": "always"
+    "contentInset": "never"
   }
 }
