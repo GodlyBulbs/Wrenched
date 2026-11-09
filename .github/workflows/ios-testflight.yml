@@ -34,9 +34,9 @@ jobs:
       TEAM_ID: 5H844DUW9U
       KEY_PATH: ${{ github.workspace }}/AuthKey.p8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
