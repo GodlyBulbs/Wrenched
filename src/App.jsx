@@ -36018,7 +36018,13 @@ function AppShell(){
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)",paddingBottom:bannerHeight?`${bannerHeight}px`:undefined}}>
+    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)",paddingBottom:bannerHeight?`calc(${bannerHeight}px + env(safe-area-inset-bottom))`:undefined}}>
+      {bannerHeight>0&&(
+        // Solid backing behind the native AdMob banner. Google keeps the banner
+        // above the iPhone home-bar strip, which otherwise left a see-through
+        // gap with app content showing under the ad.
+        <div aria-hidden="true" style={{position:"fixed",left:0,right:0,bottom:0,height:`calc(${bannerHeight}px + env(safe-area-inset-bottom))`,background:"#0D0D0D",borderTop:"1px solid #1C1C1C",zIndex:900,pointerEvents:"none"}}/>
+      )}
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
 
       {!adFree&&view==="garage"&&(
