@@ -249,8 +249,6 @@ ${Object.entries(modsByCat).map(([cat, list]) => `<h3>${esc(cat)}</h3><ul class=
 <h2>Torque specs</h2>
 ${torqueHtml}
 
-<ins class="adsbygoogle ad" style="display:block" data-ad-client="${ADSENSE_CLIENT}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 
 <h2>Maintenance schedule</h2>
 <p>Typical intervals for the ${esc(full)}${car.engine ? ` (${esc(car.engine)}, ${esc(car.drivetrain || "")})` : ""}. Whichever comes first — miles or time. Your owner's manual has the final word, especially under severe driving conditions.</p>
