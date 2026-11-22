@@ -1,5 +1,6 @@
 {
+  "buildCommand": "npm run build && node scripts/build-spec-pages.mjs",
   "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|specs/|sitemap\\.xml|robots\\.txt).*)", "destination": "/index.html" }
   ]
 }

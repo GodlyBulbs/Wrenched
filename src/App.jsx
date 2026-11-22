@@ -35353,6 +35353,11 @@ function LandingPage(){
         <a href="/terms.html" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Terms</a>
         <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
         <a href="/privacy.html" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
+        {/* Public spec pages (generated at deploy by scripts/build-spec-pages.mjs). Website only — the app bundle doesn't include them. */}
+        {!Capacitor.isNativePlatform()&&<>
+          <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
+          <a href="/specs/" style={{color:"#555",fontSize:"11px",textDecoration:"none"}}>Car specs by make</a>
+        </>}
       </div>
     </div>
   );
