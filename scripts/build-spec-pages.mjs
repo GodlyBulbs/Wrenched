@@ -126,6 +126,7 @@ function page({ title, description, canonical, body, jsonld = [] }) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="google-adsense-account" content="${ADSENSE_CLIENT}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
