@@ -74,7 +74,7 @@ function representativeCar(gens) {
   // Latest generation's first trim — used to tailor the maintenance notes.
   const g = gens[gens.length - 1];
   const [, t] = Object.entries(g.trims || {})[0] || [];
-  return t ? { engine: t.engine, drivetrain: t.drivetrain, transmission: (t.transmissions || [])[0] } : {};
+  return t ? { engine: t.engine, drivetrain: t.drivetrain, transmission: (t.transmissions || [t.transmission])[0] } : {};
 }
 function maintenanceFor(car) {
   const ev = D.isElectric(car);
@@ -217,7 +217,7 @@ ${torque.map((t) => {
       return `${g.name ? `<h3>${esc(g.name)}</h3>` : ""}
 <p class="note">Model years: ${esc((g.years || []).join(", ") || "—")}</p>
 <table><thead><tr><th>Trim</th><th>Engine</th><th>Drive</th><th>Transmission</th></tr></thead><tbody>
-${trims.map(([tn, t]) => `<tr><td>${esc(tn)}</td><td>${esc(t.engine)}</td><td>${esc(t.drivetrain)}</td><td>${esc((t.transmissions || []).join(" / "))}</td></tr>`).join("\n")}
+${trims.map(([tn, t]) => `<tr><td>${esc(tn)}</td><td>${esc(t.engine)}</td><td>${esc(t.drivetrain)}</td><td>${esc((t.transmissions || (t.transmission ? [t.transmission] : [])).join(" / "))}</td></tr>`).join("\n")}
 </tbody></table>`;
     }).join("\n");
 
