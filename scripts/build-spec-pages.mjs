@@ -18,6 +18,8 @@ import vm from "node:vm";
 
 const SITE = "https://wrenched.shop";
 const ADSENSE_CLIENT = "ca-pub-5823580625659011";
+const APP_STORE_ID = "6803748934";
+const APP_STORE_URL = `https://apps.apple.com/us/app/wrenched-shop/id${APP_STORE_ID}`;
 const OUT = path.resolve(process.argv[2] || "dist");
 const SRC = fs.readFileSync(path.resolve("src/App.jsx"), "utf8");
 const lines = SRC.split("\n");
@@ -127,6 +129,7 @@ function page({ title, description, canonical, body, jsonld = [] }) {
 <head>
 <meta charset="utf-8">
 <meta name="google-adsense-account" content="${ADSENSE_CLIENT}">
+<meta name="apple-itunes-app" content="app-id=${APP_STORE_ID}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
@@ -146,7 +149,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
 <body>
 <header class="top"><div class="wrap">
   <a class="logo" href="/">WRENCH<span>ED</span></a>
-  <a class="btn" href="/">Get the app</a>
+  <a class="btn" href="${APP_STORE_URL}">Get the app</a>
 </div></header>
 <main class="wrap">
 ${body}
@@ -167,7 +170,8 @@ const crumbsLd = (items) => ({
 const cta = (carName) => `
 <div class="cta">
   <p>Track ${carName ? `your ${esc(carName)}'s` : "your car's"} mileage, service history, and mods — and get reminded before anything's overdue.</p>
-  <a class="btn" href="/">Start tracking free</a>
+  <a class="btn" href="${APP_STORE_URL}">Get the iPhone app</a>
+  <p style="margin:12px 0 0;font-size:13px"><a href="/">or use it on the web</a></p>
 </div>`;
 
 function write(rel, html) {

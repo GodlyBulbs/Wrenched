@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import { supabase } from "./supabase";
 import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
+import { noteServiceLogged } from "./review-prompt";
 import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions, SHOW_AD_DEBUG, subscribeAdStatus } from "./ads";
 
 // RevenueCat API keys are public-safe (they're scoped to identify your app, not
@@ -35315,6 +35316,11 @@ function LandingPage(){
         <div style={{marginBottom:"20px"}}><Wordmark size={48}/></div>
         <div style={{color:"#999",fontSize:"clamp(17px,2.5vw,20px)",lineHeight:"1.4",maxWidth:"460px",margin:"0 auto 32px"}}>One place for your car's real specs, real mods, and real maintenance history — organized by your exact year, make, and generation.</div>
         <button onClick={()=>navigate("/signup")} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",fontFamily:"'Bebas Neue', sans-serif",fontSize:"17px",letterSpacing:"2px",padding:"16px 36px",borderRadius:"4px",cursor:"pointer"}}>GET STARTED — FREE</button>
+        {!Capacitor.isNativePlatform()&&(
+          <div style={{marginTop:"16px"}}>
+            <a href="https://apps.apple.com/us/app/wrenched-shop/id6803748934" target="_blank" rel="noopener noreferrer" style={{display:"inline-block",border:"1px solid #3A3A3A",color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",padding:"12px 28px",borderRadius:"4px",textDecoration:"none"}}>GET THE IPHONE APP</a>
+          </div>
+        )}
       </div>
 
       {/* PROBLEM — supporting context, smaller */}
@@ -35941,7 +35947,8 @@ function AppShell(){
     const entry={miles,date:new Date().toISOString()};
     syncCar({...activeCar,maintenance:activeCar.maintenance.map(i=>i.name===doneItem.name?{...i,lastMiles:miles,lastDate:entry.date,history:[entry,...(i.history||[])]}:i),mileage:miles});
     setDoneItem(null);
-    if(!adFree)maybeShowInterstitial();
+    const askedForReview=noteServiceLogged();
+    if(!adFree&&!askedForReview)maybeShowInterstitial();
   };
   const [expandedHistory,setExpandedHistory]=useState(null);
   const updateMileage=()=>{syncCar({...activeCar,mileage:roundToTen(parseInt(tempMileage)||0)});setEditMileage(false);};
