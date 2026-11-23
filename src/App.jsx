@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import { supabase } from "./supabase";
 import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
+import { Browser } from "@capacitor/browser";
 import { noteServiceLogged } from "./review-prompt";
 import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions, SHOW_AD_DEBUG, subscribeAdStatus } from "./ads";
 
@@ -36080,7 +36081,11 @@ function AppShell(){
             }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Billing history</button>
           )}
           {!subCustomerId&&Capacitor.isNativePlatform()&&subStatus==="active"&&(
-            <button onClick={()=>window.open(Capacitor.getPlatform()==="ios"?"https://apps.apple.com/account/purchase-history":"https://play.google.com/store/account/orderhistory","_blank")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Purchase history</button>
+            // Remove Ads is a one-time purchase, so there's nothing to manage —
+            // just a badge, which opens the store's receipt page in an in-app
+            // browser. (apps.apple.com/account/... links open the App Store app
+            // and fail with "Cannot connect to App Store".)
+            <button onClick={()=>Browser.open({url:Capacitor.getPlatform()==="ios"?"https://reportaproblem.apple.com":"https://play.google.com/store/account/orderhistory"})} style={{background:"none",border:"1px solid #2A3A2A",color:"#5FAF5F",padding:"5px 10px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1.5px"}}>AD-FREE ✓</button>
           )}
           <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
