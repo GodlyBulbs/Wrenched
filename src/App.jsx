@@ -35890,6 +35890,7 @@ function AppShell(){
   const adFree=session?.user?.email?.toLowerCase()===OWNER_EMAIL||subStatus==="active";
   const [bannerHeight,setBannerHeight]=useState(0);
   const [showDisplay,setShowDisplay]=useState(false);
+  const [bellTop,setBellTop]=useState(70);
   useEffect(()=>{
     if(!session||subLoading||adFree||showUpgrade){removeBanner();setBannerHeight(0);return;}
     showBanner(setBannerHeight);
@@ -36060,11 +36061,14 @@ function AppShell(){
           <Wordmark/>
         </div>
         <div style={{display:"flex",gap:"12px",alignItems:"center"}}>
-          <div style={{position:"relative",cursor:"pointer"}} onClick={()=>setShowBell(!showBell)}>
+          <div style={{position:"relative",cursor:"pointer"}} onClick={e=>{setBellTop(e.currentTarget.getBoundingClientRect().bottom+10);setShowBell(!showBell);}}>
             <span style={{fontSize:"18px"}}>🔔</span>
             {allAlerts.length>0&&<div style={{position:"absolute",top:"-2px",right:"-2px",width:"8px",height:"8px",background:"var(--w-ff3b3b)",borderRadius:"50%"}}/>}
+            {showBell&&<div onClick={e=>{e.stopPropagation();setShowBell(false);}} style={{position:"fixed",inset:0,zIndex:199,cursor:"default"}}/>}
             {showBell&&(
-              <div style={{position:"absolute",top:"30px",right:0,background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"6px",padding:"12px",minWidth:"240px",zIndex:200}}>
+              // Pinned to the screen's right edge (not the bell) so it can't run
+              // off the left side on phones or with larger text sizes.
+              <div onClick={e=>e.stopPropagation()} style={{position:"fixed",top:`${bellTop}px`,right:"12px",width:"min(340px, calc(100vw - 24px))",maxHeight:"60vh",overflowY:"auto",boxSizing:"border-box",background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"8px",padding:"14px",zIndex:200,boxShadow:"0 10px 30px rgba(0,0,0,0.35)",cursor:"default"}}>
                 {allAlerts.length===0?<div style={{color:"var(--w-555555)",fontSize:"13px"}}>All good — nothing due</div>:allAlerts.map(car=>(
                   <div key={car.id} style={{marginBottom:"8px"}}>
                     <div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px"}}>{car.year} {car.make} {car.model}</div>
