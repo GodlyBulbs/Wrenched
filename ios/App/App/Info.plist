@@ -49,6 +49,8 @@
 	<string>Wrenched uses your location to find nearby repair shops, dealers, and quick-service chains that work on your specific car.</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Wrenched is free and supported by ads. Allowing tracking lets us show ads that are more relevant to you. You'll see the same number of ads either way.</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5823580625659011~9457551488</string>
 	<key>SKAdNetworkItems</key>
