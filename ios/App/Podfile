@@ -12,6 +12,8 @@ def capacitor_pods
   pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
   pod 'CapacitorBrowser', :path => '../../node_modules/@capacitor/browser'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
+  pod 'CapacitorTextZoom', :path => '../../node_modules/@capacitor/text-zoom'
   pod 'CapacitorCommunityInAppReview', :path => '../../node_modules/@capacitor-community/in-app-review'
   pod 'CapacitorCommunityAdmob', :path => '../../node_modules/@capacitor-community/admob'
   pod 'RevenuecatPurchasesCapacitor', :path => '../../node_modules/@revenuecat/purchases-capacitor'

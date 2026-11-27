@@ -5,6 +5,7 @@ import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
 import { Browser } from "@capacitor/browser";
 import { noteServiceLogged } from "./review-prompt";
+import { ACCENTS, TEXT_SIZES, loadPrefs, savePrefs, applyPrefs, watchSystemMode } from "./theme";
 import { showBanner, removeBanner, maybeShowInterstitial, preloadInterstitial, showPrivacyOptions, SHOW_AD_DEBUG, subscribeAdStatus } from "./ads";
 
 // RevenueCat API keys are public-safe (they're scoped to identify your app, not
@@ -34855,13 +34856,13 @@ const API_BASE=Capacitor.isNativePlatform()?"https://wrenched.shop":"";
 const roundToTen=(n)=>Math.round(n/10)*10;
 const isLight=(hex)=>{const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return(r*299+g*587+b*114)/1000>160;};
 
-const LS={color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px",display:"block"};
-const SS={background:"#1C1C1C",border:"1px solid #333",color:"#E8E4DC",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",cursor:"pointer",appearance:"none",WebkitAppearance:"none"};
-const IS={background:"#1C1C1C",border:"1px solid #333",color:"#E8E4DC",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",boxSizing:"border-box"};
-const BP=(on)=>({background:on?"#FF6B2B":"#1C1C1C",color:on?"#0D0D0D":"#444",border:"none",padding:"16px 40px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",cursor:on?"pointer":"not-allowed",borderRadius:"4px",width:"100%",transition:"all 0.2s"});
+const LS={color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"8px",display:"block"};
+const SS={background:"var(--w-1c1c1c)",border:"1px solid var(--w-333333)",color:"var(--w-e8e4dc)",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",cursor:"pointer",appearance:"none",WebkitAppearance:"none"};
+const IS={background:"var(--w-1c1c1c)",border:"1px solid var(--w-333333)",color:"var(--w-e8e4dc)",padding:"12px 16px",borderRadius:"4px",fontSize:"15px",width:"100%",fontFamily:"Inter, sans-serif",boxSizing:"border-box"};
+const BP=(on)=>({background:on?"var(--w-ff6b2b)":"var(--w-1c1c1c)",color:on?"var(--w-on-accent)":"var(--w-444444)",border:on?"1px solid transparent":"1px solid var(--w-2a2a2a)",padding:"16px 40px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",cursor:on?"pointer":"not-allowed",borderRadius:"4px",width:"100%",transition:"all 0.2s"});
 
 function BrandDot({brand,size=8}){
-  return <span style={{display:"inline-block",width:`${size}px`,height:`${size}px`,borderRadius:"50%",background:BRAND_COLORS[brand]||"#666",marginRight:"6px",flexShrink:0}}/>;
+  return <span style={{display:"inline-block",width:`${size}px`,height:`${size}px`,borderRadius:"50%",background:BRAND_COLORS[brand]||"var(--w-666666)",marginRight:"6px",flexShrink:0}}/>;
 }
 
 function ShopCard({shop,onRequest}){
@@ -34869,19 +34870,19 @@ function ShopCard({shop,onRequest}){
     ?`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}&destination_place_id=${shop.placeId||""}`
     :`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shop.name+" "+(shop.address||""))}`;
   return(
-    <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
+    <div style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"12px",marginBottom:"10px"}}>
         <div>
-          <div style={{color:"#E8E4DC",fontSize:"15px",fontWeight:600,marginBottom:"2px"}}>{shop.name}</div>
-          {shop.address&&<div style={{color:"#666",fontSize:"12px"}}>{shop.address}</div>}
+          <div style={{color:"var(--w-e8e4dc)",fontSize:"15px",fontWeight:600,marginBottom:"2px"}}>{shop.name}</div>
+          {shop.address&&<div style={{color:"var(--w-666666)",fontSize:"12px"}}>{shop.address}</div>}
         </div>
-        {shop.distanceMi!=null&&<div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",whiteSpace:"nowrap"}}>{shop.distanceMi.toFixed(1)} mi</div>}
+        {shop.distanceMi!=null&&<div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",whiteSpace:"nowrap"}}>{shop.distanceMi.toFixed(1)} mi</div>}
       </div>
-      <button onClick={()=>onRequest(shop)} style={{width:"100%",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer",marginBottom:"8px"}}>REQUEST APPOINTMENT</button>
+      <button onClick={()=>onRequest(shop)} style={{width:"100%",background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer",marginBottom:"8px"}}>REQUEST APPOINTMENT</button>
       <div style={{display:"flex",gap:"6px"}}>
-        {shop.phone&&<a href={`tel:${shop.phone.replace(/[^\d+]/g,"")}`} style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>CALL</a>}
-        {shop.website&&<a href={shop.website} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>WEBSITE</a>}
-        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"#C8C4BC",border:"1px solid #2A2A2A",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>DIRECTIONS</a>
+        {shop.phone&&<a href={`tel:${shop.phone.replace(/[^\d+]/g,"")}`} style={{flex:1,textAlign:"center",background:"transparent",color:"var(--w-c8c4bc)",border:"1px solid var(--w-2a2a2a)",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>CALL</a>}
+        {shop.website&&<a href={shop.website} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"var(--w-c8c4bc)",border:"1px solid var(--w-2a2a2a)",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>WEBSITE</a>}
+        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" style={{flex:1,textAlign:"center",background:"transparent",color:"var(--w-c8c4bc)",border:"1px solid var(--w-2a2a2a)",padding:"8px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1px",borderRadius:"4px",textDecoration:"none"}}>DIRECTIONS</a>
       </div>
     </div>
   );
@@ -34904,7 +34905,9 @@ function statusColor(item,mileage){
   if(diff<=500) return "yellow";
   return "green";
 }
-const STATUS_COLORS={green:"#1CE84A",yellow:"#F5C800",red:"#FF3B3B",unset:"#444"};
+const STATUS_COLORS={green:"var(--w-1ce84a)",yellow:"var(--w-f5c800)",red:"var(--w-ff3b3b)",unset:"var(--w-444444)"};
+// Faint versions for card borders (theme-aware; see src/theme.js).
+const STATUS_BORDERS={green:"rgba(var(--w-1ce84a-rgb),0.27)",yellow:"rgba(var(--w-f5c800-rgb),0.27)",red:"rgba(var(--w-ff3b3b-rgb),0.27)"};
 
 // Maps a car's make to the Google-Places-friendly search phrase for its factory dealer network.
 // Several brands sell through a shared dealer storefront (e.g. Fiat through Chrysler-Dodge-Jeep-Ram,
@@ -35278,8 +35281,8 @@ function CarCard({car,onSelect,onDelete,hasAlerts}){
       onClick={()=>onSelect(car)}
     >
       <button onClick={e=>{e.stopPropagation();onDelete(car.id);}} style={{position:"absolute",top:"12px",right:"12px",background:"rgba(0,0,0,0.3)",border:"none",color:textColor,cursor:"pointer",fontSize:"16px",borderRadius:"50%",width:"24px",height:"24px",display:"flex",alignItems:"center",justifyContent:"center",opacity:0.7}}>×</button>
-      {!maintenanceSetup&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#FF3B3B",fontSize:"18px"}}>❗</div>}
-      {maintenanceSetup&&hasAlerts&&<div style={{position:"absolute",top:"12px",right:"44px",color:"#F5C800",fontSize:"16px"}}>⚠️</div>}
+      {!maintenanceSetup&&<div style={{position:"absolute",top:"12px",right:"44px",color:"var(--w-ff3b3b)",fontSize:"18px"}}>❗</div>}
+      {maintenanceSetup&&hasAlerts&&<div style={{position:"absolute",top:"12px",right:"44px",color:"var(--w-f5c800)",fontSize:"16px"}}>⚠️</div>}
       <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"24px",color:textColor,marginBottom:"2px",textShadow:"0 1px 3px rgba(0,0,0,0.3)"}}>{car.year} {car.make} {car.model}</div>
       <div style={{color:textColor,fontSize:"12px",opacity:0.85,marginBottom:"2px"}}>{[car.generation,car.trim,car.engine,car.transmission,car.drivetrain].filter(Boolean).join(" · ")}</div>
       <div style={{color:textColor,fontSize:"12px",opacity:0.7,marginBottom:"12px"}}>{car.colorName||"Color not set"} · {(car.mileage||0).toLocaleString()} mi</div>
@@ -35296,74 +35299,74 @@ function CarCard({car,onSelect,onDelete,hasAlerts}){
 
 function Wordmark({size=20}){
   return(
-    <span style={{fontFamily:"'Big Shoulders Stencil', sans-serif",fontWeight:900,fontSize:size,letterSpacing:"1px",color:"#E8E4DC"}}>WRENCH<span style={{color:"#FF6B2B"}}>ED</span></span>
+    <span style={{fontFamily:"'Big Shoulders Stencil', sans-serif",fontWeight:900,fontSize:size,letterSpacing:"1px",color:"var(--w-e8e4dc)"}}>WRENCH<span style={{color:"var(--w-ff6b2b)"}}>ED</span></span>
   );
 }
 
 function LandingPage(){
   const navigate=useNavigate();
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",color:"#E8E4DC"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",color:"var(--w-e8e4dc)"}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
-          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
-        <button onClick={()=>navigate("/login")} style={{background:"transparent",color:"#E8E4DC",border:"1px solid #333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",padding:"10px 22px",borderRadius:"4px",cursor:"pointer"}}>LOG IN</button>
+        <button onClick={()=>navigate("/login")} style={{background:"transparent",color:"var(--w-e8e4dc)",border:"1px solid var(--w-333333)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",padding:"10px 22px",borderRadius:"4px",cursor:"pointer"}}>LOG IN</button>
       </div>
 
       {/* HERO */}
       <div style={{maxWidth:"680px",margin:"0 auto",padding:"90px 24px 20px",textAlign:"center"}}>
         <div style={{marginBottom:"20px"}}><Wordmark size={48}/></div>
-        <div style={{color:"#999",fontSize:"clamp(17px,2.5vw,20px)",lineHeight:"1.4",maxWidth:"460px",margin:"0 auto 32px"}}>One place for your car's real specs, real mods, and real maintenance history — organized by your exact year, make, and generation.</div>
-        <button onClick={()=>navigate("/signup")} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",fontFamily:"'Bebas Neue', sans-serif",fontSize:"17px",letterSpacing:"2px",padding:"16px 36px",borderRadius:"4px",cursor:"pointer"}}>GET STARTED — FREE</button>
+        <div style={{color:"var(--w-999999)",fontSize:"clamp(17px,2.5vw,20px)",lineHeight:"1.4",maxWidth:"460px",margin:"0 auto 32px"}}>One place for your car's real specs, real mods, and real maintenance history — organized by your exact year, make, and generation.</div>
+        <button onClick={()=>navigate("/signup")} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",fontFamily:"'Bebas Neue', sans-serif",fontSize:"17px",letterSpacing:"2px",padding:"16px 36px",borderRadius:"4px",cursor:"pointer"}}>GET STARTED — FREE</button>
         {!Capacitor.isNativePlatform()&&(
           <div style={{marginTop:"16px"}}>
-            <a href="https://apps.apple.com/us/app/wrenched-shop/id6803748934" target="_blank" rel="noopener noreferrer" style={{display:"inline-block",border:"1px solid #3A3A3A",color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",padding:"12px 28px",borderRadius:"4px",textDecoration:"none"}}>GET THE IPHONE APP</a>
+            <a href="https://apps.apple.com/us/app/wrenched-shop/id6803748934" target="_blank" rel="noopener noreferrer" style={{display:"inline-block",border:"1px solid var(--w-3a3a3a)",color:"var(--w-e8e4dc)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",padding:"12px 28px",borderRadius:"4px",textDecoration:"none"}}>GET THE IPHONE APP</a>
           </div>
         )}
       </div>
 
       {/* PROBLEM — supporting context, smaller */}
       <div style={{maxWidth:"480px",margin:"0 auto",padding:"40px 24px 70px",textAlign:"center"}}>
-        <div style={{color:"#555",fontSize:"11px",letterSpacing:"2px",marginBottom:"10px"}}>SOUND FAMILIAR?</div>
-        <div style={{color:"#777",fontSize:"14px",lineHeight:"1.6"}}>You searched "<span style={{color:"#999"}}>torque spec</span>" for your car and got five different answers from five different forum threads.</div>
+        <div style={{color:"var(--w-555555)",fontSize:"11px",letterSpacing:"2px",marginBottom:"10px"}}>SOUND FAMILIAR?</div>
+        <div style={{color:"var(--w-777777)",fontSize:"14px",lineHeight:"1.6"}}>You searched "<span style={{color:"var(--w-999999)"}}>torque spec</span>" for your car and got five different answers from five different forum threads.</div>
       </div>
 
       {/* FEATURES */}
-      <div style={{maxWidth:"760px",margin:"0 auto",padding:"20px 24px 60px",display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(220px,1fr))",gap:"18px",borderTop:"1px solid #1C1C1C"}}>
+      <div style={{maxWidth:"760px",margin:"0 auto",padding:"20px 24px 60px",display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(220px,1fr))",gap:"18px",borderTop:"1px solid var(--w-1c1c1c)"}}>
         <div style={{textAlign:"center",paddingTop:"40px"}}>
           <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"19px",letterSpacing:"1px",marginBottom:"6px"}}>YOUR GARAGE</div>
-          <div style={{fontSize:"13px",color:"#888",lineHeight:"1.5"}}>Every car you own, tracked in one place — mileage, service history, mods.</div>
+          <div style={{fontSize:"13px",color:"var(--w-888888)",lineHeight:"1.5"}}>Every car you own, tracked in one place — mileage, service history, mods.</div>
         </div>
         <div style={{textAlign:"center",paddingTop:"40px"}}>
           <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"19px",letterSpacing:"1px",marginBottom:"6px"}}>HONEST DATA</div>
-          <div style={{fontSize:"13px",color:"#888",lineHeight:"1.5"}}>When a spec isn't confirmed, we say so — instead of guessing and hoping.</div>
+          <div style={{fontSize:"13px",color:"var(--w-888888)",lineHeight:"1.5"}}>When a spec isn't confirmed, we say so — instead of guessing and hoping.</div>
         </div>
         <div style={{textAlign:"center",paddingTop:"40px"}}>
           <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"19px",letterSpacing:"1px",marginBottom:"6px"}}>BUILT FOR YOUR CAR</div>
-          <div style={{fontSize:"13px",color:"#888",lineHeight:"1.5"}}>Not generic advice — parts and specs matched to your specific generation.</div>
+          <div style={{fontSize:"13px",color:"var(--w-888888)",lineHeight:"1.5"}}>Not generic advice — parts and specs matched to your specific generation.</div>
         </div>
       </div>
 
       {/* PLAIN TEXT, NO BUTTON */}
-      <div style={{textAlign:"center",padding:"20px 24px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(20px,3.5vw,26px)",letterSpacing:"1px",color:"#555"}}>READY WHEN YOU ARE.</div>
+      <div style={{textAlign:"center",padding:"20px 24px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(20px,3.5vw,26px)",letterSpacing:"1px",color:"var(--w-555555)"}}>READY WHEN YOU ARE.</div>
 
       {/* ON-SITE — final closer */}
-      <div style={{background:"#151210",borderTop:"1px solid #2A2620",padding:"60px 24px 70px",textAlign:"center"}}>
-        <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(28px,5vw,40px)",marginBottom:"12px"}}>DON'T WANT TO WRENCH<span style={{color:"#FF6B2B"}}> IT YOURSELF?</span></div>
-        <div style={{color:"#999",fontSize:"14px",maxWidth:"480px",margin:"0 auto 26px"}}>Book Wrenched On-Site and have a real mechanic come to you — priced honestly by distance, no mystery quotes.</div>
-        <a href="/wrench-day.html" style={{display:"inline-block",background:"transparent",color:"#E8E4DC",border:"1px solid #333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"17px",letterSpacing:"2px",padding:"16px 36px",borderRadius:"4px",cursor:"pointer",textDecoration:"none"}}>LEARN ABOUT ON-SITE</a>
+      <div style={{background:"var(--w-151210)",borderTop:"1px solid var(--w-2a2620)",padding:"60px 24px 70px",textAlign:"center"}}>
+        <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(28px,5vw,40px)",marginBottom:"12px"}}>DON'T WANT TO WRENCH<span style={{color:"var(--w-ff6b2b)"}}> IT YOURSELF?</span></div>
+        <div style={{color:"var(--w-999999)",fontSize:"14px",maxWidth:"480px",margin:"0 auto 26px"}}>Book Wrenched On-Site and have a real mechanic come to you — priced honestly by distance, no mystery quotes.</div>
+        <a href="/wrench-day.html" style={{display:"inline-block",background:"transparent",color:"var(--w-e8e4dc)",border:"1px solid var(--w-333333)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"17px",letterSpacing:"2px",padding:"16px 36px",borderRadius:"4px",cursor:"pointer",textDecoration:"none"}}>LEARN ABOUT ON-SITE</a>
       </div>
 
-      <div style={{borderTop:"1px solid #1C1C1C",padding:"28px 24px",textAlign:"center"}}>
-        <a href="/terms.html" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Terms</a>
-        <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
-        <a href="/privacy.html" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
+      <div style={{borderTop:"1px solid var(--w-1c1c1c)",padding:"28px 24px",textAlign:"center"}}>
+        <a href="/terms.html" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Terms</a>
+        <span style={{color:"var(--w-2a2a2a)",margin:"0 8px",fontSize:"11px"}}>·</span>
+        <a href="/privacy.html" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
         {/* Public spec pages (generated at deploy by scripts/build-spec-pages.mjs). Website only — the app bundle doesn't include them. */}
         {!Capacitor.isNativePlatform()&&<>
-          <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
-          <a href="/specs/" style={{color:"#555",fontSize:"11px",textDecoration:"none"}}>Car specs by make</a>
+          <span style={{color:"var(--w-2a2a2a)",margin:"0 8px",fontSize:"11px"}}>·</span>
+          <a href="/specs/" style={{color:"var(--w-555555)",fontSize:"11px",textDecoration:"none"}}>Car specs by make</a>
         </>}
       </div>
     </div>
@@ -35393,9 +35396,9 @@ function AuthScreen({initialMode="login"}){
     finally{setLoading(false);}
   };
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
-        <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
+        <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
         <Wordmark/>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
@@ -35403,41 +35406,41 @@ function AuthScreen({initialMode="login"}){
           {mode==="forgot"?(
             resetSent?(
               <>
-                <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>CHECK YOUR EMAIL</div>
-                <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>We sent a password reset link to {email}. Follow it to set a new password.</p>
-                <span onClick={()=>{setMode("login");setResetSent(false);setError("");navigate("/login");}} style={{color:"#FF6B2B",cursor:"pointer",fontSize:"13px"}}>← Back to log in</span>
+                <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>CHECK YOUR EMAIL</div>
+                <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>We sent a password reset link to {email}. Follow it to set a new password.</p>
+                <span onClick={()=>{setMode("login");setResetSent(false);setError("");navigate("/login");}} style={{color:"var(--w-ff6b2b)",cursor:"pointer",fontSize:"13px"}}>← Back to log in</span>
               </>
             ):(
               <>
-                <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>RESET PASSWORD</div>
-                <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Enter your email and we'll send you a reset link.</p>
+                <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>RESET PASSWORD</div>
+                <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>Enter your email and we'll send you a reset link.</p>
                 <div style={{marginBottom:"24px"}}><span style={LS}>EMAIL</span><input style={IS} type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com" onKeyDown={e=>e.key==="Enter"&&handleForgot()}/></div>
-                {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
+                {error&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
                 <button onClick={handleForgot} disabled={!email||loading} style={BP(email&&!loading)}>{loading?"...":"SEND RESET LINK"}</button>
                 <div style={{textAlign:"center",marginTop:"20px"}}>
-                  <span onClick={()=>{setMode("login");setError("");navigate("/login");}} style={{color:"#FF6B2B",cursor:"pointer",fontSize:"13px"}}>← Back to log in</span>
+                  <span onClick={()=>{setMode("login");setError("");navigate("/login");}} style={{color:"var(--w-ff6b2b)",cursor:"pointer",fontSize:"13px"}}>← Back to log in</span>
                 </div>
               </>
             )
           ):(
             <>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>{mode==="login"?"WELCOME BACK":"JOIN WRENCHED"}</div>
-              <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>{mode==="login"?"Log in to access your garage.":"Create an account to save your garage."}</p>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>{mode==="login"?"WELCOME BACK":"JOIN WRENCHED"}</div>
+              <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>{mode==="login"?"Log in to access your garage.":"Create an account to save your garage."}</p>
               <div style={{marginBottom:"16px"}}><span style={LS}>EMAIL</span><input style={IS} type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com"/></div>
               <div style={{marginBottom:mode==="login"?"8px":"24px"}}><span style={LS}>PASSWORD</span><input style={IS} type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="••••••••" onKeyDown={e=>e.key==="Enter"&&handle()}/></div>
-              {mode==="login"&&<div style={{textAlign:"right",marginBottom:"24px"}}><span onClick={()=>{setMode("forgot");setError("");}} style={{color:"#666",cursor:"pointer",fontSize:"12px"}}>Forgot password?</span></div>}
-              {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
+              {mode==="login"&&<div style={{textAlign:"right",marginBottom:"24px"}}><span onClick={()=>{setMode("forgot");setError("");}} style={{color:"var(--w-666666)",cursor:"pointer",fontSize:"12px"}}>Forgot password?</span></div>}
+              {error&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
               <button onClick={handle} disabled={!email||!password||loading} style={BP(email&&password&&!loading)}>{loading?"...":mode==="login"?"LOG IN":"SIGN UP"}</button>
-              {mode==="signup"&&<p style={{color:"#444",fontSize:"11px",textAlign:"center",marginTop:"14px",lineHeight:"1.5"}}>By signing up, you agree to our <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"#666"}}>Terms of Service</a> and <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"#666"}}>Privacy Policy</a>.</p>}
+              {mode==="signup"&&<p style={{color:"var(--w-444444)",fontSize:"11px",textAlign:"center",marginTop:"14px",lineHeight:"1.5"}}>By signing up, you agree to our <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-666666)"}}>Terms of Service</a> and <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-666666)"}}>Privacy Policy</a>.</p>}
               <div style={{textAlign:"center",marginTop:"20px"}}>
-                <span style={{color:"#444",fontSize:"13px"}}>{mode==="login"?"Don't have an account? ":"Already have an account? "}
-                  <span onClick={()=>{const next=mode==="login"?"signup":"login";setMode(next);setError("");navigate("/"+next);}} style={{color:"#FF6B2B",cursor:"pointer"}}>{mode==="login"?"Sign up":"Log in"}</span>
+                <span style={{color:"var(--w-444444)",fontSize:"13px"}}>{mode==="login"?"Don't have an account? ":"Already have an account? "}
+                  <span onClick={()=>{const next=mode==="login"?"signup":"login";setMode(next);setError("");navigate("/"+next);}} style={{color:"var(--w-ff6b2b)",cursor:"pointer"}}>{mode==="login"?"Sign up":"Log in"}</span>
                 </span>
               </div>
               <div style={{textAlign:"center",marginTop:"28px"}}>
-                <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Terms</a>
-                <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
-                <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
+                <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Terms</a>
+                <span style={{color:"var(--w-2a2a2a)",margin:"0 8px",fontSize:"11px"}}>·</span>
+                <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
               </div>
             </>
           )}
@@ -35466,26 +35469,26 @@ function ResetPasswordScreen({onDone}){
     finally{setLoading(false);}
   };
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
-        <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column",paddingTop:"env(safe-area-inset-top)"}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"18px 24px",display:"flex",alignItems:"center",gap:"10px"}}>
+        <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
         <Wordmark/>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"400px"}}>
           {done?(
             <>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>PASSWORD UPDATED</div>
-              <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>You're all set — head back into your garage.</p>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>PASSWORD UPDATED</div>
+              <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>You're all set — head back into your garage.</p>
               <button onClick={onDone} style={BP(true)}>CONTINUE</button>
             </>
           ):(
             <>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>SET NEW PASSWORD</div>
-              <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Choose a new password for your account.</p>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,56px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>SET NEW PASSWORD</div>
+              <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>Choose a new password for your account.</p>
               <div style={{marginBottom:"16px"}}><span style={LS}>NEW PASSWORD</span><input style={IS} type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="••••••••"/></div>
               <div style={{marginBottom:"24px"}}><span style={LS}>CONFIRM PASSWORD</span><input style={IS} type="password" value={confirm} onChange={e=>setConfirm(e.target.value)} placeholder="••••••••" onKeyDown={e=>e.key==="Enter"&&handle()}/></div>
-              {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
+              {error&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginBottom:"16px"}}>{error}</div>}
               <button onClick={handle} disabled={!password||!confirm||loading} style={BP(password&&confirm&&!loading)}>{loading?"...":"UPDATE PASSWORD"}</button>
             </>
           )}
@@ -35538,7 +35541,7 @@ function AddCarForm({onSave,onCancel}){
           <option value="">{placeholder}</option>
           {opts.map(o=><option key={o}>{o}</option>)}
         </select>
-        <div style={{position:"absolute",right:"12px",top:"50%",transform:"translateY(-50%)",color:"#FF6B2B",pointerEvents:"none",fontSize:"10px"}}>▼</div>
+        <div style={{position:"absolute",right:"12px",top:"50%",transform:"translateY(-50%)",color:"var(--w-ff6b2b)",pointerEvents:"none",fontSize:"10px"}}>▼</div>
       </div>
     </div>
   );
@@ -35575,21 +35578,21 @@ function AddCarForm({onSave,onCancel}){
             placeholder={placeholder}
             autoComplete="off"
           />
-          <div style={{position:"absolute",right:"12px",top:"50%",transform:"translateY(-50%)",color:"#FF6B2B",pointerEvents:"none",fontSize:"10px"}}>▼</div>
+          <div style={{position:"absolute",right:"12px",top:"50%",transform:"translateY(-50%)",color:"var(--w-ff6b2b)",pointerEvents:"none",fontSize:"10px"}}>▼</div>
           {open&&(
-            <div style={{position:"absolute",top:"calc(100% + 4px)",left:0,right:0,maxHeight:"240px",overflowY:"auto",background:"#1C1C1C",border:"1px solid #333",borderRadius:"4px",zIndex:20,boxShadow:"0 8px 24px rgba(0,0,0,0.4)"}}>
+            <div style={{position:"absolute",top:"calc(100% + 4px)",left:0,right:0,maxHeight:"240px",overflowY:"auto",background:"var(--w-1c1c1c)",border:"1px solid var(--w-333333)",borderRadius:"4px",zIndex:20,boxShadow:"0 8px 24px rgba(0,0,0,0.4)"}}>
               {filtered.length>0?filtered.map(o=>(
                 <div
                   key={o}
                   onMouseDown={()=>{set(o);setOpen(false);setQuery("");}}
                   onMouseEnter={()=>setHover(o)}
                   onMouseLeave={()=>setHover("")}
-                  style={{padding:"10px 16px",fontSize:"14px",cursor:"pointer",color:o===val?"#FF6B2B":"#E8E4DC",background:o===val?"rgba(255,107,43,0.1)":(hover===o?"rgba(255,107,43,0.06)":"transparent")}}
+                  style={{padding:"10px 16px",fontSize:"14px",cursor:"pointer",color:o===val?"var(--w-ff6b2b)":"var(--w-e8e4dc)",background:o===val?"rgba(var(--w-accent-rgb),0.1)":(hover===o?"rgba(var(--w-accent-rgb),0.06)":"transparent")}}
                 >
                   {o}
                 </div>
               )):(
-                <div style={{padding:"10px 16px",color:"#555",fontSize:"14px"}}>No matches</div>
+                <div style={{padding:"10px 16px",color:"var(--w-555555)",fontSize:"14px"}}>No matches</div>
               )}
             </div>
           )}
@@ -35599,16 +35602,16 @@ function AddCarForm({onSave,onCancel}){
   };
 
   const InfoBox=({label,value})=>(
-    <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(255,107,43,0.08)",borderRadius:"4px",borderLeft:"3px solid #FF6B2B",animation:"fadeSlide 0.3s ease forwards"}}>
-      <span style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>{label}</span>
-      <div style={{color:"#E8E4DC",fontSize:"14px",marginTop:"4px"}}>{value}</div>
+    <div style={{marginBottom:"24px",padding:"12px 16px",background:"rgba(var(--w-accent-rgb),0.08)",borderRadius:"4px",borderLeft:"3px solid var(--w-ff6b2b)",animation:"fadeSlide 0.3s ease forwards"}}>
+      <span style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px"}}>{label}</span>
+      <div style={{color:"var(--w-e8e4dc)",fontSize:"14px",marginTop:"4px"}}>{value}</div>
     </div>
   );
 
   return(
     <div style={{paddingTop:"48px",paddingBottom:"80px"}}>
-      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,52px)",color:"#E8E4DC",marginBottom:"8px"}}>ADD A CAR</div>
-      <p style={{color:"#555",fontSize:"14px",marginBottom:"36px"}}>Pick your car, trim, and color.</p>
+      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,52px)",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>ADD A CAR</div>
+      <p style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"36px"}}>Pick your car, trim, and color.</p>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"16px",marginBottom:"24px"}}>
         <MakeSearch label="MAKE" val={fMake} set={v=>{setFMake(v);setFModel("");resetDownstream();}} opts={makes} placeholder="Search or select make"/>
         <SW label="MODEL" val={fModel} set={v=>{setFModel(v);resetDownstream();}} opts={models} placeholder="Select model" disabled={!fMake}/>
@@ -35641,9 +35644,9 @@ function AddCarForm({onSave,onCancel}){
           <span style={LS}>SELECT YOUR COLOR</span>
           <div style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
             {colors.map(color=>(
-              <div key={color.name} onClick={()=>setFColor(color)} style={{display:"flex",alignItems:"center",gap:"8px",padding:"10px 14px",borderRadius:"4px",border:fColor?.name===color.name?"1px solid #FF6B2B":"1px solid #2A2A2A",background:fColor?.name===color.name?"rgba(255,107,43,0.1)":"#1C1C1C",cursor:"pointer",transition:"all 0.15s"}}>
-                <div style={{width:"20px",height:"20px",borderRadius:"50%",background:color.hex,border:"1px solid rgba(255,255,255,0.2)",flexShrink:0}}/>
-                <span style={{color:fColor?.name===color.name?"#FF6B2B":"#C8C4BC",fontSize:"13px"}}>{color.name}</span>
+              <div key={color.name} onClick={()=>setFColor(color)} style={{display:"flex",alignItems:"center",gap:"8px",padding:"10px 14px",borderRadius:"4px",border:fColor?.name===color.name?"1px solid var(--w-ff6b2b)":"1px solid var(--w-2a2a2a)",background:fColor?.name===color.name?"rgba(var(--w-accent-rgb),0.1)":"var(--w-1c1c1c)",cursor:"pointer",transition:"all 0.15s"}}>
+                <div style={{width:"20px",height:"20px",borderRadius:"50%",background:color.hex,border:"1px solid rgba(var(--w-ink-rgb),0.2)",flexShrink:0}}/>
+                <span style={{color:fColor?.name===color.name?"var(--w-ff6b2b)":"var(--w-c8c4bc)",fontSize:"13px"}}>{color.name}</span>
               </div>
             ))}
           </div>
@@ -35654,14 +35657,14 @@ function AddCarForm({onSave,onCancel}){
           <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
             <div style={{width:"32px",height:"32px",borderRadius:"50%",background:fColor.hex,border:"2px solid rgba(255,255,255,0.3)"}}/>
             <div>
-              <div style={{color:"#E8E4DC",fontSize:"14px"}}>{fYear} {fMake} {fModel} {fGeneration?`(${fGeneration}) `:""}{fTrim}</div>
-              <div style={{color:"#888",fontSize:"12px"}}>{fColor.name}{(autoEngine||fEngine)?` · ${autoEngine||fEngine}`:""}{(autoTransmission||fTransmission)?` · ${autoTransmission||fTransmission}`:""}{(autoDrivetrain||fDrivetrain)?` · ${autoDrivetrain||fDrivetrain}`:""}</div>
+              <div style={{color:"var(--w-e8e4dc)",fontSize:"14px"}}>{fYear} {fMake} {fModel} {fGeneration?`(${fGeneration}) `:""}{fTrim}</div>
+              <div style={{color:"var(--w-888888)",fontSize:"12px"}}>{fColor.name}{(autoEngine||fEngine)?` · ${autoEngine||fEngine}`:""}{(autoTransmission||fTransmission)?` · ${autoTransmission||fTransmission}`:""}{(autoDrivetrain||fDrivetrain)?` · ${autoDrivetrain||fDrivetrain}`:""}</div>
             </div>
           </div>
         </div>
       )}
       <button onClick={()=>onSave({make:fMake,model:fModel,generation:fGeneration,year:fYear,trim:fTrim,engine:autoEngine||fEngine,transmission:autoTransmission||fTransmission,drivetrain:autoDrivetrain||fDrivetrain,colorName:fColor?.name,colorHex:fColor?.hex,mileage:0,build:[],maintenance:[]})} disabled={!canSave} style={BP(canSave)}>SAVE TO GARAGE</button>
-      <button onClick={onCancel} style={{background:"transparent",color:"#555",border:"none",padding:"14px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",width:"100%",marginTop:"8px"}}>CANCEL</button>
+      <button onClick={onCancel} style={{background:"transparent",color:"var(--w-555555)",border:"none",padding:"14px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",width:"100%",marginTop:"8px"}}>CANCEL</button>
     </div>
   );
 }
@@ -35685,32 +35688,32 @@ function SubscribeScreen({session,onBack}){
   };
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
-          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
         <div style={{display:"flex",gap:"8px"}}>
-          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
-          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-555555)",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
+          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-555555)",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>GO AD-FREE</div>
-          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"10px"}}>GO AD-FREE</div>
+          <p style={{color:"var(--w-999999)",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
 
-          <button onClick={handleBuy} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
+          <button onClick={handleBuy} disabled={loading} style={{width:"100%",background:"var(--w-151210)",border:"1px solid var(--w-ff6b2b)",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>REMOVE ADS</span>
-              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":"$4.99"}</span>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"var(--w-e8e4dc)",letterSpacing:"1px"}}>REMOVE ADS</span>
+              <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"var(--w-ff6b2b)"}}>{loading?"...":"$4.99"}</span>
             </div>
-            <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
+            <div style={{color:"var(--w-666666)",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
           </button>
 
-          {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
-          <p style={{color:"#444",fontSize:"11px",marginTop:"24px"}}>Secure checkout powered by Stripe. Already removed ads in the iPhone or Android app? Sign in with the same account and it carries over.</p>
+          {error&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
+          <p style={{color:"var(--w-444444)",fontSize:"11px",marginTop:"24px"}}>Secure checkout powered by Stripe. Already removed ads in the iPhone or Android app? Sign in with the same account and it carries over.</p>
         </div>
       </div>
     </div>
@@ -35776,40 +35779,40 @@ function NativeSubscribeScreen({session,onPurchased,onBack}){
   const lifetimePkg=offerings?.availablePackages?.find(p=>p.packageType==="LIFETIME");
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",display:"flex",flexDirection:"column"}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"calc(18px + env(safe-area-inset-top)) 24px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
-          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
         <div style={{display:"flex",gap:"8px"}}>
-          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
-          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+          {onBack&&<button onClick={onBack} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-555555)",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>BACK</button>}
+          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-555555)",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
       </div>
       <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:"24px"}}>
         <div style={{width:"100%",maxWidth:"420px",textAlign:"center"}}>
-          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"10px"}}>GO AD-FREE</div>
-          <p style={{color:"#999",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
+          <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(32px,6vw,44px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"10px"}}>GO AD-FREE</div>
+          <p style={{color:"var(--w-999999)",fontSize:"14px",marginBottom:"36px"}}>Wrenched stays free for everyone. One payment removes every ad for good and helps keep the app going — no subscription, nothing to cancel.</p>
 
-          {offeringsError&&<div style={{color:"#FF6B2B",fontSize:"13px",marginBottom:"16px"}}>{offeringsError}</div>}
+          {offeringsError&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginBottom:"16px"}}>{offeringsError}</div>}
 
           {!offerings&&!offeringsError&&(
-            <div style={{color:"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"20px 0"}}>LOADING PRICING...</div>
+            <div style={{color:"var(--w-555555)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"20px 0"}}>LOADING PRICING...</div>
           )}
 
           {offerings&&lifetimePkg&&(
-            <button onClick={handlePurchase} disabled={loading} style={{width:"100%",background:"#151210",border:"1px solid #FF6B2B",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
+            <button onClick={handlePurchase} disabled={loading} style={{width:"100%",background:"var(--w-151210)",border:"1px solid var(--w-ff6b2b)",borderRadius:"8px",padding:"24px 20px",cursor:"pointer",textAlign:"left",marginBottom:"16px"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"1px"}}>REMOVE ADS</span>
-                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#FF6B2B"}}>{loading?"...":lifetimePkg.product.priceString}</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"var(--w-e8e4dc)",letterSpacing:"1px"}}>REMOVE ADS</span>
+                <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"var(--w-ff6b2b)"}}>{loading?"...":lifetimePkg.product.priceString}</span>
               </div>
-              <div style={{color:"#666",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
+              <div style={{color:"var(--w-666666)",fontSize:"12px",marginTop:"4px"}}>One payment. No ads, ever.</div>
             </button>
           )}
-          {error&&<div style={{color:"#FF6B2B",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
-          <button onClick={handleRestore} disabled={restoring} style={{background:"none",border:"none",color:"#666",fontSize:"12px",marginTop:"20px",cursor:"pointer",textDecoration:"underline"}}>{restoring?"Checking...":"Restore Purchase"}</button>
-          <p style={{color:"#444",fontSize:"11px",marginTop:"16px"}}>Already removed ads on another device? Use Restore Purchase above — it's tied to your {Capacitor.getPlatform()==="ios"?"Apple ID":"Google account"}, not this specific phone.</p>
+          {error&&<div style={{color:"var(--w-ff6b2b)",fontSize:"13px",marginTop:"8px"}}>{error}</div>}
+          <button onClick={handleRestore} disabled={restoring} style={{background:"none",border:"none",color:"var(--w-666666)",fontSize:"12px",marginTop:"20px",cursor:"pointer",textDecoration:"underline"}}>{restoring?"Checking...":"Restore Purchase"}</button>
+          <p style={{color:"var(--w-444444)",fontSize:"11px",marginTop:"16px"}}>Already removed ads on another device? Use Restore Purchase above — it's tied to your {Capacitor.getPlatform()==="ios"?"Apple ID":"Google account"}, not this specific phone.</p>
         </div>
       </div>
     </div>
@@ -35886,6 +35889,7 @@ function AppShell(){
   // old $9.99 lifetime unlock, so they're automatically ad-free.
   const adFree=session?.user?.email?.toLowerCase()===OWNER_EMAIL||subStatus==="active";
   const [bannerHeight,setBannerHeight]=useState(0);
+  const [showDisplay,setShowDisplay]=useState(false);
   useEffect(()=>{
     if(!session||subLoading||adFree||showUpgrade){removeBanner();setBannerHeight(0);return;}
     showBanner(setBannerHeight);
@@ -36009,9 +36013,9 @@ function AppShell(){
 
   const openRequestModal=(shop)=>{setRequestingShop(shop);setRequestText(buildRequestMessage(activeCar,shop));};
 
-  const Tab=({id,label})=>(<button onClick={()=>setActiveTab(id)} style={{background:"none",border:"none",borderBottom:activeTab===id?"2px solid #FF6B2B":"2px solid transparent",color:activeTab===id?"#FF6B2B":"#555",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"10px 14px",cursor:"pointer",transition:"all 0.15s",whiteSpace:"nowrap"}}>{label}</button>);
+  const Tab=({id,label})=>(<button onClick={()=>setActiveTab(id)} style={{background:"none",border:"none",borderBottom:activeTab===id?"2px solid var(--w-ff6b2b)":"2px solid transparent",color:activeTab===id?"var(--w-ff6b2b)":"var(--w-555555)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",padding:"10px 14px",cursor:"pointer",transition:"all 0.15s",whiteSpace:"nowrap"}}>{label}</button>);
 
-  if(authLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
+  if(authLoading)return<div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
   if(isRecovery)return<ResetPasswordScreen onDone={()=>setIsRecovery(false)}/>;
   if(!session)return(
     <Routes>
@@ -36021,7 +36025,7 @@ function AppShell(){
       <Route path="*" element={<Navigate to="/" replace/>} />
     </Routes>
   );
-  if(subLoading)return<div style={{minHeight:"100vh",background:"#0D0D0D",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
+  if(subLoading)return<div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"4px"}}>LOADING...</div></div>;
   // Grace-period/past-due handling was removed here — it only made sense for
   // recurring billing, where a renewal charge could fail. A one-time lifetime
   // purchase has no renewal, so once subStatus is "active" it stays active
@@ -36031,94 +36035,96 @@ function AppShell(){
   const carColor=activeCar?.colorHex||"#1C1C1C";
 
   return(
-    <div style={{minHeight:"100vh",background:"#0D0D0D",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)",paddingBottom:bannerHeight?`calc(${bannerHeight}px + env(safe-area-inset-bottom))`:undefined}}>
+    <div style={{minHeight:"100vh",background:"var(--w-0d0d0d)",fontFamily:"Inter, sans-serif",paddingTop:"env(safe-area-inset-top)",paddingBottom:bannerHeight?`calc(${bannerHeight}px + env(safe-area-inset-bottom))`:undefined}}>
+      {showDisplay&&<DisplaySettings onClose={()=>setShowDisplay(false)}/>}
       {bannerHeight>0&&(
         // Solid backing behind the native AdMob banner. Google keeps the banner
         // above the iPhone home-bar strip, which otherwise left a see-through
         // gap with app content showing under the ad.
-        <div aria-hidden="true" style={{position:"fixed",left:0,right:0,bottom:0,height:`calc(${bannerHeight}px + env(safe-area-inset-bottom))`,background:"#0D0D0D",borderTop:"1px solid #1C1C1C",zIndex:900,pointerEvents:"none"}}/>
+        <div aria-hidden="true" style={{position:"fixed",left:0,right:0,bottom:0,height:`calc(${bannerHeight}px + env(safe-area-inset-bottom))`,background:"var(--w-0d0d0d)",borderTop:"1px solid var(--w-1c1c1c)",zIndex:900,pointerEvents:"none"}}/>
       )}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:#1C1C1C}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0D0D0D}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}select:focus,input:focus{outline:1px solid #FF6B2B}`}</style>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');@keyframes fadeSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes loadBar{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}select option{background:var(--w-1c1c1c)}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--w-0d0d0d)}::-webkit-scrollbar-thumb{background:var(--w-333333);border-radius:3px}select:focus,input:focus{outline:1px solid var(--w-ff6b2b)}`}</style>
 
       {!adFree&&view==="garage"&&(
-        <div style={{background:"#151210",borderBottom:"1px solid #2A2620",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
-          <span style={{color:"#999",fontSize:"13px"}}>Wrenched is free, supported by ads. Remove them forever for a one-time $4.99.</span>
-          <button onClick={()=>setShowUpgrade(true)} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>REMOVE ADS</button>
-          {Capacitor.isNativePlatform()&&<button onClick={showPrivacyOptions} style={{background:"none",border:"none",color:"#555",fontSize:"11px",cursor:"pointer",textDecoration:"underline"}}>Ad privacy choices</button>}
+        <div style={{background:"var(--w-151210)",borderBottom:"1px solid var(--w-2a2620)",padding:"10px 24px",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap",textAlign:"center"}}>
+          <span style={{color:"var(--w-999999)",fontSize:"13px"}}>Wrenched is free, supported by ads. Remove them forever for a one-time $4.99.</span>
+          <button onClick={()=>setShowUpgrade(true)} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"1px",whiteSpace:"nowrap"}}>REMOVE ADS</button>
+          {Capacitor.isNativePlatform()&&<button onClick={showPrivacyOptions} style={{background:"none",border:"none",color:"var(--w-555555)",fontSize:"11px",cursor:"pointer",textDecoration:"underline"}}>Ad privacy choices</button>}
           {SHOW_AD_DEBUG&&<AdDebugLine/>}
         </div>
       )}
 
-      <div style={{borderBottom:"1px solid #1C1C1C",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:"env(safe-area-inset-top)",background:"#0D0D0D",zIndex:100}}>
+      <div style={{borderBottom:"1px solid var(--w-1c1c1c)",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:"env(safe-area-inset-top)",background:"var(--w-0d0d0d)",zIndex:100}}>
         <div style={{display:"flex",alignItems:"center",gap:"10px",cursor:"pointer"}} onClick={()=>setView("garage")}>
-          <div style={{width:"8px",height:"8px",background:"#FF6B2B",borderRadius:"50%"}}/>
+          <div style={{width:"8px",height:"8px",background:"var(--w-ff6b2b)",borderRadius:"50%"}}/>
           <Wordmark/>
         </div>
         <div style={{display:"flex",gap:"12px",alignItems:"center"}}>
           <div style={{position:"relative",cursor:"pointer"}} onClick={()=>setShowBell(!showBell)}>
             <span style={{fontSize:"18px"}}>🔔</span>
-            {allAlerts.length>0&&<div style={{position:"absolute",top:"-2px",right:"-2px",width:"8px",height:"8px",background:"#FF3B3B",borderRadius:"50%"}}/>}
+            {allAlerts.length>0&&<div style={{position:"absolute",top:"-2px",right:"-2px",width:"8px",height:"8px",background:"var(--w-ff3b3b)",borderRadius:"50%"}}/>}
             {showBell&&(
-              <div style={{position:"absolute",top:"30px",right:0,background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"12px",minWidth:"240px",zIndex:200}}>
-                {allAlerts.length===0?<div style={{color:"#555",fontSize:"13px"}}>All good — nothing due</div>:allAlerts.map(car=>(
+              <div style={{position:"absolute",top:"30px",right:0,background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"6px",padding:"12px",minWidth:"240px",zIndex:200}}>
+                {allAlerts.length===0?<div style={{color:"var(--w-555555)",fontSize:"13px"}}>All good — nothing due</div>:allAlerts.map(car=>(
                   <div key={car.id} style={{marginBottom:"8px"}}>
-                    <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px"}}>{car.year} {car.make} {car.model}</div>
-                    {!car.maintenance||car.maintenance.length===0?<div style={{color:"#FF3B3B",fontSize:"12px"}}>❗ Maintenance not set up</div>:car.maintenance.filter(i=>statusColor(i,car.mileage||0)!=="green"&&statusColor(i,car.mileage||0)!=="unset").map(i=><div key={i.name} style={{color:STATUS_COLORS[statusColor(i,car.mileage||0)],fontSize:"12px"}}>• {i.name}</div>)}
+                    <div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px"}}>{car.year} {car.make} {car.model}</div>
+                    {!car.maintenance||car.maintenance.length===0?<div style={{color:"var(--w-ff3b3b)",fontSize:"12px"}}>❗ Maintenance not set up</div>:car.maintenance.filter(i=>statusColor(i,car.mileage||0)!=="green"&&statusColor(i,car.mileage||0)!=="unset").map(i=><div key={i.name} style={{color:STATUS_COLORS[statusColor(i,car.mileage||0)],fontSize:"12px"}}>• {i.name}</div>)}
                   </div>
                 ))}
               </div>
             )}
           </div>
-          {view!=="garage"&&view!=="add-car"&&<button onClick={()=>setView("garage")} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px"}}>← Garage</button>}
+          {view!=="garage"&&view!=="add-car"&&<button onClick={()=>setView("garage")} style={{background:"none",border:"none",color:"var(--w-666666)",cursor:"pointer",fontSize:"13px"}}>← Garage</button>}
           {session?.user?.email?.toLowerCase()===OWNER_EMAIL&&(
-            <span style={{background:"rgba(255,107,43,0.12)",border:"1px solid #FF6B2B",color:"#FF6B2B",padding:"5px 12px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"10px",letterSpacing:"2px"}}>OWNER</span>
+            <span style={{background:"rgba(var(--w-accent-rgb),0.12)",border:"1px solid var(--w-ff6b2b)",color:"var(--w-ff6b2b)",padding:"5px 12px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"10px",letterSpacing:"2px"}}>OWNER</span>
           )}
           {subCustomerId&&subStatus==="active"&&(
             <button onClick={async()=>{
               const res=await fetch(`${API_BASE}/api/create-portal-session`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customerId:subCustomerId})});
               const data=await res.json();
               if(data.url)window.location.href=data.url;
-            }} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Billing history</button>
+            }} style={{background:"none",border:"none",color:"var(--w-666666)",cursor:"pointer",fontSize:"12px",textDecoration:"underline"}}>Billing history</button>
           )}
           {!subCustomerId&&Capacitor.isNativePlatform()&&subStatus==="active"&&(
             // Remove Ads is a one-time purchase, so there's nothing to manage —
             // just a badge, which opens the store's receipt page in an in-app
             // browser. (apps.apple.com/account/... links open the App Store app
             // and fail with "Cannot connect to App Store".)
-            <button onClick={()=>Browser.open({url:Capacitor.getPlatform()==="ios"?"https://reportaproblem.apple.com":"https://play.google.com/store/account/orderhistory"})} style={{background:"none",border:"1px solid #2A3A2A",color:"#5FAF5F",padding:"5px 10px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1.5px"}}>AD-FREE ✓</button>
+            <button onClick={()=>Browser.open({url:Capacitor.getPlatform()==="ios"?"https://reportaproblem.apple.com":"https://play.google.com/store/account/orderhistory"})} style={{background:"none",border:"1px solid var(--w-2a3a2a)",color:"var(--w-5faf5f)",padding:"5px 10px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"1.5px"}}>AD-FREE ✓</button>
           )}
-          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid #2A2A2A",color:"#555",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
+          <button onClick={()=>setShowDisplay(true)} aria-label="Display settings" title="Display settings" style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-888888)",width:"32px",height:"30px",borderRadius:"4px",cursor:"pointer",fontSize:"16px",lineHeight:1,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>⚙</button>
+          <button onClick={()=>supabase.auth.signOut()} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-555555)",padding:"6px 14px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px"}}>LOG OUT</button>
         </div>
       </div>
 
       <div style={{maxWidth:"760px",margin:"0 auto",padding:"0 24px"}}>
         {view==="garage"&&(
           <div style={{paddingTop:"48px"}}>
-            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,60px)",lineHeight:"1",color:"#E8E4DC",marginBottom:"8px"}}>MY GARAGE</div>
-            <p style={{color:"#555",fontSize:"15px",marginBottom:"36px"}}>Your cars. Your build. Your maintenance.</p>
+            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(36px,7vw,60px)",lineHeight:"1",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>MY GARAGE</div>
+            <p style={{color:"var(--w-555555)",fontSize:"15px",marginBottom:"36px"}}>Your cars. Your build. Your maintenance.</p>
             {garage.length===0?(
-              <div style={{border:"1px dashed #2A2A2A",borderRadius:"6px",padding:"48px",textAlign:"center"}}>
-                <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>GARAGE IS EMPTY</div>
-                <div style={{color:"#444",fontSize:"14px",marginBottom:"24px"}}>Add your first car to get started</div>
-                <button onClick={()=>setView("add-car")} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>+ ADD A CAR</button>
+              <div style={{border:"1px dashed var(--w-2a2a2a)",borderRadius:"6px",padding:"48px",textAlign:"center"}}>
+                <div style={{color:"var(--w-333333)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>GARAGE IS EMPTY</div>
+                <div style={{color:"var(--w-444444)",fontSize:"14px",marginBottom:"24px"}}>Add your first car to get started</div>
+                <button onClick={()=>setView("add-car")} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>+ ADD A CAR</button>
               </div>
             ):(
               <div>
                 <div style={{display:"flex",flexDirection:"column",gap:"16px",marginBottom:"24px"}}>
                   {garage.map(car=><CarCard key={car.id} car={car} onSelect={openCar} onDelete={deleteGarageItem} hasAlerts={car.maintenance&&car.maintenance.some(i=>statusColor(i,car.mileage||0)==="red"||statusColor(i,car.mileage||0)==="yellow")}/>)}
                 </div>
-                <button onClick={()=>setView("add-car")} style={{background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px",width:"100%"}}>+ ADD ANOTHER CAR</button>
+                <button onClick={()=>setView("add-car")} style={{background:"transparent",color:"var(--w-ff6b2b)",border:"1px solid var(--w-ff6b2b)",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px",width:"100%"}}>+ ADD ANOTHER CAR</button>
               </div>
             )}
-            <div style={{background:"#151210",border:"1px solid #2A2620",borderRadius:"8px",padding:"32px 28px",textAlign:"center",marginTop:"32px"}}>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,30px)",color:"#E8E4DC",marginBottom:"8px"}}>DON'T WANT TO WRENCH<span style={{color:"#FF6B2B"}}> IT YOURSELF?</span></div>
-              <p style={{color:"#999",fontSize:"14px",maxWidth:"420px",margin:"0 auto 20px"}}>Book Wrenched On-Site and have a real mechanic come to you — priced honestly by distance, no mystery quotes.</p>
-              <a href="/wrench-day.html" style={{display:"inline-block",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",textDecoration:"none"}}>ON-SITE</a>
+            <div style={{background:"var(--w-151210)",border:"1px solid var(--w-2a2620)",borderRadius:"8px",padding:"32px 28px",textAlign:"center",marginTop:"32px"}}>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,30px)",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>DON'T WANT TO WRENCH<span style={{color:"var(--w-ff6b2b)"}}> IT YOURSELF?</span></div>
+              <p style={{color:"var(--w-999999)",fontSize:"14px",maxWidth:"420px",margin:"0 auto 20px"}}>Book Wrenched On-Site and have a real mechanic come to you — priced honestly by distance, no mystery quotes.</p>
+              <a href="/wrench-day.html" style={{display:"inline-block",background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",textDecoration:"none"}}>ON-SITE</a>
             </div>
             <div style={{textAlign:"center",marginTop:"48px",paddingBottom:"24px"}}>
-              <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Terms</a>
-              <span style={{color:"#2A2A2A",margin:"0 8px",fontSize:"11px"}}>·</span>
-              <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"#333",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
+              <a href="/terms.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Terms</a>
+              <span style={{color:"var(--w-2a2a2a)",margin:"0 8px",fontSize:"11px"}}>·</span>
+              <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{color:"var(--w-333333)",fontSize:"11px",textDecoration:"none"}}>Privacy</a>
             </div>
           </div>
         )}
@@ -36128,27 +36134,27 @@ function AppShell(){
         {view==="car-detail"&&activeCar&&(
           <div style={{paddingTop:"32px",paddingBottom:"80px"}}>
             <div style={{background:`linear-gradient(135deg, ${carColor}44, ${carColor}11)`,borderRadius:"8px",padding:"20px 24px",marginBottom:"24px",border:`1px solid ${carColor}33`}}>
-              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,36px)",color:"#E8E4DC",lineHeight:"1.1",marginBottom:"4px"}}>{activeCar.year} {activeCar.make} {activeCar.model}</div>
-              <div style={{color:"#888",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.generation,activeCar.trim,activeCar.engine,activeCar.transmission,activeCar.drivetrain].filter(Boolean).join(" · ")}</div>
-              <div style={{color:"#888",fontSize:"13px",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap"}}>
-                <div style={{width:"12px",height:"12px",borderRadius:"50%",background:carColor,border:"1px solid rgba(255,255,255,0.2)"}}/>
+              <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"clamp(22px,4vw,36px)",color:"var(--w-e8e4dc)",lineHeight:"1.1",marginBottom:"4px"}}>{activeCar.year} {activeCar.make} {activeCar.model}</div>
+              <div style={{color:"var(--w-888888)",fontSize:"13px",marginBottom:"4px"}}>{[activeCar.generation,activeCar.trim,activeCar.engine,activeCar.transmission,activeCar.drivetrain].filter(Boolean).join(" · ")}</div>
+              <div style={{color:"var(--w-888888)",fontSize:"13px",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap"}}>
+                <div style={{width:"12px",height:"12px",borderRadius:"50%",background:carColor,border:"1px solid rgba(var(--w-ink-rgb),0.2)"}}/>
                 {activeCar.colorName}
-                <span style={{color:"#555"}}>·</span>
+                <span style={{color:"var(--w-555555)"}}>·</span>
                 {editMileage?(
                   <div style={{display:"flex",alignItems:"center",gap:"6px"}}>
                     <input style={{...IS,width:"100px",padding:"4px 8px",fontSize:"13px"}} type="number" value={tempMileage} onChange={e=>setTempMileage(e.target.value)} autoFocus/>
-                    <button onClick={updateMileage} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"4px 10px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px"}}>SAVE</button>
-                    <button onClick={()=>setEditMileage(false)} style={{background:"none",border:"none",color:"#555",cursor:"pointer",fontSize:"13px"}}>✕</button>
+                    <button onClick={updateMileage} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"4px 10px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px"}}>SAVE</button>
+                    <button onClick={()=>setEditMileage(false)} style={{background:"none",border:"none",color:"var(--w-555555)",cursor:"pointer",fontSize:"13px"}}>✕</button>
                   </div>
                 ):(
-                  <span style={{cursor:"pointer",color:"#C8C4BC"}} onClick={()=>{setEditMileage(true);setTempMileage(String(activeCar.mileage||0));}}>
-                    {(activeCar.mileage||0).toLocaleString()} mi <span style={{color:"#FF6B2B",fontSize:"11px"}}>✏</span>
+                  <span style={{cursor:"pointer",color:"var(--w-c8c4bc)"}} onClick={()=>{setEditMileage(true);setTempMileage(String(activeCar.mileage||0));}}>
+                    {(activeCar.mileage||0).toLocaleString()} mi <span style={{color:"var(--w-ff6b2b)",fontSize:"11px"}}>✏</span>
                   </span>
                 )}
               </div>
             </div>
 
-            <div style={{borderBottom:"1px solid #1C1C1C",marginBottom:"32px",display:"flex",overflowX:"auto"}}>
+            <div style={{borderBottom:"1px solid var(--w-1c1c1c)",marginBottom:"32px",display:"flex",overflowX:"auto"}}>
               <Tab id="maintenance" label="MAINTENANCE"/>
               <Tab id="specs" label="TORQUE SPECS"/>
               <Tab id="mods" label="MODS"/>
@@ -36163,26 +36169,26 @@ function AppShell(){
                     <div style={{padding:"24px 0"}}>
                       <div style={{display:"flex",gap:"6px",marginBottom:"28px"}}>
                         {items.map((_,i)=>(
-                          <div key={i} style={{flex:1,height:"4px",borderRadius:"2px",background:i<=wizardStep?"#FF6B2B":"#2A2A2A"}}/>
+                          <div key={i} style={{flex:1,height:"4px",borderRadius:"2px",background:i<=wizardStep?"var(--w-ff6b2b)":"var(--w-2a2a2a)"}}/>
                         ))}
                       </div>
-                      <div style={{color:"#555",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {items.length}</div>
-                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",marginBottom:"8px"}}>{items[wizardStep].name}</div>
-                      <div style={{color:"#888",fontSize:"14px",marginBottom:"6px"}}>{items[wizardStep].mileInterval?`Recommended every ${items[wizardStep].mileInterval.toLocaleString()} miles`:items[wizardStep].monthInterval?`Recommended every ${items[wizardStep].monthInterval} months`:"No fixed schedule — logged whenever it happens"}</div>
-                      <div style={{color:"#666",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{items[wizardStep].notes(activeCar)}</div>
+                      <div style={{color:"var(--w-555555)",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"8px"}}>STEP {wizardStep+1} OF {items.length}</div>
+                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"var(--w-e8e4dc)",marginBottom:"8px"}}>{items[wizardStep].name}</div>
+                      <div style={{color:"var(--w-888888)",fontSize:"14px",marginBottom:"6px"}}>{items[wizardStep].mileInterval?`Recommended every ${items[wizardStep].mileInterval.toLocaleString()} miles`:items[wizardStep].monthInterval?`Recommended every ${items[wizardStep].monthInterval} months`:"No fixed schedule — logged whenever it happens"}</div>
+                      <div style={{color:"var(--w-666666)",fontSize:"13px",lineHeight:"1.6",marginBottom:"28px"}}>{items[wizardStep].notes(activeCar)}</div>
                       <span style={LS}>WHEN WAS THIS LAST DONE?</span>
                       <input style={{...IS,marginBottom:"12px"}} type="number" value={wizardMileage} onChange={e=>setWizardMileage(e.target.value)} placeholder="Enter mileage" autoFocus/>
                       <div style={{display:"flex",gap:"10px"}}>
                         <button onClick={()=>wizardNext(false)} disabled={!wizardMileage} style={{...BP(!!wizardMileage),flex:2}}>{wizardStep<items.length-1?"SAVE & NEXT":"SAVE & FINISH"}</button>
-                        <button onClick={()=>wizardNext(true)} style={{flex:1,background:"transparent",border:"1px solid #2A2A2A",color:"#666",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer"}}>NOT SURE</button>
+                        <button onClick={()=>wizardNext(true)} style={{flex:1,background:"transparent",border:"1px solid var(--w-2a2a2a)",color:"var(--w-666666)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"2px",borderRadius:"4px",cursor:"pointer"}}>NOT SURE</button>
                       </div>
                     </div>
                   ):(
                     <div style={{textAlign:"center",padding:"48px 24px"}}>
                       <div style={{fontSize:"48px",marginBottom:"16px"}}>❗</div>
-                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"8px"}}>SET UP MAINTENANCE TRACKER</div>
-                      <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — {isElectric(activeCar)?"tires, brakes, coolant, and the 12V battery.":"oil, tires, filters, brakes, coolant, and transmission fluid."}</div>
-                      <button onClick={startWizard} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>START SETUP</button>
+                      <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"22px",color:"var(--w-e8e4dc)",letterSpacing:"3px",marginBottom:"8px"}}>SET UP MAINTENANCE TRACKER</div>
+                      <div style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>A few quick questions about your {activeCar.year} {activeCar.make} {activeCar.model} — {isElectric(activeCar)?"tires, brakes, coolant, and the 12V battery.":"oil, tires, filters, brakes, coolant, and transmission fluid."}</div>
+                      <button onClick={startWizard} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>START SETUP</button>
                     </div>
                   )
                 ):(
@@ -36190,9 +36196,9 @@ function AppShell(){
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"24px"}}>
                       <span style={LS}>SERVICE TRACKER</span>
                       <div style={{display:"flex",gap:"12px",fontSize:"12px"}}>
-                        <span style={{color:"#1CE84A"}}>● Good</span>
-                        <span style={{color:"#F5C800"}}>● Soon</span>
-                        <span style={{color:"#FF3B3B"}}>● Overdue</span>
+                        <span style={{color:"var(--w-1ce84a)"}}>● Good</span>
+                        <span style={{color:"var(--w-f5c800)"}}>● Soon</span>
+                        <span style={{color:"var(--w-ff3b3b)"}}>● Overdue</span>
                       </div>
                     </div>
                     {MAINTENANCE_CATEGORIES.map(cat=>{
@@ -36200,21 +36206,21 @@ function AppShell(){
                       if(groupItems.length===0)return null;
                       return(
                         <div key={cat} style={{marginBottom:"20px"}}>
-                          <div style={{color:"#FF6B2B",fontSize:"11px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"10px",paddingLeft:"2px"}}>{cat.toUpperCase()}</div>
+                          <div style={{color:"var(--w-ff6b2b)",fontSize:"11px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",marginBottom:"10px",paddingLeft:"2px"}}>{cat.toUpperCase()}</div>
                           {groupItems.map((item,i)=>{
                             const sc=statusColor(item,activeCar.mileage||0);
                             const milesDue=(item.lastMiles||0)+item.mileInterval;
                             const history=item.history||[];
                             const isExpanded=expandedHistory===item.name;
                             return(
-                              <div key={i} style={{background:"#1C1C1C",border:`1px solid ${sc==="unset"?"#2A2A2A":STATUS_COLORS[sc]+"44"}`,borderRadius:"6px",marginBottom:"10px",overflow:"hidden"}}>
+                              <div key={i} style={{background:"var(--w-1c1c1c)",border:`1px solid ${sc==="unset"?"var(--w-2a2a2a)":STATUS_BORDERS[sc]}`,borderRadius:"6px",marginBottom:"10px",overflow:"hidden"}}>
                                 <div style={{padding:"16px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:"12px"}}>
                                   <div style={{flex:1}}>
                                     <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"4px"}}>
                                       <div style={{width:"8px",height:"8px",borderRadius:"50%",background:STATUS_COLORS[sc],flexShrink:0}}/>
-                                      <span style={{color:"#E8E4DC",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
+                                      <span style={{color:"var(--w-e8e4dc)",fontSize:"14px",fontWeight:"500"}}>{item.name}</span>
                                     </div>
-                                    <div style={{color:"#555",fontSize:"12px",paddingLeft:"16px"}}>
+                                    <div style={{color:"var(--w-555555)",fontSize:"12px",paddingLeft:"16px"}}>
                                       {item.mileInterval?
                                         `Every ${item.mileInterval.toLocaleString()} mi${item.lastMiles?` · Last: ${item.lastMiles.toLocaleString()} mi · Next: ${milesDue.toLocaleString()} mi`:" · Not logged yet"}`
                                         :item.monthInterval?
@@ -36223,21 +36229,21 @@ function AppShell(){
                                         `No fixed schedule${item.lastDate?` · Last logged: ${new Date(item.lastDate).toLocaleDateString()}`:" · Not logged yet"}`
                                       }
                                     </div>
-                                    {item.notes&&<div style={{color:"#666",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
+                                    {item.notes&&<div style={{color:"var(--w-666666)",fontSize:"11px",paddingLeft:"16px",marginTop:"2px"}}>{item.notes}</div>}
                                     {history.length>0&&(
-                                      <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"#FF6B2B",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
+                                      <div onClick={()=>setExpandedHistory(isExpanded?null:item.name)} style={{color:"var(--w-ff6b2b)",fontSize:"11px",paddingLeft:"16px",marginTop:"6px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>
                                         {isExpanded?"▲ HIDE HISTORY":`▼ VIEW HISTORY (${history.length})`}
                                       </div>
                                     )}
                                   </div>
-                                  <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"#1CE84A",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
+                                  <button onClick={()=>markDone(item)} style={{background:"rgba(28,232,74,0.1)",border:"1px solid rgba(28,232,74,0.3)",color:"var(--w-1ce84a)",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>✓ DONE</button>
                                 </div>
                                 {isExpanded&&history.length>0&&(
-                                  <div style={{padding:"0 16px 16px",borderTop:"1px solid #2A2A2A",marginTop:"4px",paddingTop:"12px"}}>
+                                  <div style={{padding:"0 16px 16px",borderTop:"1px solid var(--w-2a2a2a)",marginTop:"4px",paddingTop:"12px"}}>
                                     {history.map((h,hi)=>(
-                                      <div key={hi} style={{display:"flex",justifyContent:"space-between",padding:"6px 0 6px 16px",fontSize:"12px",color:"#888",borderBottom:hi<history.length-1?"1px solid #222":"none"}}>
+                                      <div key={hi} style={{display:"flex",justifyContent:"space-between",padding:"6px 0 6px 16px",fontSize:"12px",color:"var(--w-888888)",borderBottom:hi<history.length-1?"1px solid var(--w-222222)":"none"}}>
                                         <span>{h.miles.toLocaleString()} mi</span>
-                                        <span style={{color:"#555"}}>{new Date(h.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
+                                        <span style={{color:"var(--w-555555)"}}>{new Date(h.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
                                       </div>
                                     ))}
                                   </div>
@@ -36248,7 +36254,7 @@ function AppShell(){
                         </div>
                       );
                     })}
-                    <button onClick={()=>{syncCar({...activeCar,maintenance:[]});setWizardStep(-1);}} style={{background:"transparent",border:"1px solid #2A2A2A",color:"#444",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",width:"100%",marginTop:"16px"}}>RESET & REDO SETUP</button>
+                    <button onClick={()=>{syncCar({...activeCar,maintenance:[]});setWizardStep(-1);}} style={{background:"transparent",border:"1px solid var(--w-2a2a2a)",color:"var(--w-444444)",padding:"10px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",width:"100%",marginTop:"16px"}}>RESET & REDO SETUP</button>
                   </div>
                 )}
               </div>
@@ -36259,13 +36265,13 @@ function AppShell(){
                 {getTorqueSpecs(activeCar).length===0?(
                   <div style={{textAlign:"center",padding:"48px 24px"}}>
                     <div style={{fontSize:"40px",marginBottom:"16px"}}>🔩</div>
-                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"8px"}}>TORQUE SPECS COMING SOON</div>
-                    <div style={{color:"#555",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>We're adding verified torque specs car by car — same as maintenance and mods. Nothing here yet for the {activeCar.year} {activeCar.make} {activeCar.model}, but here's what it'll look like once it's populated:</div>
+                    <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"var(--w-e8e4dc)",letterSpacing:"3px",marginBottom:"8px"}}>TORQUE SPECS COMING SOON</div>
+                    <div style={{color:"var(--w-555555)",fontSize:"14px",marginBottom:"32px",maxWidth:"360px",margin:"0 auto 32px"}}>We're adding verified torque specs car by car — same as maintenance and mods. Nothing here yet for the {activeCar.year} {activeCar.make} {activeCar.model}, but here's what it'll look like once it's populated:</div>
                     <div style={{maxWidth:"420px",margin:"0 auto",opacity:0.35}}>
                       {[["Oil Drain Plug","18 ft-lbs"],["Wheel Lug Nuts","89 ft-lbs"],["Spark Plugs","15 ft-lbs"]].map(([name,val])=>(
-                        <div key={name} style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                          <span style={{color:"#C8C4BC",fontSize:"13px"}}>{name}</span>
-                          <span style={{color:"#888",fontSize:"13px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>{val}</span>
+                        <div key={name} style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                          <span style={{color:"var(--w-c8c4bc)",fontSize:"13px"}}>{name}</span>
+                          <span style={{color:"var(--w-888888)",fontSize:"13px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>{val}</span>
                         </div>
                       ))}
                     </div>
@@ -36274,12 +36280,12 @@ function AppShell(){
                   <div>
                     <span style={LS}>VERIFIED TORQUE SPECS</span>
                     {getTorqueSpecs(activeCar).map((spec,i)=>(
-                      <div key={i} style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
+                      <div key={i} style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"6px",padding:"14px 16px",marginBottom:"8px"}}>
                         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                          <span style={{color:"#E8E4DC",fontSize:"14px"}}>{spec.partName}</span>
-                          <span style={{color:"#FF6B2B",fontSize:"14px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>{spec.spec} {spec.unit}</span>
+                          <span style={{color:"var(--w-e8e4dc)",fontSize:"14px"}}>{spec.partName}</span>
+                          <span style={{color:"var(--w-ff6b2b)",fontSize:"14px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px"}}>{spec.spec} {spec.unit}</span>
                         </div>
-                        {spec.notes&&<div style={{color:"#666",fontSize:"12px",marginTop:"6px"}}>{spec.notes}</div>}
+                        {spec.notes&&<div style={{color:"var(--w-666666)",fontSize:"12px",marginTop:"6px"}}>{spec.notes}</div>}
                       </div>
                     ))}
                   </div>
@@ -36291,42 +36297,42 @@ function AppShell(){
               <div>
                 {getBrands(activeCar).length===0?(
                   <div style={{textAlign:"center",padding:"48px 0"}}>
-                    <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO MODS CATALOG YET</div>
-                    <div style={{color:"#444",fontSize:"14px"}}>We're adding more cars all the time.</div>
+                    <div style={{color:"var(--w-333333)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO MODS CATALOG YET</div>
+                    <div style={{color:"var(--w-444444)",fontSize:"14px"}}>We're adding more cars all the time.</div>
                   </div>
                 ):!activeBrand?(
                   <div>
                     <span style={LS}>SELECT A BRAND</span>
                     <div style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
                       {getBrands(activeCar).map(brand=>(
-                        <button key={brand} onClick={()=>setActiveBrand(brand)} style={{background:"#1C1C1C",border:`1px solid ${BRAND_COLORS[brand]||"#333"}`,color:"#E8E4DC",padding:"12px 20px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",display:"flex",alignItems:"center",gap:"8px",transition:"all 0.15s"}}
+                        <button key={brand} onClick={()=>setActiveBrand(brand)} style={{background:"var(--w-1c1c1c)",border:`1px solid ${BRAND_COLORS[brand]||"var(--w-333333)"}`,color:"var(--w-e8e4dc)",padding:"12px 20px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",display:"flex",alignItems:"center",gap:"8px",transition:"all 0.15s"}}
                           onMouseEnter={e=>{e.currentTarget.style.background=`${BRAND_COLORS[brand]}22`;}}
-                          onMouseLeave={e=>{e.currentTarget.style.background="#1C1C1C";}}
+                          onMouseLeave={e=>{e.currentTarget.style.background="var(--w-1c1c1c)";}}
                         ><BrandDot brand={brand}/>{brand}</button>
                       ))}
                     </div>
                   </div>
                 ):(
                   <div>
-                    <button onClick={()=>setActiveBrand(null)} style={{background:"none",border:"none",color:"#666",cursor:"pointer",fontSize:"13px",marginBottom:"20px",padding:0}}>← All Brands</button>
+                    <button onClick={()=>setActiveBrand(null)} style={{background:"none",border:"none",color:"var(--w-666666)",cursor:"pointer",fontSize:"13px",marginBottom:"20px",padding:0}}>← All Brands</button>
                     <div style={{display:"flex",alignItems:"center",gap:"12px",marginBottom:"28px",flexWrap:"wrap"}}>
                       <BrandDot brand={activeBrand} size={10}/>
-                      <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"#E8E4DC",letterSpacing:"2px"}}>{activeBrand}</span>
+                      <span style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"28px",color:"var(--w-e8e4dc)",letterSpacing:"2px"}}>{activeBrand}</span>
                       {BRAND_LINKS[activeBrand]&&(
-                        <a href={BRAND_LINKS[activeBrand]} target="_blank" rel="noopener noreferrer" style={{color:"#FF6B2B",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px",border:"1px solid #FF6B2B",padding:"5px 12px",borderRadius:"4px"}}>VISIT SITE ↗</a>
+                        <a href={BRAND_LINKS[activeBrand]} target="_blank" rel="noopener noreferrer" style={{color:"var(--w-ff6b2b)",fontSize:"12px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"1px",border:"1px solid var(--w-ff6b2b)",padding:"5px 12px",borderRadius:"4px"}}>VISIT SITE ↗</a>
                       )}
                     </div>
                     {Object.entries(getCategoriesForBrand()).map(([cat,items])=>(
                       <div key={cat} style={{marginBottom:"28px"}}>
-                        <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"10px"}}>{cat}</div>
+                        <div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"3px",marginBottom:"10px"}}>{cat}</div>
                         {items.map((item,i)=>{const owned=activeCar.build&&activeCar.build.find(b=>b.brand===item.brand&&b.part===item.part);return(
-                          <div key={i} style={{background:owned?"rgba(255,107,43,0.07)":"#1C1C1C",border:owned?"1px solid rgba(255,107,43,0.4)":"1px solid #2A2A2A",borderRadius:"4px",padding:"14px 16px",marginBottom:"8px"}}>
+                          <div key={i} style={{background:owned?"rgba(var(--w-accent-rgb),0.07)":"var(--w-1c1c1c)",border:owned?"1px solid rgba(var(--w-accent-rgb),0.4)":"1px solid var(--w-2a2a2a)",borderRadius:"4px",padding:"14px 16px",marginBottom:"8px"}}>
                             <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"12px"}}>
                               <div style={{flex:1}}>
-                                <div style={{color:"#E8E4DC",fontSize:"14px",marginBottom:item.note?"6px":"0"}}>{item.part}</div>
-                                {item.note&&<div style={{color:"#666",fontSize:"12px",lineHeight:"1.5"}}>⚠ {item.note}</div>}
+                                <div style={{color:"var(--w-e8e4dc)",fontSize:"14px",marginBottom:item.note?"6px":"0"}}>{item.part}</div>
+                                {item.note&&<div style={{color:"var(--w-666666)",fontSize:"12px",lineHeight:"1.5"}}>⚠ {item.note}</div>}
                               </div>
-                              <button onClick={()=>toggleBuildItem(item)} style={{background:owned?"rgba(255,107,43,0.15)":"#2A2A2A",border:owned?"1px solid #FF6B2B":"1px solid #333",color:owned?"#FF6B2B":"#555",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>{owned?"✓ ADDED":"+ ADD"}</button>
+                              <button onClick={()=>toggleBuildItem(item)} style={{background:owned?"rgba(var(--w-accent-rgb),0.15)":"var(--w-2a2a2a)",border:owned?"1px solid var(--w-ff6b2b)":"1px solid var(--w-333333)",color:owned?"var(--w-ff6b2b)":"var(--w-555555)",padding:"6px 14px",borderRadius:"3px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"11px",letterSpacing:"2px",whiteSpace:"nowrap",flexShrink:0}}>{owned?"✓ ADDED":"+ ADD"}</button>
                             </div>
                           </div>
                         );})}
@@ -36341,20 +36347,20 @@ function AppShell(){
               <div>
                 {!activeCar.build||activeCar.build.length===0?(
                   <div style={{textAlign:"center",padding:"48px 0"}}>
-                    <div style={{color:"#333",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO SPECIFIC PARTS LOGGED YET</div>
-                    <div style={{color:"#444",fontSize:"14px",marginBottom:"20px"}}>Go to Mods and start adding parts</div>
-                    <button onClick={()=>setActiveTab("mods")} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>BROWSE MODS</button>
+                    <div style={{color:"var(--w-333333)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"3px",marginBottom:"8px"}}>NO SPECIFIC PARTS LOGGED YET</div>
+                    <div style={{color:"var(--w-444444)",fontSize:"14px",marginBottom:"20px"}}>Go to Mods and start adding parts</div>
+                    <button onClick={()=>setActiveTab("mods")} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>BROWSE MODS</button>
                   </div>
                 ):(
                   <div>
                     <span style={LS}>YOUR BUILD — {activeCar.year} {activeCar.make} {activeCar.model}</span>
                     {(()=>{const byBrand={};activeCar.build.forEach(item=>{if(!byBrand[item.brand])byBrand[item.brand]=[];byBrand[item.brand].push(item);});return Object.entries(byBrand).map(([brand,items])=>(
                       <div key={brand} style={{marginBottom:"24px"}}>
-                        <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"10px"}}><BrandDot brand={brand} size={10}/><span style={{color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"2px"}}>{brand}</span></div>
+                        <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"10px"}}><BrandDot brand={brand} size={10}/><span style={{color:"var(--w-e8e4dc)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"16px",letterSpacing:"2px"}}>{brand}</span></div>
                         {items.map((item,i)=>(
-                          <div key={i} style={{background:"#1C1C1C",border:"1px solid rgba(255,107,43,0.2)",borderRadius:"4px",padding:"12px 16px",marginBottom:"6px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                            <div><div style={{color:"#C8C4BC",fontSize:"14px"}}>{item.part}</div><div style={{color:"#555",fontSize:"11px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px"}}>{item.category}</div></div>
-                            <button onClick={()=>toggleBuildItem(item)} style={{background:"none",border:"none",color:"#444",cursor:"pointer",fontSize:"18px"}}>×</button>
+                          <div key={i} style={{background:"var(--w-1c1c1c)",border:"1px solid rgba(var(--w-accent-rgb),0.2)",borderRadius:"4px",padding:"12px 16px",marginBottom:"6px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                            <div><div style={{color:"var(--w-c8c4bc)",fontSize:"14px"}}>{item.part}</div><div style={{color:"var(--w-555555)",fontSize:"11px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px"}}>{item.category}</div></div>
+                            <button onClick={()=>toggleBuildItem(item)} style={{background:"none",border:"none",color:"var(--w-444444)",cursor:"pointer",fontSize:"18px"}}>×</button>
                           </div>
                         ))}
                       </div>
@@ -36374,23 +36380,23 @@ function AppShell(){
                     {shopsStatus==="idle"&&(
                       <div style={{textAlign:"center",padding:"48px 0"}}>
                         <div style={{fontSize:"32px",marginBottom:"12px"}}>📍</div>
-                        <div style={{color:"#E8E4DC",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>FIND SHOPS NEAR YOU</div>
-                        <div style={{color:"#666",fontSize:"14px",marginBottom:"4px",maxWidth:"380px",margin:"0 auto 4px"}}>We'll match shops to your {activeCar.year} {activeCar.make} {activeCar.model} — {hasDealer?`your closest ${activeCar.make} dealer, `:""}real independent {activeCar.make} specialists near you, and quick-service chains nearby for oil changes and tires. One tap drafts a text asking for an appointment, so you don't have to figure out what to say.</div>
-                        <div style={{color:"#444",fontSize:"12px",marginBottom:"24px"}}>We'll ask your browser for location access — nothing is shared until you approve it.</div>
-                        <button onClick={findNearbyShops} style={{background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>USE MY LOCATION</button>
+                        <div style={{color:"var(--w-e8e4dc)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"18px",letterSpacing:"3px",marginBottom:"8px"}}>FIND SHOPS NEAR YOU</div>
+                        <div style={{color:"var(--w-666666)",fontSize:"14px",marginBottom:"4px",maxWidth:"380px",margin:"0 auto 4px"}}>We'll match shops to your {activeCar.year} {activeCar.make} {activeCar.model} — {hasDealer?`your closest ${activeCar.make} dealer, `:""}real independent {activeCar.make} specialists near you, and quick-service chains nearby for oil changes and tires. One tap drafts a text asking for an appointment, so you don't have to figure out what to say.</div>
+                        <div style={{color:"var(--w-444444)",fontSize:"12px",marginBottom:"24px"}}>We'll ask your browser for location access — nothing is shared until you approve it.</div>
+                        <button onClick={findNearbyShops} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"14px 32px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px",cursor:"pointer",borderRadius:"4px"}}>USE MY LOCATION</button>
                       </div>
                     )}
 
                     {(shopsStatus==="locating"||shopsStatus==="loading")&&(
                       <div style={{textAlign:"center",padding:"48px 0"}}>
-                        <div style={{color:"#FF6B2B",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px"}}>{shopsStatus==="locating"?"GETTING YOUR LOCATION...":"SEARCHING NEARBY..."}</div>
+                        <div style={{color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"3px"}}>{shopsStatus==="locating"?"GETTING YOUR LOCATION...":"SEARCHING NEARBY..."}</div>
                       </div>
                     )}
 
                     {shopsStatus==="error"&&(
                       <div style={{textAlign:"center",padding:"48px 0"}}>
-                        <div style={{color:"#FF3B3B",fontSize:"14px",marginBottom:"20px",maxWidth:"340px",margin:"0 auto 20px"}}>{shopsError}</div>
-                        <button onClick={findNearbyShops} style={{background:"transparent",color:"#FF6B2B",border:"1px solid #FF6B2B",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>TRY AGAIN</button>
+                        <div style={{color:"var(--w-ff3b3b)",fontSize:"14px",marginBottom:"20px",maxWidth:"340px",margin:"0 auto 20px"}}>{shopsError}</div>
+                        <button onClick={findNearbyShops} style={{background:"transparent",color:"var(--w-ff6b2b)",border:"1px solid var(--w-ff6b2b)",padding:"12px 28px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>TRY AGAIN</button>
                       </div>
                     )}
 
@@ -36400,7 +36406,7 @@ function AppShell(){
                           <div style={{marginBottom:"32px"}}>
                             <span style={LS}>Dealers For Your {activeCar.make}</span>
                             {shopsResults.dealers.length===0?(
-                              <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No dealer found within range — try a specialist or quick-service shop below.</div>
+                              <div style={{color:"var(--w-555555)",fontSize:"13px",padding:"12px 0"}}>No dealer found within range — try a specialist or quick-service shop below.</div>
                             ):shopsResults.dealers.map((shop,i)=>(
                               <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                             ))}
@@ -36408,23 +36414,23 @@ function AppShell(){
                         )}
                         <div style={{marginBottom:"32px"}}>
                           <span style={LS}>{specialtyLabel}</span>
-                          <div style={{color:"#555",fontSize:"12px",marginBottom:"10px"}}>Independent shops that focus on your brand — often a better price than the dealer for routine work.</div>
+                          <div style={{color:"var(--w-555555)",fontSize:"12px",marginBottom:"10px"}}>Independent shops that focus on your brand — often a better price than the dealer for routine work.</div>
                           {shopsResults.specialty.length===0?(
-                            <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No specialty shops found nearby — {hasDealer?"the dealer above is a solid fallback.":"try a quick-service shop below."}</div>
+                            <div style={{color:"var(--w-555555)",fontSize:"13px",padding:"12px 0"}}>No specialty shops found nearby — {hasDealer?"the dealer above is a solid fallback.":"try a quick-service shop below."}</div>
                           ):shopsResults.specialty.map((shop,i)=>(
                             <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                           ))}
                         </div>
                         <div>
                           <span style={LS}>QUICK SERVICE NEAR YOU</span>
-                          <div style={{color:"#555",fontSize:"12px",marginBottom:"10px"}}>Any-brand chains for oil changes, tires, and basic service.</div>
+                          <div style={{color:"var(--w-555555)",fontSize:"12px",marginBottom:"10px"}}>Any-brand chains for oil changes, tires, and basic service.</div>
                           {shopsResults.quickService.length===0?(
-                            <div style={{color:"#555",fontSize:"13px",padding:"12px 0"}}>No quick-service chains found nearby.</div>
+                            <div style={{color:"var(--w-555555)",fontSize:"13px",padding:"12px 0"}}>No quick-service chains found nearby.</div>
                           ):shopsResults.quickService.map((shop,i)=>(
                             <ShopCard key={i} shop={shop} onRequest={openRequestModal}/>
                           ))}
                         </div>
-                        <button onClick={findNearbyShops} style={{background:"none",border:"1px solid #2A2A2A",color:"#666",padding:"10px 20px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",marginTop:"12px"}}>REFRESH RESULTS</button>
+                        <button onClick={findNearbyShops} style={{background:"none",border:"1px solid var(--w-2a2a2a)",color:"var(--w-666666)",padding:"10px 20px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"12px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",marginTop:"12px"}}>REFRESH RESULTS</button>
                       </div>
                     )}
                   </div>
@@ -36438,15 +36444,15 @@ function AppShell(){
 
       {doneItem&&(
         <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:300,padding:"24px"}}>
-          <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"8px",padding:"28px",maxWidth:"360px",width:"100%"}}>
-            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"4px"}}>MARK AS DONE</div>
-            <div style={{color:"#555",fontSize:"13px",marginBottom:"20px"}}>{doneItem.name}</div>
+          <div style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"8px",padding:"28px",maxWidth:"360px",width:"100%"}}>
+            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"var(--w-e8e4dc)",letterSpacing:"3px",marginBottom:"4px"}}>MARK AS DONE</div>
+            <div style={{color:"var(--w-555555)",fontSize:"13px",marginBottom:"20px"}}>{doneItem.name}</div>
             <span style={LS}>CURRENT MILEAGE</span>
             <input style={{...IS,marginBottom:"8px"}} type="number" value={doneMileageInput} onChange={e=>setDoneMileageInput(e.target.value)} placeholder="Enter mileage"/>
-            <div style={{color:"#555",fontSize:"12px",marginBottom:"20px"}}>Will be rounded to nearest 10 — saved as {roundToTen(parseInt(doneMileageInput)||0).toLocaleString()} mi</div>
+            <div style={{color:"var(--w-555555)",fontSize:"12px",marginBottom:"20px"}}>Will be rounded to nearest 10 — saved as {roundToTen(parseInt(doneMileageInput)||0).toLocaleString()} mi</div>
             <div style={{display:"flex",gap:"10px"}}>
-              <button onClick={confirmDone} style={{flex:1,background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CONFIRM</button>
-              <button onClick={()=>setDoneItem(null)} style={{flex:1,background:"transparent",color:"#555",border:"1px solid #2A2A2A",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
+              <button onClick={confirmDone} style={{flex:1,background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CONFIRM</button>
+              <button onClick={()=>setDoneItem(null)} style={{flex:1,background:"transparent",color:"var(--w-555555)",border:"1px solid var(--w-2a2a2a)",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
             </div>
           </div>
         </div>
@@ -36454,19 +36460,19 @@ function AppShell(){
 
       {requestingShop&&(
         <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:300,padding:"24px"}}>
-          <div style={{background:"#1C1C1C",border:"1px solid #2A2A2A",borderRadius:"8px",padding:"28px",maxWidth:"400px",width:"100%"}}>
-            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"#E8E4DC",letterSpacing:"3px",marginBottom:"4px"}}>REQUEST APPOINTMENT</div>
-            <div style={{color:"#555",fontSize:"13px",marginBottom:"16px"}}>{requestingShop.name}</div>
+          <div style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"8px",padding:"28px",maxWidth:"400px",width:"100%"}}>
+            <div style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"20px",color:"var(--w-e8e4dc)",letterSpacing:"3px",marginBottom:"4px"}}>REQUEST APPOINTMENT</div>
+            <div style={{color:"var(--w-555555)",fontSize:"13px",marginBottom:"16px"}}>{requestingShop.name}</div>
             <span style={LS}>YOUR MESSAGE</span>
             <textarea value={requestText} onChange={e=>setRequestText(e.target.value)} rows={5} style={{...IS,marginBottom:"8px",resize:"vertical",fontFamily:"Inter, sans-serif",lineHeight:"1.5"}}/>
-            <div style={{color:"#555",fontSize:"12px",marginBottom:"20px"}}>{requestingShop.phone?"We've drafted this for you — edit it if you'd like, then send it as a text. The shop replies straight to your phone.":"This shop's number isn't listed — try calling or visiting their website instead."}</div>
+            <div style={{color:"var(--w-555555)",fontSize:"12px",marginBottom:"20px"}}>{requestingShop.phone?"We've drafted this for you — edit it if you'd like, then send it as a text. The shop replies straight to your phone.":"This shop's number isn't listed — try calling or visiting their website instead."}</div>
             <div style={{display:"flex",gap:"10px"}}>
               {requestingShop.phone?(
-                <a href={`sms:${requestingShop.phone.replace(/[^\d+]/g,"")}?&body=${encodeURIComponent(requestText)}`} style={{flex:1,textAlign:"center",background:"#FF6B2B",color:"#0D0D0D",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",textDecoration:"none"}} onClick={()=>setRequestingShop(null)}>SEND AS TEXT</a>
+                <a href={`sms:${requestingShop.phone.replace(/[^\d+]/g,"")}?&body=${encodeURIComponent(requestText)}`} style={{flex:1,textAlign:"center",background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"14px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px",textDecoration:"none"}} onClick={()=>setRequestingShop(null)}>SEND AS TEXT</a>
               ):(
-                <div style={{flex:1,textAlign:"center",background:"#2A2620",color:"#555",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",borderRadius:"4px"}}>NO PHONE ON FILE</div>
+                <div style={{flex:1,textAlign:"center",background:"var(--w-2a2620)",color:"var(--w-555555)",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"1px",borderRadius:"4px"}}>NO PHONE ON FILE</div>
               )}
-              <button onClick={()=>setRequestingShop(null)} style={{flex:1,background:"transparent",color:"#555",border:"1px solid #2A2A2A",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
+              <button onClick={()=>setRequestingShop(null)} style={{flex:1,background:"transparent",color:"var(--w-555555)",border:"1px solid var(--w-2a2a2a)",padding:"12px",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px",cursor:"pointer",borderRadius:"4px"}}>CANCEL</button>
             </div>
           </div>
         </div>
@@ -36477,11 +36483,71 @@ function AppShell(){
   );
 }
 
+// Display settings: light/dark, accent color, high contrast, text size.
+// Choices apply instantly and are saved on this device (src/theme.js).
+function DisplaySettings({onClose}){
+  const [prefs,setPrefs]=useState(loadPrefs);
+  const prefsRef=useRef(prefs);
+  prefsRef.current=prefs;
+  useEffect(()=>watchSystemMode(()=>prefsRef.current),[]);
+  const update=(patch)=>{const next={...prefs,...patch};setPrefs(next);savePrefs(next);applyPrefs(next);};
+  const H={color:"var(--w-ff6b2b)",fontFamily:"'Bebas Neue', sans-serif",fontSize:"13px",letterSpacing:"3px",margin:"28px 0 10px"};
+  const seg=(on)=>({flex:1,padding:"12px 8px",borderRadius:"6px",cursor:"pointer",fontSize:"14px",fontWeight:600,border:on?"2px solid var(--w-ff6b2b)":"1px solid var(--w-2a2a2a)",background:on?"rgba(var(--w-accent-rgb),0.12)":"var(--w-1c1c1c)",color:"var(--w-e8e4dc)"});
+  return(
+    <div role="dialog" aria-modal="true" aria-label="Display settings" style={{position:"fixed",inset:0,zIndex:1000,background:"var(--w-0d0d0d)",overflowY:"auto",paddingTop:"env(safe-area-inset-top)",paddingBottom:"calc(24px + env(safe-area-inset-bottom))"}}>
+      <div style={{maxWidth:"560px",margin:"0 auto",padding:"20px 24px"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+          <h1 style={{fontFamily:"'Bebas Neue', sans-serif",fontSize:"34px",letterSpacing:"1px",color:"var(--w-e8e4dc)",margin:0,fontWeight:400}}>DISPLAY</h1>
+          <button onClick={onClose} style={{background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",border:"none",padding:"10px 22px",borderRadius:"4px",cursor:"pointer",fontFamily:"'Bebas Neue', sans-serif",fontSize:"15px",letterSpacing:"2px"}}>DONE</button>
+        </div>
+
+        <div style={H}>APPEARANCE</div>
+        <div style={{display:"flex",gap:"8px"}}>
+          {[["dark","Dark"],["light","Light"],["system","Match phone"]].map(([k,l])=>(
+            <button key={k} onClick={()=>update({mode:k})} aria-pressed={prefs.mode===k} style={seg(prefs.mode===k)}>{l}</button>
+          ))}
+        </div>
+
+        <div style={H}>ACCENT COLOR</div>
+        <div style={{display:"flex",flexWrap:"wrap",gap:"12px"}}>
+          {Object.entries(ACCENTS).map(([k,a])=>(
+            <button key={k} onClick={()=>update({accent:k})} aria-label={a.label} aria-pressed={prefs.accent===k} title={a.label}
+              style={{width:"44px",height:"44px",borderRadius:"50%",background:a.hex,cursor:"pointer",border:prefs.accent===k?"3px solid var(--w-e8e4dc)":"3px solid transparent",color:a.onAccent,fontSize:"18px",fontWeight:700}}>{prefs.accent===k?"✓":""}</button>
+          ))}
+        </div>
+
+        <div style={H}>READABILITY</div>
+        <button onClick={()=>update({contrast:!prefs.contrast})} aria-pressed={prefs.contrast} style={{...seg(prefs.contrast),width:"100%",display:"flex",justifyContent:"space-between",alignItems:"center",textAlign:"left"}}>
+          <span>High contrast<span style={{display:"block",fontWeight:400,fontSize:"13px",color:"var(--w-888888)",marginTop:"2px"}}>Brighter text and stronger borders</span></span>
+          <span style={{fontSize:"13px",color:prefs.contrast?"var(--w-ff6b2b)":"var(--w-666666)"}}>{prefs.contrast?"ON":"OFF"}</span>
+        </button>
+
+        <div style={H}>TEXT SIZE</div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(150px,1fr))",gap:"8px"}}>
+          {TEXT_SIZES.map(t=>(
+            <button key={t.key} onClick={()=>update({textSize:t.key})} aria-pressed={prefs.textSize===t.key} style={seg(prefs.textSize===t.key)}>{t.label}</button>
+          ))}
+        </div>
+        <p style={{color:"var(--w-888888)",fontSize:"13px",marginTop:"10px"}}>
+          {Capacitor.isNativePlatform()?"\"Phone setting\" follows the text size in your phone's Settings → Display & Brightness → Text Size.":"\"Phone setting\" uses your browser's normal size — you can also zoom with your browser."}
+        </p>
+
+        <div style={H}>PREVIEW</div>
+        <div style={{background:"var(--w-1c1c1c)",border:"1px solid var(--w-2a2a2a)",borderRadius:"8px",padding:"16px 18px"}}>
+          <div style={{display:"flex",alignItems:"center",gap:"8px"}}><span style={{width:"9px",height:"9px",borderRadius:"50%",background:"var(--w-1ce84a)"}}/><span style={{color:"var(--w-e8e4dc)",fontSize:"16px"}}>Engine Oil & Filter</span></div>
+          <div style={{color:"var(--w-888888)",fontSize:"14px",margin:"6px 0 12px 17px"}}>Every 5,000 mi · Next: 17,000 mi</div>
+          <span style={{display:"inline-block",background:"var(--w-ff6b2b)",color:"var(--w-on-accent)",padding:"8px 16px",borderRadius:"4px",fontFamily:"'Bebas Neue', sans-serif",letterSpacing:"2px",fontSize:"14px"}}>✓ DONE</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Only in test-ad builds: shows where the ad setup is stuck, right on screen.
 function AdDebugLine(){
   const [status,setStatus]=useState("");
   useEffect(()=>subscribeAdStatus(setStatus),[]);
-  return <div style={{width:"100%",color:"#3B9AE8",fontSize:"11px",fontFamily:"monospace"}}>Ad status: {status}</div>;
+  return <div style={{width:"100%",color:"var(--w-3b9ae8)",fontSize:"11px",fontFamily:"monospace"}}>Ad status: {status}</div>;
 }
 
 // AdSense unit for the website. Renders nothing until VITE_ADSENSE_CLIENT and
@@ -36503,7 +36569,7 @@ function WebAdSlot(){
   if(!ADSENSE_CLIENT||!ADSENSE_SLOT)return null;
   return(
     <div style={{maxWidth:"760px",margin:"40px auto 0",padding:"0 24px 24px"}}>
-      <div style={{color:"#333",fontSize:"10px",letterSpacing:"2px",fontFamily:"'Bebas Neue', sans-serif",marginBottom:"4px"}}>ADVERTISEMENT</div>
+      <div style={{color:"var(--w-333333)",fontSize:"10px",letterSpacing:"2px",fontFamily:"'Bebas Neue', sans-serif",marginBottom:"4px"}}>ADVERTISEMENT</div>
       <ins className="adsbygoogle" style={{display:"block"}} data-ad-client={ADSENSE_CLIENT} data-ad-slot={ADSENSE_SLOT} data-ad-format="auto" data-full-width-responsive="true"/>
     </div>
   );
